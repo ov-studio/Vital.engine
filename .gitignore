@@ -123,7 +123,6 @@ ModelManifest.xml
 /WickedEngine/Debug_RT
 /Debug_RT/WickedEngine
 /WickedEngine/Debug_UWP
-/Editor/Generated Files/winrt
 */Generated Files/
 *.wishadermeta
 wiShaderdump.h
