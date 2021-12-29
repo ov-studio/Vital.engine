@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}</ItemsProjectGuid>
+    <ItemsProjectName>vClient</ItemsProjectName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\btBulletCollisionCommon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\btBulletDynamicsCommon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\Bullet-C-Api.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btAxisSweep3.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btBroadphaseInterface.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btBroadphaseProxy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btDbvt.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btDbvtBroadphase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btDispatcher.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btMultiSapBroadphase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btOverlappingPairCache.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btOverlappingPairCallback.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btQuantizedBvh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btSimpleBroadphase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btActivatingCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btBox2dBox2dCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btBoxBoxCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btBoxBoxDetector.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCollisionConfiguration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCollisionCreateFunc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCollisionDispatcher.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCollisionObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCollisionObjectWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCollisionWorld.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCompoundCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCompoundCompoundCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btConvex2dConvex2dAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btConvexConcaveCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btConvexConvexAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btConvexPlaneCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btDefaultCollisionConfiguration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btEmptyCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btGhostObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btHashedSimplePairCache.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btInternalEdgeUtility.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btManifoldResult.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btSimulationIslandManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btSphereBoxCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btUnionFind.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\SphereTriangleDetector.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btBox2dShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btBoxShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btCapsuleShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btCollisionMargin.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btCollisionShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btCompoundShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConcaveShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConeShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvex2dShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexHullShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexInternalShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexPointCloudShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexPolyhedron.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexTriangleMeshShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btCylinderShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btEmptyShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btMaterial.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btMinkowskiSumShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btMultiSphereShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btOptimizedBvh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btPolyhedralConvexShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btShapeHull.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btSphereShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btStaticPlaneShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btStridingMeshInterface.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTetrahedronShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleBuffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleCallback.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleIndexVertexArray.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleIndexVertexMaterialArray.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleInfoMap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleMesh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleMeshShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btUniformScalingShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btBoxCollision.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btClipPolygon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btCompoundFromGimpact.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btContactProcessing.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGenericPoolAllocator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGeometryOperations.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGImpactBvh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGImpactCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGImpactMassUtil.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGImpactQuantizedBvh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGImpactShape.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btQuantization.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btTriangleShapeEx.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_array.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_basic_geometry_operations.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_bitset.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_box_collision.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_box_set.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_clip_polygon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_contact.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_geometry.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_geom_types.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_hash_table.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_linear_math.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_math.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_memory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_radixsort.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_tri_collision.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btContinuousConvexCollision.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btConvexCast.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btConvexPenetrationDepthSolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btDiscreteCollisionDetectorInterface.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btGjkConvexCast.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btGjkEpa2.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btGjkEpaPenetrationDepthSolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btGjkPairDetector.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btManifoldPoint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btMinkowskiPenetrationDepthSolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btPersistentManifold.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btPointCollector.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btPolyhedralContactClipping.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btRaycastCallback.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btSimplexSolverInterface.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btSubSimplexConvexCast.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Character\btCharacterControllerInterface.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Character\btKinematicCharacterController.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btConeTwistConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btConstraintSolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btContactConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btContactSolverInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btFixedConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btGearConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btHinge2Constraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btHingeConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btJacobianEntry.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btSliderConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btSolverBody.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btSolverConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btTypedConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btUniversalConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Dynamics\btActionInterface.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Dynamics\btDynamicsWorld.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Dynamics\btRigidBody.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Dynamics\btSimpleDynamicsWorld.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBody.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyConstraintSolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyDynamicsWorld.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyJointLimitConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyJointMotor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyLink.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyLinkCollider.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyPoint2Point.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodySolverConstraint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\MLCPSolvers\btDantzigLCP.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\MLCPSolvers\btDantzigSolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\MLCPSolvers\btMLCPSolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\MLCPSolvers\btMLCPSolverInterface.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\MLCPSolvers\btPATHSolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\MLCPSolvers\btSolveProjectedGaussSeidel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Vehicle\btRaycastVehicle.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Vehicle\btVehicleRaycaster.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Vehicle\btWheelInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btDefaultSoftBodySolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBody.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBodyConcaveCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBodyData.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBodyHelpers.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBodyInternals.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBodyRigidBodyCollisionConfiguration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBodySolvers.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBodySolverVertexBuffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftRigidCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftRigidDynamicsWorld.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftSoftCollisionAlgorithm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSparseSDF.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btAabbUtil2.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btAlignedAllocator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btAlignedObjectArray.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btConvexHull.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btConvexHullComputer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btDefaultMotionState.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btGeometryUtil.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btGrahamScan2dConvexHull.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btHashMap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btIDebugDraw.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btList.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btMatrix3x3.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btMatrixX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btMinMax.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btMotionState.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btPolarDecomposition.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btPoolAllocator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btQuadWord.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btQuaternion.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btQuickprof.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btRandom.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btScalar.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btSerializer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btStackAlloc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btTransform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btTransformUtil.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btVector3.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath3D_PathTracing.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\arial.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\D3D12MemAlloc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\d3dx12.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\DirectXCollision.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\DirectXColors.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\DirectXMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\DirectXMathCommon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\DirectXPackedVector.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\dxcapi.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\flat_hash_map.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\GLSL.std.450.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\include\spirv\unified1\spirv.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\sal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\spirv_reflect.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\stb_image.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\stb_image_write.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\stb_truetype.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\tinyddsloader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\vk_mem_alloc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\volk.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiArchive.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiAudio.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiCanvas.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiECS.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiEventHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiFFTGenerator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUBVH.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUSortLib.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_DX12.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_Vulkan.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiUnorderedSet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiInput_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiPrimitive.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiLoadingScreen.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiLoadingScreen_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lapi.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lauxlib.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lcode.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lctype.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\ldebug.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\ldo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lfunc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lgc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\llex.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\llimits.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lmem.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lobject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lopcodes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lparser.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lprefix.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lstate.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lstring.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\ltable.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\ltm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lua.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\luaconf.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lualib.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lundump.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lvm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LUA\lzio.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiApplication_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath2D.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath2D_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath3D.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath3D_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteAnim_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiTexture_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiMath_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiBacklog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiBacklog_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)WickedEngine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiColor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiEmittedParticle.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiEnums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiFadeManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiFont.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiSDLInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiShaderCompiler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteFont_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiGUI.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiHairParticle.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiImage.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiImageParams_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiInitializer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiPrimitive_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiJobSystem.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiNetwork.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiPhysics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiLua_Globals.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiLuna.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiNetwork_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiOcean.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiPlatform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiProfiler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRandom.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRawInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRectPacker.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderer_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiResourceManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiScene_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiScene_Decl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiSpinLock.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiSprite.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteFont.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiSprite_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiArguments.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiTextureHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiTimer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiUnorderedMap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiVector.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiVersion.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiXInput.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btBroadphaseProxy.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btDbvt.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btDbvtBroadphase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btDispatcher.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btMultiSapBroadphase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btOverlappingPairCache.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btQuantizedBvh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\BroadphaseCollision\btSimpleBroadphase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btActivatingCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btBox2dBox2dCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btBoxBoxCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btBoxBoxDetector.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCollisionDispatcher.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCollisionObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCollisionWorld.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCompoundCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btCompoundCompoundCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btConvex2dConvex2dAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btConvexConcaveCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btConvexConvexAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btConvexPlaneCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btDefaultCollisionConfiguration.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btEmptyCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btGhostObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btHashedSimplePairCache.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btInternalEdgeUtility.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btManifoldResult.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btSimulationIslandManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btSphereBoxCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\btUnionFind.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionDispatch\SphereTriangleDetector.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btBox2dShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btBoxShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btCapsuleShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btCollisionShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btCompoundShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConcaveShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConeShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvex2dShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexHullShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexInternalShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexPointCloudShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexPolyhedron.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btConvexTriangleMeshShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btCylinderShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btEmptyShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btMinkowskiSumShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btMultiSphereShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btOptimizedBvh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btPolyhedralConvexShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btShapeHull.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btSphereShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btStaticPlaneShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btStridingMeshInterface.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTetrahedronShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleBuffer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleCallback.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleIndexVertexArray.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleIndexVertexMaterialArray.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleMesh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btTriangleMeshShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\CollisionShapes\btUniformScalingShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btContactProcessing.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGenericPoolAllocator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGImpactBvh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGImpactCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGImpactQuantizedBvh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btGImpactShape.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\btTriangleShapeEx.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_box_set.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_contact.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_memory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\Gimpact\gim_tri_collision.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btContinuousConvexCollision.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btConvexCast.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btGjkConvexCast.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btGjkEpa2.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btGjkEpaPenetrationDepthSolver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btGjkPairDetector.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btMinkowskiPenetrationDepthSolver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btPersistentManifold.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btPolyhedralContactClipping.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btRaycastCallback.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btSubSimplexConvexCast.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Character\btKinematicCharacterController.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btContactConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btFixedConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btGearConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btHinge2Constraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btHingeConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btSliderConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btTypedConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\ConstraintSolver\btUniversalConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Dynamics\btRigidBody.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Dynamics\btSimpleDynamicsWorld.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Dynamics\Bullet-C-API.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBody.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyConstraintSolver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyDynamicsWorld.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyJointLimitConstraint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyJointMotor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Featherstone\btMultiBodyPoint2Point.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\MLCPSolvers\btDantzigLCP.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\MLCPSolvers\btMLCPSolver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Vehicle\btRaycastVehicle.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletDynamics\Vehicle\btWheelInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btDefaultSoftBodySolver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBody.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBodyConcaveCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBodyHelpers.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftBodyRigidBodyCollisionConfiguration.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftRigidCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftRigidDynamicsWorld.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\BulletSoftBody\btSoftSoftCollisionAlgorithm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btAlignedAllocator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btConvexHull.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btConvexHullComputer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btGeometryUtil.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btPolarDecomposition.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btQuickprof.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btSerializer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BULLET\LinearMath\btVector3.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath3D_PathTracing.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utility\D3D12MemAlloc.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utility\samplerBlueNoiseErrorDistribution_128x128_OptimizedFor_2d2d2d2d_1spp.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utility\spirv_reflect.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utility\stb_vorbis.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utility\utility_common.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiArchive.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiAudio.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiEventHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiFFTGenerator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiGPUBVH.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiGPUSortLib.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_DX12.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_Vulkan.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiLoadingScreen.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiLoadingScreen_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lapi.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lauxlib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lbaselib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lbitlib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lcode.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lcorolib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lctype.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\ldblib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\ldebug.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\ldo.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\ldump.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lfunc.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lgc.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\linit.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\liolib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\llex.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lmathlib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lmem.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\loadlib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lobject.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lopcodes.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\loslib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lparser.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lstate.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lstring.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lstrlib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\ltable.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\ltablib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\ltm.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lua.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lundump.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lutf8lib.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lvm.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lzio.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiApplication_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath2D.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath2D_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath3D.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath3D_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteAnim_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiTexture_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiMath_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiBacklog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiBacklog_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiEmittedParticle.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiFadeManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiFont.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_Linux.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiSDLInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiShaderCompiler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteFont_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiGUI.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiHairParticle.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiImage.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiImageParams_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiInitializer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiInput_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiPrimitive.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiPrimitive_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiJobSystem.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_UWP.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_Windows.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiPhysics_Bullet.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiOcean.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiProfiler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiRandom.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiRawInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiRectPacker.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderer_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiResourceManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiScene_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiScene_Serializers.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiSprite.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteFont.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiSprite_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiArguments.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiTextureHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiVersion.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiXInput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXCollision.inl" />
+    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXMathConvert.inl" />
+    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXMathMatrix.inl" />
+    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXMathMisc.inl" />
+    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXMathVector.inl" />
+    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXPackedVector.inl" />
+  </ItemGroup>
+</Project>

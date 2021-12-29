@@ -1,0 +1,1562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="models">
+      <UniqueIdentifier>{1e52ef96-0bb7-4391-a08b-70de0073ef4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts">
+      <UniqueIdentifier>{3dd2f7b1-11bc-47f3-84b7-6a0b1430069c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="models\Sponza">
+      <UniqueIdentifier>{79c15acb-1f18-400c-82b4-846dfdd4ab85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="models\Sponza\textures">
+      <UniqueIdentifier>{313c5c5a-2029-43a8-99ca-cc56f435121c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="models\Havoc">
+      <UniqueIdentifier>{6f72400d-8b00-4dc0-8015-f88dd5d4c11b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="models\dungeon">
+      <UniqueIdentifier>{2ba616fc-e2c9-4af4-9099-948f45e2dd80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{c66293fd-fe0c-444e-9502-f0864bfbf736}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{a29a1fc4-242a-4e7f-9f5b-9870935e4866}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\CS">
+      <UniqueIdentifier>{37ccd1d7-f4c3-4b3b-9d7a-e0900784c134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\DS">
+      <UniqueIdentifier>{9d3288db-2365-4931-878d-25c877277072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\GS">
+      <UniqueIdentifier>{b9579a27-6efe-464e-9293-cfca02fbee91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\HF">
+      <UniqueIdentifier>{dc56c845-db92-4cfc-9447-edad78ad7259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\HS">
+      <UniqueIdentifier>{1e4d7043-600e-4403-b30e-36e4593e8a77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\interop">
+      <UniqueIdentifier>{26c186e3-1614-410f-a005-72567aa1b920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\LIB">
+      <UniqueIdentifier>{d9f64d36-1390-4a24-b8a5-c0542d0c8b33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\MS">
+      <UniqueIdentifier>{739a78ad-23c9-4618-b13b-2bc4d52148d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\PS">
+      <UniqueIdentifier>{575412eb-c9b5-4fa5-8465-64c9f7344c68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\VS">
+      <UniqueIdentifier>{db612c8c-a91b-4f74-bff7-3875c7640f3d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)scripts\camera_animation_clamped.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\camera_animation_repeat.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\character_controller_tps.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\debug_draw.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\dungeon_generator.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\emitter_burst.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\fighting_game.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\move_object.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\pick.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\rotate_model.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\set_material_color.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\set_material_emissive.lua">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\Sponza\sponza.wiscene">
+      <Filter>models\Sponza</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\Havoc\havoc.wiscene">
+      <Filter>models\Havoc</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\block.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\corridor.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\crossjunction.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\end.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\oddcorridor.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\room.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\smallroomleft.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\start.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\tjunction.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\turnleft.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\turnright.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dungeon\upcorridor.wiscene">
+      <Filter>models\dungeon</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\cameras.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\CesiumMan.glb">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\cloth_test.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\DamagedHelmet.glb">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\dojo.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\emitter_distortion.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\emitter_dust.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\emitter_fireball.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\emitter_fluid_50k.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\emitter_guardeffect.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\emitter_hiteffect.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\emitter_skinned.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\emitter_smoke.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\emitter_spark.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\girl.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\hairparticle_torus.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\lensflare_light.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\lightmap_bake_test.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\physics_test.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\playground.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\shadows_test.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\sound3D_test.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\suzanne.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\teapot.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\volumetric_test.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\water_plane.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\water_test.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Documentation\ScriptingAPI-Documentation.md">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Documentation\WickedEngine-Documentation.md">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\blend_instancing_test.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\shadowspriority_point_test.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)models\shadowspriority_spot_test.wiscene">
+      <Filter>models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\bitonicSortHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\brdf.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\circle.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\ColorSpaceUtility.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\cone.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\cube.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\cullingShaderHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\cylinder.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\depthoffieldHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\emittedparticleHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\fxaa.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\globals.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\hairparticleHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\icosphere.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\imageHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\impostorHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\lightingHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\objectHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\objectHF_tessellation.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\oceanSurfaceHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\PixelPacking_R11G11B10.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\quad.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\raytracingHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\skyAtmosphere.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\skyHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\stochasticSSRHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\uvsphere.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\volumeLightHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\volumetricCloudsHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\volumetricLightHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\voxelConeTracingHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\voxelHF.hlsli">
+      <Filter>shaders\HF</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\rtreflectionLIB.hlsl">
+      <Filter>shaders\LIB</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\emittedparticleMS.hlsl">
+      <Filter>shaders\MS</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\background.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\background_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\background_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\backgroundBGR.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\chain_texture.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\chain_texture_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\chain_texture_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\chain_texture_mask.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\gi_flag.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\lion.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\lion_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\lion_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\lion2_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\lion2_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\particle_dust.dds">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\spnza_bricks_a_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\spnza_bricks_a_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\spnza_bricks_a_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\spnza_bricks_a_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_arch_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_arch_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_arch_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_arch_diff_NRM.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_arch_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_ceiling_a_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_ceiling_a_diff_NRM.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_ceiling_a_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_a_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_a_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_a_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_a_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_b_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_b_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_b_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_b_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_c_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_c_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_c_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_column_c_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_curtain_blue_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_curtain_blue_diff_NRM.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_curtain_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_curtain_green_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_details_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_details_diff_NRM.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_details_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_fabric_blue_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_fabric_blue_diff_NRM.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_fabric_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_fabric_green_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_fabric_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_flagpole_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_flagpole_diff_NRM.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_flagpole_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_floor_a_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_floor_a_diff_NRM.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_floor_a_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_roof_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_roof_diff_NRM.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_thorn_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_thorn_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_thorn_diff.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_thorn_mask.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\sponza_thorn_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_dif.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_hanging.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_hanging_NRM.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_plant.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_plant_mask.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_plant_NRM.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_plant_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_round.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_round_bump.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_round_ddn.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Sponza\textures\vase_round_spec.png">
+      <Filter>models\Sponza\textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Havoc\baseColor.png">
+      <Filter>models\Havoc</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\Havoc\normalMap.png">
+      <Filter>models\Havoc</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\billboardredflowers.png">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\fire.jpg">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\flare0.jpg">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\flare1.jpg">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\flare2.jpg">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\flare3.jpg">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\flare4.jpg">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\flare5.jpg">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\flare6.jpg">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\grassbb.png">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\grid.dds">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\orb.dds">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\repack.png">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\sky.dds">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\smoke0.png">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\waterNormalMap.jpg">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\ripple.png">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)scripts\hp_bar.png">
+      <Filter>scripts</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\colorgradinglut_default.png">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\colorgradinglut_filter.png">
+      <Filter>models</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)models\colorgradinglut_sepia.png">
+      <Filter>models</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="$(MSBuildThisFileDirectory)models\water.wav">
+      <Filter>models</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)models\Sponza\copyright.txt">
+      <Filter>models\Sponza</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\bloomseparateCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_bilateral_float1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_bilateral_float3CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_bilateral_float4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_bilateral_unorm1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_bilateral_unorm4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_bilateral_wide_float1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_bilateral_wide_float3CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_bilateral_wide_float4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_bilateral_wide_unorm1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_bilateral_wide_unorm4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_gaussian_float1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_gaussian_float3CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_gaussian_float4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_gaussian_unorm1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_gaussian_unorm4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_gaussian_wide_float1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_gaussian_wide_float3CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_gaussian_wide_float4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_gaussian_wide_unorm1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\blur_gaussian_wide_unorm4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\bvh_hierarchyCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\bvh_primitivesCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\bvh_propagateaabbCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\chromatic_aberrationCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\copytexture2D_float4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\copytexture2D_float4_borderexpandCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\copytexture2D_unorm4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\copytexture2D_unorm4_borderexpandCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\depthoffield_kickjobsCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\depthoffield_mainCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\depthoffield_mainCS_cheap.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\depthoffield_mainCS_earlyexit.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\depthoffield_neighborhoodMaxCOCCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\depthoffield_postfilterCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\depthoffield_prepassCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\depthoffield_prepassCS_earlyexit.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\depthoffield_tileMaxCOC_horizontalCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\depthoffield_tileMaxCOC_verticalCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\depthoffield_upsampleCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\downsample4xCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_emitCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_emitCS_FROMMESH.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_emitCS_volume.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_finishUpdateCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_kickoffUpdateCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_simulateCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_simulateCS_DEPTHCOLLISIONS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_simulateCS_SORTING.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_simulateCS_SORTING_DEPTHCOLLISIONS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_sphdensityCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_sphforceCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_sphpartitionCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_sphpartitionoffsetsCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticle_sphpartitionoffsetsresetCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\fft_512x512_c2c_CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\fft_512x512_c2c_v2_CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\filterEnvMapCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\fsr_sharpenCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\fsr_upscalingCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\fxaaCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\generateMIPChain2DCS_float4.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\generateMIPChain2DCS_unorm4.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\generateMIPChain3DCS_float4.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\generateMIPChain3DCS_unorm4.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\generateMIPChainCubeArrayCS_float4.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\generateMIPChainCubeArrayCS_unorm4.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\generateMIPChainCubeCS_float4.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\generateMIPChainCubeCS_unorm4.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\gpusortlib_kickoffSortCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\gpusortlib_sortCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\gpusortlib_sortInnerCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\gpusortlib_sortStepCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\hairparticle_finishUpdateCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\hairparticle_simulateCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\hbaoCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\lightCullingCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\lightCullingCS_ADVANCED.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\lightCullingCS_ADVANCED_DEBUG.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\lightCullingCS_DEBUG.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\lightShaftsCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\luminancePass1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\luminancePass2CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\motionblurCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\motionblurCS_cheap.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\motionblurCS_earlyexit.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\motionblur_kickjobsCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\motionblur_neighborhoodMaxVelocityCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\motionblur_tileMaxVelocity_horizontalCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\motionblur_tileMaxVelocity_verticalCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\msaoCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\msao_blurupsampleCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\msao_blurupsampleCS_blendout.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\msao_blurupsampleCS_premin.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\msao_blurupsampleCS_premin_blendout.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\msao_interleaveCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\msao_preparedepthbuffers1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\msao_preparedepthbuffers2CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\normalsfromdepthCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\oceanSimulatorCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\oceanUpdateDisplacementMapCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\oceanUpdateGradientFoldingCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\paint_textureCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\raytraceCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\raytraceCS_rtapi.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\resolveMSAADepthStencilCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\rtaoCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\rtao_denoise_filterCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\rtao_denoise_tileclassificationCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\rtreflectionCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\rtshadowCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\rtshadow_denoise_filterCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\rtshadow_denoise_temporalCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\rtshadow_denoise_tileclassificationCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\screenspaceshadowCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\shadingRateClassificationCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\shadingRateClassificationCS_DEBUG.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\sharpenCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\skinningCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\skyAtmosphere_multiScatteredLuminanceLutCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\skyAtmosphere_skyLuminanceLutCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\skyAtmosphere_skyViewLutCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\skyAtmosphere_transmittanceLutCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\ssaoCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\ssr_medianCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\ssr_raytraceCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\ssr_resolveCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\ssr_temporalCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\surfel_binningCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\surfel_coverageCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\surfel_gridoffsetsCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\surfel_gridresetCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\surfel_indirectprepareCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\surfel_raytraceCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\surfel_raytraceCS_rtapi.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\surfel_updateCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\temporalaaCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\tileFrustumsCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\tonemapCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\upsample_bilateral_float1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\upsample_bilateral_float4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\upsample_bilateral_uint4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\upsample_bilateral_unorm1CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\upsample_bilateral_unorm4CS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\visibility_resolveCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\visibility_resolveCS_MSAA.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetricCloud_curlnoiseCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetricCloud_detailnoiseCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetricCloud_renderCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetricCloud_reprojectCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetricCloud_shapenoiseCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetricCloud_temporalCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetricCloud_weathermapCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\voxelClearOnlyNormalCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\voxelRadianceSecondaryBounceCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\voxelSceneCopyClearCS.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\voxelSceneCopyClearCS_TemporalSmoothing.hlsl">
+      <Filter>shaders\CS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectDS.hlsl">
+      <Filter>shaders\DS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectDS_prepass.hlsl">
+      <Filter>shaders\DS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectDS_prepass_alphatest.hlsl">
+      <Filter>shaders\DS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectDS_simple.hlsl">
+      <Filter>shaders\DS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\cubeShadowGS_alphatest_emulation.hlsl">
+      <Filter>shaders\GS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\cubeShadowGS_emulation.hlsl">
+      <Filter>shaders\GS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\cubeShadowGS_transparent_emulation.hlsl">
+      <Filter>shaders\GS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\envMapGS_emulation.hlsl">
+      <Filter>shaders\GS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\envMap_skyGS_emulation.hlsl">
+      <Filter>shaders\GS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectGS_voxelizer.hlsl">
+      <Filter>shaders\GS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\voxelGS.hlsl">
+      <Filter>shaders\GS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectHS.hlsl">
+      <Filter>shaders\HS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectHS_prepass.hlsl">
+      <Filter>shaders\HS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectHS_prepass_alphatest.hlsl">
+      <Filter>shaders\HS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectHS_simple.hlsl">
+      <Filter>shaders\HS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\captureImpostorPS_albedo.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\captureImpostorPS_normal.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\captureImpostorPS_surface.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\circlePS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\cubeMapPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\downsampleDepthBuffer4xPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticlePS_simple.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticlePS_soft.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticlePS_soft_distortion.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticlePS_soft_lighting.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\envMapPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\envMapPS_terrain.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\envMap_skyPS_dynamic.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\envMap_skyPS_static.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\fontPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\forceFieldVisualizerPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\hairparticlePS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\hairparticlePS_prepass.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\hairparticlePS_simple.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\imagePS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\impostorPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\impostorPS_prepass.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\impostorPS_simple.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\impostorPS_wire.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\lensFlarePS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\lightVisualizerPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_anisotropic.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_cartoon.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_clearcoat.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_cloth.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_cloth_clearcoat.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_debug.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_hologram.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_paintradius.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_planarreflection.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_pom.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_prepass.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_prepass_alphatest.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_simple.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_terrain.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_transparent.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_transparent_anisotropic.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_transparent_cartoon.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_transparent_clearcoat.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_transparent_cloth.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_transparent_cloth_clearcoat.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_transparent_planarreflection.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_transparent_pom.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_transparent_unlit.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_unlit.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_voxelizer.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_voxelizer_terrain.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectPS_water.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\oceanSurfacePS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\oceanSurfaceSimplePS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\outlinePS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\raytrace_debugbvhPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\renderlightmapPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\renderlightmapPS_rtapi.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\shadowPS_alphatest.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\shadowPS_transparent.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\shadowPS_water.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\skyPS_dynamic.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\skyPS_static.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\sunPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\upsample_bilateralPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\vertexcolorPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetricLight_DirectionalPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetricLight_PointPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetricLight_SpotPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\voxelPS.hlsl">
+      <Filter>shaders\PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\cubeShadowVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\cubeShadowVS_alphatest.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\cubeShadowVS_alphatest_emulation.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\cubeShadowVS_emulation.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\cubeShadowVS_transparent.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\cubeShadowVS_transparent_emulation.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\emittedparticleVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\envMapVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\envMapVS_emulation.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\envMap_skyVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\envMap_skyVS_emulation.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\fontVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\forceFieldPlaneVisualizerVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\forceFieldPointVisualizerVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\hairparticleVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\imageVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\impostorVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\lensFlareVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectVS_common.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectVS_common_tessellation.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectVS_debug.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectVS_prepass.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectVS_prepass_alphatest.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectVS_prepass_alphatest_tessellation.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectVS_prepass_tessellation.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectVS_simple.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectVS_simple_tessellation.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\objectVS_voxelizer.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\occludeeVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\oceanSurfaceVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\postprocessVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\raytrace_screenVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\renderlightmapVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\shadowVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\shadowVS_alphatest.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\shadowVS_transparent.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\skyVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\sphereVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\vertexcolorVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetriclight_directionalVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetriclight_pointVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\volumetriclight_spotVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\voxelVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\vPointLightVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\vSpotLightVS.hlsl">
+      <Filter>shaders\VS</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_BVH.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_EmittedParticle.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_FFTGenerator.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_Font.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_GPUSortLib.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_HairParticle.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_Image.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_Ocean.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_Postprocess.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_Raytracing.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_Renderer.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_SurfelGI.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_Weather.h">
+      <Filter>shaders\interop</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
