@@ -53,8 +53,8 @@ winrt::fire_and_forget uwp_copy_assets()
 	//	for easy access to the user:
 	StorageFolder location = KnownFolders::Objects3D();
 
-	// Objects3D/WickedEngine
-	auto destfolder = co_await location.CreateFolderAsync(L"WickedEngine", CreationCollisionOption::OpenIfExists);
+	// Objects3D/vEngine
+	auto destfolder = co_await location.CreateFolderAsync(L"vEngine", CreationCollisionOption::OpenIfExists);
 
 	std::string rootdir = std::filesystem::current_path().string() + "\\";
 	std::wstring wstr;
@@ -886,7 +886,7 @@ void EditorComponent::Load()
 		ss += "You can find sample LUA scripts in the scripts directory. Try to load one.\n";
 		ss += "You can find a startup script at Editor/startup.lua (this will be executed on program start)\n";
 		ss += "\nFor questions, bug reports, feedback, requests, please open an issue at:\n";
-		ss += "https://github.com/turanszkij/WickedEngine\n";
+		ss += "https://github.com/turanszkij/vEngine\n";
 		ss += "\nDevblog: https://wickedengine.net/\n";
 		ss += "Discord: https://discord.gg/CFjRYmE\n";
 

@@ -306,7 +306,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiMath_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiBacklog.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiBacklog_BindLua.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)WickedEngine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiColor.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiEmittedParticle.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiEnums.h" />

@@ -64,7 +64,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)WickedEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)vEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -97,7 +97,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)WickedEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)vEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
@@ -133,10 +133,10 @@
     <ResourceCompile Include="Editor.rc" />
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="..\WickedEngine\dxcompiler.dll">
+    <CopyFileToFolders Include="..\vEngine\dxcompiler.dll">
       <FileType>Document</FileType>
     </CopyFileToFolders>
-    <CopyFileToFolders Include="..\WickedEngine\dxil.dll">
+    <CopyFileToFolders Include="..\vEngine\dxil.dll">
       <FileType>Document</FileType>
     </CopyFileToFolders>
     <None Include="config.ini">
@@ -148,7 +148,7 @@
     <ClCompile Include="main_Windows.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WickedEngine\vClient_win.vcxproj">
+    <ProjectReference Include="..\vEngine\vClient_win.vcxproj">
       <Project>{6fefc868-fe73-4cb7-90b3-3d2ea6731688}</Project>
     </ProjectReference>
   </ItemGroup>

@@ -101,7 +101,7 @@ add_library(${TARGET_NAME} STATIC
 	wiXInput.cpp
 	wiShaderCompiler.cpp
 )
-add_library(WickedEngine ALIAS ${TARGET_NAME})
+add_library(vEngine ALIAS ${TARGET_NAME})
 
 target_include_directories(${TARGET_NAME} PUBLIC
 	${CMAKE_CURRENT_SOURCE_DIR}
@@ -141,13 +141,13 @@ endif()
 
 add_library(dxcompiler SHARED IMPORTED)
 set_property(TARGET dxcompiler PROPERTY
-		IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/WickedEngine/${LIBDXCOMPILER} )
+		IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/vEngine/${LIBDXCOMPILER} )
 
 # Copy the shader library next to the executable
 add_custom_command(
 		TARGET ${TARGET_NAME} POST_BUILD
-		COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/WickedEngine/${LIBDXCOMPILER} ${CMAKE_CURRENT_BINARY_DIR}
-		COMMAND ${CMAKE_COMMAND} -E create_symlink ${CMAKE_SOURCE_DIR}/WickedEngine/shaders ${CMAKE_CURRENT_BINARY_DIR}/shaders
+		COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/vEngine/${LIBDXCOMPILER} ${CMAKE_CURRENT_BINARY_DIR}
+		COMMAND ${CMAKE_COMMAND} -E create_symlink ${CMAKE_SOURCE_DIR}/vEngine/shaders ${CMAKE_CURRENT_BINARY_DIR}/shaders
 )
 
 
@@ -162,7 +162,7 @@ target_link_libraries(offlineshadercompiler
 # Create importable target here
 include(CMakePackageConfigHelpers)
 set(INSTALL_CONFIGDIR "${CMAKE_BINARY_DIR}/cmake")
-#set(INSTALL_CONFIGDIR "${CMAKE_INSTALL_LIBDIR}/cmake/WickedEngine")
+#set(INSTALL_CONFIGDIR "${CMAKE_INSTALL_LIBDIR}/cmake/vEngine")
 
 #set_target_properties(${TARGET_NAME} PROPERTIES PUBLIC_HEADER "${HEADERS}")
 set_target_properties("${TARGET_NAME}" PROPERTIES EXPORT_NAME "${TARGET_NAME}")
@@ -171,16 +171,16 @@ set_target_properties("${TARGET_NAME}" PROPERTIES EXPORT_NAME "${TARGET_NAME}")
 install(TARGETS "${TARGET_NAME}" ${WICKEDENGINE_STATIC_LIBRARIES}
 		EXPORT Engine-Targets
 		LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
-		PUBLIC_HEADER DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/WickedEngine")
+		PUBLIC_HEADER DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/vEngine")
 
 export(EXPORT Engine-Targets
 		FILE "${CMAKE_BINARY_DIR}/cmake/WickedEngineTargets.cmake"
-		NAMESPACE WickedEngine::
+		NAMESPACE vEngine::
 		)
 
 #install(EXPORT Engine-Targets
 #		FILE WickedEngineTargets.cmake
-#		NAMESPACE WickedEngine
+#		NAMESPACE vEngine
 #		DESTINATION ${INSTALL_CONFIGDIR})
 
 configure_package_config_file(

@@ -114,15 +114,15 @@ ModelManifest.xml
 .vscode/
 .cache/
 *.cso
-/WickedEngine.VC.db
-/WinRT/WickedEngine
-/WickedEngine/WinRT
-/WickedEngine/StoreTest
-/WickedEngine/Release_Store/WickedEngine.tlog
-/WickedEngine/Release_RT
-/WickedEngine/Debug_RT
-/Debug_RT/WickedEngine
-/WickedEngine/Debug_UWP
+/vEngine.VC.db
+/WinRT/vEngine
+/vEngine/WinRT
+/vEngine/StoreTest
+/vEngine/Release_Store/vEngine.tlog
+/vEngine/Release_RT
+/vEngine/Debug_RT
+/Debug_RT/vEngine
+/vEngine/Debug_UWP
 */Generated Files/
 *.wishadermeta
 wiShaderdump.h

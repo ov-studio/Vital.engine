@@ -138,7 +138,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
       <Filter>ENGINE\Common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)WickedEngine.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h">
       <Filter>ENGINE\Common</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiApplication.h">

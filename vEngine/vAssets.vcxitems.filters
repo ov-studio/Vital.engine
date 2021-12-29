@@ -219,7 +219,7 @@
     <None Include="$(MSBuildThisFileDirectory)Documentation\ScriptingAPI-Documentation.md">
       <Filter>Documentation</Filter>
     </None>
-    <None Include="$(MSBuildThisFileDirectory)Documentation\WickedEngine-Documentation.md">
+    <None Include="$(MSBuildThisFileDirectory)Documentation\vEngine-Documentation.md">
       <Filter>Documentation</Filter>
     </None>
     <None Include="$(MSBuildThisFileDirectory)models\blend_instancing_test.wiscene">

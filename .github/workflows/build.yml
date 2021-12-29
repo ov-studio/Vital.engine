@@ -12,15 +12,15 @@ jobs:
     - uses: nuget/setup-nuget@v1
       with:
         nuget-api-key: ${{ secrets.NuGetAPIKey }}
-    - run: nuget restore WickedEngine.sln
+    - run: nuget restore vEngine.sln
     - name: Build
       shell: cmd
       run: |
-        "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/MSBuild/Current/Bin/MSBuild.exe" WickedEngine.sln /t:OfflineShaderCompiler /m /p:Configuration=Release /p:Platform=x64
-        cd "WickedEngine"
+        "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/MSBuild/Current/Bin/MSBuild.exe" vEngine.sln /t:OfflineShaderCompiler /m /p:Configuration=Release /p:Platform=x64
+        cd "vEngine"
         "../BUILD/x64/Release/OfflineShaderCompiler/OfflineShaderCompiler.exe" hlsl6 spirv shaderdump
         cd ..
-        "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/MSBuild/Current/Bin/MSBuild.exe" WickedEngine.sln /t:rebuild /m /p:Configuration=Release /p:Platform=x64
+        "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/MSBuild/Current/Bin/MSBuild.exe" vEngine.sln /t:rebuild /m /p:Configuration=Release /p:Platform=x64
     
     - name: Move binaries
       shell: cmd
@@ -85,9 +85,9 @@ jobs:
         cmake .. -DCMAKE_BUILD_TYPE=Release
         make
         echo "---Generating Shader Dump---"
-        cd WickedEngine
+        cd vEngine
         ./offlineshadercompiler spirv rebuild shaderdump
-        mv wiShaderDump.h ../../WickedEngine/
+        mv wiShaderDump.h ../../vEngine/
         cd ..
         echo "---Rebuilding with ShaderDump---"
         make -B

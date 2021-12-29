@@ -267,7 +267,7 @@ namespace wi::math
 	// Ray-Triangle Intersection", Journal of Graphics Tools, vol. 2, no. 1, 
 	// pp 21-28, 1997.
 	//
-	//	Modified for WickedEngine to return barycentrics
+	//	Modified for vEngine to return barycentrics
 	//-----------------------------------------------------------------------------
 	_Use_decl_annotations_
 	inline bool XM_CALLCONV RayTriangleIntersects(FXMVECTOR Origin, FXMVECTOR Direction, FXMVECTOR V0, GXMVECTOR V1, HXMVECTOR V2, float& Dist, XMFLOAT2& bary)

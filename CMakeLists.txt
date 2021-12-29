@@ -8,32 +8,32 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # Use solution folders to organize projects
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-project(WickedEngine)
+project(vEngine)
 
 if (WIN32)
     set(PLATFORM "Windows")
     add_compile_definitions(WIN32=1)
     # add_compile_definitions(_WIN32=1) this is a given from the compiler
-    set(DXC_TARGET "${CMAKE_CURRENT_SOURCE_DIR}/WickedEngine/dxc.exe")
+    set(DXC_TARGET "${CMAKE_CURRENT_SOURCE_DIR}/vEngine/dxc.exe")
 elseif(UNIX)
     set(PLATFORM "SDL2")
     add_compile_definitions(SDL2=1)
     set(DXC_TARGET "dxc")
 endif()
 
-add_subdirectory(WickedEngine)
+add_subdirectory(vEngine)
 
-option(WICKED_EDITOR "Build WickedEngine editor" ON)
+option(WICKED_EDITOR "Build vEngine editor" ON)
 if (WICKED_EDITOR)
     add_subdirectory(Editor)
 endif()
 
-option(WICKED_TESTS "Build WickedEngine tests" ON)
+option(WICKED_TESTS "Build vEngine tests" ON)
 if (WICKED_TESTS)
     add_subdirectory(Tests)
 endif()
 
-option(WICKED_IMGUI_EXAMPLE "Build WickedEngine imgui example" ON)
+option(WICKED_IMGUI_EXAMPLE "Build vEngine imgui example" ON)
 if (WICKED_TESTS)
     add_subdirectory(Example_ImGui)
 endif()
