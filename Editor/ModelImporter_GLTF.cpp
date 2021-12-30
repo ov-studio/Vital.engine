@@ -3,7 +3,7 @@
 #include "ModelImporter.h"
 #include "wiRandom.h"
 
-#include "Utility/stb_image.h"
+#include "Utils/stb_image.h"
 
 #include <string>
 #include <limits>

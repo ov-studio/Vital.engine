@@ -14,8 +14,8 @@
 #include "wiUnorderedSet.h"
 #include "wiVector.h"
 
-#include "Utility/arial.h"
-#include "Utility/stb_truetype.h"
+#include "Utils/arial.h"
+#include "Utils/stb_truetype.h"
 
 #include <fstream>
 

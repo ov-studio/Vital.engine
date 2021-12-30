@@ -15,9 +15,9 @@
 // In this case, DirectXMath is coming from supplied source code
 //	On platforms that don't have Windows SDK, the source code for DirectXMath is provided
 //	as part of the engine utilities
-#include "Utility/DirectXMath.h"
-#include "Utility/DirectXPackedVector.h"
-#include "Utility/DirectXCollision.h"
+#include "Utils/DirectXMath.h"
+#include "Utils/DirectXPackedVector.h"
+#include "Utils/DirectXCollision.h"
 #endif
 
 using namespace DirectX;

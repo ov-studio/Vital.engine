@@ -148,7 +148,7 @@
     <ClCompile Include="main_Windows.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\vEngine\vEngine_win.vcxproj">
+    <ProjectReference Include="..\vPackages\Windows\windows.vcxproj">
       <Project>{6fefc868-fe73-4cb7-90b3-3d2ea6731688}</Project>
     </ProjectReference>
   </ItemGroup>

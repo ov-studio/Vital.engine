@@ -8,12 +8,12 @@
 #include "wiUnorderedSet.h"
 
 #define VOLK_IMPLEMENTATION
-#include "Utility/volk.h"
+#include "Utils/volk.h"
 
-#include "Utility/spirv_reflect.h"
+#include "Utils/spirv_reflect.h"
 
 #define VMA_IMPLEMENTATION
-#include "Utility/vk_mem_alloc.h"
+#include "Utils/vk_mem_alloc.h"
 
 #ifdef SDL2
 #include <SDL2/SDL_vulkan.h>

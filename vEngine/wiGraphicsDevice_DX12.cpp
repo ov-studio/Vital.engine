@@ -6,8 +6,8 @@
 #include "wiTimer.h"
 #include "wiUnorderedSet.h"
 
-#include "Utility/dx12/d3dx12.h"
-#include "Utility/D3D12MemAlloc.h"
+#include "Utils/dx12/d3dx12.h"
+#include "Utils/D3D12MemAlloc.h"
 
 #include <string>
 

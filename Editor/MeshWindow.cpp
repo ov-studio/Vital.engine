@@ -2,7 +2,7 @@
 #include "MeshWindow.h"
 #include "Editor.h"
 
-#include "Utility/stb_image.h"
+#include "Utils/stb_image.h"
 
 #include "meshoptimizer/meshoptimizer.h"
 

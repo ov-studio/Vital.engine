@@ -16,9 +16,9 @@
 #endif // _WIN32
 
 #define VK_NO_PROTOTYPES
-#include "Utility/vulkan/vulkan.h"
-#include "Utility/volk.h"
-#include "Utility/vk_mem_alloc.h"
+#include "Utils/vulkan/vulkan.h"
+#include "Utils/volk.h"
+#include "Utils/vk_mem_alloc.h"
 
 #include <deque>
 #include <atomic>

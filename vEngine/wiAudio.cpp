@@ -5,7 +5,7 @@
 #include "wiVector.h"
 
 #define STB_VORBIS_HEADER_ONLY
-#include "Utility/stb_vorbis.c"
+#include "Utils/stb_vorbis.c"
 
 #ifdef _WIN32
 

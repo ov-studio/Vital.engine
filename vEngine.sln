@@ -12,10 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supplementary", "Supplement
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		appveyor.yml = appveyor.yml
-		.github\workflows\build-nightly.yml = .github\workflows\build-nightly.yml
-		.github\workflows\build-pr.yml = .github\workflows\build-pr.yml
-		.github\workflows\build.yml = .github\workflows\build.yml
 		credits.txt = credits.txt
 		features.txt = features.txt
 		LICENSE.txt = LICENSE.txt
@@ -23,11 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supplementary", "Supplement
 		third_party_software.txt = third_party_software.txt
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vEngine_Win", "vEngine\vEngine_Win.vcxproj", "{6FEFC868-FE73-4CB7-90B3-3D2EA6731688}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vEngine", "vEngine\vEngine.vcxitems", "{45D41ACC-2C3C-43D2-BC10-02AA73FFC7C7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vAssets", "vEngine\vAssets.vcxitems", "{C48F6BFF-F91B-4DB5-98B5-15287DFB7C95}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "windows", "vPackages\Windows\windows.vcxproj", "{6FEFC868-FE73-4CB7-90B3-3D2EA6731688}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

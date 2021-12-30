@@ -4,9 +4,6 @@
     <Filter Include="LUA">
       <UniqueIdentifier>{1a296465-57df-45aa-b06b-e16451c607a3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="UTILITY">
-      <UniqueIdentifier>{fd4f5329-f357-4486-b34c-7401d8d9f761}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ENGINE">
       <UniqueIdentifier>{2d30408b-f788-42a8-9648-41561036e10a}</UniqueIdentifier>
     </Filter>
@@ -54,6 +51,9 @@
     </Filter>
     <Filter Include="Vendors\bullet">
       <UniqueIdentifier>{a93b4876-d3d8-4668-b556-8d8749f05e52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{ca1dc807-2e48-4738-8590-4eef893d15bd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -255,23 +255,14 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_DX12.h">
       <Filter>ENGINE\Graphics\API</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\d3dx12.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_Vulkan.h">
       <Filter>ENGINE\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\stb_image.h">
-      <Filter>UTILITY</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiArguments.h">
       <Filter>ENGINE\Helpers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUSortLib.h">
       <Filter>ENGINE\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\stb_image_write.h">
-      <Filter>UTILITY</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiECS.h">
       <Filter>ENGINE\System</Filter>
@@ -281,9 +272,6 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUBVH.h">
       <Filter>ENGINE\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\stb_truetype.h">
-      <Filter>UTILITY</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath3D_BindLua.h">
       <Filter>ENGINE\Scripting\LuaBindings</Filter>
@@ -333,15 +321,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiNetwork.h">
       <Filter>ENGINE\Network</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\tinyddsloader.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\vk_mem_alloc.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\D3D12MemAlloc.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiInput.h">
       <Filter>ENGINE\Input</Filter>
     </ClInclude>
@@ -372,59 +351,20 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteFont_BindLua.h">
       <Filter>ENGINE\Scripting\LuaBindings</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\DirectXCollision.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\DirectXColors.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\DirectXMath.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\DirectXPackedVector.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\sal.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\DirectXMathCommon.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\GLSL.std.450.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiEventHandler.h">
       <Filter>ENGINE\System</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiSDLInput.h">
       <Filter>ENGINE\Input</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\spirv_reflect.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\include\spirv\unified1\spirv.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\volk.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\arial.h">
-      <Filter>UTILITY</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiShaderCompiler.h">
       <Filter>ENGINE\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\dxcapi.h">
-      <Filter>UTILITY</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiCanvas.h">
       <Filter>ENGINE\System</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath3D_PathTracing.h">
       <Filter>ENGINE\High level interface</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utility\flat_hash_map.hpp">
-      <Filter>UTILITY</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiUnorderedSet.h">
       <Filter>ENGINE\Helpers</Filter>
@@ -1077,6 +1017,60 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\LinearMath\btVector3.h">
       <Filter>Vendors\bullet</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\include\spirv\unified1\spirv.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\arial.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXColors.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXMath.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXMathCommon.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXPackedVector.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\dxcapi.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\flat_hash_map.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\sal.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv_reflect.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image_write.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_truetype.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\tinyddsloader.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\vk_mem_alloc.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\volk.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)LUA\lapi.c">
@@ -1283,9 +1277,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiGPUSortLib.cpp">
       <Filter>ENGINE\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utility\utility_common.cpp">
-      <Filter>UTILITY</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiPhysics_Bullet.cpp">
       <Filter>ENGINE\Physics</Filter>
     </ClCompile>
@@ -1343,9 +1334,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_UWP.cpp">
       <Filter>ENGINE\Network</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utility\D3D12MemAlloc.cpp">
-      <Filter>UTILITY</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiInput.cpp">
       <Filter>ENGINE\Input</Filter>
     </ClCompile>
@@ -1379,17 +1367,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiSDLInput.cpp">
       <Filter>ENGINE\Input</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utility\stb_vorbis.c">
-      <Filter>UTILITY</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utility\spirv_reflect.c">
-      <Filter>UTILITY</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiShaderCompiler.cpp">
       <Filter>ENGINE\Graphics\API</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utility\samplerBlueNoiseErrorDistribution_128x128_OptimizedFor_2d2d2d2d_1spp.cpp">
-      <Filter>UTILITY</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiGUI.cpp">
       <Filter>ENGINE\System</Filter>
@@ -1814,25 +1793,40 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\LinearMath\btVector3.cpp">
       <Filter>Vendors\bullet</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\samplerBlueNoiseErrorDistribution_128x128_OptimizedFor_2d2d2d2d_1spp.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\spirv_reflect.c">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\stb_vorbis.c">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\utility_common.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXCollision.inl">
-      <Filter>UTILITY</Filter>
+    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.inl">
+      <Filter>Utils</Filter>
     </None>
-    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXMathConvert.inl">
-      <Filter>UTILITY</Filter>
+    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathConvert.inl">
+      <Filter>Utils</Filter>
     </None>
-    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXMathMatrix.inl">
-      <Filter>UTILITY</Filter>
+    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathMatrix.inl">
+      <Filter>Utils</Filter>
     </None>
-    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXMathMisc.inl">
-      <Filter>UTILITY</Filter>
+    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathMisc.inl">
+      <Filter>Utils</Filter>
     </None>
-    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXMathVector.inl">
-      <Filter>UTILITY</Filter>
+    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathVector.inl">
+      <Filter>Utils</Filter>
     </None>
-    <None Include="$(MSBuildThisFileDirectory)Utility\DirectXPackedVector.inl">
-      <Filter>UTILITY</Filter>
+    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXPackedVector.inl">
+      <Filter>Utils</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -4,9 +4,9 @@
 #include "wiTextureHelper.h"
 #include "wiUnorderedMap.h"
 
-#include "Utility/stb_image.h"
-#include "Utility/tinyddsloader.h"
-#include "Utility/basis_universal/transcoder/basisu_transcoder.h"
+#include "Utils/stb_image.h"
+#include "Utils/tinyddsloader.h"
+#include "Utils/basis_universal/transcoder/basisu_transcoder.h"
 extern basist::etc1_global_selector_codebook g_basis_global_codebook;
 
 #include <algorithm>
