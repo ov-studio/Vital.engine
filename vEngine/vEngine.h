@@ -1,6 +1,5 @@
 #ifndef vEngine
 #define vEngine
-#define WICKED_ENGINE
 
 // NOTE:
 // The purpose of this file is to expose all engine features.
