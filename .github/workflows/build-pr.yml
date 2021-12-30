@@ -35,7 +35,7 @@ jobs:
         path: |
           Content/
           README.md
-          LICENSE.md
+          LICENSE
           Editor/images/
           Editor/sound/
           Editor/*.ini
