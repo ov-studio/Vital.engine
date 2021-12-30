@@ -71,7 +71,7 @@
 
 #ifdef _WIN32
 #ifdef PLATFORM_UWP
-#pragma comment(lib,"WickedEngine_UWP.lib")
+#pragma comment(lib,"vEngine_UWP.lib")
 #else
 #pragma comment(lib,"vClient_win.lib")
 #endif // PLATFORM_UWP

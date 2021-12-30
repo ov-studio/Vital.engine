@@ -258,15 +258,15 @@ namespace wi::lua
 	}
 	void FixedUpdate()
 	{
-		SignalHelper(luainternal.m_luaState, "wickedengine_fixed_update_tick");
+		SignalHelper(luainternal.m_luaState, "vEngine_fixed_update_tick");
 	}
 	void Update()
 	{
-		SignalHelper(luainternal.m_luaState, "wickedengine_update_tick");
+		SignalHelper(luainternal.m_luaState, "vEngine_update_tick");
 	}
 	void Render()
 	{
-		SignalHelper(luainternal.m_luaState, "wickedengine_render_tick");
+		SignalHelper(luainternal.m_luaState, "vEngine_render_tick");
 	}
 	void Signal(const std::string& name)
 	{

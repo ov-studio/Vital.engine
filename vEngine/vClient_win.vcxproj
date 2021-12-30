@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <Natvis Include="wickedengine.natvis" />
+    <Natvis Include="vEngine.natvis" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6FEFC868-FE73-4CB7-90B3-3D2EA6731688}</ProjectGuid>

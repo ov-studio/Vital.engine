@@ -137,17 +137,17 @@ end
 
 -- Wait until the game engine fixed update function runs again
 function fixedupdate()
-	waitSignal("wickedengine_fixed_update_tick")
+	waitSignal("vEngine_fixed_update_tick")
 end
 
 -- Wait until the game engine update function runs again
 function update()
-	waitSignal("wickedengine_update_tick")
+	waitSignal("vEngine_update_tick")
 end
 
 -- Wait until the game engine drawing function runs again
 function render()
-	waitSignal("wickedengine_render_tick")
+	waitSignal("vEngine_render_tick")
 end
 
 -- linear interpolation

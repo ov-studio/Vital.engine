@@ -880,15 +880,6 @@ void EditorComponent::Load()
 		ss += "Place Instances: Ctrl + Shift + Left mouse click (place clipboard onto clicked surface)\n";
 		ss += "Script Console / backlog: HOME button\n";
 		ss += "\n";
-		ss += "You can find sample scenes in the models directory. Try to load one.\n";
-		ss += "You can also import models from .OBJ, .GLTF, .GLB files.\n";
-		ss += "You can find a program configuration file at Editor/config.ini\n";
-		ss += "You can find sample LUA scripts in the scripts directory. Try to load one.\n";
-		ss += "You can find a startup script at Editor/startup.lua (this will be executed on program start)\n";
-		ss += "\nFor questions, bug reports, feedback, requests, please open an issue at:\n";
-		ss += "https://github.com/turanszkij/vEngine\n";
-		ss += "\nDevblog: https://wickedengine.net/\n";
-		ss += "Discord: https://discord.gg/CFjRYmE\n";
 
 		helpLabel.Create("HelpLabel");
 		helpLabel.SetText(ss);

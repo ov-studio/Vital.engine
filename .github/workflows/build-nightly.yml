@@ -94,7 +94,7 @@ jobs:
         
     - name: Move binaries
       run: |
-        mv build/Editor/WickedEngineEditor Editor/
+        mv build/Editor/vEngineEditor Editor/
         mv build/Tests/Tests Tests/
         
     - name: Package Editor
@@ -112,7 +112,7 @@ jobs:
           Editor/*.ini
           Editor/*.ico
           Editor/*.lua
-          Editor/WickedEngineEditor
+          Editor/vEngineEditor
           
     - name: Package Tests
       uses: actions/upload-artifact@v2
