@@ -6,11 +6,11 @@
 #include "wiRenderer.h"
 #include "wiTimer.h"
 
-#include "btBulletDynamicsCommon.h"
-#include "BulletSoftBody/btSoftBodyHelpers.h"
-#include "BulletSoftBody/btDefaultSoftBodySolver.h"
-#include "BulletSoftBody/btSoftRigidDynamicsWorld.h"
-#include "BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.h"
+#include "Vendors/bullet_physics/btBulletDynamicsCommon.h"
+#include "Vendors/bullet_physics/BulletSoftBody/btSoftBodyHelpers.h"
+#include "Vendors/bullet_physics/BulletSoftBody/btDefaultSoftBodySolver.h"
+#include "Vendors/bullet_physics/BulletSoftBody/btSoftRigidDynamicsWorld.h"
+#include "Vendors/bullet_physics/BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.h"
 
 #include <mutex>
 #include <memory>
