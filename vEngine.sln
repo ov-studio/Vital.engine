@@ -23,17 +23,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supplementary", "Supplement
 		third_party_software.txt = third_party_software.txt
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vClient_win", "vEngine\vClient_win.vcxproj", "{6FEFC868-FE73-4CB7-90B3-3D2EA6731688}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vEngine_Win", "vEngine\vEngine_Win.vcxproj", "{6FEFC868-FE73-4CB7-90B3-3D2EA6731688}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vClient", "vEngine\vClient.vcxitems", "{45D41ACC-2C3C-43D2-BC10-02AA73FFC7C7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vEngine", "vEngine\vEngine.vcxitems", "{45D41ACC-2C3C-43D2-BC10-02AA73FFC7C7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vAssets", "vEngine\vAssets.vcxitems", "{C48F6BFF-F91B-4DB5-98B5-15287DFB7C95}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		vEngine\vClient.vcxitems*{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}*SharedItemsImports = 9
+		vEngine\vEngine.vcxitems*{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}*SharedItemsImports = 9
 		Editor\Editor_SOURCE.vcxitems*{5fe97b9b-a445-4eea-a42d-9de60b891d48}*SharedItemsImports = 4
-		vEngine\vClient.vcxitems*{6fefc868-fe73-4cb7-90b3-3d2ea6731688}*SharedItemsImports = 4
+		vEngine\vEngine.vcxitems*{6fefc868-fe73-4cb7-90b3-3d2ea6731688}*SharedItemsImports = 4
 		Editor\Editor_SOURCE.vcxitems*{867febca-09c4-4fe7-8a4c-4d9b1c27e7d0}*SharedItemsImports = 9
 		vEngine\vAssets.vcxitems*{c48f6bff-f91b-4db5-98b5-15287dfb7c95}*SharedItemsImports = 9
 	EndGlobalSection

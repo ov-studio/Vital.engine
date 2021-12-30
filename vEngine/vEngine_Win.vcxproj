@@ -16,9 +16,9 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6FEFC868-FE73-4CB7-90B3-3D2EA6731688}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>vClient_win</RootNamespace>
+    <RootNamespace>vEngine_Win</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>vClient_win</ProjectName>
+    <ProjectName>vEngine_Win</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -38,7 +38,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
-    <Import Project="vClient.vcxitems" Label="Shared" />
+    <Import Project="vEngine.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
