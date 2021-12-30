@@ -690,7 +690,7 @@ void EditorComponent::Load()
 		}
 		else
 		{
-			params.description = "Wicked Scene (.wiscene)";
+			params.description = "vEngine Scene (.wiscene)";
 			params.extensions.push_back("wiscene");
 		}
 		wi::helper::FileDialog(params, [=](std::string fileName) {

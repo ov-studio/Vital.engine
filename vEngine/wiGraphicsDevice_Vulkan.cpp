@@ -963,7 +963,7 @@ namespace vulkan_internal
 
 	inline const std::string GetCachePath()
 	{
-		return wi::helper::GetTempDirectoryPath() + "WickedVkPipelineCache.data";
+		return wi::helper::GetTempDirectoryPath() + "vEngineVkPipelineCache.data";
 	}
 
 	bool CreateSwapChainInternal(
