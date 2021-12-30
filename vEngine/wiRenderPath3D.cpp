@@ -25,8 +25,8 @@ void RenderPath3D::ResizeBuffers()
 		TextureDesc desc;
 		desc.format = Format::R11G11B10_FLOAT;
 		desc.bind_flags = BindFlag::RENDER_TARGET | BindFlag::SHADER_RESOURCE | BindFlag::UNORDERED_ACCESS;
-		desc.width = internalResolution.x / 8;
-		desc.height = internalResolution.y / 8;
+		desc.width = internalResolution.x;
+		desc.height = internalResolution.y;
 		desc.sample_count = 1;
 
 		device->CreateTexture(&desc, nullptr, &rtMain);
@@ -107,8 +107,8 @@ void RenderPath3D::ResizeBuffers()
 		TextureDesc desc;
 		desc.bind_flags = BindFlag::RENDER_TARGET | BindFlag::SHADER_RESOURCE;
 		desc.format = Format::R16G16_FLOAT;
-		desc.width = internalResolution.x;
-		desc.height = internalResolution.y;
+		desc.width = internalResolution.x / 8;
+		desc.height = internalResolution.y / 8;
 		device->CreateTexture(&desc, nullptr, &rtWaterRipple);
 		device->SetName(&rtWaterRipple, "rtWaterRipple");
 	}
