@@ -37,29 +37,9 @@ jobs:
           Content/
           README.md
           LICENSE.md
-          other_licenses.txt
-          features.txt
           Editor/images/
           Editor/sound/
           Editor/*.ini
           Editor/*.ico
           Editor/*.lua
           Editor/*.exe
-          
-    - name: Package Tests
-      uses: actions/upload-artifact@v2
-      with:
-        name: Tests (Windows x64)
-        path: |
-          Content/
-          README.md
-          LICENSE.md
-          other_licenses.txt
-          features.txt
-          Tests/images/
-          Tests/sound/
-          Tests/*.ini
-          Tests/*.ico
-          Tests/*.lua
-          Tests/*.ttf
-          Tests/*.exe
