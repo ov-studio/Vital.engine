@@ -3,10 +3,10 @@
 #include "wiPlatform.h"
 
 #ifndef PLATFORM_UWP
-#define WICKEDENGINE_BUILD_VULKAN
+#define vEngine_BUILD_VULKAN
 #endif // PLATFORM_UWP
 
-#ifdef WICKEDENGINE_BUILD_VULKAN
+#ifdef vEngine_BUILD_VULKAN
 #include "wiGraphicsDevice.h"
 #include "wiUnorderedMap.h"
 #include "wiVector.h"
@@ -830,4 +830,4 @@ namespace wi::graphics
 	};
 }
 
-#endif // WICKEDENGINE_BUILD_VULKAN
+#endif // vEngine_BUILD_VULKAN

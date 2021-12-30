@@ -1,6 +1,6 @@
 #include "wiGraphicsDevice_Vulkan.h"
 
-#ifdef WICKEDENGINE_BUILD_VULKAN
+#ifdef vEngine_BUILD_VULKAN
 #include "wiHelper.h"
 #include "wiBacklog.h"
 #include "wiVersion.h"
@@ -2267,9 +2267,9 @@ using namespace vulkan_internal;
 		// Fill out application info:
 		VkApplicationInfo appInfo = {};
 		appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-		appInfo.pApplicationName = "Wicked Engine Application";
+		appInfo.pApplicationName = "vEngine Application";
 		appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
-		appInfo.pEngineName = "Wicked Engine";
+		appInfo.pEngineName = "vEngine";
 		appInfo.engineVersion = VK_MAKE_VERSION(wi::version::GetMajor(), wi::version::GetMinor(), wi::version::GetRevision());
 		appInfo.apiVersion = VK_API_VERSION_1_2;
 
@@ -3382,7 +3382,7 @@ using namespace vulkan_internal;
 				throw sdl2::SDLError("Error creating a vulkan surface");
 			}
 #else
-#error WICKEDENGINE VULKAN DEVICE ERROR: PLATFORM NOT SUPPORTED
+#error vEngine VULKAN DEVICE ERROR: PLATFORM NOT SUPPORTED
 #endif // _WIN32
 		}
 
@@ -7533,4 +7533,4 @@ using namespace vulkan_internal;
 	}
 }
 
-#endif // WICKEDENGINE_BUILD_VULKAN
+#endif // vEngine_BUILD_VULKAN

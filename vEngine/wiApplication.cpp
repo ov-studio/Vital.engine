@@ -285,7 +285,7 @@ namespace wi
 			infodisplay_str.clear();
 			if (infoDisplay.watermark)
 			{
-				infodisplay_str += "Wicked Engine ";
+				infodisplay_str += "vEngine ";
 				infodisplay_str += wi::version::GetVersionString();
 				infodisplay_str += " ";
 
@@ -301,13 +301,13 @@ namespace wi
 				infodisplay_str += "[UWP]";
 #endif
 
-#ifdef WICKEDENGINE_BUILD_DX12
+#ifdef vEngine_BUILD_DX12
 				if (dynamic_cast<GraphicsDevice_DX12*>(graphicsDevice.get()))
 				{
 					infodisplay_str += "[DX12]";
 				}
 #endif
-#ifdef WICKEDENGINE_BUILD_VULKAN
+#ifdef vEngine_BUILD_VULKAN
 				if (dynamic_cast<GraphicsDevice_Vulkan*>(graphicsDevice.get()))
 				{
 					infodisplay_str += "[Vulkan]";
@@ -413,13 +413,13 @@ namespace wi
 			bool use_dx12 = wi::arguments::HasArgument("dx12");
 			bool use_vulkan = wi::arguments::HasArgument("vulkan");
 
-#ifndef WICKEDENGINE_BUILD_DX12
+#ifndef vEngine_BUILD_DX12
 			if (use_dx12) {
 				wi::helper::messageBox("The engine was built without DX12 support!", "Error");
 				use_dx12 = false;
 			}
 #endif
-#ifndef WICKEDENGINE_BUILD_VULKAN
+#ifndef vEngine_BUILD_VULKAN
 			if (use_vulkan) {
 				wi::helper::messageBox("The engine was built without Vulkan support!", "Error");
 				use_vulkan = false;
@@ -428,9 +428,9 @@ namespace wi
 
 			if (!use_dx12 && !use_vulkan)
 			{
-#if defined(WICKEDENGINE_BUILD_DX12)
+#if defined(vEngine_BUILD_DX12)
 				use_dx12 = true;
-#elif defined(WICKEDENGINE_BUILD_VULKAN)
+#elif defined(vEngine_BUILD_VULKAN)
 				use_vulkan = true;
 #else
 				wi::backlog::post("No rendering backend is enabled! Please enable at least one so we can use it as default", wi::backlog::LogLevel::Error);
@@ -441,14 +441,14 @@ namespace wi
 
 			if (use_vulkan)
 			{
-#ifdef WICKEDENGINE_BUILD_VULKAN
+#ifdef vEngine_BUILD_VULKAN
 				wi::renderer::SetShaderPath(wi::renderer::GetShaderPath() + "spirv/");
 				graphicsDevice = std::make_unique<GraphicsDevice_Vulkan>(window, debugdevice);
 #endif
 			}
 			else if (use_dx12)
 			{
-#ifdef WICKEDENGINE_BUILD_DX12
+#ifdef vEngine_BUILD_DX12
 				wi::renderer::SetShaderPath(wi::renderer::GetShaderPath() + "hlsl6/");
 				graphicsDevice = std::make_unique<GraphicsDevice_DX12>(debugdevice, gpuvalidation);
 #endif

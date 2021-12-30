@@ -2,7 +2,7 @@
 
 static const char* wiLua_Globals = R"(
 ------------------------------------------
--- Wicked Engine lua globals
+-- vEngine lua globals
 ------------------------------------------
 
 -- Get table element count (list length)

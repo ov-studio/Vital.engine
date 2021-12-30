@@ -3,10 +3,10 @@
 #include "wiPlatform.h"
 
 #ifdef _WIN32
-#define WICKEDENGINE_BUILD_DX12
+#define vEngine_BUILD_DX12
 #endif // _WIN32
 
-#ifdef WICKEDENGINE_BUILD_DX12
+#ifdef vEngine_BUILD_DX12
 #include "wiGraphicsDevice.h"
 #include "wiUnorderedMap.h"
 #include "wiVector.h"
@@ -459,4 +459,4 @@ namespace wi::graphics
 
 }
 
-#endif // WICKEDENGINE_BUILD_DX12
+#endif // vEngine_BUILD_DX12

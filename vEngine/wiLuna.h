@@ -1,7 +1,7 @@
 #pragma once
 
 //Luna : Official C++ to Lua binder project, 5th version
-//modified to fit with Wicked Engine, removed warnings
+//modified to fit with vEngine, removed warnings
 
 #define lunamethod(class, name) {#name, &class::name}
 

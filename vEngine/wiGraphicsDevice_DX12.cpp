@@ -1,6 +1,6 @@
 #include "wiGraphicsDevice_DX12.h"
 
-#ifdef WICKEDENGINE_BUILD_DX12
+#ifdef vEngine_BUILD_DX12
 #include "wiHelper.h"
 #include "wiBacklog.h"
 #include "wiTimer.h"
@@ -5786,4 +5786,4 @@ using namespace dx12_internal;
 
 }
 
-#endif // WICKEDENGINE_BUILD_DX12
+#endif // vEngine_BUILD_DX12

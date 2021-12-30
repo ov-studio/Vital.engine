@@ -1,5 +1,5 @@
-#ifndef WICKEDENGINE_VERSION_DEFINED
-#define WICKEDENGINE_VERSION_DEFINED
+#ifndef vEngine_VERSION_DEFINED
+#define vEngine_VERSION_DEFINED
 
 namespace wi::version
 {
@@ -13,4 +13,4 @@ namespace wi::version
 	const char* GetVersionString();
 }
 
-#endif // WICKEDENGINE_VERSION_DEFINED
+#endif // vEngine_VERSION_DEFINED
