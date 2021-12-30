@@ -115,13 +115,10 @@ ModelManifest.xml
 .cache/
 *.cso
 /vEngine.VC.db
-/WinRT/vEngine
 /vEngine/WinRT
 /vEngine/StoreTest
-/vEngine/Release_Store/vEngine.tlog
 /vEngine/Release_RT
 /vEngine/Debug_RT
-/Debug_RT/vEngine
 /vEngine/Debug_UWP
 */Generated Files/
 *.wishadermeta
