@@ -25,8 +25,8 @@ void RenderPath3D::ResizeBuffers()
 		TextureDesc desc;
 		desc.format = Format::R11G11B10_FLOAT;
 		desc.bind_flags = BindFlag::RENDER_TARGET | BindFlag::SHADER_RESOURCE | BindFlag::UNORDERED_ACCESS;
-		desc.width = internalResolution.x;
-		desc.height = internalResolution.y;
+		desc.width = internalResolution.x / 8;
+		desc.height = internalResolution.y / 8;
 		desc.sample_count = 1;
 
 		device->CreateTexture(&desc, nullptr, &rtMain);
@@ -1303,20 +1303,17 @@ void RenderPath3D::RenderTransparents(CommandList cmd) const
 	GraphicsDevice* device = wi::graphics::GetDevice();
 
 	// Water ripple rendering:
+	device->RenderPassBegin(&renderpass_waterripples, cmd); // always clear the water ripple rt, because it will always be sampled, whether there were any ripples or not
 	if(!scene->waterRipples.empty())
 	{
-		device->RenderPassBegin(&renderpass_waterripples, cmd);
-
 		Viewport vp;
 		vp.width = (float)rtWaterRipple.GetDesc().width;
 		vp.height = (float)rtWaterRipple.GetDesc().height;
 		device->BindViewports(1, &vp, cmd);
 
 		wi::renderer::DrawWaterRipples(visibility_main, cmd);
-
-		device->RenderPassEnd(cmd);
 	}
-
+	device->RenderPassEnd(cmd);
 
 	device->RenderPassBegin(&renderpass_transparent, cmd);
 
