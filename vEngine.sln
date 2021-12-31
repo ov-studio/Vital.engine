@@ -5,14 +5,11 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supplementary", "Supplementary", "{BF8FCAB8-D7D3-4DAE-92DE-4B5037E9A0ED}"
 	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		credits.txt = credits.txt
 		features.txt = features.txt
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
-		third_party_software.txt = third_party_software.txt
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vEngine", "Engine\vEngine.vcxitems", "{45D41ACC-2C3C-43D2-BC10-02AA73FFC7C7}"
