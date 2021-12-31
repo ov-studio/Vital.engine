@@ -1,46 +1,53 @@
-Feature list
-------------
+## ━ F E A T U R E S
 
-DirectX 11 renderer
-DirectX 12 renderer
-Vulkan renderer
-Image rendering
-Font rendering (True Type)
-Networking (UDP)
-3D mesh rendering
-Skeletal animation
-Morph target animation
-Physically based rendering
-Animated texturing
-Normal mapping
-Displacement mapping
-Parallax occlusion mapping
-Real time planar reflections
-Cube map reflections (static and real time)
-Refractions (screen space, blurred)
-Interactive Water
-Bloom
-Edge outline
-Motion Blur
-Lens Flare
-Light shafts
-Bokeh Depth of Field
-Chromatic aberration
-Multithreaded rendering
-Tessellation (silhouette smoothing, displacement mapping)
-GPU-based particles (emit from point, mesh, animated mesh)
-Soft particles
-Hair particle systems (grass/vegetation)
-Instanced rendering
-MSAA (Forward rendering only)
-FXAA
-TAA (Temporal Antialiasing)
-Supersampling
-Directional lights + cascaded shadow maps
-Spotlights + shadow maps
-Point lights + shadow cubemaps
-Soft shadows (PCF)
-BULLET Physics: rigid body, soft body
+* PIPELINE:
+  * DirectX 12
+  * Vulkan
+
+* Renderers:
+  * Images
+  * Fonts (True Type)
+  * 3D mesh
+  * Sprites
+
+* Shader Maps:
+  * Normal mapping
+  * Displacement mapping
+  * Parallax occlusion mapping
+
+* Anti Aliasings:
+  * FXAA
+  * TAA (Temporal Anti-aliasing)
+  * MSAA (Forward rendering only)
+  * Supersampling
+
+  * Networking (UDP)
+  * Skeletal animation
+* Morph target animation
+* Animated texturing
+* Real time planar reflections
+* Cube map reflections (static and real time)
+* Refractions (screen space, blurred)
+* Interactive Water
+* Bloom
+* Edge outline
+* Motion Blur
+* Lens Flare
+* Light shafts
+* Bokeh Depth of Field
+* Chromatic aberration
+* Multithreaded rendering
+* Tessellation (silhouette smoothing, displacement mapping)
+* GPU-based particles (emit from point, mesh, animated mesh)
+* Soft particles
+* Hair particle systems (grass/vegetation)
+* Instanced rendering
+* Directional lights + cascaded shadow maps
+* Spotlights + shadow maps
+* Point lights + shadow cubemaps
+* Soft shadows (PCF)
+* BULLET Physics: rigid body, soft body
+
 3D Audio (Xaudio2)
 Input: keyboard, mouse, controller (rawinput, xinput), touch
 Controller feedback (vibration, LED)
