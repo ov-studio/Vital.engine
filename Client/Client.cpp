@@ -690,8 +690,8 @@ void ClientComponent::Load()
 		}
 		else
 		{
-			params.description = "vEngine Scene (.wiscene)";
-			params.extensions.push_back("wiscene");
+			params.description = "vEngine Scene (.vasset)";
+			params.extensions.push_back("vasset");
 		}
 		wi::helper::FileDialog(params, [=](std::string fileName) {
 			wi::eventhandler::Subscribe_Once(wi::eventhandler::EVENT_THREAD_SAFE_POINT, [=](uint64_t userdata) {
@@ -730,8 +730,8 @@ void ClientComponent::Load()
 	modelButton.OnClick([&](wi::gui::EventArgs args) {
 		wi::helper::FileDialogParams params;
 		params.type = wi::helper::FileDialogParams::OPEN;
-		params.description = "Model formats (.wiscene, .obj, .gltf, .glb)";
-		params.extensions.push_back("wiscene");
+		params.description = "Model formats (.vasset, .obj, .gltf, .glb)";
+		params.extensions.push_back("vasset");
 		params.extensions.push_back("obj");
 		params.extensions.push_back("gltf");
 		params.extensions.push_back("glb");
