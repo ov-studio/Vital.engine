@@ -160,8 +160,8 @@ namespace wi
 		{
 			if (!denoiserResult.IsValid() && !wi::jobsystem::IsBusy(denoiserContext))
 			{
-				//wi::helper::saveTextureToFile(denoiserAlbedo, "C:/PROJECTS/vEngine/Editor/_albedo.png");
-				//wi::helper::saveTextureToFile(denoiserNormal, "C:/PROJECTS/vEngine/Editor/_normal.png");
+				//wi::helper::saveTextureToFile(denoiserAlbedo, "C:/PROJECTS/vEngine/Client/_albedo.png");
+				//wi::helper::saveTextureToFile(denoiserNormal, "C:/PROJECTS/vEngine/Client/_normal.png");
 
 				texturedata_src.clear();
 				texturedata_dst.clear();

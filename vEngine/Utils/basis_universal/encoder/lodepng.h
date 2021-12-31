@@ -1170,7 +1170,7 @@ The following features are supported by the decoder:
 
 The following features are _not_ supported:
 
-*) some features needed to make a conformant PNG-Editor might be still missing.
+*) some features needed to make a conformant PNG-Client might be still missing.
 *) partial loading/stream processing. All data must be available and is processed in one call.
 *) The following public chunks are not (yet) supported but treated as unknown chunks by LodePNG:
     sBIT

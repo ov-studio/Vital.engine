@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Windows", "Editor\Editor_Windows.vcxproj", "{5FE97B9B-A445-4EEA-A42D-9DE60B891D48}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client_Windows", "Client\Client_Windows.vcxproj", "{5FE97B9B-A445-4EEA-A42D-9DE60B891D48}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_SOURCE", "Editor\Editor_SOURCE.vcxitems", "{867FEBCA-09C4-4FE7-8A4C-4D9B1C27E7D0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client_SOURCE", "Client\Client_SOURCE.vcxitems", "{867FEBCA-09C4-4FE7-8A4C-4D9B1C27E7D0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supplementary", "Supplementary", "{BF8FCAB8-D7D3-4DAE-92DE-4B5037E9A0ED}"
 	ProjectSection(SolutionItems) = preProject
@@ -28,9 +28,9 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		vEngine\vEngine.vcxitems*{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}*SharedItemsImports = 9
-		Editor\Editor_SOURCE.vcxitems*{5fe97b9b-a445-4eea-a42d-9de60b891d48}*SharedItemsImports = 4
+		Client\Client_SOURCE.vcxitems*{5fe97b9b-a445-4eea-a42d-9de60b891d48}*SharedItemsImports = 4
 		vEngine\vEngine.vcxitems*{6fefc868-fe73-4cb7-90b3-3d2ea6731688}*SharedItemsImports = 4
-		Editor\Editor_SOURCE.vcxitems*{867febca-09c4-4fe7-8a4c-4d9b1c27e7d0}*SharedItemsImports = 9
+		Client\Client_SOURCE.vcxitems*{867febca-09c4-4fe7-8a4c-4d9b1c27e7d0}*SharedItemsImports = 9
 		vEngine\vAssets.vcxitems*{c48f6bff-f91b-4db5-98b5-15287dfb7c95}*SharedItemsImports = 9
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
