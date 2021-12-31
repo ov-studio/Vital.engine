@@ -8,16 +8,46 @@
   * 3D mesh
   * Sprites
 
+## ━ Models:
+  * GLTF
+  * Skeletal animation
+  * Morph target animation
+  * Inverse Kinematics
+
+## ━ Environments:
+  * Skybox
+  * Waterbox (FFT Simulation)
+  * Hair particle systems (Grass/Vegetation)
+  * GPU Particles
+  * Terrain Rendering (Material blending)
+  * Stochastic alphatest transparency
+  * Surfel GI
+
+## Dynamic Lightning:
+  * Volumetric light scattering
+  * Ray tracing (Ambient Occlusion, Shadows, Reflections)
+  * Path tracing
+  * Variable Rate Shading
+  * Screen Space Contact Shadows
+  * Soft shadows (PCF)
+  * Lightmap baking
+
 ## ━ Shader Maps:
   * Normal mapping
   * Displacement mapping
   * Parallax occlusion mapping
   * Dynamic environment mapping
+  * Emissive mapping
 
 ## ━ Anti Aliasings:
   * FXAA
   * TAA (Temporal Anti-aliasing)
   * MSAA (Forward rendering only)
+
+## ━ AOs:
+  * SSAO
+  * HBAO
+  * MSAO
 
 ## ━ Filters:
   * Supersampling
@@ -35,30 +65,6 @@
   * Sharpen filter
   * Eye adaption
   * Refractions
-
-## ━ AOs:
-  * SSAO
-  * HBAO
-  * MSAO
-
-## ━ Environments:
-  * Skybox
-  * Waterbox (FFT Simulation)
-  * Soft particles
-  * GPU-based particles (emit from point, mesh, animated mesh)
-  * Hair particle systems (Grass/Vegetation)
-  * Terrain Rendering (material blending)
-  * Variable Rate Shading
-  * Real time ray tracing: ambient occlusion, shadows, reflections (DXR and Vulkan raytracing)
-  * Screen Space Contact Shadows
-  * Stochastic alphatest transparency
-  * Surfel GI
-  * Soft shadows (PCF)
-
-## ━ Models:
-  * GLTF
-  * Skeletal animation
-  * Morph target animation
 
 * Networking (UDP)
 * Instanced rendering
@@ -87,22 +93,8 @@ Particle - Depth Buffer collisions
 Translucent colored shadows
 Refraction caustics
 Local parallax-corrected environment maps
-Volumetric light scattering
 Smooth Particle Hydrodynamics (SPH) Fluid Simulation
-Ray tracing, path tracing (on GPU)
 Entity-Component System (Data oriented design)
-Lightmap baking (with GPU path tracing)
 Job system
-Inverse Kinematics
 Springs
 HDR display output
-
-GLTF 2.0 extensions supported:
-KHR_materials_unlit
-KHR_materials_transmission
-KHR_materials_pbrSpecularGlossiness
-KHR_materials_sheen
-KHR_materials_clearcoat
-KHR_materials_specular
-KHR_materials_ior
-KHR_texture_basisu
