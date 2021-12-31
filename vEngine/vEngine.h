@@ -42,7 +42,7 @@
 #include "wiTextureHelper.h"
 #include "wiRandom.h"
 #include "wiColor.h"
-#include "wiPhysics.h"
+#include "Core/Physics/wiPhysics.h"
 #include "wiEnums.h"
 #include "Core/Systems/wiInitializer.h"
 #include "wiLua.h"

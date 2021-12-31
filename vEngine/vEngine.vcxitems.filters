@@ -34,9 +34,6 @@
     <Filter Include="Engine\Audio">
       <UniqueIdentifier>{76f7fa22-7992-4b49-b4d2-cc24be672869}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Physics">
-      <UniqueIdentifier>{711ea8c7-2455-4557-9e8d-663ed7cc4684}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Scripting">
       <UniqueIdentifier>{690eaec8-f733-445e-b981-cd5b44540aee}</UniqueIdentifier>
     </Filter>
@@ -55,14 +52,14 @@
     <Filter Include="Core\Tools">
       <UniqueIdentifier>{650543fd-4282-4062-b0dd-60b339dc7fab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\System">
+    <Filter Include="Core\Systems">
       <UniqueIdentifier>{e1ed561f-c222-4a93-abda-c8166ec12c04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Physics">
+      <UniqueIdentifier>{228d738d-922b-45fc-bfe9-f6071378b43e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiVersion.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
@@ -185,9 +182,6 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUSortLib.h">
       <Filter>Engine\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiPhysics.h">
-      <Filter>Engine\Physics</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUBVH.h">
       <Filter>Engine\Graphics</Filter>
@@ -1047,38 +1041,39 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Tools\wiProfiler.h">
       <Filter>Core\Tools</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiInitializer.h">
-      <Filter>Core\System</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiGUI.h">
+      <Filter>Core\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiJobSystem.h">
-      <Filter>Core\System</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiInitializer.h">
+      <Filter>Core\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiPlatform.h">
-      <Filter>Core\System</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiJobSystem.h">
+      <Filter>Core\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiScene.h">
-      <Filter>Core\System</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiPlatform.h">
+      <Filter>Core\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiScene_Decl.h">
-      <Filter>Core\System</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene.h">
+      <Filter>Core\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiCanvas.h">
-      <Filter>Core\System</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene_Decl.h">
+      <Filter>Core\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiECS.h">
-      <Filter>Core\System</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiCanvas.h">
+      <Filter>Core\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiEventHandler.h">
-      <Filter>Core\System</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiECS.h">
+      <Filter>Core\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiGUI.h">
-      <Filter>Core\System</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiVersion.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics.h">
+      <Filter>Core\Physics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiVersion.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiApplication.cpp">
       <Filter>Engine\High level interface</Filter>
     </ClCompile>
@@ -1174,9 +1169,6 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiGPUSortLib.cpp">
       <Filter>Engine\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiPhysics_Bullet.cpp">
-      <Filter>Engine\Physics</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiGPUBVH.cpp">
       <Filter>Engine\Graphics</Filter>
@@ -1793,23 +1785,27 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Tools\wiBacklog.cpp">
       <Filter>Core\Tools</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiJobSystem.cpp">
-      <Filter>Core\System</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiGUI.cpp">
+      <Filter>Core\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiScene.cpp">
-      <Filter>Core\System</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiInitializer.cpp">
+      <Filter>Core\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiScene_Serializers.cpp">
-      <Filter>Core\System</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiJobSystem.cpp">
+      <Filter>Core\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiEventHandler.cpp">
-      <Filter>Core\System</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene.cpp">
+      <Filter>Core\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiGUI.cpp">
-      <Filter>Core\System</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene_Serializers.cpp">
+      <Filter>Core\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiInitializer.cpp">
-      <Filter>Core\System</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.cpp">
+      <Filter>Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiVersion.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics_Bullet.cpp">
+      <Filter>Core\Physics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

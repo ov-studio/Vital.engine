@@ -1,7 +1,7 @@
 #include "Core/Systems/wiScene.h"
 #include "wiTextureHelper.h"
 #include "wiResourceManager.h"
-#include "wiPhysics.h"
+#include "Core/Physics/wiPhysics.h"
 #include "wiArchive.h"
 #include "wiRenderer.h"
 #include "Core/Systems/wiJobSystem.h"
