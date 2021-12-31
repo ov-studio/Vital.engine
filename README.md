@@ -12,10 +12,18 @@
 
 * Completely Open-Source
 * C++ ECS Architecture
+* Cross Platform
+* Modern Rendering Techniques
 * Completely Performance-Friendly
-* MySQL Based
 * Sandbox Perspective
-* Modern Techniques
+* vCommunity Integration
+* [Read More](https://github.com/ov-studio/vEngine-Client/blob/main/Features.md)
+
+## ━ Credits
+* János Turánszki
+* Aviril
+* Tron
+* [Read More](https://github.com/ov-studio/vEngine-Client/blob/main/Credits.md)
 
 ## ━ Contents
 
