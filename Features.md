@@ -27,7 +27,7 @@
   * Stochastic Alphatest Transparency
   * Surfel GI
 
-## Dynamic Lightning:
+## ━ Dynamic Lightning:
   * Directional lights
   * Spotlights
   * Point Lights
