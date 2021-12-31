@@ -32,6 +32,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiImage.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiOcean.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSheenLUT.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSprite.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSpriteFont.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiTextureHelper.h" />

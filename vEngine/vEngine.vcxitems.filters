@@ -1062,6 +1062,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice.h">
       <Filter>Core\Graphics\API</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSheenLUT.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">

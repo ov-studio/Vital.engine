@@ -16,7 +16,7 @@
 #include "Core/Helpers/wiSpinLock.h"
 #include "Core/Systems/wiEventHandler.h"
 #include "Core/Systems/wiPlatform.h"
-#include "wiSheenLUT.h"
+#include "Core/Graphics/wiSheenLUT.h"
 #include "Core/Graphics/API/wiShaderCompiler.h"
 #include "Core/Helpers/wiTimer.h"
 #include "Core/Helpers/wiUnorderedMap.h" // leave it here for shader dump!
