@@ -13,15 +13,6 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{ca1dc807-2e48-4738-8590-4eef893d15bd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine">
-      <UniqueIdentifier>{2d30408b-f788-42a8-9648-41561036e10a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Graphics">
-      <UniqueIdentifier>{3d5f1098-95e6-4baa-9e39-864be28a5b64}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Graphics\API">
-      <UniqueIdentifier>{4cb4ddc4-c5a9-483b-b6cf-2c4382340e7a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Core">
       <UniqueIdentifier>{4d76ad4f-e7e5-4a00-aec1-57bb571904fd}</UniqueIdentifier>
     </Filter>
@@ -58,23 +49,11 @@
     <Filter Include="Core\Graphics">
       <UniqueIdentifier>{2d090ff8-7b45-4bf9-b654-0d68da9bdd68}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Graphics\API">
+      <UniqueIdentifier>{f8a66012-5d78-4959-bcfe-22792b6a00ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice.h">
-      <Filter>Engine\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_DX12.h">
-      <Filter>Engine\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_Vulkan.h">
-      <Filter>Engine\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphics.h">
-      <Filter>Engine\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiShaderCompiler.h">
-      <Filter>Engine\Graphics\API</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
       <Filter>Vendors\bullet</Filter>
     </ClInclude>
@@ -1068,17 +1047,23 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUSortLib.h">
       <Filter>Core\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_DX12.h">
+      <Filter>Core\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_Vulkan.h">
+      <Filter>Core\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiShaderCompiler.h">
+      <Filter>Core\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphics.h">
+      <Filter>Core\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice.h">
+      <Filter>Core\Graphics\API</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_DX12.cpp">
-      <Filter>Engine\Graphics\API</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_Vulkan.cpp">
-      <Filter>Engine\Graphics\API</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiShaderCompiler.cpp">
-      <Filter>Engine\Graphics\API</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
       <Filter>Vendors\bullet</Filter>
     </ClCompile>
@@ -1802,6 +1787,15 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUSortLib.cpp">
       <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_DX12.cpp">
+      <Filter>Core\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_Vulkan.cpp">
+      <Filter>Core\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiShaderCompiler.cpp">
+      <Filter>Core\Graphics\API</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

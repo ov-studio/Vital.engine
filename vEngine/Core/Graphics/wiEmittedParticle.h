@@ -1,6 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
-#include "wiGraphicsDevice.h"
+#include "Core/Graphics/API/wiGraphicsDevice.h"
 #include "Core/Helpers/wiPrimitive.h"
 #include "SHADERS/ShaderInterop_EmittedParticle.h"
 #include "Core/Graphics/wiEnums.h"

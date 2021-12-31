@@ -1,4 +1,4 @@
-#include "wiGraphicsDevice_Vulkan.h"
+#include "Core/Graphics/API/wiGraphicsDevice_Vulkan.h"
 
 #ifdef vEngine_BUILD_VULKAN
 #include "Core/Helpers/wiHelper.h"

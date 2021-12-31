@@ -1,6 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
-#include "wiGraphicsDevice.h"
+#include "Core/Graphics/API/wiGraphicsDevice.h"
 
 namespace wi::fftgenerator
 {

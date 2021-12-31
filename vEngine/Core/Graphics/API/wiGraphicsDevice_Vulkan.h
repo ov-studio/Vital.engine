@@ -7,7 +7,7 @@
 #endif // PLATFORM_UWP
 
 #ifdef vEngine_BUILD_VULKAN
-#include "wiGraphicsDevice.h"
+#include "Core/Graphics/API/wiGraphicsDevice.h"
 #include "Core/Helpers/wiUnorderedMap.h"
 #include "Core/Helpers/wiVector.h"
 

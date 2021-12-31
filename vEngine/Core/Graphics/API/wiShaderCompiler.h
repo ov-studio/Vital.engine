@@ -1,5 +1,5 @@
 #pragma once
-#include "wiGraphics.h"
+#include "Core/Graphics/API/wiGraphics.h"
 #include "Core/Helpers/wiVector.h"
 
 #include <string>

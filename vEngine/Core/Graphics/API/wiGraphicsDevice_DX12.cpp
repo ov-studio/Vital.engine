@@ -1,4 +1,4 @@
-#include "wiGraphicsDevice_DX12.h"
+#include "Core/Graphics/API/wiGraphicsDevice_DX12.h"
 
 #ifdef vEngine_BUILD_DX12
 #include "Core/Helpers/wiHelper.h"

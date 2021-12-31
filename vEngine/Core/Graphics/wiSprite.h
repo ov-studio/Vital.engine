@@ -1,6 +1,6 @@
 #pragma once
 #include "Core/Graphics/wiImage.h"
-#include "wiGraphicsDevice.h"
+#include "Core/Graphics/API/wiGraphicsDevice.h"
 #include "Core/Helpers/wiResourceManager.h"
 #include "Core/Helpers/wiRandom.h"
 

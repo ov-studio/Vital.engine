@@ -4,7 +4,7 @@
 #include "Core/Helpers/wiResourceManager.h"
 #include "Core/Helpers/wiColor.h"
 #include "Core/Helpers/wiFadeManager.h"
-#include "wiGraphics.h"
+#include "Core/Graphics/API/wiGraphics.h"
 #include "Core/Systems/wiEventHandler.h"
 #include "Core/Systems/wiCanvas.h"
 

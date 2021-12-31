@@ -1,5 +1,5 @@
 #include "Core/Tools/wiProfiler.h"
-#include "wiGraphicsDevice.h"
+#include "Core/Graphics/API/wiGraphicsDevice.h"
 #include "Core/Graphics/wiFont.h"
 #include "Core/Graphics/wiImage.h"
 #include "Core/Helpers/wiTimer.h"

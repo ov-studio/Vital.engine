@@ -7,7 +7,7 @@
 #endif // _WIN32
 
 #ifdef vEngine_BUILD_DX12
-#include "wiGraphicsDevice.h"
+#include "Core/Graphics/API/wiGraphicsDevice.h"
 #include "Core/Helpers/wiUnorderedMap.h"
 #include "Core/Helpers/wiVector.h"
 

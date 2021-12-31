@@ -16,8 +16,8 @@
 #include "Core/Graphics/wiImage.h"
 #include "Core/Systems/wiEventHandler.h"
 
-#include "wiGraphicsDevice_DX12.h"
-#include "wiGraphicsDevice_Vulkan.h"
+#include "Core/Graphics/API/wiGraphicsDevice_DX12.h"
+#include "Core/Graphics/API/wiGraphicsDevice_Vulkan.h"
 
 #include <string>
 #include <algorithm>
