@@ -1,4 +1,4 @@
-#include "wiXInput.h"
+#include "Core/Input/wiXInput.h"
 
 #if __has_include("xinput.h")
 

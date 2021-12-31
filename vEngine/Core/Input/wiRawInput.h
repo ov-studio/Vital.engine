@@ -1,18 +1,17 @@
 #pragma once
 #include "CommonInclude.h"
-#include "wiInput.h"
+#include "Core/Input/wiInput.h"
 
-#ifdef SDL2
-#include <SDL2/SDL.h>
-#endif
-
-namespace wi::input::sdlinput
+namespace wi::input::rawinput
 {
 	// Call this once to register raw input devices
 	void Initialize();
 
 	// Updates the state of raw input devices, call once per frame
 	void Update();
+
+	// Parse Windows message from message loop. Not necessary to call if you don't use message loop in the application. 
+	void ParseMessage(void* lparam);
 
 	// Writes the keyboard state into state parameter
 	void GetKeyboardState(wi::input::KeyboardState* state);

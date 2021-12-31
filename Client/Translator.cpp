@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Translator.h"
 #include "wiRenderer.h"
-#include "wiInput.h"
+#include "Core/Input/wiInput.h"
 #include "wiMath.h"
 #include "shaders/ShaderInterop_Renderer.h"
 #include "Core/Systems/wiEventHandler.h"

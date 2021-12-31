@@ -3,7 +3,7 @@
 #include "wiRenderer.h"
 #include "wiHelper.h"
 #include "wiTimer.h"
-#include "wiInput.h"
+#include "Core/Input/wiInput.h"
 #include "Core/Tools/wiBacklog.h"
 #include "wiApplication_BindLua.h"
 #include "wiVersion.h"

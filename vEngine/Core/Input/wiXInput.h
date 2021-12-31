@@ -1,6 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
-#include "wiInput.h"
+#include "Core/Input/wiInput.h"
 
 namespace wi::input::xinput
 {

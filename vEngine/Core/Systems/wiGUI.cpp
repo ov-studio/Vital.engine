@@ -1,5 +1,5 @@
 #include "Core/Systems/wiGUI.h"
-#include "wiInput.h"
+#include "Core/Input/wiInput.h"
 #include "wiPrimitive.h"
 #include "Core/Tools/wiProfiler.h"
 #include "wiRenderer.h"

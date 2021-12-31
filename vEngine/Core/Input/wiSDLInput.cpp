@@ -1,10 +1,10 @@
-#include "wiSDLInput.h"
+#include "Core/Input/wiSDLInput.h"
 
 #ifdef SDL2
 
 #include "CommonInclude.h"
 #include "Core/Tools/wiBacklog.h"
-#include "wiInput.h"
+#include "Core/Input/wiInput.h"
 #include "wiVector.h"
 
 #include <SDL2/SDL.h>

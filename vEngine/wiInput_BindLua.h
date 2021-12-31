@@ -1,7 +1,7 @@
 #pragma once
 #include "wiLua.h"
 #include "wiLuna.h"
-#include "wiInput.h"
+#include "Core/Input/wiInput.h"
 
 namespace wi::lua
 {
