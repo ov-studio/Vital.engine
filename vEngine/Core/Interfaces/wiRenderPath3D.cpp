@@ -1,8 +1,8 @@
 #include "Core/Interfaces/wiRenderPath3D.h"
-#include "wiRenderer.h"
-#include "wiImage.h"
+#include "Core/Graphics/wiRenderer.h"
+#include "Core/Graphics/wiImage.h"
 #include "Core/Helpers/wiHelper.h"
-#include "wiTextureHelper.h"
+#include "Core/Graphics/wiTextureHelper.h"
 #include "Core/Tools/wiProfiler.h"
 
 using namespace wi::graphics;

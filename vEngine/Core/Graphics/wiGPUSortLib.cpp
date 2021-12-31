@@ -1,5 +1,5 @@
-#include "wiGPUSortLib.h"
-#include "wiRenderer.h"
+#include "Core/Graphics/wiGPUSortLib.h"
+#include "Core/Graphics/wiRenderer.h"
 #include "Core/Helpers/wiResourceManager.h"
 #include "SHADERS/ShaderInterop_GPUSortLib.h"
 #include "Core/Systems/wiEventHandler.h"

@@ -1,7 +1,7 @@
 #pragma once
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
-#include "wiEnums.h"
+#include "Core/Graphics/wiEnums.h"
 #include "Core/Helpers/wiMath.h"
 #include "Core/Systems/wiECS.h"
 #include "Core/Helpers/wiPrimitive.h"

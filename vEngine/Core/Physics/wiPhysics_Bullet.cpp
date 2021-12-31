@@ -3,7 +3,7 @@
 #include "Core/Tools/wiProfiler.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Systems/wiJobSystem.h"
-#include "wiRenderer.h"
+#include "Core/Graphics/wiRenderer.h"
 #include "Core/Helpers/wiTimer.h"
 
 #include "Vendors/bullet_physics/btBulletDynamicsCommon.h"

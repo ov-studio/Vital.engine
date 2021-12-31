@@ -1,7 +1,7 @@
 #include "Core/Helpers/wiResourceManager.h"
-#include "wiRenderer.h"
+#include "Core/Graphics/wiRenderer.h"
 #include "Core/Helpers/wiHelper.h"
-#include "wiTextureHelper.h"
+#include "Core/Graphics/wiTextureHelper.h"
 #include "Core/Helpers/wiUnorderedMap.h"
 
 #include "Utils/stb_image.h"

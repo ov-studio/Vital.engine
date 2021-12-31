@@ -1,5 +1,5 @@
-#include "wiOcean.h"
-#include "wiRenderer.h"
+#include "Core/Graphics/wiOcean.h"
+#include "Core/Graphics/wiRenderer.h"
 #include "Core/Helpers/wiResourceManager.h"
 #include "SHADERS/ShaderInterop_Ocean.h"
 #include "Core/Systems/wiScene.h"

@@ -1,5 +1,5 @@
 #pragma once
-#include "wiImage.h"
+#include "Core/Graphics/wiImage.h"
 #include "wiGraphicsDevice.h"
 #include "Core/Helpers/wiResourceManager.h"
 #include "Core/Helpers/wiRandom.h"

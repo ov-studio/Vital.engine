@@ -1,5 +1,5 @@
 #pragma once
-#include "wiFont.h"
+#include "Core/Graphics/wiFont.h"
 
 #include <string>
 

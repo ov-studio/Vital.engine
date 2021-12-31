@@ -1,7 +1,7 @@
-#include "wiSprite.h"
-#include "wiImage.h"
+#include "Core/Graphics/wiSprite.h"
+#include "Core/Graphics/wiImage.h"
 #include "Core/Helpers/wiRandom.h"
-#include "wiTextureHelper.h"
+#include "Core/Graphics/wiTextureHelper.h"
 
 using namespace wi::graphics;
 

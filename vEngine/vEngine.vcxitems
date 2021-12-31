@@ -17,6 +17,19 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiEmittedParticle.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiEnums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFFTGenerator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFont.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUBVH.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUSortLib.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiHairParticle.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiImage.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiOcean.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSprite.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSpriteFont.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiTextureHelper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArchive.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArguments.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiColor.h" />
@@ -333,29 +346,28 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\tinyddsloader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\vk_mem_alloc.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\volk.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiFFTGenerator.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUBVH.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUSortLib.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_DX12.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_Vulkan.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiEmittedParticle.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiEnums.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiFont.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiShaderCompiler.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphics.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiHairParticle.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiImage.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiOcean.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiSprite.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteFont.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiTextureHelper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiVersion.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiEmittedParticle.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFFTGenerator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFont.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUBVH.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUSortLib.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiHairParticle.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiImage.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiOcean.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSprite.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSpriteFont.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiTextureHelper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArchive.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArguments.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiFadeManager.cpp" />
@@ -602,21 +614,9 @@
       <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Utils\utility_common.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiFFTGenerator.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiGPUBVH.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiGPUSortLib.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_DX12.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_Vulkan.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiEmittedParticle.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiFont.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiShaderCompiler.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiHairParticle.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiImage.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiOcean.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiSprite.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteFont.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiTextureHelper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiVersion.cpp" />
   </ItemGroup>
   <ItemGroup>

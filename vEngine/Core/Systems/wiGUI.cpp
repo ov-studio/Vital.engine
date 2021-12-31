@@ -2,12 +2,12 @@
 #include "Core/Input/wiInput.h"
 #include "Core/Helpers/wiPrimitive.h"
 #include "Core/Tools/wiProfiler.h"
-#include "wiRenderer.h"
+#include "Core/Graphics/wiRenderer.h"
 #include "Core/Helpers/wiTimer.h"
 #include "Core/Systems/wiEventHandler.h"
-#include "wiFont.h"
-#include "wiImage.h"
-#include "wiTextureHelper.h"
+#include "Core/Graphics/wiFont.h"
+#include "Core/Graphics/wiImage.h"
+#include "Core/Graphics/wiTextureHelper.h"
 #include "Core/Tools/wiBacklog.h"
 
 #include <sstream>

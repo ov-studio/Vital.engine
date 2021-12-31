@@ -6,8 +6,8 @@
 #include "Core/Helpers/wiVector.h"
 #include "Core/Helpers/wiColor.h"
 #include "Core/Systems/wiScene.h"
-#include "wiSprite.h"
-#include "wiSpriteFont.h"
+#include "Core/Graphics/wiSprite.h"
+#include "Core/Graphics/wiSpriteFont.h"
 
 #include <string>
 #include <functional>

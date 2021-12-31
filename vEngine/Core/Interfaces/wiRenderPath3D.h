@@ -1,6 +1,6 @@
 #pragma once
 #include "Core/Interfaces/wiRenderPath2D.h"
-#include "wiRenderer.h"
+#include "Core/Graphics/wiRenderer.h"
 #include "wiGraphicsDevice.h"
 #include "Core/Helpers/wiResourceManager.h"
 #include "Core/Systems/wiScene.h"

@@ -1,6 +1,6 @@
-#include "wiImage.h"
+#include "Core/Graphics/wiImage.h"
 #include "Core/Helpers/wiResourceManager.h"
-#include "wiRenderer.h"
+#include "Core/Graphics/wiRenderer.h"
 #include "Core/Helpers/wiHelper.h"
 #include "SHADERS/ShaderInterop_Image.h"
 #include "Core/Tools/wiBacklog.h"

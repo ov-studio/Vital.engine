@@ -1,7 +1,7 @@
 #pragma once
 #include "Core/Scripting/wiLua.h"
 #include "Core/Scripting/wiLuna.h"
-#include "wiImage.h"
+#include "Core/Graphics/wiImage.h"
 
 namespace wi::lua
 {

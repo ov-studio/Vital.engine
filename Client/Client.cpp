@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Client.h"
-#include "wiRenderer.h"
+#include "Core/Graphics/wiRenderer.h"
 
 #include "ModelImporter.h"
 #include "Translator.h"

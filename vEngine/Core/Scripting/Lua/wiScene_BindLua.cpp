@@ -1,7 +1,7 @@
 #include "Core/Scripting/Lua/wiScene_BindLua.h"
 #include "Core/Systems/wiScene.h"
 #include "Core/Scripting/Lua/wiMath_BindLua.h"
-#include "wiEmittedParticle.h"
+#include "Core/Graphics/wiEmittedParticle.h"
 #include "Core/Scripting/Lua/wiTexture_BindLua.h"
 #include "Core/Scripting/Lua/wiPrimitive_BindLua.h"
 

@@ -1,4 +1,4 @@
-#include "wiSpriteFont.h"
+#include "Core/Graphics/wiSpriteFont.h"
 #include "Core/Helpers/wiHelper.h"
 
 using namespace wi::graphics;

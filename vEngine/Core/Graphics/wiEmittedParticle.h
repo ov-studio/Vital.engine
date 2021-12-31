@@ -3,7 +3,7 @@
 #include "wiGraphicsDevice.h"
 #include "Core/Helpers/wiPrimitive.h"
 #include "SHADERS/ShaderInterop_EmittedParticle.h"
-#include "wiEnums.h"
+#include "Core/Graphics/wiEnums.h"
 #include "Core/Helpers/wiMath.h"
 #include "Core/Systems/wiECS.h"
 #include "Core/Systems/wiScene_Decl.h"

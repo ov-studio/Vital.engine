@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Translator.h"
-#include "wiRenderer.h"
+#include "Core/Graphics/wiRenderer.h"
 #include "Core/Input/wiInput.h"
 #include "Core/Helpers/wiMath.h"
 #include "shaders/ShaderInterop_Renderer.h"

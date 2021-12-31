@@ -1,8 +1,8 @@
 #include "Core/Interfaces/wiRenderPath2D.h"
 #include "Core/Helpers/wiResourceManager.h"
-#include "wiSprite.h"
-#include "wiSpriteFont.h"
-#include "wiRenderer.h"
+#include "Core/Graphics/wiSprite.h"
+#include "Core/Graphics/wiSpriteFont.h"
+#include "Core/Graphics/wiRenderer.h"
 
 using namespace wi::graphics;
 

@@ -1,4 +1,4 @@
-#include "wiTextureHelper.h"
+#include "Core/Graphics/wiTextureHelper.h"
 #include "Core/Helpers/wiRandom.h"
 #include "Core/Helpers/wiColor.h"
 #include "Core/Tools/wiBacklog.h"
