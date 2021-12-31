@@ -690,7 +690,7 @@ void ClientComponent::Load()
 		}
 		else
 		{
-			params.description = "vEngine Scene (.vasset)";
+			params.description = "vEngine Asset (.vasset)";
 			params.extensions.push_back("vasset");
 		}
 		wi::helper::FileDialog(params, [=](std::string fileName) {
@@ -730,9 +730,8 @@ void ClientComponent::Load()
 	modelButton.OnClick([&](wi::gui::EventArgs args) {
 		wi::helper::FileDialogParams params;
 		params.type = wi::helper::FileDialogParams::OPEN;
-		params.description = "Model formats (.vasset, .obj, .gltf, .glb)";
+		params.description = "Model formats (.vasset, .gltf, .glb)";
 		params.extensions.push_back("vasset");
-		params.extensions.push_back("obj");
 		params.extensions.push_back("gltf");
 		params.extensions.push_back("glb");
 		wi::helper::FileDialog(params, [&](std::string fileName) {
@@ -743,15 +742,9 @@ void ClientComponent::Load()
 				main->loader.addLoadingFunction([=](wi::jobsystem::JobArgs args) {
 					std::string extension = wi::helper::toUpper(wi::helper::GetExtensionFromFileName(fileName));
 
-					if (!extension.compare("WISCENE")) // engine-serialized
+					if (!extension.compare("VASSET")) // engine-serialized
 					{
 						wi::scene::LoadModel(fileName);
-					}
-					else if (!extension.compare("OBJ")) // wavefront-obj
-					{
-						Scene scene;
-						ImportModel_OBJ(fileName, scene);
-						wi::scene::GetScene().Merge(scene);
 					}
 					else if (!extension.compare("GLTF")) // text-based gltf
 					{
