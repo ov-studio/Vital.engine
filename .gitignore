@@ -6,7 +6,7 @@
 [Dd]ebugPublic/
 [Rr]elease/
 x64/
-build/
+.build/
 cmake-build-*/
 bld/
 [Bb]in/
