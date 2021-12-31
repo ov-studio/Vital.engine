@@ -21,10 +21,10 @@
 ## ━ Environments:
   * Skybox
   * Waterbox (FFT Simulation)
-  * Hair particle systems (Grass/Vegetation)
+  * Hair Particle Systems (Grass/Vegetation)
   * GPU Particles
   * Terrain Rendering (Material blending)
-  * Stochastic alphatest transparency
+  * Stochastic Alphatest Transparency
   * Surfel GI
 
 ## Dynamic Lightning:
@@ -78,7 +78,7 @@
   * Gamma Correction
   * Tiled Forward (Forward+) Rendering (+2.5D culling)
   * Tiled Decals
-  * HDR rendering
+  * HDR Rendering
   * Force Fields GPU simulation
   * Reversed Z-buffer
   * Particle - Depth Buffer collisions
