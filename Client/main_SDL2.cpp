@@ -218,7 +218,7 @@ int main(int argc, char *argv[])
     file.close();
 
     sdl2::window_ptr_t window = sdl2::make_window(
-            "vEngine Client",
+            "vClient",
             SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
             w, h,
             SDL_WINDOW_SHOWN | SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
