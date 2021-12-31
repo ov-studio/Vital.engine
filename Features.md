@@ -4,7 +4,7 @@
   * DirectX 12
   * Vulkan
 
-* Renderers:
+* Renderers (Multi Threaded):
   * Images
   * Fonts (True Type)
   * 3D mesh
@@ -14,12 +14,14 @@
   * Normal mapping
   * Displacement mapping
   * Parallax occlusion mapping
+  * Dynamic environment mapping
 
 * Anti Aliasings:
   * FXAA
   * TAA (Temporal Anti-aliasing)
   * MSAA (Forward rendering only)
   * Supersampling
+
 
   * Networking (UDP)
   * Skeletal animation
@@ -36,7 +38,6 @@
 * Light shafts
 * Bokeh Depth of Field
 * Chromatic aberration
-* Multithreaded rendering
 * Tessellation (silhouette smoothing, displacement mapping)
 * GPU-based particles (emit from point, mesh, animated mesh)
 * Soft particles
@@ -60,7 +61,6 @@ Color Grading
 Sharpen filter
 Eye adaption
 Lua Scripting
-Dynamic environment mapping
 Impostor system
 Tiled forward (Forward+) rendering (+2.5D culling)
 Occlusion culling with gpu queries
