@@ -1,17 +1,17 @@
 #include "wiEmittedParticle.h"
 #include "Core/Systems/wiScene.h"
 #include "wiRenderer.h"
-#include "wiResourceManager.h"
-#include "wiPrimitive.h"
-#include "wiRandom.h"
-#include "wiArchive.h"
+#include "Core/Helpers/wiResourceManager.h"
+#include "Core/Helpers/wiPrimitive.h"
+#include "Core/Helpers/wiRandom.h"
+#include "Core/Helpers/wiArchive.h"
 #include "wiTextureHelper.h"
 #include "wiGPUSortLib.h"
 #include "Core/Tools/wiProfiler.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Systems/wiEventHandler.h"
-#include "wiTimer.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiTimer.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <algorithm>
 

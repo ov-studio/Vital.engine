@@ -4,11 +4,11 @@
 #include "wiGraphicsDevice.h"
 #include "Core/Systems/wiScene.h"
 #include "Core/Systems/wiECS.h"
-#include "wiPrimitive.h"
+#include "Core/Helpers/wiPrimitive.h"
 #include "Core/Systems/wiCanvas.h"
-#include "wiMath.h"
+#include "Core/Helpers/wiMath.h"
 #include "SHADERS/ShaderInterop_Renderer.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <memory>
 #include <limits>

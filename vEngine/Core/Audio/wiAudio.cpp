@@ -1,8 +1,8 @@
 #include "wiAudio.h"
 #include "Core/Tools/wiBacklog.h"
-#include "wiHelper.h"
-#include "wiTimer.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiHelper.h"
+#include "Core/Helpers/wiTimer.h"
+#include "Core/Helpers/wiVector.h"
 
 #define STB_VORBIS_HEADER_ONLY
 #include "Utils/stb_vorbis.c"

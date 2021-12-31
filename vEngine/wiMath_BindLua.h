@@ -2,7 +2,7 @@
 #include "CommonInclude.h"
 #include "wiLua.h"
 #include "wiLuna.h"
-#include "wiMath.h"
+#include "Core/Helpers/wiMath.h"
 
 namespace wi::lua
 {

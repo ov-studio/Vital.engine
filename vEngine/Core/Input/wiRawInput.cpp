@@ -2,7 +2,7 @@
 #include "Core/Systems/wiPlatform.h"
 
 #if defined(_WIN32) && !defined(PLATFORM_UWP)
-#include "wiVector.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <cassert>
 #include <string>

@@ -1,8 +1,8 @@
-#include "wiResourceManager.h"
+#include "Core/Helpers/wiResourceManager.h"
 #include "wiRenderer.h"
-#include "wiHelper.h"
+#include "Core/Helpers/wiHelper.h"
 #include "wiTextureHelper.h"
-#include "wiUnorderedMap.h"
+#include "Core/Helpers/wiUnorderedMap.h"
 
 #include "Utils/stb_image.h"
 #include "Utils/tinyddsloader.h"

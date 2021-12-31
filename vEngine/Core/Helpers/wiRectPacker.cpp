@@ -1,4 +1,4 @@
-#include "wiRectPacker.h"
+#include "Core/Helpers/wiRectPacker.h"
 
 #include <algorithm>
 

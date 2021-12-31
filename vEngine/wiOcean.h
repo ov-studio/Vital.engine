@@ -3,7 +3,7 @@
 #include "wiGraphicsDevice.h"
 #include "wiFFTGenerator.h"
 #include "Core/Systems/wiScene_Decl.h"
-#include "wiMath.h"
+#include "Core/Helpers/wiMath.h"
 
 namespace wi
 {

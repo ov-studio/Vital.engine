@@ -8,8 +8,8 @@
 
 #ifdef vEngine_BUILD_DX12
 #include "wiGraphicsDevice.h"
-#include "wiUnorderedMap.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiUnorderedMap.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <dxgi1_6.h>
 #include <wrl/client.h> // ComPtr

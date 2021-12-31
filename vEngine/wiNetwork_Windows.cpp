@@ -3,7 +3,7 @@
 #if defined(_WIN32) && !defined(PLATFORM_UWP)
 #include "wiNetwork.h"
 #include "Core/Tools/wiBacklog.h"
-#include "wiTimer.h"
+#include "Core/Helpers/wiTimer.h"
 
 #include <string>
 

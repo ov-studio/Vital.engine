@@ -2,9 +2,9 @@
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
 #include "Core/Audio/wiAudio.h"
-#include "wiArchive.h"
+#include "Core/Helpers/wiArchive.h"
 #include "Core/Systems/wiJobSystem.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <memory>
 

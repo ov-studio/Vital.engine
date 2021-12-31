@@ -1,7 +1,7 @@
 #pragma once
 #include "wiRenderPath.h"
 #include "Core/Systems/wiGUI.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <string>
 

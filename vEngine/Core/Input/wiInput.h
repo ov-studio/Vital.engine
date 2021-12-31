@@ -1,8 +1,8 @@
 #pragma once
 #include "CommonInclude.h"
 #include "Core/Systems/wiPlatform.h"
-#include "wiColor.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiColor.h"
+#include "Core/Helpers/wiVector.h"
 
 namespace wi::input
 {

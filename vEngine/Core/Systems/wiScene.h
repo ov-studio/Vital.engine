@@ -1,20 +1,20 @@
 #pragma once
 #include "CommonInclude.h"
 #include "wiEnums.h"
-#include "wiPrimitive.h"
+#include "Core/Helpers/wiPrimitive.h"
 #include "wiEmittedParticle.h"
 #include "wiHairParticle.h"
 #include "SHADERS/ShaderInterop_Renderer.h"
 #include "Core/Systems/wiJobSystem.h"
 #include "Core/Audio/wiAudio.h"
-#include "wiResourceManager.h"
-#include "wiSpinLock.h"
+#include "Core/Helpers/wiResourceManager.h"
+#include "Core/Helpers/wiSpinLock.h"
 #include "wiGPUBVH.h"
 #include "wiOcean.h"
 #include "wiSprite.h"
-#include "wiMath.h"
+#include "Core/Helpers/wiMath.h"
 #include "Core/Systems/wiECS.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <string>
 #include <memory>

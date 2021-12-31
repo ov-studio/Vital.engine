@@ -2,10 +2,10 @@
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
 #include "wiEnums.h"
-#include "wiMath.h"
+#include "Core/Helpers/wiMath.h"
 #include "Core/Systems/wiECS.h"
-#include "wiPrimitive.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiPrimitive.h"
+#include "Core/Helpers/wiVector.h"
 #include "Core/Systems/wiScene_Decl.h"
 
 #include <memory>

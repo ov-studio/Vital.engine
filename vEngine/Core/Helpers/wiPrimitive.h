@@ -1,7 +1,7 @@
 #pragma once
 #include "CommonInclude.h"
-#include "wiArchive.h"
-#include "wiMath.h"
+#include "Core/Helpers/wiArchive.h"
+#include "Core/Helpers/wiMath.h"
 #include "Core/Systems/wiECS.h"
 
 #include <limits>

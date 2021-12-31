@@ -1,7 +1,7 @@
 #pragma once
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <string>
 #include <functional>

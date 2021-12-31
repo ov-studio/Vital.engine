@@ -1,6 +1,6 @@
-#include "wiArguments.h"
-#include "wiHelper.h"
-#include "wiUnorderedSet.h"
+#include "Core/Helpers/wiArguments.h"
+#include "Core/Helpers/wiHelper.h"
+#include "Core/Helpers/wiUnorderedSet.h"
 
 #include <sstream>
 #include <iterator>

@@ -5,7 +5,7 @@
 #include "CommonInclude.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Input/wiInput.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <SDL2/SDL.h>
 #include <SDL_events.h>

@@ -1,5 +1,5 @@
 #include "wiFFTGenerator.h"
-#include "wiResourceManager.h"
+#include "Core/Helpers/wiResourceManager.h"
 #include "wiRenderer.h"
 #include "SHADERS/ShaderInterop_FFTGenerator.h"
 

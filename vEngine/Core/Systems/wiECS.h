@@ -1,10 +1,10 @@
 #ifndef WI_ENTITY_COMPONENT_SYSTEM_H
 #define WI_ENTITY_COMPONENT_SYSTEM_H
 
-#include "wiArchive.h"
+#include "Core/Helpers/wiArchive.h"
 #include "Core/Systems/wiJobSystem.h"
-#include "wiUnorderedMap.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiUnorderedMap.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <cstdint>
 #include <cassert>

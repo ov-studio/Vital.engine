@@ -1,6 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <cassert>
 #include <memory>

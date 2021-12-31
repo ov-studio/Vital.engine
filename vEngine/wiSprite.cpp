@@ -1,6 +1,6 @@
 #include "wiSprite.h"
 #include "wiImage.h"
-#include "wiRandom.h"
+#include "Core/Helpers/wiRandom.h"
 #include "wiTextureHelper.h"
 
 using namespace wi::graphics;

@@ -1,6 +1,6 @@
 #include "wiNetwork_BindLua.h"
 #include "wiNetwork.h"
-#include "wiHelper.h"
+#include "Core/Helpers/wiHelper.h"
 
 namespace wi::lua
 {

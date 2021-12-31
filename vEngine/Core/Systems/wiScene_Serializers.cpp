@@ -1,11 +1,11 @@
 #include "Core/Systems/wiScene.h"
-#include "wiResourceManager.h"
-#include "wiArchive.h"
-#include "wiRandom.h"
-#include "wiHelper.h"
+#include "Core/Helpers/wiResourceManager.h"
+#include "Core/Helpers/wiArchive.h"
+#include "Core/Helpers/wiRandom.h"
+#include "Core/Helpers/wiHelper.h"
 #include "Core/Tools/wiBacklog.h"
-#include "wiTimer.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiTimer.h"
+#include "Core/Helpers/wiVector.h"
 
 using namespace wi::ecs;
 

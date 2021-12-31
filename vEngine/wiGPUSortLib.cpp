@@ -1,9 +1,9 @@
 #include "wiGPUSortLib.h"
 #include "wiRenderer.h"
-#include "wiResourceManager.h"
+#include "Core/Helpers/wiResourceManager.h"
 #include "SHADERS/ShaderInterop_GPUSortLib.h"
 #include "Core/Systems/wiEventHandler.h"
-#include "wiTimer.h"
+#include "Core/Helpers/wiTimer.h"
 #include "Core/Tools/wiBacklog.h"
 
 using namespace wi::graphics;

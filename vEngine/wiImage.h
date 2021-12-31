@@ -2,7 +2,7 @@
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
 #include "wiEnums.h"
-#include "wiColor.h"
+#include "Core/Helpers/wiColor.h"
 #include "Core/Systems/wiCanvas.h"
 
 namespace wi::image

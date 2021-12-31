@@ -36,7 +36,7 @@ For description how to tune the algorithm and how it actually works see the .cpp
 
 */
 
-#include "wiVector.h"
+#include "Core/Helpers/wiVector.h"
 
 namespace wi::rectpacker
 {

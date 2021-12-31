@@ -4,7 +4,7 @@
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Systems/wiJobSystem.h"
 #include "wiRenderer.h"
-#include "wiTimer.h"
+#include "Core/Helpers/wiTimer.h"
 
 #include "Vendors/bullet_physics/btBulletDynamicsCommon.h"
 #include "Vendors/bullet_physics/BulletSoftBody/btSoftBodyHelpers.h"

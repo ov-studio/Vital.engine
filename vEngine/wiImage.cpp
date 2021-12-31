@@ -1,11 +1,11 @@
 #include "wiImage.h"
-#include "wiResourceManager.h"
+#include "Core/Helpers/wiResourceManager.h"
 #include "wiRenderer.h"
-#include "wiHelper.h"
+#include "Core/Helpers/wiHelper.h"
 #include "SHADERS/ShaderInterop_Image.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Systems/wiEventHandler.h"
-#include "wiTimer.h"
+#include "Core/Helpers/wiTimer.h"
 
 using namespace wi::graphics;
 using namespace wi::enums;

@@ -1,12 +1,12 @@
 #include "wiOcean.h"
 #include "wiRenderer.h"
-#include "wiResourceManager.h"
+#include "Core/Helpers/wiResourceManager.h"
 #include "SHADERS/ShaderInterop_Ocean.h"
 #include "Core/Systems/wiScene.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Systems/wiEventHandler.h"
-#include "wiTimer.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiTimer.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <algorithm>
 

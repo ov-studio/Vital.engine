@@ -3,11 +3,11 @@
 #include "Core/Input/wiXInput.h"
 #include "Core/Input/wiRawInput.h"
 #include "Core/Input/wiSDLInput.h"
-#include "wiHelper.h"
+#include "Core/Helpers/wiHelper.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Tools/wiProfiler.h"
-#include "wiColor.h"
-#include "wiTimer.h"
+#include "Core/Helpers/wiColor.h"
+#include "Core/Helpers/wiTimer.h"
 
 #include <algorithm>
 #include <map>

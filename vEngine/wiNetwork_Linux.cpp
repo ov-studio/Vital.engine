@@ -3,7 +3,7 @@
 #ifdef PLATFORM_LINUX
 #include "wiNetwork.h"
 #include "Core/Tools/wiBacklog.h"
-#include "wiTimer.h"
+#include "Core/Helpers/wiTimer.h"
 
 #include <string>
 #include <unistd.h>

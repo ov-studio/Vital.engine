@@ -1,9 +1,9 @@
 #include "wiShaderCompiler.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Systems/wiPlatform.h"
-#include "wiHelper.h"
-#include "wiArchive.h"
-#include "wiUnorderedSet.h"
+#include "Core/Helpers/wiHelper.h"
+#include "Core/Helpers/wiArchive.h"
+#include "Core/Helpers/wiUnorderedSet.h"
 
 #include <mutex>
 #include <filesystem>

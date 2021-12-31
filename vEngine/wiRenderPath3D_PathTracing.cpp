@@ -1,7 +1,7 @@
 #include "wiRenderPath3D_PathTracing.h"
 #include "wiRenderer.h"
 #include "wiImage.h"
-#include "wiHelper.h"
+#include "Core/Helpers/wiHelper.h"
 #include "wiTextureHelper.h"
 #include "wiSprite.h"
 #include "Core/Tools/wiProfiler.h"

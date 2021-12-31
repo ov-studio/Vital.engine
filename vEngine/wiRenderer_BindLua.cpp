@@ -1,6 +1,6 @@
 #include "wiRenderer_BindLua.h"
 #include "wiRenderer.h"
-#include "wiHelper.h"
+#include "Core/Helpers/wiHelper.h"
 #include "Core/Systems/wiScene.h"
 #include "wiScene_BindLua.h"
 #include "wiMath_BindLua.h"

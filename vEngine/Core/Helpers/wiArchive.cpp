@@ -1,5 +1,5 @@
-#include "wiArchive.h"
-#include "wiHelper.h"
+#include "Core/Helpers/wiArchive.h"
+#include "Core/Helpers/wiHelper.h"
 
 #include <fstream>
 

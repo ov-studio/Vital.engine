@@ -1,10 +1,10 @@
 #include "wiTextureHelper.h"
-#include "wiRandom.h"
-#include "wiColor.h"
+#include "Core/Helpers/wiRandom.h"
+#include "Core/Helpers/wiColor.h"
 #include "Core/Tools/wiBacklog.h"
-#include "wiSpinLock.h"
-#include "wiTimer.h"
-#include "wiUnorderedMap.h"
+#include "Core/Helpers/wiSpinLock.h"
+#include "Core/Helpers/wiTimer.h"
+#include "Core/Helpers/wiUnorderedMap.h"
 
 using namespace wi::graphics;
 

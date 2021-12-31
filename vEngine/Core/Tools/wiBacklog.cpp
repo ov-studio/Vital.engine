@@ -1,15 +1,15 @@
 #include "Core/Tools/wiBacklog.h"
-#include "wiMath.h"
-#include "wiResourceManager.h"
+#include "Core/Helpers/wiMath.h"
+#include "Core/Helpers/wiResourceManager.h"
 #include "wiTextureHelper.h"
-#include "wiSpinLock.h"
+#include "Core/Helpers/wiSpinLock.h"
 #include "wiFont.h"
 #include "wiSpriteFont.h"
 #include "wiImage.h"
 #include "wiLua.h"
 #include "Core/Input/wiInput.h"
 #include "Core/Systems/wiPlatform.h"
-#include "wiHelper.h"
+#include "Core/Helpers/wiHelper.h"
 
 #include <mutex>
 #include <deque>

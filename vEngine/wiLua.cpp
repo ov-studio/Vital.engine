@@ -1,7 +1,7 @@
 #include "wiLua.h"
 #include "wiLua_Globals.h"
 #include "Core/Tools/wiBacklog.h"
-#include "wiHelper.h"
+#include "Core/Helpers/wiHelper.h"
 #include "wiApplication_BindLua.h"
 #include "wiRenderPath_BindLua.h"
 #include "wiRenderPath2D_BindLua.h"
@@ -20,8 +20,8 @@
 #include "wiBacklog_BindLua.h"
 #include "wiNetwork_BindLua.h"
 #include "wiPrimitive_BindLua.h"
-#include "wiTimer.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiTimer.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <memory>
 

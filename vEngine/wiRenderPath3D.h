@@ -2,7 +2,7 @@
 #include "wiRenderPath2D.h"
 #include "wiRenderer.h"
 #include "wiGraphicsDevice.h"
-#include "wiResourceManager.h"
+#include "Core/Helpers/wiResourceManager.h"
 #include "Core/Systems/wiScene.h"
 
 #include <memory>

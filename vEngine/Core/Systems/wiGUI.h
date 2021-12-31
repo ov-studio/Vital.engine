@@ -1,10 +1,10 @@
 #pragma once
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
-#include "wiPrimitive.h"
+#include "Core/Helpers/wiPrimitive.h"
 #include "Core/Systems/wiCanvas.h"
-#include "wiVector.h"
-#include "wiColor.h"
+#include "Core/Helpers/wiVector.h"
+#include "Core/Helpers/wiColor.h"
 #include "Core/Systems/wiScene.h"
 #include "wiSprite.h"
 #include "wiSpriteFont.h"

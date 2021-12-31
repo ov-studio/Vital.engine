@@ -1,8 +1,8 @@
 #pragma once
 #include "CommonInclude.h"
-#include "wiColor.h"
-#include "wiTimer.h"
-#include "wiMath.h"
+#include "Core/Helpers/wiColor.h"
+#include "Core/Helpers/wiTimer.h"
+#include "Core/Helpers/wiMath.h"
 
 #include <functional>
 

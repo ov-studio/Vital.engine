@@ -1,16 +1,16 @@
 #include "wiHairParticle.h"
 #include "wiRenderer.h"
-#include "wiResourceManager.h"
-#include "wiPrimitive.h"
-#include "wiRandom.h"
-#include "wiArchive.h"
+#include "Core/Helpers/wiResourceManager.h"
+#include "Core/Helpers/wiPrimitive.h"
+#include "Core/Helpers/wiRandom.h"
+#include "Core/Helpers/wiArchive.h"
 #include "SHADERS/ShaderInterop.h"
 #include "wiTextureHelper.h"
 #include "Core/Systems/wiScene.h"
 #include "SHADERS/ShaderInterop_HairParticle.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Systems/wiEventHandler.h"
-#include "wiTimer.h"
+#include "Core/Helpers/wiTimer.h"
 
 using namespace wi::primitive;
 using namespace wi::graphics;

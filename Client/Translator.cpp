@@ -2,7 +2,7 @@
 #include "Translator.h"
 #include "wiRenderer.h"
 #include "Core/Input/wiInput.h"
-#include "wiMath.h"
+#include "Core/Helpers/wiMath.h"
 #include "shaders/ShaderInterop_Renderer.h"
 #include "Core/Systems/wiEventHandler.h"
 

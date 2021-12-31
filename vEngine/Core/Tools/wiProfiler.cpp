@@ -2,10 +2,10 @@
 #include "wiGraphicsDevice.h"
 #include "wiFont.h"
 #include "wiImage.h"
-#include "wiTimer.h"
+#include "Core/Helpers/wiTimer.h"
 #include "wiTextureHelper.h"
-#include "wiHelper.h"
-#include "wiUnorderedMap.h"
+#include "Core/Helpers/wiHelper.h"
+#include "Core/Helpers/wiUnorderedMap.h"
 #include "Core/Tools/wiBacklog.h"
 
 #if __has_include("Superluminal/PerformanceAPI_capi.h")

@@ -1,7 +1,7 @@
 #pragma once
 #include "wiLua.h"
 #include "wiLuna.h"
-#include "wiPrimitive.h"
+#include "Core/Helpers/wiPrimitive.h"
 
 namespace wi::lua::primitive
 {

@@ -1,4 +1,4 @@
-#include "wiPrimitive.h"
+#include "Core/Helpers/wiPrimitive.h"
 
 namespace wi::primitive
 {

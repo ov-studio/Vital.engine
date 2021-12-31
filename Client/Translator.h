@@ -1,7 +1,7 @@
 #pragma once
 #include "CommonInclude.h"
 #include "Core/Systems/wiCanvas.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiVector.h"
 
 class Translator
 {

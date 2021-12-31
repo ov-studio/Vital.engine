@@ -1,8 +1,8 @@
-#include "wiHelper.h"
+#include "Core/Helpers/wiHelper.h"
 #include "Core/Systems/wiPlatform.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Systems/wiEventHandler.h"
-#include "wiMath.h"
+#include "Core/Helpers/wiMath.h"
 
 #include "Utils/stb_image_write.h"
 #include "Utils/basis_universal/encoder/basisu_comp.h"

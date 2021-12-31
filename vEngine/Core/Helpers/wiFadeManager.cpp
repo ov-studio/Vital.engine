@@ -1,4 +1,4 @@
-#include "wiFadeManager.h"
+#include "Core/Helpers/wiFadeManager.h"
 
 namespace wi
 {

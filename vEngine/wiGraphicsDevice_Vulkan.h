@@ -8,8 +8,8 @@
 
 #ifdef vEngine_BUILD_VULKAN
 #include "wiGraphicsDevice.h"
-#include "wiUnorderedMap.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiUnorderedMap.h"
+#include "Core/Helpers/wiVector.h"
 
 #ifdef _WIN32
 #define VK_USE_PLATFORM_WIN32_KHR

@@ -1,10 +1,10 @@
 #include "wiGraphicsDevice_DX12.h"
 
 #ifdef vEngine_BUILD_DX12
-#include "wiHelper.h"
+#include "Core/Helpers/wiHelper.h"
 #include "Core/Tools/wiBacklog.h"
-#include "wiTimer.h"
-#include "wiUnorderedSet.h"
+#include "Core/Helpers/wiTimer.h"
+#include "Core/Helpers/wiUnorderedSet.h"
 
 #include "Utils/dx12/d3dx12.h"
 #include "Utils/D3D12MemAlloc.h"

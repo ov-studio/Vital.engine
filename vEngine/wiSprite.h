@@ -1,8 +1,8 @@
 #pragma once
 #include "wiImage.h"
 #include "wiGraphicsDevice.h"
-#include "wiResourceManager.h"
-#include "wiRandom.h"
+#include "Core/Helpers/wiResourceManager.h"
+#include "Core/Helpers/wiRandom.h"
 
 #include <memory>
 #include <string>

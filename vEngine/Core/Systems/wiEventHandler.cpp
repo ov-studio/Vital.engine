@@ -1,6 +1,6 @@
 #include "Core/Systems/wiEventHandler.h"
-#include "wiUnorderedMap.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiUnorderedMap.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <list>
 #include <mutex>

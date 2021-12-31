@@ -1,10 +1,10 @@
 #pragma once
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
-#include "wiPrimitive.h"
+#include "Core/Helpers/wiPrimitive.h"
 #include "SHADERS/ShaderInterop_EmittedParticle.h"
 #include "wiEnums.h"
-#include "wiMath.h"
+#include "Core/Helpers/wiMath.h"
 #include "Core/Systems/wiECS.h"
 #include "Core/Systems/wiScene_Decl.h"
 

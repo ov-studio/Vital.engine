@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Core/Systems/wiScene.h"
 #include "ModelImporter.h"
-#include "wiRandom.h"
+#include "Core/Helpers/wiRandom.h"
 
 #include "Utils/stb_image.h"
 

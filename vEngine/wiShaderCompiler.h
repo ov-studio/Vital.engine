@@ -1,6 +1,6 @@
 #pragma once
 #include "wiGraphics.h"
-#include "wiVector.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <string>
 

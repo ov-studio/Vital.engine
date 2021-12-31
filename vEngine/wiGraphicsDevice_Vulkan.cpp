@@ -1,11 +1,11 @@
 #include "wiGraphicsDevice_Vulkan.h"
 
 #ifdef vEngine_BUILD_VULKAN
-#include "wiHelper.h"
+#include "Core/Helpers/wiHelper.h"
 #include "Core/Tools/wiBacklog.h"
 #include "wiVersion.h"
-#include "wiTimer.h"
-#include "wiUnorderedSet.h"
+#include "Core/Helpers/wiTimer.h"
+#include "Core/Helpers/wiUnorderedSet.h"
 
 #define VOLK_IMPLEMENTATION
 #include "Utils/volk.h"
