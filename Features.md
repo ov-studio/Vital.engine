@@ -14,8 +14,8 @@
 
 ## ━ Models:
   * GLTF
-  * Skeletal animation
-  * Morph target animation
+  * Skeletal Animation
+  * Morph-Target Animation
   * Inverse Kinematics
 
 ## ━ Environments:
@@ -30,25 +30,23 @@
 ## Dynamic Lightning:
   * Directional lights
   * Spotlights
-  * Point lights
-  * Volumetric light scattering
-  * Lightmap baking
+  * Point Lights
+  * Volumetric Light
+  * Lightmap Baking
   * Soft shadows (PCF)
   * Screen Space Contact Shadows
-  * Ray tracing (Ambient Occlusion, Shadows, Reflections)
-  * Path tracing
+  * Ray Tracing (Ambient Occlusion, Shadows, Reflections)
+  * Path Tracing
   * Variable Rate Shading
   * Voxel Global Illumination
   * Occlusion Culling
-  * Texture Atlas Packer
-  * Refraction caustics
 
 ## ━ Shader Maps:
-  * Normal mapping
-  * Displacement mapping
-  * Parallax occlusion mapping
-  * Dynamic environment mapping
-  * Emissive mapping
+  * Normal Mapping
+  * Displacement Mapping
+  * Parallax Occlusion Mapping
+  * Dynamic Environment Mapping
+  * Emissive Mapping
 
 ## ━ Anti Aliasings:
   * FXAA
@@ -60,42 +58,44 @@
   * HBAO
   * MSAO
 
-## ━ Filters:
+## ━ Filters & Enhancers:
   * Supersampling
   * Bloom
   * Edge outline
   * Motion Blur
   * Lens Flare
-  * Light shafts
+  * Light Shafts
   * Bokeh Depth of Field
-  * Chromatic aberration
-  * Tessellation (silhouette smoothing, displacement mapping)
-  * Cube map reflections (static and real time)
-  * Real time planar reflections
+  * Chromatic Aberration
+  * Tessellation
+  * Real Time Reflections
+  * Real Time Refractions
   * Color Grading
-  * Sharpen filter
-  * Eye adaption
-  * Refractions
+  * Sharpen Filter
+  * Eye Adaption
+  * Texture Atlas Packer
+  * Springs
+  * Gamma Correction
+  * Tiled Forward (Forward+) Rendering (+2.5D culling)
+  * Tiled Decals
+  * HDR rendering
+  * Force Fields GPU simulation
+  * Reversed Z-buffer
+  * Particle - Depth Buffer collisions
+  * Smooth Particle Hydrodynamics (SPH) Fluid Simulation
 
 ## ━ Sandbox:
   * Networking (UDP)
   * Lua Bindings
   * Resource Manager
-  * Job system
+  * Backlogger
   * Entity-Component System (Data oriented design)
- 
-3D Audio (Xaudio2)
-Input: keyboard, mouse, controller (rawinput, xinput), touch
-Controller feedback (vibration, LED)
-Backlog: log,input,scripting
-Gamma correct, HDR rendering
-Impostor system
-Tiled forward (Forward+) rendering (+2.5D culling)
-Tiled decals
-Frame Profiler
-Reversed Z-buffer
-Force Fields GPU simulation
-Particle - Depth Buffer collisions
-Smooth Particle Hydrodynamics (SPH) Fluid Simulation
-Springs
-HDR display output
+  * Audio System
+  * Job system
+  * Impostor system
+  * Frame Profiler
+  * Controller System (keyboard, mouse, controller, touch)
+  * Controller Feedback (Vibration, LED)
+
+## ━ Debuggers:
+  * Frame Profiler
