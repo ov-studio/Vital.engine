@@ -22,12 +22,6 @@
     <Filter Include="Engine\Graphics\API">
       <UniqueIdentifier>{4cb4ddc4-c5a9-483b-b6cf-2c4382340e7a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Scripting">
-      <UniqueIdentifier>{690eaec8-f733-445e-b981-cd5b44540aee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Scripting\LuaBindings">
-      <UniqueIdentifier>{672e61dc-9d99-43ab-9e8a-b3d4207bee36}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Core">
       <UniqueIdentifier>{4d76ad4f-e7e5-4a00-aec1-57bb571904fd}</UniqueIdentifier>
     </Filter>
@@ -58,32 +52,11 @@
     <Filter Include="Core\Scripting">
       <UniqueIdentifier>{f6f8927b-103c-4c90-8d64-317c21495acb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Scripting\Lua">
+      <UniqueIdentifier>{aa4e75fc-f805-47ae-86b0-7a295fd1f55b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiApplication_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteAnim_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiTexture_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiMath_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiBacklog_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiNetwork_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderer_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiSprite_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiImage.h">
       <Filter>Engine\Graphics</Filter>
     </ClInclude>
@@ -129,41 +102,11 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUBVH.h">
       <Filter>Engine\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath3D_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath2D_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiLoadingScreen_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiImageParams_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiPrimitive_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiInput_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiScene_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphics.h">
       <Filter>Engine\Graphics\API</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteFont.h">
       <Filter>Engine\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteFont_BindLua.h">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiShaderCompiler.h">
       <Filter>Engine\Graphics\API</Filter>
@@ -1068,32 +1011,62 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLua.h">
       <Filter>Core\Scripting</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath3D_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiScene_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSprite_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteAnim_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiTexture_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiAudio_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiBacklog_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiImageParams_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiInput_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiMath_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiPrimitive_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderer_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiApplication_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteAnim_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiTexture_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiMath_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiBacklog_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderer_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiSprite_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiImage.cpp">
       <Filter>Engine\Graphics</Filter>
     </ClCompile>
@@ -1133,38 +1106,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiGPUBVH.cpp">
       <Filter>Engine\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath3D_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath2D_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiLoadingScreen_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiImageParams_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiPrimitive_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiInput_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiScene_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteFont.cpp">
       <Filter>Engine\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteFont_BindLua.cpp">
-      <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiShaderCompiler.cpp">
       <Filter>Engine\Graphics\API</Filter>
@@ -1802,6 +1745,60 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLua.cpp">
       <Filter>Core\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath3D_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiScene_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSprite_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteAnim_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiTexture_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiAudio_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiBacklog_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiImageParams_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiInput_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiMath_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiPrimitive_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderer_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
