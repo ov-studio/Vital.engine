@@ -1,27 +1,25 @@
-## ━ F E A T U R E S
-
-* Pipelines:
+## ━ Pipelines:
   * DirectX 12
   * Vulkan
 
-* Renderers (Multi Threaded):
+## ━ Renderers (Multi Threaded):
   * Images
   * Fonts (True Type)
   * 3D mesh
   * Sprites
 
-* Shader Maps:
+## ━ Shader Maps:
   * Normal mapping
   * Displacement mapping
   * Parallax occlusion mapping
   * Dynamic environment mapping
 
-* Anti Aliasings:
+## ━ Anti Aliasings:
   * FXAA
   * TAA (Temporal Anti-aliasing)
   * MSAA (Forward rendering only)
 
-* Filters:
+## ━ Filters:
   * Supersampling
   * Bloom
   * Edge outline
@@ -38,12 +36,12 @@
   * Eye adaption
   * Refractions
 
-* AOs:
+## ━ AOs:
   * SSAO
   * HBAO
   * MSAO
 
-* Environments:
+## ━ Environments:
   * Skybox
   * Waterbox (FFT Simulation)
   * Soft particles
@@ -57,7 +55,7 @@
   * Surfel GI
   * Soft shadows (PCF)
 
-* Models:
+## ━ Models:
   * GLTF
   * Skeletal animation
   * Morph target animation
