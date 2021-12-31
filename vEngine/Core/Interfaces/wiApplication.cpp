@@ -1,5 +1,5 @@
 #include "wiApplication.h"
-#include "wiRenderPath.h"
+#include "Core/Interfaces/wiRenderPath.h"
 #include "wiRenderer.h"
 #include "Core/Helpers/wiHelper.h"
 #include "Core/Helpers/wiTimer.h"

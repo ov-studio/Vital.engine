@@ -1,5 +1,5 @@
 #pragma once
-#include "wiRenderPath3D.h"
+#include "Core/Interfaces/wiRenderPath3D.h"
 #include "Core/Helpers/wiVector.h"
 
 namespace wi

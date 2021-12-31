@@ -1,4 +1,4 @@
-#include "wiRenderPath2D.h"
+#include "Core/Interfaces/wiRenderPath2D.h"
 #include "Core/Helpers/wiResourceManager.h"
 #include "wiSprite.h"
 #include "wiSpriteFont.h"

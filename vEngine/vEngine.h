@@ -9,12 +9,12 @@
 #include "CommonInclude.h"
 
 // High-level interface:
-#include "wiApplication.h"
-#include "wiRenderPath.h"
-#include "wiRenderPath2D.h"
-#include "wiRenderPath3D.h"
-#include "wiRenderPath3D_PathTracing.h"
-#include "wiLoadingScreen.h"
+#include "Core/Interfaces/wiApplication.h"
+#include "Core/Interfaces/wiRenderPath.h"
+#include "Core/Interfaces/wiRenderPath2D.h"
+#include "Core/Interfaces/wiRenderPath3D.h"
+#include "Core/Interfaces/wiRenderPath3D_PathTracing.h"
+#include "Core/Interfaces/wiLoadingScreen.h"
 
 // Engine-level systems
 #include "wiVersion.h"

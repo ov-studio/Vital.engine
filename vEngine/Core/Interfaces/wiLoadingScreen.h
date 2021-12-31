@@ -1,5 +1,5 @@
 #pragma once
-#include "wiRenderPath2D.h"
+#include "Core/Interfaces/wiRenderPath2D.h"
 #include "Core/Helpers/wiColor.h"
 #include "Core/Systems/wiJobSystem.h"
 #include "Core/Helpers/wiVector.h"

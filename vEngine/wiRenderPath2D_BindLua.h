@@ -1,7 +1,7 @@
 #pragma once
 #include "wiLua.h"
 #include "wiLuna.h"
-#include "wiRenderPath2D.h"
+#include "Core/Interfaces/wiRenderPath2D.h"
 #include "wiRenderPath_BindLua.h"
 
 

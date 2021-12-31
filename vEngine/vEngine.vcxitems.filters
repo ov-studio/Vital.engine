@@ -22,17 +22,11 @@
     <Filter Include="Engine\Graphics\API">
       <UniqueIdentifier>{4cb4ddc4-c5a9-483b-b6cf-2c4382340e7a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Network">
-      <UniqueIdentifier>{c5d86df2-c519-488e-a98a-ba1eab3d19c3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Scripting">
       <UniqueIdentifier>{690eaec8-f733-445e-b981-cd5b44540aee}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Scripting\LuaBindings">
       <UniqueIdentifier>{672e61dc-9d99-43ab-9e8a-b3d4207bee36}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\High level interface">
-      <UniqueIdentifier>{a25b4076-72bb-4c78-8bc1-84c59a8984fd}</UniqueIdentifier>
     </Filter>
     <Filter Include="Core">
       <UniqueIdentifier>{4d76ad4f-e7e5-4a00-aec1-57bb571904fd}</UniqueIdentifier>
@@ -55,11 +49,14 @@
     <Filter Include="Core\Helpers">
       <UniqueIdentifier>{b70ceb30-87a5-41ee-8d03-c06dadca78e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Network">
+      <UniqueIdentifier>{32593d4b-0acb-41b3-9f7b-6f555c2244a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Interfaces">
+      <UniqueIdentifier>{4edfae34-eab2-408a-abdf-73408c949aa6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiApplication.h">
-      <Filter>Engine\High level interface</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiApplication_BindLua.h">
       <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClInclude>
@@ -150,18 +147,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiLoadingScreen_BindLua.h">
       <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath.h">
-      <Filter>Engine\High level interface</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath2D.h">
-      <Filter>Engine\High level interface</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath3D.h">
-      <Filter>Engine\High level interface</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiLoadingScreen.h">
-      <Filter>Engine\High level interface</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiImageParams_BindLua.h">
       <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClInclude>
@@ -170,9 +155,6 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.h">
       <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiNetwork.h">
-      <Filter>Engine\Network</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiInput_BindLua.h">
       <Filter>Engine\Scripting\LuaBindings</Filter>
@@ -191,9 +173,6 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiShaderCompiler.h">
       <Filter>Engine\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderPath3D_PathTracing.h">
-      <Filter>Engine\High level interface</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
       <Filter>Vendors\bullet</Filter>
@@ -1065,11 +1044,29 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiPrimitive.h">
       <Filter>Core\Helpers</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork.h">
+      <Filter>Core\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath2D.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D_PathTracing.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiApplication.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiApplication.cpp">
-      <Filter>Engine\High level interface</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiApplication_BindLua.cpp">
       <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClCompile>
@@ -1148,18 +1145,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiLoadingScreen_BindLua.cpp">
       <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath2D.cpp">
-      <Filter>Engine\High level interface</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath3D.cpp">
-      <Filter>Engine\High level interface</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderPath3D_PathTracing.cpp">
-      <Filter>Engine\High level interface</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiLoadingScreen.cpp">
-      <Filter>Engine\High level interface</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiImageParams_BindLua.cpp">
       <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClCompile>
@@ -1168,12 +1153,6 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.cpp">
       <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_Windows.cpp">
-      <Filter>Engine\Network</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_UWP.cpp">
-      <Filter>Engine\Network</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiInput_BindLua.cpp">
       <Filter>Engine\Scripting\LuaBindings</Filter>
@@ -1186,9 +1165,6 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteFont_BindLua.cpp">
       <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_Linux.cpp">
-      <Filter>Engine\Network</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiShaderCompiler.cpp">
       <Filter>Engine\Graphics\API</Filter>
@@ -1799,6 +1775,30 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiMath.cpp">
       <Filter>Core\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_UWP.cpp">
+      <Filter>Core\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_Windows.cpp">
+      <Filter>Core\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_Linux.cpp">
+      <Filter>Core\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath2D.cpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D.cpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D_PathTracing.cpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiApplication.cpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.cpp">
+      <Filter>Core\Interfaces</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
