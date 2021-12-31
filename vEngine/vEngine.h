@@ -72,7 +72,7 @@
 #ifdef PLATFORM_UWP
 #pragma comment(lib,"vEngine_UWP.lib")
 #else
-#pragma comment(lib,"vEngine_win.lib")
+#pragma comment(lib,"vEngine_Windows.lib")
 #endif // PLATFORM_UWP
 #endif // _WIN32
 
