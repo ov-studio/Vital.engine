@@ -1,7 +1,8 @@
 #ifndef vEngine_VERSION_DEFINED
 #define vEngine_VERSION_DEFINED
 
-namespace wi::version {
+namespace wi::version
+{
 	long GetVersion();
 	// major features
 	int GetMajor();
