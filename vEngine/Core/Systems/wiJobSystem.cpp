@@ -1,7 +1,7 @@
-#include "Core/System/wiJobSystem.h"
+#include "Core/Systems/wiJobSystem.h"
 #include "wiSpinLock.h"
 #include "Core/Tools/wiBacklog.h"
-#include "Core/System/wiPlatform.h"
+#include "Core/Systems/wiPlatform.h"
 #include "wiTimer.h"
 
 #include <thread>

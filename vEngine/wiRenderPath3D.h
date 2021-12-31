@@ -3,7 +3,7 @@
 #include "wiRenderer.h"
 #include "wiGraphicsDevice.h"
 #include "wiResourceManager.h"
-#include "Core/System/wiScene.h"
+#include "Core/Systems/wiScene.h"
 
 #include <memory>
 

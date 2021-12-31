@@ -1,7 +1,7 @@
 #pragma once
-#include "Core/System/wiECS.h"
-#include "Core/System/wiScene.h"
-#include "Core/System/wiJobSystem.h"
+#include "Core/Systems/wiECS.h"
+#include "Core/Systems/wiScene.h"
+#include "Core/Systems/wiJobSystem.h"
 
 namespace wi::physics
 {

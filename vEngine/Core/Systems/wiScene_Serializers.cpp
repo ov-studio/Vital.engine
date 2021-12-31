@@ -1,4 +1,4 @@
-#include "Core/System/wiScene.h"
+#include "Core/Systems/wiScene.h"
 #include "wiResourceManager.h"
 #include "wiArchive.h"
 #include "wiRandom.h"

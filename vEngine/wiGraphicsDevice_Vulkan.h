@@ -1,6 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
-#include "Core/System/wiPlatform.h"
+#include "Core/Systems/wiPlatform.h"
 
 #ifndef PLATFORM_UWP
 #define vEngine_BUILD_VULKAN

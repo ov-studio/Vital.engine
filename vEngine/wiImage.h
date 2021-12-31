@@ -3,7 +3,7 @@
 #include "wiGraphicsDevice.h"
 #include "wiEnums.h"
 #include "wiColor.h"
-#include "Core/System/wiCanvas.h"
+#include "Core/Systems/wiCanvas.h"
 
 namespace wi::image
 {

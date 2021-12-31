@@ -1,6 +1,6 @@
 #pragma once
 #include "wiGraphicsDevice.h"
-#include "Core/System/wiCanvas.h"
+#include "Core/Systems/wiCanvas.h"
 
 namespace wi::profiler
 {

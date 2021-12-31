@@ -2,7 +2,7 @@
 #include "wiRenderer.h"
 #include "wiResourceManager.h"
 #include "SHADERS/ShaderInterop_GPUSortLib.h"
-#include "Core/System/wiEventHandler.h"
+#include "Core/Systems/wiEventHandler.h"
 #include "wiTimer.h"
 #include "Core/Tools/wiBacklog.h"
 

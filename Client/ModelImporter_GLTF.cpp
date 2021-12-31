@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Core/System/wiScene.h"
+#include "Core/Systems/wiScene.h"
 #include "ModelImporter.h"
 #include "wiRandom.h"
 

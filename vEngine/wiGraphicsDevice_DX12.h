@@ -1,6 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
-#include "Core/System/wiPlatform.h"
+#include "Core/Systems/wiPlatform.h"
 
 #ifdef _WIN32
 #define vEngine_BUILD_DX12

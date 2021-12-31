@@ -5,7 +5,7 @@
 #include "wiEmittedParticle.h"
 #include "wiHairParticle.h"
 #include "SHADERS/ShaderInterop_Renderer.h"
-#include "Core/System/wiJobSystem.h"
+#include "Core/Systems/wiJobSystem.h"
 #include "wiAudio.h"
 #include "wiResourceManager.h"
 #include "wiSpinLock.h"
@@ -13,7 +13,7 @@
 #include "wiOcean.h"
 #include "wiSprite.h"
 #include "wiMath.h"
-#include "Core/System/wiECS.h"
+#include "Core/Systems/wiECS.h"
 #include "wiVector.h"
 
 #include <string>

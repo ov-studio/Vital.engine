@@ -1,4 +1,4 @@
-#include "Core/System/wiPlatform.h"
+#include "Core/Systems/wiPlatform.h"
 
 #ifdef PLATFORM_LINUX
 #include "wiNetwork.h"

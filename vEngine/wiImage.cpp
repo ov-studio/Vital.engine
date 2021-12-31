@@ -4,7 +4,7 @@
 #include "wiHelper.h"
 #include "SHADERS/ShaderInterop_Image.h"
 #include "Core/Tools/wiBacklog.h"
-#include "Core/System/wiEventHandler.h"
+#include "Core/Systems/wiEventHandler.h"
 #include "wiTimer.h"
 
 using namespace wi::graphics;

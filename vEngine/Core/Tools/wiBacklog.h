@@ -1,7 +1,7 @@
 #pragma once
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
-#include "Core/System/wiCanvas.h"
+#include "Core/Systems/wiCanvas.h"
 
 #include <string>
 

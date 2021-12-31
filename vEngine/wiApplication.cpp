@@ -10,11 +10,11 @@
 #include "wiEnums.h"
 #include "wiTextureHelper.h"
 #include "Core/Tools/wiProfiler.h"
-#include "Core/System/wiInitializer.h"
+#include "Core/Systems/wiInitializer.h"
 #include "wiArguments.h"
 #include "wiFont.h"
 #include "wiImage.h"
-#include "Core/System/wiEventHandler.h"
+#include "Core/Systems/wiEventHandler.h"
 
 #include "wiGraphicsDevice_DX12.h"
 #include "wiGraphicsDevice_Vulkan.h"

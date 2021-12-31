@@ -1,12 +1,12 @@
 #pragma once
 #include "CommonInclude.h"
-#include "Core/System/wiPlatform.h"
+#include "Core/Systems/wiPlatform.h"
 #include "wiResourceManager.h"
 #include "wiColor.h"
 #include "wiFadeManager.h"
 #include "wiGraphics.h"
-#include "Core/System/wiEventHandler.h"
-#include "Core/System/wiCanvas.h"
+#include "Core/Systems/wiEventHandler.h"
+#include "Core/Systems/wiCanvas.h"
 
 #include <memory>
 #include <string>

@@ -1,7 +1,7 @@
 #include "wiHelper.h"
-#include "Core/System/wiPlatform.h"
+#include "Core/Systems/wiPlatform.h"
 #include "Core/Tools/wiBacklog.h"
-#include "Core/System/wiEventHandler.h"
+#include "Core/Systems/wiEventHandler.h"
 #include "wiMath.h"
 
 #include "Utils/stb_image_write.h"

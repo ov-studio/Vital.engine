@@ -5,7 +5,7 @@
 #include "wiTextureHelper.h"
 #include "wiSprite.h"
 #include "Core/Tools/wiProfiler.h"
-#include "Core/System/wiScene.h"
+#include "Core/Systems/wiScene.h"
 #include "Core/Tools/wiBacklog.h"
 
 

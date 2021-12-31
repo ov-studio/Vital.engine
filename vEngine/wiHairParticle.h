@@ -3,10 +3,10 @@
 #include "wiGraphicsDevice.h"
 #include "wiEnums.h"
 #include "wiMath.h"
-#include "Core/System/wiECS.h"
+#include "Core/Systems/wiECS.h"
 #include "wiPrimitive.h"
 #include "wiVector.h"
-#include "Core/System/wiScene_Decl.h"
+#include "Core/Systems/wiScene_Decl.h"
 
 #include <memory>
 

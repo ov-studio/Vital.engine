@@ -2,7 +2,7 @@
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
 #include "wiFFTGenerator.h"
-#include "Core/System/wiScene_Decl.h"
+#include "Core/Systems/wiScene_Decl.h"
 #include "wiMath.h"
 
 namespace wi

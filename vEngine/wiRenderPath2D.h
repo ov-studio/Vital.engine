@@ -1,6 +1,6 @@
 #pragma once
 #include "wiRenderPath.h"
-#include "Core/System/wiGUI.h"
+#include "Core/Systems/wiGUI.h"
 #include "wiVector.h"
 
 #include <string>

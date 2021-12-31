@@ -8,7 +8,7 @@
 #include "wiImage.h"
 #include "wiLua.h"
 #include "wiInput.h"
-#include "Core/System/wiPlatform.h"
+#include "Core/Systems/wiPlatform.h"
 #include "wiHelper.h"
 
 #include <mutex>

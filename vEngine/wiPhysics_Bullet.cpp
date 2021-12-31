@@ -1,8 +1,8 @@
 #include "wiPhysics.h"
-#include "Core/System/wiScene.h"
+#include "Core/Systems/wiScene.h"
 #include "Core/Tools/wiProfiler.h"
 #include "Core/Tools/wiBacklog.h"
-#include "Core/System/wiJobSystem.h"
+#include "Core/Systems/wiJobSystem.h"
 #include "wiRenderer.h"
 #include "wiTimer.h"
 
