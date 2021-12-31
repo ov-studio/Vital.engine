@@ -28,10 +28,10 @@
   * Surfel GI
 
 ## ━ Dynamic Lightning:
-  * Directional lights
-  * Spotlights
+  * Directional Lights
+  * Spot Lights
   * Point Lights
-  * Volumetric Light
+  * Volumetric Lights
   * Lightmap Baking
   * Soft shadows (PCF)
   * Screen Space Contact Shadows
