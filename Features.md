@@ -39,6 +39,9 @@
   * Path tracing
   * Variable Rate Shading
   * Voxel Global Illumination
+  * Occlusion Culling
+  * Texture Atlas Packer
+  * Refraction caustics
 
 ## ━ Shader Maps:
   * Normal mapping
@@ -74,29 +77,25 @@
   * Eye adaption
   * Refractions
 
-* Networking (UDP)
-
+## ━ Sandbox:
+  * Networking (UDP)
+  * Lua Bindings
+  * Resource Manager
+  * Job system
+  * Entity-Component System (Data oriented design)
+ 
 3D Audio (Xaudio2)
 Input: keyboard, mouse, controller (rawinput, xinput), touch
 Controller feedback (vibration, LED)
 Backlog: log,input,scripting
 Gamma correct, HDR rendering
-Resource Manager
-Lua Scripting
 Impostor system
 Tiled forward (Forward+) rendering (+2.5D culling)
-Occlusion culling with gpu queries
-Texture atlas packing
 Tiled decals
 Frame Profiler
 Reversed Z-buffer
 Force Fields GPU simulation
 Particle - Depth Buffer collisions
-Translucent colored shadows
-Refraction caustics
-Local parallax-corrected environment maps
 Smooth Particle Hydrodynamics (SPH) Fluid Simulation
-Entity-Component System (Data oriented design)
-Job system
 Springs
 HDR display output
