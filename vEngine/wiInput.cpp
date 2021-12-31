@@ -587,7 +587,7 @@ namespace wi::input
 				//Win32 Link: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 				//SDL2 Link: https://wiki.libsdl.org/SDL_Keycode
 				//Numbers start from enum 48 to 57, 58 to 64 are undefined, 65 to 90 are alphabets.
-				//Usage: the same as win32 platform, which is (for example) wi::input::Down((wi::input::BUTTON)'A' (referenced from Editor.cpp for the engine's editor program)
+				//Usage: the same as win32 platform, which is (for example) wi::input::Down((wi::input::BUTTON)'A' (referenced from Client.cpp for the engine's editor program)
 				case 48:
 					keycode = SDL_SCANCODE_0;
 					break;
