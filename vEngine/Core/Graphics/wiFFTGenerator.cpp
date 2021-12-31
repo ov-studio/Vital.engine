@@ -1,7 +1,7 @@
 #include "Core/Graphics/wiFFTGenerator.h"
 #include "Core/Helpers/wiResourceManager.h"
 #include "Core/Graphics/wiRenderer.h"
-#include "SHADERS/ShaderInterop_FFTGenerator.h"
+#include "Shaders/ShaderInterop_FFTGenerator.h"
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -21,10 +21,10 @@
 #include "Core/Helpers/wiTimer.h"
 #include "Core/Helpers/wiUnorderedMap.h" // leave it here for shader dump!
 
-#include "SHADERS/ShaderInterop_Postprocess.h"
-#include "SHADERS/ShaderInterop_Raytracing.h"
-#include "SHADERS/ShaderInterop_BVH.h"
-#include "SHADERS/ShaderInterop_SurfelGI.h"
+#include "Shaders/ShaderInterop_Postprocess.h"
+#include "Shaders/ShaderInterop_Raytracing.h"
+#include "Shaders/ShaderInterop_BVH.h"
+#include "Shaders/ShaderInterop_SurfelGI.h"
 
 #include <algorithm>
 #include <array>
@@ -50,8 +50,8 @@ GPUBuffer			constantBuffers[CBTYPE_COUNT];
 GPUBuffer			resourceBuffers[RBTYPE_COUNT];
 Sampler				samplers[SAMPLER_COUNT];
 
-std::string SHADERPATH = "SHADERS/";
-std::string SHADERSOURCEPATH = "../vEngine/SHADERS/";
+std::string SHADERPATH = "Shaders/";
+std::string SHADERSOURCEPATH = "../vEngine/Shaders/";
 
 // define this to use raytracing pipeline for raytraced reflections:
 //	Currently the DX12 device could crash for unknown reasons with the global root signature export
@@ -11275,8 +11275,8 @@ void Postprocess_Tonemap(
 }
 
 #define A_CPU
-#include "SHADERS/ffx-fsr/ffx_a.h"
-#include "SHADERS/ffx-fsr/ffx_fsr1.h"
+#include "Shaders/ffx-fsr/ffx_a.h"
+#include "Shaders/ffx-fsr/ffx_fsr1.h"
 void Postprocess_FSR(
 	const Texture& input,
 	const Texture& temp,

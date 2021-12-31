@@ -2,7 +2,7 @@
 #include "Core/Graphics/wiRenderer.h"
 #include "Core/Helpers/wiResourceManager.h"
 #include "Core/Helpers/wiHelper.h"
-#include "SHADERS/ShaderInterop_Font.h"
+#include "Shaders/ShaderInterop_Font.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Graphics/wiTextureHelper.h"
 #include "Core/Helpers/wiRectPacker.h"

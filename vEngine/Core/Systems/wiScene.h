@@ -4,7 +4,7 @@
 #include "Core/Helpers/wiPrimitive.h"
 #include "Core/Graphics/wiEmittedParticle.h"
 #include "Core/Graphics/wiHairParticle.h"
-#include "SHADERS/ShaderInterop_Renderer.h"
+#include "Shaders/ShaderInterop_Renderer.h"
 #include "Core/Systems/wiJobSystem.h"
 #include "Core/Audio/wiAudio.h"
 #include "Core/Helpers/wiResourceManager.h"

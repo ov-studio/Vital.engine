@@ -1,7 +1,7 @@
 #include "Core/Graphics/wiGPUSortLib.h"
 #include "Core/Graphics/wiRenderer.h"
 #include "Core/Helpers/wiResourceManager.h"
-#include "SHADERS/ShaderInterop_GPUSortLib.h"
+#include "Shaders/ShaderInterop_GPUSortLib.h"
 #include "Core/Systems/wiEventHandler.h"
 #include "Core/Helpers/wiTimer.h"
 #include "Core/Tools/wiBacklog.h"

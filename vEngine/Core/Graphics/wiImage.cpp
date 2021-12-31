@@ -2,7 +2,7 @@
 #include "Core/Helpers/wiResourceManager.h"
 #include "Core/Graphics/wiRenderer.h"
 #include "Core/Helpers/wiHelper.h"
-#include "SHADERS/ShaderInterop_Image.h"
+#include "Shaders/ShaderInterop_Image.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Systems/wiEventHandler.h"
 #include "Core/Helpers/wiTimer.h"

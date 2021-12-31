@@ -2,7 +2,7 @@
 #define WI_BRDF_HF
 #include "globals.hlsli"
 
-// BRDF functions source: https://github.com/google/filament/blob/main/SHADERS/src/brdf.fs
+// BRDF functions source: https://github.com/google/filament/blob/main/Shaders/src/brdf.fs
 
 #define MEDIUMP_FLT_MAX    65504.0
 #define saturateMediump(x) min(x, MEDIUMP_FLT_MAX)

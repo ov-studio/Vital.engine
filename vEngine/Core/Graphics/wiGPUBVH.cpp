@@ -1,7 +1,7 @@
 #include "Core/Graphics/wiGPUBVH.h"
 #include "Core/Systems/wiScene.h"
 #include "Core/Graphics/wiRenderer.h"
-#include "SHADERS/ShaderInterop_BVH.h"
+#include "Shaders/ShaderInterop_BVH.h"
 #include "Core/Tools/wiProfiler.h"
 #include "Core/Helpers/wiResourceManager.h"
 #include "Core/Graphics/wiGPUSortLib.h"

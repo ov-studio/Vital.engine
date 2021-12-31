@@ -2,7 +2,7 @@
 #include "CommonInclude.h"
 #include "Core/Graphics/API/wiGraphicsDevice.h"
 #include "Core/Helpers/wiPrimitive.h"
-#include "SHADERS/ShaderInterop_EmittedParticle.h"
+#include "Shaders/ShaderInterop_EmittedParticle.h"
 #include "Core/Graphics/wiEnums.h"
 #include "Core/Helpers/wiMath.h"
 #include "Core/Systems/wiECS.h"

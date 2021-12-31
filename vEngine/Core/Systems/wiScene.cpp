@@ -12,7 +12,7 @@
 #include "Core/Helpers/wiTimer.h"
 #include "Core/Helpers/wiUnorderedMap.h"
 
-#include "SHADERS/ShaderInterop_SurfelGI.h"
+#include "Shaders/ShaderInterop_SurfelGI.h"
 
 using namespace wi::ecs;
 using namespace wi::enums;

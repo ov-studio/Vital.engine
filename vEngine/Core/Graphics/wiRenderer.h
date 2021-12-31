@@ -7,7 +7,7 @@
 #include "Core/Helpers/wiPrimitive.h"
 #include "Core/Systems/wiCanvas.h"
 #include "Core/Helpers/wiMath.h"
-#include "SHADERS/ShaderInterop_Renderer.h"
+#include "Shaders/ShaderInterop_Renderer.h"
 #include "Core/Helpers/wiVector.h"
 
 #include <memory>
