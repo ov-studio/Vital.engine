@@ -2,6 +2,10 @@
   * DirectX 12
   * Vulkan
 
+## ━ Physics:
+  * Rigid Body Simulation
+  * Soft Body Simulation
+
 ## ━ Renderers (Multi Threaded):
   * Images
   * Fonts (True Type)
@@ -24,13 +28,17 @@
   * Surfel GI
 
 ## Dynamic Lightning:
+  * Directional lights
+  * Spotlights
+  * Point lights
   * Volumetric light scattering
+  * Lightmap baking
+  * Soft shadows (PCF)
+  * Screen Space Contact Shadows
   * Ray tracing (Ambient Occlusion, Shadows, Reflections)
   * Path tracing
   * Variable Rate Shading
-  * Screen Space Contact Shadows
-  * Soft shadows (PCF)
-  * Lightmap baking
+  * Voxel Global Illumination
 
 ## ━ Shader Maps:
   * Normal mapping
@@ -67,11 +75,6 @@
   * Refractions
 
 * Networking (UDP)
-* Instanced rendering
-* Directional lights + cascaded shadow maps
-* Spotlights + shadow maps
-* Point lights + shadow cubemaps
-* BULLET Physics: rigid body, soft body
 
 3D Audio (Xaudio2)
 Input: keyboard, mouse, controller (rawinput, xinput), touch
@@ -86,7 +89,6 @@ Occlusion culling with gpu queries
 Texture atlas packing
 Tiled decals
 Frame Profiler
-Voxel Global Illumination
 Reversed Z-buffer
 Force Fields GPU simulation
 Particle - Depth Buffer collisions
