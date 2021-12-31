@@ -15,7 +15,7 @@
 * Cross Platform
 * Modern Rendering Techniques
 * Completely Performance-Friendly
-* Sandbox Perspective
+* Sandbox Perspective (Lua, V8)
 * vCommunity Integration
 * [Read More](https://github.com/ov-studio/vEngine-Client/blob/main/Features.md)
 
