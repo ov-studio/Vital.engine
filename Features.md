@@ -1,6 +1,6 @@
 ## ━ F E A T U R E S
 
-* PIPELINE:
+* Pipelines:
   * DirectX 12
   * Vulkan
 
@@ -20,33 +20,53 @@
   * FXAA
   * TAA (Temporal Anti-aliasing)
   * MSAA (Forward rendering only)
+
+* Filters:
   * Supersampling
+  * Bloom
+  * Edge outline
+  * Motion Blur
+  * Lens Flare
+  * Light shafts
+  * Bokeh Depth of Field
+  * Chromatic aberration
+  * Tessellation (silhouette smoothing, displacement mapping)
+  * Cube map reflections (static and real time)
+  * Real time planar reflections
+  * Color Grading
+  * Sharpen filter
+  * Eye adaption
+  * Refractions
 
+* AOs:
+  * SSAO
+  * HBAO
+  * MSAO
 
-  * Networking (UDP)
+* Environments:
+  * Skybox
+  * Waterbox (FFT Simulation)
+  * Soft particles
+  * GPU-based particles (emit from point, mesh, animated mesh)
+  * Hair particle systems (Grass/Vegetation)
+  * Terrain Rendering (material blending)
+  * Variable Rate Shading
+  * Real time ray tracing: ambient occlusion, shadows, reflections (DXR and Vulkan raytracing)
+  * Screen Space Contact Shadows
+  * Stochastic alphatest transparency
+  * Surfel GI
+  * Soft shadows (PCF)
+
+* Models:
+  * GLTF
   * Skeletal animation
-* Morph target animation
-* Animated texturing
-* Real time planar reflections
-* Cube map reflections (static and real time)
-* Refractions (screen space, blurred)
-* Interactive Water
-* Bloom
-* Edge outline
-* Motion Blur
-* Lens Flare
-* Light shafts
-* Bokeh Depth of Field
-* Chromatic aberration
-* Tessellation (silhouette smoothing, displacement mapping)
-* GPU-based particles (emit from point, mesh, animated mesh)
-* Soft particles
-* Hair particle systems (grass/vegetation)
+  * Morph target animation
+
+* Networking (UDP)
 * Instanced rendering
 * Directional lights + cascaded shadow maps
 * Spotlights + shadow maps
 * Point lights + shadow cubemaps
-* Soft shadows (PCF)
 * BULLET Physics: rigid body, soft body
 
 3D Audio (Xaudio2)
@@ -55,11 +75,6 @@ Controller feedback (vibration, LED)
 Backlog: log,input,scripting
 Gamma correct, HDR rendering
 Resource Manager
-Screen Space Ambient Occlusion (SSAO, HBAO, MSAO)
-Stochastic Screen Space Reflections
-Color Grading
-Sharpen filter
-Eye adaption
 Lua Scripting
 Impostor system
 Tiled forward (Forward+) rendering (+2.5D culling)
@@ -71,7 +86,6 @@ Voxel Global Illumination
 Reversed Z-buffer
 Force Fields GPU simulation
 Particle - Depth Buffer collisions
-Ocean simulation (FFT)
 Translucent colored shadows
 Refraction caustics
 Local parallax-corrected environment maps
@@ -83,12 +97,6 @@ Lightmap baking (with GPU path tracing)
 Job system
 Inverse Kinematics
 Springs
-Terrain Rendering (material blending)
-Variable Rate Shading
-Real time ray tracing: ambient occlusion, shadows, reflections (DXR and Vulkan raytracing)
-Screen Space Contact Shadows
-Stochastic alphatest transparency
-Surfel GI
 HDR display output
 
 GLTF 2.0 extensions supported:
