@@ -89,12 +89,12 @@
   * Lua Bindings
   * Resource Manager
   * Backlogger
-  * Entity-Component System (Data oriented design)
+  * Entity-Component System (Data Oriented Design)
   * Audio System
-  * Job system
-  * Impostor system
+  * Job System
+  * Impostor System
   * Frame Profiler
-  * Controller System (keyboard, mouse, controller, touch)
+  * Controller System (Keyboard, Mouse, Controller, Touch)
   * Controller Feedback (Vibration, LED)
 
 ## ━ Debuggers:
