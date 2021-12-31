@@ -1,5 +1,5 @@
 #include "wiNetwork_BindLua.h"
-#include "wiNetwork.h"
+#include "Core/Network/wiNetwork.h"
 #include "Core/Helpers/wiHelper.h"
 
 namespace wi::lua

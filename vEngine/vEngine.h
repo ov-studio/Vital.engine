@@ -60,7 +60,7 @@
 #include "wiGPUBVH.h"
 #include "wiGPUSortLib.h"
 #include "Core/Systems/wiJobSystem.h"
-#include "wiNetwork.h"
+#include "Core/Network/wiNetwork.h"
 #include "Core/Systems/wiEventHandler.h"
 #include "wiShaderCompiler.h"
 #include "Core/Systems/wiCanvas.h"
