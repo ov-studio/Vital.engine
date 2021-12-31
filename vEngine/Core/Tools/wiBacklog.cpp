@@ -1,4 +1,4 @@
-#include "wiBacklog.h"
+#include "Core/Tools/wiBacklog.h"
 #include "wiMath.h"
 #include "wiResourceManager.h"
 #include "wiTextureHelper.h"
@@ -8,7 +8,7 @@
 #include "wiImage.h"
 #include "wiLua.h"
 #include "wiInput.h"
-#include "wiPlatform.h"
+#include "Core/System/wiPlatform.h"
 #include "wiHelper.h"
 
 #include <mutex>

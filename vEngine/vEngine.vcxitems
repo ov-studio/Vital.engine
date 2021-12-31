@@ -16,6 +16,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiCanvas.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiECS.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiEventHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiGUI.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiInitializer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiJobSystem.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiPlatform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\System\wiScene_Decl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Tools\wiBacklog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Tools\wiProfiler.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletDynamicsCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\Bullet-C-Api.h" />
@@ -277,9 +288,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiArchive.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiAudio.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiCanvas.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiECS.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiEventHandler.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiFFTGenerator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUBVH.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUSortLib.h" />
@@ -302,7 +310,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteAnim_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiTexture_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiMath_BindLua.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiBacklog.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiBacklog_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiColor.h" />
@@ -315,14 +322,11 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteFont_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphics.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiGUI.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiHairParticle.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiHelper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiImage.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiImageParams_BindLua.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiInitializer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiPrimitive_BindLua.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiJobSystem.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiNetwork.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiPhysics.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiLua.h" />
@@ -331,17 +335,13 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiNetwork_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiOcean.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiPlatform.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiProfiler.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiRandom.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiRawInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiRectPacker.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderer_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiResourceManager.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiScene_BindLua.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiScene_Decl.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiSpinLock.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiSprite.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteFont.h" />
@@ -355,6 +355,14 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiXInput.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiEventHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiGUI.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiInitializer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiJobSystem.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\System\wiScene_Serializers.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Tools\wiBacklog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Tools\wiProfiler.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btBroadphaseProxy.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.cpp" />
@@ -556,7 +564,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiArchive.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiAudio.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiEventHandler.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiFFTGenerator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiGPUBVH.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiGPUSortLib.cpp" />
@@ -574,7 +581,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteAnim_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiTexture_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiMath_BindLua.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiBacklog.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiBacklog_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiEmittedParticle.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiFadeManager.cpp" />
@@ -583,17 +589,14 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiSDLInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiShaderCompiler.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteFont_BindLua.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiGUI.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiHairParticle.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiHelper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiImage.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiImageParams_BindLua.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiInitializer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiInput_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiPrimitive.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiPrimitive_BindLua.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiJobSystem.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_UWP.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_Windows.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiPhysics_Bullet.cpp" />
@@ -601,16 +604,13 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiOcean.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiProfiler.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiRandom.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiRawInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiRectPacker.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderer_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiResourceManager.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiScene_BindLua.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiScene_Serializers.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiSprite.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteFont.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiSprite_BindLua.cpp" />

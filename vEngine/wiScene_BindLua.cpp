@@ -1,5 +1,5 @@
 #include "wiScene_BindLua.h"
-#include "wiScene.h"
+#include "Core/System/wiScene.h"
 #include "wiMath_BindLua.h"
 #include "wiEmittedParticle.h"
 #include "wiTexture_BindLua.h"

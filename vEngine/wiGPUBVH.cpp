@@ -1,13 +1,13 @@
 #include "wiGPUBVH.h"
-#include "wiScene.h"
+#include "Core/System/wiScene.h"
 #include "wiRenderer.h"
 #include "SHADERS/ShaderInterop_BVH.h"
-#include "wiProfiler.h"
+#include "Core/Tools/wiProfiler.h"
 #include "wiResourceManager.h"
 #include "wiGPUSortLib.h"
 #include "wiTextureHelper.h"
-#include "wiBacklog.h"
-#include "wiEventHandler.h"
+#include "Core/Tools/wiBacklog.h"
+#include "Core/System/wiEventHandler.h"
 #include "wiTimer.h"
 
 //#define BVH_VALIDATE // slow but great for debug!

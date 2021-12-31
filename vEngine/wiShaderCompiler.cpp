@@ -1,6 +1,6 @@
 #include "wiShaderCompiler.h"
-#include "wiBacklog.h"
-#include "wiPlatform.h"
+#include "Core/Tools/wiBacklog.h"
+#include "Core/System/wiPlatform.h"
 #include "wiHelper.h"
 #include "wiArchive.h"
 #include "wiUnorderedSet.h"

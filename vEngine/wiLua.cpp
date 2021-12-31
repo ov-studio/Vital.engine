@@ -1,6 +1,6 @@
 #include "wiLua.h"
 #include "wiLua_Globals.h"
-#include "wiBacklog.h"
+#include "Core/Tools/wiBacklog.h"
 #include "wiHelper.h"
 #include "wiApplication_BindLua.h"
 #include "wiRenderPath_BindLua.h"

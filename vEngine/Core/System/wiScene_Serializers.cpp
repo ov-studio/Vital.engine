@@ -1,9 +1,9 @@
-#include "wiScene.h"
+#include "Core/System/wiScene.h"
 #include "wiResourceManager.h"
 #include "wiArchive.h"
 #include "wiRandom.h"
 #include "wiHelper.h"
-#include "wiBacklog.h"
+#include "Core/Tools/wiBacklog.h"
 #include "wiTimer.h"
 #include "wiVector.h"
 

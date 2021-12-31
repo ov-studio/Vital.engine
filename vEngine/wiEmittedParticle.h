@@ -5,8 +5,8 @@
 #include "SHADERS/ShaderInterop_EmittedParticle.h"
 #include "wiEnums.h"
 #include "wiMath.h"
-#include "wiECS.h"
-#include "wiScene_Decl.h"
+#include "Core/System/wiECS.h"
+#include "Core/System/wiScene_Decl.h"
 
 #include <memory>
 

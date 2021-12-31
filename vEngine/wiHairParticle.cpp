@@ -6,10 +6,10 @@
 #include "wiArchive.h"
 #include "SHADERS/ShaderInterop.h"
 #include "wiTextureHelper.h"
-#include "wiScene.h"
+#include "Core/System/wiScene.h"
 #include "SHADERS/ShaderInterop_HairParticle.h"
-#include "wiBacklog.h"
-#include "wiEventHandler.h"
+#include "Core/Tools/wiBacklog.h"
+#include "Core/System/wiEventHandler.h"
 #include "wiTimer.h"
 
 using namespace wi::primitive;

@@ -1,7 +1,7 @@
 #pragma once
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
-#include "wiCanvas.h"
+#include "Core/System/wiCanvas.h"
 
 namespace wi
 {

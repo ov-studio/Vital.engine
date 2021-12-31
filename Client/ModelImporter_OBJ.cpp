@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "wiScene.h"
+#include "Core/System/wiScene.h"
 #include "ModelImporter.h"
 
 #define TINYOBJLOADER_IMPLEMENTATION

@@ -1,4 +1,4 @@
-#include "wiProfiler.h"
+#include "Core/Tools/wiProfiler.h"
 #include "wiGraphicsDevice.h"
 #include "wiFont.h"
 #include "wiImage.h"
@@ -6,7 +6,7 @@
 #include "wiTextureHelper.h"
 #include "wiHelper.h"
 #include "wiUnorderedMap.h"
-#include "wiBacklog.h"
+#include "Core/Tools/wiBacklog.h"
 
 #if __has_include("Superluminal/PerformanceAPI_capi.h")
 #include "Superluminal/PerformanceAPI_capi.h"

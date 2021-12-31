@@ -1,5 +1,5 @@
 #include "wiBacklog_BindLua.h"
-#include "wiBacklog.h"
+#include "Core/Tools/wiBacklog.h"
 #include "wiLua.h"
 
 #include <string>

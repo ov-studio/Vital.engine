@@ -1,7 +1,7 @@
 #pragma once
 #include "CommonInclude.h"
 #include "wiGraphics.h"
-#include "wiPlatform.h"
+#include "Core/System/wiPlatform.h"
 
 #include <cassert>
 #include <cstring>

@@ -1,14 +1,14 @@
-#include "wiGUI.h"
+#include "Core/System/wiGUI.h"
 #include "wiInput.h"
 #include "wiPrimitive.h"
-#include "wiProfiler.h"
+#include "Core/Tools/wiProfiler.h"
 #include "wiRenderer.h"
 #include "wiTimer.h"
-#include "wiEventHandler.h"
+#include "Core/System/wiEventHandler.h"
 #include "wiFont.h"
 #include "wiImage.h"
 #include "wiTextureHelper.h"
-#include "wiBacklog.h"
+#include "Core/Tools/wiBacklog.h"
 
 #include <sstream>
 

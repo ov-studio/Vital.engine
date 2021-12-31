@@ -2,7 +2,7 @@
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
 #include "wiColor.h"
-#include "wiCanvas.h"
+#include "Core/System/wiCanvas.h"
 
 #include <string>
 

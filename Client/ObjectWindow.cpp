@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Client.h"
 #include "ObjectWindow.h"
-#include "wiScene.h"
+#include "Core/System/wiScene.h"
 
 #include "xatlas.h"
 

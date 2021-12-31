@@ -2,9 +2,9 @@
 #include "wiRenderer.h"
 #include "wiResourceManager.h"
 #include "SHADERS/ShaderInterop_Ocean.h"
-#include "wiScene.h"
-#include "wiBacklog.h"
-#include "wiEventHandler.h"
+#include "Core/System/wiScene.h"
+#include "Core/Tools/wiBacklog.h"
+#include "Core/System/wiEventHandler.h"
 #include "wiTimer.h"
 #include "wiVector.h"
 

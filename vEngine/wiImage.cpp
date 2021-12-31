@@ -3,8 +3,8 @@
 #include "wiRenderer.h"
 #include "wiHelper.h"
 #include "SHADERS/ShaderInterop_Image.h"
-#include "wiBacklog.h"
-#include "wiEventHandler.h"
+#include "Core/Tools/wiBacklog.h"
+#include "Core/System/wiEventHandler.h"
 #include "wiTimer.h"
 
 using namespace wi::graphics;

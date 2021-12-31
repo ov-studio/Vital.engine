@@ -3,7 +3,7 @@
 #include "wiImage.h"
 #include "wiHelper.h"
 #include "wiTextureHelper.h"
-#include "wiProfiler.h"
+#include "Core/Tools/wiProfiler.h"
 
 using namespace wi::graphics;
 using namespace wi::enums;

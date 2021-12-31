@@ -1,8 +1,8 @@
-#include "wiPlatform.h"
+#include "Core/System/wiPlatform.h"
 
 #ifdef PLATFORM_LINUX
 #include "wiNetwork.h"
-#include "wiBacklog.h"
+#include "Core/Tools/wiBacklog.h"
 #include "wiTimer.h"
 
 #include <string>

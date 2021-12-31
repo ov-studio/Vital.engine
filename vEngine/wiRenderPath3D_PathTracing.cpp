@@ -4,9 +4,9 @@
 #include "wiHelper.h"
 #include "wiTextureHelper.h"
 #include "wiSprite.h"
-#include "wiProfiler.h"
-#include "wiScene.h"
-#include "wiBacklog.h"
+#include "Core/Tools/wiProfiler.h"
+#include "Core/System/wiScene.h"
+#include "Core/Tools/wiBacklog.h"
 
 
 using namespace wi::graphics;

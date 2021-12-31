@@ -1,14 +1,14 @@
 #include "wiRenderer_BindLua.h"
 #include "wiRenderer.h"
 #include "wiHelper.h"
-#include "wiScene.h"
+#include "Core/System/wiScene.h"
 #include "wiScene_BindLua.h"
 #include "wiMath_BindLua.h"
 #include "wiTexture_BindLua.h"
 #include "wiEmittedParticle.h"
 #include "wiHairParticle.h"
 #include "wiPrimitive_BindLua.h"
-#include "wiEventHandler.h"
+#include "Core/System/wiEventHandler.h"
 
 using namespace wi::ecs;
 using namespace wi::graphics;

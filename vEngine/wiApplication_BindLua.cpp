@@ -3,7 +3,7 @@
 #include "wiRenderPath3D_BindLua.h"
 #include "wiRenderPath2D_BindLua.h"
 #include "wiLoadingScreen_BindLua.h"
-#include "wiProfiler.h"
+#include "Core/Tools/wiProfiler.h"
 
 namespace wi::lua
 {

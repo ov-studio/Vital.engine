@@ -2,7 +2,7 @@
 #define WI_ENTITY_COMPONENT_SYSTEM_H
 
 #include "wiArchive.h"
-#include "wiJobSystem.h"
+#include "Core/System/wiJobSystem.h"
 #include "wiUnorderedMap.h"
 #include "wiVector.h"
 

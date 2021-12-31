@@ -2,10 +2,10 @@
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
 #include "wiPrimitive.h"
-#include "wiCanvas.h"
+#include "Core/System/wiCanvas.h"
 #include "wiVector.h"
 #include "wiColor.h"
-#include "wiScene.h"
+#include "Core/System/wiScene.h"
 #include "wiSprite.h"
 #include "wiSpriteFont.h"
 

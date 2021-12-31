@@ -4,7 +4,7 @@
 #include "wiInput.h"
 #include "wiMath.h"
 #include "shaders/ShaderInterop_Renderer.h"
-#include "wiEventHandler.h"
+#include "Core/System/wiEventHandler.h"
 
 using namespace wi::ecs;
 using namespace wi::scene;

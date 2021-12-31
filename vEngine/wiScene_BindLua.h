@@ -1,7 +1,7 @@
 #pragma once
 #include "wiLua.h"
 #include "wiLuna.h"
-#include "wiScene.h"
+#include "Core/System/wiScene.h"
 
 namespace wi::lua::scene
 {

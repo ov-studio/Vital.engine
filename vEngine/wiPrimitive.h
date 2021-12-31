@@ -2,7 +2,7 @@
 #include "CommonInclude.h"
 #include "wiArchive.h"
 #include "wiMath.h"
-#include "wiECS.h"
+#include "Core/System/wiECS.h"
 
 #include <limits>
 

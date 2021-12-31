@@ -3,7 +3,7 @@
 #include "wiGraphicsDevice.h"
 #include "wiAudio.h"
 #include "wiArchive.h"
-#include "wiJobSystem.h"
+#include "Core/System/wiJobSystem.h"
 #include "wiVector.h"
 
 #include <memory>

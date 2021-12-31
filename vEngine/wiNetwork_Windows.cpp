@@ -1,8 +1,8 @@
-#include "wiPlatform.h"
+#include "Core/System/wiPlatform.h"
 
 #if defined(_WIN32) && !defined(PLATFORM_UWP)
 #include "wiNetwork.h"
-#include "wiBacklog.h"
+#include "Core/Tools/wiBacklog.h"
 #include "wiTimer.h"
 
 #include <string>
