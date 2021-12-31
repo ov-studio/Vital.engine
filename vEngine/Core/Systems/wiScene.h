@@ -6,7 +6,7 @@
 #include "wiHairParticle.h"
 #include "SHADERS/ShaderInterop_Renderer.h"
 #include "Core/Systems/wiJobSystem.h"
-#include "wiAudio.h"
+#include "Core/Audio/wiAudio.h"
 #include "wiResourceManager.h"
 #include "wiSpinLock.h"
 #include "wiGPUBVH.h"

@@ -16,6 +16,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiSDLInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiCanvas.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiECS.h" />
@@ -287,7 +292,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\vk_mem_alloc.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\volk.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiArchive.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiAudio.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiFFTGenerator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGPUBVH.h" />
@@ -295,7 +299,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_DX12.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphicsDevice_Vulkan.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiUnorderedSet.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiInput_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiPrimitive.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiLoadingScreen.h" />
@@ -318,7 +321,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiEnums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiFadeManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiFont.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiSDLInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiShaderCompiler.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteFont_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiGraphics.h" />
@@ -336,7 +338,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiNetwork_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiOcean.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiRandom.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiRawInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiRectPacker.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiRenderer_BindLua.h" />
@@ -352,9 +353,13 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiUnorderedMap.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiVector.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wiVersion.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiXInput.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiSDLInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics_Bullet.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiGUI.cpp" />
@@ -563,7 +568,6 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Utils\utility_common.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiArchive.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiAudio.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiFFTGenerator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiGPUBVH.cpp" />
@@ -587,14 +591,12 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiFadeManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiFont.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_Linux.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiSDLInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiShaderCompiler.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiSpriteFont_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiHairParticle.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiHelper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiImage.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiImageParams_BindLua.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiInput_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiPrimitive.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiPrimitive_BindLua.cpp" />
@@ -605,7 +607,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiOcean.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiRandom.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiRawInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiRectPacker.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiRenderer_BindLua.cpp" />
@@ -617,7 +618,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiArguments.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiTextureHelper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wiVersion.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiXInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.inl" />

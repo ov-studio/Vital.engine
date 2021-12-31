@@ -1,5 +1,5 @@
 #include "wiAudio_BindLua.h"
-#include "wiAudio.h"
+#include "Core/Audio/wiAudio.h"
 #include "wiMath_BindLua.h"
 
 namespace wi::lua

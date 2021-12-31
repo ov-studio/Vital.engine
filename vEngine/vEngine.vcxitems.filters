@@ -16,9 +16,6 @@
     <Filter Include="Engine">
       <UniqueIdentifier>{2d30408b-f788-42a8-9648-41561036e10a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Common">
-      <UniqueIdentifier>{3c39405f-ec30-4b72-9c32-68aefb4fb7a5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Graphics">
       <UniqueIdentifier>{3d5f1098-95e6-4baa-9e39-864be28a5b64}</UniqueIdentifier>
     </Filter>
@@ -31,17 +28,11 @@
     <Filter Include="Engine\Network">
       <UniqueIdentifier>{c5d86df2-c519-488e-a98a-ba1eab3d19c3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Audio">
-      <UniqueIdentifier>{76f7fa22-7992-4b49-b4d2-cc24be672869}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Scripting">
       <UniqueIdentifier>{690eaec8-f733-445e-b981-cd5b44540aee}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Scripting\LuaBindings">
       <UniqueIdentifier>{672e61dc-9d99-43ab-9e8a-b3d4207bee36}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Input">
-      <UniqueIdentifier>{88972c7f-23ab-41db-8699-87d96c59b09c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\High level interface">
       <UniqueIdentifier>{a25b4076-72bb-4c78-8bc1-84c59a8984fd}</UniqueIdentifier>
@@ -58,14 +49,14 @@
     <Filter Include="Core\Physics">
       <UniqueIdentifier>{228d738d-922b-45fc-bfe9-f6071378b43e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Input">
+      <UniqueIdentifier>{6364224b-5663-4a3c-a336-28cb94067d39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Audio">
+      <UniqueIdentifier>{58a8e3ec-9270-4fa6-9fb6-7e9fd624e07c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
-      <Filter>Engine\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h">
-      <Filter>Engine\Common</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiApplication.h">
       <Filter>Engine\High level interface</Filter>
     </ClInclude>
@@ -147,12 +138,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiFadeManager.h">
       <Filter>Engine\Helpers</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiXInput.h">
-      <Filter>Engine\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiRawInput.h">
-      <Filter>Engine\Input</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiArchive.h">
       <Filter>Engine\Helpers</Filter>
     </ClInclude>
@@ -219,17 +204,11 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wiPrimitive_BindLua.h">
       <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiAudio.h">
-      <Filter>Engine\Audio</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.h">
       <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiNetwork.h">
       <Filter>Engine\Network</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiInput.h">
-      <Filter>Engine\Input</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiInput_BindLua.h">
       <Filter>Engine\Scripting\LuaBindings</Filter>
@@ -245,9 +224,6 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiSpriteFont_BindLua.h">
       <Filter>Engine\Scripting\LuaBindings</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiSDLInput.h">
-      <Filter>Engine\Input</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)wiShaderCompiler.h">
       <Filter>Engine\Graphics\API</Filter>
@@ -1072,6 +1048,23 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics.h">
       <Filter>Core\Physics</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiSDLInput.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiInput.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.h">
+      <Filter>Core\Audio</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiApplication.cpp">
@@ -1140,12 +1133,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiFadeManager.cpp">
       <Filter>Engine\Helpers</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiXInput.cpp">
-      <Filter>Engine\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiRawInput.cpp">
-      <Filter>Engine\Input</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiArchive.cpp">
       <Filter>Engine\Helpers</Filter>
     </ClCompile>
@@ -1206,9 +1193,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiPrimitive_BindLua.cpp">
       <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiAudio.cpp">
-      <Filter>Engine\Audio</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiAudio_BindLua.cpp">
       <Filter>Engine\Scripting\LuaBindings</Filter>
     </ClCompile>
@@ -1217,9 +1201,6 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_UWP.cpp">
       <Filter>Engine\Network</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiInput.cpp">
-      <Filter>Engine\Input</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiInput_BindLua.cpp">
       <Filter>Engine\Scripting\LuaBindings</Filter>
@@ -1235,9 +1216,6 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiNetwork_Linux.cpp">
       <Filter>Engine\Network</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiSDLInput.cpp">
-      <Filter>Engine\Input</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)wiShaderCompiler.cpp">
       <Filter>Engine\Graphics\API</Filter>
@@ -1806,6 +1784,21 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wiVersion.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics_Bullet.cpp">
       <Filter>Core\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiSDLInput.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiInput.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.cpp">
+      <Filter>Core\Audio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

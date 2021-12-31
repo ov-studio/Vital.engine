@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "SoundWindow.h"
-#include "wiAudio.h"
+#include "Core/Audio/wiAudio.h"
 #include "Client.h"
 
 using namespace wi::graphics;

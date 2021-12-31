@@ -31,7 +31,7 @@
 #include "wiHairParticle.h"
 #include "wiRenderer.h"
 #include "wiMath.h"
-#include "wiAudio.h"
+#include "Core/Audio/wiAudio.h"
 #include "wiResourceManager.h"
 #include "wiTimer.h"
 #include "wiHelper.h"

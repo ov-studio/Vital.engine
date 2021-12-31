@@ -1,7 +1,7 @@
 #pragma once
 #include "CommonInclude.h"
 #include "wiGraphicsDevice.h"
-#include "wiAudio.h"
+#include "Core/Audio/wiAudio.h"
 #include "wiArchive.h"
 #include "Core/Systems/wiJobSystem.h"
 #include "wiVector.h"
