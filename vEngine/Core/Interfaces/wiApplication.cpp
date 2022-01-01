@@ -329,13 +329,13 @@ namespace wi
 			}
 			if (infoDisplay.heap_allocation_counter)
 			{
-				infodisplay_str += "Heap allocations per frame: " + std::to_string(number_of_heap_allocations.load()) + " (" + std::to_string(size_of_heap_allocations.load()) + " bytes)\n";
+				infodisplay_str += "Heap Allocations: " + std::to_string(number_of_heap_allocations.load()) + " (" + std::to_string(size_of_heap_allocations.load()) + " bytes)\n";
 				number_of_heap_allocations.store(0);
 				size_of_heap_allocations.store(0);
 			}
 			if (infoDisplay.pipeline_count)
 			{
-				infodisplay_str += "Graphics pipelines active: " + std::to_string(graphicsDevice->GetActivePipelineCount()) + "\n";
+				infodisplay_str += "Graphics Pipelines: " + std::to_string(graphicsDevice->GetActivePipelineCount()) + "\n";
 			}
 
 			if (infoDisplay.watermark)
@@ -344,34 +344,34 @@ namespace wi
 				infodisplay_str += wi::version::GetVersionString();
 				infodisplay_str += " ";
 
-#if defined(_ARM)
-				infodisplay_str += "[ARM]";
-#elif defined(_WIN64)
-				infodisplay_str += "[64-bit]";
-#elif defined(_WIN32)
-				infodisplay_str += "[32-bit]";
-#endif
+                #if defined(_ARM)
+                    infodisplay_str += "[ARM]";
+                #elif defined(_WIN64)
+                    infodisplay_str += "[64-bit]";
+                #elif defined(_WIN32)
+                    infodisplay_str += "[32-bit]";
+                #endif
 
-#ifdef PLATFORM_UWP
-				infodisplay_str += "[UWP]";
-#endif
+                #ifdef PLATFORM_UWP
+                    infodisplay_str += "[UWP]";
+                #endif
 
-#ifdef vEngine_BUILD_DX12
-				if (dynamic_cast<GraphicsDevice_DX12*>(graphicsDevice.get()))
-				{
-					infodisplay_str += "[DX12]";
-				}
-#endif
-#ifdef vEngine_BUILD_VULKAN
-				if (dynamic_cast<GraphicsDevice_Vulkan*>(graphicsDevice.get()))
-				{
-					infodisplay_str += "[Vulkan]";
-				}
-#endif
+                #ifdef vEngine_BUILD_DX12
+                    if (dynamic_cast<GraphicsDevice_DX12*>(graphicsDevice.get()))
+                    {
+                        infodisplay_str += "[DX12]";
+                    }
+                #endif
+                #ifdef vEngine_BUILD_VULKAN
+                    if (dynamic_cast<GraphicsDevice_Vulkan*>(graphicsDevice.get()))
+                    {
+                        infodisplay_str += "[Vulkan]";
+                    }
+                #endif
 
-#ifdef _DEBUG
-				infodisplay_str += "[Debug]";
-#endif
+                #ifdef _DEBUG
+                    infodisplay_str += "[Debug]";
+                #endif
 				if (graphicsDevice->IsDebugDevice())
 				{
 					infodisplay_str += "[Debug-Device]";
@@ -406,45 +406,45 @@ namespace wi
 			bool use_dx12 = wi::arguments::HasArgument("dx12");
 			bool use_vulkan = wi::arguments::HasArgument("vulkan");
 
-#ifndef vEngine_BUILD_DX12
-			if (use_dx12) {
-				wi::helper::messageBox("The engine was built without DX12 support!", "Error");
-				use_dx12 = false;
-			}
-#endif
-#ifndef vEngine_BUILD_VULKAN
-			if (use_vulkan) {
-				wi::helper::messageBox("The engine was built without Vulkan support!", "Error");
-				use_vulkan = false;
-			}
-#endif
+            #ifndef vEngine_BUILD_DX12
+                if (use_dx12) {
+                    wi::helper::messageBox("The engine was built without DX12 support!", "Error");
+                    use_dx12 = false;
+                }
+            #endif
+            #ifndef vEngine_BUILD_VULKAN
+                if (use_vulkan) {
+                    wi::helper::messageBox("The engine was built without Vulkan support!", "Error");
+                    use_vulkan = false;
+                }
+            #endif
 
 			if (!use_dx12 && !use_vulkan)
 			{
-#if defined(vEngine_BUILD_DX12)
-				use_dx12 = true;
-#elif defined(vEngine_BUILD_VULKAN)
-				use_vulkan = true;
-#else
-				wi::backlog::post("No rendering backend is enabled! Please enable at least one so we can use it as default", wi::backlog::LogLevel::Error);
-				assert(false);
-#endif
+                #if defined(vEngine_BUILD_DX12)
+                    use_dx12 = true;
+                #elif defined(vEngine_BUILD_VULKAN)
+                    use_vulkan = true;
+                #else
+                    wi::backlog::post("No rendering backend is enabled! Please enable at least one so we can use it as default", wi::backlog::LogLevel::Error);
+                    assert(false);
+                #endif
 			}
 			assert(use_dx12 || use_vulkan);
 
 			if (use_vulkan)
 			{
-#ifdef vEngine_BUILD_VULKAN
-				wi::renderer::SetShaderPath(wi::renderer::GetShaderPath() + "spirv/");
-				graphicsDevice = std::make_unique<GraphicsDevice_Vulkan>(window, debugdevice);
-#endif
+                #ifdef vEngine_BUILD_VULKAN
+                    wi::renderer::SetShaderPath(wi::renderer::GetShaderPath() + "spirv/");
+                    graphicsDevice = std::make_unique<GraphicsDevice_Vulkan>(window, debugdevice);
+                #endif
 			}
 			else if (use_dx12)
 			{
-#ifdef vEngine_BUILD_DX12
-				wi::renderer::SetShaderPath(wi::renderer::GetShaderPath() + "hlsl6/");
-				graphicsDevice = std::make_unique<GraphicsDevice_DX12>(debugdevice, gpuvalidation);
-#endif
+                #ifdef vEngine_BUILD_DX12
+                    wi::renderer::SetShaderPath(wi::renderer::GetShaderPath() + "hlsl6/");
+                    graphicsDevice = std::make_unique<GraphicsDevice_DX12>(debugdevice, gpuvalidation);
+                #endif
 			}
 		}
 		wi::graphics::GetDevice() = graphicsDevice.get();
