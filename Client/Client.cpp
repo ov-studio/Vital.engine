@@ -112,12 +112,6 @@ void Client::Initialize()
 
 	infoDisplay.active = true;
 	infoDisplay.watermark = true;
-	infoDisplay.fpsinfo = true;
-	infoDisplay.resolution = true;
-	//infoDisplay.logical_size = true;
-	infoDisplay.colorspace = true;
-	infoDisplay.heap_allocation_counter = true;
-
 	wi::renderer::SetOcclusionCullingEnabled(true);
 
 	loader.Load();

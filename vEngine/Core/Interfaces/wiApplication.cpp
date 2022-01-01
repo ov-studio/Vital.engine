@@ -283,6 +283,61 @@ namespace wi
 		if (infoDisplay.active)
 		{
 			infodisplay_str.clear();
+
+			if (infoDisplay.colorspace)
+			{
+				infodisplay_str += "Color Space: ";
+				ColorSpace colorSpace = graphicsDevice->GetSwapChainColorSpace(&swapChain);
+				switch (colorSpace)
+				{
+				default:
+				case wi::graphics::ColorSpace::SRGB:
+					infodisplay_str += "sRGB";
+					break;
+				case wi::graphics::ColorSpace::HDR10_ST2084:
+					infodisplay_str += "ST.2084 (HDR10)";
+					break;
+				case wi::graphics::ColorSpace::HDR_LINEAR:
+					infodisplay_str += "Linear (HDR)";
+					break;
+				}
+				infodisplay_str += "\n";
+			}
+			if (infoDisplay.resolution)
+			{
+				infodisplay_str += "Resolution: " + std::to_string(canvas.GetPhysicalWidth()) + " x " + std::to_string(canvas.GetPhysicalHeight()) + " (" + std::to_string(int(canvas.GetDPI())) + " dpi)\n";
+			}
+			if (infoDisplay.logical_size)
+			{
+				infodisplay_str += "Logical Size: " + std::to_string(int(canvas.GetLogicalWidth())) + " x " + std::to_string(int(canvas.GetLogicalHeight())) + "\n";
+			}
+			if (infoDisplay.fpsinfo)
+			{
+				deltatimes[fps_avg_counter++ % arraysize(deltatimes)] = deltaTime;
+				float displaydeltatime = deltaTime;
+				if (fps_avg_counter > arraysize(deltatimes))
+				{
+					float avg_time = 0;
+					for (int i = 0; i < arraysize(deltatimes); ++i)
+					{
+						avg_time += deltatimes[i];
+					}
+					displaydeltatime = avg_time / arraysize(deltatimes);
+				}
+
+				infodisplay_str += std::to_string(int(std::round(1.0f / displaydeltatime))) + " FPS\n";
+			}
+			if (infoDisplay.heap_allocation_counter)
+			{
+				infodisplay_str += "Heap allocations per frame: " + std::to_string(number_of_heap_allocations.load()) + " (" + std::to_string(size_of_heap_allocations.load()) + " bytes)\n";
+				number_of_heap_allocations.store(0);
+				size_of_heap_allocations.store(0);
+			}
+			if (infoDisplay.pipeline_count)
+			{
+				infodisplay_str += "Graphics pipelines active: " + std::to_string(graphicsDevice->GetActivePipelineCount()) + "\n";
+			}
+
 			if (infoDisplay.watermark)
 			{
 				infodisplay_str += "vEngine ";
@@ -315,77 +370,15 @@ namespace wi
 #endif
 
 #ifdef _DEBUG
-				infodisplay_str += "[DEBUG]";
+				infodisplay_str += "[Debug]";
 #endif
 				if (graphicsDevice->IsDebugDevice())
 				{
-					infodisplay_str += "[debugdevice]";
+					infodisplay_str += "[Debug-Device]";
 				}
-				infodisplay_str += "\n";
-			}
-			if (infoDisplay.resolution)
-			{
-				infodisplay_str += "Resolution: " + std::to_string(canvas.GetPhysicalWidth()) + " x " + std::to_string(canvas.GetPhysicalHeight()) + " (" + std::to_string(int(canvas.GetDPI())) + " dpi)\n";
-			}
-			if (infoDisplay.logical_size)
-			{
-				infodisplay_str += "Logical Size: " + std::to_string(int(canvas.GetLogicalWidth())) + " x " + std::to_string(int(canvas.GetLogicalHeight())) + "\n";
-			}
-			if (infoDisplay.colorspace)
-			{
-				infodisplay_str += "Color Space: ";
-				ColorSpace colorSpace = graphicsDevice->GetSwapChainColorSpace(&swapChain);
-				switch (colorSpace)
-				{
-				default:
-				case wi::graphics::ColorSpace::SRGB:
-					infodisplay_str += "sRGB";
-					break;
-				case wi::graphics::ColorSpace::HDR10_ST2084:
-					infodisplay_str += "ST.2084 (HDR10)";
-					break;
-				case wi::graphics::ColorSpace::HDR_LINEAR:
-					infodisplay_str += "Linear (HDR)";
-					break;
-				}
-				infodisplay_str += "\n";
-			}
-			if (infoDisplay.fpsinfo)
-			{
-				deltatimes[fps_avg_counter++ % arraysize(deltatimes)] = deltaTime;
-				float displaydeltatime = deltaTime;
-				if (fps_avg_counter > arraysize(deltatimes))
-				{
-					float avg_time = 0;
-					for (int i = 0; i < arraysize(deltatimes); ++i)
-					{
-						avg_time += deltatimes[i];
-					}
-					displaydeltatime = avg_time / arraysize(deltatimes);
-				}
-
-				infodisplay_str += std::to_string(int(std::round(1.0f / displaydeltatime))) + " FPS\n";
-			}
-			if (infoDisplay.heap_allocation_counter)
-			{
-				infodisplay_str += "Heap allocations per frame: " + std::to_string(number_of_heap_allocations.load()) + " (" + std::to_string(size_of_heap_allocations.load()) + " bytes)\n";
-				number_of_heap_allocations.store(0);
-				size_of_heap_allocations.store(0);
-			}
-			if (infoDisplay.pipeline_count)
-			{
-				infodisplay_str += "Graphics pipelines active: " + std::to_string(graphicsDevice->GetActivePipelineCount()) + "\n";
 			}
 
-#ifdef _DEBUG
-			infodisplay_str += "Warning: This is a [DEBUG] build, performance will be slow!\n";
-#endif
-			if (graphicsDevice->IsDebugDevice())
-			{
-				infodisplay_str += "Warning: Graphics is in [debugdevice] mode, performance will be slow!\n";
-			}
-
-			wi::font::Draw(infodisplay_str, wi::font::Params(4, 4, infoDisplay.size, wi::font::WIFALIGN_LEFT, wi::font::WIFALIGN_TOP, wi::Color(255, 255, 255, 255), wi::Color(0, 0, 0, 255)), cmd);
+			wi::font::Draw(infodisplay_str, wi::font::Params(0, 0, infoDisplay.size, wi::font::WIFALIGN_RIGHT, wi::font::WIFALIGN_BOTTOM, wi::Color(255, 255, 255, 255), wi::Color(0, 0, 0, 255)), cmd);
 
 			if (infoDisplay.colorgrading_helper)
 			{
