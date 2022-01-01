@@ -88,7 +88,6 @@
   * Networking (UDP)
   * Lua Bindings
   * Resource Manager
-  * Backlogger
   * Entity-Component System (Data Oriented Design)
   * Audio System
   * Job System
@@ -98,3 +97,4 @@
 
 ## ━ Debuggers:
   * Frame Profiler
+  * Back Logger
