@@ -916,7 +916,6 @@ void ClientComponent::Load()
 		}
 		GetGUI().SetVisible(false);
 		wi::profiler::SetEnabled(false);
-		main->infoDisplay.active = false;
 	});
 	GetGUI().AddWidget(&cinemaModeCheckBox);
 
@@ -1062,8 +1061,6 @@ void ClientComponent::Update(float dt)
 				renderPath->GetGUI().SetVisible(true);
 			}
 			GetGUI().SetVisible(true);
-			main->infoDisplay.active = true;
-
 			cinemaModeCheckBox.SetCheck(false);
 		}
 		else
