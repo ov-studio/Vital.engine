@@ -93,7 +93,6 @@
   * Audio System
   * Job System
   * Impostor System
-  * Frame Profiler
   * Controller System (Keyboard, Mouse, Controller, Touch)
   * Controller Feedback (Vibration, LED)
 
