@@ -7,7 +7,7 @@ static const char* wiLua_Globals = R"(
 
 -- Get table element count (list length)
 vEngine = {
-    __vEngine_Globals__ = {
+    ["__vEngine_Globals__"] = {
         threads = {
             onSignal = {},
             onTime = {}
@@ -26,19 +26,19 @@ vEngine = {
 
     --Function: Destroys All Threads
     destroyThreads = function()
-        vEngine.__vEngine_Globals__.threads.onSignal = {}
-        vEngine.__vEngine_Globals__.threads.onTime = {}
+        vEngine["__vEngine_Globals__"].threads.onSignal = {}
+        vEngine["__vEngine_Globals__"].threads.onTime = {}
     end,
     
     --Function: Wait until the game engine fixed update function runs again
     waitEngineFixedUpdate = function()
         waitSignal("vEngine_fixed_update_tick")
-    end
+    end,
 
     --Function: Wait until the game engine update function runs again
     waitEngineUpdate = function()
         waitSignal("vEngine_update_tick")
-    end
+    end,
 
     --Function: Wait until the game engine drawing function runs again
     waitEngineRender = function()
@@ -70,10 +70,6 @@ end
 -- seeding the system random
 math.randomseed( os.time() )
 
--- This table is indexed by coroutine and simply contains the time at which the coroutine
--- should be woken up.
-local vEngine.__vEngine_Globals__.threads.onTime = {}
-
 -- Keep track of how long the game has been running.
 local CURRENT_TIME = 0
 function waitSeconds(seconds)  
@@ -83,9 +79,9 @@ function waitSeconds(seconds)
     -- If co is nil, that means we're on the main process, which isn't a coroutine and can't yield
     assert(co ~= nil, "The main thread cannot wait!")
 
-    -- Store the coroutine and its wakeup time in the vEngine.__vEngine_Globals__.threads.onTime table
+    -- Store the coroutine and its wakeup time in the vEngine["__vEngine_Globals__"].threads.onTime table
     local wakeupTime = CURRENT_TIME + seconds
-    vEngine.__vEngine_Globals__.threads.onTime[co] = wakeupTime
+    vEngine["__vEngine_Globals__"].threads.onTime[co] = wakeupTime
 
     -- And suspend the process
     return coroutine.yield(co)
@@ -97,10 +93,10 @@ function wakeUpWaitingThreads(deltaTime)
     CURRENT_TIME = CURRENT_TIME + deltaTime
 
     -- First, grab a list of the threads that need to be woken up. They'll need to be removed
-    -- from the vEngine.__vEngine_Globals__.threads.onTime table which we don't want to try and do while we're iterating
+    -- from the vEngine["__vEngine_Globals__"].threads.onTime table which we don't want to try and do while we're iterating
     -- through that table, hence the list.
     local threadsToWake = {}
-    for co, wakeupTime in pairs(vEngine.__vEngine_Globals__.threads.onTime) do
+    for co, wakeupTime in pairs(vEngine["__vEngine_Globals__"].threads.onTime) do
         if wakeupTime < CURRENT_TIME then
             table.insert(threadsToWake, co)
         end
@@ -108,7 +104,7 @@ function wakeUpWaitingThreads(deltaTime)
 
     -- Now wake them all up.
     for _, co in ipairs(threadsToWake) do
-        vEngine.__vEngine_Globals__.threads.onTime[co] = nil -- Setting a field to nil removes it from the table
+        vEngine["__vEngine_Globals__"].threads.onTime[co] = nil -- Setting a field to nil removes it from the table
         local success, errorMsg = coroutine.resume(co)
 		if not success then
 			error("[Lua Error] "..errorMsg)
@@ -122,11 +118,11 @@ function waitSignal(signalName)
     local co = coroutine.running()
     assert(co ~= nil, "The main thread cannot wait!")
 
-    if vEngine.__vEngine_Globals__.threads.onSignal[signalStr] == nil then
+    if vEngine["__vEngine_Globals__"].threads.onSignal[signalName] == nil then
         -- If there wasn't already a list for this signal, start a new one.
-        vEngine.__vEngine_Globals__.threads.onSignal[signalName] = { co }
+        vEngine["__vEngine_Globals__"].threads.onSignal[signalName] = { co }
     else
-        table.insert(vEngine.__vEngine_Globals__.threads.onSignal[signalName], co)
+        table.insert(vEngine["__vEngine_Globals__"].threads.onSignal[signalName], co)
     end
 
     return coroutine.yield()
@@ -134,10 +130,10 @@ end
 
 -- Send a signal on which a coroutine can be blocked
 function signal(signalName)  
-    local threads = vEngine.__vEngine_Globals__.threads.onSignal[signalName]
+    local threads = vEngine["__vEngine_Globals__"].threads.onSignal[signalName]
     if threads == nil then return end
 
-    vEngine.__vEngine_Globals__.threads.onSignal[signalName] = nil
+    vEngine["__vEngine_Globals__"].threads.onSignal[signalName] = nil
     for _, co in ipairs(threads) do
         local success, errorMsg = coroutine.resume(co)
 		if not success then
