@@ -275,7 +275,7 @@ namespace wi::lua
 
 	void KillProcesses()
 	{
-		RunText("killProcesses();");
+		RunText("vEngine.destroyThreads();");
 	}
 
 	std::string SGetString(lua_State* L, int stackpos)
