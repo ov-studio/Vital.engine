@@ -378,7 +378,7 @@ namespace wi
 				}
 			}
 
-			wi::font::Draw(infodisplay_str, wi::font::Params(0, 0, infoDisplay.size, wi::font::WIFALIGN_RIGHT, wi::font::WIFALIGN_BOTTOM, wi::Color(255, 255, 255, 255), wi::Color(0, 0, 0, 255)), cmd);
+			wi::font::Draw(infodisplay_str, wi::font::Params(canvas.GetPhysicalWidth() - 5, canvas.GetPhysicalHeight() - 5, infoDisplay.size, wi::font::WIFALIGN_RIGHT, wi::font::WIFALIGN_BOTTOM, wi::Color(255, 255, 255, 255), wi::Color(0, 0, 0, 255)), cmd);
 
 			if (infoDisplay.colorgrading_helper)
 			{
