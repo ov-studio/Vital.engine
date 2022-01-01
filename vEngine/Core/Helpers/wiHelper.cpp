@@ -88,7 +88,7 @@ namespace wi::helper
 		std::string filename = name;
 		if (filename.empty())
 		{
-			filename = directory + "/sc_" + getCurrentDateTimeAsString() + ".jpg";
+			filename = directory + "/vEngine_" + getCurrentDateTimeAsString() + ".jpg";
 		}
 
 		bool result = saveTextureToFile(wi::graphics::GetDevice()->GetBackBuffer(&swapchain), filename);
