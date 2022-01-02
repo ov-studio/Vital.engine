@@ -16,7 +16,7 @@ vEngine.math = math; math = nil;
 vEngine.math.angle = {}
 vEngine.math.randomseed(os.time()); os = nil;
 
---Function: Lerps a number linearlly
+--Function: Lerps a number linearly
 vEngine.math.lerp = function(minValue, maxValue, lerpRate)
     local API_REF = "vEngine.math.lerp"
     assert(not minValue or (type(minValue) ~= "number"), "[API: "..API_REF.."] | [Error] Invalid minValue")
