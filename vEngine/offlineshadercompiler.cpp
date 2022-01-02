@@ -22,7 +22,7 @@ using namespace wi::graphics;
 
 int main(int argc, char* argv[])
 {
-	std::cout << "[vEngine Shader Compiler]" << std::endl;
+	std::cout << "[Shader Compiler]" << std::endl;
 	std::cout << "Available command arguments:" << std::endl;
 	std::cout << "\thlsl5 : \tCompile shaders to hlsl5 (dx11) format (using d3dcompiler)" << std::endl;
 	std::cout << "\thlsl6 : \tCompile shaders to hlsl6 (dx12) format (using dxcompiler)" << std::endl;
@@ -407,7 +407,7 @@ int main(int argc, char* argv[])
 	std::string SHADERSOURCEPATH = wi::renderer::GetShaderSourcePath();
 	wi::helper::MakePathAbsolute(SHADERSOURCEPATH);
 
-	std::cout << "[vEngine Shader Compiler] Searching for outdated shaders..." << std::endl;
+	std::cout << "[Shader Compiler] Searching for outdated shaders..." << std::endl;
 	wi::Timer timer;
 
 	for (auto& target : targets)
@@ -490,11 +490,11 @@ int main(int argc, char* argv[])
 	}
 	wi::jobsystem::Wait(ctx);
 
-	std::cout << "[vEngine Shader Compiler] Finished in " << std::setprecision(4) << timer.elapsed_seconds() << " seconds" << std::endl;
+	std::cout << "[Shader Compiler] Finished in " << std::setprecision(4) << timer.elapsed_seconds() << " seconds" << std::endl;
 
 	if (shaderdump_enabled)
 	{
-		std::cout << "[vEngine Shader Compiler] Creating ShaderDump..." << std::endl;
+		std::cout << "[Shader Compiler] Creating ShaderDump..." << std::endl;
 		timer.record();
 		std::string ss;
 		ss += "namespace wiShaderDump {\n";
@@ -528,7 +528,7 @@ int main(int argc, char* argv[])
 		ss += "};\n"; // map end
 		ss += "}\n"; // namespace end
 		wi::helper::FileWrite("wiShaderDump.h", (uint8_t*)ss.c_str(), ss.length());
-		std::cout << "[vEngine Shader Compiler] ShaderDump written to wiShaderDump.h in " << std::setprecision(4) << timer.elapsed_seconds() << " seconds" << std::endl;
+		std::cout << "[Shader Compiler] ShaderDump written to wiShaderDump.h in " << std::setprecision(4) << timer.elapsed_seconds() << " seconds" << std::endl;
 	}
 
 	return 0;
