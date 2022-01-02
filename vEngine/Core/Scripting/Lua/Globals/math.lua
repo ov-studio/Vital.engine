@@ -12,10 +12,6 @@
 --[[ Module ]]--
 ----------------
 
-vEngine.math = math; math = nil;
-vEngine.math.angle = {}
-vEngine.math.randomseed(os.time()); os = nil;
-
 --Function: Lerps a number linearly
 vEngine.math.lerp = function(minValue, maxValue, lerpRate)
     local API = "vEngine.math.lerp"
@@ -51,7 +47,7 @@ vEngine.math.round = function(value, decimals)
     decimals = tonumber(decimals) or 0
     assert(not decimals or (type(decimals) < 0), vEngine.prepareDebugMessage("LUA", API, "Error", "Invalid decimals"))
 
-    return tonumber(string.format(("%."..decimals.."f"), value))
+    return tonumber(vEngine.string.format(("%."..decimals.."f"), value))
 end
 
 --Function: Retrieves progress of a tick
