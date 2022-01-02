@@ -252,7 +252,7 @@ namespace wi::lua
 
 	inline void SignalHelper(lua_State* L, const char* str)
 	{
-		lua_getglobal(L, "signal");
+		lua_getglobal(L, "onvEngineSignal");
 		lua_pushstring(L, str);
 		lua_call(L, 1, 0);
 	}
