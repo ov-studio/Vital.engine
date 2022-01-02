@@ -25,7 +25,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assets", "vEngine\Assets.vc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vEngine_Windows", "vEngine\Packages\vEngine_Windows.vcxproj", "{6FEFC868-FE73-4CB7-90B3-3D2EA6731688}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Compilers", "vEngine\Compilers.vcxproj", "{3B74A7FE-CED7-4723-8824-AC708A865B98}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vEngine_ShaderCompiler", "vEngine\Packages\vEngine_ShaderCompiler.vcxproj", "{3B74A7FE-CED7-4723-8824-AC708A865B98}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

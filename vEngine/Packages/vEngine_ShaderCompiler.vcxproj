@@ -95,7 +95,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="offlineshadercompiler.cpp" />
+    <ClCompile Include="../offlineshadercompiler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="../dxcompiler.dll">
