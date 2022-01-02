@@ -32,17 +32,17 @@ vEngine = {
     
     --Function: Wait until the game engine fixed update function runs again
     waitEngineFixedUpdate = function()
-        waitSignal("vEngine_fixed_update_tick")
+        waitSignal("vEngine_onAsyncUpdate")
     end,
 
     --Function: Wait until the game engine update function runs again
     waitEngineUpdate = function()
-        waitSignal("vEngine_update_tick")
+        waitSignal("vEngine_onUpdate")
     end,
 
     --Function: Wait until the game engine drawing function runs again
     waitEngineRender = function()
-        waitSignal("vEngine_render_tick")
+        waitSignal("vEngine_onRender")
     end
 }
 

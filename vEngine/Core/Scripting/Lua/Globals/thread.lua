@@ -24,8 +24,10 @@ local cache = {
 
 vEngine.threads = {
     --Function: Creates a Thread
-    create = function(threadFunction)
-        local createdThread = coroutine.create(threadFunction)
+    create = function(threadFunc)
+        assert(not threadFunc or (type(threadFunc) ~= "function"), "[API: vEngine.threads.create] | [Error] Invalid function handler")
+
+        local createdThread = coroutine.create(threadFunc)
         local success, errorMsg = coroutine.resume(createdThread)
         if not success then
             error("[Lua Error] "..errorMsg)
@@ -39,10 +41,13 @@ vEngine.threads = {
         cache.onTime = {}
     end,
 
-    --Function: Wait n seconds before running again
-    waitSeconds = function(seconds)  
+    --Function: Wait 'n' seconds before running again
+    waitSeconds = function(seconds)
+        seconds = tonumber(seconds) or 0
+        assert(seconds <= 0, "[API: vEngine.threads.waitSeconds] | [Error] Invalid duration")
         local cThread = coroutine.running()
-        assert(cThread ~= nil, "The main thread cannot wait!")
+        assert(cThread ~= nil, "[API: vEngine.threads.waitSeconds] | [Error] You can't await main thread!")
+        
         local wakeupTime = CURRENT_TIME + seconds
         cache.onTime[cThread] = wakeupTime
         return coroutine.yield(cThread)
@@ -50,17 +55,17 @@ vEngine.threads = {
 
     --Function: Wait until the game updates dependent of the frame
     waitEngineUpdate = function()
-        waitSignal("vEngine_update_tick")
+        waitSignal("vEngine_onUpdate")
     end,
 
     --Function: Wait until the game updates independent of the frame
     waitEngineFixedUpdate = function()
-        waitSignal("vEngine_fixed_update_tick")
+        waitSignal("vEngine_onAsyncUpdate")
     end,
 
     --Function: Wait until the game is renderered
     waitEngineRender = function()
-        waitSignal("vEngine_render_tick")
+        waitSignal("vEngine_onRender")
     end
 }
 
@@ -106,7 +111,7 @@ function wakeUpWaitingThreads(deltaTime)
 end
 
 -- Block coroutine while waiting for a signal
-function waitSignal(signalName)  
+function waitSignal(signalName)
     -- Same check as in waitSeconds; the main thread cannot wait
     local cThread = coroutine.running()
     assert(cThread ~= nil, "The main thread cannot wait!")
@@ -117,7 +122,6 @@ function waitSignal(signalName)
     else
         table.insert(cache.onSignal[signalName], cThread)
     end
-
     return coroutine.yield()
 end
 
