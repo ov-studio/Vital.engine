@@ -705,12 +705,12 @@ bool LoadShader(ShaderStage stage, Shader& shader, const std::string& filename, 
 			{
 				wi::backlog::post(output.error_message);
 			}
-			wi::backlog::post("shader compiled: " + shaderbinaryfilename);
+			wi::backlog::post("Shader Compiled: " + shaderbinaryfilename);
 			return device->CreateShader(stage, output.shaderdata, output.shadersize, &shader);
 		}
 		else
 		{
-			wi::backlog::post("shader compile FAILED: " + shaderbinaryfilename + "\n" + output.error_message);
+			wi::backlog::post("Shader Compilation Failed: " + shaderbinaryfilename + "\n" + output.error_message);
 		}
 	}
 
