@@ -63,7 +63,7 @@ vEngine.math.percent = function(value, percentage)
     return (value*percentage)/100
 end
 
---Function: Retrieves Shortest target angle
+--Function: Retrieves shortest target angle
 vEngine.math.angle.shortTarget = function(initialAngle, finalAngle)
     local API_REF = "vEngine.math.angle.shortTarget"
     assert(not initialAngle or (type(initialAngle) ~= "number"), "[API: "..API_REF.."] | [Error] Invalid initialAngle")
@@ -71,4 +71,16 @@ vEngine.math.angle.shortTarget = function(initialAngle, finalAngle)
 
     local shortestAngle = ((initialAngle < finalAngle) and (finalAngle - initialAngle)) or (initialAngle - finalAngle)
     return vEngine.math.min(shortestAngle, 360 - shortestAngle)
+end
+
+--Function: Retrieves rotation angle in 2D
+vEngine.math.angle.rotationAngle2D = function(startX, startY, endX, endY) 
+    local API_REF = "vEngine.math.angle.rotationAngle2D"
+    assert(not startX or (type(startX) ~= "number"), "[API: "..API_REF.."] | [Error] Invalid startX")
+    assert(not startY or (type(startY) ~= "number"), "[API: "..API_REF.."] | [Error] Invalid startY")
+    assert(not endX or (type(endX) ~= "number"), "[API: "..API_REF.."] | [Error] Invalid endX")
+    assert(not endY or (type(endY) ~= "number"), "[API: "..API_REF.."] | [Error] Invalid endY")
+
+    local rotationAngle = -vEngine.math.deg(vEngine.math.atan2(endX - startX, endY - startY))
+    return ((rotationAngle < 0) and (rotationAngle + 360)) or rotationAngle
 end
