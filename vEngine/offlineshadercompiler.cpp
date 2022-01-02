@@ -37,17 +37,17 @@ int main(int argc, char* argv[])
 
 	if (wi::arguments::HasArgument("hlsl5"))
 	{
-		targets.push_back({ ShaderFormat::HLSL5, "Shaders/hlsl5/" });
+		targets.push_back({ ShaderFormat::HLSL5, "../Shaders/hlsl5/" });
 		std::cout << "hlsl5 ";
 	}
 	if (wi::arguments::HasArgument("hlsl6"))
 	{
-		targets.push_back({ ShaderFormat::HLSL6, "Shaders/hlsl6/" });
+		targets.push_back({ ShaderFormat::HLSL6, "../Shaders/hlsl6/" });
 		std::cout << "hlsl6 ";
 	}
 	if (wi::arguments::HasArgument("spirv"))
 	{
-		targets.push_back({ ShaderFormat::SPIRV, "Shaders/spirv/" });
+		targets.push_back({ ShaderFormat::SPIRV, "../Shaders/spirv/" });
 		std::cout << "spirv ";
 	}
 
@@ -69,9 +69,9 @@ int main(int argc, char* argv[])
 	if (targets.empty())
 	{
 		targets = {
-			//{ ShaderFormat::HLSL5, "Shaders/hlsl5/" },
-			{ ShaderFormat::HLSL6, "Shaders/hlsl6/" },
-			{ ShaderFormat::SPIRV, "Shaders/spirv/" },
+			//{ ShaderFormat::HLSL5, "../Shaders/hlsl5/" },
+			{ ShaderFormat::HLSL6, "../Shaders/hlsl6/" },
+			{ ShaderFormat::SPIRV, "../Shaders/spirv/" },
 		};
 		std::cout << "No shader formats were specified, assuming command arguments: hlsl5 spirv hlsl6" << std::endl;
 	}
