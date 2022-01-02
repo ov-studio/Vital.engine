@@ -88,17 +88,17 @@ vEngine.thread.wait = function(duration)
     return coroutine.yield(cThread)
 end
 
---Function: awaits thread until the game updates
+--Function: awaits thread until the engine updates
 vEngine.thread.waitEngineUpdate = function()
     cache.waitSignal("vEngine_onUpdate")
 end
 
---Function: awaits thread until the game updates independent of the frame
+--Function: awaits thread until the engine updates independent of the frame
 vEngine.thread.waitEngineFixedUpdate = function()
     cache.waitSignal("vEngine_onAsyncUpdate")
 end
 
---Function: awaits thread until the game is renderered
+--Function: awaits thread until the engine renders
 vEngine.thread.waitEngineRender = function()
     cache.waitSignal("vEngine_onRender")
 end
