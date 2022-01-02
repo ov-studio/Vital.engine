@@ -56,7 +56,7 @@ vEngine.thread = {}
 
 --Function: Retrieves current tick
 vEngine.thread.getTick = function()
-    return currentTick
+    return cache.currentTick
 end
 
 --Function: Creates a thread
