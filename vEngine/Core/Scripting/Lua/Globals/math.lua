@@ -60,7 +60,7 @@ vEngine.math.tickProgress = function(tick, duration)
     return (vEngine.thread.getTick() - tick)/(endTick - tick)
 end
 
---Function: Retrieves percent of a number
+--Function: Retrieves percentage of a number
 vEngine.math.percent = function(value, percentage)
     local API = "vEngine.math.percent"
     assert(not value or (type(value) ~= "number"), vEngine.prepareDebugMessage("LUA", API, "Error", "Invalid value"))

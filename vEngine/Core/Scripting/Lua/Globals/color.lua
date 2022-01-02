@@ -23,3 +23,21 @@ vEngine.color.fromRGBA = function(red, green, blue, alpha)
     --TODO: CREATE COLOR VIA PIPELINE & return
     --return toColor(red, green, blue, alpha)
 end
+
+--Function: Retrieves color from percentage
+vEngine.color.fromPercent = function(percentage)
+    local API = "vEngine.color.fromPercent"
+    assert(not percentage or (type(percentage) ~= "number"), vEngine.prepareDebugMessage("LUA", API, "Error", "Invalid percentage"))
+
+    local channelColors = false
+    percentage = vEngine.math.max(0, vEngine.math.min(100, percentage))
+    if percentage > 50 then
+        channelColors = {(100 - percentage)*5.1, 255, 0, 255}
+    elseif percentage == 50 then
+        channelColors = {255, 255, 0, 255}
+    else
+        channelColors = {255, percentage*5.1, 0, 255}
+    end
+    --TODO: CREATE COLOR VIA PIPELINE & return
+    --return toColor(red, green, blue, alpha)
+end
