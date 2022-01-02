@@ -70,7 +70,7 @@ vEngine.thread.create = function(cHandler)
     return cThread
 end
 
---Function: Destroys All Threads
+--Function: Destroys all threads
 vEngine.thread.destroyAll = function()
     cache.signaledThreads = {}
     cache.timedThreads = {}
