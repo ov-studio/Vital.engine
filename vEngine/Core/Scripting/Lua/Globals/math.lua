@@ -13,6 +13,7 @@
 ----------------
 
 vEngine.math = math
+vEngine.math.randomseed(os.time())
 math = nil
 
 --TODO: ..
@@ -29,22 +30,16 @@ function vEngine.math.lerp(a,b,t)
 end
 
 -- clamp number between min,max
-function vEngine.math.clamp(x,min,max)
-	if(x < min) then
-		return min
-	elseif(x > max) then
-		return max
-	else
-		return x
-	end
+function vEngine.math.clamp(x, min, max)
+    return ((x < min) and min) or ((x > max) and max) or x
 end
 
 -- clamp number between 0,1
 function vEngine.math.saturate(x)
-	return vEngine.math.clamp(x,0,1)
+	return vEngine.math.clamp(x, 0, 1)
 end
 
 -- round number to nearest integer
 function vEngine.math.round(x)
-	return x + 0.5 - ( x + 0.5 ) % 1;
+	return x + 0.5 - (x + 0.5) % 1;
 end

@@ -13,5 +13,3 @@
 ----------------
 
 vEngine = {}
-
-math.randomseed(os.time())
