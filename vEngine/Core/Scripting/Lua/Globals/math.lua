@@ -54,6 +54,16 @@ vEngine.math.round = function(value, decimals)
     return tonumber(string.format(("%."..decimals.."f"), value))
 end
 
+--Function: Retrieves progress of a tick
+vEngine.math.tickProgress = function(tick, duration)
+    local API_REF = "vEngine.math.progress"
+    assert(not tick or (type(tick) ~= "number"), "[API: "..API_REF.."] | [Error] Invalid tick")
+    assert(not duration or (type(duration) ~= "number") or (duration <= 0), "[API: "..API_REF.."] | [Error] Invalid duration")
+
+    local endTick = tick + duration
+    return (vEngine.thread.getTick() - tick)/(endTick - tick)
+end
+
 --Function: Retrieves percent of a number
 vEngine.math.percent = function(value, percentage)
     local API_REF = "vEngine.math.percent"

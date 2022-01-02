@@ -80,8 +80,7 @@ end
 --Function: awaits thread for 'n' duration before running again
 vEngine.thread.wait = function(duration)
     local API_REF = "vEngine.thread.wait"
-    duration = tonumber(duration) or 0
-    assert(duration <= 0, "[API: "..API_REF.."] | [Error] Invalid duration")
+    assert(not duration or (type(duration) ~= "number") or (duration <= 0), "[API: "..API_REF.."] | [Error] Invalid duration")
     local cThread = coroutine.running()
     assert(cThread ~= nil, "[API: "..API_REF.."] | [Error] API available only within a thread")
 
