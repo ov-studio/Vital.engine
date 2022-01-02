@@ -16,7 +16,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6FEFC868-FE73-4CB7-90B3-3D2EA6731688}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>vEngine_Win</RootNamespace>
+    <RootNamespace>vEngine_Windows</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>vEngine_Windows</ProjectName>
   </PropertyGroup>
