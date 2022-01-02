@@ -19,9 +19,9 @@ local cache = {
 }
 
 cache.waitSignal = function(signalType)
-    local API_REF = "vEngine.thread.wait"
+    local API = "vEngine.thread.wait"
     local cThread = coroutine.running()
-    assert(cThread ~= nil, "[API: "..API_REF.."] | [Error] API available only within a thread")
+    assert(not cThread, vEngine.prepareDebugMessage("LUA", API, "Error", "API available only within a thread"))
 
     cache.signaledThreads[signalType] = cache.signaledThreads[signalType] or {}
     table.insert(cache.signaledThreads[signalType], cThread)
@@ -61,12 +61,12 @@ end
 
 --Function: Creates a thread
 vEngine.thread.create = function(cHandler)
-    local API_REF = "vEngine.thread.create"
-    assert(not cHandler or (type(cHandler) ~= "function"), "[API: "..API_REF.."] | [Error] Invalid thread handler")
+    local API = "vEngine.thread.create"
+    assert(not cHandler or (type(cHandler) ~= "function"), vEngine.prepareDebugMessage("LUA", API, "Error", "Invalid thread handler"))
 
     local cThread = coroutine.create(cHandler)
     local cResult = {coroutine.resume(cThread)}
-    assert(not cResult[1], "[API: "..API_REF.."] | [Error] "..cResult[2])
+    assert(not cResult[1], vEngine.prepareDebugMessage("LUA", API, "Error", cResult[2]))
     return cThread
 end
 
@@ -79,10 +79,10 @@ end
 
 --Function: awaits thread for 'n' duration before running again
 vEngine.thread.wait = function(duration)
-    local API_REF = "vEngine.thread.wait"
-    assert(not duration or (type(duration) ~= "number") or (duration <= 0), "[API: "..API_REF.."] | [Error] Invalid duration")
+    local API = "vEngine.thread.wait"
+    assert(not duration or (type(duration) ~= "number") or (duration <= 0), vEngine.prepareDebugMessage("LUA", API, "Error", "Invalid duration"))
     local cThread = coroutine.running()
-    assert(cThread ~= nil, "[API: "..API_REF.."] | [Error] API available only within a thread")
+    assert(not cThread, vEngine.prepareDebugMessage("LUA", API, "Error", "API available only within a thread"))
 
     cache.timedThreads[cThread] = cache.currentTick + duration
     return coroutine.yield(cThread)
