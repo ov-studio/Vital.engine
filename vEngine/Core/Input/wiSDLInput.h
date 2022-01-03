@@ -1,5 +1,5 @@
 #pragma once
-#include "CommonInclude.h"
+#include "commoninclude.h"
 #include "Core/Input/wiInput.h"
 
 #ifdef SDL2

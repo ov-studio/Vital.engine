@@ -1,5 +1,5 @@
 #pragma once
-#include "CommonInclude.h"
+#include "commoninclude.h"
 #include "Core/Helpers/wiVector.h"
 
 #include <cassert>

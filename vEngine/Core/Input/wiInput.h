@@ -1,5 +1,5 @@
 #pragma once
-#include "CommonInclude.h"
+#include "commoninclude.h"
 #include "Core/Systems/wiPlatform.h"
 #include "Core/Helpers/wiColor.h"
 #include "Core/Helpers/wiVector.h"

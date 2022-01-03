@@ -862,7 +862,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics.h">
       <Filter>Core\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.h">
       <Filter>Core\Input</Filter>
@@ -1065,6 +1064,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSheenLUT.h">
       <Filter>Core\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)commonInclude.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">

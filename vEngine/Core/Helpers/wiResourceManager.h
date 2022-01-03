@@ -1,5 +1,5 @@
 #pragma once
-#include "CommonInclude.h"
+#include "commoninclude.h"
 #include "Core/Graphics/API/wiGraphicsDevice.h"
 #include "Core/Audio/wiAudio.h"
 #include "Core/Helpers/wiArchive.h"

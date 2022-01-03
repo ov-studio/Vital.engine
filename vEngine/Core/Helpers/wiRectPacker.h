@@ -1,5 +1,5 @@
 #pragma once
-#include "CommonInclude.h"
+#include "commoninclude.h"
 
 // NOTE: 
 // This is based on the rectpack2D library hosted here: https://github.com/TeamHypersomnia/rectpack2D
