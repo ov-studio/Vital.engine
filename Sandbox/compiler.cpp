@@ -23,7 +23,6 @@ int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
     std::string bundlerData = R"(
     #include "Core/Helpers/wiVector.h"
     namespace sandbox::)";
-    std::cout<< moduleIdentifier;
     bundlerData += moduleIdentifier;
     bundlerData += R"( {    
         struct moduleDef
