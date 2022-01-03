@@ -6,7 +6,7 @@
 #include <string>
 
 std::mutex locker;
-std::string modulePath = "Lua/";
+std::string modulePath = "Lua";
 struct moduleTypes
 {
 	std::string moduleName;
@@ -15,13 +15,13 @@ struct moduleTypes
 wi::vector<moduleTypes> SandboxModule = {
     {
         "Shared",
-        {
-            "init.lua"
-        }
+        {}
     },
     {
         "Client",
-        {}
+        {
+			"init.lua"
+		}
     },
     {
         "Server",
@@ -37,6 +37,7 @@ int main()
 
 	wi::jobsystem::Initialize();
 	wi::jobsystem::context ctx;
+	modulePath += "\\";
 	wi::helper::MakePathAbsolute(modulePath);
 	wi::Timer timer;
 
@@ -47,13 +48,13 @@ int main()
 		{
             wi::vector<uint8_t> fileData;
             std::string scriptPath = SandboxModule[i].moduleScripts[j];
-            if (wi::helper::FileRead(modulePath + scriptPath, fileData))
+            if (wi::helper::FileRead(modulePath + SandboxModule[i].moduleName + "/" + scriptPath, fileData))
             {
                 std::string scriptData = std::string(fileData.begin(), fileData.end());
                 wi::jobsystem::Execute(ctx, [=](wi::jobsystem::JobArgs args) {
                     locker.lock();
                     std::cout << "Script Compiled: " << scriptPath << std::endl;
-                    //moduleResults[(scriptPath)] = scriptData;
+                    //moduleResults[scriptPath] = scriptData;
                     locker.unlock();
                 });
             }
