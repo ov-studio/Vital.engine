@@ -47,20 +47,20 @@ int main()
 		{
             wi::vector<uint8_t> fileData;
             std::string scriptPath = SandboxModule[i].moduleScripts[j];
-            if (wi::helper::FileRead(modulePath + ScriptPath, fileData))
+            if (wi::helper::FileRead(modulePath + scriptPath, fileData))
             {
                 std::string scriptData = std::string(fileData.begin(), fileData.end());
                 wi::jobsystem::Execute(ctx, [=](wi::jobsystem::JobArgs args) {
                     locker.lock();
-                    std::cout << "Script Compiled: " << ScriptPath << std::endl;
-                    //moduleResults[(ScriptPath)] = scriptData;
+                    std::cout << "Script Compiled: " << scriptPath << std::endl;
+                    //moduleResults[(scriptPath)] = scriptData;
                     locker.unlock();
                 });
             }
             else
             {
                 locker.lock();
-                std::cerr << "Script Compilation Failed: " << ScriptPath << std::endl;
+                std::cerr << "Script Compilation Failed: " << scriptPath << std::endl;
                 locker.unlock();
                 std::exit(1);
             }
