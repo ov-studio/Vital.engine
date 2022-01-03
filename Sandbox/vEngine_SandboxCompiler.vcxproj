@@ -11,7 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Lua\compiler.cpp" />
+    <ClCompile Include="compiler.cpp" />
+    <ClCompile Include="Lua\lua.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="compiler.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

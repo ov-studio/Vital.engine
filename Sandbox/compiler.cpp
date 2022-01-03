@@ -1,4 +1,4 @@
-#include "../../vEngine/vEngine.h"
+#include "compiler.h"
 
 #include <iostream>
 #include <filesystem>
@@ -6,32 +6,12 @@
 #include <string>
 
 std::mutex locker;
-std::string moduleName = "Lua";
-std::string modulePath = moduleName;
-struct moduleTypes
-{
-	std::string moduleName;
-	wi::vector<std::string> moduleScripts;
-};
-wi::vector<moduleTypes> SandboxModule = {
-    {
-        "Shared",
-        {}
-    },
-    {
-        "Client",
-        {
-			"init.lua"
-		}
-    },
-    {
-        "Server",
-        {}
-    }
-};
 
-int main()
+int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
 {
+    std::string moduleIdentifier = moduleName;
+    std::string modulePath = moduleName;
+    std::transform(moduleIdentifier.begin(), moduleIdentifier.end(), moduleIdentifier.begin(), ::tolower);
 	std::cout << "[Sandbox Compiler] Compiling " + moduleName + " module" << std::endl;
 
 	wi::jobsystem::Initialize();
@@ -42,23 +22,26 @@ int main()
 
     std::string bundlerData = R"(
     #include "Core/Helpers/wiVector.h"
-    namespace SandboxLua {    
-        struct moduleTypes
+    namespace sandbox::)";
+    std::cout<< moduleIdentifier;
+    bundlerData += moduleIdentifier;
+    bundlerData += R"( {    
+        struct moduleDef
         {
             std::string moduleName;
             wi::vector<std::string> moduleScripts;
         };
-        wi::vector<moduleTypes> modules = {};
+        wi::vector<moduleDef> modules = {};
     )";
 
-	for (int i = 0; i < SandboxModule.size(); ++i)
+	for (int i = 0; i < modules.size(); ++i)
     {
-        bundlerData = bundlerData + "modules.push({" + "\"" + SandboxModule[i].moduleName + "\"" + ", {";
-		for (int j = 0; j < SandboxModule[i].moduleScripts.size(); ++j)
+        bundlerData = bundlerData + "modules.push({" + "\"" + modules[i].moduleName + "\"" + ", {";
+		for (int j = 0; j < modules[i].moduleScripts.size(); ++j)
 		{
-            std::string scriptPath = SandboxModule[i].moduleScripts[j];
+            std::string scriptPath = modules[i].moduleScripts[j];
             wi::vector<uint8_t> fileData;
-            if (wi::helper::FileRead(modulePath + SandboxModule[i].moduleName + "/" + scriptPath, fileData))
+            if (wi::helper::FileRead(modulePath + modules[i].moduleName + "/" + scriptPath, fileData))
             {
                 wi::jobsystem::Execute(ctx, [&bundlerData, scriptPath, fileData](wi::jobsystem::JobArgs args) {
                     locker.lock();
