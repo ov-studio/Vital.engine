@@ -46,7 +46,7 @@ int main()
 		for (int j = 0; j < SandboxModule[i].moduleScripts.size(); ++j)
 		{
             wi::vector<uint8_t> fileData;
-            std::string scriptPath = SandboxModule[i].moduleScripts[j]
+            std::string scriptPath = SandboxModule[i].moduleScripts[j];
             if (wi::helper::FileRead(modulePath + ScriptPath, fileData))
             {
                 std::string scriptData = std::string(fileData.begin(), fileData.end());
