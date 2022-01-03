@@ -129,7 +129,7 @@ function waitSignal(signalName)
 end
 
 -- Send a signal on which a coroutine can be blocked
-function signal(signalName)  
+function onvEngineSignal(signalName)  
     local threads = vEngine["__vEngine_Globals__"].threads.onSignal[signalName]
     if threads == nil then return end
 
