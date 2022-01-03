@@ -27,13 +27,3 @@ vEngine.prepareDebugMessage = function(interface, API, messageType, message)
     end
     return ""
 end
-
-
---[[
---TODO: IMPORTANT!! SCRIPT LOADING ORDER
-
-init.lua
-thread.lua
-math.lua
-color.lua
-]]

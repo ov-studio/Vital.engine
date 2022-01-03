@@ -6,12 +6,16 @@ std::string moduleName = "Lua";
 wi::vector<moduleDef> modules = {
     {
         "Shared",
-        {}
+        {
+            "init.lua",
+            "math.lua",
+            "color.lua"
+        }
     },
     {
         "Client",
         {
-			"init.lua"
+            "thread.lua"
 		}
     },
     {
