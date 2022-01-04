@@ -5,7 +5,7 @@
 namespace wi::lua
 {
 
-	const char Sprite_BindLua::className[] = "Sprite";
+	const char Sprite_BindLua::className[] = "sprite";
 
 	Luna<Sprite_BindLua>::FunctionType Sprite_BindLua::methods[] = {
 		lunamethod(Sprite_BindLua, SetParams),

@@ -3,7 +3,7 @@
 
 namespace wi::lua
 {
-	const char ImageParams_BindLua::className[] = "ImageParams";
+	const char ImageParams_BindLua::className[] = "imageparams";
 
 	Luna<ImageParams_BindLua>::FunctionType ImageParams_BindLua::methods[] = {
 		lunamethod(ImageParams_BindLua, GetPos),
@@ -461,6 +461,7 @@ namespace wi::lua
 			initialized = true;
 			Luna<ImageParams_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
 
+            /*
 			wi::lua::RunText("STENCILMODE_DISABLED		= 0");
 			wi::lua::RunText("STENCILMODE_EQUAL			= 1");
 			wi::lua::RunText("STENCILMODE_LESS			= 2");
@@ -487,6 +488,7 @@ namespace wi::lua
 			wi::lua::RunText("BLENDMODE_ALPHA			= 1");
 			wi::lua::RunText("BLENDMODE_PREMULTIPLIED	= 2");
 			wi::lua::RunText("BLENDMODE_ADDITIVE			= 3");
+            */
 		}
 	}
 

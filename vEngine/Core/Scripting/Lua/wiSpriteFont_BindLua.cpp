@@ -5,7 +5,7 @@
 namespace wi::lua
 {
 
-	const char SpriteFont_BindLua::className[] = "SpriteFont";
+	const char SpriteFont_BindLua::className[] = "spritefont";
 
 	Luna<SpriteFont_BindLua>::FunctionType SpriteFont_BindLua::methods[] = {
 		lunamethod(SpriteFont_BindLua, GetText),

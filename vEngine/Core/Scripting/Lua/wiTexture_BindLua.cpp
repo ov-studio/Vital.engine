@@ -5,7 +5,7 @@ using namespace wi::graphics;
 namespace wi::lua
 {
 
-	const char Texture_BindLua::className[] = "Texture";
+	const char Texture_BindLua::className[] = "texture";
 
 	Luna<Texture_BindLua>::FunctionType Texture_BindLua::methods[] = {
 		{ NULL, NULL }

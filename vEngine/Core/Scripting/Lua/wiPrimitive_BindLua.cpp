@@ -24,7 +24,7 @@ namespace wi::lua::primitive
 
 
 
-	const char Ray_BindLua::className[] = "Ray";
+	const char Ray_BindLua::className[] = "ray";
 
 	Luna<Ray_BindLua>::FunctionType Ray_BindLua::methods[] = {
 		lunamethod(Ray_BindLua, Intersects),
@@ -96,7 +96,7 @@ namespace wi::lua::primitive
 
 
 
-	const char AABB_BindLua::className[] = "AABB";
+	const char AABB_BindLua::className[] = "aabb";
 
 	Luna<AABB_BindLua>::FunctionType AABB_BindLua::methods[] = {
 		lunamethod(AABB_BindLua, Intersects),
@@ -249,7 +249,7 @@ namespace wi::lua::primitive
 
 
 
-	const char Sphere_BindLua::className[] = "Sphere";
+	const char Sphere_BindLua::className[] = "sphere";
 
 	Luna<Sphere_BindLua>::FunctionType Sphere_BindLua::methods[] = {
 		lunamethod(Sphere_BindLua, Intersects),
@@ -369,7 +369,7 @@ namespace wi::lua::primitive
 
 
 
-	const char Capsule_BindLua::className[] = "Capsule";
+	const char Capsule_BindLua::className[] = "capsule";
 
 	Luna<Capsule_BindLua>::FunctionType Capsule_BindLua::methods[] = {
 		lunamethod(Capsule_BindLua, Intersects),

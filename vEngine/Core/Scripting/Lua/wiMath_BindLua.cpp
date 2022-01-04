@@ -3,7 +3,7 @@
 namespace wi::lua
 {
 
-	const char Vector_BindLua::className[] = "Vector";
+	const char Vector_BindLua::className[] = "vector";
 
 	Luna<Vector_BindLua>::FunctionType Vector_BindLua::methods[] = {
 		lunamethod(Vector_BindLua, GetX),
@@ -410,7 +410,7 @@ namespace wi::lua
 		{
 			initialized = true;
 			Luna<Vector_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
-			wi::lua::RunText("vector = Vector()");
+			wi::lua::RunText("vEngine." + std::to_string(Vector_BindLua::className) + " = " + "vEngine." + std::to_string(Vector_BindLua::className)  + "()");
 		}
 	}
 
@@ -419,7 +419,7 @@ namespace wi::lua
 
 
 
-	const char Matrix_BindLua::className[] = "Matrix";
+	const char Matrix_BindLua::className[] = "matrix";
 
 	Luna<Matrix_BindLua>::FunctionType Matrix_BindLua::methods[] = {
 		lunamethod(Matrix_BindLua, GetRow),
@@ -733,7 +733,8 @@ namespace wi::lua
 		{
 			initialized = true;
 			Luna<Matrix_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
-			wi::lua::RunText("matrix = Matrix()");
+            // TODO: WHY THIS WHEN ITS NOT A NESTED OBJECT
+			//wi::lua::RunText("vEngine." + std::to_string(Matrix_BindLua::className) + " = " + "vEngine." + std::to_string(Matrix_BindLua::className)  + "()");
 		}
 	}
 

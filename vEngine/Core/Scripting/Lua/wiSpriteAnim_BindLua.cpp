@@ -4,7 +4,7 @@
 namespace wi::lua
 {
 
-	const char SpriteAnim_BindLua::className[] = "SpriteAnim";
+	const char SpriteAnim_BindLua::className[] = "spriteanim";
 
 	Luna<SpriteAnim_BindLua>::FunctionType SpriteAnim_BindLua::methods[] = {
 		lunamethod(SpriteAnim_BindLua, SetRot),
@@ -256,7 +256,7 @@ namespace wi::lua
 
 
 
-	const char MovingTexAnim_BindLua::className[] = "MovingTexAnim";
+	const char MovingTexAnim_BindLua::className[] = "movingtexanim";
 
 	Luna<MovingTexAnim_BindLua>::FunctionType MovingTexAnim_BindLua::methods[] = {
 		lunamethod(MovingTexAnim_BindLua, SetSpeedX),
@@ -332,7 +332,7 @@ namespace wi::lua
 
 
 
-	const char DrawRectAnim_BindLua::className[] = "DrawRecAnim";
+	const char DrawRectAnim_BindLua::className[] = "drawrecanim";
 
 	Luna<DrawRectAnim_BindLua>::FunctionType DrawRectAnim_BindLua::methods[] = {
 		lunamethod(DrawRectAnim_BindLua, SetFrameRate),

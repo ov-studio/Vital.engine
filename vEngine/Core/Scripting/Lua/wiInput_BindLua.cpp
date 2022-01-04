@@ -4,7 +4,7 @@
 namespace wi::lua
 {
 
-	const char Input_BindLua::className[] = "Input";
+	const char Input_BindLua::className[] = "input";
 
 	Luna<Input_BindLua>::FunctionType Input_BindLua::methods[] = {
 		lunamethod(Input_BindLua, Down),
@@ -188,6 +188,7 @@ namespace wi::lua
 		{
 			initialized = true;
 			Luna<Input_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+            /*
 			wi::lua::RunText("input = Input()");
 
 			wi::lua::RunText("MOUSE_BUTTON_LEFT			= 1");
@@ -252,6 +253,7 @@ namespace wi::lua
 			wi::lua::RunText("TOUCHSTATE_PRESSED		= 0");
 			wi::lua::RunText("TOUCHSTATE_RELEASED	= 1");
 			wi::lua::RunText("TOUCHSTATE_MOVED		= 2");
+            */
 		}
 
 		Touch_BindLua::Bind();
@@ -264,7 +266,7 @@ namespace wi::lua
 
 
 
-	const char Touch_BindLua::className[] = "Touch";
+	const char Touch_BindLua::className[] = "touch";
 
 	Luna<Touch_BindLua>::FunctionType Touch_BindLua::methods[] = {
 		lunamethod(Touch_BindLua, GetState),
@@ -302,7 +304,7 @@ namespace wi::lua
 
 
 
-	const char ControllerFeedback_BindLua::className[] = "ControllerFeedback";
+	const char ControllerFeedback_BindLua::className[] = "controllerfeedback";
 
 	Luna<ControllerFeedback_BindLua>::FunctionType ControllerFeedback_BindLua::methods[] = {
 		lunamethod(ControllerFeedback_BindLua, SetVibrationRight),

@@ -295,7 +295,7 @@ void Bind()
 
 
 
-const char Scene_BindLua::className[] = "Scene";
+const char Scene_BindLua::className[] = "scene";
 
 Luna<Scene_BindLua>::FunctionType Scene_BindLua::methods[] = {
 	lunamethod(Scene_BindLua, Update),
@@ -1114,7 +1114,7 @@ int Scene_BindLua::Component_DetachChildren(lua_State* L)
 
 
 
-const char NameComponent_BindLua::className[] = "NameComponent";
+const char NameComponent_BindLua::className[] = "namecomponent";
 
 Luna<NameComponent_BindLua>::FunctionType NameComponent_BindLua::methods[] = {
 	lunamethod(NameComponent_BindLua, SetName),
@@ -1162,7 +1162,7 @@ int NameComponent_BindLua::GetName(lua_State* L)
 
 
 
-const char LayerComponent_BindLua::className[] = "LayerComponent";
+const char LayerComponent_BindLua::className[] = "layercomponent";
 
 Luna<LayerComponent_BindLua>::FunctionType LayerComponent_BindLua::methods[] = {
 	lunamethod(LayerComponent_BindLua, SetLayerMask),
@@ -1211,7 +1211,7 @@ int LayerComponent_BindLua::GetLayerMask(lua_State* L)
 
 
 
-const char TransformComponent_BindLua::className[] = "TransformComponent";
+const char TransformComponent_BindLua::className[] = "transformcomponent";
 
 Luna<TransformComponent_BindLua>::FunctionType TransformComponent_BindLua::methods[] = {
 	lunamethod(TransformComponent_BindLua, Scale),
@@ -1464,7 +1464,7 @@ int TransformComponent_BindLua::GetScale(lua_State* L)
 
 
 
-const char CameraComponent_BindLua::className[] = "CameraComponent";
+const char CameraComponent_BindLua::className[] = "cameracomponent";
 
 Luna<CameraComponent_BindLua>::FunctionType CameraComponent_BindLua::methods[] = {
 	lunamethod(CameraComponent_BindLua, UpdateCamera),
@@ -1685,7 +1685,7 @@ int CameraComponent_BindLua::GetInvViewProjection(lua_State* L)
 
 
 
-const char AnimationComponent_BindLua::className[] = "AnimationComponent";
+const char AnimationComponent_BindLua::className[] = "animationcomponent";
 
 Luna<AnimationComponent_BindLua>::FunctionType AnimationComponent_BindLua::methods[] = {
 	lunamethod(AnimationComponent_BindLua, Play),
@@ -1810,7 +1810,7 @@ int AnimationComponent_BindLua::GetAmount(lua_State* L)
 
 
 
-const char MaterialComponent_BindLua::className[] = "MaterialComponent";
+const char MaterialComponent_BindLua::className[] = "materialcomponent";
 
 Luna<MaterialComponent_BindLua>::FunctionType MaterialComponent_BindLua::methods[] = {
 	lunamethod(MaterialComponent_BindLua, SetBaseColor),
@@ -1929,7 +1929,7 @@ int MaterialComponent_BindLua::GetStencilRef(lua_State* L)
 
 
 
-const char EmitterComponent_BindLua::className[] = "EmitterComponent";
+const char EmitterComponent_BindLua::className[] = "emittercomponent";
 
 Luna<EmitterComponent_BindLua>::FunctionType EmitterComponent_BindLua::methods[] = {
 	lunamethod(EmitterComponent_BindLua, Burst),
@@ -2126,7 +2126,7 @@ int EmitterComponent_BindLua::SetMotionBlurAmount(lua_State* L)
 
 
 
-const char LightComponent_BindLua::className[] = "LightComponent";
+const char LightComponent_BindLua::className[] = "lightcomponent";
 
 Luna<LightComponent_BindLua>::FunctionType LightComponent_BindLua::methods[] = {
 	lunamethod(LightComponent_BindLua, SetType),
@@ -2251,7 +2251,7 @@ int LightComponent_BindLua::GetType(lua_State* L)
 
 
 
-const char ObjectComponent_BindLua::className[] = "ObjectComponent";
+const char ObjectComponent_BindLua::className[] = "objectcomponent";
 
 Luna<ObjectComponent_BindLua>::FunctionType ObjectComponent_BindLua::methods[] = {
 	lunamethod(ObjectComponent_BindLua, GetMeshID),
@@ -2355,7 +2355,7 @@ int ObjectComponent_BindLua::SetUserStencilRef(lua_State* L)
 
 
 
-const char InverseKinematicsComponent_BindLua::className[] = "InverseKinematicsComponent";
+const char InverseKinematicsComponent_BindLua::className[] = "inversekinematicscomponent";
 
 Luna<InverseKinematicsComponent_BindLua>::FunctionType InverseKinematicsComponent_BindLua::methods[] = {
 	lunamethod(InverseKinematicsComponent_BindLua, SetTarget),
@@ -2467,7 +2467,7 @@ int InverseKinematicsComponent_BindLua::IsDisabled(lua_State* L)
 
 
 
-const char SpringComponent_BindLua::className[] = "SpringComponent";
+const char SpringComponent_BindLua::className[] = "springcomponent";
 
 Luna<SpringComponent_BindLua>::FunctionType SpringComponent_BindLua::methods[] = {
 	lunamethod(SpringComponent_BindLua, SetStiffness),

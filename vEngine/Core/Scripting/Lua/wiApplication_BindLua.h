@@ -5,7 +5,6 @@
 
 namespace wi::lua
 {
-
 	class Canvas_BindLua
 	{
 	public:

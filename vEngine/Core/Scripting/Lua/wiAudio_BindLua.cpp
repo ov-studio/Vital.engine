@@ -4,8 +4,7 @@
 
 namespace wi::lua
 {
-
-	const char Audio_BindLua::className[] = "Audio";
+	const char Audio_BindLua::className[] = "audio";
 
 	Luna<Audio_BindLua>::FunctionType Audio_BindLua::methods[] = {
 		lunamethod(Audio_BindLua, CreateSound),
@@ -240,8 +239,8 @@ namespace wi::lua
 			initialized = true;
 			Luna<Audio_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
 
-			wi::lua::RunText("audio = Audio()");
-
+			/*
+            wi::lua::RunText("vEngine." + std::to_string(Audio_BindLua::className) + " = " + "vEngine." + std::to_string(Audio_BindLua::className)  + "()");
 			wi::lua::RunText("SUBMIX_TYPE_SOUNDEFFECT = 0");
 			wi::lua::RunText("SUBMIX_TYPE_MUSIC = 1");
 			wi::lua::RunText("SUBMIX_TYPE_USER0 = 2");
@@ -277,6 +276,7 @@ namespace wi::lua
 			wi::lua::RunText("REVERB_PRESET_MEDIUMHALL = 27");
 			wi::lua::RunText("REVERB_PRESET_LARGEHALL = 28");
 			wi::lua::RunText("REVERB_PRESET_PLATE = 29");
+            */
 
 			Sound_BindLua::Bind();
 			SoundInstance_BindLua::Bind();
@@ -287,7 +287,7 @@ namespace wi::lua
 
 
 
-	const char Sound_BindLua::className[] = "Sound";
+	const char Sound_BindLua::className[] = "sound";
 
 	Luna<Sound_BindLua>::FunctionType Sound_BindLua::methods[] = {
 		{ NULL, NULL }
@@ -309,7 +309,7 @@ namespace wi::lua
 
 
 
-	const char SoundInstance_BindLua::className[] = "SoundInstance";
+	const char SoundInstance_BindLua::className[] = "soundinstance";
 
 	Luna<SoundInstance_BindLua>::FunctionType SoundInstance_BindLua::methods[] = {
 		lunamethod(SoundInstance_BindLua, SetSubmixType),
@@ -345,7 +345,7 @@ namespace wi::lua
 
 
 
-	const char SoundInstance3D_BindLua::className[] = "SoundInstance3D";
+	const char SoundInstance3D_BindLua::className[] = "soundinstance3D";
 
 	Luna<SoundInstance3D_BindLua>::FunctionType SoundInstance3D_BindLua::methods[] = {
 		lunamethod(SoundInstance3D_BindLua, SetListenerPos),
