@@ -12,13 +12,13 @@ int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
     std::string moduleIdentifier = moduleName;
     std::string modulePath = moduleName;
     std::transform(moduleIdentifier.begin(), moduleIdentifier.end(), moduleIdentifier.begin(), ::tolower);
-	std::cout << "[Sandbox Compiler] Compiling " + moduleName + " module" << std::endl;
+    std::cout << "[Sandbox Compiler] Compiling " + moduleName + " module" << std::endl;
 
-	wi::jobsystem::Initialize();
-	wi::jobsystem::context ctx;
-	modulePath += "/";
-	wi::helper::MakePathAbsolute(modulePath);
-	wi::Timer timer;
+    wi::jobsystem::Initialize();
+    wi::jobsystem::context ctx;
+    modulePath += "/";
+    wi::helper::MakePathAbsolute(modulePath);
+    wi::Timer timer;
 
     std::string bundlerData = R"(
     #include "Core/Helpers/wiVector.h"
