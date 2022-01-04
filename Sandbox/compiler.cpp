@@ -33,7 +33,7 @@ int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
         wi::vector<moduleDef> modules = {};
     )";
 
-	for (int i = 0; i < modules.size(); ++i)
+    for (int i = 0; i < modules.size(); ++i)
     {
         bundlerData = bundlerData + "modules.push({" + "\"" + modules[i].moduleName + "\"" + ", {";
 	for (int j = 0; j < modules[i].moduleScripts.size(); ++j)
