@@ -1,4 +1,5 @@
 #include "commonInclude.h"
+#include "Core/Helpers/wiTimer.h"
 #include "Core/Helpers/wiHelper.h"
 #include "Core/Systems/wiJobSystem.h"
 #include "Core/Helpers/wiVector.h"

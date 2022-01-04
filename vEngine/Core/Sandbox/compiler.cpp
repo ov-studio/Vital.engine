@@ -10,13 +10,12 @@ std::mutex locker;
 int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
 {
     std::string moduleIdentifier = moduleName;
-    std::string modulePath = moduleName;
+    std::string modulePath = "../../../Sandbox/" + moduleName + "/";
     std::transform(moduleIdentifier.begin(), moduleIdentifier.end(), moduleIdentifier.begin(), ::tolower);
     std::cout << "[Sandbox Compiler] Compiling " + moduleName + " module" << std::endl;
 
     wi::jobsystem::Initialize();
     wi::jobsystem::context ctx;
-    modulePath += "/";
     wi::helper::MakePathAbsolute(modulePath);
     wi::Timer timer;
 
@@ -66,7 +65,7 @@ int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
     bundlerData += "\n};\n";
 
     timer.record();
-    wi::helper::FileWrite("wiSandbox" + moduleName + ".h", (uint8_t*)bundlerData.c_str(), bundlerData.length());
+    wi::helper::FileWrite("../../wiSandbox" + moduleName + ".h", (uint8_t*)bundlerData.c_str(), bundlerData.length());
     std::cout << "[Sandbox Compiler] Finished compiling " + moduleName + " module in " << std::setprecision(4) << timer.elapsed_seconds() << " seconds" << std::endl;
     return 0;
 }
