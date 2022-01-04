@@ -1,6 +1,7 @@
-#pragma once
-
-#include "../vEngine/vEngine.h"
+#include "commonInclude.h"
+#include "Core/Helpers/wiHelper.h"
+#include "Core/Systems/wiJobSystem.h"
+#include "Core/Helpers/wiVector.h"
 
 #include <string>
 
