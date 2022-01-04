@@ -216,7 +216,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<SpriteFont_BindLua>::Register(wi::lua::GetLuaState());
+			Luna<SpriteFont_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
 
 
 			wi::lua::RunText("WIFALIGN_LEFT = 0");

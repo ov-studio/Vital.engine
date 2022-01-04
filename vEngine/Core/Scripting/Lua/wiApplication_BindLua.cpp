@@ -7,7 +7,6 @@
 
 namespace wi::lua
 {
-
 	const char Application_BindLua::className[] = "Application";
 
 	Luna<Application_BindLua>::FunctionType Application_BindLua::methods[] = {
@@ -29,10 +28,6 @@ namespace wi::lua
 	Luna<Application_BindLua>::PropertyType Application_BindLua::properties[] = {
 		{ NULL, NULL }
 	};
-
-	Application_BindLua::Application_BindLua(Application* component) :component(component)
-	{
-	}
 
 	Application_BindLua::Application_BindLua(lua_State* L)
 	{
@@ -342,8 +337,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<Application_BindLua>::Register(wi::lua::GetLuaState());
-
+			Luna<Application_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
 			wi::lua::RegisterFunc("SetProfilerEnabled", SetProfilerEnabled);
 		}
 	}
@@ -410,7 +404,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<Canvas_BindLua>::Register(wi::lua::GetLuaState());
+			Luna<Canvas_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
 		}
 	}
 
