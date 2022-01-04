@@ -34,7 +34,6 @@ Global
 		vEngine\vEngine.vcxitems*{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}*SharedItemsImports = 9
 		Client\Client.vcxitems*{5fe97b9b-a445-4eea-a42d-9de60b891d48}*SharedItemsImports = 4
 		vEngine\vEngine.vcxitems*{6fefc868-fe73-4cb7-90b3-3d2ea6731688}*SharedItemsImports = 4
-		vEngine\vEngine.vcxitems*{7e739738-9ae6-46a3-bcd6-10e5cc47ed92}*SharedItemsImports = 4
 		Client\Client.vcxitems*{867febca-09c4-4fe7-8a4c-4d9b1c27e7d0}*SharedItemsImports = 9
 		vEngine\Assets.vcxitems*{c48f6bff-f91b-4db5-98b5-15287dfb7c95}*SharedItemsImports = 9
 	EndGlobalSection
