@@ -16,7 +16,7 @@ wi::vector<moduleDef> modules = {
         "Client",
         {
             "thread.lua"
-		}
+        }
     },
     {
         "Server",
