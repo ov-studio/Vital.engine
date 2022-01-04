@@ -50,7 +50,7 @@ int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
             wi::jobsystem::Wait(ctx);
         }
         wi::jobsystem::Wait(ctx);
-        bundlerData += "}\n},";
+        bundlerData += "\n}\n},";
     }
     wi::jobsystem::Wait(ctx);
     bundlerData += "\n};\n};\n";
