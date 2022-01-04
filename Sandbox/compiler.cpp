@@ -36,8 +36,8 @@ int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
     for (int i = 0; i < modules.size(); ++i)
     {
         bundlerData = bundlerData + "modules.push({" + "\"" + modules[i].moduleName + "\"" + ", {";
-	for (int j = 0; j < modules[i].moduleScripts.size(); ++j)
-	{
+        for (int j = 0; j < modules[i].moduleScripts.size(); ++j)
+        {
             std::string scriptPath = modules[i].moduleScripts[j];
             wi::vector<uint8_t> fileData;
             if (wi::helper::FileRead(modulePath + modules[i].moduleName + "/" + scriptPath, fileData))
@@ -58,7 +58,7 @@ int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
                 std::exit(1);
             }
             wi::jobsystem::Wait(ctx);
-	}
+        }
         wi::jobsystem::Wait(ctx);
         bundlerData += "}});";
     }
