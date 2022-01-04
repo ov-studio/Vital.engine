@@ -19,24 +19,13 @@ int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
     wi::helper::MakePathAbsolute(modulePath);
     wi::Timer timer;
 
-    std::string bundlerData = R"(#include "Core/Helpers/wiVector.h"
-#include <string>
-namespace sandbox {}
-
-namespace sandbox::)";
-    bundlerData += moduleIdentifier;
-    bundlerData += R"( {
-    struct moduleDef
-    {
-        std::string moduleName;
-        wi::vector<std::string> moduleScripts;
-    };
-    wi::vector<moduleDef> modules = {)";
-    bundlerData += "\n\n";
-
+    std::string bundlerData = "#include \"Core/Helpers/wiVector.h\"\n";
+    bundlerData += "#include <string>\nnamespace sandbox {}\n";
+    bundlerData += "namespace sandbox::" + moduleIdentifier + " {\n";
+    bundlerData += "struct moduleDef\n{\n    std::string moduleName;\n    wi::vector<std::string> moduleScripts;\n};\n\nwi::vector<moduleDef> modules = {";
     for (int i = 0; i < modules.size(); ++i)
     {
-        bundlerData = bundlerData + "        {" + "\"" + modules[i].moduleName + "\"" + ", {";
+        bundlerData = bundlerData + "\n{\n" + "\"" + modules[i].moduleName + "\"" + ",\n{";
         for (int j = 0; j < modules[i].moduleScripts.size(); ++j)
         {
             std::string scriptPath = modules[i].moduleScripts[j];
@@ -46,7 +35,7 @@ namespace sandbox::)";
                 wi::jobsystem::Execute(ctx, [&bundlerData, scriptPath, fileData](wi::jobsystem::JobArgs args) {
                     locker.lock();
                     std::string scriptData = std::string(fileData.begin(), fileData.end());
-                    bundlerData += "R\"(" + scriptData + ")\",";
+                    bundlerData += "\nR\"(\n" + scriptData + "\n)\",\n";
                     std::cout << "Script Compiled: " << scriptPath << std::endl;
                     locker.unlock();
                 });
@@ -61,12 +50,10 @@ namespace sandbox::)";
             wi::jobsystem::Wait(ctx);
         }
         wi::jobsystem::Wait(ctx);
-        bundlerData += "}},\n";
+        bundlerData += "}\n},";
     }
     wi::jobsystem::Wait(ctx);
-    bundlerData += R"(
-    };)";
-    bundlerData += "\n};\n";
+    bundlerData += "\n};\n};\n";
 
     timer.record();
     wi::helper::FileWrite("../Core/Sandbox/wiSandbox" + moduleName + ".h", (uint8_t*)bundlerData.c_str(), bundlerData.length());
