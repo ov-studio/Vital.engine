@@ -944,9 +944,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.h">
       <Filter>Core\Interfaces</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLua_Globals.h">
-      <Filter>Core\Scripting</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLuna.h">
       <Filter>Core\Scripting</Filter>
     </ClInclude>

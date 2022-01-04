@@ -82,7 +82,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSprite_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiTexture_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLua.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLua_Globals.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLuna.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiCanvas.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiECS.h" />
