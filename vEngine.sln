@@ -27,11 +27,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vEngine_Windows", "vEngine\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vEngine_ShaderCompiler", "vEngine\Packages\vEngine_ShaderCompiler.vcxproj", "{3B74A7FE-CED7-4723-8824-AC708A865B98}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vEngine_SandboxCompiler", "vEngine\Packages\vEngine_SandboxCompiler.vcxproj", "{7E739738-9AE6-46A3-BCD6-10E5CC47ED92}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		vEngine\vEngine.vcxitems*{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}*SharedItemsImports = 9
 		Client\Client.vcxitems*{5fe97b9b-a445-4eea-a42d-9de60b891d48}*SharedItemsImports = 4
 		vEngine\vEngine.vcxitems*{6fefc868-fe73-4cb7-90b3-3d2ea6731688}*SharedItemsImports = 4
+		vEngine\vEngine.vcxitems*{7e739738-9ae6-46a3-bcd6-10e5cc47ed92}*SharedItemsImports = 4
 		Client\Client.vcxitems*{867febca-09c4-4fe7-8a4c-4d9b1c27e7d0}*SharedItemsImports = 9
 		vEngine\Assets.vcxitems*{c48f6bff-f91b-4db5-98b5-15287dfb7c95}*SharedItemsImports = 9
 	EndGlobalSection
@@ -52,6 +55,10 @@ Global
 		{3B74A7FE-CED7-4723-8824-AC708A865B98}.Debug|x64.Build.0 = Debug|x64
 		{3B74A7FE-CED7-4723-8824-AC708A865B98}.Release|x64.ActiveCfg = Release|x64
 		{3B74A7FE-CED7-4723-8824-AC708A865B98}.Release|x64.Build.0 = Release|x64
+		{7E739738-9AE6-46A3-BCD6-10E5CC47ED92}.Debug|x64.ActiveCfg = Debug|x64
+		{7E739738-9AE6-46A3-BCD6-10E5CC47ED92}.Debug|x64.Build.0 = Debug|x64
+		{7E739738-9AE6-46A3-BCD6-10E5CC47ED92}.Release|x64.ActiveCfg = Release|x64
+		{7E739738-9AE6-46A3-BCD6-10E5CC47ED92}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

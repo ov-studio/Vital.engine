@@ -52,9 +52,6 @@
     <Filter Include="Core\Graphics\API">
       <UniqueIdentifier>{f8a66012-5d78-4959-bcfe-22792b6a00ff}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\Sandbox">
-      <UniqueIdentifier>{f01128d9-d185-41af-9367-5c4371d9204d}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
@@ -1068,9 +1065,6 @@
       <Filter>Core\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)commonInclude.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Sandbox\compiler.h">
-      <Filter>Core\Sandbox</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
@@ -1805,12 +1799,6 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiShaderCompiler.cpp">
       <Filter>Core\Graphics\API</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Sandbox\sandboxLua.cpp">
-      <Filter>Core\Sandbox</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Sandbox\compiler.cpp">
-      <Filter>Core\Sandbox</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
