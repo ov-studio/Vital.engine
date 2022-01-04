@@ -12,7 +12,6 @@
 --[[ Module ]]--
 ----------------
 
-backlog_post("LOADED INIT.LUA????")
 vEngine = {}
 vEngine.math = math; math = nil;
 vEngine.math.angle = {}

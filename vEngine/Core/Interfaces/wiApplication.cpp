@@ -222,7 +222,6 @@ namespace wi
 	{
 		auto range = wi::profiler::BeginRangeCPU("Update");
 
-		wi::lua::SetDeltaTime(double(dt));
 		wi::lua::Update();
 
 		wi::backlog::Update(canvas, dt);

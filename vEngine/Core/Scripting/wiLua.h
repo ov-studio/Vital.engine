@@ -48,8 +48,6 @@ namespace wi::lua
 	//returns the path of the last executed script:
 	const std::string& GetScriptPath();
 
-	//set delta time to use with Vendors/lua
-	void SetDeltaTime(double dt);
 	//update Vendors/lua scripts which are waiting for a fixed game tick
 	void FixedUpdate();
 	//update Vendors/lua scripts which are waiting for a game tick
