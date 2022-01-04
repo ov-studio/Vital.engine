@@ -108,15 +108,6 @@ namespace wi
 			return;
 		}
 
-		static bool startup_script = false;
-		if (!startup_script)
-		{
-			startup_script = true;
-			wi::lua::RegisterObject(wi::lua::Application_BindLua::className, "main", new wi::lua::Application_BindLua(this));
-			wi::lua::RegisterObject(wi::lua::Application_BindLua::className, "application", new wi::lua::Application_BindLua(this));
-			wi::lua::RunFile("startup.lua");
-		}
-
 		if (!is_window_active && !wi::arguments::HasArgument("alwaysactive"))
 		{
 			// If the application is not active, disable Update loops:
