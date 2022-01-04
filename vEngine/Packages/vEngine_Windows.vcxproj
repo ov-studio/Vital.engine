@@ -13,11 +13,6 @@
   <ItemGroup>
     <Natvis Include="..\vEngine.natvis" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="vEngine_ShaderCompiler.vcxproj">
-      <Project>{3b74a7fe-ced7-4723-8824-ac708a865b98}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6FEFC868-FE73-4CB7-90B3-3D2EA6731688}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
