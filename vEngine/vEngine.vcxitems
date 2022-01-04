@@ -63,6 +63,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D_PathTracing.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Sandbox\compiler.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiAudio_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiBacklog_BindLua.h" />
@@ -394,6 +395,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_UWP.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_Windows.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics_Bullet.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Sandbox\compiler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Sandbox\sandboxLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiAudio_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiBacklog_BindLua.cpp" />
