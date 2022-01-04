@@ -1,7 +1,6 @@
 #if __has_include("Core/Sandbox/wiSandboxLua.h")
     #include "Core/Sandbox/wiSandboxLua.h"
     #include "Core/Scripting/wiLua.h"
-    #include "Core/Scripting/wiLua_Globals.h"
     #include "Core/Tools/wiBacklog.h"
     #include "Core/Helpers/wiHelper.h"
     #include "Core/Scripting/Lua/wiApplication_BindLua.h"
@@ -94,7 +93,6 @@
             luainternal.m_luaState = luaL_newstate();
             luaL_openlibs(luainternal.m_luaState);
             RegisterFunc("dofile", Internal_DoFile);
-            RunText(wiLua_Globals);
             for (int i = 0; i < sandbox::lua::modules.size(); ++i)
             {
                 for (int j = 0; j < sandbox::lua::modules[i].moduleScripts.size(); ++j)
@@ -252,13 +250,6 @@
             return script_path;
         }
 
-        void SetDeltaTime(double dt)
-        {
-            lua_getglobal(luainternal.m_luaState, "setDeltaTime");
-            SSetDouble(luainternal.m_luaState, dt);
-            lua_call(luainternal.m_luaState, 1, 0);
-        }
-
         inline void SignalHelper(lua_State* L, const char* str)
         {
             lua_getglobal(L, "onvEngineSignal");
@@ -284,7 +275,7 @@
 
         void KillProcesses()
         {
-            RunText("vEngine.destroyThreads();");
+            RunText("vEngine.thread.destroyAll()");
         }
 
         std::string SGetString(lua_State* L, int stackpos)
