@@ -19,22 +19,24 @@ int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
     wi::helper::MakePathAbsolute(modulePath);
     wi::Timer timer;
 
-    std::string bundlerData = R"(
-    #include "Core/Helpers/wiVector.h"
-    namespace sandbox::)";
+    std::string bundlerData = R"(#include "Core/Helpers/wiVector.h"
+#include <string>
+namespace sandbox {}
+
+namespace sandbox::)";
     bundlerData += moduleIdentifier;
-    bundlerData += R"( {    
-        struct moduleDef
-        {
-            std::string moduleName;
-            wi::vector<std::string> moduleScripts;
-        };
-        wi::vector<moduleDef> modules = {};
-    )";
+    bundlerData += R"( {
+    struct moduleDef
+    {
+        std::string moduleName;
+        wi::vector<std::string> moduleScripts;
+    };
+    wi::vector<moduleDef> modules = {)";
+    bundlerData += "\n\n";
 
     for (int i = 0; i < modules.size(); ++i)
     {
-        bundlerData = bundlerData + "modules.push({" + "\"" + modules[i].moduleName + "\"" + ", {";
+        bundlerData = bundlerData + "        {" + "\"" + modules[i].moduleName + "\"" + ", {";
         for (int j = 0; j < modules[i].moduleScripts.size(); ++j)
         {
             std::string scriptPath = modules[i].moduleScripts[j];
@@ -59,9 +61,11 @@ int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
             wi::jobsystem::Wait(ctx);
         }
         wi::jobsystem::Wait(ctx);
-        bundlerData += "}});";
+        bundlerData += "}},\n";
     }
     wi::jobsystem::Wait(ctx);
+    bundlerData += R"(
+    };)";
     bundlerData += "\n};\n";
 
     timer.record();
