@@ -35,7 +35,7 @@ int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
                 wi::jobsystem::Execute(ctx, [&bundlerData, scriptPath, fileData](wi::jobsystem::JobArgs args) {
                     locker.lock();
                     std::string scriptData = std::string(fileData.begin(), fileData.end());
-                    bundlerData += "\nR\"(\n" + scriptData + "\n)\",\n";
+                    bundlerData += "\nR\"(\n" + scriptData + "\n)\",";
                     std::cout << "Script Compiled: " << scriptPath << std::endl;
                     locker.unlock();
                 });
