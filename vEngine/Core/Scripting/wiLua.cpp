@@ -95,6 +95,13 @@
             luaL_openlibs(luainternal.m_luaState);
             RegisterFunc("dofile", Internal_DoFile);
             RunText(wiLua_Globals);
+            for (int i = 0; i < sandbox::lua::modules.size(); ++i)
+            {
+                for (int j = 0; j < sandbox::lua::modules[i].moduleScripts.size(); ++j)
+                {
+                    RunText(sandbox::lua::modules[i].moduleScripts[j]);
+                }
+            }
 
             Application_BindLua::Bind();
             Canvas_BindLua::Bind();
