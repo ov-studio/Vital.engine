@@ -35,7 +35,6 @@ namespace wi::lua
 		static Luna<Application_BindLua>::FunctionType methods[];
 		static Luna<Application_BindLua>::PropertyType properties[];
 
-		Application_BindLua(Application* component = nullptr);
 		Application_BindLua(lua_State* L);
 
 		int GetActivePath(lua_State* L);
