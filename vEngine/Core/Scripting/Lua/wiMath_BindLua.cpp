@@ -410,7 +410,6 @@ namespace wi::lua
 		{
 			initialized = true;
 			Luna<Vector_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
-			wi::lua::RunText("vEngine." + std::to_string(Vector_BindLua::className) + " = " + "vEngine." + std::to_string(Vector_BindLua::className)  + "()");
 		}
 	}
 
@@ -733,8 +732,6 @@ namespace wi::lua
 		{
 			initialized = true;
 			Luna<Matrix_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
-            // TODO: WHY THIS WHEN ITS NOT A NESTED OBJECT
-			//wi::lua::RunText("vEngine." + std::to_string(Matrix_BindLua::className) + " = " + "vEngine." + std::to_string(Matrix_BindLua::className)  + "()");
 		}
 	}
 
