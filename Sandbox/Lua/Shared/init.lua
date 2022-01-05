@@ -17,7 +17,6 @@ vEngine.math = math; math = nil;
 vEngine.math.angle = {}
 vEngine.string = string; string = nil;
 vEngine.color = {}
-vEngine.math.randomseed(os.time()); os = nil;
 
 --Function: Prepares debug message
 vEngine.prepareDebugMessage = function(interface, API, messageType, message)

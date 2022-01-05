@@ -41,7 +41,7 @@ namespace wi::lua
 			if (loading != nullptr)
 			{
 				loading->addLoadingFunction([=](wi::jobsystem::JobArgs args) {
-					wi::lua::RunText(task);
+					wi::lua::RunText(wi::lua::GetLuaState(), task);
 					});
 			}
 			else
@@ -61,7 +61,7 @@ namespace wi::lua
 			if (loading != nullptr)
 			{
 				loading->onFinished([=] {
-					wi::lua::RunText(task);
+					wi::lua::RunText(wi::lua::GetLuaState(), task);
 					});
 			}
 			else

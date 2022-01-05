@@ -348,41 +348,41 @@ namespace wi::lua::renderer
 		{
 			initialized = true;
 
-			wi::lua::RegisterFunc("SetGamma", SetGamma);
-			wi::lua::RegisterFunc("SetGameSpeed", SetGameSpeed);
-			wi::lua::RegisterFunc("GetGameSpeed", GetGameSpeed);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetGamma", SetGamma);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetGameSpeed", SetGameSpeed);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "GetGameSpeed", GetGameSpeed);
 
-			wi::lua::RunText("GetScreenWidth = function() return main.GetCanvas().GetLogicalWidth() end");
-			wi::lua::RunText("GetScreenHeight = function() return main.GetCanvas().GetLogicalHeight() end");
+			wi::lua::RunText(wi::lua::GetLuaState(), "GetScreenWidth = function() return main.GetCanvas().GetLogicalWidth() end");
+			wi::lua::RunText(wi::lua::GetLuaState(), "GetScreenHeight = function() return main.GetCanvas().GetLogicalHeight() end");
 
-			wi::lua::RegisterFunc("SetShadowProps2D", SetShadowProps2D);
-			wi::lua::RegisterFunc("SetShadowPropsCube", SetShadowPropsCube);
-			wi::lua::RegisterFunc("SetDebugBoxesEnabled", SetDebugBoxesEnabled);
-			wi::lua::RegisterFunc("SetDebugPartitionTreeEnabled", SetDebugPartitionTreeEnabled);
-			wi::lua::RegisterFunc("SetDebugBonesEnabled", SetDebugBonesEnabled);
-			wi::lua::RegisterFunc("SetDebugEmittersEnabled", SetDebugEmittersEnabled);
-			wi::lua::RegisterFunc("SetDebugForceFieldsEnabled", SetDebugForceFieldsEnabled);
-			wi::lua::RegisterFunc("SetVSyncEnabled", SetVSyncEnabled);
-			wi::lua::RegisterFunc("SetResolution", SetResolution);
-			wi::lua::RegisterFunc("SetDebugLightCulling", SetDebugLightCulling);
-			wi::lua::RegisterFunc("SetOcclusionCullingEnabled", SetOcclusionCullingEnabled);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetShadowProps2D", SetShadowProps2D);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetShadowPropsCube", SetShadowPropsCube);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetDebugBoxesEnabled", SetDebugBoxesEnabled);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetDebugPartitionTreeEnabled", SetDebugPartitionTreeEnabled);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetDebugBonesEnabled", SetDebugBonesEnabled);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetDebugEmittersEnabled", SetDebugEmittersEnabled);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetDebugForceFieldsEnabled", SetDebugForceFieldsEnabled);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetVSyncEnabled", SetVSyncEnabled);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetResolution", SetResolution);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetDebugLightCulling", SetDebugLightCulling);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetOcclusionCullingEnabled", SetOcclusionCullingEnabled);
 
-			wi::lua::RegisterFunc("DrawLine", DrawLine);
-			wi::lua::RegisterFunc("DrawPoint", DrawPoint);
-			wi::lua::RegisterFunc("DrawBox", DrawBox);
-			wi::lua::RegisterFunc("DrawSphere", DrawSphere);
-			wi::lua::RegisterFunc("DrawCapsule", DrawCapsule);
-			wi::lua::RegisterFunc("PutWaterRipple", PutWaterRipple);
-
-
-			wi::lua::RunText("PICK_VOID = 0");
-			wi::lua::RunText("PICK_OPAQUE = 1");
-			wi::lua::RunText("PICK_TRANSPARENT = 2");
-			wi::lua::RunText("PICK_WATER = 4");
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "DrawLine", DrawLine);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "DrawPoint", DrawPoint);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "DrawBox", DrawBox);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "DrawSphere", DrawSphere);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "DrawCapsule", DrawCapsule);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "PutWaterRipple", PutWaterRipple);
 
 
-			wi::lua::RegisterFunc("ClearWorld", ClearWorld);
-			wi::lua::RegisterFunc("ReloadShaders", ReloadShaders);
+			wi::lua::RunText(wi::lua::GetLuaState(), "PICK_VOID = 0");
+			wi::lua::RunText(wi::lua::GetLuaState(), "PICK_OPAQUE = 1");
+			wi::lua::RunText(wi::lua::GetLuaState(), "PICK_TRANSPARENT = 2");
+			wi::lua::RunText(wi::lua::GetLuaState(), "PICK_WATER = 4");
+
+
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "ClearWorld", ClearWorld);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "ReloadShaders", ReloadShaders);
 		}
 	}
 };

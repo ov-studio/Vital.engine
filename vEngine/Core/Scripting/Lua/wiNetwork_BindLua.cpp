@@ -22,7 +22,7 @@ namespace wi::lua
 			initialized = true;
 			Luna<Network_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
 
-			wi::lua::RunText("network = Network()");
+			wi::lua::RunText(wi::lua::GetLuaState(), "network = Network()");
 		}
 	}
 

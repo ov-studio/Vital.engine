@@ -219,11 +219,11 @@ namespace wi::lua
 			Luna<SpriteFont_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
 
 
-			wi::lua::RunText("WIFALIGN_LEFT = 0");
-			wi::lua::RunText("WIFALIGN_CENTER = 1");
-			wi::lua::RunText("WIFALIGN_RIGHT = 2");
-			wi::lua::RunText("WIFALIGN_TOP = 3");
-			wi::lua::RunText("WIFALIGN_BOTTOM = 4");
+			wi::lua::RunText(wi::lua::GetLuaState(), "WIFALIGN_LEFT = 0");
+			wi::lua::RunText(wi::lua::GetLuaState(), "WIFALIGN_CENTER = 1");
+			wi::lua::RunText(wi::lua::GetLuaState(), "WIFALIGN_RIGHT = 2");
+			wi::lua::RunText(wi::lua::GetLuaState(), "WIFALIGN_TOP = 3");
+			wi::lua::RunText(wi::lua::GetLuaState(), "WIFALIGN_BOTTOM = 4");
 		}
 	}
 

@@ -373,11 +373,11 @@ namespace wi::lua
 			initialized = true;
 			Luna<RenderPath3D_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
 
-			wi::lua::RunText("AO_DISABLED = 0");
-			wi::lua::RunText("AO_SSAO = 1");
-			wi::lua::RunText("AO_HBAO = 2");
-			wi::lua::RunText("AO_MSAO = 3");
-			wi::lua::RunText("AO_RTAO = 4");
+			wi::lua::RunText(wi::lua::GetLuaState(), "AO_DISABLED = 0");
+			wi::lua::RunText(wi::lua::GetLuaState(), "AO_SSAO = 1");
+			wi::lua::RunText(wi::lua::GetLuaState(), "AO_HBAO = 2");
+			wi::lua::RunText(wi::lua::GetLuaState(), "AO_MSAO = 3");
+			wi::lua::RunText(wi::lua::GetLuaState(), "AO_RTAO = 4");
 		}
 	}
 

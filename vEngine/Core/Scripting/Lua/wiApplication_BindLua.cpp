@@ -338,7 +338,7 @@ namespace wi::lua
 		{
 			initialized = true;
 			Luna<Application_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
-			wi::lua::RegisterFunc("SetProfilerEnabled", SetProfilerEnabled);
+			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetProfilerEnabled", SetProfilerEnabled);
 		}
 	}
 
