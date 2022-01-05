@@ -95,9 +95,11 @@
             RegisterFunc("dofile", Internal_DoFile);
             for (int i = 0; i < sandbox::lua::modules.size(); ++i)
             {
-                for (int j = 0; j < sandbox::lua::modules[i].moduleScripts.size(); ++j)
-                {
-                    RunText(sandbox::lua::modules[i].moduleScripts[j]);
+                if (sandbox::lua::modules[i].moduleName != "Server") {
+                    for (int j = 0; j < sandbox::lua::modules[i].moduleScripts.size(); ++j)
+                    {
+                        RunText(sandbox::lua::modules[i].moduleScripts[j]);
+                    }
                 }
             }
 
