@@ -1060,8 +1060,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSheenLUT.h">
       <Filter>Core\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)commoninclude.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)wiVersion.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vVersion.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
@@ -1796,7 +1796,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiShaderCompiler.cpp">
       <Filter>Core\Graphics\API</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)wiVersion.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.inl">
