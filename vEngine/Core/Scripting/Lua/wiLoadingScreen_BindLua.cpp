@@ -41,8 +41,8 @@ namespace wi::lua
 			if (loading != nullptr)
 			{
 				loading->addLoadingFunction([=](wi::jobsystem::JobArgs args) {
-					wi::lua::RunText(wi::lua::GetLuaState(), task);
-					});
+					wi::lua::RunText(L, task);
+				});
 			}
 			else
 				wi::lua::SError(L, "AddLoader(string taskScript) component is not a LoadingScreen!");
@@ -61,7 +61,7 @@ namespace wi::lua
 			if (loading != nullptr)
 			{
 				loading->onFinished([=] {
-					wi::lua::RunText(wi::lua::GetLuaState(), task);
+					wi::lua::RunText(L, task);
 					});
 			}
 			else

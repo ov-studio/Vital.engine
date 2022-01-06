@@ -461,32 +461,32 @@ namespace wi::lua
 			initialized = true;
 			Luna<ImageParams_BindLua>::Register(L, "vEngine");
 
-			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILMODE_DISABLED		= 0");
-			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILMODE_EQUAL			= 1");
-			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILMODE_LESS			= 2");
-			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILMODE_LESSEQUAL		= 3");
-			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILMODE_GREATER		= 4");
-			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILMODE_GREATEREQUAL	= 5");
-			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILMODE_NOT			= 6");
-			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILMODE_ALWAYS			= 7");
+			wi::lua::RunText(L, "STENCILMODE_DISABLED		= 0");
+			wi::lua::RunText(L, "STENCILMODE_EQUAL			= 1");
+			wi::lua::RunText(L, "STENCILMODE_LESS			= 2");
+			wi::lua::RunText(L, "STENCILMODE_LESSEQUAL		= 3");
+			wi::lua::RunText(L, "STENCILMODE_GREATER		= 4");
+			wi::lua::RunText(L, "STENCILMODE_GREATEREQUAL	= 5");
+			wi::lua::RunText(L, "STENCILMODE_NOT			= 6");
+			wi::lua::RunText(L, "STENCILMODE_ALWAYS			= 7");
 
-			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILREFMODE_ENGINE		= 0");
-			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILREFMODE_USER		= 1");
-			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILREFMODE_ALL			= 2");
+			wi::lua::RunText(L, "STENCILREFMODE_ENGINE		= 0");
+			wi::lua::RunText(L, "STENCILREFMODE_USER		= 1");
+			wi::lua::RunText(L, "STENCILREFMODE_ALL			= 2");
 
-			wi::lua::RunText(wi::lua::GetLuaState(), "SAMPLEMODE_CLAMP			= 0");
-			wi::lua::RunText(wi::lua::GetLuaState(), "SAMPLEMODE_WRAP			= 1");
-			wi::lua::RunText(wi::lua::GetLuaState(), "SAMPLEMODE_MIRROR			= 2");
+			wi::lua::RunText(L, "SAMPLEMODE_CLAMP			= 0");
+			wi::lua::RunText(L, "SAMPLEMODE_WRAP			= 1");
+			wi::lua::RunText(L, "SAMPLEMODE_MIRROR			= 2");
 
-			wi::lua::RunText(wi::lua::GetLuaState(), "QUALITY_NEAREST			= 0");
-			wi::lua::RunText(wi::lua::GetLuaState(), "QUALITY_LINEAR				= 1");
-			wi::lua::RunText(wi::lua::GetLuaState(), "QUALITY_ANISOTROPIC		= 2");
-			wi::lua::RunText(wi::lua::GetLuaState(), "QUALITY_BICUBIC			= 3");
+			wi::lua::RunText(L, "QUALITY_NEAREST			= 0");
+			wi::lua::RunText(L, "QUALITY_LINEAR				= 1");
+			wi::lua::RunText(L, "QUALITY_ANISOTROPIC		= 2");
+			wi::lua::RunText(L, "QUALITY_BICUBIC			= 3");
 
-			wi::lua::RunText(wi::lua::GetLuaState(), "BLENDMODE_OPAQUE			= 0");
-			wi::lua::RunText(wi::lua::GetLuaState(), "BLENDMODE_ALPHA			= 1");
-			wi::lua::RunText(wi::lua::GetLuaState(), "BLENDMODE_PREMULTIPLIED	= 2");
-			wi::lua::RunText(wi::lua::GetLuaState(), "BLENDMODE_ADDITIVE			= 3");
+			wi::lua::RunText(L, "BLENDMODE_OPAQUE			= 0");
+			wi::lua::RunText(L, "BLENDMODE_ALPHA			= 1");
+			wi::lua::RunText(L, "BLENDMODE_PREMULTIPLIED	= 2");
+			wi::lua::RunText(L, "BLENDMODE_ADDITIVE			= 3");
 		}
 	}
 
