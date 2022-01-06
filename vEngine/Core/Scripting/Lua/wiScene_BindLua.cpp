@@ -245,38 +245,36 @@ int SceneIntersectCapsule(lua_State* L)
 	return 0;
 }
 
-void Bind()
+void Bind(lua_State* L)
 {
 	static bool initialized = false;
 	if (!initialized)
 	{
 		initialized = true;
 
-		lua_State* L = wi::lua::GetLuaState();
+		wi::lua::RegisterFunc(L, "CreateEntity", CreateEntity_BindLua);
+		wi::lua::RunText(L, "INVALID_ENTITY = 0");
 
-		wi::lua::RegisterFunc(wi::lua::GetLuaState(), "CreateEntity", CreateEntity_BindLua);
-		wi::lua::RunText(wi::lua::GetLuaState(), "INVALID_ENTITY = 0");
+		wi::lua::RunText(L, "DIRECTIONAL = 0");
+		wi::lua::RunText(L, "POINT = 1");
+		wi::lua::RunText(L, "SPOT = 2");
+		wi::lua::RunText(L, "SPHERE = 3");
+		wi::lua::RunText(L, "DISC = 4");
+		wi::lua::RunText(L, "RECTANGLE = 5");
+		wi::lua::RunText(L, "TUBE = 6");
 
-		wi::lua::RunText(wi::lua::GetLuaState(), "DIRECTIONAL = 0");
-		wi::lua::RunText(wi::lua::GetLuaState(), "POINT = 1");
-		wi::lua::RunText(wi::lua::GetLuaState(), "SPOT = 2");
-		wi::lua::RunText(wi::lua::GetLuaState(), "SPHERE = 3");
-		wi::lua::RunText(wi::lua::GetLuaState(), "DISC = 4");
-		wi::lua::RunText(wi::lua::GetLuaState(), "RECTANGLE = 5");
-		wi::lua::RunText(wi::lua::GetLuaState(), "TUBE = 6");
+		wi::lua::RunText(L, "STENCILREF_EMPTY = 0");
+		wi::lua::RunText(L, "STENCILREF_DEFAULT = 1");
+		wi::lua::RunText(L, "STENCILREF_CUSTOMSHADER = 2");
+		wi::lua::RunText(L, "STENCILREF_SKIN = 3");
+		wi::lua::RunText(L, "STENCILREF_SNOW = 4");
 
-		wi::lua::RunText(wi::lua::GetLuaState(), "STENCILREF_EMPTY = 0");
-		wi::lua::RunText(wi::lua::GetLuaState(), "STENCILREF_DEFAULT = 1");
-		wi::lua::RunText(wi::lua::GetLuaState(), "STENCILREF_CUSTOMSHADER = 2");
-		wi::lua::RunText(wi::lua::GetLuaState(), "STENCILREF_SKIN = 3");
-		wi::lua::RunText(wi::lua::GetLuaState(), "STENCILREF_SNOW = 4");
-
-		wi::lua::RegisterFunc(wi::lua::GetLuaState(), "GetCamera", GetCamera);
-		wi::lua::RegisterFunc(wi::lua::GetLuaState(), "GetScene", GetScene);
-		wi::lua::RegisterFunc(wi::lua::GetLuaState(), "LoadModel", LoadModel);
-		wi::lua::RegisterFunc(wi::lua::GetLuaState(), "Pick", Pick);
-		wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SceneIntersectSphere", SceneIntersectSphere);
-		wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SceneIntersectCapsule", SceneIntersectCapsule);
+		wi::lua::RegisterFunc(L, "GetCamera", GetCamera);
+		wi::lua::RegisterFunc(L, "GetScene", GetScene);
+		wi::lua::RegisterFunc(L, "LoadModel", LoadModel);
+		wi::lua::RegisterFunc(L, "Pick", Pick);
+		wi::lua::RegisterFunc(L, "SceneIntersectSphere", SceneIntersectSphere);
+		wi::lua::RegisterFunc(L, "SceneIntersectCapsule", SceneIntersectCapsule);
 
 		Luna<Scene_BindLua>::Register(L);
 		Luna<NameComponent_BindLua>::Register(L);

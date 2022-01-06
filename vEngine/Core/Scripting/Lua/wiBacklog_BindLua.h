@@ -2,6 +2,6 @@
 
 namespace wi::lua::backlog
 {
-	void Bind();
+	void Bind(lua_State* L);
 };
 

@@ -5,7 +5,7 @@
 
 namespace wi::lua::primitive
 {
-	void Bind();
+	void Bind(lua_State* L);
 
 
 	class Ray_BindLua

@@ -3,6 +3,6 @@
 
 namespace wi::lua::renderer
 {
-	void Bind();
+	void Bind(lua_State* L);
 };
 

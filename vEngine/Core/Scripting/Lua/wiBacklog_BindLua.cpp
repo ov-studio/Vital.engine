@@ -90,22 +90,22 @@ namespace wi::lua::backlog
 		return 0;
 	}
 
-	void Bind()
+	void Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)
 		{
 			initialized = true;
-			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "backlog_clear", backlog_clear);
-			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "backlog_post", backlog_post);
-			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "backlog_fontsize", backlog_fontsize);
-			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "backlog_isactive", backlog_isactive);
-			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "backlog_fontrowspacing", backlog_fontrowspacing);
-			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "backlog_setlevel", backlog_setlevel);
-			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "backlog_lock", backlog_lock);
-			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "backlog_unlock", backlog_unlock);
-			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "backlog_blocklua", backlog_blocklua);
-			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "backlog_unblocklua", backlog_unblocklua);
+			wi::lua::RegisterFunc(L, "backlog_clear", backlog_clear);
+			wi::lua::RegisterFunc(L, "backlog_post", backlog_post);
+			wi::lua::RegisterFunc(L, "backlog_fontsize", backlog_fontsize);
+			wi::lua::RegisterFunc(L, "backlog_isactive", backlog_isactive);
+			wi::lua::RegisterFunc(L, "backlog_fontrowspacing", backlog_fontrowspacing);
+			wi::lua::RegisterFunc(L, "backlog_setlevel", backlog_setlevel);
+			wi::lua::RegisterFunc(L, "backlog_lock", backlog_lock);
+			wi::lua::RegisterFunc(L, "backlog_unlock", backlog_unlock);
+			wi::lua::RegisterFunc(L, "backlog_blocklua", backlog_blocklua);
+			wi::lua::RegisterFunc(L, "backlog_unblocklua", backlog_unblocklua);
 		}
 	}
 }
