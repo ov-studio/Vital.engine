@@ -858,7 +858,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.h">
       <Filter>Core\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)vVersion.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics.h">
       <Filter>Core\Physics</Filter>
     </ClInclude>
@@ -1061,7 +1060,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSheenLUT.h">
       <Filter>Core\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)commoninclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wiVersion.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
@@ -1625,7 +1625,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.cpp">
       <Filter>Core\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics_Bullet.cpp">
       <Filter>Core\Physics</Filter>
     </ClCompile>
@@ -1797,6 +1796,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiShaderCompiler.cpp">
       <Filter>Core\Graphics\API</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wiVersion.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.inl">
