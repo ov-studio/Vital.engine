@@ -50,6 +50,7 @@
         };
         const char* WILUA_BLACKLISTEDGLOBALS[] = {"dofile", "load", "loadfile"};
 
+        // Creates & Destroys instances
         lua_State* createInstance()
         {
             LuaInstance cInstance;
