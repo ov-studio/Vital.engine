@@ -79,26 +79,26 @@
                 }
             }
             // Loads engine bindings
-            Application_BindLua::Bind(L);
-            Canvas_BindLua::Bind(L);
-            RenderPath_BindLua::Bind(L);
-            RenderPath2D_BindLua::Bind(L);
-            LoadingScreen_BindLua::Bind(L);
-            RenderPath3D_BindLua::Bind(L);
-            Texture_BindLua::Bind(L);
-            renderer::Bind(L);
-            Audio_BindLua::Bind(L);
-            Sprite_BindLua::Bind(L);
-            ImageParams_BindLua::Bind(L);
-            SpriteAnim_BindLua::Bind(L);
-            scene::Bind(L);
-            Vector_BindLua::Bind(L);
-            Matrix_BindLua::Bind(L);
-            Input_BindLua::Bind(L);
-            SpriteFont_BindLua::Bind(L);
-            backlog::Bind(L);
-            Network_BindLua::Bind(L);
-            primitive::Bind(L);
+            Application_BindLua::Bind(cInstance);
+            Canvas_BindLua::Bind(cInstance);
+            RenderPath_BindLua::Bind(cInstance);
+            RenderPath2D_BindLua::Bind(cInstance);
+            LoadingScreen_BindLua::Bind(cInstance);
+            RenderPath3D_BindLua::Bind(cInstance);
+            Texture_BindLua::Bind(cInstance);
+            renderer::Bind(cInstance);
+            Audio_BindLua::Bind(cInstance);
+            Sprite_BindLua::Bind(cInstance);
+            ImageParams_BindLua::Bind(cInstance);
+            SpriteAnim_BindLua::Bind(cInstance);
+            scene::Bind(cInstance);
+            Vector_BindLua::Bind(cInstance);
+            Matrix_BindLua::Bind(cInstance);
+            Input_BindLua::Bind(cInstance);
+            SpriteFont_BindLua::Bind(cInstance);
+            backlog::Bind(cInstance);
+            Network_BindLua::Bind(cInstance);
+            primitive::Bind(cInstance);
             return cInstance;
         }
 
