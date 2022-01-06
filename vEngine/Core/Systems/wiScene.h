@@ -1,5 +1,5 @@
 #pragma once
-#include "commoninclude.h"
+#include "vCommon.h"
 #include "Core/Graphics/wiEnums.h"
 #include "Core/Helpers/wiPrimitive.h"
 #include "Core/Graphics/wiEmittedParticle.h"

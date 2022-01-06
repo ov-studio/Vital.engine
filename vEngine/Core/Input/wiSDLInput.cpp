@@ -2,7 +2,7 @@
 
 #ifdef SDL2
 
-#include "commoninclude.h"
+#include "vCommon.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Input/wiInput.h"
 #include "Core/Helpers/wiVector.h"

@@ -1,5 +1,5 @@
 #pragma once
-#include "commoninclude.h"
+#include "vCommon.h"
 #include "Core/Helpers/wiColor.h"
 #include "Core/Helpers/wiTimer.h"
 #include "Core/Helpers/wiMath.h"

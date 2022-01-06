@@ -1,5 +1,5 @@
 #pragma once
-#include "commoninclude.h"
+#include "vCommon.h"
 #include "Core/Systems/wiPlatform.h"
 
 #ifndef PLATFORM_UWP

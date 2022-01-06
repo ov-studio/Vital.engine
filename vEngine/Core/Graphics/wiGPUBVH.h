@@ -1,5 +1,5 @@
 #pragma once
-#include "commoninclude.h"
+#include "vCommon.h"
 #include "Core/Graphics/API/wiGraphicsDevice.h"
 #include "Core/Systems/wiScene_Decl.h"
 

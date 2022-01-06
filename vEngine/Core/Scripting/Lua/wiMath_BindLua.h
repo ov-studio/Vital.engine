@@ -1,5 +1,5 @@
 #pragma once
-#include "commoninclude.h"
+#include "vCommon.h"
 #include "Core/Scripting/wiLua.h"
 #include "Core/Scripting/wiLuna.h"
 #include "Core/Helpers/wiMath.h"

@@ -15,7 +15,7 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)commoninclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphics.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice.h" />

@@ -1,5 +1,5 @@
-#ifndef vEngine_COMMONINCLUDE_H
-#define vEngine_COMMONINCLUDE_H
+#ifndef vEngine_vCommon_H
+#define vEngine_vCommon_H
 
 // This is a helper include file pasted into all engine headers, try to keep it minimal!
 // Do not include engine features in this file!
@@ -65,4 +65,4 @@ constexpr bool has_flag(E lhs, E rhs)
 	return (lhs & rhs) == rhs;
 }
 
-#endif //vEngine_COMMONINCLUDE_H
+#endif //vEngine_vCommon_H

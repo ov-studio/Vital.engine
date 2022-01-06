@@ -6,7 +6,7 @@
 // It should be included in the engine's implementing application not the engine itself!
 // It should be included in the precompiled header if available.
 
-#include "commoninclude.h"
+#include "vCommon.h"
 
 // High-level interface:
 #include "Core/Interfaces/wiApplication.h"
