@@ -108,13 +108,6 @@
             lua_close(cInstance);
         }
 
-        void Initialize()
-        {
-            wi::Timer timer;
-            internalInstance = LuaInstances[(createInstance())];
-            wi::backlog::post("wi::lua Initialized (" + std::to_string((int)std::round(timer.elapsed())) + " ms)");
-        }
-
         lua_State* GetInternalInstance()
         {
             return internalInstance.instance;
@@ -124,6 +117,12 @@
             return LuaInstances;
         }
 
+        void Initialize()
+        {
+            wi::Timer timer;
+            internalInstance = LuaInstances[(createInstance())];
+            wi::backlog::post("wi::lua Initialized (" + std::to_string((int)std::round(timer.elapsed())) + " ms)");
+        }
 
         bool Success(lua_State* L)
         {
