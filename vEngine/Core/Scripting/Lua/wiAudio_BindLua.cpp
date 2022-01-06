@@ -237,7 +237,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<Audio_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<Audio_BindLua>::Register(L, "vEngine");
 
 			/*
             wi::lua::RunText(wi::lua::GetLuaState(), "vEngine." + std::to_string(Audio_BindLua::className) + " = " + "vEngine." + std::to_string(Audio_BindLua::className)  + "()");
@@ -302,7 +302,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<Sound_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<Sound_BindLua>::Register(L, "vEngine");
 		}
 	}
 
@@ -338,7 +338,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<SoundInstance_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<SoundInstance_BindLua>::Register(L, "vEngine");
 		}
 	}
 
@@ -502,7 +502,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<SoundInstance3D_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<SoundInstance3D_BindLua>::Register(L, "vEngine");
 		}
 	}
 

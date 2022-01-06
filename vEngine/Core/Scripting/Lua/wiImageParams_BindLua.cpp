@@ -459,7 +459,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<ImageParams_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<ImageParams_BindLua>::Register(L, "vEngine");
 
 			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILMODE_DISABLED		= 0");
 			wi::lua::RunText(wi::lua::GetLuaState(), "STENCILMODE_EQUAL			= 1");

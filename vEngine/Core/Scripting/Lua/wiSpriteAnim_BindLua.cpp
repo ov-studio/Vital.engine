@@ -247,9 +247,9 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<SpriteAnim_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
-			Luna<MovingTexAnim_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
-			Luna<DrawRectAnim_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<SpriteAnim_BindLua>::Register(L, "vEngine");
+			Luna<MovingTexAnim_BindLua>::Register(L, "vEngine");
+			Luna<DrawRectAnim_BindLua>::Register(L, "vEngine");
 		}
 	}
 

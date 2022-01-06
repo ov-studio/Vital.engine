@@ -187,7 +187,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<Input_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<Input_BindLua>::Register(L, "vEngine");
 			wi::lua::RunText(wi::lua::GetLuaState(), "input = Input()");
 
 			wi::lua::RunText(wi::lua::GetLuaState(), "MOUSE_BUTTON_LEFT			= 1");
@@ -292,7 +292,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<Touch_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<Touch_BindLua>::Register(L, "vEngine");
 		}
 	}
 
@@ -368,7 +368,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<ControllerFeedback_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<ControllerFeedback_BindLua>::Register(L, "vEngine");
 		}
 	}
 

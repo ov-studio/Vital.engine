@@ -371,7 +371,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<RenderPath3D_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<RenderPath3D_BindLua>::Register(L, "vEngine");
 
 			wi::lua::RunText(wi::lua::GetLuaState(), "AO_DISABLED = 0");
 			wi::lua::RunText(wi::lua::GetLuaState(), "AO_SSAO = 1");

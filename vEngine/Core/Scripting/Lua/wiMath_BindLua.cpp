@@ -409,7 +409,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<Vector_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<Vector_BindLua>::Register(L, "vEngine");
 		}
 	}
 
@@ -731,7 +731,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<Matrix_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<Matrix_BindLua>::Register(L, "vEngine");
 		}
 	}
 

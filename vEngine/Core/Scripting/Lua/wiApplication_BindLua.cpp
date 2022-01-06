@@ -337,7 +337,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<Application_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<Application_BindLua>::Register(L, "vEngine");
 			wi::lua::RegisterFunc(wi::lua::GetLuaState(), "SetProfilerEnabled", SetProfilerEnabled);
 		}
 	}
@@ -404,7 +404,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<Canvas_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<Canvas_BindLua>::Register(L, "vEngine");
 		}
 	}
 

@@ -26,7 +26,7 @@ namespace wi::lua
 		static bool initialized = false;
 		if (!initialized)
 		{
-			Luna<Texture_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<Texture_BindLua>::Register(L, "vEngine");
 			initialized = true;
 		}
 	}

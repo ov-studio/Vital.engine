@@ -421,7 +421,7 @@ namespace wi::lua
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<RenderPath2D_BindLua>::Register(wi::lua::GetLuaState(), "vEngine");
+			Luna<RenderPath2D_BindLua>::Register(L, "vEngine");
 		}
 	}
 
