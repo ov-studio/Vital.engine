@@ -36,7 +36,7 @@
             int status = 0; //last call status
             ~LuaInstance()
             {
-                if (instance != NULL) destroyInstance(instance);
+                //if (instance != NULL) destroyInstance(instance); //TODO: NEEDS TO BE FIXED CAUSES CRASHES RN
             }
         };
         LuaInstance internalInstance;

@@ -16,9 +16,9 @@ typedef int(*lua_CFunction) (lua_State* L);
 
 namespace wi::lua
 {
-    //struct LuaInstance;
+    struct LuaInstance;
 	lua_State* GetInternalInstance();
-    //wi::unordered_map<lua_State*, LuaInstance> GetInstances();
+    wi::unordered_map<lua_State*, LuaInstance> GetInstances();
 
 	void Initialize();
 
