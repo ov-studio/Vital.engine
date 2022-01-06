@@ -34,6 +34,6 @@ namespace wi::lua
 		int GetColor(lua_State* L);
 		int GetShadowColor(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 }

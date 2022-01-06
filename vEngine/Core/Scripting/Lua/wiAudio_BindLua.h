@@ -29,7 +29,7 @@ namespace wi::lua
 		int Update3D(lua_State* L);
 		int SetReverb(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 	class Sound_BindLua
@@ -44,7 +44,7 @@ namespace wi::lua
 		Sound_BindLua(lua_State* L) {}
 		Sound_BindLua(const wi::audio::Sound& sound) :sound(sound) {}
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 	class SoundInstance_BindLua
@@ -61,7 +61,7 @@ namespace wi::lua
 
 		int SetSubmixType(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 	class SoundInstance3D_BindLua
@@ -87,6 +87,6 @@ namespace wi::lua
 		int SetEmitterVelocity(lua_State* L);
 		int SetEmitterRadius(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 }

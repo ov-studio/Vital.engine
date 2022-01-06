@@ -42,7 +42,7 @@ namespace wi::lua
 		int SetSpriteOrder(lua_State* L);
 		int SetFontOrder(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 }

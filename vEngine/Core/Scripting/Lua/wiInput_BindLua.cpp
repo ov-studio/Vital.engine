@@ -181,7 +181,7 @@ namespace wi::lua
 		return 0;
 	}
 
-	void Input_BindLua::Bind()
+	void Input_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)
@@ -254,8 +254,8 @@ namespace wi::lua
 			wi::lua::RunText(wi::lua::GetLuaState(), "TOUCHSTATE_MOVED		= 2");
 		}
 
-		Touch_BindLua::Bind();
-		ControllerFeedback_BindLua::Bind();
+		Touch_BindLua::Bind(lua_State* L);
+		ControllerFeedback_BindLua::Bind(lua_State* L);
 	}
 
 
@@ -286,7 +286,7 @@ namespace wi::lua
 		return 1;
 	}
 
-	void Touch_BindLua::Bind()
+	void Touch_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)
@@ -362,7 +362,7 @@ namespace wi::lua
 		return 0;
 	}
 
-	void ControllerFeedback_BindLua::Bind()
+	void ControllerFeedback_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)

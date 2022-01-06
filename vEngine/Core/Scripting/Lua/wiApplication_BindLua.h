@@ -23,7 +23,7 @@ namespace wi::lua
 		int GetLogicalWidth(lua_State* L);
 		int GetLogicalHeight(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 	class Application_BindLua
@@ -52,7 +52,7 @@ namespace wi::lua
 
 		int GetCanvas(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 }

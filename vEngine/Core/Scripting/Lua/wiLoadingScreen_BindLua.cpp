@@ -72,7 +72,7 @@ namespace wi::lua
 		return 0;
 	}
 
-	void LoadingScreen_BindLua::Bind()
+	void LoadingScreen_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)

@@ -210,7 +210,7 @@ namespace wi::lua
 		return 1;
 	}
 
-	void SpriteFont_BindLua::Bind()
+	void SpriteFont_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)

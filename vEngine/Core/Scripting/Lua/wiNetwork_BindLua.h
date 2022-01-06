@@ -14,7 +14,7 @@ namespace wi::lua
 
 		Network_BindLua(lua_State* L) {}
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 }

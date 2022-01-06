@@ -28,7 +28,7 @@ namespace wi::lua
 		int AddLoadingTask(lua_State* L);
 		int OnFinished(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 }

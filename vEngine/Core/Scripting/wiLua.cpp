@@ -79,28 +79,26 @@
                 }
             }
             // Loads engine bindings
-            /*
-            Application_BindLua::Bind();
-            Canvas_BindLua::Bind();
-            RenderPath_BindLua::Bind();
-            RenderPath2D_BindLua::Bind();
-            LoadingScreen_BindLua::Bind();
-            RenderPath3D_BindLua::Bind();
-            Texture_BindLua::Bind();
-            renderer::Bind();
-            Audio_BindLua::Bind();
-            Sprite_BindLua::Bind();
-            ImageParams_BindLua::Bind();
-            SpriteAnim_BindLua::Bind();
-            scene::Bind();
-            Vector_BindLua::Bind();
-            Matrix_BindLua::Bind();
-            Input_BindLua::Bind();
-            SpriteFont_BindLua::Bind();
-            backlog::Bind();
-            Network_BindLua::Bind();
-            primitive::Bind();
-            */
+            Application_BindLua::Bind(L);
+            Canvas_BindLua::Bind(L);
+            RenderPath_BindLua::Bind(L);
+            RenderPath2D_BindLua::Bind(L);
+            LoadingScreen_BindLua::Bind(L);
+            RenderPath3D_BindLua::Bind(L);
+            Texture_BindLua::Bind(L);
+            renderer::Bind(L);
+            Audio_BindLua::Bind(L);
+            Sprite_BindLua::Bind(L);
+            ImageParams_BindLua::Bind(L);
+            SpriteAnim_BindLua::Bind(L);
+            scene::Bind(L);
+            Vector_BindLua::Bind(L);
+            Matrix_BindLua::Bind(L);
+            Input_BindLua::Bind(L);
+            SpriteFont_BindLua::Bind(L);
+            backlog::Bind(L);
+            Network_BindLua::Bind(L);
+            primitive::Bind(L);
             return cInstance;
         }
 
@@ -388,6 +386,5 @@
         {
             luaL_newmetatable(L, name.c_str());
         }
-
     }
 #endif

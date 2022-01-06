@@ -50,7 +50,7 @@ namespace wi::lua
 		int QuaternionFromRollPitchYaw(lua_State* L);
 		int Slerp(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 	class Matrix_BindLua : public XMFLOAT4X4
@@ -82,7 +82,7 @@ namespace wi::lua
 		int Transpose(lua_State* L);
 		int Inverse(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 }

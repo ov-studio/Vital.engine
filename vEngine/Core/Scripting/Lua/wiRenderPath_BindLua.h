@@ -20,6 +20,6 @@ namespace wi::lua
 		virtual int GetLayerMask(lua_State* L);
 		virtual int SetLayerMask(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 }

@@ -14,7 +14,7 @@ namespace wi::lua
 		{ NULL, NULL }
 	};
 
-	void Network_BindLua::Bind()
+	void Network_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)

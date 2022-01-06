@@ -26,7 +26,7 @@ namespace wi::lua
 		int GetTouches(lua_State* L);
 		int SetControllerFeedback(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 	class Touch_BindLua
@@ -43,7 +43,7 @@ namespace wi::lua
 		int GetState(lua_State* L);
 		int GetPos(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 	class ControllerFeedback_BindLua
@@ -61,7 +61,7 @@ namespace wi::lua
 		int SetVibrationRight(lua_State* L);
 		int SetLEDColor(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 }

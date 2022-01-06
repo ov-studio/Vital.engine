@@ -59,6 +59,6 @@ namespace wi::lua
 		int EnableBackground(lua_State* L);
 		int DisableBackground(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 }

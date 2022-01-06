@@ -403,7 +403,7 @@ namespace wi::lua
 	}
 
 
-	void Vector_BindLua::Bind()
+	void Vector_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)
@@ -725,7 +725,7 @@ namespace wi::lua
 	}
 
 
-	void Matrix_BindLua::Bind()
+	void Matrix_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)

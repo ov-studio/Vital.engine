@@ -34,7 +34,7 @@ namespace wi::lua
 		return 0;
 	}
 
-	void RenderPath_BindLua::Bind()
+	void RenderPath_BindLua::Bind(lua_State* L)
 	{
 
 		static bool initialized = false;

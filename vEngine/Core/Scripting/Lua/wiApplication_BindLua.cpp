@@ -331,7 +331,7 @@ namespace wi::lua
 		return 0;
 	}
 
-	void Application_BindLua::Bind()
+	void Application_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)
@@ -398,7 +398,7 @@ namespace wi::lua
 		return 1;
 	}
 
-	void Canvas_BindLua::Bind()
+	void Canvas_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)

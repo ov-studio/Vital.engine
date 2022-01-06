@@ -231,7 +231,7 @@ namespace wi::lua
 		return 0;
 	}
 
-	void Audio_BindLua::Bind()
+	void Audio_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)
@@ -278,9 +278,9 @@ namespace wi::lua
 			wi::lua::RunText(wi::lua::GetLuaState(), "REVERB_PRESET_PLATE = 29");
             */
 
-			Sound_BindLua::Bind();
-			SoundInstance_BindLua::Bind();
-			SoundInstance3D_BindLua::Bind();
+			Sound_BindLua::Bind(lua_State* L);
+			SoundInstance_BindLua::Bind(lua_State* L);
+			SoundInstance3D_BindLua::Bind(lua_State* L);
 		}
 	}
 
@@ -296,7 +296,7 @@ namespace wi::lua
 		{ NULL, NULL }
 	};
 
-	void Sound_BindLua::Bind()
+	void Sound_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)
@@ -332,7 +332,7 @@ namespace wi::lua
 		return 0;
 	}
 
-	void SoundInstance_BindLua::Bind()
+	void SoundInstance_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)
@@ -496,7 +496,7 @@ namespace wi::lua
 		return 0;
 	}
 
-	void SoundInstance3D_BindLua::Bind()
+	void SoundInstance3D_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)

@@ -241,7 +241,7 @@ namespace wi::lua
 		return 1;
 	}
 
-	void SpriteAnim_BindLua::Bind()
+	void SpriteAnim_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)

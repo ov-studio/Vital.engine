@@ -21,7 +21,7 @@ namespace wi::lua
 	{
 	}
 
-	void Texture_BindLua::Bind()
+	void Texture_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)

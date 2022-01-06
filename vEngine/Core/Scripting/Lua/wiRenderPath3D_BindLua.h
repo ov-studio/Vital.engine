@@ -49,7 +49,7 @@ namespace wi::lua
 		int SetMotionBlurStrength(lua_State* L);
 		int SetDepthOfFieldStrength(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 }

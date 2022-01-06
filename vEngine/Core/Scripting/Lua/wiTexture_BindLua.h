@@ -19,7 +19,7 @@ namespace wi::lua
 		Texture_BindLua(wi::graphics::Texture texture);
 		Texture_BindLua(lua_State* L);
 
-		static void Bind();
+		static void Bind(lua_State* L);
 	};
 
 }

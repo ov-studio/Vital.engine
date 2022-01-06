@@ -453,7 +453,7 @@ namespace wi::lua
 	}
 
 
-	void ImageParams_BindLua::Bind()
+	void ImageParams_BindLua::Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)
