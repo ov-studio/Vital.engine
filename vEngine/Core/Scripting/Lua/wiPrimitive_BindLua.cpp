@@ -5,7 +5,7 @@ using namespace wi::primitive;
 
 namespace wi::lua::primitive
 {
-	void Bind()
+	void Bind(lua_State* L)
 	{
 		static bool initialized = false;
 		if (!initialized)
