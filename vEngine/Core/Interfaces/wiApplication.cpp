@@ -6,7 +6,7 @@
 #include "Core/Input/wiInput.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Scripting/Lua/wiApplication_BindLua.h"
-#include "wiVersion.h"
+#include "vVersion.h"
 #include "Core/Graphics/wiEnums.h"
 #include "Core/Graphics/wiTextureHelper.h"
 #include "Core/Tools/wiProfiler.h"

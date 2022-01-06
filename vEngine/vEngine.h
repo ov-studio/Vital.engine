@@ -17,7 +17,7 @@
 #include "Core/Interfaces/wiLoadingScreen.h"
 
 // Engine-level systems
-#include "wiVersion.h"
+#include "vVersion.h"
 #include "Core/Systems/wiPlatform.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Helpers/wiPrimitive.h"
