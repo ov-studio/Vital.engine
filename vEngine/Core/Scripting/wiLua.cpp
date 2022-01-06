@@ -37,7 +37,7 @@
         LuaInstance internalInstance;
         wi::unordered_map<lua_State*, LuaInstance> LuaInstances = {};
         static const char* WILUA_ERROR_PREFIX = "[Lua Error] ";
-        static const luaL_Reg WILUA_WHITELISTEDLIBS[] = {
+        static const luaL_Reg WILUA_WHITELISTEDLIBRARIES[] = {
             { "_G", luaopen_base },
             { LUA_TABLIBNAME, luaopen_table },
             { LUA_STRLIBNAME, luaopen_string },
@@ -56,12 +56,12 @@
             LuaInstance cInstance;
             cInstance.instance = luaL_newstate();
             // Loads whitelisted libraries
-            for (luaL_Reg* library = WILUA_WHITELISTEDLIBS; library->func; library++)
+            for (auto library : WILUA_WHITELISTEDLIBRARIES)
             {
-                luaL_requiref(cInstance.instance, library->name, library->func, 1);
+                luaL_requiref(cInstance.instance, library.name, library.func, 1);
                 lua_pop(cInstance.instance, 1);
             }
-            // Unloads blacklisted libraries
+            // Unloads blacklisted globals
             for (auto globalName : WILUA_BLACKLISTEDGLOBALS)
             {
                 SSetNull(cInstance.instance);
@@ -190,7 +190,7 @@
         }
         void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions)
         {
-            if (luaL_newmetatable(internalInstance.instance, tableName.c_str()) != 0)
+            if (luaL_newmetatable(L, tableName.c_str()) != 0)
             {
                 //table is not yet present
                 lua_pushvalue(L, -1);
