@@ -94,7 +94,7 @@ vEngine.thread.waitEngineUpdate = function()
 end
 
 --Function: awaits thread until the engine updates independent of the frame
-vEngine.thread.waitEngineFixedUpdate = function()
+vEngine.thread.waitEngineAsyncUpdate = function()
     cache.waitSignal("vEngine_onAsyncUpdate")
 end
 
