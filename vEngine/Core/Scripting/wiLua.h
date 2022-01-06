@@ -28,7 +28,7 @@ namespace wi::lua
 	//remove and get error message from stack
 	std::string PopErrorMsg();
 	//post error to backlog and/or debug output
-	void PostErrorMsg();
+	void PostErrorMsg(lua_State* L);
 	//run a script from file
 	bool RunFile(lua_State* L, const std::string& filename);
 	//run a script from param

@@ -79,6 +79,7 @@
                 }
             }
             // Loads engine bindings
+            /*
             Application_BindLua::Bind();
             Canvas_BindLua::Bind();
             RenderPath_BindLua::Bind();
@@ -99,29 +100,14 @@
             backlog::Bind();
             Network_BindLua::Bind();
             primitive::Bind();
+            */
             return cInstance;
         }
 
         void Initialize()
         {
             wi::Timer timer;
-            luainternal.m_luaState = luaL_newstate();
-            const luaL_Reg* lib = WILUA_LIBS;
-            for (; lib->func; lib++)
-            {
-                luaL_requiref(luainternal.m_luaState, lib->name, lib->func, 1);
-                lua_pop(luainternal.m_luaState, 1);
-            }
-            for (int i = 0; i < sandbox::lua::modules.size(); ++i)
-            {
-                if (sandbox::lua::modules[i].moduleName != "Server") {
-                    for (int j = 0; j < sandbox::lua::modules[i].moduleScripts.size(); ++j)
-                    {
-                        RunText(luainternal.m_luaState, sandbox::lua::modules[i].moduleScripts[j]);
-                        wi::backlog::post("Trying to boot");
-                    }
-                }
-            }
+            luainternal.m_luaState = createInstance();
             wi::backlog::post("wi::lua Initialized (" + std::to_string((int)std::round(timer.elapsed())) + " ms)");
         }
 
@@ -152,18 +138,18 @@
             lua_pop(luainternal.m_luaState, 1); // remove error message
             return retVal;
         }
-        void PostErrorMsg()
+        void PostErrorMsg(lua_State* L)
         {
             if (Failed())
             {
-                const char* str = lua_tostring(luainternal.m_luaState, -1);
+                const char* str = lua_tostring(L, -1);
                 if (str == nullptr)
                     return;
                 std::string ss;
                 ss += WILUA_ERROR_PREFIX;
                 ss += str;
                 wi::backlog::post(ss, wi::backlog::LogLevel::Error);
-                lua_pop(luainternal.m_luaState, 1); // remove error message
+                lua_pop(L, 1); // remove error message
             }
         }
         bool RunFile(lua_State* L, const std::string& filename)
@@ -185,13 +171,13 @@
                 if (Success())
                     return true;
             }
-            PostErrorMsg();
+            PostErrorMsg(L);
             return false;
         }
         bool RegisterFunc(lua_State* L, const std::string& name, lua_CFunction function)
         {
             lua_register(L, name.c_str(), function);
-            PostErrorMsg();
+            PostErrorMsg(L);
             return Success();
         }
         void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions)
