@@ -22,6 +22,7 @@
     #include "Core/Scripting/Lua/wiNetwork_BindLua.h"
     #include "Core/Scripting/Lua/wiPrimitive_BindLua.h"
     #include "Core/Helpers/wiTimer.h"
+    #include "Core/Helpers/wiUnorderedMap.h"
     #include "Core/Helpers/wiVector.h"
 
     #include <memory>
@@ -29,18 +30,19 @@
     namespace wi::lua
     {
         // Definitions
+        void destroyInstance(lua_State* L);
         struct LuaInstance
         {
-            lua_State* m_luaState = NULL;
-            int m_status = 0; //last call status
+            lua_State* instance = NULL;
+            int status = 0; //last call status
             ~LuaInstance()
             {
-                if (m_luaState != NULL)
-                {
-                    lua_close(m_luaState);
-                }
+                if (instance != NULL) destroyInstance(instance);
             }
         };
+        LuaInstance internalInstance;
+        wi::unordered_map<lua_State*, LuaInstance> LuaInstances;
+        std::string script_path; // TODO: MAYBE NOT NEEDED?
         static const char* WILUA_ERROR_PREFIX = "[Lua Error] ";
         static const luaL_Reg WILUA_LIBS[] = {
             { "_G", luaopen_base },
@@ -54,19 +56,16 @@
             { NULL, NULL }
         };
 
-        // Variables
-        LuaInstance internalInstance;
-        std::string script_path;
-
         lua_State* createInstance()
         {
-            lua_State* cInstance = luaL_newstate();
+            LuaInstance cInstance;
+            cInstance.instance = luaL_newstate();
             // Loads whitelisted libraries
             const luaL_Reg* lib = WILUA_LIBS;
             for (; lib->func; lib++)
             {
-                luaL_requiref(cInstance, lib->name, lib->func, 1);
-                lua_pop(cInstance, 1);
+                luaL_requiref(cInstance.instance, lib->name, lib->func, 1);
+                lua_pop(cInstance.instance, 1);
             }
             // Loads whitelisted scripts
             for (int i = 0; i < sandbox::lua::modules.size(); ++i)
@@ -74,54 +73,61 @@
                 if (sandbox::lua::modules[i].moduleName != "Server") {
                     for (int j = 0; j < sandbox::lua::modules[i].moduleScripts.size(); ++j)
                     {
-                        RunText(cInstance, sandbox::lua::modules[i].moduleScripts[j]);
+                        RunText(cInstance.instance, sandbox::lua::modules[i].moduleScripts[j]);
                     }
                 }
             }
             // Loads engine bindings
-            Application_BindLua::Bind(cInstance);
-            Canvas_BindLua::Bind(cInstance);
-            RenderPath_BindLua::Bind(cInstance);
-            RenderPath2D_BindLua::Bind(cInstance);
-            LoadingScreen_BindLua::Bind(cInstance);
-            RenderPath3D_BindLua::Bind(cInstance);
-            Texture_BindLua::Bind(cInstance);
-            renderer::Bind(cInstance);
-            Audio_BindLua::Bind(cInstance);
-            Sprite_BindLua::Bind(cInstance);
-            ImageParams_BindLua::Bind(cInstance);
-            SpriteAnim_BindLua::Bind(cInstance);
-            scene::Bind(cInstance);
-            Vector_BindLua::Bind(cInstance);
-            Matrix_BindLua::Bind(cInstance);
-            Input_BindLua::Bind(cInstance);
-            SpriteFont_BindLua::Bind(cInstance);
-            backlog::Bind(cInstance);
-            Network_BindLua::Bind(cInstance);
-            primitive::Bind(cInstance);
-            return cInstance;
+            Application_BindLua::Bind(cInstance.instance);
+            Canvas_BindLua::Bind(cInstance.instance);
+            RenderPath_BindLua::Bind(cInstance.instance);
+            RenderPath2D_BindLua::Bind(cInstance.instance);
+            LoadingScreen_BindLua::Bind(cInstance.instance);
+            RenderPath3D_BindLua::Bind(cInstance.instance);
+            Texture_BindLua::Bind(cInstance.instance);
+            renderer::Bind(cInstance.instance);
+            Audio_BindLua::Bind(cInstance.instance);
+            Sprite_BindLua::Bind(cInstance.instance);
+            ImageParams_BindLua::Bind(cInstance.instance);
+            SpriteAnim_BindLua::Bind(cInstance.instance);
+            scene::Bind(cInstance.instance);
+            Vector_BindLua::Bind(cInstance.instance);
+            Matrix_BindLua::Bind(cInstance.instance);
+            Input_BindLua::Bind(cInstance.instance);
+            SpriteFont_BindLua::Bind(cInstance.instance);
+            backlog::Bind(cInstance.instance);
+            Network_BindLua::Bind(cInstance.instance);
+            primitive::Bind(cInstance.instance);
+            // Cache created instance
+            LuaInstances[(cInstance.instance)] = cInstance;
+            return cInstance.instance;
+        }
+        void destroyInstance(lua_State* cInstance)
+        {
+            LuaInstances.erase(cInstance);
+            lua_close(cInstance);
         }
 
         void Initialize()
         {
             wi::Timer timer;
-            internalInstance.m_luaState = createInstance();
+            internalInstance = LuaInstances[(createInstance())];
             wi::backlog::post("wi::lua Initialized (" + std::to_string((int)std::round(timer.elapsed())) + " ms)");
         }
 
         lua_State* GetInternalInstance()
         {
-            return internalInstance.m_luaState;
+            return internalInstance.instance;
         }
 
         // TODO: NEEDS IMPROVEMENT..
         bool Success(lua_State* L)
         {
-            return internalInstance.m_status == 0;
+            return internalInstance.status == 0;
         }
         bool Failed(lua_State* L)
         {
-            return internalInstance.m_status != 0;
+            return internalInstance.status != 0;
         }
         std::string GetErrorMsg(lua_State* L)
         {
@@ -164,10 +170,10 @@
         }
         bool RunText(lua_State* L, const std::string& script)
         {
-            internalInstance.m_status = luaL_loadstring(L, script.c_str());
+            internalInstance.status = luaL_loadstring(L, script.c_str());
             if (Success(L))
             {
-                internalInstance.m_status = lua_pcall(L, 0, LUA_MULTRET, 0);
+                internalInstance.status = lua_pcall(L, 0, LUA_MULTRET, 0);
                 if (Success(L))
                     return true;
             }
@@ -182,7 +188,7 @@
         }
         void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions)
         {
-            if (luaL_newmetatable(internalInstance.m_luaState, tableName.c_str()) != 0)
+            if (luaL_newmetatable(internalInstance.instance, tableName.c_str()) != 0)
             {
                 //table is not yet present
                 lua_pushvalue(L, -1);
@@ -222,31 +228,35 @@
             return script_path;
         }
 
-        inline void SignalHelper(lua_State* L, const char* str)
+        inline void SignalHelper(const char* signalType)
         {
-            lua_getglobal(L, "onvEngineSignal");
-            lua_pushstring(L, str);
-            lua_call(L, 1, 0);
+            for (auto& i : LuaInstances)
+            {
+                auto& L = i.first;
+                lua_getglobal(L, "onvEngineSignal");
+                lua_pushstring(L, signalType);
+                lua_call(L, 1, 0);
+            }
         }
         void FixedUpdate()
         {
-            SignalHelper(internalInstance.m_luaState, "vEngine_onAsyncUpdate");
+            SignalHelper("vEngine_onAsyncUpdate");
         }
         void Update()
         {
-            SignalHelper(internalInstance.m_luaState, "vEngine_onUpdate");
+            SignalHelper("vEngine_onUpdate");
         }
         void Render()
         {
-            SignalHelper(internalInstance.m_luaState, "vEngine_onRender");
+            SignalHelper("vEngine_onRender");
         }
         void Signal(const std::string& name)
         {
-            SignalHelper(internalInstance.m_luaState, name.c_str());
+            SignalHelper(name.c_str());
         }
         void KillProcesses()
         {
-            RunText(internalInstance.m_luaState ,"vEngine.thread.destroyAll()");
+            RunText(internalInstance.instance ,"vEngine.thread.destroyAll()");
         }
 
         std::string SGetString(lua_State* L, int stackpos)
