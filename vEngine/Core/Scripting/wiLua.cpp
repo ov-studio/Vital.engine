@@ -22,7 +22,6 @@
     #include "Core/Scripting/Lua/wiNetwork_BindLua.h"
     #include "Core/Scripting/Lua/wiPrimitive_BindLua.h"
     #include "Core/Helpers/wiTimer.h"
-    #include "Core/Helpers/wiUnorderedMap.h"
     #include "Core/Helpers/wiVector.h"
 
     #include <memory>
@@ -119,15 +118,19 @@
         {
             return internalInstance.instance;
         }
+        wi::unordered_map<lua_State*, LuaInstance> GetInstances()
+        {
+            return LuaInstances;
+        }
 
-        // TODO: NEEDS IMPROVEMENT..
+
         bool Success(lua_State* L)
         {
-            return internalInstance.status == 0;
+            return LuaInstances[L].status == 0;
         }
         bool Failed(lua_State* L)
         {
-            return internalInstance.status != 0;
+            return LuaInstances[L].status != 0;
         }
         std::string GetErrorMsg(lua_State* L)
         {
@@ -170,10 +173,10 @@
         }
         bool RunText(lua_State* L, const std::string& script)
         {
-            internalInstance.status = luaL_loadstring(L, script.c_str());
+            LuaInstances[L].status = luaL_loadstring(L, script.c_str());
             if (Success(L))
             {
-                internalInstance.status = lua_pcall(L, 0, LUA_MULTRET, 0);
+                LuaInstances[L].status = lua_pcall(L, 0, LUA_MULTRET, 0);
                 if (Success(L))
                     return true;
             }

@@ -1,6 +1,7 @@
 #pragma once
 #include "commoninclude.h"
 #include "Core/Helpers/wiMath.h"
+#include "Core/Helpers/wiUnorderedMap.h"
 
 #include <string>
 
@@ -15,9 +16,11 @@ typedef int(*lua_CFunction) (lua_State* L);
 
 namespace wi::lua
 {
-	void Initialize();
-
+    struct LuaInstance;
 	lua_State* GetInternalInstance();
+    wi::unordered_map<lua_State*, LuaInstance> GetInstances();
+
+	void Initialize();
 
 	//check if the last call succeeded
 	bool Success(lua_State* L);
