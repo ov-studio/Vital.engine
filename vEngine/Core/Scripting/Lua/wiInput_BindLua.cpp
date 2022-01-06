@@ -254,8 +254,8 @@ namespace wi::lua
 			wi::lua::RunText(wi::lua::GetLuaState(), "TOUCHSTATE_MOVED		= 2");
 		}
 
-		Touch_BindLua::Bind(lua_State* L);
-		ControllerFeedback_BindLua::Bind(lua_State* L);
+		Touch_BindLua::Bind(L);
+		ControllerFeedback_BindLua::Bind(L);
 	}
 
 

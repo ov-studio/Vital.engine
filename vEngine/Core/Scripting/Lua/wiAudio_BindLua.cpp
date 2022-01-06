@@ -278,9 +278,9 @@ namespace wi::lua
 			wi::lua::RunText(wi::lua::GetLuaState(), "REVERB_PRESET_PLATE = 29");
             */
 
-			Sound_BindLua::Bind(lua_State* L);
-			SoundInstance_BindLua::Bind(lua_State* L);
-			SoundInstance3D_BindLua::Bind(lua_State* L);
+			Sound_BindLua::Bind(L);
+			SoundInstance_BindLua::Bind(L);
+			SoundInstance3D_BindLua::Bind(L);
 		}
 	}
 
