@@ -22,7 +22,7 @@ namespace wi
 		// executed before Update()
 		virtual void PreUpdate() {}
 		// update with fixed frequency
-		virtual void FixedUpdate() {}
+		virtual void AsyncUpdate() {}
 		// update once per frame
 		//	dt : elapsed time since last call in seconds
 		virtual void Update(float dt) {}

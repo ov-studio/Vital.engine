@@ -58,18 +58,18 @@ namespace wi
 		// Runs the main engine loop
 		void Run();
 
-		// This will activate a RenderPath as the active one, so it will run its Update, FixedUpdate, Render and Compose functions
+		// This will activate a RenderPath as the active one, so it will run its Update, AsyncUpdate, Render and Compose functions
 		//	You can set a fade time and fade screen color so that switching components will happen when the screen is faded out. Then it will fade back to the new component
 		void ActivatePath(RenderPath* component, float fadeSeconds = 0, wi::Color fadeColor = wi::Color(0, 0, 0, 255));
 		inline RenderPath* GetActivePath() { return activePath; }
 
-		// Set the desired target framerate for the FixedUpdate() loop (default = 60)
+		// Set the desired target framerate for the AsyncUpdate() loop (default = 60)
 		void setTargetFrameRate(float value) { targetFrameRate = value; }
-		// Get the desired target framerate for the FixedUpdate() loop
+		// Get the desired target framerate for the AsyncUpdate() loop
 		float getTargetFrameRate() const { return targetFrameRate; }
-		// Set the desired behaviour of the FixedUpdate() loop (default = true)
-		//	enabled		: the FixedUpdate() loop will run at targetFrameRate frequency
-		//	disabled	: the FixedUpdate() loop will run every frame only once.
+		// Set the desired behaviour of the AsyncUpdate() loop (default = true)
+		//	enabled		: the AsyncUpdate() loop will run at targetFrameRate frequency
+		//	disabled	: the AsyncUpdate() loop will run every frame only once.
 		void setFrameSkip(bool enabled) { frameskip = enabled; }
 		void setFrameRateLock(bool enabled) { framerate_lock = enabled; }
 
@@ -79,8 +79,8 @@ namespace wi
 		//  RenderPath::Update is also called from here for the active component
 		virtual void Update(float dt);
 		// This is where application-wide updates get executed in a fixed timestep based manner. 
-		//  RenderPath::FixedUpdate is also called from here for the active component
-		virtual void FixedUpdate();
+		//  RenderPath::AsyncUpdate is also called from here for the active component
+		virtual void AsyncUpdate();
 		// This is where application-wide rendering happens to offscreen buffers. 
 		//  RenderPath::Render is also called from here for the active component
 		virtual void Render();

@@ -6,7 +6,7 @@ using namespace wi::graphics;
 namespace wi
 {
 
-	void SpriteFont::FixedUpdate()
+	void SpriteFont::AsyncUpdate()
 	{
 		if (IsDisableUpdate())
 			return;

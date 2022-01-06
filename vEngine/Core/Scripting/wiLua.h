@@ -50,7 +50,7 @@ namespace wi::lua
 	void AddInt(lua_State* L, const std::string& name, int data);
 
 	//update Vendors/lua scripts which are waiting for a fixed game tick
-	void FixedUpdate();
+	void AsyncUpdate();
 	//update Vendors/lua scripts which are waiting for a game tick
 	void Update();
 	//issue Vendors/lua drawing commands which are waiting for a render tick

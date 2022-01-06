@@ -24,7 +24,7 @@ namespace wi
 	public:
 		Sprite(const std::string& newTexture = "", const std::string& newMask = "");
 
-		virtual void FixedUpdate();
+		virtual void AsyncUpdate();
 		virtual void Update(float dt);
 		virtual void Draw(wi::graphics::CommandList cmd) const;
 

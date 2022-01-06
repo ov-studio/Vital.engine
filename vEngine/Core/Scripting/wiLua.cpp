@@ -29,7 +29,6 @@
     namespace wi::lua
     {
         // Definitions
-        void destroyInstance(lua_State* L);
         struct LuaInstance
         {
             lua_State* instance = nullptr;
@@ -38,7 +37,7 @@
         LuaInstance internalInstance;
         wi::unordered_map<lua_State*, LuaInstance> LuaInstances = {};
         static const char* WILUA_ERROR_PREFIX = "[Lua Error] ";
-        static const luaL_Reg WILUA_LIBS[] = {
+        static const luaL_Reg WILUA_WHITELISTEDLIBS[] = {
             { "_G", luaopen_base },
             { LUA_TABLIBNAME, luaopen_table },
             { LUA_STRLIBNAME, luaopen_string },
@@ -49,17 +48,23 @@
             //{ "json", luaopen_rapidjson },
             { NULL, NULL }
         };
+        const char* WILUA_BLACKLISTEDGLOBALS[] = {"dofile", "load", "loadfile"};
 
         lua_State* createInstance()
         {
             LuaInstance cInstance;
             cInstance.instance = luaL_newstate();
             // Loads whitelisted libraries
-            const luaL_Reg* lib = WILUA_LIBS;
-            for (; lib->func; lib++)
+            for (luaL_Reg* library = WILUA_WHITELISTEDLIBS; library->func; library++)
             {
-                luaL_requiref(cInstance.instance, lib->name, lib->func, 1);
+                luaL_requiref(cInstance.instance, library->name, library->func, 1);
                 lua_pop(cInstance.instance, 1);
+            }
+            // Unloads blacklisted libraries
+            for (auto globalName : WILUA_BLACKLISTEDGLOBALS)
+            {
+                SSetNull(cInstance.instance);
+                lua_setglobal(cInstance.instance, globalName);
             }
             // Loads whitelisted scripts
             for (int i = 0; i < sandbox::lua::modules.size(); ++i)
@@ -231,7 +236,7 @@
                 lua_call(L, 1, 0);
             }
         }
-        void FixedUpdate()
+        void AsyncUpdate()
         {
             SignalHelper("vEngine_onAsyncUpdate");
         }

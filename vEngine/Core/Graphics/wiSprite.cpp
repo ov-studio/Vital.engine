@@ -30,7 +30,7 @@ namespace wi
 		wi::image::Draw(textureResource.IsValid() ? &textureResource.GetTexture() : wi::texturehelper::getWhite(), params, cmd);
 	}
 
-	void Sprite::FixedUpdate()
+	void Sprite::AsyncUpdate()
 	{
 		if (IsDisableUpdate())
 			return;

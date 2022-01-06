@@ -25,7 +25,7 @@ namespace wi
 			SetText(value);
 		}
 
-		virtual void FixedUpdate();
+		virtual void AsyncUpdate();
 		virtual void Update(float dt);
 		virtual void Draw(wi::graphics::CommandList cmd) const;
 

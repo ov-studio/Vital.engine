@@ -1030,11 +1030,11 @@ void ClientComponent::PreUpdate()
 
 	renderPath->PreUpdate();
 }
-void ClientComponent::FixedUpdate()
+void ClientComponent::AsyncUpdate()
 {
-	RenderPath2D::FixedUpdate();
+	RenderPath2D::AsyncUpdate();
 
-	renderPath->FixedUpdate();
+	renderPath->AsyncUpdate();
 }
 void ClientComponent::Update(float dt)
 {

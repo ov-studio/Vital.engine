@@ -61,7 +61,7 @@ namespace wi
 		virtual void ResizeLayout();
 
 		void Update(float dt) override;
-		void FixedUpdate() override;
+		void AsyncUpdate() override;
 		void Render() const override;
 		void Compose(wi::graphics::CommandList cmd) const override;
 

@@ -125,7 +125,7 @@ public:
 	void Load() override;
 	void Start() override;
 	void PreUpdate() override;
-	void FixedUpdate() override;
+	void AsyncUpdate() override;
 	void Update(float dt) override;
 	void PostUpdate() override;
 	void Render() const override;

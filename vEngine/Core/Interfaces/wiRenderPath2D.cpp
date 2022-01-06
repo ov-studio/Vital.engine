@@ -153,7 +153,7 @@ namespace wi
 
 		RenderPath::Update(dt);
 	}
-	void RenderPath2D::FixedUpdate()
+	void RenderPath2D::AsyncUpdate()
 	{
 		for (auto& x : layers)
 		{
@@ -165,20 +165,20 @@ namespace wi
 				case RenderItem2D::SPRITE:
 					if (y.sprite != nullptr)
 					{
-						y.sprite->FixedUpdate();
+						y.sprite->AsyncUpdate();
 					}
 					break;
 				case RenderItem2D::FONT:
 					if (y.font != nullptr)
 					{
-						y.font->FixedUpdate();
+						y.font->AsyncUpdate();
 					}
 					break;
 				}
 			}
 		}
 
-		RenderPath::FixedUpdate();
+		RenderPath::AsyncUpdate();
 	}
 	void RenderPath2D::Render() const
 	{

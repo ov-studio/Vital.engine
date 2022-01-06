@@ -151,13 +151,13 @@ namespace wi
 				const float targetFrameRateInv = 1.0f / targetFrameRate;
 				while (deltaTimeAccumulator >= targetFrameRateInv)
 				{
-					FixedUpdate();
+					AsyncUpdate();
 					deltaTimeAccumulator -= targetFrameRateInv;
 				}
 			}
 			else
 			{
-				FixedUpdate();
+				AsyncUpdate();
 			}
 		}
 		wi::profiler::EndRange(range); // Fixed Update
@@ -226,13 +226,13 @@ namespace wi
 		wi::profiler::EndRange(range); // Update
 	}
 
-	void Application::FixedUpdate()
+	void Application::AsyncUpdate()
 	{
-		wi::lua::FixedUpdate();
+		wi::lua::AsyncUpdate();
 
 		if (GetActivePath() != nullptr)
 		{
-			GetActivePath()->FixedUpdate();
+			GetActivePath()->AsyncUpdate();
 		}
 	}
 
