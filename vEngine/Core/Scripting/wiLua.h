@@ -16,9 +16,9 @@ typedef int(*lua_CFunction) (lua_State* L);
 
 namespace wi::lua
 {
-    struct LuaInstance;
+    //struct LuaInstance;
 	lua_State* GetInternalInstance();
-    wi::unordered_map<lua_State*, LuaInstance> GetInstances();
+    //wi::unordered_map<lua_State*, LuaInstance> GetInstances();
 
 	void Initialize();
 
@@ -48,8 +48,6 @@ namespace wi::lua
 	void AddFuncArray(lua_State* L, const luaL_Reg* functions);
 	//add int member to registered object
 	void AddInt(lua_State* L, const std::string& name, int data);
-	//returns the path of the last executed script:
-	const std::string& GetScriptPath();
 
 	//update Vendors/lua scripts which are waiting for a fixed game tick
 	void FixedUpdate();
