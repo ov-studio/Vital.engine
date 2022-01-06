@@ -32,15 +32,11 @@
         void destroyInstance(lua_State* L);
         struct LuaInstance
         {
-            lua_State* instance = NULL;
-            int status = 0; //last call status
-            ~LuaInstance()
-            {
-                //if (instance != NULL) destroyInstance(instance); //TODO: NEEDS TO BE FIXED CAUSES CRASHES RN
-            }
+            lua_State* instance = nullptr;
+            int execStatus = 0;
         };
         LuaInstance internalInstance;
-        wi::unordered_map<lua_State*, LuaInstance> LuaInstances;
+        wi::unordered_map<lua_State*, LuaInstance> LuaInstances = {};
         static const char* WILUA_ERROR_PREFIX = "[Lua Error] ";
         static const luaL_Reg WILUA_LIBS[] = {
             { "_G", luaopen_base },
@@ -125,11 +121,11 @@
 
         bool Success(lua_State* L)
         {
-            return LuaInstances[L].status == 0;
+            return LuaInstances[L].execStatus == 0;
         }
         bool Failed(lua_State* L)
         {
-            return LuaInstances[L].status != 0;
+            return LuaInstances[L].execStatus != 0;
         }
         std::string GetErrorMsg(lua_State* L)
         {
@@ -171,10 +167,10 @@
         }
         bool RunText(lua_State* L, const std::string& script)
         {
-            LuaInstances[L].status = luaL_loadstring(L, script.c_str());
+            LuaInstances[L].execStatus = luaL_loadstring(L, script.c_str());
             if (Success(L))
             {
-                LuaInstances[L].status = lua_pcall(L, 0, LUA_MULTRET, 0);
+                LuaInstances[L].execStatus = lua_pcall(L, 0, LUA_MULTRET, 0);
                 if (Success(L))
                     return true;
             }
