@@ -29,6 +29,8 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
+            // TODO: GetScriptPath is removed, requires new method
+            /*
 			name = wi::lua::SGetString(L, 1);
 			name = wi::lua::GetScriptPath() + name;
 			if (argc > 1)
@@ -36,6 +38,7 @@ namespace wi::lua
 				mask = wi::lua::SGetString(L, 2);
 				mask = wi::lua::GetScriptPath() + mask;
 			}
+            */
 		}
 		sprite = wi::Sprite(name, mask);
 	}

@@ -41,7 +41,6 @@
         };
         LuaInstance internalInstance;
         wi::unordered_map<lua_State*, LuaInstance> LuaInstances;
-        std::string script_path; // TODO: MAYBE NOT NEEDED?
         static const char* WILUA_ERROR_PREFIX = "[Lua Error] ";
         static const luaL_Reg WILUA_LIBS[] = {
             { "_G", luaopen_base },
@@ -163,7 +162,6 @@
         }
         bool RunFile(lua_State* L, const std::string& filename)
         {
-            script_path = wi::helper::GetDirectoryFromPath(filename);
             wi::vector<uint8_t> filedata;
             if (wi::helper::FileRead(filename, filedata))
             {
@@ -225,10 +223,6 @@
         {
             lua_pushinteger(L, data);
             lua_setfield(L, -2, name.c_str());
-        }
-        const std::string& GetScriptPath()
-        {
-            return script_path;
         }
 
         inline void SignalHelper(const char* signalType)

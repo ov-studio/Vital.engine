@@ -41,6 +41,8 @@ int LoadModel(lua_State* L)
 			if (argc > 1)
 			{
 				std::string fileName = wi::lua::SGetString(L, 2);
+                // TODO: GetScriptPath is removed, requires new method
+                /*
 				fileName = wi::lua::GetScriptPath() + fileName;
 				XMMATRIX transform = XMMatrixIdentity();
 				if (argc > 2)
@@ -57,6 +59,7 @@ int LoadModel(lua_State* L)
 				}
 				Entity root = wi::scene::LoadModel(*custom_scene->scene, fileName, transform, true);
 				wi::lua::SSetLongLong(L, root);
+                */
 				return 1;
 			}
 			else
@@ -68,7 +71,9 @@ int LoadModel(lua_State* L)
 		else
 		{
 			// Overload 2: global scene version
+            // TODO: GetScriptPath is removed, requires new method
 			std::string fileName = wi::lua::SGetString(L, 1);
+            /*
 			fileName = wi::lua::GetScriptPath() + fileName;
 			XMMATRIX transform = XMMatrixIdentity();
 			if (argc > 1)
@@ -85,6 +90,7 @@ int LoadModel(lua_State* L)
 			}
 			Entity root = wi::scene::LoadModel(fileName, transform, true);
 			wi::lua::SSetLongLong(L, root);
+            */
 			return 1;
 		}
 	}
