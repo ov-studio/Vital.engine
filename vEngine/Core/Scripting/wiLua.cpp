@@ -116,31 +116,33 @@
             return luainternal.m_luaState;
         }
 
-        bool Success()
+        // TODO: NEEDS IMPROVEMENT..
+        bool Success(lua_State* L)
         {
             return luainternal.m_status == 0;
         }
-        bool Failed()
+        bool Failed(lua_State* L)
         {
             return luainternal.m_status != 0;
         }
-        std::string GetErrorMsg()
+        std::string GetErrorMsg(lua_State* L)
         {
-            if (Failed()) {
-                std::string retVal = lua_tostring(luainternal.m_luaState, -1);
+            if (Failed(L)) {
+                std::string retVal = lua_tostring(L, -1);
                 return retVal;
             }
             return std::string("");
         }
-        std::string PopErrorMsg()
+        std::string PopErrorMsg(lua_State* L)
         {
-            std::string retVal = lua_tostring(luainternal.m_luaState, -1);
-            lua_pop(luainternal.m_luaState, 1); // remove error message
+            std::string retVal = lua_tostring(L, -1);
+            lua_pop(L, 1); // remove error message
             return retVal;
         }
+
         void PostErrorMsg(lua_State* L)
         {
-            if (Failed())
+            if (Failed(L))
             {
                 const char* str = lua_tostring(L, -1);
                 if (str == nullptr)
@@ -165,10 +167,10 @@
         bool RunText(lua_State* L, const std::string& script)
         {
             luainternal.m_status = luaL_loadstring(L, script.c_str());
-            if (Success())
+            if (Success(L))
             {
                 luainternal.m_status = lua_pcall(L, 0, LUA_MULTRET, 0);
-                if (Success())
+                if (Success(L))
                     return true;
             }
             PostErrorMsg(L);
@@ -178,7 +180,7 @@
         {
             lua_register(L, name.c_str(), function);
             PostErrorMsg(L);
-            return Success();
+            return Success(L);
         }
         void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions)
         {

@@ -20,13 +20,13 @@ namespace wi::lua
 	lua_State* GetLuaState();
 
 	//check if the last call succeeded
-	bool Success();
+	bool Success(lua_State* L);
 	//check if the last call failed
-	bool Failed();
+	bool Failed(lua_State* L);
 	//get error message for the last call
-	std::string GetErrorMsg();
+	std::string GetErrorMsg(lua_State* L);
 	//remove and get error message from stack
-	std::string PopErrorMsg();
+	std::string PopErrorMsg(lua_State* L);
 	//post error to backlog and/or debug output
 	void PostErrorMsg(lua_State* L);
 	//run a script from file
