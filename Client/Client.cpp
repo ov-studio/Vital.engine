@@ -809,7 +809,7 @@ void ClientComponent::Load()
 		params.extensions.push_back("lua");
 		wi::helper::FileDialog(params, [](std::string fileName) {
 			wi::eventhandler::Subscribe_Once(wi::eventhandler::EVENT_THREAD_SAFE_POINT, [=](uint64_t userdata) {
-				wi::lua::RunText(wi::lua::GetLuaState(), fileName);
+				wi::lua::RunText(wi::lua::GetInternalInstance(), fileName);
 			});
 		});
 	});

@@ -17,7 +17,7 @@ namespace wi::lua
 {
 	void Initialize();
 
-	lua_State* GetLuaState();
+	lua_State* GetInternalInstance();
 
 	//check if the last call succeeded
 	bool Success(lua_State* L);

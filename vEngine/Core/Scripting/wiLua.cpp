@@ -29,11 +29,11 @@
     namespace wi::lua
     {
         // Definitions
-        struct LuaInternal
+        struct LuaInstance
         {
             lua_State* m_luaState = NULL;
             int m_status = 0; //last call status
-            ~LuaInternal()
+            ~LuaInstance()
             {
                 if (m_luaState != NULL)
                 {
@@ -55,7 +55,7 @@
         };
 
         // Variables
-        LuaInternal luainternal;
+        LuaInstance internalInstance;
         std::string script_path;
 
         lua_State* createInstance()
@@ -105,23 +105,23 @@
         void Initialize()
         {
             wi::Timer timer;
-            luainternal.m_luaState = createInstance();
+            internalInstance.m_luaState = createInstance();
             wi::backlog::post("wi::lua Initialized (" + std::to_string((int)std::round(timer.elapsed())) + " ms)");
         }
 
-        lua_State* GetLuaState()
+        lua_State* GetInternalInstance()
         {
-            return luainternal.m_luaState;
+            return internalInstance.m_luaState;
         }
 
         // TODO: NEEDS IMPROVEMENT..
         bool Success(lua_State* L)
         {
-            return luainternal.m_status == 0;
+            return internalInstance.m_status == 0;
         }
         bool Failed(lua_State* L)
         {
-            return luainternal.m_status != 0;
+            return internalInstance.m_status != 0;
         }
         std::string GetErrorMsg(lua_State* L)
         {
@@ -164,10 +164,10 @@
         }
         bool RunText(lua_State* L, const std::string& script)
         {
-            luainternal.m_status = luaL_loadstring(L, script.c_str());
+            internalInstance.m_status = luaL_loadstring(L, script.c_str());
             if (Success(L))
             {
-                luainternal.m_status = lua_pcall(L, 0, LUA_MULTRET, 0);
+                internalInstance.m_status = lua_pcall(L, 0, LUA_MULTRET, 0);
                 if (Success(L))
                     return true;
             }
@@ -182,7 +182,7 @@
         }
         void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions)
         {
-            if (luaL_newmetatable(luainternal.m_luaState, tableName.c_str()) != 0)
+            if (luaL_newmetatable(internalInstance.m_luaState, tableName.c_str()) != 0)
             {
                 //table is not yet present
                 lua_pushvalue(L, -1);
@@ -230,23 +230,23 @@
         }
         void FixedUpdate()
         {
-            SignalHelper(luainternal.m_luaState, "vEngine_onAsyncUpdate");
+            SignalHelper(internalInstance.m_luaState, "vEngine_onAsyncUpdate");
         }
         void Update()
         {
-            SignalHelper(luainternal.m_luaState, "vEngine_onUpdate");
+            SignalHelper(internalInstance.m_luaState, "vEngine_onUpdate");
         }
         void Render()
         {
-            SignalHelper(luainternal.m_luaState, "vEngine_onRender");
+            SignalHelper(internalInstance.m_luaState, "vEngine_onRender");
         }
         void Signal(const std::string& name)
         {
-            SignalHelper(luainternal.m_luaState, name.c_str());
+            SignalHelper(internalInstance.m_luaState, name.c_str());
         }
         void KillProcesses()
         {
-            RunText(luainternal.m_luaState ,"vEngine.thread.destroyAll()");
+            RunText(internalInstance.m_luaState ,"vEngine.thread.destroyAll()");
         }
 
         std::string SGetString(lua_State* L, int stackpos)

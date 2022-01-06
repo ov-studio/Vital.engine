@@ -250,7 +250,7 @@ namespace wi::backlog
 		}
 		if (!blockLuaExec)
 		{
-			wi::lua::RunText(wi::lua::GetLuaState(), inputArea);
+			wi::lua::RunText(wi::lua::GetInternalInstance(), inputArea);
 		}
 		else
 		{
