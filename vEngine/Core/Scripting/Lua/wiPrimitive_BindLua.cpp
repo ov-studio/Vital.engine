@@ -11,9 +11,6 @@ namespace wi::lua::primitive
 		if (!initialized)
 		{
 			initialized = true;
-
-			lua_State* L = wi::lua::GetLuaState();
-
 			Luna<Ray_BindLua>::Register(L);
 			Luna<AABB_BindLua>::Register(L);
 			Luna<Sphere_BindLua>::Register(L);
