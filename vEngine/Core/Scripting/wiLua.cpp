@@ -28,12 +28,11 @@
 
     namespace wi::lua
     {
-        static const char* WILUA_ERROR_PREFIX = "[Lua Error] ";
+        // Definitions
         struct LuaInternal
         {
             lua_State* m_luaState = NULL;
             int m_status = 0; //last call status
-
             ~LuaInternal()
             {
                 if (m_luaState != NULL)
@@ -42,67 +41,44 @@
                 }
             }
         };
+        static const char* WILUA_ERROR_PREFIX = "[Lua Error] ";
+        static const luaL_Reg WILUA_LIBS[] = {
+            { "_G", luaopen_base },
+            { LUA_TABLIBNAME, luaopen_table },
+            { LUA_STRLIBNAME, luaopen_string },
+            { LUA_MATHLIBNAME, luaopen_math },
+            { LUA_DBLIBNAME, luaopen_debug },
+            { LUA_COLIBNAME, luaopen_coroutine },
+            { LUA_UTF8LIBNAME, luaopen_utf8 },
+            //{ "json", luaopen_rapidjson },
+            { NULL, NULL }
+        };
+
+        // Variables
         LuaInternal luainternal;
         std::string script_path;
 
-        int Internal_DoFile(lua_State* L)
+        lua_State* createInstance()
         {
-            int argc = SGetArgCount(L);
-
-            if (argc > 0)
+            lua_State* cInstance = luaL_newstate();
+            // Loads whitelisted libraries
+            const luaL_Reg* lib = WILUA_LIBS;
+            for (; lib->func; lib++)
             {
-                std::string filename = SGetString(L, 1);
-                filename = script_path + filename;
-                script_path = wi::helper::GetDirectoryFromPath(filename);
-                wi::vector<uint8_t> filedata;
-                if (wi::helper::FileRead(filename, filedata))
-                {
-                    std::string command = std::string(filedata.begin(), filedata.end());
-                    int status = luaL_loadstring(L, command.c_str());
-                    if (status == 0)
-                    {
-                        status = lua_pcall(L, 0, LUA_MULTRET, 0);
-                    }
-                    else
-                    {
-                        const char* str = lua_tostring(L, -1);
-
-                        if (str == nullptr)
-                            return 0;
-
-                        std::string ss;
-                        ss += WILUA_ERROR_PREFIX;
-                        ss += str;
-                        wi::backlog::post(ss, wi::backlog::LogLevel::Error);
-                        lua_pop(L, 1); // remove error message
-                    }
-                }
+                luaL_requiref(cInstance, lib->name, lib->func, 1);
+                lua_pop(cInstance, 1);
             }
-            else
-            {
-                SError(L, "dofile(string filename) not enough arguments!");
-            }
-
-            return 0;
-        }
-
-        void Initialize()
-        {
-            wi::Timer timer;
-
-            luainternal.m_luaState = luaL_newstate();
-            luaL_openlibs(luainternal.m_luaState);
-            RegisterFunc("dofile", Internal_DoFile);
+            // Loads whitelisted scripts
             for (int i = 0; i < sandbox::lua::modules.size(); ++i)
             {
                 if (sandbox::lua::modules[i].moduleName != "Server") {
                     for (int j = 0; j < sandbox::lua::modules[i].moduleScripts.size(); ++j)
                     {
-                        RunText(sandbox::lua::modules[i].moduleScripts[j]);
+                        RunText(cInstance, sandbox::lua::modules[i].moduleScripts[j]);
                     }
                 }
             }
-
+            // Loads engine bindings
             Application_BindLua::Bind();
             Canvas_BindLua::Bind();
             RenderPath_BindLua::Bind();
@@ -123,7 +99,29 @@
             backlog::Bind();
             Network_BindLua::Bind();
             primitive::Bind();
+            return cInstance;
+        }
 
+        void Initialize()
+        {
+            wi::Timer timer;
+            luainternal.m_luaState = luaL_newstate();
+            const luaL_Reg* lib = WILUA_LIBS;
+            for (; lib->func; lib++)
+            {
+                luaL_requiref(luainternal.m_luaState, lib->name, lib->func, 1);
+                lua_pop(luainternal.m_luaState, 1);
+            }
+            for (int i = 0; i < sandbox::lua::modules.size(); ++i)
+            {
+                if (sandbox::lua::modules[i].moduleName != "Server") {
+                    for (int j = 0; j < sandbox::lua::modules[i].moduleScripts.size(); ++j)
+                    {
+                        RunText(luainternal.m_luaState, sandbox::lua::modules[i].moduleScripts[j]);
+                        wi::backlog::post("Trying to boot");
+                    }
+                }
+            }
             wi::backlog::post("wi::lua Initialized (" + std::to_string((int)std::round(timer.elapsed())) + " ms)");
         }
 
@@ -168,84 +166,70 @@
                 lua_pop(luainternal.m_luaState, 1); // remove error message
             }
         }
-        bool RunFile(const std::string& filename)
+        bool RunFile(lua_State* L, const std::string& filename)
         {
             script_path = wi::helper::GetDirectoryFromPath(filename);
             wi::vector<uint8_t> filedata;
             if (wi::helper::FileRead(filename, filedata))
             {
-                return RunText(std::string(filedata.begin(), filedata.end()));
+                return RunText(L, std::string(filedata.begin(), filedata.end()));
             }
             return false;
         }
-        bool RunScript()
+        bool RunText(lua_State* L, const std::string& script)
         {
-            luainternal.m_status = lua_pcall(luainternal.m_luaState, 0, LUA_MULTRET, 0);
-            if (Failed())
-            {
-                PostErrorMsg();
-                return false;
-            }
-            return true;
-        }
-        bool RunText(const std::string& script)
-        {
-            luainternal.m_status = luaL_loadstring(luainternal.m_luaState, script.c_str());
+            luainternal.m_status = luaL_loadstring(L, script.c_str());
             if (Success())
             {
-                return RunScript();
+                luainternal.m_status = lua_pcall(L, 0, LUA_MULTRET, 0);
+                if (Success())
+                    return true;
             }
-
             PostErrorMsg();
             return false;
         }
-        bool RegisterFunc(const std::string& name, lua_CFunction function)
+        bool RegisterFunc(lua_State* L, const std::string& name, lua_CFunction function)
         {
-            lua_register(luainternal.m_luaState, name.c_str(), function);
-
+            lua_register(L, name.c_str(), function);
             PostErrorMsg();
-
             return Success();
         }
-        void RegisterLibrary(const std::string& tableName, const luaL_Reg* functions)
+        void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions)
         {
             if (luaL_newmetatable(luainternal.m_luaState, tableName.c_str()) != 0)
             {
                 //table is not yet present
-                lua_pushvalue(luainternal.m_luaState, -1);
-                lua_setfield(luainternal.m_luaState, -2, "__index"); // Object.__index = Object
-                AddFuncArray(functions);
+                lua_pushvalue(L, -1);
+                lua_setfield(L, -2, "__index"); // Object.__index = Object
+                AddFuncArray(L, functions);
             }
         }
-        bool RegisterObject(const std::string& tableName, const std::string& name, void* object)
+        bool RegisterObject(lua_State* L, const std::string& tableName, const std::string& name, void* object)
         {
-            RegisterLibrary(tableName, nullptr);
-
+            RegisterLibrary(L, tableName, nullptr);
             // does this call need to be checked? eg. userData == nullptr?
-            void** userData = static_cast<void**>(lua_newuserdata(luainternal.m_luaState, sizeof(void*)));
+            void** userData = static_cast<void**>(lua_newuserdata(L, sizeof(void*)));
             *(userData) = object;
-
-            luaL_setmetatable(luainternal.m_luaState, tableName.c_str());
-            lua_setglobal(luainternal.m_luaState, name.c_str());
-
+            luaL_setmetatable(L, tableName.c_str());
+            lua_setglobal(L, name.c_str());
             return true;
         }
-        void AddFunc(const std::string& name, lua_CFunction function)
+        void AddFunc(lua_State* L, const std::string& name, lua_CFunction function)
         {
-            lua_pushcfunction(luainternal.m_luaState, function);
-            lua_setfield(luainternal.m_luaState, -2, name.c_str());
+            lua_pushcfunction(L, function);
+            lua_setfield(L, -2, name.c_str());
         }
-        void AddFuncArray(const luaL_Reg* functions)
+        void AddFuncArray(lua_State* L, const luaL_Reg* functions)
         {
             if (functions != nullptr)
             {
-                luaL_setfuncs(luainternal.m_luaState, functions, 0);
+                luaL_setfuncs(L, functions, 0);
             }
         }
-        void AddInt(const std::string& name, int data)
+        void AddInt(lua_State* L, const std::string& name, int data)
         {
-            lua_pushinteger(luainternal.m_luaState, data);
-            lua_setfield(luainternal.m_luaState, -2, name.c_str());
+            lua_pushinteger(L, data);
+            lua_setfield(L, -2, name.c_str());
         }
         const std::string& GetScriptPath()
         {
@@ -274,10 +258,9 @@
         {
             SignalHelper(luainternal.m_luaState, name.c_str());
         }
-
         void KillProcesses()
         {
-            RunText("vEngine.thread.destroyAll()");
+            RunText(luainternal.m_luaState ,"vEngine.thread.destroyAll()");
         }
 
         std::string SGetString(lua_State* L, int stackpos)

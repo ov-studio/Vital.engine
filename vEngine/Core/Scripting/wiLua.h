@@ -30,21 +30,21 @@ namespace wi::lua
 	//post error to backlog and/or debug output
 	void PostErrorMsg();
 	//run a script from file
-	bool RunFile(const std::string& filename);
+	bool RunFile(lua_State* L, const std::string& filename);
 	//run a script from param
-	bool RunText(const std::string& script);
+	bool RunText(lua_State* L, const std::string& script);
 	//register function to use in scripts
-	bool RegisterFunc(const std::string& name, lua_CFunction function);
+	bool RegisterFunc(lua_State* L, const std::string& name, lua_CFunction function);
 	//register class
-	void RegisterLibrary(const std::string& tableName, const luaL_Reg* functions);
+	void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions);
 	//register object
-	bool RegisterObject(const std::string& tableName, const std::string& name, void* object);
+	bool RegisterObject(lua_State* L, const std::string& tableName, const std::string& name, void* object);
 	//add function to the previously registered object
-	void AddFunc(const std::string& name, lua_CFunction function);
+	void AddFunc(lua_State* L, const std::string& name, lua_CFunction function);
 	//add function array to the previously registered object
-	void AddFuncArray(const luaL_Reg* functions);
+	void AddFuncArray(lua_State* L, const luaL_Reg* functions);
 	//add int member to registered object
-	void AddInt(const std::string& name, int data);
+	void AddInt(lua_State* L, const std::string& name, int data);
 	//returns the path of the last executed script:
 	const std::string& GetScriptPath();
 
