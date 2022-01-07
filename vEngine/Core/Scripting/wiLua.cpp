@@ -254,14 +254,17 @@ namespace wi::lua
     }
     void KillProcesses()
     {
-        RunText(internalInstance.instance ,"vEngine.thread.destroyAll()");
+        for (auto& i : LuaInstances)
+        {
+            auto& L = i.first;
+            RunText(L, "vEngine.thread.destroyAll()");
+        }
     }
 
     std::string SGetString(lua_State* L, int stackpos)
     {
         const char* str = lua_tostring(L, stackpos);
-        if (str != nullptr)
-            return str;
+        if (str != nullptr) return str;
         return std::string("");
     }
     bool SIsString(lua_State* L, int stackpos)
