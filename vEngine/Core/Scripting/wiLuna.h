@@ -63,7 +63,6 @@ template < class T > class Luna {
         */
         // REGISTER CLASS AS A GLOBAL TABLE 
         static void Register(lua_State * L, const char *namespac = NULL) {
-
             if (namespac && strlen(namespac))
             {
                 lua_getglobal(L, namespac);
