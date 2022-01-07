@@ -30,7 +30,7 @@
 2. Build the `Client_Windows` in Release/Debug mode
 3. Build the `vEngine_ShaderCompiler` in Release/Debug mode and boot it
 4. Build the `vEngine_SandboxCompiler` in Release/Debug and boot it
-5. Rebuild Client_Windows in Release/Debug and boot it
+5. Rebuild `Client_Windows` in Release/Debug and boot it
 
 ## ━ Contents
 
