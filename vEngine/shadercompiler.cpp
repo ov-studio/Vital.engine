@@ -404,16 +404,16 @@ int main(int argc, char* argv[])
 
 	wi::jobsystem::context ctx;
 
-	std::string SHADERSOURCEPATH = "../../../" + wi::renderer::GetShaderSourcePath();
-	wi::helper::MakePathAbsolute(SHADERSOURCEPATH);
+	std::string shaderPath = "../" + wi::renderer::GetShaderSourcePath();
+	wi::helper::MakePathAbsolute(shaderPath);
 
 	std::cout << "[Shader Compiler] Searching for outdated shaders..." << std::endl;
 	wi::Timer timer;
 
 	for (auto& target : targets)
 	{
-		std::string SHADERPATH = SHADERSOURCEPATH + target.dir;
-		wi::helper::DirectoryCreate(SHADERPATH);
+		std::string shaderDirectory = shaderPath + target.dir;
+		wi::helper::DirectoryCreate(shaderDirectory);
 
 		for (int i = 0; i < static_cast<int>(ShaderStage::Count); ++i)
 		{
@@ -433,7 +433,7 @@ int main(int argc, char* argv[])
 			for (auto& shader : shaders[i])
 			{
 				wi::jobsystem::Execute(ctx, [=](wi::jobsystem::JobArgs args) {
-					std::string shaderbinaryfilename = wi::helper::ReplaceExtension(SHADERPATH + shader, "cso");
+					std::string shaderbinaryfilename = wi::helper::ReplaceExtension(shaderDirectory + shader, "cso");
 					if (!rebuild && !wi::shadercompiler::IsShaderOutdated(shaderbinaryfilename))
 					{
 						return;
@@ -442,8 +442,8 @@ int main(int argc, char* argv[])
 					wi::shadercompiler::CompilerInput input;
 					input.format = target.format;
 					input.stage = (wi::graphics::ShaderStage)i;
-					input.shadersourcefilename = SHADERSOURCEPATH + shader;
-					input.include_directories.push_back(SHADERSOURCEPATH);
+					input.shadersourcefilename = shaderPath + shader;
+					input.include_directories.push_back(shaderPath);
 
 					auto it = minshadermodels.find(shader);
 					if (it != minshadermodels.end())
@@ -527,7 +527,7 @@ int main(int argc, char* argv[])
 		}
 		ss += "};\n"; // map end
 		ss += "}\n"; // namespace end
-		wi::helper::FileWrite("wiShaderDump.h", (uint8_t*)ss.c_str(), ss.length());
+		wi::helper::FileWrite("../wiShaderDump.h", (uint8_t*)ss.c_str(), ss.length());
 		std::cout << "[Shader Compiler] ShaderDump written to wiShaderDump.h in " << std::setprecision(4) << timer.elapsed_seconds() << " seconds" << std::endl;
 	}
 
