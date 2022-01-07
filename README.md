@@ -25,6 +25,13 @@
 * Tron
 * [Read More](https://github.com/ov-studio/vEngine-Client/blob/main/Credits.md)
 
+## ━ Source Building (Windows)
+1. Launch `vEngine.sln` in Visual Studio
+1. Build the Client_Windows in Release/Debug mode
+2. Build the shadercompiler in Release/Debug mode and boot it
+3. Build the sandboxcompiler in Release/Debug and boot it
+4. Rebuild Client_Windows in Release/Debug and boot it
+
 ## ━ Contents
 
 * [**Official Releases**]()
