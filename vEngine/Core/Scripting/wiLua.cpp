@@ -29,15 +29,10 @@
     namespace wi::lua
     {
         // Definitions
-        struct LuaInstance
-        {
-            lua_State* instance = nullptr;
-            int execStatus = 0;
-        };
-        LuaInstance internalInstance;
-        wi::unordered_map<lua_State*, LuaInstance> LuaInstances = {};
+        lua_CInstance internalInstance;
+        lua_CInstancePool LuaInstances = {};
         static const char* WILUA_ERROR_PREFIX = "[Lua Error] ";
-        static const luaL_Reg WILUA_WHITELISTEDLIBRARIES[] = {
+        static const luaL_Reg whitelisted_libs[] = {
             { "_G", luaopen_base },
             { LUA_TABLIBNAME, luaopen_table },
             { LUA_STRLIBNAME, luaopen_string },
@@ -48,21 +43,20 @@
             //{ "json", luaopen_rapidjson },
             { NULL, NULL }
         };
-        const char* WILUA_BLACKLISTEDGLOBALS[] = {"dofile", "load", "loadfile"};
+        static const char* blacklisted_globals[] = {"dofile", "load", "loadfile"};
 
         // Creates & Destroys instances
         lua_State* createInstance()
         {
-            LuaInstance cInstance;
+            lua_CInstance cInstance;
             cInstance.instance = luaL_newstate();
-            // Loads whitelisted libraries
-            for (auto library : WILUA_WHITELISTEDLIBRARIES)
-            {
-                luaL_requiref(cInstance.instance, library.name, library.func, 1);
+            const luaL_Reg* library;
+            for (library = whitelisted_libs; library->func; library++) {
+                luaL_requiref(cInstance.instance, library->name, library->func, 1);
                 lua_pop(cInstance.instance, 1);
             }
             // Unloads blacklisted globals
-            for (auto globalName : WILUA_BLACKLISTEDGLOBALS)
+            for (auto globalName : blacklisted_globals)
             {
                 SSetNull(cInstance.instance);
                 lua_setglobal(cInstance.instance, globalName);
@@ -112,7 +106,7 @@
         {
             return internalInstance.instance;
         }
-        wi::unordered_map<lua_State*, LuaInstance> GetInstances()
+        lua_CInstancePool GetInstances()
         {
             return LuaInstances;
         }

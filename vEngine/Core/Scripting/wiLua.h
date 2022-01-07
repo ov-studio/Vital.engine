@@ -13,12 +13,17 @@ extern "C"
 }
 
 typedef int(*lua_CFunction) (lua_State* L);
+typedef struct lua_CInstance
+{
+    lua_State* instance = nullptr;
+    int execStatus = 0;
+} lua_CInstance;
+typedef wi::unordered_map<lua_State*, lua_CInstance> lua_CInstancePool;
 
 namespace wi::lua
 {
-    struct LuaInstance;
 	lua_State* GetInternalInstance();
-    wi::unordered_map<lua_State*, LuaInstance> GetInstances();
+    lua_CInstancePool GetInstances();
 
 	void Initialize();
 
