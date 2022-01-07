@@ -59,7 +59,7 @@ namespace tinygltf
 		// char** w;
 		int ret = wordexp(filepath.c_str(), &p, 0);
 		if (ret) {
-			// err
+			// error
 			s = filepath;
 			return s;
 		}
@@ -79,17 +79,17 @@ namespace tinygltf
 #endif
 	}
 
-	bool ReadWholeFile(std::vector<unsigned char>* out, std::string* err,
+	bool ReadWholeFile(std::vector<unsigned char>* out, std::string* error,
 		const std::string& filepath, void*) {
 		return wi::helper::FileRead(filepath, *out);
 	}
 
-	bool WriteWholeFile(std::string* err, const std::string& filepath,
+	bool WriteWholeFile(std::string* error, const std::string& filepath,
 		const std::vector<unsigned char>& contents, void*) {
 		return wi::helper::FileWrite(filepath, contents.data(), contents.size());
 	}
 
-	bool LoadImageData(Image *image, const int image_idx, std::string *err,
+	bool LoadImageData(Image *image, const int image_idx, std::string *error,
 		std::string *warn, int req_width, int req_height,
 		const unsigned char *bytes, int size, void *userdata)
 	{
@@ -260,7 +260,7 @@ void ImportModel_GLTF(const std::string& fileName, Scene& scene)
 
 
 	tinygltf::TinyGLTF loader;
-	std::string err;
+	std::string error;
 	std::string warn;
 	bool ret;
 
@@ -287,24 +287,24 @@ void ImportModel_GLTF(const std::string& fileName, Scene& scene)
 
 		if (!extension.compare("GLTF"))
 		{
-			ret = loader.LoadASCIIFromString(&state.gltfModel, &err, &warn, 
+			ret = loader.LoadASCIIFromString(&state.gltfModel, &error, &warn, 
 				reinterpret_cast<const char*>(&filedata.at(0)),
 				static_cast<unsigned int>(filedata.size()), basedir);
 		}
 		else
 		{
-			ret = loader.LoadBinaryFromMemory(&state.gltfModel, &err, &warn,
+			ret = loader.LoadBinaryFromMemory(&state.gltfModel, &error, &warn,
 				filedata.data(),
 				static_cast<unsigned int>(filedata.size()), basedir);
 		}
 	}
 	else
 	{
-		err = "Failed to read file: " + fileName;
+		error = "Failed to read file: " + fileName;
 	}
 
 	if (!ret) {
-		wi::helper::messageBox(err, "GLTF error!");
+		wi::helper::messageBox(error, "GLTF erroror!");
 	}
 
 	Entity rootEntity = CreateEntity();
