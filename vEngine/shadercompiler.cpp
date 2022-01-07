@@ -404,7 +404,7 @@ int main(int argc, char* argv[])
 
 	wi::jobsystem::context ctx;
 
-	std::string SHADERSOURCEPATH = "../../../" + wi::renderer::GetShaderSourcePath();
+	std::string SHADERSOURCEPATH = "../" + wi::renderer::GetShaderSourcePath();
 	wi::helper::MakePathAbsolute(SHADERSOURCEPATH);
 
 	std::cout << "[Shader Compiler] Searching for outdated shaders..." << std::endl;
@@ -527,7 +527,7 @@ int main(int argc, char* argv[])
 		}
 		ss += "};\n"; // map end
 		ss += "}\n"; // namespace end
-		wi::helper::FileWrite("wiShaderDump.h", (uint8_t*)ss.c_str(), ss.length());
+		wi::helper::FileWrite("../wiShaderDump.h", (uint8_t*)ss.c_str(), ss.length());
 		std::cout << "[Shader Compiler] ShaderDump written to wiShaderDump.h in " << std::setprecision(4) << timer.elapsed_seconds() << " seconds" << std::endl;
 	}
 
