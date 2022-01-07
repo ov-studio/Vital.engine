@@ -13,6 +13,168 @@ using namespace wi::graphics;
 using namespace wi::scene;
 using namespace wi::ecs;
 
+/*
+typedef std::unordered_map<std::string, uint32_t> TextureLookupType;
+struct ImportState {
+	ImportState(model_import::Model& _model) : model(_model) {}
+
+	model_import::Model& model;
+	TextureLookupType textureLookup;
+};
+
+bool importNode(ImportState& state, FbxNode* pNode);
+bool importMesh(ImportState& state, FbxNode* pNode);
+bool importMaterial(ImportState& state, model_import::Mesh& mesh, FbxSurfaceMaterial* pFbxMaterial);
+bool importLight(ImportState& state, FbxNode* pNode, FbxLight* pLight);
+uint32_t importTexture(ImportState& state, FbxFileTexture* pFileTexture, bool sRGB);
+*/
+
+
+struct LoaderState
+{
+	Scene* scene;
+	wi::unordered_map<int, Entity> entityMap;  // node -> entity
+};
+
+
+bool importMesh(LoaderState& state, FbxNode* pNode) {
+	auto pMesh = pNode->GetMesh();
+	if (!pMesh->IsTriangleMesh()) {
+		printf("error: We only support triangle meshes.\n");
+		return false;
+	}
+
+	/*
+	model_import::Mesh mesh;
+	mesh.transform = AsTransform(pNode->EvaluateGlobalTransform()) * GetGeometryTransform(pNode);
+
+	// Import the materials.
+	int materialCount = pNode->GetMaterialCount();
+	for (int n = 0; n < materialCount; n++) {
+		FbxSurfaceMaterial* material = pNode->GetMaterial(n);
+		if (!importMaterial(state, mesh, material)) {
+			return false;
+		}
+	}
+
+	const FbxGeometryElementNormal* pNormals = pMesh->GetElementNormal(0);
+	if (!pNormals) {
+		// Generate normals if we don't have any
+		pMesh->GenerateNormals();
+		pNormals = pMesh->GetElementNormal(0);
+	}
+
+	const FbxGeometryElementUV* pUVs = pMesh->GetElementUV(0);
+
+	const FbxLayerElementMaterial* pPolygonMaterials = pMesh->GetElementMaterial();
+	assert(pPolygonMaterials != nullptr);
+	assert(pPolygonMaterials->GetReferenceMode() == FbxGeometryElement::eIndex ||
+		pPolygonMaterials->GetReferenceMode() == FbxGeometryElement::eIndexToDirect);
+	FbxGeometryElement::EMappingMode mappingMode = pPolygonMaterials->GetMappingMode();
+	auto getMaterialIndex = [pPolygonMaterials, mappingMode, materialCount](uint32_t triangleIndex) {
+		int lookupIndex = 0;
+		switch (mappingMode) {
+		case FbxGeometryElement::eByPolygon:
+			lookupIndex = triangleIndex;
+			break;
+		case FbxGeometryElement::eAllSame:
+			lookupIndex = 0;
+			break;
+		default:
+			assert(false);
+			break;
+		}
+
+		int materialIndex = pPolygonMaterials->mIndexArray->GetAt(lookupIndex);
+		assert(materialIndex >= 0 && materialIndex < materialCount);
+		return uint32_t(materialIndex);
+	};
+
+	// vertex deduplication
+	UnorderedMapGenerator<hvvr::ShadingVertex, uint32_t>::Type hashMap;
+	*/
+
+	uint32_t numTriangles = uint32_t(pMesh->GetPolygonCount());
+	//mesh.data.verts.reserve(numTriangles * 3);
+	//mesh.data.triShade.resize(numTriangles);
+
+	//Entity rootEntity = CreateEntity();
+	//state->scene.transforms.Create(rootEntity);
+	//state.scene.names.Create(rootEntity) = name;
+
+	//Entity meshEntity = scene.Entity_CreateMesh(x.name);
+	//MeshComponent& mesh = *scene.meshes.GetComponent(meshEntity);
+
+	for (uint32_t t = 0; t < numTriangles; t++) {
+		uint32_t triIndices[3];
+		for (uint32_t v = 0; v < 3; v++) {
+			int iPoint = pMesh->GetPolygonVertex(t, v);
+
+			/*
+			FbxVector4 point = pMesh->GetControlPointAt(iPoint);
+			FbxVector4 normal = GetVertexElement(pNormals, iPoint, t, v, FbxVector4(0, 0, 0, 0));
+			FbxVector2 uv = GetVertexElement(pUVs, iPoint, t, v, FbxVector2(0, 1));
+
+			hvvr::ShadingVertex vertex = {};
+			vertex.pos = hvvr::vector3(float(point[0]), float(point[1]), float(point[2]));
+			vertex.normal = hvvr::vector4h(hvvr::vector4(float(normal[0]), float(normal[1]), float(normal[2]), 0));
+			vertex.uv = hvvr::vector2(float(uv[0]), 1.0f - float(uv[1]));
+
+			auto it = hashMap.find(vertex);
+			if (it != hashMap.end()) {
+				// it's a duplicate vertex
+				triIndices[v] = it->second;
+			}
+			else {
+				// we haven't run into this vertex yet
+				uint32_t index = uint32_t(mesh.data.verts.size());
+				mesh.data.verts.emplace_back(vertex);
+				hashMap[vertex] = index;
+				triIndices[v] = index;
+			}
+			*/
+		}
+
+		/*
+		uint32_t materialIndex = getMaterialIndex(t);
+
+		hvvr::PrecomputedTriangleShade& triShade = mesh.data.triShade[t];
+		triShade.indices[0] = triIndices[0];
+		triShade.indices[1] = triIndices[1];
+		triShade.indices[2] = triIndices[2];
+		triShade.material = materialIndex;
+		*/
+	}
+
+	//hvvr::GenerateTopology(mesh.data);
+
+	//state.model.meshes.emplace_back(std::move(mesh));
+	return true;
+}
+
+bool importNode(LoaderState& state, FbxNode* pNode) {
+	//auto& node = state.gltfModel.nodes[nodeIndex];
+	//Scene& scene = *state.scene;
+	//Entity entity = INVALID_ENTITY;
+	if (auto pLight = pNode->GetLight()) {
+		//if (!importLight(pNode, pLight))
+			//return false;
+	}
+	else if (auto pMesh = pNode->GetMesh()) {
+		if (!importMesh(state, pNode))
+			return false;
+	}
+
+	for (int i = 0, e = pNode->GetChildCount(); i < e; i++) {
+		if (!importNode(state, pNode->GetChild(i))) {
+			return false;
+		}
+		wi::backlog::post("wow node loop worked perfectly!\n");
+	}
+
+	return true;
+}
+
 void ImportModel_FBX(const std::string& fileName, Scene& scene)
 {
 	std::string directory = wi::helper::GetDirectoryFromPath(fileName);
@@ -38,11 +200,38 @@ void ImportModel_FBX(const std::string& fileName, Scene& scene)
             wi::backlog::post(lImporter->GetStatus().GetErrorString(), wi::backlog::LogLevel::Error);
         }
 		else {
+
+			ios->SetBoolProp(IMP_FBX_MATERIAL, true);
+			ios->SetBoolProp(IMP_FBX_TEXTURE, true);
+			ios->SetBoolProp(IMP_FBX_LINK, true);
+			ios->SetBoolProp(IMP_FBX_SHAPE, true);
+			ios->SetBoolProp(IMP_FBX_GOBO, true);
+			ios->SetBoolProp(IMP_FBX_ANIMATION, false);
+			ios->SetBoolProp(IMP_FBX_GLOBAL_SETTINGS, true);
+
 			// Create a new scene so it can be populated by the imported file.
 			FbxScene* lScene = FbxScene::Create(lSdkManager, lFilename);
 			// Import the contents of the file into the scene.
-			lImporter->Import(lScene);
-			wi::backlog::post("Tron: Loaded into importer!.\n");
+			if (lImporter->Import(lScene))
+			{
+				//if (lScene->GetGlobalSettings().GetSystemUnit() != FbxSystemUnit::m)
+					//FbxSystemUnit::m.ConvertScene(lScene);
+
+				// triangulate
+				FbxGeometryConverter GeometryConverter(lSdkManager);
+				GeometryConverter.Triangulate(lScene, true, false);
+
+				LoaderState state;
+				state.scene = &scene;
+
+				FbxNode* root = lScene->GetRootNode();
+				if (!root) {
+					return;
+				}
+				if (!importNode(state, root))
+					return;
+				wi::backlog::post("Tron: Loaded into importer!.\n");
+			}
 		}
 	}
 	else
