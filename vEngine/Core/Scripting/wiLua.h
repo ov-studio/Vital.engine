@@ -7,9 +7,9 @@
 
 extern "C"
 {
-#include "Vendors/lua/lua.h"
-#include "Vendors/lua/lualib.h"
-#include "Vendors/lua/lauxlib.h"
+	#include "Vendors/lua/lua.h"
+	#include "Vendors/lua/lualib.h"
+	#include "Vendors/lua/lauxlib.h"
 }
 
 typedef int(*lua_CFunction) (lua_State* L);
@@ -23,7 +23,7 @@ typedef wi::unordered_map<lua_State*, lua_CInstance> lua_CInstancePool;
 namespace wi::lua
 {
 	lua_State* GetInternalInstance();
-    lua_CInstancePool GetInstances();
+	lua_CInstancePool GetInstances();
 
 	void Initialize();
 
