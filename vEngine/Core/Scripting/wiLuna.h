@@ -7,16 +7,15 @@
 
 template < class T > class Luna {
 public:
-
 	struct PropertyType {
-		const char     *name;
-		int             (T::*getter) (lua_State *);
-		int             (T::*setter) (lua_State *);
+		const char *name;
+		int (T::*getter) (lua_State *);
+		int (T::*setter) (lua_State *);
 	};
 
 	struct FunctionType {
-		const char     *name;
-		int             (T::*func) (lua_State *);
+		const char *name;
+		int (T::*func) (lua_State *);
 	};
 
 	/*
@@ -32,8 +31,7 @@ public:
 	static T* check(lua_State * L, int narg)
 	{
 		T** obj = static_cast <T **>(luaL_checkudata(L, narg, T::className));
-		if (!obj)
-			return nullptr; // lightcheck returns nullptr if not found.
+		if (!obj) return nullptr; // lightcheck returns nullptr if not found.
 		return *obj;		// pointer to T object
 	}
 
@@ -50,8 +48,7 @@ public:
 	*/
 	static T* lightcheck(lua_State * L, int narg) {
 		T** obj = static_cast <T **>(luaL_testudata(L, narg, T::className));
-		if (!obj)
-			return nullptr; // lightcheck returns nullptr if not found.
+		if (!obj) return nullptr; // lightcheck returns nullptr if not found.
 		return *obj;		// pointer to T object
 	}
 
@@ -86,7 +83,7 @@ public:
 		}
 
 		luaL_newmetatable(L, T::className);
-		int             metatable = lua_gettop(L);
+		int metatable = lua_gettop(L);
 
 		lua_pushstring(L, "__gc");
 		lua_pushcfunction(L, &Luna < T >::gc_obj);
@@ -150,9 +147,7 @@ public:
 	{
 		T **a = (T **)lua_newuserdata(L, sizeof(T *)); // Create userdata
 		*a = instance;
-
 		luaL_getmetatable(L, T::className);
-
 		lua_setmetatable(L, -2);
 	}
 
@@ -168,11 +163,8 @@ public:
 		lua_rawget(L, -2);		// Get the index
 
 		if (lua_isnumber(L, -1)) { // Check if we got a valid index
-
 			int _index = static_cast<int>(lua_tonumber(L, -1));
-
 			T** obj = static_cast<T**>(lua_touserdata(L, 1));
-
 			lua_pushvalue(L, 3);
 
 			if (_index & (1 << 8)) // A func
@@ -182,14 +174,11 @@ public:
 				lua_pushcclosure(L, &Luna < T >::function_dispatch, 2);
 				return 1; // Return a func
 			}
-
 			lua_pop(L, 2);    // Pop metatable and _index
 			lua_remove(L, 1); // Remove userdata
 			lua_remove(L, 1); // Remove [key]
-
 			return ((*obj)->*(T::properties[_index].getter)) (L);
 		}
-
 		return 1;
 	}
 
@@ -200,16 +189,13 @@ public:
 	*/
 	static int property_setter(lua_State * L)
 	{
-
 		lua_getmetatable(L, 1); // Look up the index from name
 		lua_pushvalue(L, 2);	//
 		lua_rawget(L, -2);		//
 
 		if (lua_isnumber(L, -1)) // Check if we got a valid index
 		{
-
 			int _index = static_cast<int>(lua_tonumber(L, -1));
-
 			T** obj = static_cast<T**>(lua_touserdata(L, 1));
 
 			if (!obj || !*obj)
@@ -217,7 +203,6 @@ public:
 				luaL_error(L, "Internal error, no object given!");
 				return 0;
 			}
-
 			if (_index >> 8) // Try to set a func
 			{
 				char c[128];
@@ -225,14 +210,11 @@ public:
 				luaL_error(L, c);
 				return 0;
 			}
-
 			lua_pop(L, 2);    // Pop metatable and _index
 			lua_remove(L, 1); // Remove userdata
 			lua_remove(L, 1); // Remove [key]
-
 			return ((*obj)->*(T::properties[_index].setter)) (L);
 		}
-
 		return 0;
 	}
 
@@ -245,7 +227,6 @@ public:
 	{
 		int i = (int)lua_tonumber(L, lua_upvalueindex(1));
 		T** obj = static_cast < T ** >(lua_touserdata(L, lua_upvalueindex(2)));
-
 		return ((*obj)->*(T::methods[i].func)) (L);
 	}
 
@@ -257,22 +238,15 @@ public:
 	static int gc_obj(lua_State * L)
 	{
 		T** obj = static_cast < T ** >(lua_touserdata(L, -1));
-
-		if (obj)
-			delete(*obj);
-
+		if (obj) delete(*obj);
 		return 0;
 	}
 
 	static int to_string(lua_State* L)
 	{
 		T** obj = static_cast<T**>(lua_touserdata(L, -1));
-
-		if (obj)
-			lua_pushfstring(L, "%s (%p)", T::className, (void*)*obj);
-		else
-			lua_pushstring(L, "Empty object");
-
+		if (obj) lua_pushfstring(L, "%s (%p)", T::className, (void*)*obj);
+		else lua_pushstring(L, "Empty object");
 		return 1;
 	}
 
@@ -284,9 +258,7 @@ public:
 	{
 		T** obj1 = static_cast<T**>(lua_touserdata(L, -1));
 		T** obj2 = static_cast<T**>(lua_touserdata(L, 1));
-
 		lua_pushboolean(L, *obj1 == *obj2);
-
 		return 1;
 	}
 };
