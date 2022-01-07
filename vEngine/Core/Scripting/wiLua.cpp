@@ -128,21 +128,21 @@ namespace wi::lua
     }
     bool Failed(lua_State* L)
     {
-    return LuaInstances[L].execStatus != 0;
+        return LuaInstances[L].execStatus != 0;
     }
     std::string GetErrorMsg(lua_State* L)
     {
-    if (Failed(L)) {
-        std::string retVal = lua_tostring(L, -1);
-        return retVal;
-    }
-    return std::string("");
+        if (Failed(L)) {
+            std::string retVal = lua_tostring(L, -1);
+            return retVal;
+        }
+        return std::string("");
     }
     std::string PopErrorMsg(lua_State* L)
     {
-    std::string retVal = lua_tostring(L, -1);
-    lua_pop(L, 1); // remove error message
-    return retVal;
+        std::string retVal = lua_tostring(L, -1);
+        lua_pop(L, 1); // remove error message
+        return retVal;
     }
 
     void PostErrorMsg(lua_State* L)
@@ -389,7 +389,6 @@ namespace wi::lua
         }
         wi::backlog::post(ss);
     }
-
     void SAddMetatable(lua_State* L, const std::string& name)
     {
         luaL_newmetatable(L, name.c_str());
