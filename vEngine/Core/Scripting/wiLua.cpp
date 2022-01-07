@@ -110,7 +110,7 @@ namespace wi::lua
     {
         return internalInstance.instance;
     }
-    lua_CInstancePool GetInstances()
+    lua_CInstancePool GetInstancePool()
     {
         return LuaInstances;
     }
