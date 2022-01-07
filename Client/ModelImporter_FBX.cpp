@@ -3,6 +3,7 @@
 #include "ModelImporter.h"
 
 #include <fbxsdk.h>
+#include <fbxsdk/fileio/fbxiosettings.h>
 
 #include <string>
 #include <istream>
@@ -12,79 +13,10 @@ using namespace wi::graphics;
 using namespace wi::scene;
 using namespace wi::ecs;
 
-// TODO: TRON:NEEDS TO BE FORMATTED TO SUPPORT WITH FBX SDK
-
-/*
-struct membuf : std::streambuf
-{
-	membuf(char* begin, char* end) {
-		this->setg(begin, begin, end);
-	}
-};
-
-// Custom material file reader:
-class MaterialFileReader : public tinyobj::MaterialReader {
-public:
-	explicit MaterialFileReader(const std::string& mtl_basedir)
-		: m_mtlBaseDir(mtl_basedir) {}
-	virtual ~MaterialFileReader() {}
-	virtual bool operator()(const std::string& matId,
-		std::vector<tinyobj::material_t>* materials,
-		std::map<std::string, int>* matMap, std::string* err)
-	{
-		std::string filepath;
-
-		if (!m_mtlBaseDir.empty()) {
-			filepath = std::string(m_mtlBaseDir) + matId;
-		}
-		else {
-			filepath = matId;
-		}
-
-		wi::vector<uint8_t> filedata;
-		if (!wi::helper::FileRead(filepath, filedata))
-		{
-			std::string ss;
-			ss += "WARN: Material file [ " + filepath + " ] not found.\n";
-			if (err) {
-				(*err) += ss;
-			}
-			return false;
-		}
-
-		membuf sbuf((char*)filedata.data(), (char*)filedata.data() + filedata.size());
-		std::istream matIStream(&sbuf);
-
-		std::string warning;
-		LoadMtl(matMap, materials, &matIStream, &warning);
-
-		if (!warning.empty()) {
-			if (err) {
-				(*err) += warning;
-			}
-		}
-
-		return true;
-	}
-
-private:
-	std::string m_mtlBaseDir;
-};
-*/
-
-// Transform the data from FBX space to engine-space:
-static const bool transform_to_LH = true;
-
 void ImportModel_FBX(const std::string& fileName, Scene& scene)
 {
 	std::string directory = wi::helper::GetDirectoryFromPath(fileName);
 	std::string name = wi::helper::GetFileNameFromPath(fileName);
-
-    /*
-	tinyobj::attrib_t obj_attrib;
-	std::vector<tinyobj::shape_t> obj_shapes;
-	std::vector<tinyobj::material_t> obj_materials;
-    */
 	std::string error;
 
 	wi::vector<uint8_t> filedata;
@@ -92,10 +24,26 @@ void ImportModel_FBX(const std::string& fileName, Scene& scene)
 
 	if (success)
 	{
-		//membuf sbuf((char*)filedata.data(), (char*)filedata.data() + filedata.size());
-		//std::istream in(&sbuf);
-		//MaterialFileReader matFileReader(directory);
-		//success = tinyobj::LoadObj(&obj_attrib, &obj_shapes, &obj_materials, &error, &in, &matFileReader, true);
+		FbxManager* lSdkManager = FbxManager::Create();
+		FbxIOSettings* ios = FbxIOSettings::Create(lSdkManager, IOSROOT);
+		lSdkManager->SetIOSettings(ios);
+
+        // Create an importer.
+        FbxImporter* lImporter = FbxImporter::Create(lSdkManager, "");
+        // Initialize the importer.
+		const char* lFilename = fileName.c_str();
+        success = lImporter->Initialize(lFilename, -1, lSdkManager->GetIOSettings());
+        if (!success) {
+            wi::backlog::post("Call to FbxImporter::Initialize() failed.\n", wi::backlog::LogLevel::Error);
+            wi::backlog::post(lImporter->GetStatus().GetErrorString(), wi::backlog::LogLevel::Error);
+        }
+		else {
+			// Create a new scene so it can be populated by the imported file.
+			FbxScene* lScene = FbxScene::Create(lSdkManager, lFilename);
+			// Import the contents of the file into the scene.
+			lImporter->Import(lScene);
+			wi::backlog::post("Tron: Loaded into importer!.\n");
+		}
 	}
 	else
 	{
@@ -109,11 +57,10 @@ void ImportModel_FBX(const std::string& fileName, Scene& scene)
 
 	if (success)
 	{
+		/*
 		Entity rootEntity = CreateEntity();
 		scene.transforms.Create(rootEntity);
 		scene.names.Create(rootEntity) = name;
-
-		/*
 		// Load material library:
 		wi::vector<Entity> materialLibrary = {};
 		for (auto& obj_material : obj_materials)
@@ -255,9 +202,8 @@ void ImportModel_FBX(const std::string& fileName, Scene& scene)
 				}
 			}
 			mesh.CreateRenderData();
-			*/
 		}
-
+		*/
 	}
 	else
 	{

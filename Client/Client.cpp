@@ -741,6 +741,12 @@ void ClientComponent::Load()
 					{
 						wi::scene::LoadModel(fileName);
 					}
+					else if (!extension.compare("FBX")) // fbx
+					{
+						Scene scene;
+						ImportModel_FBX(fileName, scene);
+						wi::scene::GetScene().Merge(scene);
+					}
 					else if (!extension.compare("OBJ")) // wavefront-obj
 					{
 						Scene scene;
