@@ -724,8 +724,9 @@ void ClientComponent::Load()
 	modelButton.OnClick([&](wi::gui::EventArgs args) {
 		wi::helper::FileDialogParams params;
 		params.type = wi::helper::FileDialogParams::OPEN;
-		params.description = "vEngine Assets (.vasset, .obj, .gltf, .glb)";
+		params.description = "vEngine Assets (.vasset, .fbx, .obj, .gltf, .glb)";
 		params.extensions.push_back("vasset");
+		params.extensions.push_back("fbx");
 		params.extensions.push_back("obj");
 		params.extensions.push_back("gltf");
 		params.extensions.push_back("glb");
