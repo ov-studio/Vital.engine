@@ -1062,6 +1062,9 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vVersion.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLuaManager.h">
+      <Filter>Core\Scripting</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
@@ -1797,6 +1800,9 @@
       <Filter>Core\Graphics\API</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLuaManager.cpp">
+      <Filter>Core\Scripting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.inl">

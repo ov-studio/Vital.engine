@@ -236,18 +236,6 @@ namespace wi::lua
             }
         #endif
     }
-    void AsyncUpdate()
-    {
-        SignalHelper("vEngine_onAsyncUpdate");
-    }
-    void Update()
-    {
-        SignalHelper("vEngine_onUpdate");
-    }
-    void Render()
-    {
-        SignalHelper("vEngine_onRender");
-    }
     void Signal(const std::string& name)
     {
         SignalHelper(name.c_str());
