@@ -1,6 +1,5 @@
 #pragma once
 #include "Core/Scripting/wiLua.h"
-#include "Core/Scripting/wiLuna.h"
 #include "Core/Graphics/wiSpriteFont.h"
 
 namespace wi::lua

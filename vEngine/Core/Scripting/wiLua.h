@@ -1,9 +1,4 @@
 #pragma once
-#include "vCommon.h"
-#include "Core/Helpers/wiMath.h"
-#include "Core/Helpers/wiUnorderedMap.h"
-
-#include <string>
 
 extern "C"
 {
@@ -11,6 +6,13 @@ extern "C"
 	#include "Vendors/lua/lualib.h"
 	#include "Vendors/lua/lauxlib.h"
 }
+
+#include "vCommon.h"
+#include "Core/Helpers/wiMath.h"
+#include "Core/Helpers/wiUnorderedMap.h"
+#include "Core/Scripting/wiLuna.h"
+
+#include <string>
 
 typedef int(*lua_CFunction) (lua_State* L);
 typedef struct lua_CInstance
