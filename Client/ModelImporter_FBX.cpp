@@ -20,12 +20,54 @@ bool importMesh(Scene& scene, Entity& rootEntity, FbxNode* pNode) {
 		return false;
 	}
 
+    // Import the materials.
+    int materialCount = pNode->GetMaterialCount();
+    for (int n = 0; n < materialCount; n++) {
+        FbxSurfaceMaterial* material = pNode->GetMaterial(n);
+        //if (!importMaterial(scene, mesh, material)) {
+          //  return false;
+        //}
+    }
+
+	wi::vector<Entity> materialLibrary = {};
+	if (materialLibrary.empty())
+	{
+		// Create default material if nothing was found:
+		Entity materialEntity = scene.Entity_CreateMaterial("FBXImport_defaultMaterial");
+		MaterialComponent& material = *scene.materials.GetComponent(materialEntity);
+		materialLibrary.push_back(materialEntity); // for subset-indexing...
+	}
+
 	const FbxGeometryElementNormal* pNormals = pMesh->GetElementNormal(0);
 	if (!pNormals) {
 		pMesh->GenerateNormals();
 		pNormals = pMesh->GetElementNormal(0);
 	}
 	const FbxGeometryElementUV* pUVs = pMesh->GetElementUV(0);
+
+    const FbxLayerElementMaterial* pPolygonMaterials = pMesh->GetElementMaterial();
+    assert(pPolygonMaterials != nullptr);
+    assert(pPolygonMaterials->GetReferenceMode() == FbxGeometryElement::eIndex ||
+           pPolygonMaterials->GetReferenceMode() == FbxGeometryElement::eIndexToDirect);
+    FbxGeometryElement::EMappingMode mappingMode = pPolygonMaterials->GetMappingMode();
+    auto getMaterialIndex = [pPolygonMaterials, mappingMode, materialCount](uint32_t triangleIndex) {
+        int lookupIndex = 0;
+        switch (mappingMode) {
+            case FbxGeometryElement::eByPolygon:
+                lookupIndex = triangleIndex;
+                break;
+            case FbxGeometryElement::eAllSame:
+                lookupIndex = 0;
+                break;
+            default:
+                assert(false);
+                break;
+        }
+
+        int materialIndex = pPolygonMaterials->mIndexArray->GetAt(lookupIndex);
+        assert(materialIndex >= 0 && materialIndex < materialCount);
+        return uint32_t(materialIndex);
+    };
 
     const char* nodeName = pNode->GetName();
 	Entity objectEntity = scene.Entity_CreateObject(nodeName);
@@ -38,6 +80,7 @@ bool importMesh(Scene& scene, Entity& rootEntity, FbxNode* pNode) {
 
 	//wi::unordered_map<int, int> registered_materialIndices = {};
 	uint32_t numTriangles = uint32_t(pMesh->GetPolygonCount());
+
 	wi::unordered_map<size_t, uint32_t> uniqueVertices = {};
 
 	for (uint32_t t = 0; t < numTriangles; t++) {
@@ -65,6 +108,18 @@ bool importMesh(Scene& scene, Entity& rootEntity, FbxNode* pNode) {
 			XMFLOAT3 nor = XMFLOAT3(0, 0, 0);
 			XMFLOAT2 tex = XMFLOAT2(0, 0);
 			// eliminate duplicate vertices by means of hashing:
+
+			//int materialIndex = std::max(0, shape.mesh.material_ids[i / 3]); // this indexes the material library
+            //uint32_t materialIndex = getMaterialIndex(t);
+            int materialIndex = 0;
+			//if (registered_materialIndices.count(materialIndex) == 0)
+			//{
+				//registered_materialIndices[materialIndex] = (int)mesh.subsets.size();
+			mesh.subsets.push_back(MeshComponent::MeshSubset());
+			mesh.subsets.back().materialID = materialLibrary[materialIndex];
+			mesh.subsets.back().indexOffset = (uint32_t)mesh.indices.size();
+			//}
+
 			size_t vertexHash = 0;
 			//wi::helper::hash_combine(vertexHash, v);
 			//wi::helper::hash_combine(vertexHash, v);
@@ -76,7 +131,7 @@ bool importMesh(Scene& scene, Entity& rootEntity, FbxNode* pNode) {
 			mesh.vertex_normals.push_back(nor);
 			mesh.vertex_uvset_0.push_back(tex);
             mesh.indices.push_back(uniqueVertices[vertexHash]); // SOMETHNG IS WRONG HERE IMO
-            mesh.subsets.back().indexCount++;
+            //mesh.subsets.back().indexCount++;
 		}
 	}
 	mesh.CreateRenderData(); // CAUSES CRASHES
