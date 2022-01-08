@@ -11,11 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Core\Sandbox\compiler.cpp" />
+    <ClCompile Include="..\Core\Sandbox\vCompiler.cpp" />
     <ClCompile Include="..\Core\Sandbox\vLua.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Core\Sandbox\compiler.h" />
+    <ClInclude Include="..\Core\Sandbox\vCompiler.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
