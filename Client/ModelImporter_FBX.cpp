@@ -133,7 +133,7 @@ bool importMesh(Scene& scene, Entity& rootEntity, FbxNode* pNode) {
 			mesh.vertex_normals.push_back(nor);
 			mesh.vertex_uvset_0.push_back(tex);
             mesh.indices.push_back(uniqueVertices[vertexHash]); // SOMETHNG IS WRONG HERE IMO
-            mesh.subsets.back().indexCount++;
+            //mesh.subsets.back().indexCount++;
 		}
 	}
 	mesh.CreateRenderData(); // CAUSES CRASHES
