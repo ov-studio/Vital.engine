@@ -1,6 +1,6 @@
 #pragma once
 #include "vCommon.h"
-#include "Core/Scripting/wiLua.h"
+#include "Core/Scripting/vLua.h"
 #include "Core/Helpers/wiMath.h"
 
 namespace wi::lua

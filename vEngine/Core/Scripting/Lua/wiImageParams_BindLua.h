@@ -1,5 +1,5 @@
 #pragma once
-#include "Core/Scripting/wiLua.h"
+#include "Core/Scripting/vLua.h"
 #include "Core/Graphics/wiImage.h"
 
 namespace wi::lua

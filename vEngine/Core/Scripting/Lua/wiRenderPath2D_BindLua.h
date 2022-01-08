@@ -1,5 +1,5 @@
 #pragma once
-#include "Core/Scripting/wiLua.h"
+#include "Core/Scripting/vLua.h"
 #include "Core/Interfaces/wiRenderPath2D.h"
 #include "Core/Scripting/Lua/wiRenderPath_BindLua.h"
 

@@ -946,7 +946,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLuna.h">
       <Filter>Core\Scripting</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLua.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLua.h">
       <Filter>Core\Scripting</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.h">
@@ -1697,7 +1697,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.cpp">
       <Filter>Core\Interfaces</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLua.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLua.cpp">
       <Filter>Core\Scripting</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.cpp">

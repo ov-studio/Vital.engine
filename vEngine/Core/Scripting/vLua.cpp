@@ -2,7 +2,7 @@
     #include "Core/Sandbox/wiSandboxLua.h"
 #endif
 
-#include "Core/Scripting/wiLua.h"
+#include "Core/Scripting/vLua.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Helpers/wiHelper.h"
 #include "Core/Scripting/Lua/wiApplication_BindLua.h"

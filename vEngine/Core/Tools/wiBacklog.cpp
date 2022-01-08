@@ -6,7 +6,7 @@
 #include "Core/Graphics/wiFont.h"
 #include "Core/Graphics/wiSpriteFont.h"
 #include "Core/Graphics/wiImage.h"
-#include "Core/Scripting/wiLua.h"
+#include "Core/Scripting/vLua.h"
 #include "Core/Input/wiInput.h"
 #include "Core/Systems/wiPlatform.h"
 #include "Core/Helpers/wiHelper.h"
