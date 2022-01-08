@@ -46,6 +46,7 @@ bool importMesh(Scene& scene, Entity& rootEntity, FbxNode* pNode) {
 	const FbxGeometryElementUV* pUVs = pMesh->GetElementUV(0);
 
     const FbxLayerElementMaterial* pPolygonMaterials = pMesh->GetElementMaterial();
+	/*
     assert(pPolygonMaterials != nullptr);
     assert(pPolygonMaterials->GetReferenceMode() == FbxGeometryElement::eIndex ||
            pPolygonMaterials->GetReferenceMode() == FbxGeometryElement::eIndexToDirect);
@@ -68,6 +69,7 @@ bool importMesh(Scene& scene, Entity& rootEntity, FbxNode* pNode) {
         assert(materialIndex >= 0 && materialIndex < materialCount);
         return uint32_t(materialIndex);
     };
+	*/
 
     const char* nodeName = pNode->GetName();
 	Entity objectEntity = scene.Entity_CreateObject(nodeName);
@@ -131,7 +133,7 @@ bool importMesh(Scene& scene, Entity& rootEntity, FbxNode* pNode) {
 			mesh.vertex_normals.push_back(nor);
 			mesh.vertex_uvset_0.push_back(tex);
             mesh.indices.push_back(uniqueVertices[vertexHash]); // SOMETHNG IS WRONG HERE IMO
-            //mesh.subsets.back().indexCount++;
+            mesh.subsets.back().indexCount++;
 		}
 	}
 	mesh.CreateRenderData(); // CAUSES CRASHES
@@ -194,6 +196,7 @@ void ImportModel_FBX(const std::string& fileName, Scene& scene)
 			// Import the contents of the file into the scene.
 			if (lImporter->Import(lScene))
 			{
+                lImporter->Destroy();
 				//if (lScene->GetGlobalSettings().GetSystemUnit() != FbxSystemUnit::m)
 					//FbxSystemUnit::m.ConvertScene(lScene);
 
@@ -210,6 +213,7 @@ void ImportModel_FBX(const std::string& fileName, Scene& scene)
 				if (!importNode(scene, rootEntity, root)) return;
 			}
 		}
+        lSdkManager->Destroy();
 	}
 	else
 	{
