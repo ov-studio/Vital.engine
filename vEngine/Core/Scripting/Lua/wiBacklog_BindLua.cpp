@@ -1,4 +1,3 @@
-#include "Core/Scripting/vLuaBooter.h"
 #include "Core/Scripting/Lua/wiBacklog_BindLua.h"
 #include "Core/Tools/wiBacklog.h"
 
