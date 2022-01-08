@@ -124,5 +124,5 @@ ModelManifest.xml
 */Generated Files/
 *.wishadermeta
 wiShaderdump.h
-wiSandboxLua.h
+vSandboxLua.h
 wiSandboxV8.h
