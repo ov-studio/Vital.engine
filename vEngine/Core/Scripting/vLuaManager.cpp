@@ -1,5 +1,5 @@
 #include "Core/Scripting/vLua.h"
-#include "Core/Scripting/wiLuaManager.h"
+#include "Core/Scripting/vLuaManager.h"
 
 namespace wi::lua
 {

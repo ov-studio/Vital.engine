@@ -10,7 +10,7 @@ extern "C"
 #include "vCommon.h"
 #include "Core/Helpers/wiMath.h"
 #include "Core/Helpers/wiUnorderedMap.h"
-#include "Core/Scripting/wiLuna.h"
+#include "Core/Scripting/vLuna.h"
 
 #include <string>
 

@@ -943,7 +943,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.h">
       <Filter>Core\Interfaces</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLuna.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuna.h">
       <Filter>Core\Scripting</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLua.h">
@@ -1062,7 +1062,7 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vVersion.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLuaManager.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaManager.h">
       <Filter>Core\Scripting</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1800,7 +1800,7 @@
       <Filter>Core\Graphics\API</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\wiLuaManager.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaManager.cpp">
       <Filter>Core\Scripting</Filter>
     </ClCompile>
   </ItemGroup>
