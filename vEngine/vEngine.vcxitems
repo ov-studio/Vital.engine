@@ -15,6 +15,7 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaBooter.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.h" />
@@ -412,7 +413,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSprite_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiTexture_BindLua.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaBooter.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiGUI.cpp" />

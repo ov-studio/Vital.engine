@@ -12,7 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Core\Sandbox\vCompiler.cpp" />
-    <ClCompile Include="..\Core\Sandbox\vLua.cpp" />
+    <ClCompile Include="..\Core\Sandbox\vLuaBooter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Core\Sandbox\vCompiler.h" />

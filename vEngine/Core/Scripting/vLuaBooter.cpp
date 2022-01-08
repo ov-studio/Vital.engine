@@ -1,8 +1,9 @@
-#if __has_include("Core/Sandbox/wiSandboxLua.h")
-    #include "Core/Sandbox/wiSandboxLua.h"
+#if __has_include("Core/Sandbox/vSandboxLua.h")
+    #include "Core/Sandbox/vSandboxLua.h"
 #endif
 
-#include "Core/Scripting/vLua.h"
+#include "Core/Scripting/vLuaBooter.h"
+
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Helpers/wiHelper.h"
 #include "Core/Scripting/Lua/wiApplication_BindLua.h"
@@ -63,7 +64,7 @@ namespace wi::lua
             SSetNull(cInstance.instance);
             lua_setglobal(cInstance.instance, globalName);
         }
-        #if __has_include("Core/Sandbox/wiSandboxLua.h")
+        #if __has_include("Core/Sandbox/vSandboxLua.h")
             // Loads whitelisted scripts
             for (int i = 0; i < sandbox::lua::modules.size(); ++i)
             {
@@ -226,7 +227,7 @@ namespace wi::lua
 
     inline void SignalHelper(const char* signalType)
     {
-        #if __has_include("Core/Sandbox/wiSandboxLua.h")
+        #if __has_include("Core/Sandbox/vSandboxLua.h")
             for (auto& i : LuaInstances)
             {
                 auto& L = i.first;

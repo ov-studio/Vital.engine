@@ -1,5 +1,5 @@
 #pragma once
-#include "Core/Scripting/vLua.h"
+#include "Core/Scripting/vLuaBooter.h"
 
 namespace wi::lua::backlog
 {

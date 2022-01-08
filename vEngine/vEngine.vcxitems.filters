@@ -1065,6 +1065,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaManager.h">
       <Filter>Core\Scripting</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaBooter.h">
+      <Filter>Core\Scripting</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
@@ -1697,9 +1700,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.cpp">
       <Filter>Core\Interfaces</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLua.cpp">
-      <Filter>Core\Scripting</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
@@ -1801,6 +1801,9 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaManager.cpp">
+      <Filter>Core\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaBooter.cpp">
       <Filter>Core\Scripting</Filter>
     </ClCompile>
   </ItemGroup>

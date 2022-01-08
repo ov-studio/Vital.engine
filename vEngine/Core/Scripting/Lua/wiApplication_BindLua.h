@@ -1,5 +1,5 @@
 #pragma once
-#include "Core/Scripting/vLua.h"
+#include "Core/Scripting/vLuaBooter.h"
 #include "Core/Interfaces/wiApplication.h"
 
 namespace wi::lua

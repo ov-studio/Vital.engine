@@ -1,6 +1,6 @@
+#include "Core/Scripting/vLuaBooter.h"
 #include "Core/Scripting/Lua/wiBacklog_BindLua.h"
 #include "Core/Tools/wiBacklog.h"
-#include "Core/Scripting/vLua.h"
 
 #include <string>
 
