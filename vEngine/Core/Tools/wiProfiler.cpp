@@ -274,7 +274,7 @@ namespace wi::profiler
 			return;
 
 		wi::image::SetCanvas(canvas);
-		wi::font::SetCanvas(canvas, cmd);
+		wi::font::SetCanvas(canvas);
 
 		std::stringstream ss("");
 		ss.precision(2);

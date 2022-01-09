@@ -191,7 +191,7 @@ namespace wi
 
 		if (GetGUIBlurredBackground() != nullptr)
 		{
-			wi::image::SetBackground(*GetGUIBlurredBackground(), cmd);
+			wi::image::SetBackground(*GetGUIBlurredBackground());
 		}
 
 		// Special care for internal resolution, because stencil buffer is of internal resolution, 
