@@ -45,14 +45,14 @@ namespace wi::profiler
 		float times[20] = {};
 		int avg_counter = 0;
 		float time = 0;
-		CommandList cmd;
+		CommandList cmd = INVALID_COMMANDLIST;
 
 		wi::Timer cpuTimer;
 
 		int gpuBegin[arraysize(queryResultBuffer)];
 		int gpuEnd[arraysize(queryResultBuffer)];
 
-        bool IsCPURange() const { return !cmd.IsValid(); }
+		bool IsCPURange() const { return cmd == INVALID_COMMANDLIST; }
 	};
 	wi::unordered_map<size_t, Range> ranges;
 
@@ -273,8 +273,8 @@ namespace wi::profiler
 		if (!ENABLED || !initialized)
 			return;
 
-		wi::image::SetCanvas(canvas);
-		wi::font::SetCanvas(canvas);
+		wi::image::SetCanvas(canvas, cmd);
+		wi::font::SetCanvas(canvas, cmd);
 
 		std::stringstream ss("");
 		ss.precision(2);

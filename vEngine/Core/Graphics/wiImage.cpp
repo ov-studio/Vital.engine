@@ -12,24 +12,24 @@ using namespace wi::enums;
 
 namespace wi::image
 {
-	static Sampler samplers[SAMPLER_COUNT];
-	static Shader vertexShader;
-	static Shader pixelShader;
-	static BlendState blendStates[BLENDMODE_COUNT];
-	static RasterizerState rasterizerState;
-	static DepthStencilState depthStencilStates[STENCILMODE_COUNT][STENCILREFMODE_COUNT];
-	static PipelineState imagePSO[BLENDMODE_COUNT][STENCILMODE_COUNT][STENCILREFMODE_COUNT];
-	static thread_local Texture backgroundTexture;
-	static thread_local wi::Canvas canvas;
+	Sampler					samplers[SAMPLER_COUNT];
+	Shader					vertexShader;
+	Shader					pixelShader;
+	BlendState				blendStates[BLENDMODE_COUNT];
+	RasterizerState			rasterizerState;
+	DepthStencilState		depthStencilStates[STENCILMODE_COUNT][STENCILREFMODE_COUNT];
+	PipelineState			imagePSO[BLENDMODE_COUNT][STENCILMODE_COUNT][STENCILREFMODE_COUNT];
+	Texture					backgroundTextures[COMMANDLIST_COUNT];
+	wi::Canvas				canvases[COMMANDLIST_COUNT];
 
-	void SetBackground(const Texture& texture)
+	void SetBackground(const Texture& texture, CommandList cmd)
 	{
-		backgroundTexture = texture;
+		backgroundTextures[cmd] = texture;
 	}
 
-	void SetCanvas(const wi::Canvas& current_canvas)
+	void SetCanvas(const wi::Canvas& canvas, wi::graphics::CommandList cmd)
 	{
-		canvas = current_canvas;
+		canvases[cmd] = canvas;
 	}
 
 	void Draw(const Texture* texture, const Params& params, CommandList cmd)
@@ -80,7 +80,7 @@ namespace wi::image
 		image_push.texture_mask_index = device->GetDescriptorIndex(params.maskMap, SubresourceType::SRV);
 		if (params.isBackgroundEnabled())
 		{
-			image_push.texture_background_index = device->GetDescriptorIndex(&backgroundTexture, SubresourceType::SRV);
+			image_push.texture_background_index = device->GetDescriptorIndex(&backgroundTextures[cmd], SubresourceType::SRV);
 		}
 		else
 		{
@@ -151,6 +151,7 @@ namespace wi::image
 			}
 			else
 			{
+				const wi::Canvas& canvas = canvases[cmd];
 				// Asserts will check that a proper canvas was set for this cmd with wi::image::SetCanvas()
 				//	The canvas must be set to have dpi aware rendering
 				assert(canvas.width > 0);

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Client.h"
 #include "PaintToolWindow.h"
-#include "Shaders/ShaderInterop_Renderer.h"
+#include "shaders/ShaderInterop_Renderer.h"
 
 #include <cmath>
 
@@ -963,7 +963,7 @@ void PaintToolWindow::RecordHistory(bool start, CommandList cmd)
 				subresource_index = device->CreateSubresource(&newTex, SubresourceType::UAV, 0, 1, i, 1);
 				assert(subresource_index == i);
 			}
-            assert(cmd.IsValid());
+			assert(cmd != wi::graphics::INVALID_COMMANDLIST);
 			wi::renderer::CopyTexture2D(newTex, -1, 0, 0, editTexture, 0, cmd);
 			ReplaceEditTextureSlot(*material, newTex);
 		}

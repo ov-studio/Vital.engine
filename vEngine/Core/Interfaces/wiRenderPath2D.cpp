@@ -184,14 +184,14 @@ namespace wi
 	{
 		GraphicsDevice* device = wi::graphics::GetDevice();
 		CommandList cmd = device->BeginCommandList();
-		wi::image::SetCanvas(*this);
-		wi::font::SetCanvas(*this);
+		wi::image::SetCanvas(*this, cmd);
+		wi::font::SetCanvas(*this, cmd);
 
 		wi::renderer::ProcessDeferredMipGenRequests(cmd);
 
 		if (GetGUIBlurredBackground() != nullptr)
 		{
-			wi::image::SetBackground(*GetGUIBlurredBackground());
+			wi::image::SetBackground(*GetGUIBlurredBackground(), cmd);
 		}
 
 		// Special care for internal resolution, because stencil buffer is of internal resolution, 
