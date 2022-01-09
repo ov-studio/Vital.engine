@@ -963,7 +963,7 @@ namespace vulkan_internal
 
 	inline const std::string GetCachePath()
 	{
-		return wi::helper::GetTempDirectoryPath() + "WickedVkPipelineCache.data";
+		return wi::helper::GetTempDirectoryPath() + "vEngineVkPipelineCache.data";
 	}
 
 	bool CreateSwapChainInternal(
@@ -2271,9 +2271,9 @@ using namespace vulkan_internal;
 		// Fill out application info:
 		VkApplicationInfo appInfo = {};
 		appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-		appInfo.pApplicationName = "Wicked Engine Application";
+		appInfo.pApplicationName = "vEngine Engine Application";
 		appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
-		appInfo.pEngineName = "Wicked Engine";
+		appInfo.pEngineName = "vEngine Engine";
 		appInfo.engineVersion = VK_MAKE_VERSION(wi::version::GetMajor(), wi::version::GetMinor(), wi::version::GetRevision());
 		appInfo.apiVersion = VK_API_VERSION_1_2;
 
