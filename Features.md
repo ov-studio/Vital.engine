@@ -13,7 +13,6 @@
   * Sprites
 
 ## ━ Models:
-  * OBJ
   * GLTF
   * Skeletal Animation
   * Morph-Target Animation

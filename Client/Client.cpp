@@ -724,10 +724,8 @@ void ClientComponent::Load()
 	modelButton.OnClick([&](wi::gui::EventArgs args) {
 		wi::helper::FileDialogParams params;
 		params.type = wi::helper::FileDialogParams::OPEN;
-		params.description = "vEngine Assets (.vasset, .fbx, .obj, .gltf, .glb)";
+		params.description = "vEngine Assets (.vasset, .gltf, .glb)";
 		params.extensions.push_back("vasset");
-		params.extensions.push_back("fbx");
-		params.extensions.push_back("obj");
 		params.extensions.push_back("gltf");
 		params.extensions.push_back("glb");
 		wi::helper::FileDialog(params, [&](std::string fileName) {
@@ -741,18 +739,6 @@ void ClientComponent::Load()
 					if (!extension.compare("VASSET")) // engine-serialized
 					{
 						wi::scene::LoadModel(fileName);
-					}
-					else if (!extension.compare("FBX")) // fbx
-					{
-						Scene scene;
-						ImportModel_FBX(fileName, scene);
-						wi::scene::GetScene().Merge(scene);
-					}
-					else if (!extension.compare("OBJ")) // wavefront-obj
-					{
-						Scene scene;
-						ImportModel_OBJ(fileName, scene);
-						wi::scene::GetScene().Merge(scene);
 					}
 					else if (!extension.compare("GLTF")) // text-based gltf
 					{

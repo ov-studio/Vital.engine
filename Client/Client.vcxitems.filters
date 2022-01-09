@@ -15,7 +15,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)MaterialWindow.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MeshWindow.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)ModelImporter_GLTF.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)ModelImporter_OBJ.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)NameWindow.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)ObjectWindow.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)PaintToolWindow.cpp" />
@@ -73,7 +72,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)meshoptimizer\vfetchoptimizer.cpp">
       <Filter>meshoptimizer</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)ModelImporter_FBX.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)AnimationWindow.h" />
