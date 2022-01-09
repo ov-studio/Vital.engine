@@ -83,7 +83,7 @@ namespace wi
 			// Until engine is not loaded, present initialization screen...
 			CommandList cmd = graphicsDevice->BeginCommandList();
 			graphicsDevice->RenderPassBegin(&swapChain, cmd);
-			wi::image::SetCanvas(canvas, cmd);
+			wi::image::SetCanvas(canvas);
 			Viewport viewport;
 			viewport.width = (float)swapChain.desc.width;
 			viewport.height = (float)swapChain.desc.height;
@@ -171,7 +171,7 @@ namespace wi
 
 		// Begin final compositing:
 		CommandList cmd = graphicsDevice->BeginCommandList();
-		wi::image::SetCanvas(canvas, cmd);
+		wi::image::SetCanvas(canvas);
 		wi::font::SetCanvas(canvas, cmd);
 		Viewport viewport;
 		viewport.width = (float)swapChain.desc.width;

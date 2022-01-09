@@ -273,7 +273,7 @@ namespace wi::profiler
 		if (!ENABLED || !initialized)
 			return;
 
-		wi::image::SetCanvas(canvas, cmd);
+		wi::image::SetCanvas(canvas);
 		wi::font::SetCanvas(canvas, cmd);
 
 		std::stringstream ss("");
