@@ -11217,8 +11217,8 @@ void Postprocess_Tonemap(
 }
 
 #define A_CPU
-#include "shaders/ffx-fsr/ffx_a.h"
-#include "shaders/ffx-fsr/ffx_fsr1.h"
+#include "Shaders/ffx-fsr/ffx_a.h"
+#include "Shaders/ffx-fsr/ffx_fsr1.h"
 void Postprocess_FSR(
 	const Texture& input,
 	const Texture& temp,

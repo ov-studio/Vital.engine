@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Client.h"
 #include "PaintToolWindow.h"
-#include "shaders/ShaderInterop_Renderer.h"
+#include "Shaders/ShaderInterop_Renderer.h"
 
 #include <cmath>
 

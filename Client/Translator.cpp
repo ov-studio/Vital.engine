@@ -3,7 +3,7 @@
 #include "Core/Graphics/wiRenderer.h"
 #include "Core/Input/wiInput.h"
 #include "Core/Helpers/wiMath.h"
-#include "shaders/ShaderInterop_Renderer.h"
+#include "Shaders/ShaderInterop_Renderer.h"
 #include "Core/Systems/wiEventHandler.h"
 
 using namespace wi::ecs;
