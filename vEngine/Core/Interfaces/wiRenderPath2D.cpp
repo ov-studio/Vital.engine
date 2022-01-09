@@ -184,8 +184,8 @@ namespace wi
 	{
 		GraphicsDevice* device = wi::graphics::GetDevice();
 		CommandList cmd = device->BeginCommandList();
-		wi::image::SetCanvas(*this, cmd);
-		wi::font::SetCanvas(*this, cmd);
+		wi::image::SetCanvas(*this);
+		wi::font::SetCanvas(*this);
 
 		wi::renderer::ProcessDeferredMipGenRequests(cmd);
 
