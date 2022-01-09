@@ -45,14 +45,14 @@ namespace wi::profiler
 		float times[20] = {};
 		int avg_counter = 0;
 		float time = 0;
-		CommandList cmd = INVALID_COMMANDLIST;
+		CommandList cmd;
 
 		wi::Timer cpuTimer;
 
 		int gpuBegin[arraysize(queryResultBuffer)];
 		int gpuEnd[arraysize(queryResultBuffer)];
 
-		bool IsCPURange() const { return cmd == INVALID_COMMANDLIST; }
+        bool IsCPURange() const { return !cmd.IsValid(); }
 	};
 	wi::unordered_map<size_t, Range> ranges;
 
