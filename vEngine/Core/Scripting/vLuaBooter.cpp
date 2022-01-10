@@ -43,7 +43,7 @@ namespace wi::lua
         { LUA_DBLIBNAME, luaopen_debug },
         { LUA_COLIBNAME, luaopen_coroutine },
         { LUA_UTF8LIBNAME, luaopen_utf8 },
-        //{ "json", luaopen_rapidjson },
+        { "json", luaopen_rapidjson },
         { NULL, NULL }
     };
     static const char* blacklisted_globals[] = {"dofile", "load", "loadfile"};
