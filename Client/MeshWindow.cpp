@@ -3,8 +3,7 @@
 #include "Client.h"
 
 #include "Utils/stb_image.h"
-
-#include "meshoptimizer/meshoptimizer.h"
+#include "Vendors/mesh_optimizer/meshoptimizer.h"
 
 #include <string>
 
