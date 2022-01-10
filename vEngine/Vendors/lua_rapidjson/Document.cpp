@@ -2,7 +2,7 @@
 #include <vector>
 #include <fstream>
 
-#include <lua.hpp>
+#include "Vendors/lua/lua.hpp"
 
 #include <rapidjson/document.h>
 #include <rapidjson/error/en.h>

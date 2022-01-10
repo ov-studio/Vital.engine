@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 
-#include <lua.hpp>
+#include "Vendors/lua/lua.hpp"
 
 // __SSE2__ and __SSE4_2__ are recognized by gcc, clang, and the Intel compiler.
 // We use -march=native with gmake to enable -msse2 and -msse4.2, if supported.
