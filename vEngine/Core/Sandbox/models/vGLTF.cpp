@@ -2,7 +2,6 @@
 #include "Core/Systems/wiScene.h"
 #include "Core/Sandbox/vImporter.h"
 #include "Core/Helpers/wiRandom.h"
-
 #include "Utils/stb_image.h"
 
 #include <string>
@@ -19,65 +18,54 @@ using namespace wi::graphics;
 using namespace wi::scene;
 using namespace wi::ecs;
 
-
 // Transform the data from glTF space to engine-space:
 static const bool transform_to_LH = true;
 
-
 namespace tinygltf
 {
-
 	bool FileExists(const std::string& abs_filename, void*) {
 		return wi::helper::FileExists(abs_filename);
 	}
 
 	std::string ExpandFilePath(const std::string& filepath, void*) {
-#ifdef _WIN32
-		DWORD len = ExpandEnvironmentStringsA(filepath.c_str(), NULL, 0);
-		char* str = new char[len];
-		ExpandEnvironmentStringsA(filepath.c_str(), str, len);
+        #ifdef _WIN32
+            DWORD len = ExpandEnvironmentStringsA(filepath.c_str(), NULL, 0);
+            char* str = new char[len];
+            ExpandEnvironmentStringsA(filepath.c_str(), str, len);
 
-		std::string s(str);
+            std::string s(str);
+            delete[] str;
+            return s;
+        #else
+            #if defined(TARGET_OS_IPHONE) || defined(TARGET_IPHONE_SIMULATOR) || defined(__ANDROID__) || defined(__EMSCRIPTEN__)
+                std::string s = filepath;
+            #else
+                std::string s;
+                wordexp_t p;
+                if (filepath.empty()) {
+                    return "";
+                }
 
-		delete[] str;
+                // char** w;
+                int ret = wordexp(filepath.c_str(), &p, 0);
+                if (ret) {
+                    // err
+                    s = filepath;
+                    return s;
+                }
 
-		return s;
-#else
-
-#if defined(TARGET_OS_IPHONE) || defined(TARGET_IPHONE_SIMULATOR) || \
-	defined(__ANDROID__) || defined(__EMSCRIPTEN__)
-		// no expansion
-		std::string s = filepath;
-#else
-		std::string s;
-		wordexp_t p;
-
-		if (filepath.empty()) {
-			return "";
-		}
-
-		// char** w;
-		int ret = wordexp(filepath.c_str(), &p, 0);
-		if (ret) {
-			// err
-			s = filepath;
-			return s;
-		}
-
-		// Use first element only.
-		if (p.we_wordv) {
-			s = std::string(p.we_wordv[0]);
-			wordfree(&p);
-		}
-		else {
-			s = filepath;
-		}
-
-#endif
-
-		return s;
-#endif
-	}
+                // Use first element only.
+                if (p.we_wordv) {
+                    s = std::string(p.we_wordv[0]);
+                    wordfree(&p);
+                }
+                else {
+                    s = filepath;
+                }
+            #endif
+            return s;
+        #endif
+    }
 
 	bool ReadWholeFile(std::vector<unsigned char>* out, std::string* err,
 		const std::string& filepath, void*) {
@@ -89,12 +77,9 @@ namespace tinygltf
 		return wi::helper::FileWrite(filepath, contents.data(), contents.size());
 	}
 
-	bool LoadImageData(Image *image, const int image_idx, std::string *err,
-		std::string *warn, int req_width, int req_height,
-		const unsigned char *bytes, int size, void *userdata)
+	bool LoadImageData(Image *image, const int image_idx, std::string *err, std::string *warn, int req_width, int req_height, const unsigned char *bytes, int size, void *userdata)
 	{
 		(void)warn;
-
 		if (image->uri.empty())
 		{
 			// Force some image resource name:
@@ -117,19 +102,16 @@ namespace tinygltf
 		{
 			return false;
 		}
-
 		image->width = resource.GetTexture().desc.width;
 		image->height = resource.GetTexture().desc.height;
 		image->component = 4;
 
 		wi::resourcemanager::ResourceSerializer* seri = (wi::resourcemanager::ResourceSerializer*)userdata;
 		seri->resources.push_back(resource);
-
 		return true;
 	}
 
-	bool WriteImageData(const std::string *basepath, const std::string *filename,
-		Image *image, bool embedImages, void *)
+	bool WriteImageData(const std::string *basepath, const std::string *filename, Image *image, bool embedImages, void *)
 	{
 		assert(0); // TODO
 		return false;
