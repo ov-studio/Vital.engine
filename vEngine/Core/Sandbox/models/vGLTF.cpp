@@ -12,7 +12,7 @@
 #define TINYGLTF_NO_FS
 #define TINYGLTF_NO_STB_IMAGE
 #define TINYGLTF_NO_STB_IMAGE_WRITE
-#include "tiny_gltf.h"
+#include "Vendors/tiny_gltf/tiny_gltf.h"
 
 using namespace wi::graphics;
 using namespace wi::scene;
