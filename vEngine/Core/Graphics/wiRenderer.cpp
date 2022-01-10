@@ -645,13 +645,13 @@ enum DEBUGRENDERING
 PipelineState PSO_debug[DEBUGRENDERING_COUNT];
 
 
-#if __has_include("wiShaderDump.h")
-// In this case, wiShaderDump.h contains precompiled shader binary data
-#include "wiShaderDump.h"
+#if __has_include("vShaderDump.h")
+// In this case, vShaderDump.h contains precompiled shader binary data
+#include "vShaderDump.h"
 #define SHADERDUMP_ENABLED
 size_t GetShaderDumpCount()
 {
-	return wiShaderDump::shaderdump.size();
+	return vShaderDump::shaderdump.size();
 }
 #else
 // In this case, shaders can only be loaded from file
@@ -668,8 +668,8 @@ bool LoadShader(ShaderStage stage, Shader& shader, const std::string& filename, 
 #ifdef SHADERDUMP_ENABLED
 	
 	// Loading shader from precompiled dump:
-	auto it = wiShaderDump::shaderdump.find(shaderbinaryfilename);
-	if (it != wiShaderDump::shaderdump.end())
+	auto it = vShaderDump::shaderdump.find(shaderbinaryfilename);
+	if (it != vShaderDump::shaderdump.end())
 	{
 		return device->CreateShader(stage, it->second.data, it->second.size, &shader);
 	}

@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 	std::cout << "\thlsl6 : \tCompile shaders to hlsl6 (dx12) format (using dxcompiler)" << std::endl;
 	std::cout << "\tspirv : \tCompile shaders to spirv (vulkan) format (using dxcompiler)" << std::endl;
 	std::cout << "\trebuild : \tAll shaders will be rebuilt, regardless if they are outdated or not" << std::endl;
-	std::cout << "\tshaderdump : \tShaders will be saved to wiShaderDump.h C++ header file (rebuild is assumed)" << std::endl;
+	std::cout << "\tshaderdump : \tShaders will be saved to vShaderDump.h C++ header file (rebuild is assumed)" << std::endl;
 	std::cout << "Command arguments used: ";
 
 	wi::jobsystem::Initialize();
@@ -497,7 +497,7 @@ int main(int argc, char* argv[])
 		std::cout << "[Shader Compiler] Creating ShaderDump..." << std::endl;
 		timer.record();
 		std::string ss;
-		ss += "namespace wiShaderDump {\n";
+		ss += "namespace vShaderDump {\n";
 		for (auto& x : results)
 		{
 			auto& name = x.first;
@@ -527,8 +527,8 @@ int main(int argc, char* argv[])
 		}
 		ss += "};\n"; // map end
 		ss += "}\n"; // namespace end
-		wi::helper::FileWrite("../wiShaderDump.h", (uint8_t*)ss.c_str(), ss.length());
-		std::cout << "[Shader Compiler] ShaderDump written to wiShaderDump.h in " << std::setprecision(4) << timer.elapsed_seconds() << " seconds" << std::endl;
+		wi::helper::FileWrite("../vShaderDump.h", (uint8_t*)ss.c_str(), ss.length());
+		std::cout << "[Shader Compiler] ShaderDump written to vShaderDump.h in " << std::setprecision(4) << timer.elapsed_seconds() << " seconds" << std::endl;
 	}
 
 	return 0;
