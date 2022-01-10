@@ -1,5 +1,6 @@
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Helpers/wiHelper.h"
+#include "Core/Helpers/wiResourceManager.h"
 #include "Core/Systems/wiScene.h"
 #include "Core/Sandbox/vImporter.h"
 #include "Core/Helpers/wiRandom.h"
@@ -54,7 +55,6 @@ namespace tinygltf
                     s = filepath;
                     return s;
                 }
-
                 // Use first element only.
                 if (p.we_wordv) {
                     s = std::string(p.we_wordv[0]);
@@ -142,7 +142,6 @@ void LoadNode(int nodeIndex, Entity parent, LoaderState& state)
 	if(node.mesh >= 0)
 	{
 		assert(node.mesh < (int)scene.meshes.GetCount());
-
 		if (node.skin >= 0)
 		{
 			// This node is an armature:
@@ -172,7 +171,6 @@ void LoadNode(int nodeIndex, Entity parent, LoaderState& state)
 			static int camID = 0;
 			node.name = "cam" + std::to_string(camID++);
 		}
-
 		entity = scene.Entity_CreateCamera(node.name, wi::scene::GetCamera().width, wi::scene::GetCamera().height, 0.1f, 800);
 	}
 
@@ -241,7 +239,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 	std::string name = wi::helper::GetFileNameFromPath(fileName);
 	std::string extension = wi::helper::toUpper(wi::helper::GetExtensionFromFileName(name));
 
-
 	tinygltf::TinyGLTF loader;
 	std::string err;
 	std::string warn;
@@ -267,18 +264,13 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 	if (ret)
 	{
 		std::string basedir = tinygltf::GetBaseDir(fileName);
-
 		if (!extension.compare("GLTF"))
 		{
-			ret = loader.LoadASCIIFromString(&state.gltfModel, &err, &warn, 
-				reinterpret_cast<const char*>(&filedata.at(0)),
-				static_cast<unsigned int>(filedata.size()), basedir);
+			ret = loader.LoadASCIIFromString(&state.gltfModel, &err, &warn, reinterpret_cast<const char*>(&filedata.at(0)), static_cast<unsigned int>(filedata.size()), basedir);
 		}
 		else
 		{
-			ret = loader.LoadBinaryFromMemory(&state.gltfModel, &err, &warn,
-				filedata.data(),
-				static_cast<unsigned int>(filedata.size()), basedir);
+			ret = loader.LoadBinaryFromMemory(&state.gltfModel, &err, &warn, filedata.data(), static_cast<unsigned int>(filedata.size()), basedir);
 		}
 	}
 	else
@@ -305,7 +297,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 		material.roughness = 1.0f;
 		material.metalness = 1.0f;
 		material.reflectance = 0.04f;
-
 		material.SetDoubleSided(x.doubleSided);
 
 		// metallic-roughness workflow:
@@ -428,7 +419,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 		if (ext_unlit != x.extensions.end())
 		{
 			// https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Khronos/KHR_materials_unlit
-
 			material.shaderType = MaterialComponent::SHADERTYPE_UNLIT;
 		}
 
@@ -650,7 +640,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 			{
 				auto& factor = ext_ior->second.Get("ior");
 				float ior = float(factor.IsNumber() ? factor.Get<double>() : factor.Get<int>());
-
 				material.reflectance = std::pow((ior - 1.0f) / (ior + 1.0f), 2.0f);
 			}
 		}
@@ -1065,7 +1054,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 								const uint16_t& g = *(uint16_t*)((size_t)data + i * stride + 1 * sizeof(uint16_t));
 								const uint16_t& b = *(uint16_t*)((size_t)data + i * stride + 2 * sizeof(uint16_t));
 								uint32_t rgba = wi::math::CompressColor(XMFLOAT3(r / 65535.0f, g / 65535.0f, b / 65535.0f));
-
 								mesh.vertex_colors[vertexOffset + i] = rgba;
 							}
 						}
@@ -1078,7 +1066,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 								const uint16_t& b = *(uint16_t*)((size_t)data + i * stride + 2 * sizeof(uint16_t));
 								const uint16_t& a = *(uint16_t*)((size_t)data + i * stride + 3 * sizeof(uint16_t));
 								uint32_t rgba = wi::math::CompressColor(XMFLOAT4(r / 65535.0f, g / 65535.0f, b / 65535.0f, a / 65535.0f));
-
 								mesh.vertex_colors[vertexOffset + i] = rgba;
 							}
 						}
@@ -1274,7 +1261,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 		for (size_t i = 0; i < anim.channels.size(); ++i)
 		{
 			auto& channel = anim.channels[i];
-
 			animationcomponent.channels[i].target = state.entityMap[channel.target_node];
 			assert(channel.sampler >= 0);
 			animationcomponent.channels[i].samplerIndex = (uint32_t)channel.sampler;
