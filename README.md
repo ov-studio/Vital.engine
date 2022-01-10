@@ -27,10 +27,10 @@
 
 ## ━ Source Building (Windows)
 1. Launch `vEngine.sln` in Visual Studio
-2. Build the `Client_Windows` in Release/Debug mode
-3. Build the `vEngine_ShaderCompiler` in Release/Debug mode and boot it
-4. Build the `vEngine_SandboxCompiler` in Release/Debug and boot it
-5. Rebuild `Client_Windows` in Release/Debug and boot it
+2. Build the solution in Release/Debug mode
+3. Boot `vEngine_ShaderCompiler`
+4. Boot `vEngine_SandboxCompiler`
+5. Rebuild `Client_Windows` and boot it
 
 ## ━ Contents
 
