@@ -828,7 +828,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 
 				int stride = accessor.ByteStride(bufferView);
 				size_t vertexCount = accessor.count;
-
 				const unsigned char* data = buffer.data.data() + accessor.byteOffset + bufferView.byteOffset;
 
 				if (!attr_name.compare("POSITION"))
@@ -863,7 +862,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 						for (size_t i = 0; i < vertexCount; ++i)
 						{
 							const XMFLOAT2& tex = *(XMFLOAT2*)((size_t)data + i * stride);
-
 							mesh.vertex_uvset_0[vertexOffset + i].x = tex.x;
 							mesh.vertex_uvset_0[vertexOffset + i].y = tex.y;
 						}
@@ -874,7 +872,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 						{
 							const uint8_t& s = *(uint8_t*)((size_t)data + i * stride + 0);
 							const uint8_t& t = *(uint8_t*)((size_t)data + i * stride + 1);
-
 							mesh.vertex_uvset_0[vertexOffset + i].x = s / 255.0f;
 							mesh.vertex_uvset_0[vertexOffset + i].y = t / 255.0f;
 						}
@@ -885,7 +882,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 						{
 							const uint16_t& s = *(uint16_t*)((size_t)data + i * stride + 0 * sizeof(uint16_t));
 							const uint16_t& t = *(uint16_t*)((size_t)data + i * stride + 1 * sizeof(uint16_t));
-
 							mesh.vertex_uvset_0[vertexOffset + i].x = s / 65535.0f;
 							mesh.vertex_uvset_0[vertexOffset + i].y = t / 65535.0f;
 						}
@@ -899,7 +895,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 						for (size_t i = 0; i < vertexCount; ++i)
 						{
 							const XMFLOAT2& tex = *(XMFLOAT2*)((size_t)data + i * stride);
-
 							mesh.vertex_uvset_1[vertexOffset + i].x = tex.x;
 							mesh.vertex_uvset_1[vertexOffset + i].y = tex.y;
 						}
@@ -910,7 +905,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 						{
 							const uint8_t& s = *(uint8_t*)((size_t)data + i * stride + 0);
 							const uint8_t& t = *(uint8_t*)((size_t)data + i * stride + 1);
-
 							mesh.vertex_uvset_1[vertexOffset + i].x = s / 255.0f;
 							mesh.vertex_uvset_1[vertexOffset + i].y = t / 255.0f;
 						}
@@ -921,7 +915,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 						{
 							const uint16_t& s = *(uint16_t*)((size_t)data + i * stride + 0 * sizeof(uint16_t));
 							const uint16_t& t = *(uint16_t*)((size_t)data + i * stride + 1 * sizeof(uint16_t));
-
 							mesh.vertex_uvset_1[vertexOffset + i].x = s / 65535.0f;
 							mesh.vertex_uvset_1[vertexOffset + i].y = t / 65535.0f;
 						}
@@ -940,7 +933,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 						for (size_t i = 0; i < vertexCount; ++i)
 						{
 							const JointTmp& joint = ((JointTmp*)data)[i];
-
 							mesh.vertex_boneindices[vertexOffset + i].x = joint.ind[0];
 							mesh.vertex_boneindices[vertexOffset + i].y = joint.ind[1];
 							mesh.vertex_boneindices[vertexOffset + i].z = joint.ind[2];
@@ -957,7 +949,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 						for (size_t i = 0; i < vertexCount; ++i)
 						{
 							const JointTmp& joint = ((JointTmp*)data)[i];
-
 							mesh.vertex_boneindices[vertexOffset + i].x = joint.ind[0];
 							mesh.vertex_boneindices[vertexOffset + i].y = joint.ind[1];
 							mesh.vertex_boneindices[vertexOffset + i].z = joint.ind[2];
@@ -987,7 +978,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 							const uint8_t& y = *(uint8_t*)((size_t)data + i * stride + 1);
 							const uint8_t& z = *(uint8_t*)((size_t)data + i * stride + 2);
 							const uint8_t& w = *(uint8_t*)((size_t)data + i * stride + 3);
-
 							mesh.vertex_boneweights[vertexOffset + i].x = x / 255.0f;
 							mesh.vertex_boneweights[vertexOffset + i].x = y / 255.0f;
 							mesh.vertex_boneweights[vertexOffset + i].x = z / 255.0f;
@@ -1002,7 +992,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 							const uint16_t& y = *(uint8_t*)((size_t)data + i * stride + 1 * sizeof(uint16_t));
 							const uint16_t& z = *(uint8_t*)((size_t)data + i * stride + 2 * sizeof(uint16_t));
 							const uint16_t& w = *(uint8_t*)((size_t)data + i * stride + 3 * sizeof(uint16_t));
-
 							mesh.vertex_boneweights[vertexOffset + i].x = x / 65535.0f;
 							mesh.vertex_boneweights[vertexOffset + i].x = y / 65535.0f;
 							mesh.vertex_boneweights[vertexOffset + i].x = z / 65535.0f;
@@ -1025,7 +1014,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 							{
 								const XMFLOAT3& color = *(XMFLOAT3*)((size_t)data + i * stride);
 								uint32_t rgba = wi::math::CompressColor(color);
-
 								mesh.vertex_colors[vertexOffset + i] = rgba;
 							}
 						}
@@ -1035,7 +1023,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 							{
 								const XMFLOAT4& color = *(XMFLOAT4*)((size_t)data + i * stride);
 								uint32_t rgba = wi::math::CompressColor(color);
-
 								mesh.vertex_colors[vertexOffset + i] = rgba;
 							}
 						}
@@ -1051,7 +1038,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 								const uint8_t& b = *(uint8_t*)((size_t)data + i * stride + 2);
 								const uint8_t a = 0xFF;
 								wi::Color color = wi::Color(r, g, b, a);
-
 								mesh.vertex_colors[vertexOffset + i] = color;
 							}
 						}
@@ -1064,7 +1050,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 								const uint8_t& b = *(uint8_t*)((size_t)data + i * stride + 2);
 								const uint8_t& a = *(uint8_t*)((size_t)data + i * stride + 3);
 								wi::Color color = wi::Color(r, g, b, a);
-
 								mesh.vertex_colors[vertexOffset + i] = color;
 							}
 						}
@@ -1112,7 +1097,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 
 						int stride = accessor.ByteStride(bufferView);
 						size_t vertexCount = accessor.count;
-
 						const unsigned char* data = buffer.data.data() + accessor.byteOffset + bufferView.byteOffset;
 
 						if (!attr_name.compare("POSITION"))
@@ -1175,9 +1159,7 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 	for (auto& skin : state.gltfModel.skins)
 	{
 		ArmatureComponent& armature = scene.armatures[armatureIndex++];
-
 		const size_t jointCount = skin.joints.size();
-
 		armature.boneCollection.resize(jointCount);
 
 		// Create bone collection:
@@ -1185,7 +1167,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 		{
 			int jointIndex = skin.joints[i];
 			Entity boneEntity = state.entityMap[jointIndex];
-
 			armature.boneCollection[i] = boneEntity;
 		}
 	}
@@ -1226,16 +1207,11 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 				const tinygltf::Buffer& buffer = state.gltfModel.buffers[bufferView.buffer];
 
 				assert(accessor.componentType == TINYGLTF_COMPONENT_TYPE_FLOAT);
-
 				int stride = accessor.ByteStride(bufferView);
 				size_t count = accessor.count;
-
 				animationdata.keyframe_times.resize(count);
-
 				const unsigned char* data = buffer.data.data() + accessor.byteOffset + bufferView.byteOffset;
-
 				assert(stride == 4);
-
 				for (size_t j = 0; j < count; ++j)
 				{
 					float time = ((float*)data)[j];
@@ -1243,7 +1219,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 					animationcomponent.start = std::min(animationcomponent.start, time);
 					animationcomponent.end = std::max(animationcomponent.end, time);
 				}
-
 			}
 
 			// AnimationSampler output = keyframe data
@@ -1292,9 +1267,7 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 				default: assert(0); break;
 
 				}
-
 			}
-
 		}
 
 		for (size_t i = 0; i < anim.channels.size(); ++i)
@@ -1326,7 +1299,6 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 				animationcomponent.channels[i].path = AnimationComponent::AnimationChannel::Path::UNKNOWN;
 			}
 		}
-
 	}
 
 	if (transform_to_LH)
@@ -1335,5 +1307,4 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 		transform.scale_local.z = -transform.scale_local.z;
 		transform.SetDirty();
 	}
-
 }
