@@ -29,7 +29,8 @@ namespace tinygltf
 		return wi::helper::FileExists(abs_filename);
 	}
 
-	std::string ExpandFilePath(const std::string& filepath, void*) {
+	std::string ExpandFilePath(const std::string& filepath, void*)
+    {
         #ifdef _WIN32
             DWORD len = ExpandEnvironmentStringsA(filepath.c_str(), NULL, 0);
             char* str = new char[len];
@@ -70,16 +71,16 @@ namespace tinygltf
 
 	bool ReadWholeFile(std::vector<unsigned char>* out, std::string* err, const std::string& filepath, void*)
     {
-		return wi::helper::FileRead(filepath, *out);
-	}
+	    return wi::helper::FileRead(filepath, *out);
+    }
 
 	bool WriteWholeFile(std::string* err, const std::string& filepath, const std::vector<unsigned char>& contents, void*)
     {
-		return wi::helper::FileWrite(filepath, contents.data(), contents.size());
-	}
+	    return wi::helper::FileWrite(filepath, contents.data(), contents.size());
+    }
 
 	bool LoadImageData(Image *image, const int image_idx, std::string *err, std::string *warn, int req_width, int req_height, const unsigned char *bytes, int size, void *userdata)
-	{
+    {
 		(void)warn;
 		if (image->uri.empty())
 		{
@@ -756,9 +757,7 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 
 			mesh.subsets.back().materialID = scene.materials.GetEntity(std::max(0, prim.material));
 			MaterialComponent* material = scene.materials.GetComponent(mesh.subsets.back().materialID);
-
 			uint32_t vertexOffset = (uint32_t)mesh.vertex_positions.size();
-
 			const unsigned char* data = buffer.data.data() + accessor.byteOffset + bufferView.byteOffset;
 
 			int index_remap[3];
@@ -1106,9 +1105,7 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 					}
 				}
 			}
-
 		}
-
 		mesh.CreateRenderData();
 	}
 
@@ -1217,43 +1214,40 @@ void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 
 				int stride = accessor.ByteStride(bufferView);
 				size_t count = accessor.count;
-
 				const unsigned char* data = buffer.data.data() + accessor.byteOffset + bufferView.byteOffset;
-
 				switch (accessor.type)
 				{
-				case TINYGLTF_TYPE_SCALAR:
-				{
-					assert(stride == sizeof(float));
-					animationdata.keyframe_data.resize(count);
-					for (size_t j = 0; j < count; ++j)
-					{
-						animationdata.keyframe_data[j] = ((float*)data)[j];
-					}
-				}
-				break;
-				case TINYGLTF_TYPE_VEC3:
-				{
-					assert(stride == sizeof(XMFLOAT3));
-					animationdata.keyframe_data.resize(count * 3);
-					for (size_t j = 0; j < count; ++j)
-					{
-						((XMFLOAT3*)animationdata.keyframe_data.data())[j] = ((XMFLOAT3*)data)[j];
-					}
-				}
-				break;
-				case TINYGLTF_TYPE_VEC4:
-				{
-					assert(stride == sizeof(XMFLOAT4));
-					animationdata.keyframe_data.resize(count * 4);
-					for (size_t j = 0; j < count; ++j)
-					{
-						((XMFLOAT4*)animationdata.keyframe_data.data())[j] = ((XMFLOAT4*)data)[j];
-					}
-				}
-				break;
-				default: assert(0); break;
-
+                    case TINYGLTF_TYPE_SCALAR:
+                    {
+                        assert(stride == sizeof(float));
+                        animationdata.keyframe_data.resize(count);
+                        for (size_t j = 0; j < count; ++j)
+                        {
+                            animationdata.keyframe_data[j] = ((float*)data)[j];
+                        }
+                    }
+                    break;
+                    case TINYGLTF_TYPE_VEC3:
+                    {
+                        assert(stride == sizeof(XMFLOAT3));
+                        animationdata.keyframe_data.resize(count * 3);
+                        for (size_t j = 0; j < count; ++j)
+                        {
+                            ((XMFLOAT3*)animationdata.keyframe_data.data())[j] = ((XMFLOAT3*)data)[j];
+                        }
+                    }
+                    break;
+                    case TINYGLTF_TYPE_VEC4:
+                    {
+                        assert(stride == sizeof(XMFLOAT4));
+                        animationdata.keyframe_data.resize(count * 4);
+                        for (size_t j = 0; j < count; ++j)
+                        {
+                            ((XMFLOAT4*)animationdata.keyframe_data.data())[j] = ((XMFLOAT4*)data)[j];
+                        }
+                    }
+                    break;
+                    default: assert(0); break;
 				}
 			}
 		}
