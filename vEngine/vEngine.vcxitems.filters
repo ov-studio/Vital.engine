@@ -61,6 +61,9 @@
     <Filter Include="Core\Sandbox\models">
       <UniqueIdentifier>{9877cf9e-e70e-45a3-8fd0-75def9b0519c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vendors\mesh_optimizer">
+      <UniqueIdentifier>{e930bffd-848c-4785-8078-837f7986594f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
@@ -1086,6 +1089,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Sandbox\vImporter.h">
       <Filter>Core\Sandbox</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\meshoptimizer.h">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
@@ -1826,6 +1832,51 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Sandbox\models\vGLTF.cpp">
       <Filter>Core\Sandbox\models</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\indexcodec.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\indexgenerator.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\overdrawanalyzer.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\overdrawoptimizer.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\simplifier.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\spatialorder.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\stripifier.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vcacheanalyzer.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vcacheoptimizer.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vertexcodec.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vertexfilter.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchanalyzer.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchoptimizer.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\allocator.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\clusterizer.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

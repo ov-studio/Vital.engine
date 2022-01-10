@@ -354,6 +354,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\tinyddsloader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\vk_mem_alloc.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\volk.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\meshoptimizer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\json.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\tiny_gltf.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h" />
@@ -624,6 +625,21 @@
       <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Utils\utility_common.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\allocator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\clusterizer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\indexcodec.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\indexgenerator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\overdrawanalyzer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\overdrawoptimizer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\simplifier.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\spatialorder.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\stripifier.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vcacheanalyzer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vcacheoptimizer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vertexcodec.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vertexfilter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchanalyzer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchoptimizer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
   </ItemGroup>
   <ItemGroup>
