@@ -1,8 +1,5 @@
 #include "stdafx.h"
 #include "Client.h"
-#include "Core/Graphics/wiRenderer.h"
-
-#include "Core/Sandbox/vImporter.h"
 #include "Translator.h"
 
 #include <string>
