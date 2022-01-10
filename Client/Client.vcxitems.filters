@@ -101,6 +101,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)meshoptimizer\meshoptimizer.h">
       <Filter>meshoptimizer</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ModelImporter.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)startup.lua" />

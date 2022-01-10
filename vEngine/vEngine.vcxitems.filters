@@ -55,6 +55,12 @@
     <Filter Include="Vendors\bullet_physics">
       <UniqueIdentifier>{a93b4876-d3d8-4668-b556-8d8749f05e52}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Sandbox">
+      <UniqueIdentifier>{5fd8bcb2-0193-44fd-b247-4a5ffd66beb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Sandbox\models">
+      <UniqueIdentifier>{9877cf9e-e70e-45a3-8fd0-75def9b0519c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
@@ -1077,6 +1083,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\json.hpp">
       <Filter>Vendors\tiny_gltf</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Sandbox\vImporter.h">
+      <Filter>Core\Sandbox</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
@@ -1814,6 +1823,9 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaBooter.cpp">
       <Filter>Core\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Sandbox\models\vGLTF.cpp">
+      <Filter>Core\Sandbox\models</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
