@@ -1,11 +1,13 @@
 #pragma once
 #include <string>
 
-namespace wi::scene
+namespace sandbox
 {
-	struct Scene;
-}
-
-// TODO: PUT UNDER NAMESPACE SOON
-void importSandboxModel_GLTF(const std::string& fileName, wi::scene::Scene& scene);
-
+    namespace importer
+    {
+        namespace gltf
+        {
+            void LoadModel(const std::string& fileName, wi::scene::Scene& scene);
+        };
+    };
+};

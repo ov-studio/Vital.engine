@@ -732,26 +732,19 @@ void ClientComponent::Load()
 
 				main->loader.addLoadingFunction([=](wi::jobsystem::JobArgs args) {
 					std::string extension = wi::helper::toUpper(wi::helper::GetExtensionFromFileName(fileName));
-
 					if (!extension.compare("VASSET")) // engine-serialized
 					{
 						wi::scene::LoadModel(fileName);
 					}
-					else if (!extension.compare("GLTF")) // text-based gltf
+					else if (!extension.compare("GLTF") || !extension.compare("GLB")) // text-based gltf, binary gltf
 					{
 						Scene scene;
-						importSandboxModel_GLTF(fileName, scene);
+						sandbox::importer::gltf::LoadModel(fileName, scene);
 						wi::scene::GetScene().Merge(scene);
 					}
-					else if (!extension.compare("GLB")) // binary gltf
-					{
-						Scene scene;
-						importSandboxModel_GLTF(fileName, scene);
-						wi::scene::GetScene().Merge(scene);
-					}
-					});
-				main->loader.onFinished([=] {
+                });
 
+				main->loader.onFinished([=] {
 					// Detect when the new scene contains a new camera, and snap the camera onto it:
 					size_t camera_count = wi::scene::GetScene().cameras.GetCount();
 					if (camera_count > 0 && camera_count > camera_count_prev)
@@ -775,11 +768,10 @@ void ClientComponent::Load()
 							}
 						}
 					}
-
 					main->ActivatePath(this, 0.2f, wi::Color::Black());
 					weatherWnd.Update();
 					RefreshSceneGraphView();
-					});
+				});
 				main->ActivatePath(&main->loader, 0.2f, wi::Color::Black());
 				ResetHistory();
 			});
