@@ -353,6 +353,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\tinyddsloader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\vk_mem_alloc.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\volk.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\json.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\tiny_gltf.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vVersion.h" />
   </ItemGroup>
