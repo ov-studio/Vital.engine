@@ -86,7 +86,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)LightWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MaterialWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MeshWindow.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)ModelImporter.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)NameWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ObjectWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)PaintToolWindow.h" />

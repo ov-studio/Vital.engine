@@ -1,6 +1,6 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "Core/Systems/wiScene.h"
-#include "ModelImporter.h"
+#include "Core/Sandbox/vImporter.h"
 #include "Core/Helpers/wiRandom.h"
 
 #include "Utils/stb_image.h"
@@ -252,7 +252,7 @@ void LoadNode(int nodeIndex, Entity parent, LoaderState& state)
 	}
 }
 
-void ImportModel_GLTF(const std::string& fileName, Scene& scene)
+void importSandboxModel_GLTF(const std::string& fileName, Scene& scene)
 {
 	std::string directory = wi::helper::GetDirectoryFromPath(fileName);
 	std::string name = wi::helper::GetFileNameFromPath(fileName);

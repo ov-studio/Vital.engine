@@ -2,7 +2,7 @@
 #include "Client.h"
 #include "Core/Graphics/wiRenderer.h"
 
-#include "ModelImporter.h"
+#include "Core/Sandbox/vImporter.h"
 #include "Translator.h"
 
 #include <string>
@@ -743,13 +743,13 @@ void ClientComponent::Load()
 					else if (!extension.compare("GLTF")) // text-based gltf
 					{
 						Scene scene;
-						ImportModel_GLTF(fileName, scene);
+						importSandboxModel_GLTF(fileName, scene);
 						wi::scene::GetScene().Merge(scene);
 					}
 					else if (!extension.compare("GLB")) // binary gltf
 					{
 						Scene scene;
-						ImportModel_GLTF(fileName, scene);
+						importSandboxModel_GLTF(fileName, scene);
 						wi::scene::GetScene().Merge(scene);
 					}
 					});
