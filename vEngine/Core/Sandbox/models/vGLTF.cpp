@@ -1,4 +1,5 @@
-//#include "stdafx.h"
+#include "Core/Tools/wiBacklog.h"
+#include "Core/Helpers/wiHelper.h"
 #include "Core/Systems/wiScene.h"
 #include "Core/Sandbox/vImporter.h"
 #include "Core/Helpers/wiRandom.h"
@@ -67,13 +68,13 @@ namespace tinygltf
         #endif
     }
 
-	bool ReadWholeFile(std::vector<unsigned char>* out, std::string* err,
-		const std::string& filepath, void*) {
+	bool ReadWholeFile(std::vector<unsigned char>* out, std::string* err, const std::string& filepath, void*)
+    {
 		return wi::helper::FileRead(filepath, *out);
 	}
 
-	bool WriteWholeFile(std::string* err, const std::string& filepath,
-		const std::vector<unsigned char>& contents, void*) {
+	bool WriteWholeFile(std::string* err, const std::string& filepath, const std::vector<unsigned char>& contents, void*)
+    {
 		return wi::helper::FileWrite(filepath, contents.data(), contents.size());
 	}
 
