@@ -97,7 +97,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)SoundWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)SpringWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)tiny_gltf.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)tiny_obj_loader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)TransformWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Translator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)WeatherWindow.h" />
