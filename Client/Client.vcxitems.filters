@@ -51,7 +51,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)TransformWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Translator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)WeatherWindow.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)xatlas.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)stdafx.h" />
   </ItemGroup>
   <ItemGroup>

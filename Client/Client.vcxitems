@@ -83,7 +83,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)TransformWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Translator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)WeatherWindow.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)xatlas.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)startup.lua">

@@ -2,8 +2,7 @@
 #include "Client.h"
 #include "ObjectWindow.h"
 #include "Core/Systems/wiScene.h"
-
-#include "xatlas.h"
+#include "Vendors/xatlas/xatlas.h"
 
 #include <string>
 
