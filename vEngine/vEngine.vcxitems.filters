@@ -68,7 +68,7 @@
       <UniqueIdentifier>{28fedb3e-81f3-4187-8179-8e1a532e3a79}</UniqueIdentifier>
     </Filter>
     <Filter Include="Vendors\lua_rapidjson\rapidjson">
-      <UniqueIdentifier>{dedc0077-abf0-4548-8924-c1e11ba17f88}</UniqueIdentifier>
+      <UniqueIdentifier>{f9ee3047-3890-461b-86c9-9ef81fbe441d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1098,15 +1098,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\meshoptimizer.h">
       <Filter>Vendors\mesh_optimizer</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\cursorstreamwrapper.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\document.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\encodedstream.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\encodings.h">
       <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
     </ClInclude>
@@ -1209,8 +1200,14 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\allocators.h">
       <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\StringStream.hpp">
-      <Filter>Vendors\lua_rapidjson</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\cursorstreamwrapper.h">
+      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\document.h">
+      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\encodedstream.h">
+      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Userdata.hpp">
       <Filter>Vendors\lua_rapidjson</Filter>
@@ -1222,6 +1219,9 @@
       <Filter>Vendors\lua_rapidjson</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\luax.hpp">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\StringStream.hpp">
       <Filter>Vendors\lua_rapidjson</Filter>
     </ClInclude>
   </ItemGroup>
@@ -2010,9 +2010,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\clusterizer.cpp">
       <Filter>Vendors\mesh_optimizer</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Schema.cpp">
-      <Filter>Vendors\lua_rapidjson</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\values.cpp">
       <Filter>Vendors\lua_rapidjson</Filter>
     </ClCompile>
@@ -2020,6 +2017,9 @@
       <Filter>Vendors\lua_rapidjson</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson.cpp">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Schema.cpp">
       <Filter>Vendors\lua_rapidjson</Filter>
     </ClCompile>
   </ItemGroup>

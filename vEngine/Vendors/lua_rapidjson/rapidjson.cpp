@@ -1,3 +1,4 @@
+#pragma once
 #include <limits>
 #include <cstdio>
 #include <vector>

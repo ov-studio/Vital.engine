@@ -1,12 +1,7 @@
 #pragma once
 
-extern "C"
-{
-	#include "Vendors/lua/lua.h"
-	#include "Vendors/lua/lualib.h"
-	#include "Vendors/lua/lauxlib.h"
-}
-
+#include "Vendors/lua/lua.hpp"
+#include "Vendors/lua_rapidjson/rapidjson.cpp"
 #include "vCommon.h"
 #include "Core/Helpers/wiMath.h"
 #include "Core/Helpers/wiUnorderedMap.h"
