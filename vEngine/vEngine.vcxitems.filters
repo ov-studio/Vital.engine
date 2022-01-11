@@ -70,6 +70,9 @@
     <Filter Include="Vendors\lua_rapidjson\rapidjson">
       <UniqueIdentifier>{f9ee3047-3890-461b-86c9-9ef81fbe441d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vendors\xatlas">
+      <UniqueIdentifier>{02f46f5f-ac5e-4462-b1ee-f3d1991c558d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
@@ -1224,6 +1227,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\StringStream.hpp">
       <Filter>Vendors\lua_rapidjson</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.h">
+      <Filter>Vendors\xatlas</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
@@ -2021,6 +2027,9 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Schema.cpp">
       <Filter>Vendors\lua_rapidjson</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.cpp">
+      <Filter>Vendors\xatlas</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

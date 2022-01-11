@@ -399,6 +399,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\meshoptimizer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\json.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\tiny_gltf.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vVersion.h" />
   </ItemGroup>
@@ -686,6 +687,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vertexfilter.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchanalyzer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchoptimizer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
   </ItemGroup>
   <ItemGroup>
