@@ -3,7 +3,7 @@
 #endif
 
 #include "Core/Scripting/vLuaBooter.h"
-
+#include "Vendors/lua_rapidjson/rapidjson.cpp"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Helpers/wiHelper.h"
 #include "Core/Scripting/Lua/wiApplication_BindLua.h"
@@ -48,7 +48,7 @@ namespace wi::lua
     };
     static const char* blacklisted_globals[] = {"dofile", "load", "loadfile"};
 
-    // Creates & Destroys instances
+        // Creates & Destroys instances
     lua_State* createInstance()
     {
         lua_CInstance cInstance;

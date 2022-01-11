@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Vendors/lua/lua.hpp"
-#include "Vendors/lua_rapidjson/rapidjson.cpp"
 #include "vCommon.h"
 #include "Core/Helpers/wiMath.h"
 #include "Core/Helpers/wiUnorderedMap.h"
