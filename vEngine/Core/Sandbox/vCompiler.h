@@ -3,10 +3,18 @@
 
 #include <string>
 
-struct moduleDef
+namespace sandbox
 {
-	std::string moduleName;
-	wi::vector<std::string> moduleScripts;
+    namespace compiler
+    {
+        namespace module
+        {
+            struct moduleDef
+            {
+                std::string moduleName;
+                wi::vector<std::string> moduleScripts;
+            };
+            int CompileModule(std::string moduleName, wi::vector<moduleDef> modules);
+        };
+    };
 };
-
-int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules);

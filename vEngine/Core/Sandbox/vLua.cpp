@@ -26,5 +26,5 @@ wi::vector<moduleDef> modules = {
 
 int main()
 {
-    return compileSandboxModule(moduleName, modules);
+    return sandbox::compiler::module::CompileModule(moduleName, modules);
 }

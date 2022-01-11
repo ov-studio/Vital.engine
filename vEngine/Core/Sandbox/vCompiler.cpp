@@ -7,7 +7,7 @@
 
 std::mutex locker;
 
-int compileSandboxModule(std::string moduleName, wi::vector<moduleDef> modules)
+int sandbox::compiler::module::CompileModule(std::string moduleName, wi::vector<moduleDef> modules)
 {
     std::string moduleIdentifier = moduleName;
     std::string modulePath = "../../Sandbox/" + moduleName + "/";
