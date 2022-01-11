@@ -1,3 +1,4 @@
+#pragma once
 #include "../../vEngine.h"
 
 #include <string>
