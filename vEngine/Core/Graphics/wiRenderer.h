@@ -53,14 +53,8 @@ namespace wi::renderer
 	// Clears the scene and the associated renderer resources
 	void ClearWorld(wi::scene::Scene& scene);
 
-	// Returns the shader binary directory
-	const std::string& GetShaderPath();
 	// Sets the shader binary directory
 	void SetShaderPath(const std::string& path);
-	// Returns the shader source directory
-	const std::string& GetShaderSourcePath();
-	// Sets the shader source directory
-	void SetShaderSourcePath(const std::string& path);
 	// Reload shaders
 	void ReloadShaders();
 	// Returns how many shaders are embedded (if vShaderDump.h is used)
