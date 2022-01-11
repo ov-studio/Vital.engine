@@ -347,14 +347,14 @@ int main()
 	minshadermodels["rtreflectionCS.hlsl"] = ShaderModel::SM_6_5;
 
 	wi::jobsystem::context ctx;
-	std::string sourcePath = "../" + wi::renderer::GetShaderSourcePath();
+	std::string sourcePath = "../Shaders/";
 	wi::helper::MakePathAbsolute(sourcePath);
 	wi::Timer timer;
 
     std::string bundlerData = "namespace viShaderDump {\n";
 	for (auto& target : targets)
 	{
-		std::string shaderDirectory = sourcePath + target.dir;
+		std::string shaderDirectory = "../Core/Sandbox/.build/shaders/" + target.dir;
 		wi::helper::DirectoryCreate(shaderDirectory);
 		for (int i = 0; i < static_cast<int>(ShaderStage::Count); ++i)
 		{
