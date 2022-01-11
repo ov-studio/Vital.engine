@@ -23,11 +23,12 @@ using namespace wi::ecs;
 // Transform the data from glTF space to engine-space:
 static const bool transform_to_LH = true;
 
+// Extend default tinygltf namespace
 namespace tinygltf
 {
 	bool FileExists(const std::string& abs_filename, void*) {
-		return wi::helper::FileExists(abs_filename);
-	}
+	    return wi::helper::FileExists(abs_filename);
+    }
 
 	std::string ExpandFilePath(const std::string& filepath, void*)
     {
@@ -69,55 +70,55 @@ namespace tinygltf
         #endif
     }
 
-	bool ReadWholeFile(std::vector<unsigned char>* out, std::string* err, const std::string& filepath, void*)
+    bool ReadWholeFile(std::vector<unsigned char>* out, std::string* err, const std::string& filepath, void*)
     {
 	    return wi::helper::FileRead(filepath, *out);
     }
 
-	bool WriteWholeFile(std::string* err, const std::string& filepath, const std::vector<unsigned char>& contents, void*)
+    bool WriteWholeFile(std::string* err, const std::string& filepath, const std::vector<unsigned char>& contents, void*)
     {
 	    return wi::helper::FileWrite(filepath, contents.data(), contents.size());
     }
 
-	bool LoadImageData(Image *image, const int image_idx, std::string *err, std::string *warn, int req_width, int req_height, const unsigned char *bytes, int size, void *userdata)
+    bool LoadImageData(Image *image, const int image_idx, std::string *err, std::string *warn, int req_width, int req_height, const unsigned char *bytes, int size, void *userdata)
     {
-		(void)warn;
-		if (image->uri.empty())
-		{
-			// Force some image resource name:
-			std::string ss;
-			do {
-				ss.clear();
-				ss += "gltfimport_" + std::to_string(wi::random::GetRandom(std::numeric_limits<int>::max())) + ".png";
-			} while (wi::resourcemanager::Contains(ss)); // this is to avoid overwriting an existing imported image
-			image->uri = ss;
-		}
+        (void)warn;
+        if (image->uri.empty())
+        {
+            // Force some image resource name:
+            std::string ss;
+            do {
+                ss.clear();
+                ss += "gltfimport_" + std::to_string(wi::random::GetRandom(std::numeric_limits<int>::max())) + ".png";
+            } while (wi::resourcemanager::Contains(ss)); // this is to avoid overwriting an existing imported image
+            image->uri = ss;
+        }
 
-		auto resource = wi::resourcemanager::Load(
-			image->uri,
-			wi::resourcemanager::Flags::IMPORT_RETAIN_FILEDATA,
-			(const uint8_t*)bytes,
-			(size_t)size
-		);
+        auto resource = wi::resourcemanager::Load(
+            image->uri,
+            wi::resourcemanager::Flags::IMPORT_RETAIN_FILEDATA,
+            (const uint8_t*)bytes,
+            (size_t)size
+        );
 
-		if (!resource.IsValid())
-		{
-			return false;
-		}
-		image->width = resource.GetTexture().desc.width;
-		image->height = resource.GetTexture().desc.height;
-		image->component = 4;
+        if (!resource.IsValid())
+        {
+            return false;
+        }
+        image->width = resource.GetTexture().desc.width;
+        image->height = resource.GetTexture().desc.height;
+        image->component = 4;
 
-		wi::resourcemanager::ResourceSerializer* seri = (wi::resourcemanager::ResourceSerializer*)userdata;
-		seri->resources.push_back(resource);
-		return true;
+        wi::resourcemanager::ResourceSerializer* seri = (wi::resourcemanager::ResourceSerializer*)userdata;
+        seri->resources.push_back(resource);
+        return true;
 	}
 
-	bool WriteImageData(const std::string *basepath, const std::string *filename, Image *image, bool embedImages, void *)
-	{
-		assert(0); // TODO
-		return false;
-	}
+    bool WriteImageData(const std::string *basepath, const std::string *filename, Image *image, bool embedImages, void *)
+    {
+	    assert(0); // TODO
+	    return false;
+    }
 }
 
 namespace sandbox::importer::gltf
