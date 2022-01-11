@@ -425,14 +425,14 @@ namespace wi
 			if (use_vulkan)
 			{
                 #ifdef vEngine_BUILD_VULKAN
-                    wi::renderer::SetShaderPath(wi::renderer::GetShaderPath() + "spirv/");
+                    wi::renderer::SetShaderPath("../vEngine/Core/Sandbox/.build/shaders/spirv/");
                     graphicsDevice = std::make_unique<GraphicsDevice_Vulkan>(window, debugdevice);
                 #endif
 			}
 			else if (use_dx12)
 			{
                 #ifdef vEngine_BUILD_DX12
-                    wi::renderer::SetShaderPath(wi::renderer::GetShaderPath() + "hlsl6/");
+                    wi::renderer::SetShaderPath("../vEngine/Core/Sandbox/.build/shaders/hlsl6/");
                     graphicsDevice = std::make_unique<GraphicsDevice_DX12>(debugdevice, gpuvalidation);
                 #endif
 			}
