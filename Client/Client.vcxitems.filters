@@ -24,7 +24,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)TransformWindow.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Translator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)WeatherWindow.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)xatlas.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
