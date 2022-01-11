@@ -26,11 +26,12 @@ static const bool transform_to_LH = true;
 // Extend default tinygltf namespace
 namespace tinygltf
 {
-	bool FileExists(const std::string& abs_filename, void*) {
-	    return wi::helper::FileExists(abs_filename);
+    bool FileExists(const std::string& abs_filename, void*)
+    {
+        return wi::helper::FileExists(abs_filename);
     }
 
-	std::string ExpandFilePath(const std::string& filepath, void*)
+    std::string ExpandFilePath(const std::string& filepath, void*)
     {
         #ifdef _WIN32
             DWORD len = ExpandEnvironmentStringsA(filepath.c_str(), NULL, 0);
@@ -72,12 +73,12 @@ namespace tinygltf
 
     bool ReadWholeFile(std::vector<unsigned char>* out, std::string* err, const std::string& filepath, void*)
     {
-	    return wi::helper::FileRead(filepath, *out);
+        return wi::helper::FileRead(filepath, *out);
     }
 
     bool WriteWholeFile(std::string* err, const std::string& filepath, const std::vector<unsigned char>& contents, void*)
     {
-	    return wi::helper::FileWrite(filepath, contents.data(), contents.size());
+        return wi::helper::FileWrite(filepath, contents.data(), contents.size());
     }
 
     bool LoadImageData(Image *image, const int image_idx, std::string *err, std::string *warn, int req_width, int req_height, const unsigned char *bytes, int size, void *userdata)
@@ -112,12 +113,12 @@ namespace tinygltf
         wi::resourcemanager::ResourceSerializer* seri = (wi::resourcemanager::ResourceSerializer*)userdata;
         seri->resources.push_back(resource);
         return true;
-	}
+    }
 
     bool WriteImageData(const std::string *basepath, const std::string *filename, Image *image, bool embedImages, void *)
     {
-	    assert(0); // TODO
-	    return false;
+        assert(0); // TODO
+        return false;
     }
 }
 
