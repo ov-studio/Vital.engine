@@ -677,9 +677,7 @@ bool LoadShader(ShaderStage stage, Shader& shader, const std::string& filename, 
 		wi::backlog::post("shader dump doesn't contain shader: " + shaderbinaryfilename);
 	}
 #endif // SHADERDUMP_ENABLED
-
 	wi::shadercompiler::RegisterShader(shaderbinaryfilename);
-
 	if (wi::shadercompiler::IsShaderOutdated(shaderbinaryfilename))
 	{
 		wi::shadercompiler::CompilerInput input;
@@ -687,10 +685,10 @@ bool LoadShader(ShaderStage stage, Shader& shader, const std::string& filename, 
 		input.stage = stage;
 		input.minshadermodel = minshadermodel;
 
-		std::string sourcedir = "../vEngine/Shaders/";
-		wi::helper::MakePathAbsolute(sourcedir);
-		input.include_directories.push_back(sourcedir);
-		input.shadersourcefilename = wi::helper::ReplaceExtension(sourcedir + filename, "hlsl");
+		std::string sourcePath = "../vEngine/Shaders/";
+		wi::helper::MakePathAbsolute(sourcePath);
+		input.include_directories.push_back(sourcePath);
+		input.shadersourcefilename = wi::helper::ReplaceExtension(sourcePath + filename, "hlsl");
 
 		wi::shadercompiler::CompilerOutput output;
 		wi::shadercompiler::Compile(input, output);
