@@ -662,7 +662,7 @@ size_t GetShaderDumpCount()
 
 bool LoadShader(ShaderStage stage, Shader& shader, const std::string& filename, ShaderModel minshadermodel)
 {
-	std::string shaderbinaryfilename = shaderPath + filename;
+	std::string shaderbinaryfilename = "../" + shaderPath + filename;
 
 #ifdef SHADERDUMP_ENABLED
 	
@@ -685,7 +685,7 @@ bool LoadShader(ShaderStage stage, Shader& shader, const std::string& filename, 
 		input.stage = stage;
 		input.minshadermodel = minshadermodel;
 
-		std::string sourcePath = "../vEngine/Shaders/";
+		std::string sourcePath = "../../vEngine/Shaders/";
 		wi::helper::MakePathAbsolute(sourcePath);
 		input.include_directories.push_back(sourcePath);
 		input.shadersourcefilename = wi::helper::ReplaceExtension(sourcePath + filename, "hlsl");
