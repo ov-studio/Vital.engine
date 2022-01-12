@@ -57,10 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="images">
-      <UniqueIdentifier>{caf55722-5ff7-41fe-b606-f376e784aa2f}</UniqueIdentifier>
+      <UniqueIdentifier>{271f09b7-230c-4414-928a-00be38ca1c44}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)images\sound.dds">
+      <Filter>images</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)images\spotlight.dds">
+      <Filter>images</Filter>
+    </Image>
     <Image Include="$(MSBuildThisFileDirectory)images\arealight.dds">
       <Filter>images</Filter>
     </Image>
@@ -95,12 +101,6 @@
       <Filter>images</Filter>
     </Image>
     <Image Include="$(MSBuildThisFileDirectory)images\pointlight.dds">
-      <Filter>images</Filter>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\sound.dds">
-      <Filter>images</Filter>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\spotlight.dds">
       <Filter>images</Filter>
     </Image>
     <Image Include="$(MSBuildThisFileDirectory)images\ripple.png">

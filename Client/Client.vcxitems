@@ -87,62 +87,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="$(MSBuildThisFileDirectory)images\arealight.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\armature.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\blood1.png">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\camera.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\decal.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\directional_light.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\emitter.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\forcefield.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\hair.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\leaf.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\logo_small.png">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\pointlight.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)images\arealight.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)images\armature.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)images\blood1.png" />
+    <Image Include="$(MSBuildThisFileDirectory)images\camera.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)images\decal.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)images\directional_light.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)images\emitter.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)images\forcefield.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)images\hair.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)images\leaf.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)images\logo_small.png" />
+    <Image Include="$(MSBuildThisFileDirectory)images\pointlight.dds" />
     <Image Include="$(MSBuildThisFileDirectory)images\ripple.png" />
-    <Image Include="$(MSBuildThisFileDirectory)images\sound.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\spotlight.dds">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)images\sound.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)images\spotlight.dds" />
   </ItemGroup>
 </Project>
