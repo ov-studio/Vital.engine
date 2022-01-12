@@ -56,55 +56,55 @@
     <None Include="$(MSBuildThisFileDirectory)startup.lua" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="images">
-      <UniqueIdentifier>{271f09b7-230c-4414-928a-00be38ca1c44}</UniqueIdentifier>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{8ce14b0a-7b94-4f9c-9f1f-bf6261d37896}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="$(MSBuildThisFileDirectory)images\sound.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\decal.dds">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\spotlight.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\directional_light.dds">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\arealight.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\emitter.dds">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\armature.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\forcefield.dds">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\blood1.png">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\hair.dds">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\camera.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\leaf.dds">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\decal.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\logo_small.png">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\directional_light.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\pointlight.dds">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\emitter.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\ripple.png">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\forcefield.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\sound.dds">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\hair.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\spotlight.dds">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\leaf.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\arealight.dds">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\logo_small.png">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\armature.dds">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\pointlight.dds">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\blood1.png">
+      <Filter>Assets</Filter>
     </Image>
-    <Image Include="$(MSBuildThisFileDirectory)images\ripple.png">
-      <Filter>images</Filter>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\camera.dds">
+      <Filter>Assets</Filter>
     </Image>
   </ItemGroup>
 </Project>
