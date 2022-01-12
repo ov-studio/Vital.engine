@@ -126,7 +126,7 @@ void ClientLoadingScreen::Load()
 	font = wi::SpriteFont("Loading...", wi::font::Params(0, 0, 36, wi::font::WIFALIGN_CENTER, wi::font::WIFALIGN_CENTER));
 	AddFont(&font);
 
-	sprite = wi::Sprite("images/logo_small.png");
+	sprite = wi::Sprite("../images/logo_small.png");
 	sprite.anim.opa = 1;
 	sprite.anim.repeatable = true;
 	sprite.params.siz = XMFLOAT2(128, 128);
@@ -407,17 +407,17 @@ void ClientComponent::Load()
 #endif // PLATFORM_UWP
 
 	wi::jobsystem::context ctx;
-	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { pointLightTex = wi::resourcemanager::Load("images/pointlight.dds"); });
-	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { spotLightTex = wi::resourcemanager::Load("images/spotlight.dds"); });
-	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { dirLightTex = wi::resourcemanager::Load("images/directional_light.dds"); });
-	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { areaLightTex = wi::resourcemanager::Load("images/arealight.dds"); });
-	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { decalTex = wi::resourcemanager::Load("images/decal.dds"); });
-	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { forceFieldTex = wi::resourcemanager::Load("images/forcefield.dds"); });
-	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { emitterTex = wi::resourcemanager::Load("images/emitter.dds"); });
-	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { hairTex = wi::resourcemanager::Load("images/hair.dds"); });
-	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { cameraTex = wi::resourcemanager::Load("images/camera.dds"); });
-	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { armatureTex = wi::resourcemanager::Load("images/armature.dds"); });
-	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { soundTex = wi::resourcemanager::Load("images/sound.dds"); });
+	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { pointLightTex = wi::resourcemanager::Load("../images/pointlight.dds"); });
+	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { spotLightTex = wi::resourcemanager::Load("../images/spotlight.dds"); });
+	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { dirLightTex = wi::resourcemanager::Load("../images/directional_light.dds"); });
+	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { areaLightTex = wi::resourcemanager::Load("../images/arealight.dds"); });
+	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { decalTex = wi::resourcemanager::Load("../images/decal.dds"); });
+	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { forceFieldTex = wi::resourcemanager::Load("../images/forcefield.dds"); });
+	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { emitterTex = wi::resourcemanager::Load("../images/emitter.dds"); });
+	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { hairTex = wi::resourcemanager::Load("../images/hair.dds"); });
+	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { cameraTex = wi::resourcemanager::Load("../images/camera.dds"); });
+	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { armatureTex = wi::resourcemanager::Load("../images/armature.dds"); });
+	wi::jobsystem::Execute(ctx, [this](wi::jobsystem::JobArgs args) { soundTex = wi::resourcemanager::Load("../images/sound.dds"); });
 	// wait for ctx is at the end of this function!
 
 	translator.Create();
@@ -1379,7 +1379,7 @@ void ClientComponent::Update(float dt)
 						if (wi::input::Down(wi::input::MOUSE_BUTTON_LEFT))
 						{
 							// if water, then put a water ripple onto it:
-							scene.PutWaterRipple("images/ripple.png", hovered.position);
+							scene.PutWaterRipple("../images/ripple.png", hovered.position);
 						}
 					}
 					else if (decalWnd.placementCheckBox.GetCheck() && wi::input::Press(wi::input::MOUSE_BUTTON_LEFT))
@@ -1387,7 +1387,7 @@ void ClientComponent::Update(float dt)
 						// if not water or softbody, put a decal on it:
 						static int decalselector = 0;
 						decalselector = (decalselector + 1) % 2;
-						Entity entity = scene.Entity_CreateDecal("editorDecal", (decalselector == 0 ? "images/leaf.dds" : "images/blood1.png"));
+						Entity entity = scene.Entity_CreateDecal("editorDecal", (decalselector == 0 ? "../images/leaf.dds" : "../images/blood1.png"));
 						TransformComponent& transform = *scene.transforms.GetComponent(entity);
 						transform.MatrixTransform(hovered.orientation);
 						transform.RotateRollPitchYaw(XMFLOAT3(XM_PIDIV2, 0, 0));
