@@ -50,8 +50,7 @@ GPUBuffer			constantBuffers[CBTYPE_COUNT];
 GPUBuffer			resourceBuffers[RBTYPE_COUNT];
 Sampler				samplers[SAMPLER_COUNT];
 
-std::string SHADERPATH = "Shaders/";
-std::string SHADERSOURCEPATH = "../vEngine/Shaders/";
+std::string shaderPath;
 
 // define this to use raytracing pipeline for raytraced reflections:
 //	Currently the DX12 device could crash for unknown reasons with the global root signature export
@@ -663,7 +662,7 @@ size_t GetShaderDumpCount()
 
 bool LoadShader(ShaderStage stage, Shader& shader, const std::string& filename, ShaderModel minshadermodel)
 {
-	std::string shaderbinaryfilename = SHADERPATH + filename;
+	std::string shaderbinaryfilename = shaderPath + filename;
 
 #ifdef SHADERDUMP_ENABLED
 	
@@ -688,19 +687,16 @@ bool LoadShader(ShaderStage stage, Shader& shader, const std::string& filename, 
 		input.stage = stage;
 		input.minshadermodel = minshadermodel;
 
-		std::string sourcedir = SHADERSOURCEPATH;
+		std::string sourcedir = "../vEngine/Shaders/";
 		wi::helper::MakePathAbsolute(sourcedir);
 		input.include_directories.push_back(sourcedir);
-
 		input.shadersourcefilename = wi::helper::ReplaceExtension(sourcedir + filename, "hlsl");
 
 		wi::shadercompiler::CompilerOutput output;
 		wi::shadercompiler::Compile(input, output);
-
 		if (output.IsValid())
 		{
 			wi::shadercompiler::SaveShaderAndMetadata(shaderbinaryfilename, output);
-
 			if (!output.error_message.empty())
 			{
 				wi::backlog::post(output.error_message);
@@ -719,7 +715,6 @@ bool LoadShader(ShaderStage stage, Shader& shader, const std::string& filename, 
 	{
 		return device->CreateShader(stage, buffer.data(), buffer.size(), &shader);
 	}
-
 	return false;
 }
 
@@ -2129,21 +2124,9 @@ void ModifyObjectSampler(const SamplerDesc& desc)
 	device->CreateSampler(&desc, &samplers[SAMPLER_OBJECTSHADER]);
 }
 
-const std::string& GetShaderPath()
-{
-	return SHADERPATH;
-}
 void SetShaderPath(const std::string& path)
 {
-	SHADERPATH = path;
-}
-const std::string& GetShaderSourcePath()
-{
-	return SHADERSOURCEPATH;
-}
-void SetShaderSourcePath(const std::string& path)
-{
-	SHADERSOURCEPATH = path;
+	shaderPath = path;
 }
 void ReloadShaders()
 {

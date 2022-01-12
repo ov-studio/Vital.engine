@@ -81,10 +81,6 @@
     <FxCompile>
       <EnableDebuggingInformation>false</EnableDebuggingInformation>
     </FxCompile>
-    <FxCompile>
-      <ShaderModel>5.0</ShaderModel>
-      <ObjectFileOutput>shaders/%(Filename).cso</ObjectFileOutput>
-    </FxCompile>
     <PostBuildEvent>
       <Command>
       </Command>
@@ -113,10 +109,6 @@
       <AdditionalLibraryDirectories>$(SolutionDir).build\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <FxCompile>
-      <ShaderModel>5.0</ShaderModel>
-      <ObjectFileOutput>shaders/%(Filename).cso</ObjectFileOutput>
-    </FxCompile>
     <PostBuildEvent>
       <Command>
       </Command>
