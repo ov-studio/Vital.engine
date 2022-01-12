@@ -35,7 +35,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
-    <Import Project="Client.vcxitems" Label="Shared" />
+    <Import Project="..\Client.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -115,34 +115,34 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="main_Windows.h" />
-    <ClInclude Include="Resource.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\main_Windows.h" />
+    <ClInclude Include="..\Resource.h" />
+    <ClInclude Include="..\targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="small.ico" />
-    <Image Include="Client.ico" />
+    <Image Include="..\small.ico" />
+    <Image Include="..\Client.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Client.rc" />
+    <ResourceCompile Include="..\Client.rc" />
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="..\vEngine\dxcompiler.dll">
+    <CopyFileToFolders Include="..\..\vEngine\dxcompiler.dll">
       <FileType>Document</FileType>
     </CopyFileToFolders>
-    <CopyFileToFolders Include="..\vEngine\dxil.dll">
+    <CopyFileToFolders Include="..\..\vEngine\dxil.dll">
       <FileType>Document</FileType>
     </CopyFileToFolders>
-    <None Include="config.ini">
+    <None Include="..\config.ini">
       <FileType>Discomap</FileType>
       <DeploymentContent>true</DeploymentContent>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main_Windows.cpp" />
+    <ClCompile Include="..\main_Windows.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\vEngine\Packages\vEngine_Windows.vcxproj">
+    <ProjectReference Include="..\..\vEngine\Packages\vEngine_Windows.vcxproj">
       <Project>{6fefc868-fe73-4cb7-90b3-3d2ea6731688}</Project>
     </ProjectReference>
   </ItemGroup>
