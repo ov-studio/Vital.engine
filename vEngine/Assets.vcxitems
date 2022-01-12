@@ -992,4 +992,21 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_SurfelGI.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_Weather.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\arealight.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\armature.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\blood1.png" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\camera.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\decal.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\directional_light.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\emitter.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\forcefield.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\hair.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\leaf.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\logo_small.png" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\pointlight.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\ripple.png" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\sound.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\spotlight.dds" />
+  </ItemGroup>
 </Project>

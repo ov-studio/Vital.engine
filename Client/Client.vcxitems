@@ -86,21 +86,4 @@
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="$(MSBuildThisFileDirectory)Assets\arealight.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\armature.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\blood1.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\camera.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\decal.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\directional_light.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\emitter.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\forcefield.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\hair.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\leaf.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\logo_small.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\pointlight.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\ripple.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\sound.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\spotlight.dds" />
-  </ItemGroup>
 </Project>

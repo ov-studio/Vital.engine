@@ -34,6 +34,9 @@
     <Filter Include="Shaders\VS">
       <UniqueIdentifier>{db612c8c-a91b-4f74-bff7-3875c7640f3d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Editor">
+      <UniqueIdentifier>{69bed0d2-0183-4099-aba3-a66e6c08edee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Shaders\bitonicSortHF.hlsli">
@@ -1051,5 +1054,52 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Shaders\ShaderInterop_Weather.h">
       <Filter>Shaders\interop</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\decal.dds">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\directional_light.dds">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\emitter.dds">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\forcefield.dds">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\hair.dds">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\leaf.dds">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\logo_small.png">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\pointlight.dds">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\ripple.png">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\sound.dds">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\spotlight.dds">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\arealight.dds">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\armature.dds">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\blood1.png">
+      <Filter>Editor</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)..\Client\Assets\camera.dds">
+      <Filter>Editor</Filter>
+    </Image>
   </ItemGroup>
 </Project>
