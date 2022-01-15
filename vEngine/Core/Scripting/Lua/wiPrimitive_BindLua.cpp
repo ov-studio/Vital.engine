@@ -11,10 +11,10 @@ namespace wi::lua::primitive
 		if (!initialized)
 		{
 			initialized = true;
-			Luna<Ray_BindLua>::Register(L);
-			Luna<AABB_BindLua>::Register(L);
-			Luna<Sphere_BindLua>::Register(L);
-			Luna<Capsule_BindLua>::Register(L);
+			Luna<Ray_BindLua>::Register(L, "vEngine");
+			Luna<AABB_BindLua>::Register(L, "vEngine");
+			Luna<Sphere_BindLua>::Register(L, "vEngine");
+			Luna<Capsule_BindLua>::Register(L, "vEngine");
 		}
 	}
 

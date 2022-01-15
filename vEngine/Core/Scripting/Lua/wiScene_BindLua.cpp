@@ -282,18 +282,18 @@ void Bind(lua_State* L)
 		wi::lua::RegisterFunc(L, "SceneIntersectSphere", SceneIntersectSphere);
 		wi::lua::RegisterFunc(L, "SceneIntersectCapsule", SceneIntersectCapsule);
 
-		Luna<Scene_BindLua>::Register(L);
-		Luna<NameComponent_BindLua>::Register(L);
-		Luna<LayerComponent_BindLua>::Register(L);
-		Luna<TransformComponent_BindLua>::Register(L);
-		Luna<CameraComponent_BindLua>::Register(L);
-		Luna<AnimationComponent_BindLua>::Register(L);
-		Luna<MaterialComponent_BindLua>::Register(L);
-		Luna<EmitterComponent_BindLua>::Register(L);
-		Luna<LightComponent_BindLua>::Register(L);
-		Luna<ObjectComponent_BindLua>::Register(L);
-		Luna<InverseKinematicsComponent_BindLua>::Register(L);
-		Luna<SpringComponent_BindLua>::Register(L);
+		Luna<Scene_BindLua>::Register(L, "vEngine");
+		Luna<NameComponent_BindLua>::Register(L, "vEngine");
+		Luna<LayerComponent_BindLua>::Register(L, "vEngine");
+		Luna<TransformComponent_BindLua>::Register(L, "vEngine");
+		Luna<CameraComponent_BindLua>::Register(L, "vEngine");
+		Luna<AnimationComponent_BindLua>::Register(L, "vEngine");
+		Luna<MaterialComponent_BindLua>::Register(L, "vEngine");
+		Luna<EmitterComponent_BindLua>::Register(L, "vEngine");
+		Luna<LightComponent_BindLua>::Register(L, "vEngine");
+		Luna<ObjectComponent_BindLua>::Register(L, "vEngine");
+		Luna<InverseKinematicsComponent_BindLua>::Register(L, "vEngine");
+		Luna<SpringComponent_BindLua>::Register(L, "vEngine");
 	}
 }
 
