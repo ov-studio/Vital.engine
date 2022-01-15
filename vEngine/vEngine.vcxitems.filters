@@ -73,6 +73,12 @@
     <Filter Include="Vendors\xatlas">
       <UniqueIdentifier>{02f46f5f-ac5e-4462-b1ee-f3d1991c558d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Scripting\Lua\Texture">
+      <UniqueIdentifier>{1c85ad1d-f315-43a9-a00f-86daf4812da8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Scripting\Lua\Backlog">
+      <UniqueIdentifier>{ded852a4-8fff-4122-ae84-b30e362a6960}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
@@ -988,16 +994,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.h">
       <Filter>Core\Scripting\Lua</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture\vTexture.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.h">
       <Filter>Core\Scripting\Lua</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiAudio_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.h">
       <Filter>Core\Scripting\Lua</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiImageParams_BindLua.h">
@@ -1229,6 +1229,12 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.h">
       <Filter>Vendors\xatlas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture\vTexture.h">
+      <Filter>Core\Scripting\Lua\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.h">
+      <Filter>Core\Scripting\Lua\Backlog</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1880,16 +1886,10 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture\vTexture.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiAudio_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiImageParams_BindLua.cpp">
@@ -2030,6 +2030,12 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.cpp">
       <Filter>Vendors\xatlas</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture\vTexture.cpp">
+      <Filter>Core\Scripting\Lua\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.cpp">
+      <Filter>Core\Scripting\Lua\Backlog</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
