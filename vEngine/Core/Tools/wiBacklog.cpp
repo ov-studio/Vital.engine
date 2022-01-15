@@ -35,13 +35,11 @@ namespace wi::backlog
 	Texture backgroundTex;
 	bool refitscroll = false;
 
-	bool locked = false;
-	bool blockLuaExec = false;
 	LogLevel logLevel = LogLevel::Default;
 
 	void write_logfile()
 	{
-		std::string filename = wi::helper::GetTempDirectoryPath() + "wiBacklog.txt";
+		std::string filename = wi::helper::GetTempDirectoryPath() + "vBacklog.txt";
 		std::string text = getText(); // will lock mutex
 		wi::helper::FileWrite(filename, (const uint8_t*)text.c_str(), text.length());
 	}
@@ -66,35 +64,28 @@ namespace wi::backlog
 	}
 	void Update(const wi::Canvas& canvas, float dt)
 	{
-		if (!locked)
+		if (wi::input::Press(wi::input::KEYBOARD_BUTTON_HOME))
 		{
-			if (wi::input::Press(wi::input::KEYBOARD_BUTTON_HOME))
-			{
-				Toggle();
-			}
+		    Toggle();
+		}
 
-			if (isActive())
+		if (isActive())
+		{
+			if (wi::input::Press(wi::input::KEYBOARD_BUTTON_UP))
 			{
-				if (wi::input::Press(wi::input::KEYBOARD_BUTTON_UP))
-				{
-					historyPrev();
-				}
-				if (wi::input::Press(wi::input::KEYBOARD_BUTTON_DOWN))
-				{
-					historyNext();
-				}
-				if (wi::input::Press(wi::input::KEYBOARD_BUTTON_ENTER))
-				{
-					acceptInput();
-				}
-				if (wi::input::Down(wi::input::KEYBOARD_BUTTON_PAGEUP))
-				{
-					Scroll(1000.0f * dt);
-				}
-				if (wi::input::Down(wi::input::KEYBOARD_BUTTON_PAGEDOWN))
-				{
-					Scroll(-1000.0f * dt);
-				}
+				historyPrev();
+			}
+			if (wi::input::Press(wi::input::KEYBOARD_BUTTON_DOWN))
+			{
+				historyNext();
+			}
+			if (wi::input::Down(wi::input::KEYBOARD_BUTTON_PAGEUP))
+			{
+				Scroll(1000.0f * dt);
+			}
+			if (wi::input::Down(wi::input::KEYBOARD_BUTTON_PAGEDOWN))
+			{
+			    Scroll(-1000.0f * dt);
 			}
 		}
 
@@ -234,38 +225,6 @@ namespace wi::backlog
 			write_logfile(); // will lock mutex
 		}
 	}
-	void input(const char input)
-	{
-		std::scoped_lock lock(logLock);
-		inputArea += input;
-	}
-	void acceptInput()
-	{
-		historyPos = 0;
-		post(inputArea.c_str());
-		history.push_back(inputArea);
-		if (history.size() > deletefromline)
-		{
-			history.pop_front();
-		}
-		if (!blockLuaExec)
-		{
-			wi::lua::RunText(wi::lua::GetInternalInstance(), inputArea);
-		}
-		else
-		{
-			post("Lua execution is disabled", LogLevel::Error);
-		}
-		inputArea.clear();
-	}
-	void deletefromInput()
-	{
-		std::scoped_lock lock(logLock);
-		if (!inputArea.empty())
-		{
-			inputArea.pop_back();
-		}
-	}
 
 	void historyPrev()
 	{
@@ -306,25 +265,6 @@ namespace wi::backlog
 	}
 
 	bool isActive() { return enabled; }
-
-	void Lock()
-	{
-		locked = true;
-		enabled = false;
-	}
-	void Unlock()
-	{
-		locked = false;
-	}
-
-	void BlockLuaExecution()
-	{
-		blockLuaExec = true;
-	}
-	void UnblockLuaExecution()
-	{
-		blockLuaExec = false;
-	}
 
 	void SetLogLevel(LogLevel newLevel)
 	{

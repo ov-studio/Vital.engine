@@ -146,14 +146,10 @@ int sdl_loop(Client &editor)
         {
             if(c == 127)
             {
-                if (wi::backlog::isActive())
-	        		wi::backlog::deletefromInput();
 	        	wi::gui::TextInputField::DeleteFromInput();
             }
             else if (c != -1)
             {
-                if (wi::backlog::isActive())
-	        		wi::backlog::input(c);
 	        	wi::gui::TextInputField::AddInput(c);
             }
         }
