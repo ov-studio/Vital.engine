@@ -1,5 +1,5 @@
 #include "Core/Scripting/Lua/wiRenderPath3D_BindLua.h"
-#include "Core/Scripting/Lua/wiTexture_BindLua.h"
+#include "Core/Scripting/Lua/Texture/vTexture.h"
 
 namespace wi::lua
 {

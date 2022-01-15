@@ -988,7 +988,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.h">
       <Filter>Core\Scripting\Lua</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiTexture_BindLua.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture/vTexture.h">
       <Filter>Core\Scripting\Lua</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.h">
@@ -1880,7 +1880,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiTexture_BindLua.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture/vTexture.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.cpp">

@@ -2,7 +2,7 @@
 #include "Core/Systems/wiScene.h"
 #include "Core/Scripting/Lua/wiMath_BindLua.h"
 #include "Core/Graphics/wiEmittedParticle.h"
-#include "Core/Scripting/Lua/wiTexture_BindLua.h"
+#include "Core/Scripting/Lua/Texture/vTexture.h"
 #include "Core/Scripting/Lua/wiPrimitive_BindLua.h"
 
 using namespace wi::ecs;

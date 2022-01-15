@@ -11,7 +11,7 @@
 #include "Core/Scripting/Lua/wiRenderPath2D_BindLua.h"
 #include "Core/Scripting/Lua/wiLoadingScreen_BindLua.h"
 #include "Core/Scripting/Lua/wiRenderPath3D_BindLua.h"
-#include "Core/Scripting/Lua/wiTexture_BindLua.h"
+#include "Core/Scripting/Lua/Texture/vTexture.h"
 #include "Core/Scripting/Lua/wiRenderer_BindLua.h"
 #include "Core/Scripting/Lua/wiAudio_BindLua.h"
 #include "Core/Scripting/Lua/wiSprite_BindLua.h"
@@ -82,7 +82,7 @@ namespace wi::lua
             RenderPath2D_BindLua::Bind(cInstance.instance);
             LoadingScreen_BindLua::Bind(cInstance.instance);
             RenderPath3D_BindLua::Bind(cInstance.instance);
-            Texture_BindLua::Bind(cInstance.instance);
+            Texture::Bind(cInstance.instance);
             renderer::Bind(cInstance.instance);
             Audio_BindLua::Bind(cInstance.instance);
             Sprite_BindLua::Bind(cInstance.instance);
