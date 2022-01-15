@@ -1,5 +1,5 @@
 # Table of contents
 
-* [Untitled](README.md)
-* [Features](features.md)
+* [━ S Y N O P S I S](README.md)
+* [━ F E A T U R E S](features.md)
 * [━ T H I R D P A R T Y](thirdparty.md)
