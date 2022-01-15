@@ -1,4 +1,4 @@
-# ━ S Y N O P S I S
+# Credits
 
 ![](https://cdn.discordapp.com/attachments/867657575725269003/907028708823539712/vStudio.png)
 
@@ -24,7 +24,7 @@
 * János Turánszki
 * Aviril
 * Tron
-* [Read More](./)
+* [Read More](broken-reference)
 
 ## ━ Source Building (Windows)
 
@@ -36,6 +36,6 @@
 
 ## ━ Contents
 
-* [**Official Releases**](<README (1).md>)
-* [**Installation Guide**](<README (1).md>)
+* [**Official Releases**](./)
+* [**Installation Guide**](./)
 * [**Discord Community**](http://discord.gg/ryc47wDEKb)
