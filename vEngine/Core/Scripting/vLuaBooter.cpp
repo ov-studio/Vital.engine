@@ -93,7 +93,7 @@ namespace wi::lua
             Matrix_BindLua::Bind(cInstance.instance);
             Input_BindLua::Bind(cInstance.instance);
             SpriteFont_BindLua::Bind(cInstance.instance);
-            backlog::Bind(cInstance.instance);
+            Backlog::Bind(cInstance.instance);
             Network_BindLua::Bind(cInstance.instance);
             primitive::Bind(cInstance.instance);
             // Cache created instance

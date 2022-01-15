@@ -3,6 +3,29 @@
 
 #include <string>
 
+// TODO: WIP (AVIRIL)
+namespace wi::lua
+{
+    const char Backlog::className[] = "backlog";
+    Luna<Backlog>::FunctionType Backlog::methods[] = {
+	    { NULL, NULL }
+    };
+    Luna<Backlog>::PropertyType Backlog::properties[] = {
+	    { NULL, NULL }
+    };
+
+    void Backlog::Bind(lua_State* L)
+    {
+        static bool initialized = false;
+        if (!initialized)
+        {
+            Luna<Backlog>::Register(L, "vEngine");
+            initialized = true;
+        }
+    }
+}
+
+/*
 namespace wi::lua::backlog
 {
 	int backlog_clear(lua_State* L)
@@ -108,3 +131,4 @@ namespace wi::lua::backlog
 		}
 	}
 }
+*/
