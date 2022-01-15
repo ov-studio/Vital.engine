@@ -17,13 +17,13 @@
 * Completely Performance-Friendly
 * Sandbox Perspective (Lua, V8)
 * vCommunity Integration
-* [Read More](https://github.com/ov-studio/vEngine-Client/blob/main/Features.md)
+* [Read More](https://github.com/ov-studio/vEngine/blob/main/Features.md)
 
 ## ━ Credits
 * János Turánszki
 * Aviril
 * Tron
-* [Read More](https://github.com/ov-studio/vEngine-Client/blob/main/Credits.md)
+* [Read More](https://github.com/ov-studio/vEngine/blob/main/Credits.md)
 
 ## ━ Source Building (Windows)
 1. Launch `vEngine.sln` in Visual Studio
