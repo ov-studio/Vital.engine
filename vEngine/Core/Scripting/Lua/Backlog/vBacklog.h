@@ -7,8 +7,8 @@ namespace wi::lua
     {
         public:
             static const char className[];
-            static Luna<Texture>::FunctionType methods[];
-            static Luna<Texture>::PropertyType properties[];
+            static Luna<Backlog>::FunctionType methods[];
+            static Luna<Backlog>::PropertyType properties[];
             Backlog(lua_State* L) {};
 
             static void Bind(lua_State* L);
