@@ -4,7 +4,6 @@ using namespace wi::graphics;
 
 namespace wi::lua
 {
-
 	const char Texture::className[] = "texture";
 
 	Luna<Texture>::FunctionType Texture::methods[] = {
@@ -13,13 +12,6 @@ namespace wi::lua
 	Luna<Texture>::PropertyType Texture::properties[] = {
 		{ NULL, NULL }
 	};
-
-	Texture::Texture(Texture texture) :texture(texture)
-	{
-	}
-	Texture::Texture(lua_State* L)
-	{
-	}
 
 	void Texture::Bind(lua_State* L)
 	{
@@ -30,5 +22,4 @@ namespace wi::lua
 			initialized = true;
 		}
 	}
-
 }
