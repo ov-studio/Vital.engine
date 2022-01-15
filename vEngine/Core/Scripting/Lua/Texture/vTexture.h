@@ -4,8 +4,8 @@
 
 namespace wi::lua
 {
-	class Texture
-	{
+    class Texture
+    {
         public:
             wi::graphics::Texture texture;
 
@@ -14,6 +14,5 @@ namespace wi::lua
             static Luna<Texture>::PropertyType properties[];
             Texture(lua_State* L) {};
             static void Bind(lua_State* L);
-	};
-
+    };
 }
