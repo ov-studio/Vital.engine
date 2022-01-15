@@ -1,4 +1,4 @@
-#include "Core/Scripting/Lua/vTexture.h"
+#include "Core/Scripting/Lua/Texture/vTexture.h"
 
 using namespace wi::graphics;
 
