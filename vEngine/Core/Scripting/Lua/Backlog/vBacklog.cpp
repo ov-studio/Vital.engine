@@ -1,4 +1,4 @@
-#include "Core/Scripting/Lua/wiBacklog_BindLua.h"
+#include "Core/Scripting/Lua/backlog/vBacklog.h"
 #include "Core/Tools/wiBacklog.h"
 
 #include <string>

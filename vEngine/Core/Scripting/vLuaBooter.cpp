@@ -21,7 +21,7 @@
 #include "Core/Scripting/Lua/wiMath_BindLua.h"
 #include "Core/Scripting/Lua/wiInput_BindLua.h"
 #include "Core/Scripting/Lua/wiSpriteFont_BindLua.h"
-#include "Core/Scripting/Lua/wiBacklog_BindLua.h"
+#include "Core/Scripting/Lua/Backlog/vBacklog.h"
 #include "Core/Scripting/Lua/wiNetwork_BindLua.h"
 #include "Core/Scripting/Lua/wiPrimitive_BindLua.h"
 #include "Core/Helpers/wiTimer.h"
