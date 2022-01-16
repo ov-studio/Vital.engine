@@ -4,9 +4,9 @@ description: Awaits thread for 'n' duration before running again.
 
 # wait
 
-<mark style="color:red;">**`[bool status] wait()`**</mark>
+### ━ Syntax
 
-### ━ Usage
+<mark style="color:red;">**`[bool status] wait(int seconds)`**</mark>
 
 ```lua
 vEngine.thread.create(function() --Creates a new thread

@@ -4,6 +4,8 @@ description: Awaits thread until the engine updates.
 
 # waitEngineUpdate
 
+### ━ Syntax
+
 <mark style="color:red;">**`[bool status] waitEngineUpdate()`**</mark>
 
 ### ━ Usage

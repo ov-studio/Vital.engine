@@ -4,7 +4,12 @@ description: Awaits thread until the engine renders.
 
 # waitEngineRender
 
+### ━ Syntax
+
 <mark style="color:red;">**`[bool status] waitEngineRender()`**</mark>
+
+### ━ Parameters
+
 
 ### ━ Usage
 

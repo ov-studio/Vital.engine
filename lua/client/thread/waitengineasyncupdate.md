@@ -4,6 +4,8 @@ description: Awaits thread until the engine updates independent of the frame.
 
 # waitEngineAsyncUpdate
 
+### ━ Syntax
+
 <mark style="color:red;">**`[bool status] waitEngineAsyncUpdate()`**</mark>
 
 ### ━ Usage

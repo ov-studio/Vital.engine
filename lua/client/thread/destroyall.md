@@ -4,6 +4,8 @@ description: Destroys all existing threads.
 
 # destroyAll
 
+### ━ Syntax
+
 <mark style="color:red;">**`[bool status] destroyAll()`**</mark>
 
 ### ━ Usage
