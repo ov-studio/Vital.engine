@@ -69,7 +69,7 @@ namespace wi::lua
             wi::lua::SSetBool(L, true);
             return 0;
         }
-        wi::lua::SError(L, "backlog.setLevel(int level) not enough arguments!");
+        wi::lua::SError(L, "vEngine.backlog.setLevel(int level) not enough arguments!");
         wi::lua::SSetBool(L, false);
         return 1;
 	};
