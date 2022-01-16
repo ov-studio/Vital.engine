@@ -4,7 +4,7 @@ description: Threads are used to simulate async & timed handlers.
 
 # Thread
 
-### ━ Generic **APIs**
+### ━ **APIs**
 
 * ****[**getTick**](broken-reference)****
 * [**create**](broken-reference)****

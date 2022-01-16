@@ -2,7 +2,8 @@
 
 * [LUA](README.md)
   * [SHARED](lua/shared.md)
-    * [Math](readme/shared/math.md)
+    * [Math](readme/shared/math/README.md)
+      * [Generic](readme/shared/math/generic.md)
   * [CLIENT](lua/client.md)
     * [Thread](lua/client/thread/README.md)
       * [getTick](lua/client/thread/gettick.md)
