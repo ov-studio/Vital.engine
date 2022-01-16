@@ -4,7 +4,7 @@
   * [SHARED](lua/shared.md)
   * [CLIENT](lua/client.md)
     * [Thread](lua/client/thread/README.md)
-      * [getTick](readme/client/thread/gettick.md)
+      * [getTick](lua/client/thread/gettick.md)
       * [create](lua/client/thread/create.md)
       * [destroyAll](lua/client/thread/destroyall.md)
       * [wait](lua/client/thread/wait.md)
