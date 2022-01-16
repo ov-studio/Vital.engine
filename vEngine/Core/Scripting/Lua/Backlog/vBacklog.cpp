@@ -39,19 +39,13 @@ namespace wi::lua
 	int Backlog::post(lua_State* L)
 	{
 		int argc = wi::lua::SGetArgCount(L);
-		std::string inputString;
-		for (int i = 1; i <= argc; i++)
-		{
-            if (i > 1)
-                inputString += " ";
-			inputString += wi::lua::SGetString(L, i);
-		}
-		if (inputString.empty())
+		if (argc <= 2)
         {
+            wi::lua::SError(L, "Syntax: vEngine.backlog.post(string message, int level)!");
             wi::lua::SSetBool(L, false);
             return 0;
         }
-		wi::backlog::post(inputString);
+		wi::backlog::post(wi::lua::SGetString(L, 1), wi::lua::SGetString(L, 2));
         wi::lua::SSetBool(L, true);
         return 1;
 	};
@@ -65,14 +59,14 @@ namespace wi::lua
 	int Backlog::setLevel(lua_State* L)
 	{
 		int argc = wi::lua::SGetArgCount(L);
-		if (argc > 0)
+		if (argc <= 1)
         {
-            wi::backlog::SetLogLevel((wi::backlog::LogLevel)wi::lua::SGetInt(L, 1));
-            wi::lua::SSetBool(L, true);
+            wi::lua::SError(L, "Syntax: vEngine.backlog.setLevel(int level)");
+            wi::lua::SSetBool(L, false);
             return 0;
         }
-        wi::lua::SError(L, "vEngine.backlog.setLevel(int level) not enough arguments!");
-        wi::lua::SSetBool(L, false);
+        wi::backlog::SetLogLevel((wi::backlog::LogLevel)wi::lua::SGetInt(L, 1));
+        wi::lua::SSetBool(L, true);
         return 1;
 	};
 }
