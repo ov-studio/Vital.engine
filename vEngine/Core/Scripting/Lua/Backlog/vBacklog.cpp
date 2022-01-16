@@ -42,6 +42,8 @@ namespace wi::lua
 		std::string inputString;
 		for (int i = 1; i <= argc; i++)
 		{
+            if (i > 1)
+                inputString += " ";
 			inputString += wi::lua::SGetString(L, i);
 		}
 		if (inputString.empty())
