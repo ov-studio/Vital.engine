@@ -6,7 +6,7 @@ description: Shared backlog module.
 
 ### ━ APIs
 
-* ****[**clear**](clear.md)****
-* ****[**post**](post.md)****
-* ****[**isActive**](isActive.md)****
-* ****[**setLevel**](setLevel.md)****
+* [**clear**](clear.md)
+* [**post**](post.md)
+* [**isActive**](isActive.md)
+* [**setLevel**](setLevel.md)
