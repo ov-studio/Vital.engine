@@ -8,6 +8,8 @@ description: Retrieves shortest target angle.
 
 <mark style="color:red;">**`[float angle] shortTarget(float initialAngle, float finalAngle)`**</mark>
 
+### ━ Usage
+
 ```lua
 local result = vEngine.math.angle.shortTarget(160, 720) --Retrieves shortest target rotation angle
 print(result) --Prints result
