@@ -38,8 +38,8 @@ namespace wi::lua::primitive
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 1)
 		{
-			Vector_BindLua* o = Luna<Vector_BindLua>::lightcheck(L, 1);
-			Vector_BindLua* d = Luna<Vector_BindLua>::lightcheck(L, 2);
+			Vector* o = Luna<Vector>::lightcheck(L, 1);
+			Vector* d = Luna<Vector>::lightcheck(L, 2);
 			if (o && d)
 			{
 				ray = Ray(XMLoadFloat4(o), XMLoadFloat4(d));
@@ -82,12 +82,12 @@ namespace wi::lua::primitive
 	}
 	int Ray_BindLua::GetOrigin(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&ray.origin)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat3(&ray.origin)));
 		return 1;
 	}
 	int Ray_BindLua::GetDirection(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&ray.direction)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat3(&ray.direction)));
 		return 1;
 	}
 
@@ -115,8 +115,8 @@ namespace wi::lua::primitive
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 1)
 		{
-			Vector_BindLua* _minV = Luna<Vector_BindLua>::lightcheck(L, 1);
-			Vector_BindLua* _maxV = Luna<Vector_BindLua>::lightcheck(L, 2);
+			Vector* _minV = Luna<Vector>::lightcheck(L, 1);
+			Vector* _maxV = Luna<Vector>::lightcheck(L, 2);
 			if (_minV && _maxV)
 			{
 				XMFLOAT3 _min, _max;
@@ -198,25 +198,25 @@ namespace wi::lua::primitive
 	int AABB_BindLua::GetMin(lua_State* L)
 	{
 		XMFLOAT3 M = aabb.getMin();
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&M)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat3(&M)));
 		return 1;
 	}
 	int AABB_BindLua::GetMax(lua_State* L)
 	{
 		XMFLOAT3 M = aabb.getMax();
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&M)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat3(&M)));
 		return 1;
 	}
 	int AABB_BindLua::GetCenter(lua_State* L)
 	{
 		XMFLOAT3 C = aabb.getCenter();
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&C)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat3(&C)));
 		return 1;
 	}
 	int AABB_BindLua::GetHalfExtents(lua_State* L)
 	{
 		XMFLOAT3 H = aabb.getHalfWidth();
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&H)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat3(&H)));
 		return 1;
 	}
 	int AABB_BindLua::Transform(lua_State* L)
@@ -265,7 +265,7 @@ namespace wi::lua::primitive
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 1)
 		{
-			Vector_BindLua* cV = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* cV = Luna<Vector>::lightcheck(L, 1);
 			if (cV)
 			{
 				XMFLOAT3 c;
@@ -321,7 +321,7 @@ namespace wi::lua::primitive
 	}
 	int Sphere_BindLua::GetCenter(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&sphere.center)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat3(&sphere.center)));
 		return 1;
 	}
 	int Sphere_BindLua::GetRadius(lua_State* L)
@@ -334,7 +334,7 @@ namespace wi::lua::primitive
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* cV = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* cV = Luna<Vector>::lightcheck(L, 1);
 			if (cV)
 			{
 				XMStoreFloat3(&sphere.center, XMLoadFloat4(cV));
@@ -388,8 +388,8 @@ namespace wi::lua::primitive
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 2)
 		{
-			Vector_BindLua* bV = Luna<Vector_BindLua>::lightcheck(L, 1);
-			Vector_BindLua* tV = Luna<Vector_BindLua>::lightcheck(L, 2);
+			Vector* bV = Luna<Vector>::lightcheck(L, 1);
+			Vector* tV = Luna<Vector>::lightcheck(L, 2);
 			if (bV && tV)
 			{
 				XMFLOAT3 b;
@@ -425,8 +425,8 @@ namespace wi::lua::primitive
 				float depth = 0;
 				bool intersects = capsule.intersects(_capsule->capsule, position, normal, depth);
 				wi::lua::SSetBool(L, intersects);
-				Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&position)));
-				Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&normal)));
+				Luna<Vector>::push(L, new Vector(XMLoadFloat3(&position)));
+				Luna<Vector>::push(L, new Vector(XMLoadFloat3(&normal)));
 				wi::lua::SSetFloat(L, depth);
 				return 4;
 			}
@@ -441,12 +441,12 @@ namespace wi::lua::primitive
 	}
 	int Capsule_BindLua::GetBase(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&capsule.base)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat3(&capsule.base)));
 		return 1;
 	}
 	int Capsule_BindLua::GetTip(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&capsule.tip)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat3(&capsule.tip)));
 		return 1;
 	}
 	int Capsule_BindLua::GetRadius(lua_State* L)
@@ -459,7 +459,7 @@ namespace wi::lua::primitive
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* cV = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* cV = Luna<Vector>::lightcheck(L, 1);
 			if (cV)
 			{
 				XMStoreFloat3(&capsule.base, XMLoadFloat4(cV));
@@ -480,7 +480,7 @@ namespace wi::lua::primitive
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* cV = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* cV = Luna<Vector>::lightcheck(L, 1);
 			if (cV)
 			{
 				XMStoreFloat3(&capsule.tip, XMLoadFloat4(cV));

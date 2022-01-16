@@ -82,7 +82,7 @@ namespace wi::lua
                 row = 0;
         }
         XMFLOAT4 r = XMFLOAT4(m[row][0], m[row][1], m[row][2], m[row][3]);
-        Luna<Vector_BindLua>::push(L, new Vector_BindLua(r));
+        Luna<Vector>::push(L, new Vector(r));
         return 1;
     }
 
@@ -94,7 +94,7 @@ namespace wi::lua
         XMMATRIX mat = XMMatrixIdentity();
         if (argc > 0)
         {
-            Vector_BindLua* vector = Luna<Vector_BindLua>::lightcheck(L, 1);
+            Vector* vector = Luna<Vector>::lightcheck(L, 1);
             if (vector != nullptr)
             {
                 mat = XMMatrixTranslationFromVector(XMLoadFloat4(vector));
@@ -110,7 +110,7 @@ namespace wi::lua
         XMMATRIX mat = XMMatrixIdentity();
         if (argc > 0)
         {
-            Vector_BindLua* vector = Luna<Vector_BindLua>::lightcheck(L, 1);
+            Vector* vector = Luna<Vector>::lightcheck(L, 1);
             if (vector != nullptr)
             {
                 mat = XMMatrixRotationRollPitchYawFromVector(XMLoadFloat4(vector));
@@ -162,7 +162,7 @@ namespace wi::lua
         XMMATRIX mat = XMMatrixIdentity();
         if (argc > 0)
         {
-            Vector_BindLua* vector = Luna<Vector_BindLua>::lightcheck(L, 1);
+            Vector* vector = Luna<Vector>::lightcheck(L, 1);
             if (vector != nullptr)
             {
                 mat = XMMatrixRotationQuaternion(XMLoadFloat4(vector));
@@ -178,7 +178,7 @@ namespace wi::lua
         XMMATRIX mat = XMMatrixIdentity();
         if (argc > 0)
         {
-            Vector_BindLua* vector = Luna<Vector_BindLua>::lightcheck(L, 1);
+            Vector* vector = Luna<Vector>::lightcheck(L, 1);
             if (vector != nullptr)
             {
                 mat = XMMatrixScalingFromVector(XMLoadFloat4(vector));
@@ -193,14 +193,14 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
         {
-            Vector_BindLua* pos = Luna<Vector_BindLua>::lightcheck(L, 1);
-            Vector_BindLua* dir = Luna<Vector_BindLua>::lightcheck(L, 2);
+            Vector* pos = Luna<Vector>::lightcheck(L, 1);
+            Vector* dir = Luna<Vector>::lightcheck(L, 2);
             if (pos != nullptr && dir != nullptr)
             {
                 XMVECTOR Up;
                 if (argc > 3)
                 {
-                    Vector_BindLua* up = Luna<Vector_BindLua>::lightcheck(L, 3);
+                    Vector* up = Luna<Vector>::lightcheck(L, 3);
                     Up = XMLoadFloat4(up);
                 }
                 else
@@ -220,14 +220,14 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
         {
-            Vector_BindLua* pos = Luna<Vector_BindLua>::lightcheck(L, 1);
-            Vector_BindLua* dir = Luna<Vector_BindLua>::lightcheck(L, 2);
+            Vector* pos = Luna<Vector>::lightcheck(L, 1);
+            Vector* dir = Luna<Vector>::lightcheck(L, 2);
             if (dir != nullptr)
             {
                 XMVECTOR Up;
                 if (argc > 3)
                 {
-                    Vector_BindLua* up = Luna<Vector_BindLua>::lightcheck(L, 3);
+                    Vector* up = Luna<Vector>::lightcheck(L, 3);
                     Up = XMLoadFloat4(up);
                 }
                 else

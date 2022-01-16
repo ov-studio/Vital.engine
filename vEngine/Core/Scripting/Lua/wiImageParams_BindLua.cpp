@@ -60,22 +60,22 @@ namespace wi::lua
 
 	int ImageParams_BindLua::GetPos(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&params.pos)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat3(&params.pos)));
 		return 1;
 	}
 	int ImageParams_BindLua::GetSize(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat2(&params.siz)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat2(&params.siz)));
 		return 1;
 	}
 	int ImageParams_BindLua::GetPivot(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat2(&params.pivot)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat2(&params.pivot)));
 		return 1;
 	}
 	int ImageParams_BindLua::GetColor(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat4(&params.color)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat4(&params.color)));
 		return 1;
 	}
 	int ImageParams_BindLua::GetOpacity(lua_State* L)
@@ -95,22 +95,22 @@ namespace wi::lua
 	}
 	int ImageParams_BindLua::GetTexOffset(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat2(&params.texOffset)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat2(&params.texOffset)));
 		return 1;
 	}
 	int ImageParams_BindLua::GetTexOffset2(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat2(&params.texOffset2)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat2(&params.texOffset2)));
 		return 1;
 	}
 	int ImageParams_BindLua::GetDrawRect(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat4(&params.drawRect)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat4(&params.drawRect)));
 		return 1;
 	}
 	int ImageParams_BindLua::GetDrawRect2(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat4(&params.drawRect2)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat4(&params.drawRect2)));
 		return 1;
 	}
 	int ImageParams_BindLua::IsDrawRectEnabled(lua_State* L)
@@ -144,7 +144,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vector = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vector = Luna<Vector>::lightcheck(L, 1);
 			if (vector != nullptr)
 			{
 				XMStoreFloat3(&params.pos, XMLoadFloat4(vector));
@@ -161,7 +161,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vector = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vector = Luna<Vector>::lightcheck(L, 1);
 			if (vector != nullptr)
 			{
 				XMStoreFloat2(&params.siz, XMLoadFloat4(vector));
@@ -178,7 +178,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vector = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vector = Luna<Vector>::lightcheck(L, 1);
 			if (vector != nullptr)
 			{
 				XMStoreFloat2(&params.pivot, XMLoadFloat4(vector));
@@ -195,7 +195,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* param = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* param = Luna<Vector>::lightcheck(L, 1);
 			if (param != nullptr)
 			{
 				XMStoreFloat4(&params.color, XMLoadFloat4(param));
@@ -317,7 +317,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vector = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vector = Luna<Vector>::lightcheck(L, 1);
 			if (vector != nullptr)
 			{
 				XMStoreFloat2(&params.texOffset, XMLoadFloat4(vector));
@@ -334,7 +334,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vector = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vector = Luna<Vector>::lightcheck(L, 1);
 			if (vector != nullptr)
 			{
 				XMStoreFloat2(&params.texOffset2, XMLoadFloat4(vector));
@@ -351,7 +351,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vector = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vector = Luna<Vector>::lightcheck(L, 1);
 			if (vector != nullptr)
 			{
 				XMFLOAT4 drawrect;
@@ -370,7 +370,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vector = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vector = Luna<Vector>::lightcheck(L, 1);
 			if (vector != nullptr)
 			{
 				XMFLOAT4 drawrect2;

@@ -5,16 +5,16 @@
 
 namespace wi::lua
 {
-    class Vector_BindLua : public XMFLOAT4
+    class Vector : public XMFLOAT4
     {
         public:
             static const char className[];
-            static Luna<Vector_BindLua>::FunctionType methods[];
-            static Luna<Vector_BindLua>::PropertyType properties[];
-            Vector_BindLua();
-            Vector_BindLua(const XMFLOAT4& vector);
-            Vector_BindLua(const XMVECTOR& vector);
-            Vector_BindLua(lua_State* L);
+            static Luna<Vector>::FunctionType methods[];
+            static Luna<Vector>::PropertyType properties[];
+            Vector();
+            Vector(const XMFLOAT4& vector);
+            Vector(const XMVECTOR& vector);
+            Vector(lua_State* L);
             static void Bind(lua_State* L);
 
             int GetX(lua_State* L);

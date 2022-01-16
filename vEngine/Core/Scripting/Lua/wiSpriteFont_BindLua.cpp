@@ -84,7 +84,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* param = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* param = Luna<Vector>::lightcheck(L, 1);
 			if (param != nullptr)
 			{
 				font.params.posX = param->x;
@@ -102,7 +102,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* param = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* param = Luna<Vector>::lightcheck(L, 1);
 			if (param != nullptr)
 			{
 				font.params.spacingX = param->x;
@@ -135,7 +135,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* param = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* param = Luna<Vector>::lightcheck(L, 1);
 			if (param != nullptr)
 			{
 				font.params.color = wi::Color::fromFloat4(*param);
@@ -155,7 +155,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* param = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* param = Luna<Vector>::lightcheck(L, 1);
 			if (param != nullptr)
 			{
 				font.params.shadowColor = wi::Color::fromFloat4(*param);
@@ -183,12 +183,12 @@ namespace wi::lua
 	}
 	int SpriteFont_BindLua::GetPos(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMVectorSet((float)font.params.posX, (float)font.params.posY, 0, 0)));
+		Luna<Vector>::push(L, new Vector(XMVectorSet((float)font.params.posX, (float)font.params.posY, 0, 0)));
 		return 1;
 	}
 	int SpriteFont_BindLua::GetSpacing(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMVectorSet((float)font.params.spacingX, (float)font.params.spacingY, 0, 0)));
+		Luna<Vector>::push(L, new Vector(XMVectorSet((float)font.params.spacingX, (float)font.params.spacingY, 0, 0)));
 		return 1;
 	}
 	int SpriteFont_BindLua::GetAlign(lua_State* L)
@@ -200,13 +200,13 @@ namespace wi::lua
 	int SpriteFont_BindLua::GetColor(lua_State* L)
 	{
 		XMFLOAT4 C = font.params.color.toFloat4();
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat4(&C)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat4(&C)));
 		return 1;
 	}
 	int SpriteFont_BindLua::GetShadowColor(lua_State* L)
 	{
 		XMFLOAT4 C = font.params.color.toFloat4();
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat4(&C)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat4(&C)));
 		return 1;
 	}
 

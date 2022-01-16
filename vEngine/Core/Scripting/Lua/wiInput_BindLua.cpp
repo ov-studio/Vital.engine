@@ -90,7 +90,7 @@ namespace wi::lua
 	int Input_BindLua::GetPointer(lua_State* L)
 	{
 		XMFLOAT4 P = wi::input::GetPointer();
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat4(&P)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat4(&P)));
 		return 1;
 	}
 	int Input_BindLua::SetPointer(lua_State* L)
@@ -98,7 +98,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vec = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vec = Luna<Vector>::lightcheck(L, 1);
 			if (vec != nullptr)
 			{
 				wi::input::SetPointer(*vec);
@@ -112,7 +112,7 @@ namespace wi::lua
 	}
 	int Input_BindLua::GetPointerDelta(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat2(&wi::input::GetMouseState().delta_position)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat2(&wi::input::GetMouseState().delta_position)));
 		return 1;
 	}
 	int Input_BindLua::HidePointer(lua_State* L)
@@ -144,7 +144,7 @@ namespace wi::lua
 		else
 			wi::lua::SError(L, "GetAnalog(int type, opt int playerindex = 0) not enough arguments!");
 
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat4(&result)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat4(&result)));
 		return 1;
 	}
 	int Input_BindLua::GetTouches(lua_State* L)
@@ -282,7 +282,7 @@ namespace wi::lua
 	}
 	int Touch_BindLua::GetPos(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat2(&touch.pos)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat2(&touch.pos)));
 		return 1;
 	}
 
@@ -345,7 +345,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vec = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vec = Luna<Vector>::lightcheck(L, 1);
 			if (vec != nullptr)
 			{
 				feedback.led_color = wi::Color::fromFloat4(*vec);

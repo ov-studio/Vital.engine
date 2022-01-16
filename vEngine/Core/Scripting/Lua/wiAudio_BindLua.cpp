@@ -369,7 +369,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vec = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vec = Luna<Vector>::lightcheck(L, 1);
 			if (vec != nullptr)
 			{
 				XMStoreFloat3(&soundinstance3D.listenerPos, XMLoadFloat4(vec));
@@ -384,7 +384,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vec = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vec = Luna<Vector>::lightcheck(L, 1);
 			if (vec != nullptr)
 			{
 				XMStoreFloat3(&soundinstance3D.listenerUp, XMLoadFloat4(vec));
@@ -399,7 +399,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vec = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vec = Luna<Vector>::lightcheck(L, 1);
 			if (vec != nullptr)
 			{
 				XMStoreFloat3(&soundinstance3D.listenerFront, XMLoadFloat4(vec));
@@ -414,7 +414,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vec = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vec = Luna<Vector>::lightcheck(L, 1);
 			if (vec != nullptr)
 			{
 				XMStoreFloat3(&soundinstance3D.listenerVelocity, XMLoadFloat4(vec));
@@ -430,7 +430,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vec = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vec = Luna<Vector>::lightcheck(L, 1);
 			if (vec != nullptr)
 			{
 				XMStoreFloat3(&soundinstance3D.emitterPos, XMLoadFloat4(vec));
@@ -445,7 +445,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vec = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vec = Luna<Vector>::lightcheck(L, 1);
 			if (vec != nullptr)
 			{
 				XMStoreFloat3(&soundinstance3D.emitterUp, XMLoadFloat4(vec));
@@ -460,7 +460,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vec = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vec = Luna<Vector>::lightcheck(L, 1);
 			if (vec != nullptr)
 			{
 				XMStoreFloat3(&soundinstance3D.emitterFront, XMLoadFloat4(vec));
@@ -475,7 +475,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vec = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vec = Luna<Vector>::lightcheck(L, 1);
 			if (vec != nullptr)
 			{
 				XMStoreFloat3(&soundinstance3D.emitterVelocity, XMLoadFloat4(vec));

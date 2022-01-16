@@ -106,7 +106,7 @@ namespace wi::lua
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* vec = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* vec = Luna<Vector>::lightcheck(L, 1);
 			if (vec != nullptr)
 			{
 				XMStoreFloat3(&anim.vel, XMLoadFloat4(vec));
@@ -217,7 +217,7 @@ namespace wi::lua
 	}
 	int SpriteAnim_BindLua::GetVelocity(lua_State* L)
 	{
-		Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&anim.vel)));
+		Luna<Vector>::push(L, new Vector(XMLoadFloat3(&anim.vel)));
 		return 1;
 	}
 	int SpriteAnim_BindLua::GetScaleX(lua_State* L)

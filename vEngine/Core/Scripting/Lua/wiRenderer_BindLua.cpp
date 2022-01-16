@@ -159,8 +159,8 @@ namespace wi::lua::renderer
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 1)
 		{
-			Vector_BindLua* a = Luna<Vector_BindLua>::lightcheck(L, 1);
-			Vector_BindLua* b = Luna<Vector_BindLua>::lightcheck(L, 2);
+			Vector* a = Luna<Vector>::lightcheck(L, 1);
+			Vector* b = Luna<Vector>::lightcheck(L, 2);
 			if (a && b)
 			{
 				wi::renderer::RenderableLine line;
@@ -168,7 +168,7 @@ namespace wi::lua::renderer
 				XMStoreFloat3(&line.end, XMLoadFloat4(b));
 				if (argc > 2)
 				{
-					Vector_BindLua* c = Luna<Vector_BindLua>::lightcheck(L, 3);
+					Vector* c = Luna<Vector>::lightcheck(L, 3);
 					if (c)
 					{
 						XMStoreFloat4(&line.color_start, XMLoadFloat4(c));
@@ -192,7 +192,7 @@ namespace wi::lua::renderer
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Vector_BindLua* a = Luna<Vector_BindLua>::lightcheck(L, 1);
+			Vector* a = Luna<Vector>::lightcheck(L, 1);
 			if (a)
 			{
 				wi::renderer::RenderablePoint point;
@@ -203,7 +203,7 @@ namespace wi::lua::renderer
 
 					if (argc > 2)
 					{
-						Vector_BindLua* color = Luna<Vector_BindLua>::lightcheck(L, 3);
+						Vector* color = Luna<Vector>::lightcheck(L, 3);
 						point.color = *color;
 					}
 				}
@@ -227,7 +227,7 @@ namespace wi::lua::renderer
 			{
 				if (argc > 1)
 				{
-					Vector_BindLua* color = Luna<Vector_BindLua>::lightcheck(L, 2);
+					Vector* color = Luna<Vector>::lightcheck(L, 2);
 					if (color)
 					{
 						wi::renderer::DrawBox(*m, *color);
@@ -255,7 +255,7 @@ namespace wi::lua::renderer
 			{
 				if (argc > 1)
 				{
-					Vector_BindLua* color = Luna<Vector_BindLua>::lightcheck(L, 2);
+					Vector* color = Luna<Vector>::lightcheck(L, 2);
 					if (color)
 					{
 						wi::renderer::DrawSphere(sphere->sphere, *color);
@@ -283,7 +283,7 @@ namespace wi::lua::renderer
 			{
 				if (argc > 1)
 				{
-					Vector_BindLua* color = Luna<Vector_BindLua>::lightcheck(L, 2);
+					Vector* color = Luna<Vector>::lightcheck(L, 2);
 					if (color)
 					{
 						wi::renderer::DrawCapsule(capsule->capsule, *color);
@@ -307,7 +307,7 @@ namespace wi::lua::renderer
 		if (argc > 1)
 		{
 			std::string name = wi::lua::SGetString(L, 1);
-			Vector_BindLua* v = Luna<Vector_BindLua>::lightcheck(L, 2);
+			Vector* v = Luna<Vector>::lightcheck(L, 2);
 			if (v)
 			{
                 // TODO: GetScriptPath is removed, requires new method

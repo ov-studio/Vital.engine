@@ -135,8 +135,8 @@ int Pick(lua_State* L)
 			}
 			auto pick = wi::scene::Pick(ray->ray, renderTypeMask, layerMask, *scene);
 			wi::lua::SSetLongLong(L, pick.entity);
-			Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&pick.position)));
-			Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&pick.normal)));
+			Luna<Vector>::push(L, new Vector(XMLoadFloat3(&pick.position)));
+			Luna<Vector>::push(L, new Vector(XMLoadFloat3(&pick.normal)));
 			wi::lua::SSetFloat(L, pick.distance);
 			return 4;
 		}
@@ -185,8 +185,8 @@ int SceneIntersectSphere(lua_State* L)
 			}
 			auto pick = wi::scene::SceneIntersectSphere(sphere->sphere, renderTypeMask, layerMask, *scene);
 			wi::lua::SSetLongLong(L, pick.entity);
-			Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&pick.position)));
-			Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&pick.normal)));
+			Luna<Vector>::push(L, new Vector(XMLoadFloat3(&pick.position)));
+			Luna<Vector>::push(L, new Vector(XMLoadFloat3(&pick.normal)));
 			wi::lua::SSetFloat(L, pick.depth);
 			return 4;
 		}
@@ -235,8 +235,8 @@ int SceneIntersectCapsule(lua_State* L)
 			}
 			auto pick = wi::scene::SceneIntersectCapsule(capsule->capsule, renderTypeMask, layerMask, *scene);
 			wi::lua::SSetLongLong(L, pick.entity);
-			Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&pick.position)));
-			Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat3(&pick.normal)));
+			Luna<Vector>::push(L, new Vector(XMLoadFloat3(&pick.position)));
+			Luna<Vector>::push(L, new Vector(XMLoadFloat3(&pick.normal)));
 			wi::lua::SSetFloat(L, pick.depth);
 			return 4;
 		}
@@ -1254,7 +1254,7 @@ int TransformComponent_BindLua::Scale(lua_State* L)
 	int argc = wi::lua::SGetArgCount(L);
 	if (argc > 0)
 	{
-		Vector_BindLua* v = Luna<Vector_BindLua>::lightcheck(L, 1);
+		Vector* v = Luna<Vector>::lightcheck(L, 1);
 		if (v != nullptr)
 		{
 			XMFLOAT3 value;
@@ -1278,7 +1278,7 @@ int TransformComponent_BindLua::Rotate(lua_State* L)
 	int argc = wi::lua::SGetArgCount(L);
 	if (argc > 0)
 	{
-		Vector_BindLua* v = Luna<Vector_BindLua>::lightcheck(L, 1);
+		Vector* v = Luna<Vector>::lightcheck(L, 1);
 		if (v != nullptr)
 		{
 			XMFLOAT3 rollPitchYaw;
@@ -1302,7 +1302,7 @@ int TransformComponent_BindLua::Translate(lua_State* L)
 	int argc = wi::lua::SGetArgCount(L);
 	if (argc > 0)
 	{
-		Vector_BindLua* v = Luna<Vector_BindLua>::lightcheck(L, 1);
+		Vector* v = Luna<Vector>::lightcheck(L, 1);
 		if (v != nullptr)
 		{
 			XMFLOAT3 value;
@@ -1443,19 +1443,19 @@ int TransformComponent_BindLua::UpdateTransform(lua_State* L)
 int TransformComponent_BindLua::GetPosition(lua_State* L)
 {
 	XMVECTOR V = component->GetPositionV();
-	Luna<Vector_BindLua>::push(L, new Vector_BindLua(V));
+	Luna<Vector>::push(L, new Vector(V));
 	return 1;
 }
 int TransformComponent_BindLua::GetRotation(lua_State* L)
 {
 	XMVECTOR V = component->GetRotationV();
-	Luna<Vector_BindLua>::push(L, new Vector_BindLua(V));
+	Luna<Vector>::push(L, new Vector(V));
 	return 1;
 }
 int TransformComponent_BindLua::GetScale(lua_State* L)
 {
 	XMVECTOR V = component->GetScaleV();
-	Luna<Vector_BindLua>::push(L, new Vector_BindLua(V));
+	Luna<Vector>::push(L, new Vector(V));
 	return 1;
 }
 
@@ -1632,7 +1632,7 @@ int CameraComponent_BindLua::SetApertureSize(lua_State* L)
 }
 int CameraComponent_BindLua::GetApertureShape(lua_State* L)
 {
-	Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat2(&component->aperture_shape)));
+	Luna<Vector>::push(L, new Vector(XMLoadFloat2(&component->aperture_shape)));
 	return 1;
 }
 int CameraComponent_BindLua::SetApertureShape(lua_State* L)
@@ -1640,7 +1640,7 @@ int CameraComponent_BindLua::SetApertureShape(lua_State* L)
 	int argc = wi::lua::SGetArgCount(L);
 	if (argc > 0)
 	{
-		Vector_BindLua* param = Luna<Vector_BindLua>::lightcheck(L, 1);
+		Vector* param = Luna<Vector>::lightcheck(L, 1);
 		if (param != nullptr)
 		{
 			XMStoreFloat2(&component->aperture_shape, XMLoadFloat4(param));
@@ -1684,17 +1684,17 @@ int CameraComponent_BindLua::GetInvViewProjection(lua_State* L)
 }
 int CameraComponent_BindLua::GetPosition(lua_State* L)
 {
-	Luna<Vector_BindLua>::push(L, new Vector_BindLua(component->GetEye()));
+	Luna<Vector>::push(L, new Vector(component->GetEye()));
 	return 1;
 }
 int CameraComponent_BindLua::GetLookDirection(lua_State* L)
 {
-	Luna<Vector_BindLua>::push(L, new Vector_BindLua(component->GetAt()));
+	Luna<Vector>::push(L, new Vector(component->GetAt()));
 	return 1;
 }
 int CameraComponent_BindLua::GetUpDirection(lua_State* L)
 {
-	Luna<Vector_BindLua>::push(L, new Vector_BindLua(component->GetUp()));
+	Luna<Vector>::push(L, new Vector(component->GetUp()));
 	return 1;
 }
 
@@ -1863,7 +1863,7 @@ int MaterialComponent_BindLua::SetBaseColor(lua_State* L)
 	int argc = wi::lua::SGetArgCount(L);
 	if (argc > 0)
 	{
-		Vector_BindLua* _color = Luna<Vector_BindLua>::lightcheck(L, 1);
+		Vector* _color = Luna<Vector>::lightcheck(L, 1);
 		if (_color)
 		{
 			XMFLOAT4 color;
@@ -1887,7 +1887,7 @@ int MaterialComponent_BindLua::SetEmissiveColor(lua_State* L)
 	int argc = wi::lua::SGetArgCount(L);
 	if (argc > 0)
 	{
-		Vector_BindLua* _color = Luna<Vector_BindLua>::lightcheck(L, 1);
+		Vector* _color = Luna<Vector>::lightcheck(L, 1);
 		if (_color)
 		{
 			XMFLOAT4 color;
@@ -2226,7 +2226,7 @@ int LightComponent_BindLua::SetColor(lua_State* L)
 	int argc = wi::lua::SGetArgCount(L);
 	if (argc > 0)
 	{
-		Vector_BindLua* value = Luna<Vector_BindLua>::lightcheck(L, 1);
+		Vector* value = Luna<Vector>::lightcheck(L, 1);
 		if (value)
 		{
 			XMStoreFloat3(&component->color, XMLoadFloat4(value));
@@ -2326,7 +2326,7 @@ int ObjectComponent_BindLua::GetMeshID(lua_State* L)
 }
 int ObjectComponent_BindLua::GetColor(lua_State* L)
 {
-	Luna<Vector_BindLua>::push(L, new Vector_BindLua(XMLoadFloat4(&component->color)));
+	Luna<Vector>::push(L, new Vector(XMLoadFloat4(&component->color)));
 	return 1;
 }
 int ObjectComponent_BindLua::GetUserStencilRef(lua_State* L)
@@ -2355,7 +2355,7 @@ int ObjectComponent_BindLua::SetColor(lua_State* L)
 	int argc = wi::lua::SGetArgCount(L);
 	if (argc > 0)
 	{
-		Vector_BindLua* value = Luna<Vector_BindLua>::lightcheck(L, 1);
+		Vector* value = Luna<Vector>::lightcheck(L, 1);
 		if (value)
 		{
 			XMStoreFloat4(&component->color, XMLoadFloat4(value));
