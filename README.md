@@ -36,5 +36,5 @@
 
 * [**Official Releases**](./)
 * [**Installation Guide**](./)
-* [**Documentations**](https://ov-mta.gitbook.io/vengine)
+* [**Documentations**](https://ov-mta.gitbook.io/vengine/v/docs)
 * [**Discord Community**](http://discord.gg/ryc47wDEKb)
