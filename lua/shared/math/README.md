@@ -17,3 +17,7 @@ description: Shared math module.
 
 * [**shortTarget**](angle/shorttarget.md)
 * [**rotationAngle2D**](angle/rotationangle2d.md)
+
+### **━ Vector APIs**
+* [**Vector**](vector/vector.md)
+
