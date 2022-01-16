@@ -13,10 +13,10 @@ namespace wi::lua
         lunamethod(Backlog, isActive),
         lunamethod(Backlog, setLevel),
         { NULL, NULL }
-    }
+    };
     Luna<Backlog>::PropertyType Backlog::properties[] = {
         { NULL, NULL }
-    }
+    };
     void Backlog::Bind(lua_State* L)
     {
         static bool initialized = false;
@@ -45,7 +45,7 @@ namespace wi::lua
             wi::lua::SSetBool(L, false);
             return 0;
         }
-        wi::backlog::post(wi::lua::SGetString(L, 1), wi::lua::SGetString(L, 2));
+        wi::backlog::post(wi::lua::SGetString(L, 1), (wi::backlog::LogLevel)wi::lua::SGetInt(L, 1));
         wi::lua::SSetBool(L, true);
         return 1;
     }
