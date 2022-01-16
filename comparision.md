@@ -2,8 +2,8 @@
 
 | Features                 | vEngine                              | Unreal Engine                                | FiveM                           | MTA                                                      |
 | ------------------------ | ------------------------------------ | -------------------------------------------- | ------------------------------- | -------------------------------------------------------- |
-| **Package**             | Standalone                           | Standalone                                   | Dependency: GTA 5               | Dependency: GTA SA                                       |
-| **Cross Platform**       |                                      |                                              |                                 |                                                          |
+| **Package**              | Standalone                           | Standalone                                   | Dependency: GTA 5               | Dependency: GTA SA                                       |
+| **Cross Platform**       | Yes                                  | Yes                                          | Windows Only                    | Windows Only                                             |
 | **Royalty & License**    | Open Source & FFA                    | 5% every $1,000,000 USD, Proprietary License | Limited to FiveM Team           | Open Source & FFA                                        |
 | **Sandboxing Support**   | Built In                             | -                                            | Built In                        | Built In                                                 |
 | **Modding Support**      | Designed with in mind                | -                                            | Restricted to GTA 5 environment | Restricted to GTA SA environment to maintain performance |
