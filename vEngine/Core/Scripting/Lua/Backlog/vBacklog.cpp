@@ -8,14 +8,14 @@ namespace wi::lua
     // Class Binder
     const char Backlog::className[] = "backlog";
     Luna<Backlog>::FunctionType Backlog::methods[] = {
-		lunamethod(Backlog, clear),
+        lunamethod(Backlog, clear),
         lunamethod(Backlog, post),
         lunamethod(Backlog, isActive),
         lunamethod(Backlog, setLevel),
-	    { NULL, NULL }
+        { NULL, NULL }
     };
     Luna<Backlog>::PropertyType Backlog::properties[] = {
-	    { NULL, NULL }
+        { NULL, NULL }
     };
     void Backlog::Bind(lua_State* L)
     {
@@ -29,37 +29,37 @@ namespace wi::lua
     };
 
     // Class Methods
-	int Backlog::clear(lua_State* L)
-	{
-		wi::backlog::clear();
-    	wi::lua::SSetBool(L, true);
+    int Backlog::clear(lua_State* L)
+    {
+        wi::backlog::clear();
+        wi::lua::SSetBool(L, true);
         return 1;
-	};
+    };
 
-	int Backlog::post(lua_State* L)
-	{
-		int argc = wi::lua::SGetArgCount(L);
-		if (argc <= 2)
+    int Backlog::post(lua_State* L)
+    {
+        int argc = wi::lua::SGetArgCount(L);
+        if (argc <= 2)
         {
             wi::lua::SError(L, "Syntax: vEngine.backlog.post(string message, int level)!");
             wi::lua::SSetBool(L, false);
             return 0;
         }
-		wi::backlog::post(wi::lua::SGetString(L, 1), wi::lua::SGetString(L, 2));
+        wi::backlog::post(wi::lua::SGetString(L, 1), wi::lua::SGetString(L, 2));
         wi::lua::SSetBool(L, true);
         return 1;
-	};
+    };
 
-	int Backlog::isActive(lua_State* L)
-	{
-		wi::lua::SSetBool(L, wi::backlog::isActive());
+    int Backlog::isActive(lua_State* L)
+    {
+        wi::lua::SSetBool(L, wi::backlog::isActive());
         return 1;
-	};
+    };
 
-	int Backlog::setLevel(lua_State* L)
-	{
-		int argc = wi::lua::SGetArgCount(L);
-		if (argc <= 1)
+    int Backlog::setLevel(lua_State* L)
+    {
+        int argc = wi::lua::SGetArgCount(L);
+        if (argc <= 1)
         {
             wi::lua::SError(L, "Syntax: vEngine.backlog.setLevel(int level)");
             wi::lua::SSetBool(L, false);
@@ -68,5 +68,5 @@ namespace wi::lua
         wi::backlog::SetLogLevel((wi::backlog::LogLevel)wi::lua::SGetInt(L, 1));
         wi::lua::SSetBool(L, true);
         return 1;
-	};
+    };
 }
