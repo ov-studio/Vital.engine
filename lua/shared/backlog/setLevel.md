@@ -22,6 +22,6 @@ description: Sets backlog level.
 ### ━ Usage
 
 ```lua
-local state = vEngine.backlog.setLevel() --Retrieves our backlog's state
+local state = vEngine.backlog.setLevel(2) --Set our backlog level to default mode
 print(state) --Prints state
 ```
