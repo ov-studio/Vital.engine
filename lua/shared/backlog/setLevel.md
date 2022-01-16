@@ -12,7 +12,7 @@ description: Sets backlog level.
 
 <mark style="color:red;">**`[bool status] setLevel(int level)`**</mark>
 
-* [<mark style="color:green;">**Backlog Levels**</mark>](./)<mark style="color:green;">****</mark>
+* [<mark style="color:green;">**Backlog Levels**</mark>](./)<mark style="color:green;"></mark>
 
 ### ━ Usage
 
