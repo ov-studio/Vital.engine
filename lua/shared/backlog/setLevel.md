@@ -10,7 +10,7 @@ description: Sets backlog level.
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[bool state] setLevel(int level)`**</mark>
+<mark style="color:red;">**`[bool status] setLevel(int level)`**</mark>
 
 ### ━ Levels
 
@@ -22,6 +22,6 @@ description: Sets backlog level.
 ### ━ Usage
 
 ```lua
-local state = vEngine.backlog.setLevel(2) --Set our backlog level to default mode
-print(state) --Prints state
+local result = vEngine.backlog.setLevel(2) --Set our backlog level to default mode
+print(result) --Prints result
 ```
