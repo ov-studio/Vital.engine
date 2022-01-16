@@ -11,6 +11,6 @@ description: Retrieves current tick.
 ### ━ Usage
 
 ```lua
-local currentTick = vEngine.thread.getTick() //Retrieves tick
-print(currentTick) //Prints tick
+local currentTick = vEngine.thread.getTick() --Retrieves tick
+print(currentTick) --Prints tick
 ```
