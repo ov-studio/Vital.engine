@@ -12,7 +12,7 @@ description: Converts JSON to table.
 
 ```lua
 --Data JSON to be converted
-local myJSON = "[['first': 'first item', 'second': 'second item']]"
+local myJSON = "['first': 'first item', 'second': 'second item']"
 
 local generatedTable = vEngine.json.decode(myJSON) --Converts our JSON to table
 print(generatedTable) --Prints generated Table
