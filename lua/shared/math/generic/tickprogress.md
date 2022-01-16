@@ -2,7 +2,7 @@
 description: Retrieves progress of a tick.
 ---
 
-# saturate
+# tickprogress
 
 ### ━ Syntax
 
