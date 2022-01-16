@@ -1901,7 +1901,10 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math/vMath.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math/vVector.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math/vMatrix.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.cpp">
