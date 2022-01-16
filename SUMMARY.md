@@ -8,7 +8,7 @@
 
 ## ➟ C O N T E N T S <a id="contents"></a>
 
-* [Synopsis](README.md)
-* [Features](features.md)
-* [Comparision](comparision.md)
-* [Third Party](thirdparty.md)
+* [━ S Y N O P S I S](README.md)
+* [━ F E A T U R E S](features.md)
+* [━ C O M P A R I S I O N](comparision.md)
+* [━ T H I R D P A R T Y](thirdparty.md)
