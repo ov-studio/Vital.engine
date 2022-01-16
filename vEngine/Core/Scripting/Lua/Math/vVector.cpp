@@ -34,34 +34,23 @@ namespace wi::lua
     Luna<Vector_BindLua>::PropertyType Vector_BindLua::properties[] = {
         { NULL, NULL }
     };
-
     Vector_BindLua::Vector_BindLua()
     {
-        x = 0;
-        y = 0;
-        z = 0;
-        w = 0;
-    }
+        x = 0; y = 0; z = 0; w = 0;
+    };
     Vector_BindLua::Vector_BindLua(const XMFLOAT4& vector)
     {
-        x = vector.x;
-        y = vector.y;
-        z = vector.z;
-        w = vector.w;
-    }
+        x = vector.x; y = vector.y;
+        z = vector.z; w = vector.w;
+    };
     Vector_BindLua::Vector_BindLua(const XMVECTOR& vector)
     {
         XMStoreFloat4(this, vector);
-    }
+    };
     Vector_BindLua::Vector_BindLua(lua_State* L)
     {
-        x = 0;
-        y = 0;
-        z = 0;
-        w = 0;
-
+        x = 0; y = 0; z = 0; w = 0;
         int argc = wi::lua::SGetArgCount(L);
-
         if (argc > 0)
         {
             x = wi::lua::SGetFloat(L, 1);
@@ -78,9 +67,16 @@ namespace wi::lua
                 }
             }
         }
-    }
-
-
+    };
+    void Vector_BindLua::Bind(lua_State* L)
+    {
+        static bool initialized = false;
+        if (!initialized)
+        {
+            initialized = true;
+            Luna<Vector_BindLua>::Register(L, "vEngine");
+        }
+    };
 
     int Vector_BindLua::GetX(lua_State* L)
     {
@@ -399,15 +395,4 @@ namespace wi::lua
         wi::lua::SError(L, "QuaternionSlerp(Vector v1,v2, float t) not enough arguments!");
         return 0;
     }
-
-
-    void Vector_BindLua::Bind(lua_State* L)
-    {
-        static bool initialized = false;
-        if (!initialized)
-        {
-            initialized = true;
-            Luna<Vector_BindLua>::Register(L, "vEngine");
-        }
-    }s
 }

@@ -24,7 +24,7 @@ namespace wi::lua
         {
             initialized = true;
             Luna<Backlog>::Register(L, "vEngine");
-            wi::lua::RunText(L, "vEngine.backlog = backlog()");
+            wi::lua::RunText(L, "vEngine.backlog = vEngine.backlog();");
         }
     };
 
