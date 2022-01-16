@@ -2,11 +2,12 @@
 description: Shared backlog module.
 ---
 
-# Math
+# Backlog
 
 ### ━ APIs
 
 * [**clear**](clear.md)
 * [**post**](post.md)
-* [**isActive**](isactive.md) **(Client Only)**
-* [**setLevel**](setlevel.md) **(Client Only)**
+* ****[**isActive**](isActive.md) **(Client Only)**
+* ****[**setLevel**](setLevel.md) **(Client Only)**
+
