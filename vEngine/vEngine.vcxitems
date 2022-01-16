@@ -72,7 +72,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiImageParams_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiInput_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiMath_BindLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math/vMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiPrimitive_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderer_BindLua.h" />
@@ -449,7 +449,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiImageParams_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiInput_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiMath_BindLua.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math/vMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiPrimitive_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderer_BindLua.cpp" />

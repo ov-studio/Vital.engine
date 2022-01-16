@@ -18,7 +18,7 @@
 #include "Core/Scripting/Lua/wiImageParams_BindLua.h"
 #include "Core/Scripting/Lua/wiSpriteAnim_BindLua.h"
 #include "Core/Scripting/Lua/wiScene_BindLua.h"
-#include "Core/Scripting/Lua/wiMath_BindLua.h"
+#include "Core/Scripting/Lua/Math/vMath.h"
 #include "Core/Scripting/Lua/wiInput_BindLua.h"
 #include "Core/Scripting/Lua/wiSpriteFont_BindLua.h"
 #include "Core/Scripting/Lua/Backlog/vBacklog.h"

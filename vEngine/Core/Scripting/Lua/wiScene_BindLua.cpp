@@ -1,6 +1,6 @@
 #include "Core/Scripting/Lua/wiScene_BindLua.h"
 #include "Core/Systems/wiScene.h"
-#include "Core/Scripting/Lua/wiMath_BindLua.h"
+#include "Core/Scripting/Lua/Math/vMath.h"
 #include "Core/Graphics/wiEmittedParticle.h"
 #include "Core/Scripting/Lua/Texture/vTexture.h"
 #include "Core/Scripting/Lua/wiPrimitive_BindLua.h"

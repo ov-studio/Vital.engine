@@ -1,5 +1,5 @@
 #include "Core/Scripting/Lua/wiPrimitive_BindLua.h"
-#include "Core/Scripting/Lua/wiMath_BindLua.h"
+#include "Core/Scripting/Lua/Math/vMath.h"
 
 using namespace wi::primitive;
 

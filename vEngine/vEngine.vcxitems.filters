@@ -1009,7 +1009,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.h">
       <Filter>Core\Scripting\Lua</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiMath_BindLua.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math/vMath.h">
       <Filter>Core\Scripting\Lua</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.h">
@@ -1901,7 +1901,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiMath_BindLua.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math/vMath.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.cpp">

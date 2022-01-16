@@ -1,5 +1,5 @@
 #include "Core/Scripting/Lua/wiImageParams_BindLua.h"
-#include "Core/Scripting/Lua/wiMath_BindLua.h"
+#include "Core/Scripting/Lua/Math/vMath.h"
 
 namespace wi::lua
 {

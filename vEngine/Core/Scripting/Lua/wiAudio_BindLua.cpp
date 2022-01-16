@@ -1,6 +1,6 @@
 #include "Core/Scripting/Lua/wiAudio_BindLua.h"
 #include "Core/Audio/wiAudio.h"
-#include "Core/Scripting/Lua/wiMath_BindLua.h"
+#include "Core/Scripting/Lua/Math/vMath.h"
 
 namespace wi::lua
 {

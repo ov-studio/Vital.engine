@@ -1,6 +1,6 @@
 #include "Core/Scripting/Lua/wiSpriteFont_BindLua.h"
 #include "Core/Graphics/wiFont.h"
-#include "Core/Scripting/Lua/wiMath_BindLua.h"
+#include "Core/Scripting/Lua/Math/vMath.h"
 
 namespace wi::lua
 {
