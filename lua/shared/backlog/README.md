@@ -8,5 +8,5 @@ description: Shared backlog module.
 
 * [**clear**](clear.md)
 * [**post**](post.md)
-* [**isActive**](isActive.md) **(Client Only)**
-* [**setLevel**](setLevel.md) **(Client Only)**
+* [**isActive**](isactive.md) **(Client Only)**
+* [**setLevel**](setlevel.md) **(Client Only)**
