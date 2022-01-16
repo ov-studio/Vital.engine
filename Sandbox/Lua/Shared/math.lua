@@ -19,7 +19,7 @@ vEngine.math.lerp = function(minValue, maxValue, lerpRate)
     assert(not maxValue or (type(maxValue) ~= "number"), vEngine.prepareDebugMessage("LUA", API, "Error", "Invalid maxValue"))
     assert(not lerpRate or (type(lerpRate) ~= "number"), vEngine.prepareDebugMessage("LUA", API, "Error", "Invalid lerpRate"))
 
-	return minValue + ((maxValue - minValue)*lerpRate)
+    return minValue + ((maxValue - minValue)*lerpRate)
 end
 
 --Function: Clamps a number
@@ -37,7 +37,7 @@ vEngine.math.saturate = function(value)
     local API = "vEngine.math.saturate"
     assert(not value or (type(value) ~= "number"), vEngine.prepareDebugMessage("LUA", API, "Error", "Invalid value"))
 
-	return vEngine.math.clamp(value, 0, 1)
+    return vEngine.math.clamp(value, 0, 1)
 end
 
 --Function: Rounds a number
