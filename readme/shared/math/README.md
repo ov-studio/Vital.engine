@@ -15,5 +15,5 @@ description: Shared math module.
 
 ### ━ Angle **APIs**
 
-* **shortTarget**
-* **rotationAngle2D**
+* ****[**shortTarget**](angle/shorttarget.md)****
+* ****[**rotationAngle2D**](angle/rotationangle2d.md)****
