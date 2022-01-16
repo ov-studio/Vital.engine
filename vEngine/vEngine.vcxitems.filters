@@ -79,6 +79,9 @@
     <Filter Include="Core\Scripting\Lua\Backlog">
       <UniqueIdentifier>{ded852a4-8fff-4122-ae84-b30e362a6960}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Scripting\Lua\Math">
+      <UniqueIdentifier>{562e74c9-2471-4a05-9741-2118d72f80eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
@@ -1009,9 +1012,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.h">
       <Filter>Core\Scripting\Lua</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math/vMath.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.h">
       <Filter>Core\Scripting\Lua</Filter>
     </ClInclude>
@@ -1235,6 +1235,9 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.h">
       <Filter>Core\Scripting\Lua\Backlog</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMath.h">
+      <Filter>Core\Scripting\Lua\Math</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1901,12 +1904,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math/vVector.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math/vMatrix.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
@@ -2039,6 +2036,12 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.cpp">
       <Filter>Core\Scripting\Lua\Backlog</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMatrix.cpp">
+      <Filter>Core\Scripting\Lua\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vVector.cpp">
+      <Filter>Core\Scripting\Lua\Math</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
