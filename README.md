@@ -4,7 +4,7 @@
 
 **vEngine** is Next-Gen Sandbox-Engine being crafted in C++. In contrast to **UE/Unity/ReverseEngineered-Mods** its a data-driven **Standalone 3D Game-Engine** built with 'Sandboxing' in mind from the ground. vEngine uses modern rendering techniques while focussing on the performance & optimization.
 
-### ━ Features
+## ━ Features
 
 💎**CONSIDER** [**SPONSORING**](https://ko-fi.com/ovileamriam) **US TO SUPPORT THE DEVELOPMENT.**
 
@@ -17,14 +17,14 @@
 * vCommunity Integration
 * [Read More](features.md)
 
-### ━ Credits
+## ━ Credits
 
 * János Turánszki
 * Aviril
 * Tron
 * [Read More](broken-reference/)
 
-### ━ Source Building (Windows)
+## ━ Source Building (Windows)
 
 1. Launch `vEngine.sln` in Visual Studio
 2. Build the solution in Release/Debug mode
@@ -32,7 +32,7 @@
 4. Boot `vEngine_SandboxCompiler`
 5. Rebuild `Client_Windows` and boot it
 
-### ━ Contents
+## ━ Contents
 
 * [**Official Releases**](./)
 * [**Installation Guide**](./)
