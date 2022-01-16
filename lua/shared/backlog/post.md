@@ -8,12 +8,7 @@ description: Posts a message on the backlog.
 
 <mark style="color:red;">**`[bool status] post(string message, int level)`**</mark>
 
-### ━ Levels
-
-* **0 - None**
-* **1 - Default**
-* **2 - Warning**
-* **3 - Error**
+* [<mark style="color:green;">**Backlog Levels**</mark>](./)<mark style="color:green;">****</mark>
 
 ### ━ Usage
 
