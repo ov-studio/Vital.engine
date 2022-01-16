@@ -4,6 +4,10 @@ description: Awaits thread for 'n' duration before running again.
 
 # wait
 
+{% hint style="danger" %}
+**API available only within a valid thread.**
+{% endhint %}
+
 ### ━ Syntax
 
 <mark style="color:red;">**`[bool status] wait(int seconds)`**</mark>

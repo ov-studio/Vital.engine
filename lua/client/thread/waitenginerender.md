@@ -4,12 +4,13 @@ description: Awaits thread until the engine renders.
 
 # waitEngineRender
 
+{% hint style="danger" %}
+**API available only within a valid thread.**
+{% endhint %}
+
 ### ━ Syntax
 
 <mark style="color:red;">**`[bool status] waitEngineRender()`**</mark>
-
-### ━ Parameters
-
 
 ### ━ Usage
 

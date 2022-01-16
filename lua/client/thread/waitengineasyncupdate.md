@@ -4,6 +4,10 @@ description: Awaits thread until the engine updates independent of the frame.
 
 # waitEngineAsyncUpdate
 
+{% hint style="danger" %}
+**API available only within a valid thread.**
+{% endhint %}
+
 ### ━ Syntax
 
 <mark style="color:red;">**`[bool status] waitEngineAsyncUpdate()`**</mark>
