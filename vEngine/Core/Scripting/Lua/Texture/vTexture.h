@@ -13,7 +13,6 @@ namespace wi::lua
             static Luna<Texture>::FunctionType methods[];
             static Luna<Texture>::PropertyType properties[];
             Texture(lua_State* L) {};
-
             static void Bind(lua_State* L);
     };
 }

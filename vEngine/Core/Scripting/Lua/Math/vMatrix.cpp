@@ -23,7 +23,7 @@ namespace wi::lua
     };
     Luna<Matrix_BindLua>::PropertyType Matrix_BindLua::properties[] = {
         { NULL, NULL }
-    };
+    }
 
     Matrix_BindLua::Matrix_BindLua()
     {

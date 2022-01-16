@@ -30,23 +30,23 @@ namespace wi::lua
         lunamethod(Vector_BindLua, QuaternionMultiply),
         lunamethod(Vector_BindLua, QuaternionFromRollPitchYaw),
         { NULL, NULL }
-    };
+    }
     Luna<Vector_BindLua>::PropertyType Vector_BindLua::properties[] = {
         { NULL, NULL }
-    };
+    }
     Vector_BindLua::Vector_BindLua()
     {
         x = 0; y = 0; z = 0; w = 0;
-    };
+    }
     Vector_BindLua::Vector_BindLua(const XMFLOAT4& vector)
     {
         x = vector.x; y = vector.y;
         z = vector.z; w = vector.w;
-    };
+    }
     Vector_BindLua::Vector_BindLua(const XMVECTOR& vector)
     {
         XMStoreFloat4(this, vector);
-    };
+    }
     Vector_BindLua::Vector_BindLua(lua_State* L)
     {
         x = 0; y = 0; z = 0; w = 0;
@@ -67,7 +67,7 @@ namespace wi::lua
                 }
             }
         }
-    };
+    }
     void Vector_BindLua::Bind(lua_State* L)
     {
         static bool initialized = false;
@@ -76,7 +76,7 @@ namespace wi::lua
             initialized = true;
             Luna<Vector_BindLua>::Register(L, "vEngine");
         }
-    };
+    }
 
     int Vector_BindLua::GetX(lua_State* L)
     {

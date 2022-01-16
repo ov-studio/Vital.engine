@@ -10,8 +10,7 @@ namespace wi::lua
     };
     Luna<Texture>::PropertyType Texture::properties[] = {
 	    { NULL, NULL }
-    };
-
+    }
     void Texture::Bind(lua_State* L)
     {
         static bool initialized = false;
