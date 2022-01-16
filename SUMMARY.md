@@ -13,6 +13,7 @@
       * [Angle](lua/shared/math/angle/README.md)
         * [shortTarget](lua/shared/math/angle/shorttarget.md)
         * [rotationAngle2D](lua/shared/math/angle/rotationangle2d.md)
+    * [JSON](lua/shared/json/README.md)
     * [Backlog](lua/shared/backlog/README.md)
       * [clear](lua/shared/backlog/clear.md)
       * [post](lua/shared/backlog/post.md)
