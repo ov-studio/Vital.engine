@@ -1,7 +1,8 @@
 # Table of contents
 
 * [LUA](README.md)
-  * [SHARED](lua/shared.md)
+  * [SHARED](readme/shared/README.md)
+    * [Math](readme/shared/math.md)
   * [CLIENT](lua/client.md)
     * [Thread](lua/client/thread/README.md)
       * [getTick](lua/client/thread/gettick.md)
