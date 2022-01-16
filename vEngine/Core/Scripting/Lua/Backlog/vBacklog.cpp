@@ -32,6 +32,7 @@ namespace wi::lua
 	int Backlog::clear(lua_State* L)
 	{
 		wi::backlog::clear();
+    	wi::lua::SSetBool(L, true);
         return 1;
 	};
 
@@ -43,8 +44,13 @@ namespace wi::lua
 		{
 			inputString += wi::lua::SGetString(L, i);
 		}
-		if (!inputString.empty())
-		    wi::backlog::post(inputString);
+		if (inputString.empty())
+        {
+            wi::lua::SSetBool(L, false);
+            return 0;
+        }
+		wi::backlog::post(inputString);
+        wi::lua::SSetBool(L, true);
         return 1;
 	};
 
@@ -58,9 +64,13 @@ namespace wi::lua
 	{
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
-			wi::backlog::SetLogLevel((wi::backlog::LogLevel)wi::lua::SGetInt(L, 1));
-		else
-			wi::lua::SError(L, "setLevel(int val) not enough arguments!");
+        {
+            wi::backlog::SetLogLevel((wi::backlog::LogLevel)wi::lua::SGetInt(L, 1));
+            wi::lua::SSetBool(L, true);
+            return 0;
+        }
+        wi::lua::SError(L, "backlog.setLevel(int level) not enough arguments!");
+        wi::lua::SSetBool(L, false);
         return 1;
 	};
 }
