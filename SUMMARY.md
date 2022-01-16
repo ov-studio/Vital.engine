@@ -14,6 +14,8 @@
         * [shortTarget](lua/shared/math/angle/shorttarget.md)
         * [rotationAngle2D](lua/shared/math/angle/rotationangle2d.md)
     * [JSON](lua/shared/json/README.md)
+      * [encode](lua/shared/json/encode.md)
+      * [decode](lua/shared/json/decode.md)
     * [Backlog](lua/shared/backlog/README.md)
       * [clear](lua/shared/backlog/clear.md)
       * [post](lua/shared/backlog/post.md)
