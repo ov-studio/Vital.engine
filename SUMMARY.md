@@ -4,6 +4,7 @@
 
 * [OV Community](http://discord.gg/ryc47wDEKb)
 * [V Studio](http://discord.gg/sVCnxPW)
+* [Sponsor Us 💎](https://ko-fi.com/ovStudio)
 
 ## ➟ C O N T E N T S <a id="contents"></a>
 
@@ -11,4 +12,3 @@
 * [━ F E A T U R E S](features.md)
 * [━ C O M P A R I S I O N](comparision.md)
 * [━ T H I R D P A R T Y](thirdparty.md)
-* [SPONSOR US](https://ko-fi.com/ovStudio)
