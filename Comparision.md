@@ -9,3 +9,5 @@
 | **Networking**           | Built In                             | -                                    | Built In                        | Built In                                                 |
 | **Performance**          | Stable                               | Stable                               | Better                          | Worse                                                    |
 | **Modding Support**      | Designed with in mind                | -                                    | Restricted to GTA 5 environment | Restricted to GTA SA environment to maintain performance |
+| **Collision Support**    | Stable & Performant                  | Stable & Performant                  | Restricted to GTA 5             | Worse (.col files)                                       |
+| **Physics Support**      | Stable & Performant                  | Stable & Performant                  | Restricted to GTA 5             | Worse                                                    |
