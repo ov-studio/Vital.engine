@@ -4,7 +4,7 @@ description: Shared math module.
 
 # Math
 
-### ━ Generic **APIs**
+### **━ Generic APIs**
 
 * ****[**lerp**](generic/lerp.md)****
 * ****[**clamp**](generic/clamp.md)****
@@ -13,7 +13,7 @@ description: Shared math module.
 * ****[**tickProgress**](generic/tickprogress.md)****
 * ****[**percent**](generic/percent.md)****
 
-### ━ Angle **APIs**
+### **━ Angle APIs**
 
 * ****[**shortTarget**](angle/shorttarget.md)****
 * ****[**rotationAngle2D**](angle/rotationangle2d.md)****

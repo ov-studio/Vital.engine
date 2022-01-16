@@ -4,13 +4,13 @@ description: Threads are used to simulate async & timed handlers.
 
 # Thread
 
-### ━ **APIs**
+### ━ APIs
 
-* ****[**getTick**](broken-reference)****
-* [**create**](broken-reference)****
-* ****[**destroyAll**](broken-reference)****
-* ****[**wait**](broken-reference)****
-* ****[**waitEngineUpdate**](broken-reference)****
-* ****[**waitEngineAsyncUpdate**](broken-reference)****
-* ****[**waitEngineRender**](broken-reference)****
+* ****[**getTick**](getTick.md)****
+* [**create**](create.md)****
+* ****[**destroyAll**](destroyAll.md)****
+* ****[**wait**](wait.md)****
+* ****[**waitEngineUpdate**](waitEngineUpdate.md)****
+* ****[**waitEngineAsyncUpdate**](waitEngineAsyncUpdate.md)****
+* ****[**waitEngineRender**](waitEngineRender.md)****
 
