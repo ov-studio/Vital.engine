@@ -13,3 +13,4 @@
 | **Networking**           | Built In                             | -                                    | Built In                        | Built In                                                 |
 | **Performance**          | Stable                               | Stable                               | Better                          | Worse                                                    |
 | **Shipping Support**     | Built In                             | Built In                             | -                               | -                                                        |
+| **Monetization Support** | Monetizable                          | Monetizable                          | Limited to hosting cost         | Monetizable                                              |
