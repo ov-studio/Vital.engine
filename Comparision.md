@@ -14,3 +14,4 @@
 | **Graphics**             | DX12, Vulkan (Ray-Tracing Supported) | DX12, Vulkan (Ray-Tracing Supported)         | DX12, Vulkan                    | DX9                                                      |
 | **Networking**           | Built In                             | -                                            | Built In                        | Built In                                                 |
 | **Performance**          | Stable                               | Stable                                       | Better                          | Worse                                                    |
+| **Cross Platform**       |                                      |                                              |                                 |                                                          |
