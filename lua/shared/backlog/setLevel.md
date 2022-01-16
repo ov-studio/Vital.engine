@@ -14,14 +14,14 @@ description: Sets backlog level.
 
 ### ━ Levels
 
-* **1 - None**
-* **2 - Default**
-* **3 - Warning**
-* **4 - Error**
+* **0 - None**
+* **1 - Default**
+* **2 - Warning**
+* **3 - Error**
 
 ### ━ Usage
 
 ```lua
-local result = vEngine.backlog.setLevel(2) --Set our backlog level to default mode
+local result = vEngine.backlog.setLevel(1) --Set our backlog level to default mode
 print(result) --Prints result
 ```
