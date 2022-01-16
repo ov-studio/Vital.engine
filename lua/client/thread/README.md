@@ -4,7 +4,7 @@ description: Threads are used to simulate async & timed handlers.
 
 # Thread
 
-* **getTick**
+* ****[**getTick**](../../../readme/client/thread/gettick.md)****
 * [**create**](broken-reference)****
 * ****[**destroyAll**](broken-reference)****
 * ****[**wait**](broken-reference)****
