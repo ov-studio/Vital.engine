@@ -2,13 +2,13 @@
 description: Retrieves progress of a tick.
 ---
 
-# tickprogress
+# tickProgress
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[float progress] tickprogress(float tick, float duration)`**</mark>
+<mark style="color:red;">**`[float progress] tickProgress(float tick, float duration)`**</mark>
 
 ```lua
-local result = vEngine.math.tickprogress(500, 60*1000) --Retrieves tick's progress
+local result = vEngine.math.tickProgress(500, 60*1000) --Retrieves tick's progress
 print(result) --Prints result
 ```
