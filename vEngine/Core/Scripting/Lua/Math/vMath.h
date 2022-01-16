@@ -27,7 +27,6 @@ namespace wi::lua
             int setY(lua_State* L);
             int setZ(lua_State* L);
             int setW(lua_State* L);
-
             int transform(lua_State* L);
             int transformNormal(lua_State* L);
             int transformCoord(lua_State* L);
@@ -36,18 +35,15 @@ namespace wi::lua
             int quaternionNormalize(lua_State* L);
             int clamp(lua_State* L);
             int saturate(lua_State* L);
-
+            int lerp(lua_State* L);
+            int slerp(lua_State* L);
             int dot(lua_State* L);
             int cross(lua_State* L);
             int multiply(lua_State* L);
             int add(lua_State* L);
             int subtract(lua_State* L);
-            int lerp(lua_State* L);
-
-
             int quaternionMultiply(lua_State* L);
             int quaternionFromRollPitchYaw(lua_State* L);
-            int slerp(lua_State* L);
     };
 
     class Matrix_BindLua : public XMFLOAT4X4
