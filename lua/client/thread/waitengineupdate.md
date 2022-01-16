@@ -4,6 +4,10 @@ description: Awaits thread until the engine updates.
 
 # waitEngineUpdate
 
+{% hint style="danger" %}
+**API available only within a valid thread.**
+{% endhint %}
+
 ### ━ Syntax
 
 <mark style="color:red;">**`[bool status] waitEngineUpdate()`**</mark>
