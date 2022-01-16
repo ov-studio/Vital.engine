@@ -7,3 +7,10 @@ description: Retrieves current tick.
 ### ━ Syntax
 
 <mark style="color:red;">**`[int tick] getTick()`**</mark>
+
+### ━ Usage
+
+```lua
+local currentTick = vEngine.thread.getTick() //Retrieves tick
+print(currentTick) //Prints tick
+```
