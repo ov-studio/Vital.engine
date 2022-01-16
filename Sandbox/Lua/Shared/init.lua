@@ -16,6 +16,7 @@ vEngine = {}
 vEngine.math = math; math = nil;
 vEngine.math.angle = {}
 vEngine.string = string; string = nil;
+vEngine.json = json; json = nil;
 vEngine.color = {}
 
 --Function: Prepares debug message
