@@ -11,3 +11,4 @@
 | **Modding Support**      | Designed with in mind                | -                                    | Restricted to GTA 5 environment | Restricted to GTA SA environment to maintain performance |
 | **Collision Support**    | Stable & Performant                  | Stable & Performant                  | Restricted to GTA 5             | Worse (.col files)                                       |
 | **Physics Support**      | Stable & Performant                  | Stable & Performant                  | Restricted to GTA 5             | Worse                                                    |
+| **Royalty & License**    | Open Source & FFA                    | 5% every $1,000,000 USD              | Limited to FiveM Team           | Open Source & FFA                                        |
