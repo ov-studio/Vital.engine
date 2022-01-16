@@ -3,7 +3,7 @@
 * [LUA](README.md)
   * [SHARED](lua/shared.md)
     * [Math](readme/shared/math/README.md)
-      * [Generic](readme/shared/math/generic/README.md)
+      * [Generic](readme/shared/math/generic.md)
         * [lerp](readme/shared/math/generic/lerp.md)
         * [clamp](readme/shared/math/generic/clamp.md)
         * [saturate](readme/shared/math/generic/saturate.md)

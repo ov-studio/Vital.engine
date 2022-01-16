@@ -6,12 +6,12 @@ description: Shared math module.
 
 ### ━ Generic **APIs**
 
-* **lerp**
-* **clamp**
-* **saturate**
-* **round**
-* **tickProgress**
-* **percent**
+* ****[**lerp**](generic/lerp.md)****
+* ****[**clamp**](generic/clamp.md)****
+* ****[**saturate**](generic/saturate.md)****
+* ****[**round**](generic/round.md)****
+* ****[**tickProgress**](generic/tickprogress.md)****
+* ****[**percent**](generic/percent.md)****
 
 ### ━ Angle **APIs**
 
