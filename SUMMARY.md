@@ -4,9 +4,9 @@
 
 ## ➟ G L O S S A R Y <a id="glossary"></a>
 
-* [OV Community](http://discord.gg/ryc47wDEKb)
-* [V Studio](http://discord.gg/sVCnxPW)
-* [Sponsor Us 💎](https://ko-fi.com/ovStudio)
+* [━ OV Community](http://discord.gg/ryc47wDEKb)
+* [━ V Studio](http://discord.gg/sVCnxPW)
+* [━ Sponsor Us 💎](https://ko-fi.com/ovStudio)
 
 ## ➟ C O N T E N T S <a id="contents"></a>
 
