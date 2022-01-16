@@ -6,4 +6,4 @@ description: Retrieves current tick.
 
 ### ━ Syntax
 
-**`[int duration] getTick()`**
+<mark style="color:red;">**`[int tick] getTick()`**</mark>
