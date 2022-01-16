@@ -1,7 +1,7 @@
 # Table of contents
 
 * [LUA](README.md)
-  * [SHARED](readme/shared/README.md)
+  * [SHARED](lua/shared.md)
     * [Math](readme/shared/math.md)
   * [CLIENT](lua/client.md)
     * [Thread](lua/client/thread/README.md)
