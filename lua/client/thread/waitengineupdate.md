@@ -1,5 +1,5 @@
 ---
-description: Awaits thread until the engine updates independent of the frame.
+description: Awaits thread until the engine updates.
 ---
 
 # waitEngineUpdate
