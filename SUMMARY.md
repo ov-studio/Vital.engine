@@ -11,5 +11,5 @@
 ## ➟ C O N T E N T S <a id="contents"></a>
 
 * [━ F E A T U R E S](features.md)
-* [━ C O M P A R I S I O N](comparision.md)
+* [━ C O M P A R I S O N](comparison.md)
 * [━ T H I R D P A R T Y](thirdparty.md)
