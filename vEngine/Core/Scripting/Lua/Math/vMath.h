@@ -8,6 +8,7 @@ namespace wi::lua
     class Vector : public XMFLOAT4
     {
         public:
+            // Class Binder
             static const char className[];
             static Luna<Vector>::FunctionType methods[];
             static Luna<Vector>::PropertyType properties[];
@@ -17,36 +18,36 @@ namespace wi::lua
             Vector(lua_State* L);
             static void Bind(lua_State* L);
 
-            int GetX(lua_State* L);
-            int GetY(lua_State* L);
-            int GetZ(lua_State* L);
-            int GetW(lua_State* L);
+            // Class Methods
+            int getX(lua_State* L);
+            int getY(lua_State* L);
+            int getZ(lua_State* L);
+            int getW(lua_State* L);
+            int setX(lua_State* L);
+            int setY(lua_State* L);
+            int setZ(lua_State* L);
+            int setW(lua_State* L);
 
-            int SetX(lua_State* L);
-            int SetY(lua_State* L);
-            int SetZ(lua_State* L);
-            int SetW(lua_State* L);
+            int transform(lua_State* L);
+            int transformNormal(lua_State* L);
+            int transformCoord(lua_State* L);
+            int length(lua_State* L);
+            int normalize(lua_State* L);
+            int quaternionNormalize(lua_State* L);
+            int clamp(lua_State* L);
+            int saturate(lua_State* L);
 
-            int Transform(lua_State* L);
-            int TransformNormal(lua_State* L);
-            int TransformCoord(lua_State* L);
-            int Length(lua_State* L);
-            int Normalize(lua_State* L);
-            int QuaternionNormalize(lua_State* L);
-            int Clamp(lua_State* L);
-            int Saturate(lua_State* L);
-
-            int Dot(lua_State* L);
-            int Cross(lua_State* L);
-            int Multiply(lua_State* L);
-            int Add(lua_State* L);
-            int Subtract(lua_State* L);
-            int Lerp(lua_State* L);
+            int dot(lua_State* L);
+            int cross(lua_State* L);
+            int multiply(lua_State* L);
+            int add(lua_State* L);
+            int subtract(lua_State* L);
+            int lerp(lua_State* L);
 
 
-            int QuaternionMultiply(lua_State* L);
-            int QuaternionFromRollPitchYaw(lua_State* L);
-            int Slerp(lua_State* L);
+            int quaternionMultiply(lua_State* L);
+            int quaternionFromRollPitchYaw(lua_State* L);
+            int slerp(lua_State* L);
     };
 
     class Matrix_BindLua : public XMFLOAT4X4
@@ -74,8 +75,8 @@ namespace wi::lua
             int LookTo(lua_State* L);
             int LookAt(lua_State* L);
 
-            int Multiply(lua_State* L);
-            int Add(lua_State* L);
+            int multiply(lua_State* L);
+            int add(lua_State* L);
             int Transpose(lua_State* L);
             int Inverse(lua_State* L);
     };

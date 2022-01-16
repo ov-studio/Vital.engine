@@ -39,7 +39,7 @@ namespace wi::lua
     int Backlog::post(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc <= 2)
+        if (argc < 2)
         {
             wi::lua::SError(L, "Syntax: vEngine.backlog.post(string message, int level)!");
             wi::lua::SSetBool(L, false);
