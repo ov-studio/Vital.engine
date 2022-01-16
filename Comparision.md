@@ -1,7 +1,9 @@
 # ━ C O M P A R I S I O N
 
-| vEngine | Unreal Engine | MTA | FiveM   |                          |
-| ------- | ------------- | --- | ------- | ------------------------ |
-| Lua, JS | None          | Lua | Lua, JS | **Sandboxing Languages** |
-|         |               |     |         |                          |
-|         |               |     |         |                          |
+
+
+| Features                 | vEngine    | Unreal Engine | FiveM             | MTA                |
+| ------------------------ | ---------- | ------------- | ----------------- | ------------------ |
+| **Sandboxing Languages** | Lua, JS    | **-**         | Lua, JS           | Lua                |
+| **Platform**             | Standalone | Standalone    | Dependency: GTA 5 | Dependency: GTA SA |
+| **Sandbox**              | Built In   | -             | Built In          | Built In           |
