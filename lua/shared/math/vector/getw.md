@@ -12,6 +12,6 @@ description: Retrieves vector's w coord.
 
 ```lua
 local cVector = vEngine.math.vector(10, 20, 30, 40) --Creates a new vector
-local vectorCoordX = cVector:getW() --Retrieves vector's w coord
-print(vectorCoordX) --Prints w coord of our vector
+local vectorCoordW = cVector:getW() --Retrieves vector's w coord
+print(vectorCoordW) --Prints w coord of our vector
 ```

@@ -12,6 +12,6 @@ description: Retrieves vector's z coord.
 
 ```lua
 local cVector = vEngine.math.vector(10, 20, 30, 40) --Creates a new vector
-local vectorCoordX = cVector:getZ() --Retrieves vector's z coord
-print(vectorCoordX) --Prints z coord of our vector
+local vectorCoordZ = cVector:getZ() --Retrieves vector's z coord
+print(vectorCoordZ) --Prints z coord of our vector
 ```

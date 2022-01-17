@@ -12,6 +12,6 @@ description: Retrieves vector's y coord.
 
 ```lua
 local cVector = vEngine.math.vector(10, 20, 30, 40) --Creates a new vector
-local vectorCoordX = cVector:getY() --Retrieves vector's y coord
-print(vectorCoordX) --Prints y coord of our vector
+local vectorCoordY = cVector:getY() --Retrieves vector's y coord
+print(vectorCoordY) --Prints y coord of our vector
 ```
