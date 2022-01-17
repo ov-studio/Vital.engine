@@ -29,7 +29,7 @@ namespace wi::lua
         lunamethod(Vector, quatMultiply),
         lunamethod(Vector, add),
         lunamethod(Vector, subtract),
-        lunamethod(Vector, quaternionFromRollPitchYaw),
+        lunamethod(Vector, quatFromRollPitchYaw),
         { NULL, NULL }
     }
     Luna<Vector>::PropertyType Vector::properties[] = {
@@ -360,10 +360,10 @@ namespace wi::lua
         wi::lua::SError(L, "Syntax: vector:subtract(userdata vector1, userdata vector2)");
         return 0;
     }
-    int Vector::quaternionFromRollPitchYaw(lua_State* L)
+    int Vector::quatFromRollPitchYaw(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
+        if (argc >= 1)
         {
             Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
             if (cVector1)
@@ -372,7 +372,7 @@ namespace wi::lua
                 return 1;
             }
         }
-        wi::lua::SError(L, "quaternionFromRollPitchYaw(Vector rotXYZ) not enough arguments!");
+        wi::lua::SError(L, "Syntax: vector:quatFromRollPitchYaw(userdata rotVector)");
         return 0;
     }
 }

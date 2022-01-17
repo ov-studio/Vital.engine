@@ -43,7 +43,7 @@ namespace wi::lua
             int quatMultiply(lua_State* L);
             int add(lua_State* L);
             int subtract(lua_State* L);
-            int quaternionFromRollPitchYaw(lua_State* L);
+            int quatFromRollPitchYaw(lua_State* L);
     };
 
     class Matrix_BindLua : public XMFLOAT4X4
