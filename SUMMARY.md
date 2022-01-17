@@ -27,7 +27,7 @@
         * [:transformNormal](lua/shared/math/vector/transformnormal.md)
         * [:transformCoord](lua/shared/math/vector/transformcoord.md)
         * [:length](lua/shared/math/vector/length.md)
-        * [:normal](lua/shared/math/vector/normal.md)
+        * [:normalize](lua/shared/math/vector/normalize.md)
     * [JSON](lua/shared/json/README.md)
       * [encode](lua/shared/json/encode.md)
       * [decode](lua/shared/json/decode.md)

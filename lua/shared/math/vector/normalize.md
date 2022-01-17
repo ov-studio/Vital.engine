@@ -1,17 +1,17 @@
 ---
-description: Retrieves vector's normal.
+description: Normalizes a vector.
 ---
 
-# normal
+# normalize
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[userdata vector] vector:normal()`**</mark>
+<mark style="color:red;">**`[userdata vector] vector:normalize()`**</mark>
 
 ### ━ Usage
 
 ```lua
 local cVector = vEngine.math.vector(10, 20, 30, 40) --Creates a new vector
-local resultantVector = cVector:normal() --Retrieves our vector's normal
+local resultantVector = cVector:normalize() --Normalizes our vector
 print(resultantVector) --Prints our resultant vector
 ```
