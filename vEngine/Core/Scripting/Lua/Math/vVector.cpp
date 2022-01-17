@@ -147,13 +147,12 @@ namespace wi::lua
     int Vector::transform(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        if (argc >= 1)
         {
-            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
-            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 2);
-            if (cVector && cMatrix)
+            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 1);
+            if (cMatrix)
             {
-                Luna<Vector>::push(L, new Vector(XMVector4Transform(XMLoadFloat4(cVector), XMLoadFloat4x4(cMatrix))));
+                Luna<Vector>::push(L, new Vector(XMVector4Transform(XMLoadFloat4(this), XMLoadFloat4x4(cMatrix))));
                 return 1;
             }
         }
@@ -163,17 +162,16 @@ namespace wi::lua
     int Vector::transformNormal(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        if (argc >= 1)
         {
-            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
-            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 2);
-            if (cVector && cMatrix)
+            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 1);
+            if (cMatrix)
             {
-                Luna<Vector>::push(L, new Vector(XMVector3TransformNormal(XMLoadFloat4(cVector), XMLoadFloat4x4(cMatrix))));
+                Luna<Vector>::push(L, new Vector(XMVector3TransformNormal(XMLoadFloat4(this), XMLoadFloat4x4(cMatrix))));
                 return 1;
             }
         }
-        wi::lua::SError(L, "Syntax: vector:transformNormal(userdata vector, userdata matrix)");
+        wi::lua::SError(L, "Syntax: vector:transformNormal(userdata matrix)");
         return 0;
     }
     int Vector::transformCoord(lua_State* L)
