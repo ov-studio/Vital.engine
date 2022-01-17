@@ -32,7 +32,7 @@ namespace wi::lua
             int transformCoord(lua_State* L);
             int length(lua_State* L);
             int normalize(lua_State* L);
-            int quaternionNormalize(lua_State* L);
+            int quatNormalize(lua_State* L);
             int clamp(lua_State* L);
             int saturate(lua_State* L);
             int quatSlerp(lua_State* L);

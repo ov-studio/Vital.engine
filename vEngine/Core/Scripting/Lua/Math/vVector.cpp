@@ -18,7 +18,7 @@ namespace wi::lua
         lunamethod(Vector, transformCoord),
         lunamethod(Vector, length),
         lunamethod(Vector, normalize),
-        lunamethod(Vector, quaternionNormalize),
+        lunamethod(Vector, quatNormalize),
         lunamethod(Vector, clamp),
         lunamethod(Vector, saturate),
         lunamethod(Vector, lerp),
@@ -157,7 +157,7 @@ namespace wi::lua
                 return 1;
             }
         }
-        wi::lua::SError(L, "Syntax: vector:transform(userdata vector, userdata matrix)");
+        wi::lua::SError(L, "Syntax: vector:transform(userdata matrix)");
         return 0;
     }
     int Vector::transformNormal(lua_State* L)
@@ -202,9 +202,9 @@ namespace wi::lua
         Luna<Vector>::push(L, new Vector(XMVector3Normalize(XMLoadFloat4(this))));
         return 1;
     }
-    int Vector::quaternionNormalize(lua_State* L)
+    int Vector::quatNormalize(lua_State* L)
     {
-        Luna<Vector>::push(L, new Vector(XMQuaternionNormalize(XMLoadFloat4(this))));
+        Luna<Vector>::push(L, new Vector(XMquatNormalize(XMLoadFloat4(this))));
         return 1;
     }
     int Vector::clamp(lua_State* L)
