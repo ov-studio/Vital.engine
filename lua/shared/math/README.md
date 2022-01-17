@@ -6,6 +6,6 @@ description: Shared math module.
 
 ### **━ Modules**
 
-* [**Generic**](generic/)
-* [**Angle**](angle/)
-* [**Vector**](vector/)
+* [**Generic**](generic.md)
+* [**Angle**](angle.md)
+* [**Vector**](vector.md)
