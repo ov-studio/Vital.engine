@@ -339,11 +339,10 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc >= 1)
         {
-            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
-            if (cVector1 && cVector2)
+            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
+            if (cVector)
             {
-                Luna<Vector>::push(L, new Vector(XMVectorSubtract(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
+                Luna<Vector>::push(L, new Vector(XMVectorSubtract(XMLoadFloat4(this), XMLoadFloat4(cVector))));
                 return 1;
             }
         }
