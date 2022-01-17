@@ -30,6 +30,7 @@
         * [:normalize](lua/shared/math/vector/normalize.md)
         * [:quatNormalize](lua/shared/math/vector/quatNormalize.md)
         * [:clamp](lua/shared/math/vector/clamp.md)
+        * [:saturate](lua/shared/math/vector/saturate.md)
     * [JSON](lua/shared/json/README.md)
       * [encode](lua/shared/json/encode.md)
       * [decode](lua/shared/json/decode.md)
