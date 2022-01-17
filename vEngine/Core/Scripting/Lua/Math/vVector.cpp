@@ -228,7 +228,7 @@ namespace wi::lua
     int Vector::lerp(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 3)
+        if (argc >= 2)
         {
             Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
             Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
@@ -245,7 +245,7 @@ namespace wi::lua
     int Vector::quatSlerp(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 3)
+        if (argc >= 2)
         {
             Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
             Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
@@ -262,7 +262,7 @@ namespace wi::lua
     int Vector::dot(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 3)
+        if (argc >= 1)
         {
             Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
             Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
@@ -278,7 +278,7 @@ namespace wi::lua
     int Vector::cross(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 3)
+        if (argc >= 1)
         {
             Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
             Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
@@ -294,7 +294,7 @@ namespace wi::lua
     int Vector::multiply(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        if (argc >= 1)
         {
             Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
             Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
@@ -315,7 +315,7 @@ namespace wi::lua
     int Vector::quatMultiply(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc > 1)
+        if (argc >= 1)
         {
             Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
             Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
@@ -331,7 +331,7 @@ namespace wi::lua
     int Vector::add(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        if (argc >= 1)
         {
             Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
             Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
@@ -347,7 +347,7 @@ namespace wi::lua
     int Vector::subtract(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        if (argc >= 1)
         {
             Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
             Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
@@ -357,7 +357,7 @@ namespace wi::lua
                 return 1;
             }
         }
-        wi::lua::SError(L, "Syntax: vector:subtract(userdata vector1, userdata vector2)");
+        wi::lua::SError(L, "Syntax: vector:subtract(userdata vector)");
         return 0;
     }
     int Vector::quatFromRollPitchYaw(lua_State* L)
