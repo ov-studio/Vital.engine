@@ -240,7 +240,7 @@ namespace wi::lua::primitive
 	}
 	int AABB_BindLua::GetAsBoxMatrix(lua_State* L)
 	{
-		Luna<Matrix_BindLua>::push(L, new Matrix_BindLua(aabb.getAsBoxMatrix()));
+		Luna<Matrix>::push(L, new Matrix(aabb.getAsBoxMatrix()));
 		return 1;
 	}
 
