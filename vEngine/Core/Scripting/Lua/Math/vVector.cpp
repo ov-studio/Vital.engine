@@ -22,7 +22,7 @@ namespace wi::lua
         lunamethod(Vector, clamp),
         lunamethod(Vector, saturate),
         lunamethod(Vector, lerp),
-        lunamethod(Vector, slerp),
+        lunamethod(Vector, quatSlerp),
         lunamethod(Vector, dot),
         lunamethod(Vector, cross),
         lunamethod(Vector, multiply),
@@ -144,64 +144,52 @@ namespace wi::lua
         w = wi::lua::SGetFloat(L, 1);
         return 1;
     }
-
-
-    // TODO: .... 
     int Vector::transform(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc > 1)
+        if (argc >= 2)
         {
-            Vector* vec = Luna<Vector>::lightcheck(L, 1);
-            Matrix_BindLua* mat = Luna<Matrix_BindLua>::lightcheck(L, 2);
-            if (vec && mat)
+            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
+            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 2);
+            if (cVector && cMatrix)
             {
-                Luna<Vector>::push(L, new Vector(XMVector4Transform(XMLoadFloat4(vec), XMLoadFloat4x4(mat))));
+                Luna<Vector>::push(L, new Vector(XMVector4Transform(XMLoadFloat4(cVector), XMLoadFloat4x4(cMatrix))));
                 return 1;
             }
-            else
-                wi::lua::SError(L, "transform(Vector vec, Matrix matrix) argument types mismatch!");
         }
-        else
-            wi::lua::SError(L, "transform(Vector vec, Matrix matrix) not enough arguments!");
+        wi::lua::SError(L, "Syntax: vector:transform(userdata vector, userdata matrix)");
         return 0;
     }
     int Vector::transformNormal(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc > 1)
+        if (argc >= 2)
         {
-            Vector* vec = Luna<Vector>::lightcheck(L, 1);
-            Matrix_BindLua* mat = Luna<Matrix_BindLua>::lightcheck(L, 2);
-            if (vec && mat)
+            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
+            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 2);
+            if (cVector && cMatrix)
             {
-                Luna<Vector>::push(L, new Vector(XMVector3TransformNormal(XMLoadFloat4(vec), XMLoadFloat4x4(mat))));
+                Luna<Vector>::push(L, new Vector(XMVector3TransformNormal(XMLoadFloat4(cVector), XMLoadFloat4x4(cMatrix))));
                 return 1;
             }
-            else
-                wi::lua::SError(L, "transformNormal(Vector vec, Matrix matrix) argument types mismatch!");
         }
-        else
-            wi::lua::SError(L, "transformNormal(Vector vec, Matrix matrix) not enough arguments!");
+        wi::lua::SError(L, "Syntax: vector:transformNormal(userdata vector, userdata matrix)");
         return 0;
     }
     int Vector::transformCoord(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc > 1)
+        if (argc >= 2)
         {
-            Vector* vec = Luna<Vector>::lightcheck(L, 1);
-            Matrix_BindLua* mat = Luna<Matrix_BindLua>::lightcheck(L, 2);
-            if (vec && mat)
+            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
+            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 2);
+            if (cVector && cMatrix)
             {
-                Luna<Vector>::push(L, new Vector(XMVector3TransformCoord(XMLoadFloat4(vec), XMLoadFloat4x4(mat))));
+                Luna<Vector>::push(L, new Vector(XMVector3TransformCoord(XMLoadFloat4(cVector), XMLoadFloat4x4(cMatrix))));
                 return 1;
             }
-            else
-                wi::lua::SError(L, "transformCoord(Vector vec, Matrix matrix) argument types mismatch!");
         }
-        else
-            wi::lua::SError(L, "transformCoord(Vector vec, Matrix matrix) not enough arguments!");
+        wi::lua::SError(L, "Syntax: vector:transformCoord(userdata vector, userdata matrix)");
         return 0;
     }
     int Vector::length(lua_State* L)
@@ -222,15 +210,14 @@ namespace wi::lua
     int Vector::clamp(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc > 1)
+        if (argc >= 1)
         {
             float a = wi::lua::SGetFloat(L, 1);
             float b = wi::lua::SGetFloat(L, 2);
             Luna<Vector>::push(L, new Vector(XMVectorClamp(XMLoadFloat4(this), XMVectorSet(a, a, a, a), XMVectorSet(b, b, b, b))));
             return 1;
         }
-        else
-            wi::lua::SError(L, "clamp(float min,max) not enough arguments!");
+        wi::lua::SError(L, "Syntax: vector:clamp(float minValue, float maxValue)");
         return 0;
     }
     int Vector::saturate(lua_State* L)
@@ -241,35 +228,35 @@ namespace wi::lua
     int Vector::lerp(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc > 2)
+        if (argc >= 2)
         {
-            Vector* v1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* v2 = Luna<Vector>::lightcheck(L, 2);
-            float t = wi::lua::SGetFloat(L, 3);
-            if (v1 && v2)
+            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
+            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
+            float lerpRate = wi::lua::SGetFloat(L, 3);
+            if (cVector1 && cVector2)
             {
-                Luna<Vector>::push(L, new Vector(XMVectorLerp(XMLoadFloat4(v1), XMLoadFloat4(v2), t)));
+                Luna<Vector>::push(L, new Vector(XMVectorLerp(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2), lerpRate)));
                 return 1;
             }
         }
-        wi::lua::SError(L, "lerp(Vector v1,v2, float t) not enough arguments!");
+        wi::lua::SError(L, "Syntax: vector:lerp(userdata vector1, userdata vector2, float lerpRate)");
         return 0;
     }
-    int Vector::slerp(lua_State* L)
+    int Vector::quatSlerp(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 2)
         {
-            Vector* v1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* v2 = Luna<Vector>::lightcheck(L, 2);
-            float t = wi::lua::SGetFloat(L, 3);
-            if (v1 && v2)
+            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
+            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
+            float lerpRate = wi::lua::SGetFloat(L, 3);
+            if (cVector1 && cVector2)
             {
-                Luna<Vector>::push(L, new Vector(XMQuaternionSlerp(XMLoadFloat4(v1), XMLoadFloat4(v2), t)));
+                Luna<Vector>::push(L, new Vector(XMQuaternionSlerp(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2), lerpRate)));
                 return 1;
             }
         }
-        wi::lua::SError(L, "QuaternionSlerp(Vector v1,v2, float t) not enough arguments!");
+        wi::lua::SError(L, "Syntax: vector:quatSlerp(userdata vector1, userdata vector2, float lerpRate)");
         return 0;
     }
     int Vector::dot(lua_State* L)
@@ -277,15 +264,15 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
         {
-            Vector* v1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* v2 = Luna<Vector>::lightcheck(L, 2);
-            if (v1 && v2)
+            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
+            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
+            if (cVector1 && cVector2)
             {
-                wi::lua::SSetFloat(L, XMVectorGetX(XMVector3Dot(XMLoadFloat4(v1), XMLoadFloat4(v2))));
+                wi::lua::SSetFloat(L, XMVectorGetX(XMVector3Dot(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
                 return 1;
             }
         }
-        wi::lua::SError(L, "dot(Vector v1,v2) not enough arguments!");
+        wi::lua::SError(L, "dot(Vector cVector1,cVector2) not enough arguments!");
         return 0;
     }
     int Vector::cross(lua_State* L)
@@ -293,15 +280,15 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
         {
-            Vector* v1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* v2 = Luna<Vector>::lightcheck(L, 2);
-            if (v1 && v2)
+            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
+            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
+            if (cVector1 && cVector2)
             {
-                Luna<Vector>::push(L, new Vector(XMVector3Cross(XMLoadFloat4(v1), XMLoadFloat4(v2))));
+                Luna<Vector>::push(L, new Vector(XMVector3Cross(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
                 return 1;
             }
         }
-        wi::lua::SError(L, "cross(Vector v1,v2) not enough arguments!");
+        wi::lua::SError(L, "cross(Vector cVector1,cVector2) not enough arguments!");
         return 0;
     }
     int Vector::multiply(lua_State* L)
@@ -309,25 +296,25 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
         {
-            Vector* v1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* v2 = Luna<Vector>::lightcheck(L, 2);
-            if (v1 && v2)
+            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
+            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
+            if (cVector1 && cVector2)
             {
-                Luna<Vector>::push(L, new Vector(XMVectorMultiply(XMLoadFloat4(v1), XMLoadFloat4(v2))));
+                Luna<Vector>::push(L, new Vector(XMVectorMultiply(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
                 return 1;
             }
-            else if (v1)
+            else if (cVector1)
             {
-                Luna<Vector>::push(L, new Vector(XMLoadFloat4(v1) * wi::lua::SGetFloat(L, 2)));
+                Luna<Vector>::push(L, new Vector(XMLoadFloat4(cVector1) * wi::lua::SGetFloat(L, 2)));
                 return 1;
             }
-            else if (v2)
+            else if (cVector2)
             {
-                Luna<Vector>::push(L, new Vector(wi::lua::SGetFloat(L, 1) * XMLoadFloat4(v2)));
+                Luna<Vector>::push(L, new Vector(wi::lua::SGetFloat(L, 1) * XMLoadFloat4(cVector2)));
                 return 1;
             }
         }
-        wi::lua::SError(L, "multiply(Vector v1,v2) not enough arguments!");
+        wi::lua::SError(L, "multiply(Vector cVector1,cVector2) not enough arguments!");
         return 0;
     }
     int Vector::add(lua_State* L)
@@ -335,15 +322,15 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
         {
-            Vector* v1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* v2 = Luna<Vector>::lightcheck(L, 2);
-            if (v1 && v2)
+            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
+            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
+            if (cVector1 && cVector2)
             {
-                Luna<Vector>::push(L, new Vector(XMVectorAdd(XMLoadFloat4(v1), XMLoadFloat4(v2))));
+                Luna<Vector>::push(L, new Vector(XMVectorAdd(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
                 return 1;
             }
         }
-        wi::lua::SError(L, "add(Vector v1,v2) not enough arguments!");
+        wi::lua::SError(L, "add(Vector cVector1,cVector2) not enough arguments!");
         return 0;
     }
     int Vector::subtract(lua_State* L)
@@ -351,15 +338,15 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
         {
-            Vector* v1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* v2 = Luna<Vector>::lightcheck(L, 2);
-            if (v1 && v2)
+            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
+            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
+            if (cVector1 && cVector2)
             {
-                Luna<Vector>::push(L, new Vector(XMVectorSubtract(XMLoadFloat4(v1), XMLoadFloat4(v2))));
+                Luna<Vector>::push(L, new Vector(XMVectorSubtract(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
                 return 1;
             }
         }
-        wi::lua::SError(L, "subtract(Vector v1,v2) not enough arguments!");
+        wi::lua::SError(L, "subtract(Vector cVector1,cVector2) not enough arguments!");
         return 0;
     }
     int Vector::quaternionMultiply(lua_State* L)
@@ -367,15 +354,15 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
         {
-            Vector* v1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* v2 = Luna<Vector>::lightcheck(L, 2);
-            if (v1 && v2)
+            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
+            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
+            if (cVector1 && cVector2)
             {
-                Luna<Vector>::push(L, new Vector(XMQuaternionMultiply(XMLoadFloat4(v1), XMLoadFloat4(v2))));
+                Luna<Vector>::push(L, new Vector(XMQuaternionMultiply(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
                 return 1;
             }
         }
-        wi::lua::SError(L, "quaternionMultiply(Vector v1,v2) not enough arguments!");
+        wi::lua::SError(L, "quaternionMultiply(Vector cVector1,cVector2) not enough arguments!");
         return 0;
     }
     int Vector::quaternionFromRollPitchYaw(lua_State* L)
@@ -383,10 +370,10 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 0)
         {
-            Vector* v1 = Luna<Vector>::lightcheck(L, 1);
-            if (v1)
+            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
+            if (cVector1)
             {
-                Luna<Vector>::push(L, new Vector(XMQuaternionRotationRollPitchYawFromVector(XMLoadFloat4(v1))));
+                Luna<Vector>::push(L, new Vector(XMQuaternionRotationRollPitchYawFromVector(XMLoadFloat4(cVector1))));
                 return 1;
             }
         }

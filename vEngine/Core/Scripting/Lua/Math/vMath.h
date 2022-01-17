@@ -35,7 +35,7 @@ namespace wi::lua
             int quaternionNormalize(lua_State* L);
             int clamp(lua_State* L);
             int saturate(lua_State* L);
-            int lerp(lua_State* L);
+            int quatSlerp(lua_State* L);
             int slerp(lua_State* L);
             int dot(lua_State* L);
             int cross(lua_State* L);
