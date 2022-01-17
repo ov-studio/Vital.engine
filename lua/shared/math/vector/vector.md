@@ -11,6 +11,6 @@ description: Creates a new vector.
 ### ━ Usage
 
 ```lua
-local result = vEngine.math.vector(10, 10, 10, 10) --Creates our vector
-print(result) --Prints result
+local cVector = vEngine.math.vector(10, 10, 10, 10) --Creates our vector
+print(cVector) --Prints our vector
 ```
