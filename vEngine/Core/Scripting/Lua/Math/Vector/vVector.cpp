@@ -51,17 +51,17 @@ namespace wi::lua
     Vector::Vector(lua_State* L)
     {
         x = 0; y = 0; z = 0; w = 0;
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 0)
         {
             x = wi::lua::SGetFloat(L, 1);
-            if (argc > 1)
+            if (argCount > 1)
             {
                 y = wi::lua::SGetFloat(L, 2);
-                if (argc > 2)
+                if (argCount > 2)
                 {
                     z = wi::lua::SGetFloat(L, 3);
-                    if (argc > 3)
+                    if (argCount > 3)
                     {
                         w = wi::lua::SGetFloat(L, 4);
                     }
@@ -102,8 +102,8 @@ namespace wi::lua
     }
     int Vector::setX(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             x = wi::lua::SGetFloat(L, 1);
             return 1;
@@ -113,8 +113,8 @@ namespace wi::lua
     }
     int Vector::setY(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             y = wi::lua::SGetFloat(L, 1);
             return 1;
@@ -124,8 +124,8 @@ namespace wi::lua
     }
     int Vector::setZ(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             z = wi::lua::SGetFloat(L, 1);
             return 1;
@@ -135,8 +135,8 @@ namespace wi::lua
     }
     int Vector::setW(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             w = wi::lua::SGetFloat(L, 1);
             return 1;
@@ -146,8 +146,8 @@ namespace wi::lua
     }
     int Vector::transform(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
             if (cMatrix)
@@ -161,8 +161,8 @@ namespace wi::lua
     }
     int Vector::transformNormal(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
             if (cMatrix)
@@ -176,8 +176,8 @@ namespace wi::lua
     }
     int Vector::transformCoord(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
             if (cMatrix)
@@ -206,8 +206,8 @@ namespace wi::lua
     }
     int Vector::clamp(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 2)
         {
             float a = wi::lua::SGetFloat(L, 1);
             float b = wi::lua::SGetFloat(L, 2);
@@ -224,8 +224,8 @@ namespace wi::lua
     }
     int Vector::lerp(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 2)
         {
             Vector* cVector = Luna<Vector>::lightcheck(L, 1);
             float lerpRate = wi::lua::SGetFloat(L, 2);
@@ -240,8 +240,8 @@ namespace wi::lua
     }
     int Vector::quatSlerp(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 2)
         {
             Vector* cVector = Luna<Vector>::lightcheck(L, 1);
             float lerpRate = wi::lua::SGetFloat(L, 2);
@@ -256,8 +256,8 @@ namespace wi::lua
     }
     int Vector::dot(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             Vector* cVector = Luna<Vector>::lightcheck(L, 1);
             if (cVector)
@@ -271,8 +271,8 @@ namespace wi::lua
     }
     int Vector::cross(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             Vector* cVector = Luna<Vector>::lightcheck(L, 1);
             if (cVector)
@@ -286,8 +286,8 @@ namespace wi::lua
     }
     int Vector::multiply(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             Vector* cVector = Luna<Vector>::lightcheck(L, 1);
             if (cVector)
@@ -306,8 +306,8 @@ namespace wi::lua
     }
     int Vector::quatMultiply(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             Vector* cVector = Luna<Vector>::lightcheck(L, 1);
             if (cVector)
@@ -321,8 +321,8 @@ namespace wi::lua
     }
     int Vector::add(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             Vector* cVector = Luna<Vector>::lightcheck(L, 1);
             if (cVector)
@@ -336,8 +336,8 @@ namespace wi::lua
     }
     int Vector::subtract(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             Vector* cVector = Luna<Vector>::lightcheck(L, 1);
             if (cVector)
@@ -351,8 +351,8 @@ namespace wi::lua
     }
     int Vector::quatFromRollPitchYaw(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             Vector* cVector = Luna<Vector>::lightcheck(L, 1);
             if (cVector)
