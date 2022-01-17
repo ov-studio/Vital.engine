@@ -71,8 +71,9 @@ namespace wi::lua
         if (!initialized)
         {
             initialized = true;
-            Luna<Matrix>::Register(L, "vEngine.math");
-            wi::lua::RunText(L, "vEngine.backlog.post(type(vEngine.math.matrix.translation));");
+            Luna<Matrix>::Register(L, "vEngine");
+            std::string className = Matrix::className.c_str();
+            wi::lua::RunText(L, "vEngine.math." + className + " = vEngine." + className + "; vEngine." + className + " = nil;");
         }
     }
 
