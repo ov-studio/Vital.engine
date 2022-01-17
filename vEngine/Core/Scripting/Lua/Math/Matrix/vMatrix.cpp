@@ -2,19 +2,19 @@
 
 namespace wi::lua
 {
+    // Class Binder
     const char Matrix::className[] = "matrix";
     Luna<Matrix>::FunctionType Matrix::methods[] = {
-        lunamethod(Matrix, GetRow),
-        lunamethod(Matrix, Translation),
-        lunamethod(Matrix, Rotation),
-        lunamethod(Matrix, RotationX),
-        lunamethod(Matrix, RotationY),
-        lunamethod(Matrix, RotationZ),
-        lunamethod(Matrix, RotationQuaternion),
-        lunamethod(Matrix, Scale),
-        lunamethod(Matrix, LookTo),
-        lunamethod(Matrix, LookAt),
-
+        lunamethod(Matrix, getRow),
+        lunamethod(Matrix, translate),
+        lunamethod(Matrix, rotate),
+        lunamethod(Matrix, rotateX),
+        lunamethod(Matrix, rotateY),
+        lunamethod(Matrix, rotateZ),
+        lunamethod(Matrix, quatRotate),
+        lunamethod(Matrix, scale),
+        lunamethod(Matrix, lookTo),
+        lunamethod(Matrix, lookAt),
         lunamethod(Matrix, add),
         lunamethod(Matrix, multiply),
         lunamethod(Matrix, transpose),
@@ -23,8 +23,7 @@ namespace wi::lua
     };
     Luna<Matrix>::PropertyType Matrix::properties[] = {
         { NULL, NULL }
-    }
-
+    };
     Matrix::Matrix()
     {
         std::memcpy(this, &wi::math::IDENTITY_MATRIX, sizeof(wi::math::IDENTITY_MATRIX));
@@ -40,10 +39,7 @@ namespace wi::lua
     Matrix::Matrix(lua_State* L)
     {
         std::memcpy(this, &wi::math::IDENTITY_MATRIX, sizeof(wi::math::IDENTITY_MATRIX));
-
         int argc = wi::lua::SGetArgCount(L);
-
-        // fill out all the four rows of the matrix
         for (int i = 0; i < 4; ++i)
         {
             float x = 0.f, y = 0.f, z = 0.f, w = 0.f;
@@ -68,10 +64,18 @@ namespace wi::lua
             this->m[i][2] = x;
             this->m[i][3] = x;
         }
-
+    }
+    void Matrix::Bind(lua_State* L)
+    {
+        static bool initialized = false;
+        if (!initialized)
+        {
+            initialized = true;
+            Luna<Matrix>::Register(L, "vEngine");
+        }
     }
 
-    int Matrix::GetRow(lua_State* L)
+    int Matrix::getRow(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         int row = 0;
@@ -85,10 +89,7 @@ namespace wi::lua
         Luna<Vector>::push(L, new Vector(r));
         return 1;
     }
-
-
-
-    int Matrix::Translation(lua_State* L)
+    int Matrix::translate(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         XMMATRIX mat = XMMatrixIdentity();
@@ -104,7 +105,7 @@ namespace wi::lua
         return 1;
     }
 
-    int Matrix::Rotation(lua_State* L)
+    int Matrix::rotate(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         XMMATRIX mat = XMMatrixIdentity();
@@ -120,7 +121,7 @@ namespace wi::lua
         return 1;
     }
 
-    int Matrix::RotationX(lua_State* L)
+    int Matrix::rotateX(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         XMMATRIX mat = XMMatrixIdentity();
@@ -132,7 +133,7 @@ namespace wi::lua
         return 1;
     }
 
-    int Matrix::RotationY(lua_State* L)
+    int Matrix::rotateY(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         XMMATRIX mat = XMMatrixIdentity();
@@ -144,7 +145,7 @@ namespace wi::lua
         return 1;
     }
 
-    int Matrix::RotationZ(lua_State* L)
+    int Matrix::rotateZ(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         XMMATRIX mat = XMMatrixIdentity();
@@ -156,7 +157,7 @@ namespace wi::lua
         return 1;
     }
 
-    int Matrix::RotationQuaternion(lua_State* L)
+    int Matrix::quatRotate(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         XMMATRIX mat = XMMatrixIdentity();
@@ -172,7 +173,7 @@ namespace wi::lua
         return 1;
     }
 
-    int Matrix::Scale(lua_State* L)
+    int Matrix::scale(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         XMMATRIX mat = XMMatrixIdentity();
@@ -188,7 +189,7 @@ namespace wi::lua
         return 1;
     }
 
-    int Matrix::LookTo(lua_State* L)
+    int Matrix::lookTo(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
@@ -208,14 +209,14 @@ namespace wi::lua
                 Luna<Matrix>::push(L, new Matrix(XMMatrixLookToLH(XMLoadFloat4(pos), XMLoadFloat4(dir), Up)));
             }
             else
-                wi::lua::SError(L, "LookTo(Vector eye, Vector direction, opt Vector up) argument is not a Vector!");
+                wi::lua::SError(L, "lookTo(Vector eye, Vector direction, opt Vector up) argument is not a Vector!");
         }
         else
-            wi::lua::SError(L, "LookTo(Vector eye, Vector direction, opt Vector up) not enough arguments!");
+            wi::lua::SError(L, "lookTo(Vector eye, Vector direction, opt Vector up) not enough arguments!");
         return 1;
     }
 
-    int Matrix::LookAt(lua_State* L)
+    int Matrix::lookAt(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
@@ -235,10 +236,10 @@ namespace wi::lua
                 Luna<Matrix>::push(L, new Matrix(XMMatrixLookAtLH(XMLoadFloat4(pos), XMLoadFloat4(dir), Up)));
             }
             else
-                wi::lua::SError(L, "LookAt(Vector eye, Vector focusPos, opt Vector up) argument is not a Vector!");
+                wi::lua::SError(L, "lookAt(Vector eye, Vector focusPos, opt Vector up) argument is not a Vector!");
         }
         else
-            wi::lua::SError(L, "LookAt(Vector eye, Vector focusPos, opt Vector up) not enough arguments!");
+            wi::lua::SError(L, "lookAt(Vector eye, Vector focusPos, opt Vector up) not enough arguments!");
         return 1;
     }
 
@@ -305,16 +306,5 @@ namespace wi::lua
         }
         wi::lua::SError(L, "inverse(Matrix m) not enough arguments!");
         return 0;
-    }
-
-
-    void Matrix::Bind(lua_State* L)
-    {
-        static bool initialized = false;
-        if (!initialized)
-        {
-            initialized = true;
-            Luna<Matrix>::Register(L, "vEngine");
-        }
     }
 }
