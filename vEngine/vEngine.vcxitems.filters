@@ -82,6 +82,12 @@
     <Filter Include="Core\Scripting\Lua\Math">
       <UniqueIdentifier>{562e74c9-2471-4a05-9741-2118d72f80eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Scripting\Lua\Math\Vector">
+      <UniqueIdentifier>{a7b5351b-8fbf-4c02-9aaf-d904c89b7a34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Scripting\Lua\Math\Matrix">
+      <UniqueIdentifier>{6f05ae6f-bf57-4022-8f9f-106d51a33fc5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
@@ -1236,6 +1242,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.h">
       <Filter>Core\Scripting\Lua\Backlog</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Vector\vVector.h">
+      <Filter>Core\Scripting\Lua\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.h">
+      <Filter>Core\Scripting\Lua\Math\Matrix</Filter>
+    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMath.h">
       <Filter>Core\Scripting\Lua\Math</Filter>
     </ClInclude>
@@ -2037,11 +2049,11 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.cpp">
       <Filter>Core\Scripting\Lua\Backlog</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMatrix.cpp">
-      <Filter>Core\Scripting\Lua\Math</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Vector\vVector.cpp">
+      <Filter>Core\Scripting\Lua\Math\Vector</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vVector.cpp">
-      <Filter>Core\Scripting\Lua\Math</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.cpp">
+      <Filter>Core\Scripting\Lua\Math\Matrix</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

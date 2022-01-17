@@ -5,4 +5,4 @@
 
 // Boot Modules
 #include "Core/Scripting/Lua/Math/Vector/vVector.h"
-#include "Core/Scripting/Lua/Math/Vector/vMatrix.h"
+#include "Core/Scripting/Lua/Math/Matrix/vMatrix.h"
