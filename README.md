@@ -19,11 +19,11 @@
 
 ## ━ Credits
 
-* János Turánszki
-* Aviril
-* Tron
-* Mario
-* [Read More](credits.md)
+* **János Turánszki**
+* **Aviril**
+* **Tron**
+* **Mario**
+* [**Read More**](credits.md)
 
 ## ━ Source Building (Windows)
 
