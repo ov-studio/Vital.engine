@@ -243,18 +243,19 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc >= 2)
         {
-            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
-            float lerpRate = wi::lua::SGetFloat(L, 3);
-            if (cVector1 && cVector2)
+            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
+            float lerpRate = wi::lua::SGetFloat(L, 2);
+            if (cVector)
             {
-                Luna<Vector>::push(L, new Vector(XMQuaternionSlerp(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2), lerpRate)));
+                Luna<Vector>::push(L, new Vector(XMQuaternionSlerp(XMLoadFloat4(this), XMLoadFloat4(cVector), lerpRate)));
                 return 1;
             }
         }
         wi::lua::SError(L, "Syntax: vector:quatSlerp(userdata vector, float lerpRate)");
         return 0;
     }
+
+    // TODO: ...
     int Vector::dot(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
