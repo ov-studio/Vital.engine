@@ -47,7 +47,7 @@ int LoadModel(lua_State* L)
 				XMMATRIX transform = XMMatrixIdentity();
 				if (argc > 2)
 				{
-					Matrix_BindLua* matrix = Luna<Matrix_BindLua>::lightcheck(L, 3);
+					Matrix* matrix = Luna<Matrix>::lightcheck(L, 3);
 					if (matrix != nullptr)
 					{
 						transform = XMLoadFloat4x4(matrix);
@@ -78,7 +78,7 @@ int LoadModel(lua_State* L)
 			XMMATRIX transform = XMMatrixIdentity();
 			if (argc > 1)
 			{
-				Matrix_BindLua* matrix = Luna<Matrix_BindLua>::lightcheck(L, 2);
+				Matrix* matrix = Luna<Matrix>::lightcheck(L, 2);
 				if (matrix != nullptr)
 				{
 					transform = XMLoadFloat4x4(matrix);
@@ -1408,7 +1408,7 @@ int TransformComponent_BindLua::MatrixTransform(lua_State* L)
 	int argc = wi::lua::SGetArgCount(L);
 	if (argc > 0)
 	{
-		Matrix_BindLua* m = Luna<Matrix_BindLua>::lightcheck(L, 1);
+		Matrix* m = Luna<Matrix>::lightcheck(L, 1);
 		if (m != nullptr)
 		{
 			component->MatrixTransform(XMLoadFloat4x4(m));
@@ -1427,7 +1427,7 @@ int TransformComponent_BindLua::MatrixTransform(lua_State* L)
 int TransformComponent_BindLua::GetMatrix(lua_State* L)
 {
 	XMMATRIX M = XMLoadFloat4x4(&component->world);
-	Luna<Matrix_BindLua>::push(L, new Matrix_BindLua(M));
+	Luna<Matrix>::push(L, new Matrix(M));
 	return 1;
 }
 int TransformComponent_BindLua::ClearTransform(lua_State* L)
@@ -1654,32 +1654,32 @@ int CameraComponent_BindLua::SetApertureShape(lua_State* L)
 }
 int CameraComponent_BindLua::GetView(lua_State* L)
 {
-	Luna<Matrix_BindLua>::push(L, new Matrix_BindLua(component->GetView()));
+	Luna<Matrix>::push(L, new Matrix(component->GetView()));
 	return 1;
 }
 int CameraComponent_BindLua::GetProjection(lua_State* L)
 {
-	Luna<Matrix_BindLua>::push(L, new Matrix_BindLua(component->GetProjection()));
+	Luna<Matrix>::push(L, new Matrix(component->GetProjection()));
 	return 1;
 }
 int CameraComponent_BindLua::GetViewProjection(lua_State* L)
 {
-	Luna<Matrix_BindLua>::push(L, new Matrix_BindLua(component->GetViewProjection()));
+	Luna<Matrix>::push(L, new Matrix(component->GetViewProjection()));
 	return 1;
 }
 int CameraComponent_BindLua::GetInvView(lua_State* L)
 {
-	Luna<Matrix_BindLua>::push(L, new Matrix_BindLua(component->GetInvView()));
+	Luna<Matrix>::push(L, new Matrix(component->GetInvView()));
 	return 1;
 }
 int CameraComponent_BindLua::GetInvProjection(lua_State* L)
 {
-	Luna<Matrix_BindLua>::push(L, new Matrix_BindLua(component->GetInvProjection()));
+	Luna<Matrix>::push(L, new Matrix(component->GetInvProjection()));
 	return 1;
 }
 int CameraComponent_BindLua::GetInvViewProjection(lua_State* L)
 {
-	Luna<Matrix_BindLua>::push(L, new Matrix_BindLua(component->GetInvViewProjection()));
+	Luna<Matrix>::push(L, new Matrix(component->GetInvViewProjection()));
 	return 1;
 }
 int CameraComponent_BindLua::GetPosition(lua_State* L)

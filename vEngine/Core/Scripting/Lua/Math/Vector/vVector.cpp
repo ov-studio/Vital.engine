@@ -149,7 +149,7 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc >= 1)
         {
-            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 1);
+            Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
             if (cMatrix)
             {
                 Luna<Vector>::push(L, new Vector(XMVector4Transform(XMLoadFloat4(this), XMLoadFloat4x4(cMatrix))));
@@ -164,7 +164,7 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc >= 1)
         {
-            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 1);
+            Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
             if (cMatrix)
             {
                 Luna<Vector>::push(L, new Vector(XMVector3TransformNormal(XMLoadFloat4(this), XMLoadFloat4x4(cMatrix))));
@@ -179,7 +179,7 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc >= 1)
         {
-            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 1);
+            Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
             if (cMatrix)
             {
                 Luna<Vector>::push(L, new Vector(XMVector3TransformCoord(XMLoadFloat4(this), XMLoadFloat4x4(cMatrix))));

@@ -222,7 +222,7 @@ namespace wi::lua::renderer
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Matrix_BindLua* m = Luna<Matrix_BindLua>::lightcheck(L, 1);
+			Matrix* m = Luna<Matrix>::lightcheck(L, 1);
 			if (m)
 			{
 				if (argc > 1)

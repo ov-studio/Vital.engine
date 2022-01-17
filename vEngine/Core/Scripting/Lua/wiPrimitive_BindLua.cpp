@@ -224,7 +224,7 @@ namespace wi::lua::primitive
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
 		{
-			Matrix_BindLua* _matrix = Luna<Matrix_BindLua>::lightcheck(L, 1);
+			Matrix* _matrix = Luna<Matrix>::lightcheck(L, 1);
 			if (_matrix)
 			{
 				Luna<AABB_BindLua>::push(L, new AABB_BindLua(aabb.transform(*_matrix)));

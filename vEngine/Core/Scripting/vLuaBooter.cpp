@@ -90,7 +90,7 @@ namespace wi::lua
             SpriteAnim_BindLua::Bind(cInstance.instance);
             scene::Bind(cInstance.instance);
             Vector::Bind(cInstance.instance);
-            Matrix_BindLua::Bind(cInstance.instance);
+            Matrix::Bind(cInstance.instance);
             Input_BindLua::Bind(cInstance.instance);
             SpriteFont_BindLua::Bind(cInstance.instance);
             Backlog::Bind(cInstance.instance);
