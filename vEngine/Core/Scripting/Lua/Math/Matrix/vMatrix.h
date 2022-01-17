@@ -1,5 +1,6 @@
 #pragma once
 #include "Core/Scripting/vLuaBooter.h"
+#include "Core/Helpers/wiMath.h"
 
 namespace wi::lua
 {

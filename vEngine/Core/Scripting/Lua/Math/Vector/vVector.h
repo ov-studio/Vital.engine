@@ -1,5 +1,6 @@
 #pragma once
 #include "Core/Scripting/vLuaBooter.h"
+#include "Core/Helpers/wiMath.h"
 
 namespace wi::lua
 {
@@ -33,8 +34,8 @@ namespace wi::lua
             int quatNormalize(lua_State* L);
             int clamp(lua_State* L);
             int saturate(lua_State* L);
+            int lerp(lua_State* L);
             int quatSlerp(lua_State* L);
-            int slerp(lua_State* L);
             int dot(lua_State* L);
             int cross(lua_State* L);
             int multiply(lua_State* L);

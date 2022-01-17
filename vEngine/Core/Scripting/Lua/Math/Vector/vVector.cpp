@@ -31,10 +31,10 @@ namespace wi::lua
         lunamethod(Vector, subtract),
         lunamethod(Vector, quatFromRollPitchYaw),
         { NULL, NULL }
-    }
+    };
     Luna<Vector>::PropertyType Vector::properties[] = {
         { NULL, NULL }
-    }
+    };
     Vector::Vector()
     {
         x = 0; y = 0; z = 0; w = 0;
