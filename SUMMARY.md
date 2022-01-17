@@ -33,6 +33,8 @@
         * [:saturate](lua/shared/math/vector/saturate.md)
         * [:lerp](lua/shared/math/vector/lerp.md)
         * [:quatSlerp](lua/shared/math/vector/quatslerp.md)
+        * [:dot](lua/shared/math/vector/dot.md)
+        * [:cross](lua/shared/math/vector/cross.md)
     * [JSON](lua/shared/json/README.md)
       * [encode](lua/shared/json/encode.md)
       * [decode](lua/shared/json/decode.md)
