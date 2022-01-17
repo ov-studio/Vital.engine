@@ -177,7 +177,7 @@ namespace wi::lua
     int Vector::transformCoord(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        if (argc >= 1)
         {
             Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 1);
             if (cMatrix)
@@ -204,6 +204,8 @@ namespace wi::lua
         Luna<Vector>::push(L, new Vector(XMquatNormalize(XMLoadFloat4(this))));
         return 1;
     }
+
+    // TODO: ...
     int Vector::clamp(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
