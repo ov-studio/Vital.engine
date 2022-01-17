@@ -25,3 +25,7 @@
 * [**:cross**](vector/cross.md)
 * [**:multiply**](vector/multiply.md)
 * [**:quatMultiply**](vector/quatmultiply.md)
+* [**:add**](vector/add.md)
+* [**:subtract**](vector/subtract.md)
+* [**:quatFromRollPitchYaw**](vector/quatFromRollPitchYaw.md)
+
