@@ -103,46 +103,46 @@ namespace wi::lua
     int Vector::setX(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc < 1)
+        if (argc >= 1)
         {
-            wi::lua::SError(L, "Syntax: vector:setX(float value)");
-            return 0
+            x = wi::lua::SGetFloat(L, 1);
+            return 1;
         }
-        x = wi::lua::SGetFloat(L, 1);
-        return 1;
+        wi::lua::SError(L, "Syntax: vector:setX(float value)");
+        return 0;
     }
     int Vector::setY(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc < 1)
+        if (argc >= 1)
         {
-            wi::lua::SError(L, "Syntax: vector:setY(float value)");
-            return 0
+            y = wi::lua::SGetFloat(L, 1);
+            return 1;
         }
-        y = wi::lua::SGetFloat(L, 1);
-        return 1;
+        wi::lua::SError(L, "Syntax: vector:setY(float value)");
+        return 0;
     }
     int Vector::setZ(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc < 1)
+        if (argc >= 1)
         {
-            wi::lua::SError(L, "Syntax: vector:setZ(float value)");
-            return 0
+            z = wi::lua::SGetFloat(L, 1);
+            return 1;
         }
-        z = wi::lua::SGetFloat(L, 1);
-        return 1;
+        wi::lua::SError(L, "Syntax: vector:setZ(float value)");
+        return 0;
     }
     int Vector::setW(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc < 1)
+        if (argc >= 1)
         {
-            wi::lua::SError(L, "Syntax: vector:setW(float value)");
-            return 0
+            w = wi::lua::SGetFloat(L, 1);
+            return 1;
         }
-        w = wi::lua::SGetFloat(L, 1);
-        return 1;
+        wi::lua::SError(L, "Syntax: vector:setW(float value)");
+        return 0;
     }
     int Vector::transform(lua_State* L)
     {
