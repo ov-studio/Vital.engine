@@ -67,6 +67,9 @@ namespace wi::lua
         #if __has_include("Core/Sandbox/.build/vSandboxLua.h")
             // Loads whitelisted scripts
             RunText(cInstance.instance, "vEngine = {};");
+            RunText(cInstance.instance, "vEngine.math = math; math = nil;");
+            RunText(cInstance.instance, "vEngine.string = string; string = nil;");
+            RunText(cInstance.instance, "vEngine.json = json; json = nil;");
             for (int i = 0; i < sandbox::lua::modules.size(); ++i)
             {
                 if (sandbox::lua::modules[i].moduleName != "Server") {
