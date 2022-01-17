@@ -1,7 +1,6 @@
 # Generic
 
-### **━ APIs**
-
+### ━ APIs
 * [**lerp**](generic/lerp.md)
 * [**clamp**](generic/clamp.md)
 * [**saturate**](generic/saturate.md)
