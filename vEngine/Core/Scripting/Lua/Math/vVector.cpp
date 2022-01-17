@@ -210,7 +210,7 @@ namespace wi::lua
     int Vector::clamp(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        if (argc >= 2)
         {
             float a = wi::lua::SGetFloat(L, 1);
             float b = wi::lua::SGetFloat(L, 2);
@@ -228,7 +228,7 @@ namespace wi::lua
     int Vector::lerp(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        if (argc >= 3)
         {
             Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
             Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
@@ -245,7 +245,7 @@ namespace wi::lua
     int Vector::quatSlerp(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc > 2)
+        if (argc >= 3)
         {
             Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
             Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
