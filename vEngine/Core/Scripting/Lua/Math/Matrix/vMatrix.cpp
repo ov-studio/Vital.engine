@@ -71,7 +71,8 @@ namespace wi::lua
         if (!initialized)
         {
             initialized = true;
-            Luna<Matrix>::Register(L, "vEngine");
+            Luna<Matrix>::Register(L, "vEngine.math");
+            wi::lua::RunText(L, "vEngine.backlog.post(type(vEngine.math.matrix.translation));");
         }
     }
 

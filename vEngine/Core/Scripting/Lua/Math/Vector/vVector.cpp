@@ -75,7 +75,7 @@ namespace wi::lua
         if (!initialized)
         {
             initialized = true;
-            Luna<Vector>::Register(L, "vEngine");
+            Luna<Vector>::Register(L, "vEngine.math");
         }
     }
 
