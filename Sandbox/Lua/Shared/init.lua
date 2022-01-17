@@ -12,7 +12,6 @@
 --[[ Module ]]--
 ----------------
 
-vEngine = {}
 vEngine.math = math; math = nil;
 vEngine.math.angle = {}
 vEngine.string = string; string = nil;
