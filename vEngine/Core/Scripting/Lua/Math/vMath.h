@@ -40,9 +40,9 @@ namespace wi::lua
             int dot(lua_State* L);
             int cross(lua_State* L);
             int multiply(lua_State* L);
+            int quatMultiply(lua_State* L);
             int add(lua_State* L);
             int subtract(lua_State* L);
-            int quaternionMultiply(lua_State* L);
             int quaternionFromRollPitchYaw(lua_State* L);
     };
 
