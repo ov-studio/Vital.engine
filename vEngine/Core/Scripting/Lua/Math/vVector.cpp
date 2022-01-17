@@ -254,18 +254,15 @@ namespace wi::lua
         wi::lua::SError(L, "Syntax: vector:quatSlerp(userdata vector, float lerpRate)");
         return 0;
     }
-
-    // TODO: ...
     int Vector::dot(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         if (argc >= 1)
         {
-            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
-            if (cVector1 && cVector2)
+            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
+            if (cVector)
             {
-                wi::lua::SSetFloat(L, XMVectorGetX(XMVector3Dot(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
+                wi::lua::SSetFloat(L, XMVectorGetX(XMVector3Dot(XMLoadFloat4(this), XMLoadFloat4(cVector))));
                 return 1;
             }
         }
@@ -277,11 +274,10 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc >= 1)
         {
-            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
-            if (cVector1 && cVector2)
+            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
+            if (cVector)
             {
-                Luna<Vector>::push(L, new Vector(XMVector3Cross(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
+                Luna<Vector>::push(L, new Vector(XMVector3Cross(XMLoadFloat4(this), XMLoadFloat4(cVector))));
                 return 1;
             }
         }
@@ -293,20 +289,19 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc >= 1)
         {
-            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
-            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
-            if (cVector1 && cVector2)
+            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
+            if (cVector)
             {
-                Luna<Vector>::push(L, new Vector(XMVectorMultiply(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
+                Luna<Vector>::push(L, new Vector(XMVectorMultiply(XMLoadFloat4(this), XMLoadFloat4(cVector))));
                 return 1;
             }
-            else if (cVector1)
+            else
             {
-                Luna<Vector>::push(L, new Vector(XMLoadFloat4(cVector1) * wi::lua::SGetFloat(L, 2)));
+                Luna<Vector>::push(L, new Vector(XMLoadFloat4(cVector1) * wi::lua::SGetFloat(L, 1)));
                 return 1;
             }
         }
-        wi::lua::SError(L, "Syntax: vector:multiply([userdata vector1, float multiplier])");
+        wi::lua::SError(L, "Syntax: vector:multiply([userdata vector, float multiplier])");
         return 0;
     }
     int Vector::quatMultiply(lua_State* L)
