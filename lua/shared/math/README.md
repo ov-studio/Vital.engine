@@ -36,3 +36,10 @@ description: Shared math module.
 * ****[**:normalize**](vector/normalize.md)****
 * ****[**:quatNormalize**](vector/quatNormalize.md)****
 * ****[**:clamp**](vector/clamp.md)****
+* ****[**:saturate**](vector/saturate.md)****
+* **:**[**lerp**](vector/lerp.md)****
+* ****[**:quatSlerp**](vector/quatslerp.md)
+* ****[**:dot**](vector/dot.md)****
+* ****[**:cross**](vector/cross.md)****
+* ****[**:multiply**](vector/multiply.md)****
+* ****[**:quatMultiply**](vector/quatmultiply.md)****
