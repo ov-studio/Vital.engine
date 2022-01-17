@@ -2,7 +2,7 @@
 
 * [LUA](README.md)
   * [SHARED](lua/shared.md)
-    * [Math](lua/shared/math/README.md)
+    * [Math](lua/shared/math.md)
       * [Generic](lua/shared/math/generic.md)
         * [lerp](lua/shared/math/generic/lerp.md)
         * [clamp](lua/shared/math/generic/clamp.md)
@@ -40,6 +40,7 @@
         * [:add](lua/shared/math/vector/add.md)
         * [:subtract](lua/shared/math/vector/subtract.md)
         * [:quatFromRollPitchYaw](lua/shared/math/vector/quatfromrollpitchyaw.md)
+      * [Matrix](lua/shared/math/matrix.md)
     * [JSON](lua/shared/json/README.md)
       * [encode](lua/shared/json/encode.md)
       * [decode](lua/shared/json/decode.md)
