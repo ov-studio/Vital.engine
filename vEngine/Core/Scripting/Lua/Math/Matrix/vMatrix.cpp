@@ -184,6 +184,7 @@ namespace wi::lua
         return 1;
     }
 
+    // TODO: WIP//
     int Matrix::lookTo(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
@@ -210,7 +211,6 @@ namespace wi::lua
             wi::lua::SError(L, "lookTo(Vector eye, Vector direction, opt Vector up) not enough arguments!");
         return 1;
     }
-
     int Matrix::lookAt(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
@@ -237,6 +237,7 @@ namespace wi::lua
             wi::lua::SError(L, "lookAt(Vector eye, Vector focusPos, opt Vector up) not enough arguments!");
         return 1;
     }
+    // TODO: ^^ END HERE
 
     int Matrix::multiply(lua_State* L)
     {
