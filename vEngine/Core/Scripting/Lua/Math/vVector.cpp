@@ -179,15 +179,14 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc >= 2)
         {
-            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
-            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 2);
-            if (cVector && cMatrix)
+            Matrix_BindLua* cMatrix = Luna<Matrix_BindLua>::lightcheck(L, 1);
+            if (cMatrix)
             {
-                Luna<Vector>::push(L, new Vector(XMVector3TransformCoord(XMLoadFloat4(cVector), XMLoadFloat4x4(cMatrix))));
+                Luna<Vector>::push(L, new Vector(XMVector3TransformCoord(XMLoadFloat4(this), XMLoadFloat4x4(cMatrix))));
                 return 1;
             }
         }
-        wi::lua::SError(L, "Syntax: vector:transformCoord(userdata vector, userdata matrix)");
+        wi::lua::SError(L, "Syntax: vector:transformCoord(userdata matrix)");
         return 0;
     }
     int Vector::length(lua_State* L)
