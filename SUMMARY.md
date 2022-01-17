@@ -9,6 +9,7 @@
         * [saturate](lua/shared/math/generic/saturate.md)
         * [round](lua/shared/math/generic/round.md)
         * [tickProgress](lua/shared/math/generic/tickprogress.md)
+        * [percent](lua/shared/math/generic/percent.md)
       * [Angle](lua/shared/math/angle/README.md)
         * [shortTarget](lua/shared/math/angle/shorttarget.md)
         * [rotationAngle2D](lua/shared/math/angle/rotationangle2d.md)
