@@ -242,7 +242,7 @@ namespace wi::lua
     int Matrix::multiply(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
-        if (argCount > 1)
+        if (argCount >= 1)
         {
             Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
             if (cMatrix)
@@ -257,7 +257,7 @@ namespace wi::lua
     int Matrix::add(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
-        if (argCount > 1)
+        if (argCount >= 1)
         {
             Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
             if (cMatrix)
@@ -271,26 +271,14 @@ namespace wi::lua
     }
     int Matrix::transpose(lua_State* L)
     {
-        int argCount = wi::lua::SGetArgCount(L);
-        if (argCount > 0)
-        {
-            Luna<Matrix>::push(L, new Matrix(XMMatrixTranspose(XMLoadFloat4x4(this))));
-            return 1;
-        }
-        wi::lua::SError(L, "Syntax: matrix:transpose(userdata matrix)");
-        return 0;
+        Luna<Matrix>::push(L, new Matrix(XMMatrixTranspose(XMLoadFloat4x4(this))));
+        return 1;
     }
     int Matrix::inverse(lua_State* L)
     {
-        int argCount = wi::lua::SGetArgCount(L);
-        if (argCount > 0)
-        {
-            XMVECTOR det;
-            Luna<Matrix>::push(L, new Matrix(XMMatrixInverse(&det, XMLoadFloat4x4(this))));
-            wi::lua::SSetFloat(L, XMVectorGetX(det));
-            return 1;
-        }
-        wi::lua::SError(L, "Syntax: matrix:inverse(userdata matrix)");
-        return 0;
+        XMVECTOR det;
+        Luna<Matrix>::push(L, new Matrix(XMMatrixInverse(&det, XMLoadFloat4x4(this))));
+        wi::lua::SSetFloat(L, XMVectorGetX(det));
+        return 1;
     }
 }
