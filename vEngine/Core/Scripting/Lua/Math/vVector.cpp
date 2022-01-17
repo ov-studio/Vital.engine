@@ -201,7 +201,7 @@ namespace wi::lua
     }
     int Vector::quatNormalize(lua_State* L)
     {
-        Luna<Vector>::push(L, new Vector(XMquatNormalize(XMLoadFloat4(this))));
+        Luna<Vector>::push(L, new Vector(XMQuaternionNormalize(XMLoadFloat4(this))));
         return 1;
     }
     int Vector::clamp(lua_State* L)
@@ -318,7 +318,7 @@ namespace wi::lua
             Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
             if (cVector1 && cVector2)
             {
-                Luna<Vector>::push(L, new Vector(XMquatMultiply(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
+                Luna<Vector>::push(L, new Vector(XMQuaternionMultiply(XMLoadFloat4(cVector1), XMLoadFloat4(cVector2))));
                 return 1;
             }
         }
