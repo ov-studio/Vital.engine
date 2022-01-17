@@ -29,3 +29,10 @@ description: Shared math module.
 * ****[**:setY**](vector/sety.md)****
 * ****[**:setZ**](vector/setz.md)****
 * ****[**:setW**](vector/setw.md)****
+* ****[**:transform**](vector/transform.md)****
+* ****[**:transformNormal**](vector/transformnormal.md)****
+* ****[**:transformCoord**](vector/transformcoord.md)****
+* ****[**:length**](vector/length.md)****
+* ****[**:normalize**](vector/normalize.md)****
+* ****[**:quatNormalize**](vector/quatNormalize.md)****
+* ****[**:clamp**](vector/clamp.md)****
