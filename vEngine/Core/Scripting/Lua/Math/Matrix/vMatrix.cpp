@@ -15,10 +15,10 @@ namespace wi::lua
         lunamethod(Matrix_BindLua, LookTo),
         lunamethod(Matrix_BindLua, LookAt),
 
-        lunamethod(Matrix_BindLua, Add),
-        lunamethod(Matrix_BindLua, Multiply),
-        lunamethod(Matrix_BindLua, Transpose),
-        lunamethod(Matrix_BindLua, Inverse),
+        lunamethod(Matrix_BindLua, add),
+        lunamethod(Matrix_BindLua, multiply),
+        lunamethod(Matrix_BindLua, transpose),
+        lunamethod(Matrix_BindLua, inverse),
         { NULL, NULL }
     };
     Luna<Matrix_BindLua>::PropertyType Matrix_BindLua::properties[] = {
@@ -242,7 +242,7 @@ namespace wi::lua
         return 1;
     }
 
-    int Matrix_BindLua::Multiply(lua_State* L)
+    int Matrix_BindLua::multiply(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
@@ -255,10 +255,10 @@ namespace wi::lua
                 return 1;
             }
         }
-        wi::lua::SError(L, "Multiply(Matrix m1,m2) not enough arguments!");
+        wi::lua::SError(L, "multiply(Matrix m1,m2) not enough arguments!");
         return 0;
     }
-    int Matrix_BindLua::Add(lua_State* L)
+    int Matrix_BindLua::add(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 1)
@@ -271,10 +271,10 @@ namespace wi::lua
                 return 1;
             }
         }
-        wi::lua::SError(L, "Add(Matrix m1,m2) not enough arguments!");
+        wi::lua::SError(L, "add(Matrix m1,m2) not enough arguments!");
         return 0;
     }
-    int Matrix_BindLua::Transpose(lua_State* L)
+    int Matrix_BindLua::transpose(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 0)
@@ -286,10 +286,10 @@ namespace wi::lua
                 return 1;
             }
         }
-        wi::lua::SError(L, "Transpose(Matrix m) not enough arguments!");
+        wi::lua::SError(L, "transpose(Matrix m) not enough arguments!");
         return 0;
     }
-    int Matrix_BindLua::Inverse(lua_State* L)
+    int Matrix_BindLua::inverse(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
         if (argc > 0)
@@ -303,7 +303,7 @@ namespace wi::lua
                 return 2;
             }
         }
-        wi::lua::SError(L, "Inverse(Matrix m) not enough arguments!");
+        wi::lua::SError(L, "inverse(Matrix m) not enough arguments!");
         return 0;
     }
 

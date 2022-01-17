@@ -31,7 +31,7 @@ namespace wi::lua
 
             int multiply(lua_State* L);
             int add(lua_State* L);
-            int Transpose(lua_State* L);
-            int Inverse(lua_State* L);
+            int transpose(lua_State* L);
+            int inverse(lua_State* L);
     };
 }
