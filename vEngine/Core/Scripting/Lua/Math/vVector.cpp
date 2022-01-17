@@ -365,10 +365,10 @@ namespace wi::lua
         int argc = wi::lua::SGetArgCount(L);
         if (argc >= 1)
         {
-            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
-            if (cVector1)
+            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
+            if (cVector)
             {
-                Luna<Vector>::push(L, new Vector(XMQuaternionRotationRollPitchYawFromVector(XMLoadFloat4(cVector1))));
+                Luna<Vector>::push(L, new Vector(XMQuaternionRotationRollPitchYawFromVector(XMLoadFloat4(cVector))));
                 return 1;
             }
         }
