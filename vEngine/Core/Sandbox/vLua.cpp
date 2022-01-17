@@ -3,7 +3,7 @@
 #include <string>
 
 std::string moduleName = "Lua";
-wi::vector<moduleDef> modules = {
+wi::vector<sandbox::compiler::module::moduleDef> modules = {
     {
         "Shared",
         {
