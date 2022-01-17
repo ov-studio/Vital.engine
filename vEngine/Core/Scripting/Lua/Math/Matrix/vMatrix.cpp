@@ -72,7 +72,7 @@ namespace wi::lua
         {
             initialized = true;
             Luna<Matrix>::Register(L, "vEngine");
-            std::string className = Matrix::className.c_str();
+            std::string className = Matrix::className;
             wi::lua::RunText(L, "vEngine.math." + className + " = vEngine." + className + "; vEngine." + className + " = nil;");
         }
     }

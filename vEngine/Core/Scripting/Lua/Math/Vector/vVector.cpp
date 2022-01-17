@@ -76,7 +76,7 @@ namespace wi::lua
         {
             initialized = true;
             Luna<Vector>::Register(L, "vEngine");
-            std::string className = Vector::className.c_str();
+            std::string className = Vector::className;
             wi::lua::RunText(L, "vEngine.math." + className + " = vEngine." + className + "; vEngine." + className + " = nil;");
         }
     }
