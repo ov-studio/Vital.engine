@@ -79,113 +79,112 @@ namespace wi::lua
     {
         int argc = wi::lua::SGetArgCount(L);
         int row = 0;
-        if (argc > 1)
+        if (argc >= 1)
         {
-            row = wi::lua::SGetInt(L, 2);
+            row = wi::lua::SGetInt(L, 1);
             if (row < 0 || row > 3)
                 row = 0;
         }
-        XMFLOAT4 r = XMFLOAT4(m[row][0], m[row][1], m[row][2], m[row][3]);
-        Luna<Vector>::push(L, new Vector(r));
+        XMFLOAT4 matrixRow = XMFLOAT4(m[row][0], m[row][1], m[row][2], m[row][3]);
+        Luna<Vector>::push(L, new Vector(matrixRow));
         return 1;
     }
     int Matrix::translate(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        XMMATRIX mat = XMMatrixIdentity();
-        if (argc > 0)
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        if (argc >= 1)
         {
             Vector* vector = Luna<Vector>::lightcheck(L, 1);
             if (vector != nullptr)
             {
-                mat = XMMatrixTranslationFromVector(XMLoadFloat4(vector));
+                cMatrix = XMMatrixTranslationFromVector(XMLoadFloat4(vector));
             }
         }
-        Luna<Matrix>::push(L, new Matrix(mat));
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
         return 1;
     }
-
     int Matrix::rotate(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        XMMATRIX mat = XMMatrixIdentity();
-        if (argc > 0)
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        if (argc >= 1)
         {
             Vector* vector = Luna<Vector>::lightcheck(L, 1);
             if (vector != nullptr)
             {
-                mat = XMMatrixRotationRollPitchYawFromVector(XMLoadFloat4(vector));
+                cMatrix = XMMatrixRotationRollPitchYawFromVector(XMLoadFloat4(vector));
             }
         }
-        Luna<Matrix>::push(L, new Matrix(mat));
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
         return 1;
     }
 
     int Matrix::rotateX(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        XMMATRIX mat = XMMatrixIdentity();
-        if (argc > 0)
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        if (argc >= 1)
         {
-            mat = XMMatrixRotationX(wi::lua::SGetFloat(L, 1));
+            cMatrix = XMMatrixRotationX(wi::lua::SGetFloat(L, 1));
         }
-        Luna<Matrix>::push(L, new Matrix(mat));
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
         return 1;
     }
 
     int Matrix::rotateY(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        XMMATRIX mat = XMMatrixIdentity();
-        if (argc > 0)
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        if (argc >= 1)
         {
-            mat = XMMatrixRotationY(wi::lua::SGetFloat(L, 1));
+            cMatrix = XMMatrixRotationY(wi::lua::SGetFloat(L, 1));
         }
-        Luna<Matrix>::push(L, new Matrix(mat));
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
         return 1;
     }
 
     int Matrix::rotateZ(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        XMMATRIX mat = XMMatrixIdentity();
-        if (argc > 0)
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        if (argc >= 1)
         {
-            mat = XMMatrixRotationZ(wi::lua::SGetFloat(L, 1));
+            cMatrix = XMMatrixRotationZ(wi::lua::SGetFloat(L, 1));
         }
-        Luna<Matrix>::push(L, new Matrix(mat));
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
         return 1;
     }
 
     int Matrix::quatRotate(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        XMMATRIX mat = XMMatrixIdentity();
-        if (argc > 0)
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        if (argc >= 1)
         {
             Vector* vector = Luna<Vector>::lightcheck(L, 1);
             if (vector != nullptr)
             {
-                mat = XMMatrixRotationQuaternion(XMLoadFloat4(vector));
+                cMatrix = XMMatrixRotationQuaternion(XMLoadFloat4(vector));
             }
         }
-        Luna<Matrix>::push(L, new Matrix(mat));
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
         return 1;
     }
 
     int Matrix::scale(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        XMMATRIX mat = XMMatrixIdentity();
-        if (argc > 0)
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        if (argc >= 1)
         {
             Vector* vector = Luna<Vector>::lightcheck(L, 1);
             if (vector != nullptr)
             {
-                mat = XMMatrixScalingFromVector(XMLoadFloat4(vector));
+                cMatrix = XMMatrixScalingFromVector(XMLoadFloat4(vector));
             }
         }
-        Luna<Matrix>::push(L, new Matrix(mat));
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
         return 1;
     }
 
