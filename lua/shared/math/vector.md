@@ -2,7 +2,7 @@
 
 ### **━ APIs**
 
-* ****[**vector**](vector/vector.md)****
+* [**vector**](vector/vector.md)
 * [**:getX**](vector/getx.md)
 * [**:getY**](vector/gety.md)
 * [**:getZ**](vector/getz.md)
