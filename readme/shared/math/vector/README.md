@@ -2,7 +2,7 @@
 
 ### **━ APIs**
 
-* [**vector**](lua/shared/math/vector/vector.md)
+* ****[**vector**](../../../../lua/shared/math/vector/vector.md)****
 * [**:getX**](lua/shared/math/vector/getx.md)
 * [**:getY**](lua/shared/math/vector/gety.md)
 * [**:getZ**](lua/shared/math/vector/getz.md)
