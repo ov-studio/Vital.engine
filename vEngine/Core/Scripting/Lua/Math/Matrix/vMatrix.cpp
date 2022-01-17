@@ -74,6 +74,7 @@ namespace wi::lua
             Luna<Matrix>::Register(L, "vEngine");
             std::string className = Matrix::className;
             wi::lua::RunText(L, "vEngine.math." + className + " = vEngine." + className + "; vEngine." + className + " = nil;");
+            wi::lua::RunText(L, "vEngine.math._" + className + " = vEngine.math." + className + "();");
         }
     }
 
