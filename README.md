@@ -22,7 +22,8 @@
 * János Turánszki
 * Aviril
 * Tron
-* [Read More](broken-reference/)
+* Mario
+* [Read More](credits)
 
 ## ━ Source Building (Windows)
 

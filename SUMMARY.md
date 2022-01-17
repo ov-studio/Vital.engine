@@ -12,4 +12,5 @@
 
 * [━ F E A T U R E S](features.md)
 * [━ C O M P A R I S O N](comparison.md)
+* [━ C R E D I T S](credits.md)
 * [━ T H I R D P A R T Y](thirdparty.md)
