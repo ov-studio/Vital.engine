@@ -92,13 +92,14 @@ namespace wi::lua
     }
     int Matrix::translation(lua_State* L)
     {
+        XMMATRIX cMatrix = XMMatrixIdentity();
         int argCount = wi::lua::SGetArgCount(L);
         if (argCount >= 1)
         {
             Vector* cVector = Luna<Vector>::lightcheck(L, 1);
             if (cVector)
             {
-                XMMATRIX cMatrix = XMMatrixTranslationFromVector(XMLoadFloat4(cVector));
+                cMatrix = XMMatrixTranslationFromVector(XMLoadFloat4(cVector));
             }
         }
         Luna<Matrix>::push(L, new Matrix(cMatrix));
@@ -242,15 +243,14 @@ namespace wi::lua
         int argCount = wi::lua::SGetArgCount(L);
         if (argCount > 1)
         {
-            Matrix* m1 = Luna<Matrix>::lightcheck(L, 1);
-            Matrix* m2 = Luna<Matrix>::lightcheck(L, 2);
-            if (m1 && m2)
+            Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
+            if (cMatrix)
             {
-                Luna<Matrix>::push(L, new Matrix(XMMatrixMultiply(XMLoadFloat4x4(m1), XMLoadFloat4x4(m2))));
+                Luna<Matrix>::push(L, new Matrix(XMMatrixMultiply(XMLoadFloat4x4(this), XMLoadFloat4x4(cMatrix))));
                 return 1;
             }
         }
-        wi::lua::SError(L, "multiply(Matrix m1,m2) not enough arguments!");
+        wi::lua::SError(L, "Syntax: matrix:multiply(userdata matrix)");
         return 0;
     }
     int Matrix::add(lua_State* L)
@@ -258,15 +258,14 @@ namespace wi::lua
         int argCount = wi::lua::SGetArgCount(L);
         if (argCount > 1)
         {
-            Matrix* m1 = Luna<Matrix>::lightcheck(L, 1);
-            Matrix* m2 = Luna<Matrix>::lightcheck(L, 2);
-            if (m1 && m2)
+            Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
+            if (cMatrix)
             {
-                Luna<Matrix>::push(L, new Matrix(XMLoadFloat4x4(m1) + XMLoadFloat4x4(m2)));
+                Luna<Matrix>::push(L, new Matrix(XMLoadFloat4x4(this) + XMLoadFloat4x4(cMatrix)));
                 return 1;
             }
         }
-        wi::lua::SError(L, "add(Matrix m1,m2) not enough arguments!");
+        wi::lua::SError(L, "Syntax: matrix:add(userdata matrix)");
         return 0;
     }
     int Matrix::transpose(lua_State* L)
@@ -274,14 +273,10 @@ namespace wi::lua
         int argCount = wi::lua::SGetArgCount(L);
         if (argCount > 0)
         {
-            Matrix* m1 = Luna<Matrix>::lightcheck(L, 1);
-            if (m1)
-            {
-                Luna<Matrix>::push(L, new Matrix(XMMatrixTranspose(XMLoadFloat4x4(m1))));
-                return 1;
-            }
+            Luna<Matrix>::push(L, new Matrix(XMMatrixTranspose(XMLoadFloat4x4(this))));
+            return 1;
         }
-        wi::lua::SError(L, "transpose(Matrix m) not enough arguments!");
+        wi::lua::SError(L, "Syntax: matrix:transpose(userdata matrix)");
         return 0;
     }
     int Matrix::inverse(lua_State* L)
@@ -289,16 +284,12 @@ namespace wi::lua
         int argCount = wi::lua::SGetArgCount(L);
         if (argCount > 0)
         {
-            Matrix* m1 = Luna<Matrix>::lightcheck(L, 1);
-            if (m1)
-            {
-                XMVECTOR det;
-                Luna<Matrix>::push(L, new Matrix(XMMatrixInverse(&det, XMLoadFloat4x4(m1))));
-                wi::lua::SSetFloat(L, XMVectorGetX(det));
-                return 2;
-            }
+            XMVECTOR det;
+            Luna<Matrix>::push(L, new Matrix(XMMatrixInverse(&det, XMLoadFloat4x4(this))));
+            wi::lua::SSetFloat(L, XMVectorGetX(det));
+            return 1;
         }
-        wi::lua::SError(L, "inverse(Matrix m) not enough arguments!");
+        wi::lua::SError(L, "Syntax: matrix:inverse(userdata matrix)");
         return 0;
     }
 }
