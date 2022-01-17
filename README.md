@@ -23,7 +23,7 @@
 * Aviril
 * Tron
 * Mario
-* [Read More](credits)
+* [Read More](credits.md)
 
 ## ━ Source Building (Windows)
 
