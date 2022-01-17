@@ -2,10 +2,8 @@
 description: Shared math module.
 ---
 
-# Math
-
 ### **━ Modules**
 
-* ****[**Generic**](generic.md)****
-* ****[**Angle**](angle/)****
-* ****[**Vector**](../../../readme/shared/math/vector.md)****
+* [**Generic**](generic/README.md)
+* [**Angle**](angle/README.md)
+* [**Vector**](vector/README.md)
