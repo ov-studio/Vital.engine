@@ -19,13 +19,13 @@ namespace wi::lua
 
             // Class Methods
             int getRow(lua_State* L);
-            int translate(lua_State* L);
-            int rotate(lua_State* L);
-            int rotateX(lua_State* L);
-            int rotateY(lua_State* L);
-            int rotateZ(lua_State* L);
-            int quatRotate(lua_State* L);
-            int scale(lua_State* L);
+            int translation(lua_State* L);
+            int rotation(lua_State* L);
+            int rotationX(lua_State* L);
+            int rotationY(lua_State* L);
+            int rotationZ(lua_State* L);
+            int quatRotation(lua_State* L);
+            int scaling(lua_State* L);
             int lookTo(lua_State* L);
             int lookAt(lua_State* L);
             int multiply(lua_State* L);

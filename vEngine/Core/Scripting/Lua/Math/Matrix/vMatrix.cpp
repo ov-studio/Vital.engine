@@ -6,13 +6,13 @@ namespace wi::lua
     const char Matrix::className[] = "matrix";
     Luna<Matrix>::FunctionType Matrix::methods[] = {
         lunamethod(Matrix, getRow),
-        lunamethod(Matrix, translate),
-        lunamethod(Matrix, rotate),
-        lunamethod(Matrix, rotateX),
-        lunamethod(Matrix, rotateY),
-        lunamethod(Matrix, rotateZ),
-        lunamethod(Matrix, quatRotate),
-        lunamethod(Matrix, scale),
+        lunamethod(Matrix, translation),
+        lunamethod(Matrix, rotation),
+        lunamethod(Matrix, rotationX),
+        lunamethod(Matrix, rotationY),
+        lunamethod(Matrix, rotationZ),
+        lunamethod(Matrix, quatRotation),
+        lunamethod(Matrix, scaling),
         lunamethod(Matrix, lookTo),
         lunamethod(Matrix, lookAt),
         lunamethod(Matrix, add),
@@ -90,7 +90,7 @@ namespace wi::lua
         Luna<Vector>::push(L, new Vector(matrixRow));
         return 1;
     }
-    int Matrix::translate(lua_State* L)
+    int Matrix::translation(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
         if (argCount >= 1)
@@ -99,79 +99,78 @@ namespace wi::lua
             if (cVector)
             {
                 XMMATRIX cMatrix = XMMatrixTranslationFromVector(XMLoadFloat4(cVector));
-                Luna<Matrix>::push(L, new Matrix(cMatrix));
-                return 1;
             }
         }
-        return 0;
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
+        return 1;
     }
-    int Matrix::rotate(lua_State* L)
+    int Matrix::rotation(lua_State* L)
     {
-        int argCount = wi::lua::SGetArgCount(L);
-        if (argCount >= 1)
-        {
-            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
-            if (cVector)
-            {
-                XMMATRIX cMatrix = XMMatrixRotationRollPitchYawFromVector(XMLoadFloat4(cVector));
-                Luna<Matrix>::push(L, new Matrix(cMatrix));
-                return 1;
-            }
-        }
-        return 0;
-    }
-    int Matrix::rotateX(lua_State* L)
-    {
-        int argCount = wi::lua::SGetArgCount(L);
-        if (argCount >= 1)
-        {
-            XMMATRIX cMatrix = XMMatrixRotationX(wi::lua::SGetFloat(L, 1));
-            Luna<Matrix>::push(L, new Matrix(cMatrix));
-            return 1;
-        }
-        return 0;
-    }
-    int Matrix::rotateY(lua_State* L)
-    {
-        int argCount = wi::lua::SGetArgCount(L);
-        if (argCount >= 1)
-        {
-            XMMATRIX cMatrix = XMMatrixRotationY(wi::lua::SGetFloat(L, 1));
-            Luna<Matrix>::push(L, new Matrix(cMatrix));
-            return 1;
-        }
-        return 9;
-    }
-    int Matrix::rotateZ(lua_State* L)
-    {
-        int argCount = wi::lua::SGetArgCount(L);
-        if (argCount >= 1)
-        {
-            XMMATRIX cMatrix = XMMatrixRotationZ(wi::lua::SGetFloat(L, 1));
-            Luna<Matrix>::push(L, new Matrix(cMatrix));
-            return 1;
-        }
-        return 0;
-    }
-    int Matrix::quatRotate(lua_State* L)
-    {
-        int argCount = wi::lua::SGetArgCount(L);
-        if (argCount >= 1)
-        {
-            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
-            if (cVector)
-            {
-                XMMATRIX cMatrix = XMMatrixRotationQuaternion(XMLoadFloat4(cVector));
-                Luna<Matrix>::push(L, new Matrix(cMatrix));
-                return 1;
-            }
-        }
-        return 0;
-    }
-    int Matrix::scale(lua_State* L)
-    {
-        int argCount = wi::lua::SGetArgCount(L);
         XMMATRIX cMatrix = XMMatrixIdentity();
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
+        {
+            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
+            if (cVector)
+            {
+                cMatrix = XMMatrixRotationRollPitchYawFromVector(XMLoadFloat4(cVector));
+            }
+        }
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
+        return 1;
+    }
+    int Matrix::rotationX(lua_State* L)
+    {
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
+        {
+            cMatrix = XMMatrixRotationX(wi::lua::SGetFloat(L, 1));
+        }
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
+        return 1;
+    }
+    int Matrix::rotationY(lua_State* L)
+    {
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
+        {
+            cMatrix = XMMatrixRotationY(wi::lua::SGetFloat(L, 1));
+        }
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
+        return 1;
+    }
+    int Matrix::rotationZ(lua_State* L)
+    {
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
+        {
+            cMatrix = XMMatrixRotationZ(wi::lua::SGetFloat(L, 1));
+        }
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
+        return 1;
+    }
+    int Matrix::quatRotation(lua_State* L)
+    {
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
+        {
+            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
+            if (cVector)
+            {
+                cMatrix = XMMatrixRotationQuaternion(XMLoadFloat4(cVector));
+            }
+        }
+        Luna<Matrix>::push(L, new Matrix(cMatrix));
+        return 1;
+    }
+    int Matrix::scaling(lua_State* L)
+    {
+        XMMATRIX cMatrix = XMMatrixIdentity();
+        int argCount = wi::lua::SGetArgCount(L);
         if (argCount >= 1)
         {
             Vector* cVector = Luna<Vector>::lightcheck(L, 1);
