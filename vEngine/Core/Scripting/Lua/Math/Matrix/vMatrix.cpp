@@ -75,21 +75,7 @@ namespace wi::lua
         }
     }
 
-    // Class Methods
-    int Matrix::getRow(lua_State* L)
-    {
-        int argCount = wi::lua::SGetArgCount(L);
-        int row = 0;
-        if (argCount >= 1)
-        {
-            row = wi::lua::SGetInt(L, 1);
-            if (row < 0 || row > 3)
-                row = 0;
-        }
-        XMFLOAT4 matrixRow = XMFLOAT4(m[row][0], m[row][1], m[row][2], m[row][3]);
-        Luna<Vector>::push(L, new Vector(matrixRow));
-        return 1;
-    }
+    // Static Class Methods
     int Matrix::translation(lua_State* L)
     {
         XMMATRIX cMatrix = XMMatrixIdentity();
@@ -184,6 +170,63 @@ namespace wi::lua
         return 1;
     }
 
+    // Class Methods
+    int Matrix::getRow(lua_State* L)
+    {
+        int argCount = wi::lua::SGetArgCount(L);
+        int row = 0;
+        if (argCount >= 1)
+        {
+            row = wi::lua::SGetInt(L, 1);
+            if (row < 0 || row > 3)
+                row = 0;
+        }
+        XMFLOAT4 matrixRow = XMFLOAT4(m[row][0], m[row][1], m[row][2], m[row][3]);
+        Luna<Vector>::push(L, new Vector(matrixRow));
+        return 1;
+    }
+    int Matrix::multiply(lua_State* L)
+    {
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
+        {
+            Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
+            if (cMatrix)
+            {
+                Luna<Matrix>::push(L, new Matrix(XMMatrixMultiply(XMLoadFloat4x4(this), XMLoadFloat4x4(cMatrix))));
+                return 1;
+            }
+        }
+        wi::lua::SError(L, "Syntax: matrix:multiply(userdata matrix)");
+        return 0;
+    }
+    int Matrix::add(lua_State* L)
+    {
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
+        {
+            Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
+            if (cMatrix)
+            {
+                Luna<Matrix>::push(L, new Matrix(XMLoadFloat4x4(this) + XMLoadFloat4x4(cMatrix)));
+                return 1;
+            }
+        }
+        wi::lua::SError(L, "Syntax: matrix:add(userdata matrix)");
+        return 0;
+    }
+    int Matrix::transpose(lua_State* L)
+    {
+        Luna<Matrix>::push(L, new Matrix(XMMatrixTranspose(XMLoadFloat4x4(this))));
+        return 1;
+    }
+    int Matrix::inverse(lua_State* L)
+    {
+        XMVECTOR det;
+        Luna<Matrix>::push(L, new Matrix(XMMatrixInverse(&det, XMLoadFloat4x4(this))));
+        wi::lua::SSetFloat(L, XMVectorGetX(det));
+        return 1;
+    }
     // TODO: WIP//
     int Matrix::lookTo(lua_State* L)
     {
@@ -238,47 +281,4 @@ namespace wi::lua
         return 1;
     }
     // TODO: ^^ END HERE
-
-    int Matrix::multiply(lua_State* L)
-    {
-        int argCount = wi::lua::SGetArgCount(L);
-        if (argCount >= 1)
-        {
-            Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
-            if (cMatrix)
-            {
-                Luna<Matrix>::push(L, new Matrix(XMMatrixMultiply(XMLoadFloat4x4(this->m), XMLoadFloat4x4(cMatrix))));
-                return 1;
-            }
-        }
-        wi::lua::SError(L, "Syntax: matrix:multiply(userdata matrix)");
-        return 0;
-    }
-    int Matrix::add(lua_State* L)
-    {
-        int argCount = wi::lua::SGetArgCount(L);
-        if (argCount >= 1)
-        {
-            Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
-            if (cMatrix)
-            {
-                Luna<Matrix>::push(L, new Matrix(XMLoadFloat4x4(this->m) + XMLoadFloat4x4(cMatrix)));
-                return 1;
-            }
-        }
-        wi::lua::SError(L, "Syntax: matrix:add(userdata matrix)");
-        return 0;
-    }
-    int Matrix::transpose(lua_State* L)
-    {
-        Luna<Matrix>::push(L, new Matrix(XMMatrixTranspose(XMLoadFloat4x4(this->m))));
-        return 1;
-    }
-    int Matrix::inverse(lua_State* L)
-    {
-        XMVECTOR det;
-        Luna<Matrix>::push(L, new Matrix(XMMatrixInverse(&det, XMLoadFloat4x4(this->m))));
-        wi::lua::SSetFloat(L, XMVectorGetX(det));
-        return 1;
-    }
 }
