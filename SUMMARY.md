@@ -15,7 +15,7 @@
         * [rotationAngle2D](lua/shared/math/angle/rotationangle2d.md)
       * [Vector](lua/shared/math/vector.md)
         * [vector](lua/shared/math/vector/vector.md)
-        * [getX](lua/shared/math/vector/methods/getx.md)
+        * [getX](lua/shared/math/vector/getx.md)
     * [JSON](lua/shared/json/README.md)
       * [encode](lua/shared/json/encode.md)
       * [decode](lua/shared/json/decode.md)
