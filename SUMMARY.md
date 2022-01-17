@@ -3,11 +3,11 @@
 * [LUA](README.md)
   * [SHARED](lua/shared.md)
     * [Math](lua/shared/math/README.md)
-      *
+      * [Generic](lua/shared/math/generic/README.md)
+        * [Generic](lua/shared/math/generic/lerp.md)
       * [Angle](lua/shared/math/angle/README.md)
         * [shortTarget](lua/shared/math/angle/shorttarget.md)
         * [rotationAngle2D](lua/shared/math/angle/rotationangle2d.md)
-      *
     * [JSON](lua/shared/json/README.md)
       * [encode](lua/shared/json/encode.md)
       * [decode](lua/shared/json/decode.md)
