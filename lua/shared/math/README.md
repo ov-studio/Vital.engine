@@ -19,5 +19,13 @@ description: Shared math module.
 * [**rotationAngle2D**](angle/rotationangle2d.md)
 
 ### **━ Vector APIs**
-* [**Vector**](vector/vector.md)
 
+* [**vector**](vector/vector.md)****
+* ****[**:getX**](vector/getx.md)****
+* ****[**:getY**](vector/gety.md)****
+* ****[**:getZ**](vector/getz.md)****
+* ****[**:getW**](vector/getw.md)****
+* ****[**:setX**](vector/setx.md)****
+* ****[**:setY**](vector/sety.md)****
+* ****[**:setZ**](vector/setz.md)****
+* ****[**:setW**](vector/setw.md)****

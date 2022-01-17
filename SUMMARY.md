@@ -13,7 +13,7 @@
       * [Angle](lua/shared/math/angle/README.md)
         * [shortTarget](lua/shared/math/angle/shorttarget.md)
         * [rotationAngle2D](lua/shared/math/angle/rotationangle2d.md)
-      * [Vector](lua/shared/math/vector.md)
+      * [Vector](readme/shared/math/vector.md)
         * [vector](lua/shared/math/vector/vector.md)
         * [:getX](lua/shared/math/vector/getx.md)
         * [:getY](lua/shared/math/vector/gety.md)
