@@ -247,7 +247,7 @@ namespace wi::lua
             Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
             if (cMatrix)
             {
-                Luna<Matrix>::push(L, new Matrix(XMMatrixMultiply(XMLoadFloat4x4(this), XMLoadFloat4x4(cMatrix))));
+                Luna<Matrix>::push(L, new Matrix(XMMatrixMultiply(XMLoadFloat4x4(this->m), XMLoadFloat4x4(cMatrix))));
                 return 1;
             }
         }
@@ -262,7 +262,7 @@ namespace wi::lua
             Matrix* cMatrix = Luna<Matrix>::lightcheck(L, 1);
             if (cMatrix)
             {
-                Luna<Matrix>::push(L, new Matrix(XMLoadFloat4x4(this) + XMLoadFloat4x4(cMatrix)));
+                Luna<Matrix>::push(L, new Matrix(XMLoadFloat4x4(this->m) + XMLoadFloat4x4(cMatrix)));
                 return 1;
             }
         }
@@ -271,13 +271,13 @@ namespace wi::lua
     }
     int Matrix::transpose(lua_State* L)
     {
-        Luna<Matrix>::push(L, new Matrix(XMMatrixTranspose(XMLoadFloat4x4(this))));
+        Luna<Matrix>::push(L, new Matrix(XMMatrixTranspose(XMLoadFloat4x4(this->m))));
         return 1;
     }
     int Matrix::inverse(lua_State* L)
     {
         XMVECTOR det;
-        Luna<Matrix>::push(L, new Matrix(XMMatrixInverse(&det, XMLoadFloat4x4(this))));
+        Luna<Matrix>::push(L, new Matrix(XMMatrixInverse(&det, XMLoadFloat4x4(this->m))));
         wi::lua::SSetFloat(L, XMVectorGetX(det));
         return 1;
     }
