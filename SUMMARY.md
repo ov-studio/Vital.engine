@@ -19,6 +19,7 @@
         * [getY](lua/shared/math/vector/gety.md)
         * [getZ](lua/shared/math/vector/getz.md)
         * [getW](lua/shared/math/vector/getw.md)
+        * [setX](lua/shared/math/vector/setx.md)
     * [JSON](lua/shared/json/README.md)
       * [encode](lua/shared/json/encode.md)
       * [decode](lua/shared/json/decode.md)
