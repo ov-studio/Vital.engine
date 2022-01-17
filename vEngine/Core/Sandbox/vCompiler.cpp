@@ -56,7 +56,7 @@ int sandbox::compiler::module::CompileModule(std::string moduleName, wi::vector<
     bundlerData += "\n};\n};\n";
 
     timer.record();
-    wi::helper::FileWrite("../Core/Sandbox/vSandbox" + moduleName + ".h", (uint8_t*)bundlerData.c_str(), bundlerData.length());
+    wi::helper::FileWrite("../Core/Sandbox/.build/vSandbox" + moduleName + ".h", (uint8_t*)bundlerData.c_str(), bundlerData.length());
     std::cout << "[Sandbox Compiler] Finished compiling " + moduleName + " module in " << std::setprecision(4) << timer.elapsed_seconds() << " seconds" << std::endl;
     return 0;
 }
