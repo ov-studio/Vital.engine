@@ -5,7 +5,6 @@ namespace wi::lua
     // Class Binder
     const char Matrix::className[] = "matrix";
     Luna<Matrix>::FunctionType Matrix::methods[] = {
-        lunamethod(Matrix, getRow),
         lunamethod(Matrix, translation),
         lunamethod(Matrix, rotation),
         lunamethod(Matrix, rotationX),
@@ -13,12 +12,13 @@ namespace wi::lua
         lunamethod(Matrix, rotationZ),
         lunamethod(Matrix, quatRotation),
         lunamethod(Matrix, scaling),
-        lunamethod(Matrix, lookTo),
-        lunamethod(Matrix, lookAt),
+        lunamethod(Matrix, getRow),
         lunamethod(Matrix, add),
         lunamethod(Matrix, multiply),
         lunamethod(Matrix, transpose),
         lunamethod(Matrix, inverse),
+        lunamethod(Matrix, lookTo),
+        lunamethod(Matrix, lookAt),
         { NULL, NULL }
     };
     Luna<Matrix>::PropertyType Matrix::properties[] = {
