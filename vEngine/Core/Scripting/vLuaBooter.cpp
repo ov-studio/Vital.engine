@@ -193,15 +193,31 @@ namespace wi::lua
         PostErrorMsg(L);
         return Success(L);
     }
-    void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions)
+    void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions, const char *namespac)
     {
-        if (luaL_newmetatable(L, tableName.c_str()) != 0)
+        if (namespac && strlen(namespac))
         {
-            // Table doesn't exist, create it
-            lua_pushvalue(L, -1);
-            lua_setfield(L, -2, "__index"); // Object.__index = Object
-            lua_setglobal(L, tableName.c_str());
+            lua_getglobal(L, namespac);
+            if (lua_isnil(L, -1))
+            {
+                // Namespace doesn't exist, create it
+                lua_newtable(L);
+                lua_pushvalue(L, -1); // Duplicate table pointer since setglobal pops the value
+                lua_setglobal(L, namespac);
+            }
+            lua_setfield(L, -2, tableName.c_str());
             AddFuncArray(L, functions);
+        }
+        else
+        {
+            if (luaL_newmetatable(L, tableName.c_str()) != 0)
+            {
+                // Table doesn't exist, create it
+                lua_pushvalue(L, -1);
+                lua_setfield(L, -2, "__index"); // Object.__index = Object
+                lua_setglobal(L, tableName.c_str());
+                AddFuncArray(L, functions);
+            }
         }
     }
     bool RegisterObject(lua_State* L, const std::string& tableName, void* object)
