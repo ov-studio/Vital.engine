@@ -2,23 +2,29 @@
 
 namespace wi::lua
 {
+    // Library Binder
+    const char Matrix::libraryName[] = "matrix";
+    const luaL_Reg Matrix::libraryFunctions[] = {
+        { "translation", translation },
+        { "rotation", rotation },
+        { "rotation", rotationX },
+        { "rotation", rotationY },
+        { "rotation", rotationZ },
+        { "rotation", quatRotation },
+        { "rotation", scaling },
+        { "lookTo", lookTo },
+        { "lookAt", lookAt },
+        { NULL, NULL }
+    };
+
     // Class Binder
     const char Matrix::className[] = "matrix";
     Luna<Matrix>::FunctionType Matrix::methods[] = {
-        lunamethod(Matrix, translation),
-        lunamethod(Matrix, rotation),
-        lunamethod(Matrix, rotationX),
-        lunamethod(Matrix, rotationY),
-        lunamethod(Matrix, rotationZ),
-        lunamethod(Matrix, quatRotation),
-        lunamethod(Matrix, scaling),
         lunamethod(Matrix, getRow),
         lunamethod(Matrix, add),
         lunamethod(Matrix, multiply),
         lunamethod(Matrix, transpose),
         lunamethod(Matrix, inverse),
-        lunamethod(Matrix, lookTo),
-        lunamethod(Matrix, lookAt),
         { NULL, NULL }
     };
     Luna<Matrix>::PropertyType Matrix::properties[] = {
@@ -71,16 +77,27 @@ namespace wi::lua
         if (!initialized)
         {
             initialized = true;
-            Luna<Matrix>::Register(L, "vEngine");
+            RegisterLibrary(L, Matrix::libraryName, Matrix::libraryFunctions, "vEngine");
+            std::string libraryName = Matrix::libraryName;
             std::string className = Matrix::className;
-            wi::lua::RunText(L, "vEngine.math." + className + " = vEngine." + className + "; vEngine." + className + " = nil;");
-            wi::lua::RunText(L, "vEngine.math._" + className + " = vEngine.math." + className + "();");
+            wi::lua::RunText(L, "vEngine.backlog.post(type(vEngine.matrix), 1);");
+            wi::lua::RunText(L, "vEngine.backlog.post(type(vEngine.matrix.translation), 1);");
+
+            //wi::lua::RunText(L, "vEngine.math." + className + " = vEngine." + className + "; vEngine." + className + " = nil;");
+            //wi::lua::RunText(L, "vEngine.math." + className + " = vEngine." + className + "; vEngine." + className + " = nil;");
+
+            //Luna<Matrix>::Register(L, "vEngine");
+            //wi::lua::RunText(L, "vEngine.backlog.post('TTTTTT', 1);");
+            //wi::lua::RunText(L, "vEngine.backlog.post(type(matrix.translation), 1);");
+            //RegisterLibrary();
+            //wi::lua::RunText(L, "vEngine.math._" + className + " = vEngine.math." + className + "();");
         }
     }
 
-    // Static Class Methods
+    // Library Methods
     int Matrix::translation(lua_State* L)
     {
+        wi::lua::RunText(L, "vEngine.backlog.post('TEST');");
         XMMATRIX cMatrix = XMMatrixIdentity();
         int argCount = wi::lua::SGetArgCount(L);
         if (argCount >= 1)
@@ -172,6 +189,60 @@ namespace wi::lua
         Luna<Matrix>::push(L, new Matrix(cMatrix));
         return 1;
     }
+    // TODO: WIP//
+    int Matrix::lookTo(lua_State* L)
+    {
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 1)
+        {
+            Vector* pos = Luna<Vector>::lightcheck(L, 1);
+            Vector* dir = Luna<Vector>::lightcheck(L, 2);
+            if (pos != nullptr && dir != nullptr)
+            {
+                XMVECTOR Up;
+                if (argCount > 3)
+                {
+                    Vector* up = Luna<Vector>::lightcheck(L, 3);
+                    Up = XMLoadFloat4(up);
+                }
+                else
+                    Up = XMVectorSet(0, 1, 0, 0);
+                Luna<Matrix>::push(L, new Matrix(XMMatrixLookToLH(XMLoadFloat4(pos), XMLoadFloat4(dir), Up)));
+            }
+            else
+                wi::lua::SError(L, "lookTo(Vector eye, Vector direction, opt Vector up) argument is not a Vector!");
+        }
+        else
+            wi::lua::SError(L, "lookTo(Vector eye, Vector direction, opt Vector up) not enough arguments!");
+        return 1;
+    }
+    int Matrix::lookAt(lua_State* L)
+    {
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 1)
+        {
+            Vector* pos = Luna<Vector>::lightcheck(L, 1);
+            Vector* dir = Luna<Vector>::lightcheck(L, 2);
+            if (dir != nullptr)
+            {
+                XMVECTOR Up;
+                if (argCount > 3)
+                {
+                    Vector* up = Luna<Vector>::lightcheck(L, 3);
+                    Up = XMLoadFloat4(up);
+                }
+                else
+                    Up = XMVectorSet(0, 1, 0, 0);
+                Luna<Matrix>::push(L, new Matrix(XMMatrixLookAtLH(XMLoadFloat4(pos), XMLoadFloat4(dir), Up)));
+            }
+            else
+                wi::lua::SError(L, "lookAt(Vector eye, Vector focusPos, opt Vector up) argument is not a Vector!");
+        }
+        else
+            wi::lua::SError(L, "lookAt(Vector eye, Vector focusPos, opt Vector up) not enough arguments!");
+        return 1;
+    }
+    // TODO: ^^ END HERE
 
     // Class Methods
     int Matrix::getRow(lua_State* L)
@@ -230,58 +301,4 @@ namespace wi::lua
         wi::lua::SSetFloat(L, XMVectorGetX(det));
         return 1;
     }
-    // TODO: WIP//
-    int Matrix::lookTo(lua_State* L)
-    {
-        int argCount = wi::lua::SGetArgCount(L);
-        if (argCount > 1)
-        {
-            Vector* pos = Luna<Vector>::lightcheck(L, 1);
-            Vector* dir = Luna<Vector>::lightcheck(L, 2);
-            if (pos != nullptr && dir != nullptr)
-            {
-                XMVECTOR Up;
-                if (argCount > 3)
-                {
-                    Vector* up = Luna<Vector>::lightcheck(L, 3);
-                    Up = XMLoadFloat4(up);
-                }
-                else
-                    Up = XMVectorSet(0, 1, 0, 0);
-                Luna<Matrix>::push(L, new Matrix(XMMatrixLookToLH(XMLoadFloat4(pos), XMLoadFloat4(dir), Up)));
-            }
-            else
-                wi::lua::SError(L, "lookTo(Vector eye, Vector direction, opt Vector up) argument is not a Vector!");
-        }
-        else
-            wi::lua::SError(L, "lookTo(Vector eye, Vector direction, opt Vector up) not enough arguments!");
-        return 1;
-    }
-    int Matrix::lookAt(lua_State* L)
-    {
-        int argCount = wi::lua::SGetArgCount(L);
-        if (argCount > 1)
-        {
-            Vector* pos = Luna<Vector>::lightcheck(L, 1);
-            Vector* dir = Luna<Vector>::lightcheck(L, 2);
-            if (dir != nullptr)
-            {
-                XMVECTOR Up;
-                if (argCount > 3)
-                {
-                    Vector* up = Luna<Vector>::lightcheck(L, 3);
-                    Up = XMLoadFloat4(up);
-                }
-                else
-                    Up = XMVectorSet(0, 1, 0, 0);
-                Luna<Matrix>::push(L, new Matrix(XMMatrixLookAtLH(XMLoadFloat4(pos), XMLoadFloat4(dir), Up)));
-            }
-            else
-                wi::lua::SError(L, "lookAt(Vector eye, Vector focusPos, opt Vector up) argument is not a Vector!");
-        }
-        else
-            wi::lua::SError(L, "lookAt(Vector eye, Vector focusPos, opt Vector up) not enough arguments!");
-        return 1;
-    }
-    // TODO: ^^ END HERE
 }
