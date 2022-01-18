@@ -66,10 +66,12 @@ namespace wi::lua
         }
         #if __has_include("Core/Sandbox/.build/vSandboxLua.h")
             // Loads whitelisted scripts
-            RunText(cInstance.instance, "vEngine = {};");
-            RunText(cInstance.instance, "vEngine.math = math; math = nil;");
-            RunText(cInstance.instance, "vEngine.string = string; string = nil;");
-            RunText(cInstance.instance, "vEngine.json = json; json = nil;");
+            RunText(cInstance.instance, R"(
+                vEngine = {}
+                vEngine.math = math; math = nil;
+                vEngine.string = string; string = nil;
+                vEngine.json = json; json = nil;
+            )");
             for (int i = 0; i < sandbox::lua::modules.size(); ++i)
             {
                 if (sandbox::lua::modules[i].moduleName != "Server") {
@@ -80,6 +82,7 @@ namespace wi::lua
                 }
             }
             // Loads engine bindings
+            Backlog::Bind(cInstance.instance);
             Application_BindLua::Bind(cInstance.instance);
             Canvas_BindLua::Bind(cInstance.instance);
             RenderPath_BindLua::Bind(cInstance.instance);
@@ -97,7 +100,6 @@ namespace wi::lua
             Matrix::Bind(cInstance.instance);
             Input_BindLua::Bind(cInstance.instance);
             SpriteFont_BindLua::Bind(cInstance.instance);
-            Backlog::Bind(cInstance.instance);
             Network_BindLua::Bind(cInstance.instance);
             primitive::Bind(cInstance.instance);
             // Cache created instance
@@ -195,20 +197,19 @@ namespace wi::lua
     {
         if (luaL_newmetatable(L, tableName.c_str()) != 0)
         {
-            //table is not yet present
+            // Table doesn't exist, create it
             lua_pushvalue(L, -1);
             lua_setfield(L, -2, "__index"); // Object.__index = Object
+            lua_setglobal(L, tableName.c_str());
             AddFuncArray(L, functions);
         }
     }
-    bool RegisterObject(lua_State* L, const std::string& tableName, const std::string& name, void* object)
+    bool RegisterObject(lua_State* L, const std::string& tableName, void* object)
     {
         RegisterLibrary(L, tableName, nullptr);
-        // does this call need to be checked? eg. userData == nullptr?
         void** userData = static_cast<void**>(lua_newuserdata(L, sizeof(void*)));
         *(userData) = object;
         luaL_setmetatable(L, tableName.c_str());
-        lua_setglobal(L, name.c_str());
         return true;
     }
     void AddFunc(lua_State* L, const std::string& name, lua_CFunction function)
@@ -218,7 +219,7 @@ namespace wi::lua
     }
     void AddFuncArray(lua_State* L, const luaL_Reg* functions)
     {
-        if (functions != nullptr)
+        if (functions)
         {
             luaL_setfuncs(L, functions, 0);
         }
