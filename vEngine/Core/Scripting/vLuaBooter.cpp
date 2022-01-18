@@ -208,6 +208,12 @@ namespace wi::lua
             }
             lua_pushvalue(L, -1);
             lua_setfield(L, -2, tableName.c_str());
+            // Creates Indexes
+            for (auto& index : namespaceIndex)
+            {
+                lua_pushvalue(L, -1);
+                lua_setfield(L, -2, index.c_str());
+            }
             AddFuncArray(L, functions);
             lua_pop(L, 1);
         }
