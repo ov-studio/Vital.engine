@@ -7,11 +7,11 @@ namespace wi::lua
     const luaL_Reg Matrix::libraryFunctions[] = {
         { "translation", translation },
         { "rotation", rotation },
-        { "rotation", rotationX },
-        { "rotation", rotationY },
-        { "rotation", rotationZ },
-        { "rotation", quatRotation },
-        { "rotation", scaling },
+        { "rotationX", rotationX },
+        { "rotationY", rotationY },
+        { "rotationZ", rotationZ },
+        { "quatRotation", quatRotation },
+        { "scaling", scaling },
         { "lookTo", lookTo },
         { "lookAt", lookAt },
         { NULL, NULL }
