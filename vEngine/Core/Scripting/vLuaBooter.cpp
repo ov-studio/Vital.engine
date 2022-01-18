@@ -206,14 +206,15 @@ namespace wi::lua
                 lua_pushvalue(L, -1); // Duplicate table pointer since setglobal pops the value
                 lua_setglobal(L, namespac);
             }
-            lua_pushvalue(L, -1);
-            lua_setfield(L, -2, tableName.c_str());
-            // Creates Indexes
+            // Create Indexes
             for (auto& index : namespaceIndex)
             {
                 lua_pushvalue(L, -1);
                 lua_setfield(L, -2, index.c_str());
             }
+            // Create our main table
+            lua_pushvalue(L, -1);
+            lua_setfield(L, -2, tableName.c_str());
             AddFuncArray(L, functions);
             lua_pop(L, 1);
         }

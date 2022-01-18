@@ -1,8 +1,4 @@
 #pragma once
-
-//Luna : Official C++ to Lua binder project, 5th version
-//modified to fit with vEngine, removed warnings
-
 #define lunamethod(class, name) {#name, &class::name}
 
 template < class T > class Luna {
@@ -62,7 +58,7 @@ template < class T > class Luna {
         Registers your class with Lua.  Leave namespac "" if you want to load it into the global space.
         */
         // REGISTER CLASS AS A GLOBAL TABLE 
-        static void Register(lua_State * L, const char *namespac = NULL) {
+        static void Register(lua_State * L, const char *namespac = NULL, const wi::vector<std::string>& namespaceIndex) {
             if (namespac && strlen(namespac))
             {
                 lua_getglobal(L, namespac);
@@ -72,6 +68,13 @@ template < class T > class Luna {
                     lua_pushvalue(L, -1); // Duplicate table pointer since setglobal pops the value
                     lua_setglobal(L, namespac);
                 }
+                // Create Indexes
+                for (auto& index : namespaceIndex)
+                {
+                    lua_pushvalue(L, -1);
+                    lua_setfield(L, -2, index.c_str());
+                }
+                // Create our main constructor
                 lua_pushcfunction(L, &Luna < T >::constructor);
                 lua_setfield(L, -2, T::className);
                 lua_pop(L, 1);
