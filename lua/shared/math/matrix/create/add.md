@@ -24,6 +24,6 @@ local cMatrix2 = vEngine.math.matrix.create(
     vEngine.math.vector.create(100, 100, 100, 100)
 )
 
-local resultantMatrix = cMatrix1:multiply(cMatrix2) --Adds our matrixes
+local resultantMatrix = cMatrix1:add(cMatrix2) --Adds our matrixes
 print(resultantMatrix) --Prints our resultant matrix
 ```
