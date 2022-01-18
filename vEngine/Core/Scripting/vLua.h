@@ -40,15 +40,18 @@ namespace wi::lua
 	bool RunText(lua_State* L, const std::string& script);
 	//register function to use in scripts
 	bool RegisterFunc(lua_State* L, const std::string& name, lua_CFunction function);
-	//register class
+
+	// Registers Namespace
+    void RegisterNamespace(lua_State* L, const char *namespac, const wi::vector<std::string>& namespaceIndex)
+	// Registers Library
 	void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions, const char* namespac = NULL, const wi::vector<std::string>& namespaceIndex = {});
-	//register object
+	// Registers Object
 	bool RegisterObject(lua_State* L, const std::string& tableName, void* object);
-	//add function to the previously registered object
+	// Add function to the previously registered object
 	void AddFunc(lua_State* L, const std::string& name, lua_CFunction function);
-	//add function array to the previously registered object
+	// Add function array to the previously registered object
 	void AddFuncs(lua_State* L, const luaL_Reg* functions);
-	//add int member to registered object
+	// Add int member to registered object
 	void AddInt(lua_State* L, const std::string& name, int data);
 
 	//send a signal to lua

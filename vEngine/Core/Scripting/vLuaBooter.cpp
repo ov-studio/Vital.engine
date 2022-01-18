@@ -194,7 +194,7 @@ namespace wi::lua
         PostErrorMsg(L);
         return Success(L);
     }
-    void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions, const char *namespac, const wi::vector<std::string>& namespaceIndex)
+    void RegisterNamespace(lua_State* L, const char *namespac, const wi::vector<std::string>& namespaceIndex)
     {
         if (namespac && strlen(namespac))
         {
@@ -212,6 +212,13 @@ namespace wi::lua
                 lua_pushvalue(L, -1);
                 lua_setfield(L, -2, index.c_str());
             }
+        }
+    }
+    void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions, const char *namespac, const wi::vector<std::string>& namespaceIndex)
+    {
+        if (namespac && strlen(namespac))
+        {
+            RegisterNamespace(L, namespac, namespaceIndex);
             // Create our main table
             lua_pushvalue(L, -1);
             lua_setfield(L, -2, tableName.c_str());
