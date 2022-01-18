@@ -18,7 +18,7 @@ namespace wi::lua
     };
 
     // Class Binder
-    const char Matrix::className[] = "matrix";
+    const char Matrix::className[] = "create";
     Luna<Matrix>::FunctionType Matrix::methods[] = {
         lunamethod(Matrix, getRow),
         lunamethod(Matrix, add),
@@ -77,20 +77,9 @@ namespace wi::lua
         if (!initialized)
         {
             initialized = true;
-            RegisterLibrary(L, Matrix::libraryName, Matrix::libraryFunctions, "vEngine");
-            std::string libraryName = Matrix::libraryName;
-            std::string className = Matrix::className;
-            wi::lua::RunText(L, "vEngine.backlog.post(type(vEngine.matrix), 1);");
-            wi::lua::RunText(L, "vEngine.backlog.post(type(vEngine.matrix.translation), 1);");
-
-            //wi::lua::RunText(L, "vEngine.math." + className + " = vEngine." + className + "; vEngine." + className + " = nil;");
-            //wi::lua::RunText(L, "vEngine.math." + className + " = vEngine." + className + "; vEngine." + className + " = nil;");
-
-            //Luna<Matrix>::Register(L, "vEngine");
-            //wi::lua::RunText(L, "vEngine.backlog.post('TTTTTT', 1);");
-            //wi::lua::RunText(L, "vEngine.backlog.post(type(matrix.translation), 1);");
-            //RegisterLibrary();
-            //wi::lua::RunText(L, "vEngine.math._" + className + " = vEngine.math." + className + "();");
+            RegisterLibrary(L, Matrix::libraryName, Matrix::libraryFunctions, "vEngine", {"math"});
+            Luna<Matrix>::Register(L, "vEngine", {"math", "matrix"});
+            wi::lua::RunText(L, "vEngine.backlog.post(type(vEngine.math.matrix.create), 1);");
         }
     }
 
