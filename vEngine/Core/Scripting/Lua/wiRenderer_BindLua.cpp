@@ -326,7 +326,6 @@ namespace wi::lua::renderer
 		{
 			initialized = true;
 
-            RegisterNamespace(L, namespac, namespaceIndex);
 			wi::lua::RegisterFunc(L, "SetGameSpeed", SetGameSpeed);
 			wi::lua::RegisterFunc(L, "GetGameSpeed", GetGameSpeed);
 
