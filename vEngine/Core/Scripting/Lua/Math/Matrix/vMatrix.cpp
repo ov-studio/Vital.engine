@@ -45,37 +45,50 @@ namespace wi::lua
     Matrix::Matrix(lua_State* L)
     {
         std::memcpy(this, &wi::math::IDENTITY_MATRIX, sizeof(wi::math::IDENTITY_MATRIX));
-        Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
-        Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
-        Vector* cVector3 = Luna<Vector>::lightcheck(L, 3);
-        Vector* cVector4 = Luna<Vector>::lightcheck(L, 4);
-        if (cVector1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
-            this->m[0][0] = cVector1->x;
-            this->m[0][1] = cVector1->y;
-            this->m[0][2] = cVector1->z;
-            this->m[0][3] = cVector1->w;
-        }
-        if (cVector2)
-        {
-            this->m[1][0] = cVector2->x;
-            this->m[1][1] = cVector2->y;
-            this->m[1][2] = cVector2->z;
-            this->m[1][3] = cVector2->w;
-        }
-        if (cVector3)
-        {
-            this->m[2][0] = cVector3->x;
-            this->m[2][1] = cVector3->y;
-            this->m[2][2] = cVector3->z;
-            this->m[2][3] = cVector3->w;
-        }
-        if (cVector4)
-        {
-            this->m[3][0] = cVector4->x;
-            this->m[3][1] = cVector4->y;
-            this->m[3][2] = cVector4->z;
-            this->m[3][3] = cVector4->w;
+            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
+            if (cVector1)
+            {
+                this->m[0][0] = cVector1->x;
+                this->m[0][1] = cVector1->y;
+                this->m[0][2] = cVector1->z;
+                this->m[0][3] = cVector1->w;
+            }
+            if (argCount >= 2)
+            {
+                Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
+                if (cVector2)
+                {
+                    this->m[1][0] = cVector2->x;
+                    this->m[1][1] = cVector2->y;
+                    this->m[1][2] = cVector2->z;
+                    this->m[1][3] = cVector2->w;
+                }
+                if (argCount >= 3)
+                {
+                    Vector* cVector3 = Luna<Vector>::lightcheck(L, 3);
+                    if (cVector3)
+                    {
+                        this->m[2][0] = cVector3->x;
+                        this->m[2][1] = cVector3->y;
+                        this->m[2][2] = cVector3->z;
+                        this->m[2][3] = cVector3->w;
+                    }
+                    if (argCount >= 4)
+                    {
+                        Vector* cVector4 = Luna<Vector>::lightcheck(L, 4);
+                        if (cVector4)
+                        {
+                            this->m[3][0] = cVector4->x;
+                            this->m[3][1] = cVector4->y;
+                            this->m[3][2] = cVector4->z;
+                            this->m[3][3] = cVector4->w;
+                        }
+                    }
+                }
+            }
         }
     }
 
