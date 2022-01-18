@@ -18,19 +18,6 @@ using namespace wi::lua::primitive;
 
 namespace wi::lua::renderer
 {
-	int SetGamma(lua_State* L)
-	{
-		int argc = wi::lua::SGetArgCount(L);
-		if (argc > 0)
-		{
-			wi::lua::SSetString(L, "SetGamma() no longer supported!");
-		}
-		else
-		{
-			wi::lua::SError(L, "SetGamma(float) not enough arguments!");
-		}
-		return 0;
-	}
 	int SetGameSpeed(lua_State* L)
 	{
 		int argc = wi::lua::SGetArgCount(L);
@@ -81,11 +68,6 @@ namespace wi::lua::renderer
 		}
 		return 0;
 	}
-	int SetDebugBoxesEnabled(lua_State* L)
-	{
-		wi::lua::SError(L, "SetDebugBoxesEnabled is obsolete! Use SetDebugPartitionTreeEnabled(bool value) instead to draw a partition tree!");
-		return 0;
-	}
 	int SetDebugBonesEnabled(lua_State* L)
 	{
 		int argc = wi::lua::SGetArgCount(L);
@@ -120,11 +102,6 @@ namespace wi::lua::renderer
 		{
 			wi::eventhandler::SetVSync(wi::lua::SGetBool(L, 1));
 		}
-		return 0;
-	}
-	int SetResolution(lua_State* L)
-	{
-		wi::lua::SError(L, "SetResolution() is deprecated, now it's handled by window events!");
 		return 0;
 	}
 	int SetDebugLightCulling(lua_State* L)
@@ -348,8 +325,6 @@ namespace wi::lua::renderer
 		if (!initialized)
 		{
 			initialized = true;
-
-			wi::lua::RegisterFunc(L, "SetGamma", SetGamma);
 			wi::lua::RegisterFunc(L, "SetGameSpeed", SetGameSpeed);
 			wi::lua::RegisterFunc(L, "GetGameSpeed", GetGameSpeed);
 
@@ -358,13 +333,11 @@ namespace wi::lua::renderer
 
 			wi::lua::RegisterFunc(L, "SetShadowProps2D", SetShadowProps2D);
 			wi::lua::RegisterFunc(L, "SetShadowPropsCube", SetShadowPropsCube);
-			wi::lua::RegisterFunc(L, "SetDebugBoxesEnabled", SetDebugBoxesEnabled);
 			wi::lua::RegisterFunc(L, "SetDebugPartitionTreeEnabled", SetDebugPartitionTreeEnabled);
 			wi::lua::RegisterFunc(L, "SetDebugBonesEnabled", SetDebugBonesEnabled);
 			wi::lua::RegisterFunc(L, "SetDebugEmittersEnabled", SetDebugEmittersEnabled);
 			wi::lua::RegisterFunc(L, "SetDebugForceFieldsEnabled", SetDebugForceFieldsEnabled);
 			wi::lua::RegisterFunc(L, "SetVSyncEnabled", SetVSyncEnabled);
-			wi::lua::RegisterFunc(L, "SetResolution", SetResolution);
 			wi::lua::RegisterFunc(L, "SetDebugLightCulling", SetDebugLightCulling);
 			wi::lua::RegisterFunc(L, "SetOcclusionCullingEnabled", SetOcclusionCullingEnabled);
 
