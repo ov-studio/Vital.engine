@@ -23,3 +23,9 @@ print(cMatrix) --Prints our matrix
 ```
 
 ### **━ Methods**
+
+* [**:getRow**](create/getrow.md)
+* [**:add**](create/add.md)
+* [**:multiply**](create/multiply.md)
+* [**:transpose**](create/transpose.md)
+* [**:inverse**](create/inverse.md)
