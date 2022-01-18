@@ -36,15 +36,15 @@ namespace wi::lua
     int Backlog::post(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc < 2)
+        if (argc >= 2)
         {
-            wi::lua::SError(L, "Syntax: vEngine.backlog.post(string message, int level)!");
-            wi::lua::SSetBool(L, false);
-            return 0;
+            wi::backlog::post(wi::lua::SGetString(L, 1), (wi::backlog::LogLevel)wi::lua::SGetInt(L, 2));
+            wi::lua::SSetBool(L, true);
+            return 1;
         }
-        wi::backlog::post(wi::lua::SGetString(L, 1), (wi::backlog::LogLevel)wi::lua::SGetInt(L, 2));
-        wi::lua::SSetBool(L, true);
-        return 1;
+        wi::lua::SError(L, "Syntax: vEngine.backlog.post(string message, int level)!");
+        wi::lua::SSetBool(L, false);
+        return 0;
     }
     int Backlog::isActive(lua_State* L)
     {
@@ -54,14 +54,14 @@ namespace wi::lua
     int Backlog::setLevel(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
-        if (argc <= 1)
+        if (argc >= 1)
         {
-            wi::lua::SError(L, "Syntax: vEngine.backlog.setLevel(int level)");
-            wi::lua::SSetBool(L, false);
-            return 0;
+            wi::backlog::SetLogLevel((wi::backlog::LogLevel)wi::lua::SGetInt(L, 1));
+            wi::lua::SSetBool(L, true);
+            return 1;
         }
-        wi::backlog::SetLogLevel((wi::backlog::LogLevel)wi::lua::SGetInt(L, 1));
-        wi::lua::SSetBool(L, true);
-        return 1;
+        wi::lua::SError(L, "Syntax: vEngine.backlog.setLevel(int level)");
+        wi::lua::SSetBool(L, false);
+        return 0;
     }
 }
