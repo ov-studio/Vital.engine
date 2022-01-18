@@ -12,7 +12,7 @@ description: Creates a new matrix looking to a point.
 
 ```lua
 local cVector = vEngine.math.vector.create(10, 10, 10, 10) --Creates our vector
-local cMatrix = vEngine.math.vector.lookTo(cVector) --Creates our matrix
+local cMatrix = vEngine.math.matrix.lookTo(cVector) --Creates our matrix
 print(cMatrix) --Prints our matrix
 ```
 

@@ -12,7 +12,7 @@ description: Creates a new scaling matrix.
 
 ```lua
 local cVector = vEngine.math.vector.create(10, 10, 10, 10) --Creates our vector
-local cMatrix = vEngine.math.vector.scaling(cVector) --Creates our matrix
+local cMatrix = vEngine.math.matrix.scaling(cVector) --Creates our matrix
 print(cMatrix) --Prints our matrix
 ```
 

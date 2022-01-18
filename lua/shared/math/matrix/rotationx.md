@@ -11,7 +11,7 @@ description: Creates a new rotationX matrix.
 ### ━ Usage
 
 ```lua
-local cMatrix = vEngine.math.vector.rotationX(90) --Creates our matrix
+local cMatrix = vEngine.math.matrix.rotationX(90) --Creates our matrix
 print(cMatrix) --Prints our matrix
 ```
 

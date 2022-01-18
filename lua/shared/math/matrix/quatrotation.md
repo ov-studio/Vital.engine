@@ -12,7 +12,7 @@ description: Creates a new quaternion rotation matrix.
 
 ```lua
 local cVector = vEngine.math.vector.create(10, 10, 10, 10) --Creates our vector
-local cMatrix = vEngine.math.vector.quatRotation(cVector) --Creates our matrix
+local cMatrix = vEngine.math.matrix.quatRotation(cVector) --Creates our matrix
 print(cMatrix) --Prints our matrix
 ```
 
