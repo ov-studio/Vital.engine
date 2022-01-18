@@ -6,6 +6,9 @@
 #include "Vendors/lua_rapidjson/rapidjson.cpp"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Helpers/wiHelper.h"
+
+#include "Core/Scripting/Lua/Backlog/vBacklog.h"
+#include "Core/Scripting/Lua/Math/vMath.h"
 #include "Core/Scripting/Lua/wiApplication_BindLua.h"
 #include "Core/Scripting/Lua/wiRenderPath_BindLua.h"
 #include "Core/Scripting/Lua/wiRenderPath2D_BindLua.h"
@@ -18,10 +21,8 @@
 #include "Core/Scripting/Lua/wiImageParams_BindLua.h"
 #include "Core/Scripting/Lua/wiSpriteAnim_BindLua.h"
 #include "Core/Scripting/Lua/wiScene_BindLua.h"
-#include "Core/Scripting/Lua/Math/vMath.h"
 #include "Core/Scripting/Lua/wiInput_BindLua.h"
 #include "Core/Scripting/Lua/wiSpriteFont_BindLua.h"
-#include "Core/Scripting/Lua/Backlog/vBacklog.h"
 #include "Core/Scripting/Lua/wiNetwork_BindLua.h"
 #include "Core/Scripting/Lua/wiPrimitive_BindLua.h"
 #include "Core/Helpers/wiTimer.h"
@@ -83,6 +84,8 @@ namespace wi::lua
             }
             // Loads engine bindings
             Backlog::Bind(cInstance.instance);
+            Vector::Bind(cInstance.instance);
+            Matrix::Bind(cInstance.instance);
             Application_BindLua::Bind(cInstance.instance);
             Canvas_BindLua::Bind(cInstance.instance);
             RenderPath_BindLua::Bind(cInstance.instance);
@@ -96,8 +99,6 @@ namespace wi::lua
             ImageParams_BindLua::Bind(cInstance.instance);
             SpriteAnim_BindLua::Bind(cInstance.instance);
             scene::Bind(cInstance.instance);
-            Vector::Bind(cInstance.instance);
-            Matrix::Bind(cInstance.instance);
             Input_BindLua::Bind(cInstance.instance);
             SpriteFont_BindLua::Bind(cInstance.instance);
             Network_BindLua::Bind(cInstance.instance);
@@ -205,16 +206,19 @@ namespace wi::lua
                 lua_pushvalue(L, -1); // Duplicate table pointer since setglobal pops the value
                 lua_setglobal(L, namespac);
             }
+            lua_pushvalue(L, -1);
             lua_setfield(L, -2, tableName.c_str());
             AddFuncArray(L, functions);
+            lua_pop(L, 1);
         }
         else
         {
-            if (luaL_newmetatable(L, tableName.c_str()) != 0)
+            lua_getglobal(L, tableName.c_str());
+            if (lua_isnil(L, -1))
             {
                 // Table doesn't exist, create it
-                lua_pushvalue(L, -1);
-                lua_setfield(L, -2, "__index"); // Object.__index = Object
+                lua_newtable(L);
+                lua_pushvalue(L, -1); // Duplicate table pointer since setglobal pops the value
                 lua_setglobal(L, tableName.c_str());
                 AddFuncArray(L, functions);
             }
