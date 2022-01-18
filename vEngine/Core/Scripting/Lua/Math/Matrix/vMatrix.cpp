@@ -217,6 +217,7 @@ namespace wi::lua
                     }
                 }
                 Luna<Matrix>::push(L, new Matrix(XMMatrixLookToLH(XMLoadFloat4(eyeVector), XMLoadFloat4(directionVector), normalVector)));
+                return 1;
             }
         }
         wi::lua::SError(L, "Syntax: vEngine.matrix.lookTo(userdata eyeVector, userdata directionVector, userdata normalVector)");
