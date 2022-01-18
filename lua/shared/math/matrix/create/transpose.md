@@ -1,12 +1,12 @@
 ---
-description: Adds 2 matrixes.
+description: Retrieves transpose of a matrix.
 ---
 
 # transpose
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[userdata matrix] matrix:transpose(userdata matrix)`**</mark>
+<mark style="color:red;">**`[userdata matrix] matrix:transpose()`**</mark>
 
 ### ━ Usage
 

@@ -1,12 +1,12 @@
 ---
-description: Adds 2 matrixes.
+description: Retrieves inverse of a matrix.
 ---
 
 # inverse
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[userdata matrix] matrix:inverse(userdata matrix)`**</mark>
+<mark style="color:red;">**`[userdata matrix] matrix:inverse()`**</mark>
 
 ### ━ Usage
 
