@@ -6,13 +6,12 @@ description: Creates a new rotationX matrix.
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[userdata matrix] rotationX(userdata vector)`**</mark>
+<mark style="color:red;">**`[userdata matrix] rotationX(float x = 0)`**</mark>
 
 ### ━ Usage
 
 ```lua
-local cVector = vEngine.math.vector.create(10, 10, 10, 10) --Creates our vector
-local cMatrix = vEngine.math.vector.rotationX(cVector) --Creates our matrix
+local cMatrix = vEngine.math.vector.rotationX(90) --Creates our matrix
 print(cMatrix) --Prints our matrix
 ```
 
