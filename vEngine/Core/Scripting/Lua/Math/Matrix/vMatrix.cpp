@@ -46,29 +46,40 @@ namespace wi::lua
     {
         std::memcpy(this, &wi::math::IDENTITY_MATRIX, sizeof(wi::math::IDENTITY_MATRIX));
         int argCount = wi::lua::SGetArgCount(L);
-        for (int i = 0; i < 4; ++i)
+        if (argCount >= 4)
         {
-            float x = 0.f, y = 0.f, z = 0.f, w = 0.f;
-            if (argCount > i * 4)
+            Vector* cVector1 = Luna<Vector>::lightcheck(L, 1);
+            Vector* cVector2 = Luna<Vector>::lightcheck(L, 2);
+            Vector* cVector3 = Luna<Vector>::lightcheck(L, 3);
+            Vector* cVector4 = Luna<Vector>::lightcheck(L, 4);
+            if (cVector1)
             {
-                x = wi::lua::SGetFloat(L, i * 4 + 1);
-                if (argCount > i * 4 + 1)
-                {
-                    y = wi::lua::SGetFloat(L, i * 4 + 2);
-                    if (argCount > i * 4 + 2)
-                    {
-                        z = wi::lua::SGetFloat(L, i * 4 + 3);
-                        if (argCount > i * 4 + 3)
-                        {
-                            w = wi::lua::SGetFloat(L, i * 4 + 4);
-                        }
-                    }
-                }
+                this->m[0][0] = cVector1->x;
+                this->m[0][1] = cVector1->y;
+                this->m[0][2] = cVector1->z;
+                this->m[0][3] = cVector1->w;
             }
-            this->m[i][0] = x;
-            this->m[i][1] = y;
-            this->m[i][2] = z;
-            this->m[i][3] = w;
+            if (cVector2)
+            {
+                this->m[1][0] = cVector2->x;
+                this->m[1][1] = cVector2->y;
+                this->m[1][2] = cVector2->z;
+                this->m[1][3] = cVector2->w;
+            }
+            if (cVector3)
+            {
+                this->m[2][0] = cVector3->x;
+                this->m[2][1] = cVector3->y;
+                this->m[2][2] = cVector3->z;
+                this->m[2][3] = cVector3->w;
+            }
+            if (cVector4)
+            {
+                this->m[3][0] = cVector4->x;
+                this->m[3][1] = cVector4->y;
+                this->m[3][2] = cVector4->z;
+                this->m[3][3] = cVector4->w;
+            }
         }
     }
 
