@@ -87,7 +87,6 @@ namespace wi::lua
     // Library Methods
     int Matrix::translation(lua_State* L)
     {
-        wi::lua::RunText(L, "vEngine.backlog.post('TEST');");
         XMMATRIX cMatrix = XMMatrixIdentity();
         int argCount = wi::lua::SGetArgCount(L);
         if (argCount >= 1)
