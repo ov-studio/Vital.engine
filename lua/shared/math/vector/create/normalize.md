@@ -11,7 +11,7 @@ description: Normalizes a vector.
 ### ━ Usage
 
 ```lua
-local cVector = vEngine.math.vector(10, 20, 30, 40) --Creates a new vector
+local cVector = vEngine.math.vector.create(10, 20, 30, 40) --Creates a new vector
 local resultantVector = cVector:normalize() --Normalizes our vector
 print(resultantVector) --Prints our resultant vector
 ```

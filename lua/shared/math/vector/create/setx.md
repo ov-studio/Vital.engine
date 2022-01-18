@@ -11,7 +11,7 @@ description: Sets vector's x coord.
 ### ━ Usage
 
 ```lua
-local cVector = vEngine.math.vector(10, 20, 30, 40) --Creates a new vector
+local cVector = vEngine.math.vector.create(10, 20, 30, 40) --Creates a new vector
 local result = cVector:setX(500) --Retrieves vector's x coord
 print(result) --Prints result
 ```

@@ -11,7 +11,7 @@ description: Slerps a quaternion vector.
 ### ━ Usage
 
 ```lua
-local cVector = vEngine.math.vector(10, 20, 30, 40) --Creates a new vector
-local resultantVector = cVector:quatSlerp(vEngine.math.vector(1, 2, 1, 5), 0.5) --Slerps our quaternion vector
+local cVector = vEngine.math.vector.create(10, 20, 30, 40) --Creates a new vector
+local resultantVector = cVector:quatSlerp(vEngine.math.vector.create(1, 2, 1, 5), 0.5) --Slerps our quaternion vector
 print(resultantVector) --Prints our resultant vector
 ```

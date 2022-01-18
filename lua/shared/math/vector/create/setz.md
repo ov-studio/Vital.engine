@@ -11,7 +11,7 @@ description: Sets vector's z coord.
 ### ━ Usage
 
 ```lua
-local cVector = vEngine.math.vector(10, 20, 30, 40) --Creates a new vector
+local cVector = vEngine.math.vector.create(10, 20, 30, 40) --Creates a new vector
 local result = cVector:setZ(500) --Retrieves vector's z coord
 print(result) --Prints result
 ```
