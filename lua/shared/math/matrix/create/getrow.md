@@ -1,18 +1,23 @@
 ---
-description: Adds 2 matrixes.
+description: Retrieves matrix's specified row.
 ---
 
-# add
+# getRow
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[userdata matrix] matrix:add(userdata matrix)`**</mark>
+<mark style="color:red;">**`[userdata rowVector] matrix:getRow(int rowIndex)`**</mark>
 
 ### ━ Usage
 
 ```lua
-local cVector1 = vEngine.math.matrix.create(10, 20, 30, 40) --Creates a new matrix 1
-local cVector2 = vEngine.math.matrix.create(100, 200, 300, 400) --Creates a new matrix 2
-local resultantMatrix = cVector1:add(cVector2) --Adds our matrixes
-print(resultantMatrix) --Prints our resultant matrix
+local cMatrix = vEngine.math.matrix.create(
+    vEngine.math.vector.create(10, 10, 10, 10), --Row 0
+    vEngine.math.vector.create(10, 10, 10, 10), --Row 1
+    vEngine.math.vector.create(10, 10, 10, 10), --Row 2
+    vEngine.math.vector.create(10, 10, 10, 10) --Row 3
+)
+
+local rowVector = cMatrix:getRow(1) --Retrieves our matrix's 1st row
+print(rowVector) --Prints our row vector
 ```
