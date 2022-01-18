@@ -1,5 +1,5 @@
 ---
-description: Creates a new translation matrix.
+description: Creates a new rotationX matrix.
 ---
 
 # rotationX
