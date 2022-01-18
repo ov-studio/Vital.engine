@@ -244,7 +244,7 @@ namespace wi::lua
                 return 1;
             }
         }
-        wi::lua::SError(L, "Syntax: vEngine.matrix.lookTo(userdata eyeVector, userdata focusVector, userdata normalVector)");
+        wi::lua::SError(L, "Syntax: vEngine.matrix.lookAt(userdata eyeVector, userdata focusVector, userdata normalVector)");
         return 0;
     }
 
