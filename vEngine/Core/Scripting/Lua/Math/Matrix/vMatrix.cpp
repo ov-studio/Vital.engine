@@ -78,7 +78,7 @@ namespace wi::lua
         {
             initialized = true;
             RegisterLibrary(L, Matrix::libraryName, Matrix::libraryFunctions, "vEngine", {"math"});
-            Luna<Matrix>::Register(L, "vEngine", {"math", "matrix"});
+            Luna<Matrix>::Register(L, "vEngine", {"math", Matrix::libraryName});
             wi::lua::RunText(L, "vEngine.backlog.post(type(vEngine.math.matrix.create), 1);");
         }
     }
