@@ -41,6 +41,7 @@
             * [:subtract](lua/shared/math/vector/create/subtract.md)
             * [:quatFromRollPitchYaw](lua/shared/math/vector/create/quatfromrollpitchyaw.md)
       * [Matrix](lua/shared/math/matrix.md)
+        * [create](lua/shared/math/matrix/create.md)
     * [JSON](lua/shared/json/README.md)
       * [encode](lua/shared/json/encode.md)
       * [decode](lua/shared/json/decode.md)

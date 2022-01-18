@@ -2,16 +2,16 @@
 description: Creates a new vector.
 ---
 
-# vector
+# create
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[userdata vector] vector(float x = 0, float y = 0, float z = 0, float w = 0)`**</mark>
+<mark style="color:red;">**`[userdata vector] create(float x = 0, float y = 0, float z = 0, float w = 0)`**</mark>
 
 ### ━ Usage
 
 ```lua
-local cVector = vEngine.math.vector.create.create(10, 10, 10, 10) --Creates our vector
+local cVector = vEngine.math.vector.create(10, 10, 10, 10) --Creates our vector
 print(cVector) --Prints our vector
 ```
 
