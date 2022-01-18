@@ -6,13 +6,21 @@ description: Retrieves inverse of a matrix.
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[userdata matrix] matrix:inverse()`**</mark>
+<mark style="color:red;">**`[userdata matrix, float determinant] matrix:inverse()`**</mark>
 
 ### ━ Usage
 
 ```lua
-local cVector1 = vEngine.math.matrix.create(10, 20, 30, 40) --Creates a new matrix 1
-local cVector2 = vEngine.math.matrix.create(100, 200, 300, 400) --Creates a new matrix 2
-local resultantMatrix = cVector1:inverse(cVector2) --Adds our matrixes
-print(resultantMatrix) --Prints our resultant matrix
+local cMatrix = vEngine.math.matrix.create(
+    vEngine.math.vector.create(10, 10, 10, 10),
+    vEngine.math.vector.create(10, 10, 10, 10),
+    vEngine.math.vector.create(10, 10, 10, 10),
+    vEngine.math.vector.create(10, 10, 10, 10)
+)
+
+local resultantMatrix, resultantDeterminant = cMatrix:transpose() --Retrieves our matrix's inverse & determinant
+
+--Prints our resultant matrix & determinant
+print(resultantMatrix)
+print(resultantDeterminant)
 ```
