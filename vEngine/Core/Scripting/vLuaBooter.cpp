@@ -223,7 +223,6 @@ namespace wi::lua
             lua_pushvalue(L, -1);
             lua_setfield(L, -2, tableName.c_str());
             AddFuncs(L, functions);
-            lua_pop(L, 1);
         }
         else
         {
@@ -236,16 +235,14 @@ namespace wi::lua
                 lua_setglobal(L, tableName.c_str());
             }
             AddFuncs(L, functions);
-            lua_pop(L, 1);
         }
     }
-    bool RegisterObject(lua_State* L, const std::string& tableName, void* object)
+    bool RegisterObject(lua_State* L, const std::string& tableName, void* object, const char *namespac, const wi::vector<std::string>& namespaceIndex)
     {
-        RegisterLibrary(L, tableName, nullptr);
+        RegisterLibrary(L, tableName, nullptr, namespac, namespaceIndex);
         void** userData = static_cast<void**>(lua_newuserdata(L, sizeof(void*)));
         *(userData) = object;
         luaL_setmetatable(L, tableName.c_str());
-        lua_pop(L, 1);
         return true;
     }
     void AddFunc(lua_State* L, const std::string& name, lua_CFunction function)
