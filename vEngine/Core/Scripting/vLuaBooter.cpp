@@ -234,8 +234,9 @@ namespace wi::lua
                 lua_newtable(L);
                 lua_pushvalue(L, -1); // Duplicate table pointer since setglobal pops the value
                 lua_setglobal(L, tableName.c_str());
-                AddFuncs(L, functions);
             }
+            AddFuncs(L, functions);
+            lua_pop(L, 1);
         }
     }
     bool RegisterObject(lua_State* L, const std::string& tableName, void* object)
