@@ -58,7 +58,7 @@ template < class T > class Luna {
         Registers your class with Lua.  Leave namespac "" if you want to load it into the global space.
         */
         // REGISTER CLASS AS A GLOBAL TABLE 
-        static void Register(lua_State * L, const char *namespac = NULL, const wi::vector<std::string>& namespaceIndex) {
+        static void Register(lua_State * L, const char *namespac = NULL, const wi::vector<std::string>& namespaceIndex = {}) {
             if (namespac && strlen(namespac))
             {
                 lua_getglobal(L, namespac);
