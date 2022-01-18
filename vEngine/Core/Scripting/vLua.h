@@ -4,6 +4,7 @@
 #include "vCommon.h"
 #include "Core/Helpers/wiMath.h"
 #include "Core/Helpers/wiUnorderedMap.h"
+#include "Core/Helpers/wiVector.h"
 #include "Core/Scripting/vLuna.h"
 
 #include <string>
@@ -40,7 +41,7 @@ namespace wi::lua
 	//register function to use in scripts
 	bool RegisterFunc(lua_State* L, const std::string& name, lua_CFunction function);
 	//register class
-	void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions, const char* namespac = NULL);
+	void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions, const char* namespac = NULL, const wi::vector<std::string> namespaceIndex = NULL);
 	//register object
 	bool RegisterObject(lua_State* L, const std::string& tableName, void* object);
 	//add function to the previously registered object

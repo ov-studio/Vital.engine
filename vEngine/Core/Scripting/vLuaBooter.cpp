@@ -194,7 +194,7 @@ namespace wi::lua
         PostErrorMsg(L);
         return Success(L);
     }
-    void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions, const char *namespac)
+    void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions, const char *namespac, const wi::vector<std::string> namespaceIndex)
     {
         if (namespac && strlen(namespac))
         {
