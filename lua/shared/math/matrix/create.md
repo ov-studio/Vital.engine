@@ -6,17 +6,20 @@ description: Creates a new matrix.
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[userdata matrix] create({`**</mark>\
-&#x20;  <mark style="color:red;">**`[0] = {float [0] = 0, float [1] = 0, float [2] = 0, float [3] = 0},`**</mark>\
-&#x20;  <mark style="color:red;">**`[1] = {float [0] = 0, float [1] = 0, float [2] = 0, float [3] = 0},`**</mark>\
-&#x20;  <mark style="color:red;">**`[2] = {float [0] = 0, float [1] = 0, float [2] = 0, float [3] = 0},`**</mark>\
-&#x20;  <mark style="color:red;">**`[3] = {float [0] = 0, float [1] = 0, float [2] = 0, float [3] = 0}`**</mark>\ <mark style="color:red;">**`})`**</mark>
+<mark style="color:red;">**`[userdata matrix] create(userdata rowVector1, userdata rowVector2, userdata rowVector3, userdata rowVector4)`**</mark>
 
 ### ━ Usage
 
 ```lua
-local cMatrix = vEngine.math.vector.create() --Creates a empty matrix
-print(cMatrix) --Prints our vector
+--Creates our row vectors
+local cVector1 = vEngine.math.vector.create(10, 10, 10, 10)
+local cVector2 = vEngine.math.vector.create(100, 100, 100, 100)
+local cVector3 = vEngine.math.vector.create(10, 10, 10, 10)
+local cVector3 = vEngine.math.vector.create(100, 100, 100, 100)
+
+--Creates matrix using row vectors
+local cMatrix = vEngine.math.vector.create(cVector1, cVector2, cVector3, cVector4)
+print(cMatrix) --Prints our matrix
 ```
 
 ### **━ Methods**
