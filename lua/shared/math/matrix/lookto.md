@@ -11,7 +11,7 @@ description: Creates a new translation matrix.
 ### ━ Usage
 
 ```lua
-local cVector = vEngine.math.vector.lookTo(10, 10, 10, 10) --Creates our vector
+local cVector = vEngine.math.vector.create(10, 10, 10, 10) --Creates our vector
 local cMatrix = vEngine.math.vector.lookTo(cVector) --Creates our matrix
 print(cMatrix) --Prints our matrix
 ```
