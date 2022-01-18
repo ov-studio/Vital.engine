@@ -66,9 +66,9 @@ namespace wi::lua
                 }
             }
             this->m[i][0] = x;
-            this->m[i][1] = x;
-            this->m[i][2] = x;
-            this->m[i][3] = x;
+            this->m[i][1] = y;
+            this->m[i][2] = z;
+            this->m[i][3] = w;
         }
     }
 
