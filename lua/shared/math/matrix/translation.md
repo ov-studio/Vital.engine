@@ -12,8 +12,8 @@ description: Creates a new translation matrix.
 
 ```lua
 local cVector = vEngine.math.vector.create(10, 10, 10, 10) --Creates our vector
-local cMatrix = vEngine.math.vector.create(cVector) --Creates a empty matrix
-print(cMatrix) --Prints our vector
+local cMatrix = vEngine.math.vector.create(cVector) --Creates our matrix
+print(cMatrix) --Prints our matrix
 ```
 
 ### **━ Methods**

@@ -2,18 +2,18 @@
 description: Creates a new translation matrix.
 ---
 
-# create
+# lookAt
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[userdata matrix] create(userdata vector)`**</mark>
+<mark style="color:red;">**`[userdata matrix] lookAt(userdata vector)`**</mark>
 
 ### ━ Usage
 
 ```lua
-local cVector = vEngine.math.vector.create(10, 10, 10, 10) --Creates our vector
-local cMatrix = vEngine.math.vector.create(cVector) --Creates a empty matrix
-print(cMatrix) --Prints our vector
+local cVector = vEngine.math.vector.lookAt(10, 10, 10, 10) --Creates our vector
+local cMatrix = vEngine.math.vector.lookAt(cVector) --Creates our matrix
+print(cMatrix) --Prints our matrix
 ```
 
 ### **━ Methods**

@@ -1,19 +1,19 @@
 ---
-description: Creates a new translation matrix.
+description: Creates a new rotation matrix.
 ---
 
-# create
+# rotation
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[userdata matrix] create(userdata vector)`**</mark>
+<mark style="color:red;">**`[userdata matrix] rotation(userdata vector)`**</mark>
 
 ### ━ Usage
 
 ```lua
-local cVector = vEngine.math.vector.create(10, 10, 10, 10) --Creates our vector
-local cMatrix = vEngine.math.vector.create(cVector) --Creates a empty matrix
-print(cMatrix) --Prints our vector
+local cVector = vEngine.math.vector.rotation(10, 10, 10, 10) --Creates our vector
+local cMatrix = vEngine.math.vector.rotation(cVector) --Creates our matrix
+print(cMatrix) --Prints our matrix
 ```
 
 ### **━ Methods**
