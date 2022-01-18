@@ -47,7 +47,7 @@ namespace wi::lua
 	//add function to the previously registered object
 	void AddFunc(lua_State* L, const std::string& name, lua_CFunction function);
 	//add function array to the previously registered object
-	void AddFuncArray(lua_State* L, const luaL_Reg* functions);
+	void AddFuncs(lua_State* L, const luaL_Reg* functions);
 	//add int member to registered object
 	void AddInt(lua_State* L, const std::string& name, int data);
 

@@ -215,7 +215,7 @@ namespace wi::lua
             // Create our main table
             lua_pushvalue(L, -1);
             lua_setfield(L, -2, tableName.c_str());
-            AddFuncArray(L, functions);
+            AddFuncs(L, functions);
             lua_pop(L, 1);
         }
         else
@@ -227,7 +227,7 @@ namespace wi::lua
                 lua_newtable(L);
                 lua_pushvalue(L, -1); // Duplicate table pointer since setglobal pops the value
                 lua_setglobal(L, tableName.c_str());
-                AddFuncArray(L, functions);
+                AddFuncs(L, functions);
             }
         }
     }
@@ -241,10 +241,13 @@ namespace wi::lua
     }
     void AddFunc(lua_State* L, const std::string& name, lua_CFunction function)
     {
-        lua_pushcfunction(L, function);
-        lua_setfield(L, -2, name.c_str());
+        if (function)
+        {
+            lua_pushcfunction(L, function);
+            lua_setfield(L, -2, name.c_str());
+        }
     }
-    void AddFuncArray(lua_State* L, const luaL_Reg* functions)
+    void AddFuncs(lua_State* L, const luaL_Reg* functions)
     {
         if (functions)
         {
