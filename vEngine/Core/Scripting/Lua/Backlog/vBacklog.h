@@ -6,14 +6,14 @@ namespace wi::lua
     class Backlog
     {
         public:
-            // Class Binder
-            static const char className[];
-            static Luna<Backlog>::FunctionType methods[];
-            static Luna<Backlog>::PropertyType properties[];
-            Backlog(lua_State* L) {};
+            // Library Binder
+            static const char libraryName[];
+            static const luaL_Reg libraryFunctions[];
+
+            // Instance Binder
             static void Bind(lua_State* L);
 
-            // Class Methods
+            // Library Methods
             int clear(lua_State* L);
             int post(lua_State* L);
             int isActive(lua_State* L);
