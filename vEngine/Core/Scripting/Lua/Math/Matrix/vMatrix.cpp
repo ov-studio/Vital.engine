@@ -71,6 +71,8 @@ namespace wi::lua
             this->m[i][3] = x;
         }
     }
+
+    // Instance Binder
     void Matrix::Bind(lua_State* L)
     {
         static bool initialized = false;
@@ -79,7 +81,6 @@ namespace wi::lua
             initialized = true;
             RegisterLibrary(L, Matrix::libraryName, Matrix::libraryFunctions, "vEngine", {"math"});
             Luna<Matrix>::Register(L, "vEngine", {"math", Matrix::libraryName});
-            wi::lua::RunText(L, "vEngine.backlog.post(type(vEngine.math.matrix.create), 1);");
         }
     }
 

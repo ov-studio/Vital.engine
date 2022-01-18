@@ -19,6 +19,8 @@ namespace wi::lua
             Matrix(const XMMATRIX& matrix);
             Matrix(const XMFLOAT4X4& matrix);
             Matrix(lua_State* L);
+
+            // Instance Binder
             static void Bind(lua_State* L);
 
             // Library Methods
