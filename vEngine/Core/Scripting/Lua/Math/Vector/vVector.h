@@ -7,6 +7,10 @@ namespace wi::lua
     class Vector : public XMFLOAT4
     {
         public:
+            // Library Binder
+            static const char libraryName[];
+            static const luaL_Reg libraryFunctions[];
+
             // Class Binder
             static const char className[];
             static Luna<Vector>::FunctionType methods[];
@@ -15,6 +19,8 @@ namespace wi::lua
             Vector(const XMFLOAT4& vector);
             Vector(const XMVECTOR& vector);
             Vector(lua_State* L);
+
+            // Instance Binder
             static void Bind(lua_State* L);
 
             // Class Methods

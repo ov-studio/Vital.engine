@@ -2,8 +2,14 @@
 
 namespace wi::lua
 {
+    // Library Binder
+    const char Vector::libraryName[] = "vector";
+    const luaL_Reg Vector::libraryFunctions[] = {
+        { NULL, NULL }
+    };
+
     // Class Binder
-    const char Vector::className[] = "vector";
+    const char Vector::className[] = "create";
     Luna<Vector>::FunctionType Vector::methods[] = {
         lunamethod(Vector, getX),
         lunamethod(Vector, getY),
@@ -69,15 +75,16 @@ namespace wi::lua
             }
         }
     }
+
+    // Instance Binder
     void Vector::Bind(lua_State* L)
     {
         static bool initialized = false;
         if (!initialized)
         {
             initialized = true;
-            Luna<Vector>::Register(L, "vEngine");
-            std::string className = Vector::className;
-            wi::lua::RunText(L, "vEngine.math." + className + " = vEngine." + className + "; vEngine." + className + " = nil;");
+            RegisterLibrary(L, Vector::libraryName, Vector::libraryFunctions, "vEngine", {"math"});
+            Luna<Vector>::Register(L, "vEngine", {"math", Vector::libraryName});
         }
     }
 
@@ -356,12 +363,8 @@ namespace wi::lua
         int argCount = wi::lua::SGetArgCount(L);
         if (argCount >= 1)
         {
-            Vector* cVector = Luna<Vector>::lightcheck(L, 1);
-            if (cVector)
-            {
-                Luna<Vector>::push(L, new Vector(XMQuaternionRotationRollPitchYawFromVector(XMLoadFloat4(cVector))));
-                return 1;
-            }
+            Luna<Vector>::push(L, new Vector(XMQuaternionRotationRollPitchYawFromVector(XMLoadFloat4(this))));
+            return 1;
         }
         wi::lua::SError(L, "Syntax: vector:quatFromRollPitchYaw()");
         return 0;
