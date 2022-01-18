@@ -245,6 +245,7 @@ namespace wi::lua
         void** userData = static_cast<void**>(lua_newuserdata(L, sizeof(void*)));
         *(userData) = object;
         luaL_setmetatable(L, tableName.c_str());
+        lua_pop(L, 1);
         return true;
     }
     void AddFunc(lua_State* L, const std::string& name, lua_CFunction function)
