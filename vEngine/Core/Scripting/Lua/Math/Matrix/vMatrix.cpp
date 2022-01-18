@@ -253,16 +253,18 @@ namespace wi::lua
     int Matrix::getRow(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
-        int row = 0;
         if (argCount >= 1)
         {
             row = wi::lua::SGetInt(L, 1);
-            if (row < 0 || row > 3)
-                row = 0;
+            if (row >= 0 && row <= 3)
+            {
+                XMFLOAT4 matrixRow = XMFLOAT4(m[row][0], m[row][1], m[row][2], m[row][3]);
+                Luna<Vector>::push(L, new Vector(matrixRow));
+                return 1;
+            }
         }
-        XMFLOAT4 matrixRow = XMFLOAT4(m[row][0], m[row][1], m[row][2], m[row][3]);
-        Luna<Vector>::push(L, new Vector(matrixRow));
-        return 1;
+        wi::lua::SError(L, "Syntax: matrix:getRow(int rowIndex)");
+        return 0;
     }
     int Matrix::multiply(lua_State* L)
     {
