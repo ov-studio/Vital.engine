@@ -198,60 +198,55 @@ namespace wi::lua
         Luna<Matrix>::push(L, new Matrix(cMatrix));
         return 1;
     }
-    // TODO: WIP//
     int Matrix::lookTo(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
-        if (argCount > 1)
+        if (argCount >= 2)
         {
-            Vector* pos = Luna<Vector>::lightcheck(L, 1);
-            Vector* dir = Luna<Vector>::lightcheck(L, 2);
-            if (pos != nullptr && dir != nullptr)
+            Vector* eyeVector = Luna<Vector>::lightcheck(L, 1);
+            Vector* directionVector = Luna<Vector>::lightcheck(L, 2);
+            if (eyeVector && directionVector)
             {
-                XMVECTOR Up;
-                if (argCount > 3)
+                XMVECTOR normalVector = XMVectorSet(0, 1, 0, 0);
+                if (argCount >= 3)
                 {
-                    Vector* up = Luna<Vector>::lightcheck(L, 3);
-                    Up = XMLoadFloat4(up);
+                    Vector* _normalVector = Luna<Vector>::lightcheck(L, 3);
+                    if (_normalVector)
+                    {
+                        normalVector = XMLoadFloat4(_normalVector);
+                    }
                 }
-                else
-                    Up = XMVectorSet(0, 1, 0, 0);
-                Luna<Matrix>::push(L, new Matrix(XMMatrixLookToLH(XMLoadFloat4(pos), XMLoadFloat4(dir), Up)));
+                Luna<Matrix>::push(L, new Matrix(XMMatrixLookToLH(XMLoadFloat4(eyeVector), XMLoadFloat4(directionVector), normalVector)));
             }
-            else
-                wi::lua::SError(L, "lookTo(Vector eye, Vector direction, opt Vector up) argument is not a Vector!");
         }
-        else
-            wi::lua::SError(L, "lookTo(Vector eye, Vector direction, opt Vector up) not enough arguments!");
-        return 1;
+        wi::lua::SError(L, "Syntax: vEngine.matrix.lookTo(userdata eyeVector, userdata directionVector, userdata normalVector)");
+        return 0;
     }
     int Matrix::lookAt(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
-        if (argCount > 1)
+        if (argCount >= 2)
         {
-            Vector* pos = Luna<Vector>::lightcheck(L, 1);
-            Vector* dir = Luna<Vector>::lightcheck(L, 2);
-            if (dir != nullptr)
+            Vector* eyeVector = Luna<Vector>::lightcheck(L, 1);
+            Vector* directionVector = Luna<Vector>::lightcheck(L, 2);
+            if (eyeVector && directionVector)
             {
-                XMVECTOR Up;
-                if (argCount > 3)
+                XMVECTOR normalVector = XMVectorSet(0, 1, 0, 0);
+                if (argCount >= 3)
                 {
-                    Vector* up = Luna<Vector>::lightcheck(L, 3);
-                    Up = XMLoadFloat4(up);
+                    Vector* _normalVector = Luna<Vector>::lightcheck(L, 3);
+                    if (_normalVector)
+                    {
+                        normalVector = XMLoadFloat4(_normalVector);
+                    }
                 }
-                else
-                    Up = XMVectorSet(0, 1, 0, 0);
-                Luna<Matrix>::push(L, new Matrix(XMMatrixLookAtLH(XMLoadFloat4(pos), XMLoadFloat4(dir), Up)));
+                Luna<Matrix>::push(L, new Matrix(XMMatrixLookAtLH(XMLoadFloat4(eyeVector), XMLoadFloat4(directionVector), normalVector)));
+                return 1;
             }
-            else
-                wi::lua::SError(L, "lookAt(Vector eye, Vector focusPos, opt Vector up) argument is not a Vector!");
         }
-        else
-            wi::lua::SError(L, "lookAt(Vector eye, Vector focusPos, opt Vector up) not enough arguments!");
-        return 1;
+        wi::lua::SError(L, "Syntax: vEngine.matrix.lookTo(userdata eyeVector, userdata focusVector, userdata normalVector)");
+        return 0;
     }
-    // TODO: ^^ END HERE
 
     // Class Methods
     int Matrix::getRow(lua_State* L)
