@@ -464,7 +464,7 @@ namespace wi
 			desc.vsync = userdata != 0;
 			bool success = graphicsDevice->CreateSwapChain(&desc, nullptr, &swapChain);
 			assert(success);
-			});
+		});
 
 		if (graphicsDevice->GetSwapChainColorSpace(&swapChain) == ColorSpace::HDR10_ST2084)
 		{
