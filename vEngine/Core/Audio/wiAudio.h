@@ -5,10 +5,6 @@
 #include <memory>
 #include <string>
 
-#ifdef SDL2
-#include <SDL2/SDL.h>
-#endif
-
 namespace wi::audio
 {
 	void Initialize();
@@ -56,9 +52,6 @@ namespace wi::audio
 
 	bool CreateSound(const std::string& filename, Sound* sound);
 	bool CreateSound(const uint8_t* data, size_t size, Sound* sound);
-#ifdef SDL2
-	bool CreateSound(SDL_RWops* data, Sound* sound);
-#endif
 	bool CreateSoundInstance(const Sound* sound, SoundInstance* instance);
 
 	void Play(SoundInstance* instance);
