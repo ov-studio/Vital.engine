@@ -255,7 +255,7 @@ namespace wi::lua
         int argCount = wi::lua::SGetArgCount(L);
         if (argCount >= 1)
         {
-            row = wi::lua::SGetInt(L, 1);
+            int row = wi::lua::SGetInt(L, 1);
             if (row >= 0 && row <= 3)
             {
                 XMFLOAT4 matrixRow = XMFLOAT4(m[row][0], m[row][1], m[row][2], m[row][3]);
