@@ -66,8 +66,6 @@ namespace wi::helper
 			winrt::Windows::UI::Popups::MessageDialog(wmessage, wcaption).ShowAsync();
 		});
 #endif // PLATFORM_UWP
-#elif SDL2
-		SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, caption.c_str(), msg.c_str(), NULL);
 #endif // _WIN32
 	}
 
