@@ -15,11 +15,6 @@
 #define VMA_IMPLEMENTATION
 #include "Utils/vk_mem_alloc.h"
 
-#ifdef SDL2
-#include <SDL2/SDL_vulkan.h>
-#include "sdl2.h"
-#endif
-
 #include <string>
 #include <cstring>
 #include <iostream>
@@ -2312,18 +2307,6 @@ using namespace vulkan_internal;
 
 #if defined(VK_USE_PLATFORM_WIN32_KHR)
 		instanceExtensions.push_back(VK_KHR_WIN32_SURFACE_EXTENSION_NAME);
-#elif SDL2
-		{
-			uint32_t extensionCount;
-			SDL_Vulkan_GetInstanceExtensions(window, &extensionCount, nullptr);
-			wi::vector<const char *> extensionNames_sdl(extensionCount);
-			SDL_Vulkan_GetInstanceExtensions(window, &extensionCount, extensionNames_sdl.data());
-			instanceExtensions.reserve(instanceExtensions.size() + extensionNames_sdl.size());
-			for (auto& x : extensionNames_sdl)
-			{
-				instanceExtensions.push_back(x);
-			}
-		}
 #endif // _WIN32
 		
 		if (debuglayer)
@@ -3376,11 +3359,6 @@ using namespace vulkan_internal;
 
 			res = vkCreateWin32SurfaceKHR(instance, &createInfo, nullptr, &internal_state->surface);
 			assert(res == VK_SUCCESS);
-#elif SDL2
-			if (!SDL_Vulkan_CreateSurface(window, instance, &internal_state->surface))
-			{
-				throw sdl2::SDLError("Error creating a vulkan surface");
-			}
 #else
 #error vEngine VULKAN DEVICE ERROR: PLATFORM NOT SUPPORTED
 #endif // _WIN32
