@@ -24,6 +24,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaBooter.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphics.h" />
@@ -348,7 +349,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXPackedVector.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\dxcapi.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\flat_hash_map.hpp" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\include\spirv\unified1\spirv.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\sal.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv_reflect.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image.h" />
