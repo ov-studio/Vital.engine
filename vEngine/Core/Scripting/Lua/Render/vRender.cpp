@@ -1,4 +1,4 @@
-#include "Core/Scripting/Lua/wiRenderer_BindLua.h"
+#include "Core/Scripting/Lua/Render/vRender.h"
 #include "Core/Graphics/wiRenderer.h"
 #include "Core/Helpers/wiHelper.h"
 #include "Core/Systems/wiScene.h"
@@ -16,7 +16,7 @@ using namespace wi::scene;
 using namespace wi::lua::scene;
 using namespace wi::lua::primitive;
 
-namespace wi::lua::renderer
+namespace wi::lua::Render
 {
 	int SetGameSpeed(lua_State* L)
 	{
