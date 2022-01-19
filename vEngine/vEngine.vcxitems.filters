@@ -907,9 +907,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.h">
       <Filter>Core\Input</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiSDLInput.h">
-      <Filter>Core\Input</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.h">
       <Filter>Core\Input</Filter>
     </ClInclude>
@@ -1828,9 +1825,6 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics_Bullet.cpp">
       <Filter>Core\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiSDLInput.cpp">
-      <Filter>Core\Input</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.cpp">
       <Filter>Core\Input</Filter>

@@ -62,7 +62,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiVector.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiSDLInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.h" />
@@ -435,7 +434,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiResourceManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiSDLInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.cpp" />
