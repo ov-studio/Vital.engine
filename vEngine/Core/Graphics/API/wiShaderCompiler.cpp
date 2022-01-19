@@ -38,9 +38,6 @@ namespace wi::shadercompiler
 #ifdef _WIN32
 #define LIBDXCOMPILER "dxcompiler.dll"
 			HMODULE dxcompiler = wiLoadLibrary(LIBDXCOMPILER);
-#elif defined(PLATFORM_LINUX)
-#define LIBDXCOMPILER "libdxcompiler.so"
-			HMODULE dxcompiler = wiLoadLibrary("./" LIBDXCOMPILER);
 #endif
 			if (dxcompiler != nullptr)
 			{
