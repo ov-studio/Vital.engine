@@ -493,10 +493,6 @@ namespace wi::input
 
 #ifdef _WIN32
 			return KEY_DOWN(keycode) || KEY_TOGGLE(keycode);
-#elif SDL2
-			int numkeys;
-			const uint8_t *state = SDL_GetKeyboardState(&numkeys);
-			return state[keycode] == 1;
 #else
 #error KEYBOARD INPUT NOT SUPPORTED
 #endif
