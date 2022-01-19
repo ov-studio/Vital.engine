@@ -37,7 +37,6 @@
     #include "Core/Input/wiInput.h"
     #include "Core/Input/wiRawInput.h"
     #include "Core/Input/wiXInput.h"
-    #include "Core/Input/wiSDLInput.h"
     #include "Core/Graphics/wiTextureHelper.h"
     #include "Core/Helpers/wiRandom.h"
     #include "Core/Helpers/wiColor.h"
