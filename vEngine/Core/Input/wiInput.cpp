@@ -66,8 +66,7 @@ namespace wi::input
 		{
 			DISCONNECTED,
 			XINPUT,
-			RAWINPUT,
-			SDLINPUT,
+			RAWINPUT
 		};
 		DeviceType deviceType;
 		int deviceIndex;
@@ -81,8 +80,6 @@ namespace wi::input
 		wi::Timer timer;
 
 		wi::input::rawinput::Initialize();
-		wi::input::sdlinput::Initialize();
-
 		wi::backlog::post("wi::input Initialized (" + std::to_string((int)std::round(timer.elapsed())) + " ms)");
 		initialized.store(true);
 	}
@@ -99,8 +96,6 @@ namespace wi::input
 
 		wi::input::xinput::Update();
 		wi::input::rawinput::Update();
-		wi::input::sdlinput::Update();
-
 		mouse.delta_wheel = 0;
 		mouse.delta_position = XMFLOAT2(0, 0);
 
@@ -263,37 +258,6 @@ namespace wi::input
 			}
 		}
 
-		// Check if low-level SDLINPUT controller is not registered for playerindex slot and register:
-		for (int i = 0; i < wi::input::sdlinput::GetMaxControllerCount(); ++i)
-		{
-			if (wi::input::sdlinput::GetControllerState(nullptr, i))
-			{
-				int slot = -1;
-				for (int j = 0; j < (int)controllers.size(); ++j)
-				{
-					if (slot < 0 && controllers[j].deviceType == Controller::DISCONNECTED)
-					{
-						// take the first disconnected slot
-						slot = j;
-					}
-					if (controllers[j].deviceType == Controller::SDLINPUT && controllers[j].deviceIndex == i)
-					{
-						// it is already registered to this slot
-						slot = j;
-						break;
-					}
-				}
-				if (slot == -1)
-				{
-					// no disconnected slot was found, and it was not registered
-					slot = (int)controllers.size();
-					controllers.emplace_back();
-				}
-				controllers[slot].deviceType = Controller::SDLINPUT;
-				controllers[slot].deviceIndex = i;
-			}
-		}
-
 		// Read low-level controllers:
 		for (auto& controller : controllers)
 		{
@@ -305,9 +269,6 @@ namespace wi::input
 					break;
 				case Controller::RAWINPUT:
 					connected = wi::input::rawinput::GetControllerState(&controller.state, controller.deviceIndex);
-					break;
-				case Controller::SDLINPUT:
-					connected = wi::input::sdlinput::GetControllerState(&controller.state, controller.deviceIndex);
 					break;
 			}
 
