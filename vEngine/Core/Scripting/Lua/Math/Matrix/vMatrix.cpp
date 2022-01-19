@@ -221,6 +221,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vEngine.matrix.lookTo(userdata eyeVector, userdata directionVector, userdata normalVector)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Matrix::lookAt(lua_State* L)
@@ -246,6 +247,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vEngine.matrix.lookAt(userdata eyeVector, userdata focusVector, userdata normalVector)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
 
@@ -264,6 +266,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: matrix:getRow(int rowIndex)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Matrix::multiply(lua_State* L)
@@ -279,6 +282,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: matrix:multiply(userdata matrix)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Matrix::add(lua_State* L)
@@ -294,6 +298,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: matrix:add(userdata matrix)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Matrix::transpose(lua_State* L)
