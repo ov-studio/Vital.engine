@@ -6,11 +6,11 @@ description: Thread module (Used to simulate async & timed handlers).
 
 ### ━ APIs
 
-* [**getTick**](thread/getTick.md)
+* [**getTick**](thread/gettick.md)
 * [**create**](thread/create.md)
-* [**destroyAll**](thread/destroyAll.md)
+* [**destroyAll**](thread/destroyall.md)
 * [**wait**](thread/wait.md)
-* [**waitEngineUpdate**](thread/waitEngineUpdate.md)
-* [**waitEngineAsyncUpdate**](thread/waitEngineAsyncUpdate.md)
-* [**waitEngineRender**](thread/waitEngineRender.md)
+* [**waitEngineUpdate**](thread/waitengineupdate.md)
+* [**waitEngineAsyncUpdate**](thread/waitengineasyncupdate.md)
+* [**waitEngineRender**](thread/waitenginerender.md)
 
