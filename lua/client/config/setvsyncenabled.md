@@ -1,16 +1,16 @@
 ---
-description: Retrieves game's speed.
+description: Enables/Disables VSync mode.
 ---
 
-# getGameSpeed
+# setVSyncEnabled
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[bool status] getGameSpeed()`**</mark>
+<mark style="color:red;">**`[bool status] setVSyncEnabled(bool state)`**</mark>
 
 ### ━ Usage
 
 ```lua
-local gameSpeed = vEngine.config.getGameSpeed() --Retrieves our game's speed
-print(gameSpeed) --Prints our game speed
+local result = vEngine.config.setVSyncEnabled(false) --Disables our game's VSync mode
+print(result) --Prints result
 ```
