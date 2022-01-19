@@ -115,9 +115,11 @@ namespace wi::lua
         if (argCount >= 1)
         {
             x = wi::lua::SGetFloat(L, 1);
+            wi::lua::SSetBool(L, true);
             return 1;
         }
         wi::lua::SError(L, "Syntax: vector:setX(float value)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::setY(lua_State* L)
@@ -126,9 +128,11 @@ namespace wi::lua
         if (argCount >= 1)
         {
             y = wi::lua::SGetFloat(L, 1);
+            wi::lua::SSetBool(L, true);
             return 1;
         }
         wi::lua::SError(L, "Syntax: vector:setY(float value)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::setZ(lua_State* L)
@@ -137,9 +141,11 @@ namespace wi::lua
         if (argCount >= 1)
         {
             z = wi::lua::SGetFloat(L, 1);
+            wi::lua::SSetBool(L, true);
             return 1;
         }
         wi::lua::SError(L, "Syntax: vector:setZ(float value)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::setW(lua_State* L)
@@ -148,9 +154,11 @@ namespace wi::lua
         if (argCount >= 1)
         {
             w = wi::lua::SGetFloat(L, 1);
+            wi::lua::SSetBool(L, true);
             return 1;
         }
         wi::lua::SError(L, "Syntax: vector:setW(float value)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::transform(lua_State* L)
@@ -166,6 +174,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vector:transform(userdata matrix)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::transformNormal(lua_State* L)
@@ -181,6 +190,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vector:transformNormal(userdata matrix)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::transformCoord(lua_State* L)
@@ -196,6 +206,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vector:transformCoord(userdata matrix)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::length(lua_State* L)
@@ -224,6 +235,7 @@ namespace wi::lua
             return 1;
         }
         wi::lua::SError(L, "Syntax: vector:clamp(float minValue, float maxValue)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::saturate(lua_State* L)
@@ -245,6 +257,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vector:lerp(userdata vector, float lerpRate)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::quatSlerp(lua_State* L)
@@ -261,6 +274,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vector:quatSlerp(userdata vector, float lerpRate)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::dot(lua_State* L)
@@ -276,6 +290,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vector:dot(userdata vector)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::cross(lua_State* L)
@@ -291,6 +306,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vector:cross(userdata vector)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::multiply(lua_State* L)
@@ -311,6 +327,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vector:multiply([userdata vector, float multiplier])");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::quatMultiply(lua_State* L)
@@ -326,6 +343,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vector:quatMultiply(userdata vector)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::add(lua_State* L)
@@ -341,6 +359,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vector:add(userdata vector)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::subtract(lua_State* L)
@@ -356,6 +375,7 @@ namespace wi::lua
             }
         }
         wi::lua::SError(L, "Syntax: vector:subtract(userdata vector)");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
     int Vector::quatFromRollPitchYaw(lua_State* L)
@@ -367,6 +387,7 @@ namespace wi::lua
             return 1;
         }
         wi::lua::SError(L, "Syntax: vector:quatFromRollPitchYaw()");
+        wi::lua::SSetBool(L, false);
         return 0;
     }
 }
