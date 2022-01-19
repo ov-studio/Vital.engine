@@ -6,7 +6,7 @@ description: Retrieves game's speed.
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[bool status] getGameSpeed()`**</mark>
+<mark style="color:red;">**`[float speed] getGameSpeed()`**</mark>
 
 ### ━ Usage
 
