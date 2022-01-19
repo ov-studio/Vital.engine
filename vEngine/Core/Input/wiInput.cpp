@@ -789,8 +789,6 @@ namespace wi::input
 			window.PointerCursor(cursor);
 		}
 #endif
-#elif SDL2
-		SDL_ShowCursor(value ? SDL_DISABLE : SDL_ENABLE);
 #endif // _WIN32
 	}
 
