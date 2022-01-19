@@ -573,13 +573,7 @@ namespace wi::helper
 	bool FileRead_Impl(const std::string& fileName, vector_interface<uint8_t, std::allocator<uint8_t>>& data)
 	{
 #ifndef PLATFORM_UWP
-#ifdef SDL_FILESYSTEM_UNIX
-		std::string filepath = fileName;
-		std::replace(filepath.begin(), filepath.end(), '\\', '/');
-		std::ifstream file(filepath, std::ios::binary | std::ios::ate);
-#else
 		std::ifstream file(fileName, std::ios::binary | std::ios::ate);
-#endif // SDL_FILESYSTEM_UNIX
 		if (file.is_open())
 		{
 			size_t dataSize = (size_t)file.tellg();
@@ -946,12 +940,6 @@ namespace wi::helper
 #else
 		if (!pfd::settings::available()) {
 			const char *message = "No dialog backend available";
-#ifdef SDL2
-			SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
-									 "File dialog error!",
-									 message,
-									 nullptr);
-#endif
 			std::cerr << message << std::endl;
 		}
 
