@@ -7,14 +7,11 @@ namespace sandbox
 {
     namespace compiler
     {
-        namespace module
+        struct moduleDef
         {
-            struct moduleDef
-            {
-                std::string moduleName;
-                wi::vector<std::string> moduleScripts;
-            };
-            int CompileModule(std::string moduleName, wi::vector<moduleDef> modules);
+            std::string moduleName;
+            wi::vector<std::string> moduleScripts;
         };
+        int CompileModule(std::string moduleName, wi::vector<moduleDef> modules);
     };
 };
