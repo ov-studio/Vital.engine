@@ -19,6 +19,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Vector\vVector.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Render\vRender.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaBooter.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
@@ -77,7 +78,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiPrimitive_BindLua.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderer_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath3D_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath_BindLua.h" />
@@ -447,6 +447,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Sandbox\models\vGLTF.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Vector\vVector.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Render\vRender.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiAudio_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.cpp" />
@@ -455,7 +456,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiPrimitive_BindLua.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderer_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath3D_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath_BindLua.cpp" />
