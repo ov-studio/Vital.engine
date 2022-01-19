@@ -16,7 +16,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Sandbox\vImporter.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Game\vGame.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Common\vGame.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Config\vConfig.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Vector\vVector.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMath.h" />
@@ -446,7 +447,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_Windows.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics_Bullet.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Sandbox\models\vGLTF.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Game\vGame.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Config\vConfig.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Vector\vVector.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.cpp" />

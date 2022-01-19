@@ -73,9 +73,6 @@
     <Filter Include="Vendors\xatlas">
       <UniqueIdentifier>{02f46f5f-ac5e-4462-b1ee-f3d1991c558d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\Scripting\Lua\Texture">
-      <UniqueIdentifier>{1c85ad1d-f315-43a9-a00f-86daf4812da8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Core\Scripting\Lua\Backlog">
       <UniqueIdentifier>{ded852a4-8fff-4122-ae84-b30e362a6960}</UniqueIdentifier>
     </Filter>
@@ -88,8 +85,14 @@
     <Filter Include="Core\Scripting\Lua\Math\Matrix">
       <UniqueIdentifier>{6f05ae6f-bf57-4022-8f9f-106d51a33fc5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\Scripting\Lua\Game">
-      <UniqueIdentifier>{b2955e0a-4fe2-4a2f-8b3e-dde9797bbe65}</UniqueIdentifier>
+    <Filter Include="Core\Scripting\Lua\Texture">
+      <UniqueIdentifier>{1c85ad1d-f315-43a9-a00f-86daf4812da8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Scripting\Lua\Config">
+      <UniqueIdentifier>{d428c54d-6796-4f6f-9257-a22539ee16d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Scripting\Lua\Common">
+      <UniqueIdentifier>{a75e7d5e-2cf0-4837-bd99-64410fba3b6d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1251,11 +1254,14 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMath.h">
       <Filter>Core\Scripting\Lua\Math</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Game\vGame.h">
-      <Filter>Core\Scripting\Lua\Game</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaWrapper.h">
       <Filter>Core\Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Config\vConfig.h">
+      <Filter>Core\Scripting\Lua\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Common\vGame.h">
+      <Filter>Core\Scripting\Lua\Common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2058,11 +2064,11 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.cpp">
       <Filter>Core\Scripting\Lua\Math\Matrix</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Game\vGame.cpp">
-      <Filter>Core\Scripting\Lua\Game</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaWrapper.cpp">
       <Filter>Core\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Config\vConfig.cpp">
+      <Filter>Core\Scripting\Lua\Config</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
