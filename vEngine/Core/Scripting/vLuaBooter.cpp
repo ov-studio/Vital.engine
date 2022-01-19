@@ -15,7 +15,7 @@
 #include "Core/Scripting/Lua/wiLoadingScreen_BindLua.h"
 #include "Core/Scripting/Lua/wiRenderPath3D_BindLua.h"
 #include "Core/Scripting/Lua/Texture/vTexture.h"
-#include "Core/Scripting/Lua/Render/vRender.h"
+#include "Core/Scripting/Lua/Game/vGame.h"
 #include "Core/Scripting/Lua/wiAudio_BindLua.h"
 #include "Core/Scripting/Lua/wiSprite_BindLua.h"
 #include "Core/Scripting/Lua/wiImageParams_BindLua.h"
@@ -86,7 +86,7 @@ namespace wi::lua
             Backlog::Bind(cInstance.instance);
             Vector::Bind(cInstance.instance);
             Matrix::Bind(cInstance.instance);
-            Render::Bind(cInstance.instance);
+            Game::Bind(cInstance.instance);
             Application_BindLua::Bind(cInstance.instance);
             Canvas_BindLua::Bind(cInstance.instance);
             RenderPath_BindLua::Bind(cInstance.instance);

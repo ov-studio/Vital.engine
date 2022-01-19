@@ -88,7 +88,7 @@
     <Filter Include="Core\Scripting\Lua\Math\Matrix">
       <UniqueIdentifier>{6f05ae6f-bf57-4022-8f9f-106d51a33fc5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\Scripting\Lua\Render">
+    <Filter Include="Core\Scripting\Lua\Game">
       <UniqueIdentifier>{b2955e0a-4fe2-4a2f-8b3e-dde9797bbe65}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -1251,8 +1251,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMath.h">
       <Filter>Core\Scripting\Lua\Math</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Render\vRender.h">
-      <Filter>Core\Scripting\Lua\Render</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Game\vGame.h">
+      <Filter>Core\Scripting\Lua\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2055,8 +2055,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.cpp">
       <Filter>Core\Scripting\Lua\Math\Matrix</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Render\vRender.cpp">
-      <Filter>Core\Scripting\Lua\Render</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Game\vGame.cpp">
+      <Filter>Core\Scripting\Lua\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
