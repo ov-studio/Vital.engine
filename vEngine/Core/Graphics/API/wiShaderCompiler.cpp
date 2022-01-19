@@ -15,12 +15,6 @@
 #include <atlbase.h> // ComPtr
 #endif // _WIN32
 
-#ifdef PLATFORM_LINUX
-#define SHADERCOMPILER_ENABLED
-#define SHADERCOMPILER_ENABLED_DXCOMPILER
-#define __RPC_FAR
-#endif // PLATFORM_LINUX
-
 #ifdef SHADERCOMPILER_ENABLED_DXCOMPILER
 #include "Utils/dxcapi.h"
 #endif // SHADERCOMPILER_ENABLED_DXCOMPILER

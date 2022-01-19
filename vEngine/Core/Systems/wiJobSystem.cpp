@@ -9,10 +9,6 @@
 #include <string>
 #include <algorithm>
 
-#ifdef PLATFORM_LINUX
-#include <pthread.h>
-#endif
-
 namespace wi::jobsystem
 {
 	struct Job

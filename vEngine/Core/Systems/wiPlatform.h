@@ -35,13 +35,6 @@ typedef void* HMODULE;
 
 #endif // _WIN32
 
-#ifdef SDL2
-#include <SDL2/SDL.h>
-#include <SDL_vulkan.h>
-#include "sdl2.h"
-#endif
-
-
 namespace wi::platform
 {
 #ifdef _WIN32
@@ -50,8 +43,6 @@ namespace wi::platform
 #else
 	using window_type = HWND;
 #endif // PLATFORM_UWP
-#elif SDL2
-	using window_type = SDL_Window*;
 #else
 	using window_type = int;
 #endif // _WIN32
@@ -65,9 +56,6 @@ namespace wi::platform
 		winrt::Windows::ApplicationModel::Core::CoreApplication::Exit();
 #endif // PLATFORM_UWP
 #endif // _WIN32
-#ifdef SDL2
-		SDL_Quit();
-#endif
 	}
 
 	struct WindowProperties
@@ -92,12 +80,5 @@ namespace wi::platform
 		dest->width = uint32_t(window->Bounds().Width * dpiscale);
 		dest->height = uint32_t(window->Bounds().Height * dpiscale);
 #endif // PLATFORM_UWP
-
-#ifdef PLATFORM_LINUX
-		int window_width, window_height;
-		SDL_GetWindowSize(window, &window_width, &window_height);
-		SDL_Vulkan_GetDrawableSize(window, &dest->width, &dest->height);
-		dest->dpi = ((float) dest->width / (float) window_width) * 96.0;
-#endif // PLATFORM_LINUX
 	}
 }
