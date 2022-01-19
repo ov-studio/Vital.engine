@@ -210,8 +210,14 @@ namespace wi::lua
             // Create Indexes
             for (auto& index : namespaceIndex)
             {
-                lua_pushvalue(L, -1);
-                lua_setfield(L, -2, index.c_str());
+                lua_getfield(L, -1, index.c_str());
+                if (lua_isnil(L, -1))
+                {
+                    lua_pop(L, 1);
+                    lua_pushvalue(L, -1);
+                    lua_setfield(L, -2, index.c_str());
+                }
+                lua_remove(L, -2);
             }
         }
     }
@@ -223,6 +229,7 @@ namespace wi::lua
             // Create our main table
             lua_pushvalue(L, -1);
             lua_setfield(L, -2, tableName.c_str());
+            lua_remove(L, -2);
             AddFuncs(L, functions);
         }
         else
