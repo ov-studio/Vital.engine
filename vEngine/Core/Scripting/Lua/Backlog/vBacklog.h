@@ -14,9 +14,9 @@ namespace wi::lua
             static void Bind(lua_State* L);
 
             // Library Methods
-            int clear(lua_State* L);
-            int post(lua_State* L);
-            int isActive(lua_State* L);
-            int setLevel(lua_State* L);
+            static int clear(lua_State* L);
+            static int post(lua_State* L);
+            static int isActive(lua_State* L);
+            static int setLevel(lua_State* L);
     };
 }
