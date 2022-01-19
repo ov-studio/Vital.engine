@@ -6,5 +6,5 @@ description: Shared JSON module.
 
 ### ━ APIs
 
-* [**encode**](encode.md)
-* [**decode**](decode.md)
+* [**encode**](json/encode.md)
+* [**decode**](json/decode.md)
