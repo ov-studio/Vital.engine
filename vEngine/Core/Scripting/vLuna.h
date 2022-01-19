@@ -62,8 +62,9 @@ template < class T > class Luna {
             if (namespac && strlen(namespac))
             {
                 lua_getglobal(L, namespac);
-                if (lua_isnil(L, -1)) // Create namespace if not present
+                if (lua_isnil(L, -1))
                 {
+                    // Namespace doesn't exist, create it
                     lua_newtable(L);
                     lua_pushvalue(L, -1); // Duplicate table pointer since setglobal pops the value
                     lua_setglobal(L, namespac);
@@ -71,8 +72,14 @@ template < class T > class Luna {
                 // Create Indexes
                 for (auto& index : namespaceIndex)
                 {
-                    lua_pushvalue(L, -1);
-                    lua_setfield(L, -2, index.c_str());
+                    lua_getfield(L, -1, index.c_str());
+                    if (lua_isnil(L, -1))
+                    {
+                        lua_pop(L, 1);
+                        lua_pushvalue(L, -1);
+                        lua_setfield(L, -2, index.c_str());
+                    }
+                    lua_remove(L, -2);
                 }
                 // Create our main constructor
                 lua_pushcfunction(L, &Luna < T >::constructor);
