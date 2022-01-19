@@ -1,16 +1,16 @@
 ---
-description: Retrieves game's speed.
+description: Sets shadow's cube properties.
 ---
 
-# getGameSpeed
+# setShadowPropsCube
 
 ### ━ Syntax
 
-<mark style="color:red;">**`[bool status] getGameSpeed()`**</mark>
+<mark style="color:red;">**`[bool status] setShadowPropsCube(int resolution, int count)`**</mark>
 
 ### ━ Usage
 
 ```lua
-local gameSpeed = vEngine.config.getGameSpeed() --Retrieves our game's speed
-print(gameSpeed) --Prints our game speed
+local result = vEngine.config.setShadowPropsCube(1024, 1) --Updates our shadow's cube properties
+print(result) --Prints result
 ```
