@@ -267,9 +267,10 @@ namespace wi::lua
         lua_setfield(L, -2, name.c_str());
     }
 
-    inline void SignalHelper(const char* signalType)
+    void Signal(const std::string& name)
     {
         #if __has_include("Core/Sandbox/.build/vSandboxLua.h")
+            const char* signalType = name.c_str();
             for (auto& i : LuaInstances)
             {
                 auto& L = i.first;
@@ -278,10 +279,6 @@ namespace wi::lua
                 lua_call(L, 1, 0);
             }
         #endif
-    }
-    void Signal(const std::string& name)
-    {
-        SignalHelper(name.c_str());
     }
     void KillProcesses()
     {
