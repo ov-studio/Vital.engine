@@ -33,11 +33,10 @@ namespace wi::lua
 		if (argc > 0)
 		{
 			wi::renderer::SetGameSpeed(wi::lua::SGetFloat(L, 1));
+            return 1;
 		}
-		else
-		{
-			wi::lua::SError(L,"setGameSpeed(float) not enough arguments!");
-		}
+		wi::lua::SError(L,"setGameSpeed(float) not enough arguments!");
+        wi::lua::SSetBool(L, false);
 		return 0;
 	}
 	int Config::getGameSpeed(lua_State* L)
@@ -51,9 +50,10 @@ namespace wi::lua
 		if (argc > 1)
 		{
 			wi::renderer::SetShadowProps2D(wi::lua::SGetInt(L, 1), wi::lua::SGetInt(L, 2));
+            return 1;
 		}
-		else
-			wi::lua::SError(L, "setShadowProps2D(int resolution, int count) not enough arguments!");
+		wi::lua::SError(L, "setShadowProps2D(int resolution, int count) not enough arguments!");
+        wi::lua::SSetBool(L, false);
 		return 0;
 	}
 	int Config::setShadowPropsCube(lua_State* L)
@@ -62,9 +62,10 @@ namespace wi::lua
 		if (argc > 1)
 		{
 			wi::renderer::SetShadowPropsCube(wi::lua::SGetInt(L, 1), wi::lua::SGetInt(L, 2));
+            return 1;
 		}
-		else
-			wi::lua::SError(L, "setShadowPropsCube(int resolution, int count) not enough arguments!");
+		wi::lua::SError(L, "setShadowPropsCube(int resolution, int count) not enough arguments!");
+        wi::lua::SSetBool(L, false);
 		return 0;
 	}
 	int Config::setVSyncEnabled(lua_State* L)
@@ -73,20 +74,21 @@ namespace wi::lua
 		if (argc > 0)
 		{
 			wi::eventhandler::SetVSync(wi::lua::SGetBool(L, 1));
+            return 1;
 		}
+        wi::lua::SSetBool(L, false);
 		return 0;
 	}
 	int Config::setOcclusionCullingEnabled(lua_State* L)
 	{
 		int argc = wi::lua::SGetArgCount(L);
 		if (argc > 0)
-		{
+        {
 			wi::renderer::SetOcclusionCullingEnabled(wi::lua::SGetBool(L, 1));
-		}
-		else
-		{
-			wi::lua::SError(L, "setOcclusionCullingEnabled(bool enabled) not enough arguments!");
-		}
+            return 1;
+        }
+		wi::lua::SError(L, "setOcclusionCullingEnabled(bool enabled) not enough arguments!");
+        wi::lua::SSetBool(L, false);
 		return 0;
 	}
 };
