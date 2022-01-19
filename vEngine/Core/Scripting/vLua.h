@@ -46,7 +46,7 @@ namespace wi::lua
 	// Registers Library
 	void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions, const char* namespac = NULL, const wi::vector<std::string>& namespaceIndex = {});
 	// Registers Object
-	bool RegisterObject(lua_State* L, const std::string& tableName, void* object);
+	bool RegisterObject(lua_State* L, const std::string& tableName, void* object, const char* namespac = NULL, const wi::vector<std::string>& namespaceIndex = {});
 	// Add function to the previously registered object
 	void AddFunc(lua_State* L, const std::string& name, lua_CFunction function);
 	// Add function array to the previously registered object
