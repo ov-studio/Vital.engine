@@ -14,10 +14,6 @@
 #include <atomic>
 #include <thread>
 
-#ifdef SDL2
-#include <SDL2/SDL.h>
-#endif // SDL2
-
 #ifdef PLATFORM_UWP
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.Input.h>
@@ -128,12 +124,6 @@ namespace wi::input
 		mouse.position.x = (float)p.x / dpiscaling;
 		mouse.position.y = (float)p.y / dpiscaling;
 #endif // PLATFORM_UWP
-
-#elif SDL2
-		wi::input::sdlinput::GetMouseState(&mouse);
-		wi::input::sdlinput::GetKeyboardState(&keyboard);
-		//TODO controllers
-		//TODO touch
 #endif
 
 #ifdef PLATFORM_UWP
