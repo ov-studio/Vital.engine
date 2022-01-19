@@ -1,4 +1,4 @@
-#include "Core/Scripting/vLua.h"
+#include "Core/Scripting/Lua/vLua.h"
 #include "Core/Tools/wiBacklog.h"
 
 namespace wi::lua

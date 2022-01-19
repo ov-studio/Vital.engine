@@ -2,7 +2,7 @@
     #include "Core/Sandbox/.build/vSandboxLua.h"
 #endif
 
-#include "Core/Scripting/vLuaBooter.h"
+#include "Core/Scripting/Lua/vLuaBooter.h"
 #include "Vendors/lua_rapidjson/rapidjson.cpp"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Helpers/wiHelper.h"

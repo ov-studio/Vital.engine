@@ -21,9 +21,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Vector\vVector.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMath.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaBooter.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaManager.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaBooter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaWrapper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphics.h" />
@@ -88,8 +88,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSprite_BindLua.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture\vTexture.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLua.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuna.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuna.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiCanvas.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiECS.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.h" />
@@ -466,9 +466,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSprite_BindLua.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture\vTexture.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaBooter.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaManager.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaBooter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaWrapper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiGUI.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiInitializer.cpp" />

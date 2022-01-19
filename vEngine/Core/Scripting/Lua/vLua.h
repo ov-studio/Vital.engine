@@ -6,7 +6,7 @@
 #include "Core/Helpers/wiUnorderedMap.h"
 #include "Core/Helpers/wiVector.h"
 #include "Core/Scripting/vLuaWrapper.h"
-#include "Core/Scripting/vLuna.h"
+#include "Core/Scripting/Lua/vLuna.h"
 
 #include <string>
 

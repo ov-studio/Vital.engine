@@ -1,5 +1,5 @@
 #pragma once
-#include "Core/Scripting/vLuaBooter.h"
+#include "Core/Scripting/Lua/vLuaBooter.h"
 #include "Core/Interfaces/wiLoadingScreen.h"
 #include "Core/Scripting/Lua/wiRenderPath2D_BindLua.h"
 

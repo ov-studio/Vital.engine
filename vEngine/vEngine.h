@@ -44,7 +44,7 @@
     #include "Core/Physics/wiPhysics.h"
     #include "Core/Graphics/wiEnums.h"
     #include "Core/Systems/wiInitializer.h"
-    #include "Core/Scripting/vLuaBooter.h"
+    #include "Core/Scripting/Lua/vLuaBooter.h"
     #include "Core/Sandbox/vImporter.h"
     #include "Core/Graphics/API/wiGraphics.h"
     #include "Core/Graphics/API/wiGraphicsDevice.h"

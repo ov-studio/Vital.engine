@@ -985,12 +985,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.h">
       <Filter>Core\Interfaces</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuna.h">
-      <Filter>Core\Scripting</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLua.h">
-      <Filter>Core\Scripting</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.h">
       <Filter>Core\Scripting\Lua</Filter>
     </ClInclude>
@@ -1092,12 +1086,6 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vVersion.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaManager.h">
-      <Filter>Core\Scripting</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaBooter.h">
-      <Filter>Core\Scripting</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\tiny_gltf.h">
       <Filter>Vendors\tiny_gltf</Filter>
     </ClInclude>
@@ -1254,14 +1242,26 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMath.h">
       <Filter>Core\Scripting\Lua\Math</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaWrapper.h">
-      <Filter>Core\Scripting</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Config\vConfig.h">
       <Filter>Core\Scripting\Lua\Config</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Common\vGame.h">
       <Filter>Core\Scripting\Lua\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaWrapper.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuna.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaBooter.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.h">
+      <Filter>Core\Scripting\Lua</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1983,12 +1983,6 @@
       <Filter>Core\Graphics\API</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaManager.cpp">
-      <Filter>Core\Scripting</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaBooter.cpp">
-      <Filter>Core\Scripting</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Sandbox\models\vGLTF.cpp">
       <Filter>Core\Sandbox\models</Filter>
     </ClCompile>
@@ -2064,11 +2058,17 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.cpp">
       <Filter>Core\Scripting\Lua\Math\Matrix</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\vLuaWrapper.cpp">
-      <Filter>Core\Scripting</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Config\vConfig.cpp">
       <Filter>Core\Scripting\Lua\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaWrapper.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaBooter.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,6 @@
 #pragma once
 #include "vCommon.h"
-#include "Core/Scripting/vLuaBooter.h"
+#include "Core/Scripting/Lua/vLuaBooter.h"
 #include "Core/Helpers/wiMath.h"
 
 // Boot Modules
