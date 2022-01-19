@@ -813,9 +813,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua\lapi.h">
       <Filter>Vendors\lua</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\include\spirv\unified1\spirv.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\arial.h">
       <Filter>Utils</Filter>
     </ClInclude>
@@ -1259,6 +1256,9 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.h">
       <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv.h">
+      <Filter>Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
