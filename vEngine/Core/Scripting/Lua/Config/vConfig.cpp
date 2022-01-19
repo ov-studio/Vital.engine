@@ -36,7 +36,7 @@ namespace wi::lua
             wi::lua::SSetBool(L, true);
             return 1;
 		}
-		wi::lua::SError(L,"setGameSpeed(float) not enough arguments!");
+        wi::lua::SError(L, "Syntax: vEngine.config.setGameSpeed(float speed)");
         wi::lua::SSetBool(L, false);
 		return 0;
 	}
@@ -55,7 +55,7 @@ namespace wi::lua
             wi::lua::SSetBool(L, true);
             return 1;
 		}
-		wi::lua::SError(L, "setShadowProps2D(int resolution, int count) not enough arguments!");
+        wi::lua::SError(L, "Syntax: vEngine.config.setShadowProps2D(int resolution, int count)");
         wi::lua::SSetBool(L, false);
 		return 0;
 	}
@@ -68,7 +68,7 @@ namespace wi::lua
             wi::lua::SSetBool(L, true);
             return 1;
 		}
-		wi::lua::SError(L, "setShadowPropsCube(int resolution, int count) not enough arguments!");
+        wi::lua::SError(L, "Syntax: vEngine.config.setShadowPropsCube(int resolution, int count)");
         wi::lua::SSetBool(L, false);
 		return 0;
 	}
@@ -81,6 +81,7 @@ namespace wi::lua
             wi::lua::SSetBool(L, true);
             return 1;
 		}
+        wi::lua::SError(L, "Syntax: vEngine.config.setVSyncEnabled(bool state)");
         wi::lua::SSetBool(L, false);
 		return 0;
 	}
@@ -93,7 +94,7 @@ namespace wi::lua
             wi::lua::SSetBool(L, true);
             return 1;
         }
-		wi::lua::SError(L, "setOcclusionCullingEnabled(bool enabled) not enough arguments!");
+        wi::lua::SError(L, "Syntax: vEngine.config.setOcclusionCullingEnabled(bool state)");
         wi::lua::SSetBool(L, false);
 		return 0;
 	}
