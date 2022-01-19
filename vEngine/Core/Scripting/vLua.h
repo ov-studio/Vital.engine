@@ -42,7 +42,7 @@ namespace wi::lua
 	bool RegisterFunc(lua_State* L, const std::string& name, lua_CFunction function);
 
 	// Registers Namespace
-    void RegisterNamespace(lua_State* L, const char *namespac, const wi::vector<std::string>& namespaceIndex)
+	void RegisterNamespace(lua_State* L, const char* namespac, const wi::vector<std::string>& namespaceIndex);
 	// Registers Library
 	void RegisterLibrary(lua_State* L, const std::string& tableName, const luaL_Reg* functions, const char* namespac = NULL, const wi::vector<std::string>& namespaceIndex = {});
 	// Registers Object
