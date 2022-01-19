@@ -49,7 +49,7 @@ namespace wi::lua
     };
     static const char* blacklisted_globals[] = {"dofile", "load", "loadfile"};
 
-        // Creates & Destroys instances
+    // Creates & Destroys instances
     lua_State* createInstance()
     {
         lua_CInstance cInstance;
