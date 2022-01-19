@@ -2,7 +2,6 @@
 #include "Core/Systems/wiPlatform.h"
 #include "Core/Input/wiXInput.h"
 #include "Core/Input/wiRawInput.h"
-#include "Core/Input/wiSDLInput.h"
 #include "Core/Helpers/wiHelper.h"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Tools/wiProfiler.h"
