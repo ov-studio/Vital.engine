@@ -161,6 +161,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    }
 
    editor.SetWindow(hWnd, fullscreen);
+    wi::browser::create(hWnd);
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);

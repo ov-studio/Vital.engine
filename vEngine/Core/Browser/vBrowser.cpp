@@ -2,7 +2,7 @@
 
 namespace wi::browser
 {
-    void create()
+    void create(HWND CWindow)
     {
         CefBrowserSettings browserSettings;
         browserSettings.windowless_frame_rate = 60;
@@ -11,8 +11,8 @@ namespace wi::browser
         browserSettings.webgl = cef_state_t::STATE_ENABLED;
 
         CefWindowInfo windowInfo;
-        windowInfo.SetAsWindowless();
+        windowInfo.SetAsWindowless(CWindow);
 
-        CefBrowserHost::CreateBrowser(windowInfo, this, "https://www.google.com", browserSettings, nullptr, nullptr);
+        CefBrowserHost::CreateBrowser(windowInfo, nullptr, "https://www.google.com", browserSettings, nullptr, nullptr);
     }
 }

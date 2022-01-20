@@ -13,5 +13,5 @@
 
 namespace wi::browser
 {
-    void create();
+    void create(HWND CWindow);
 }
