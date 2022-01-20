@@ -38,7 +38,7 @@
 #define CEF_INCLUDE_CEF_AUTH_CALLBACK_H_
 #pragma once
 
-#include "include/cef_base.h"
+#include "cef_base.h"
 
 ///
 // Callback interface used for asynchronous continuation of authentication

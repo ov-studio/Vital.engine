@@ -38,7 +38,7 @@
 #define CEF_INCLUDE_VIEWS_CEF_PANEL_DELEGATE_H_
 #pragma once
 
-#include "include/views/cef_view_delegate.h"
+#include "views/cef_view_delegate.h"
 
 ///
 // Implement this interface to handle Panel events. The methods of this class

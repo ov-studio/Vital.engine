@@ -40,9 +40,9 @@
 #define CEF_INCLUDE_CAPI_CEF_DRAG_DATA_CAPI_H_
 #pragma once
 
-#include "include/capi/cef_base_capi.h"
-#include "include/capi/cef_image_capi.h"
-#include "include/capi/cef_stream_capi.h"
+#include "capi/cef_base_capi.h"
+#include "capi/cef_image_capi.h"
+#include "capi/cef_stream_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -163,8 +163,8 @@
 #include <sstream>
 #include <string>
 
-#include "include/base/cef_build.h"
-#include "include/internal/cef_logging_internal.h"
+#include "base/cef_build.h"
+#include "internal/cef_logging_internal.h"
 
 namespace cef {
 namespace logging {

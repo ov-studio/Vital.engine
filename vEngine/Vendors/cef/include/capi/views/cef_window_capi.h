@@ -40,12 +40,12 @@
 #define CEF_INCLUDE_CAPI_VIEWS_CEF_WINDOW_CAPI_H_
 #pragma once
 
-#include "include/capi/cef_image_capi.h"
-#include "include/capi/cef_menu_model_capi.h"
-#include "include/capi/views/cef_display_capi.h"
-#include "include/capi/views/cef_overlay_controller_capi.h"
-#include "include/capi/views/cef_panel_capi.h"
-#include "include/capi/views/cef_window_delegate_capi.h"
+#include "capi/cef_image_capi.h"
+#include "capi/cef_menu_model_capi.h"
+#include "capi/views/cef_display_capi.h"
+#include "capi/views/cef_overlay_controller_capi.h"
+#include "capi/views/cef_panel_capi.h"
+#include "capi/views/cef_window_delegate_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

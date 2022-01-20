@@ -34,7 +34,7 @@
 #include <memory.h>
 #include <string>
 
-#include "include/internal/cef_string_types.h"
+#include "internal/cef_string_types.h"
 
 #if defined(USING_CHROMIUM_INCLUDES)
 #include "base/files/file_path.h"

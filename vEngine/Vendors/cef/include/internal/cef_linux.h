@@ -31,8 +31,8 @@
 #define CEF_INCLUDE_INTERNAL_CEF_LINUX_H_
 #pragma once
 
-#include "include/internal/cef_types_linux.h"
-#include "include/internal/cef_types_wrappers.h"
+#include "internal/cef_types_linux.h"
+#include "internal/cef_types_wrappers.h"
 
 // Handle types.
 #define CefCursorHandle cef_cursor_handle_t

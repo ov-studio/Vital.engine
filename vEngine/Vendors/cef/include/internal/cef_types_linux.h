@@ -31,8 +31,8 @@
 #define CEF_INCLUDE_INTERNAL_CEF_TYPES_LINUX_H_
 #pragma once
 
-#include "include/base/cef_build.h"
-#include "include/cef_config.h"
+#include "base/cef_build.h"
+#include "cef_config.h"
 
 #if defined(OS_LINUX)
 
@@ -41,9 +41,9 @@ typedef union _XEvent XEvent;
 typedef struct _XDisplay XDisplay;
 #endif
 
-#include "include/internal/cef_export.h"
-#include "include/internal/cef_string.h"
-#include "include/internal/cef_types_geometry.h"
+#include "internal/cef_export.h"
+#include "internal/cef_string.h"
+#include "internal/cef_types_geometry.h"
 
 // Handle types.
 #if defined(CEF_X11)

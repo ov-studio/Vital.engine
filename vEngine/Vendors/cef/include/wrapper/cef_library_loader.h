@@ -31,7 +31,7 @@
 #define CEF_INCLUDE_WRAPPER_CEF_LIBRARY_LOADER_H_
 #pragma once
 
-#include "include/base/cef_build.h"
+#include "base/cef_build.h"
 
 #ifdef __cplusplus
 #include <string>
@@ -64,7 +64,7 @@ int cef_unload_library();
 //
 // Example usage in the main process:
 //
-//   #include "include/wrapper/cef_library_loader.h"
+//   #include "wrapper/cef_library_loader.h"
 //
 //   int main(int argc, char* argv[]) {
 //     // Dynamically load the CEF framework library.
@@ -77,8 +77,8 @@ int cef_unload_library();
 //
 // Example usage in the helper process:
 //
-//   #include "include/cef_sandbox_mac.h"
-//   #include "include/wrapper/cef_library_loader.h"
+//   #include "cef_sandbox_mac.h"
+//   #include "wrapper/cef_library_loader.h"
 //
 //   int main(int argc, char* argv[]) {
 //     // Initialize the macOS sandbox for this helper process.

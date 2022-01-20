@@ -40,10 +40,10 @@
 #include <map>
 #include <vector>
 
-#include "include/base/cef_lock.h"
-#include "include/base/cef_ref_counted.h"
-#include "include/cef_base.h"
-#include "include/cef_xml_reader.h"
+#include "base/cef_lock.h"
+#include "base/cef_ref_counted.h"
+#include "cef_base.h"
+#include "cef_xml_reader.h"
 
 class CefStreamReader;
 

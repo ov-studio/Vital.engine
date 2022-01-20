@@ -38,10 +38,10 @@
 #define CEF_INCLUDE_CEF_BROWSER_PROCESS_HANDLER_H_
 #pragma once
 
-#include "include/cef_base.h"
-#include "include/cef_client.h"
-#include "include/cef_command_line.h"
-#include "include/cef_values.h"
+#include "cef_base.h"
+#include "cef_client.h"
+#include "cef_command_line.h"
+#include "cef_values.h"
 
 ///
 // Class used to implement browser process callbacks. The methods of this class

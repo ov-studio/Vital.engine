@@ -107,10 +107,10 @@
 #include <cstddef>
 #include <type_traits>
 
-#include "include/base/cef_atomic_flag.h"
-#include "include/base/cef_logging.h"
-#include "include/base/cef_ref_counted.h"
-#include "include/base/cef_thread_checker.h"
+#include "base/cef_atomic_flag.h"
+#include "base/cef_logging.h"
+#include "base/cef_ref_counted.h"
+#include "base/cef_thread_checker.h"
 
 namespace base {
 

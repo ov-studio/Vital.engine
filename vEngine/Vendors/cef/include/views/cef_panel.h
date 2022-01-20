@@ -38,8 +38,8 @@
 #define CEF_INCLUDE_VIEWS_CEF_PANEL_H_
 #pragma once
 
-#include "include/views/cef_panel_delegate.h"
-#include "include/views/cef_view.h"
+#include "views/cef_panel_delegate.h"
+#include "views/cef_view.h"
 
 class CefBoxLayout;
 class CefFillLayout;

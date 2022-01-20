@@ -35,10 +35,10 @@
 
 #include <Block.h>
 
-#include "include/base/cef_scoped_typeref_mac.h"
+#include "base/cef_scoped_typeref_mac.h"
 
 #if defined(__has_feature) && __has_feature(objc_arc)
-#error "Cannot include include/base/internal/cef_scoped_block_mac.h in file built with ARC."
+#error "Cannot include base/internal/cef_scoped_block_mac.h in file built with ARC."
 #endif
 
 namespace base {

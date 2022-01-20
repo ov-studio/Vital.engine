@@ -37,7 +37,7 @@
 #ifndef CEF_INCLUDE_CEF_STREAM_H_
 #define CEF_INCLUDE_CEF_STREAM_H_
 
-#include "include/cef_base.h"
+#include "cef_base.h"
 
 ///
 // Interface the client can implement to provide a custom stream reader. The

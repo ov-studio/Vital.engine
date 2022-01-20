@@ -38,8 +38,8 @@
 #define CEF_INCLUDE_CEF_EXTENSION_H_
 #pragma once
 
-#include "include/cef_base.h"
-#include "include/cef_values.h"
+#include "cef_base.h"
+#include "cef_values.h"
 
 class CefExtensionHandler;
 class CefRequestContext;

@@ -45,13 +45,13 @@
 
 #include <utility>
 
-#include "include/base/cef_atomic_ref_count.h"
-#include "include/base/cef_build.h"
-#include "include/base/cef_compiler_specific.h"
-#include "include/base/cef_logging.h"
-#include "include/base/cef_scoped_refptr.h"
-#include "include/base/cef_template_util.h"
-#include "include/base/cef_thread_checker.h"
+#include "base/cef_atomic_ref_count.h"
+#include "base/cef_build.h"
+#include "base/cef_compiler_specific.h"
+#include "base/cef_logging.h"
+#include "base/cef_scoped_refptr.h"
+#include "base/cef_template_util.h"
+#include "base/cef_thread_checker.h"
 
 namespace base {
 namespace cef_subtle {

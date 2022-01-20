@@ -77,10 +77,10 @@
 
 #include <stddef.h>
 
-#include "include/base/cef_bind.h"
-#include "include/base/cef_callback_forward.h"
-#include "include/base/cef_logging.h"
-#include "include/base/internal/cef_callback_internal.h"
+#include "base/cef_bind.h"
+#include "base/cef_callback_forward.h"
+#include "base/cef_logging.h"
+#include "base/internal/cef_callback_internal.h"
 
 namespace base {
 

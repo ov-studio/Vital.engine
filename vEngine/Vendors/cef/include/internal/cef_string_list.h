@@ -31,8 +31,8 @@
 #define CEF_INCLUDE_INTERNAL_CEF_STRING_LIST_H_
 #pragma once
 
-#include "include/internal/cef_export.h"
-#include "include/internal/cef_string.h"
+#include "internal/cef_export.h"
+#include "internal/cef_string.h"
 
 #ifdef __cplusplus
 extern "C" {

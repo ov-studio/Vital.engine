@@ -40,12 +40,12 @@
 #define CEF_INCLUDE_CAPI_CEF_REQUEST_CONTEXT_CAPI_H_
 #pragma once
 
-#include "include/capi/cef_callback_capi.h"
-#include "include/capi/cef_cookie_capi.h"
-#include "include/capi/cef_extension_capi.h"
-#include "include/capi/cef_extension_handler_capi.h"
-#include "include/capi/cef_media_router_capi.h"
-#include "include/capi/cef_values_capi.h"
+#include "capi/cef_callback_capi.h"
+#include "capi/cef_cookie_capi.h"
+#include "capi/cef_extension_capi.h"
+#include "capi/cef_extension_handler_capi.h"
+#include "capi/cef_media_router_capi.h"
+#include "capi/cef_values_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

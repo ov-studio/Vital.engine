@@ -32,7 +32,7 @@
 #pragma once
 
 #ifdef __cplusplus
-#include "include/cef_base.h"
+#include "cef_base.h"
 #endif  // __cplusplus
 
 #if defined(OS_MAC) && defined(__OBJC__)

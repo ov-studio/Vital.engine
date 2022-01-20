@@ -31,8 +31,8 @@
 #define CEF_INCLUDE_CEF_SANDBOX_MAC_H_
 #pragma once
 
-#include "include/base/cef_build.h"
-#include "include/internal/cef_export.h"
+#include "base/cef_build.h"
+#include "internal/cef_export.h"
 
 #if defined(OS_MAC)
 
@@ -50,7 +50,7 @@ extern "C" {
 // 1. Link the helper process executable with the cef_sandbox static library.
 // 2. Call the cef_sandbox_initialize() function at the beginning of the
 //    helper executable main() function and before loading the CEF framework
-//    library. See include/wrapper/cef_library_loader.h for example usage.
+//    library. See wrapper/cef_library_loader.h for example usage.
 
 ///
 // Initialize the sandbox for this process. Returns the sandbox context

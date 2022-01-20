@@ -31,9 +31,9 @@
 #define CEF_INCLUDE_INTERNAL_CEF_TYPES_WRAPPERS_H_
 #pragma once
 
-#include "include/internal/cef_string.h"
-#include "include/internal/cef_string_list.h"
-#include "include/internal/cef_types.h"
+#include "internal/cef_string.h"
+#include "internal/cef_string_list.h"
+#include "internal/cef_types.h"
 
 ///
 // Template class that provides common functionality for CEF structure wrapping.

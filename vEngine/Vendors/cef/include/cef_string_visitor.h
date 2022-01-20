@@ -37,7 +37,7 @@
 #ifndef CEF_INCLUDE_CEF_STRING_VISITOR_H_
 #define CEF_INCLUDE_CEF_STRING_VISITOR_H_
 
-#include "include/cef_base.h"
+#include "cef_base.h"
 
 ///
 // Implement this interface to receive string values asynchronously.

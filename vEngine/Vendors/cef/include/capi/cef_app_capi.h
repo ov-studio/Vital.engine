@@ -40,12 +40,12 @@
 #define CEF_INCLUDE_CAPI_CEF_APP_CAPI_H_
 #pragma once
 
-#include "include/capi/cef_base_capi.h"
-#include "include/capi/cef_browser_process_handler_capi.h"
-#include "include/capi/cef_command_line_capi.h"
-#include "include/capi/cef_render_process_handler_capi.h"
-#include "include/capi/cef_resource_bundle_handler_capi.h"
-#include "include/capi/cef_scheme_capi.h"
+#include "capi/cef_base_capi.h"
+#include "capi/cef_browser_process_handler_capi.h"
+#include "capi/cef_command_line_capi.h"
+#include "capi/cef_render_process_handler_capi.h"
+#include "capi/cef_resource_bundle_handler_capi.h"
+#include "capi/cef_scheme_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

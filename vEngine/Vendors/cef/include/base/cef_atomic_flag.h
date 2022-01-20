@@ -45,7 +45,7 @@
 
 #include <atomic>
 
-#include "include/base/cef_thread_checker.h"
+#include "base/cef_thread_checker.h"
 
 namespace base {
 

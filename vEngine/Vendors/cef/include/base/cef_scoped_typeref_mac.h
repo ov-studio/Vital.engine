@@ -74,9 +74,9 @@
 // If the Chromium implementation diverges the below implementation should be
 // updated to match.
 
-#include "include/base/cef_compiler_specific.h"
-#include "include/base/cef_logging.h"
-#include "include/base/internal/cef_scoped_policy.h"
+#include "base/cef_compiler_specific.h"
+#include "base/cef_logging.h"
+#include "base/internal/cef_scoped_policy.h"
 
 namespace base {
 

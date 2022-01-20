@@ -38,10 +38,10 @@
 #define CEF_INCLUDE_CEF_EXTENSION_HANDLER_H_
 #pragma once
 
-#include "include/cef_base.h"
-#include "include/cef_browser.h"
-#include "include/cef_extension.h"
-#include "include/cef_stream.h"
+#include "cef_base.h"
+#include "cef_browser.h"
+#include "cef_extension.h"
+#include "cef_stream.h"
 
 class CefClient;
 

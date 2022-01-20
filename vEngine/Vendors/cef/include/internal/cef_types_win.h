@@ -31,13 +31,13 @@
 #define CEF_INCLUDE_INTERNAL_CEF_TYPES_WIN_H_
 #pragma once
 
-#include "include/base/cef_build.h"
+#include "base/cef_build.h"
 
 #if defined(OS_WIN)
 #include <windows.h>
 
-#include "include/internal/cef_string.h"
-#include "include/internal/cef_types_geometry.h"
+#include "internal/cef_string.h"
+#include "internal/cef_types_geometry.h"
 
 // Handle types.
 #define cef_cursor_handle_t HCURSOR

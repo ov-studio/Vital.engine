@@ -39,9 +39,9 @@
 #pragma once
 
 #include <vector>
-#include "include/cef_base.h"
-#include "include/cef_image.h"
-#include "include/cef_stream.h"
+#include "cef_base.h"
+#include "cef_image.h"
+#include "cef_stream.h"
 
 ///
 // Class used to represent drag data. The methods of this class may be called

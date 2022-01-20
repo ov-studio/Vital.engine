@@ -40,10 +40,10 @@
 #define CEF_INCLUDE_CAPI_CEF_EXTENSION_HANDLER_CAPI_H_
 #pragma once
 
-#include "include/capi/cef_base_capi.h"
-#include "include/capi/cef_browser_capi.h"
-#include "include/capi/cef_extension_capi.h"
-#include "include/capi/cef_stream_capi.h"
+#include "capi/cef_base_capi.h"
+#include "capi/cef_browser_capi.h"
+#include "capi/cef_extension_capi.h"
+#include "capi/cef_stream_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

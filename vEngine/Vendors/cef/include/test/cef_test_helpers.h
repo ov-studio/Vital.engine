@@ -48,7 +48,7 @@
 #error This file can be included for unit tests only
 #endif
 
-#include "include/cef_frame.h"
+#include "cef_frame.h"
 
 ///
 // Execute JavaScript with a user gesture to trigger functionality like

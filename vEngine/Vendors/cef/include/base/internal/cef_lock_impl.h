@@ -32,7 +32,7 @@
 #ifndef CEF_INCLUDE_BASE_INTERNAL_CEF_LOCK_IMPL_H_
 #define CEF_INCLUDE_BASE_INTERNAL_CEF_LOCK_IMPL_H_
 
-#include "include/base/cef_build.h"
+#include "base/cef_build.h"
 
 #if defined(OS_WIN)
 #include <windows.h>

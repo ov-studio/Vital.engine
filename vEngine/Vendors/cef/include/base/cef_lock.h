@@ -40,9 +40,9 @@
 // If the Chromium implementation diverges the below implementation should be
 // updated to match.
 
-#include "include/base/cef_logging.h"
-#include "include/base/cef_platform_thread.h"
-#include "include/base/internal/cef_lock_impl.h"
+#include "base/cef_logging.h"
+#include "base/cef_platform_thread.h"
+#include "base/internal/cef_lock_impl.h"
 
 namespace base {
 namespace cef_internal {
