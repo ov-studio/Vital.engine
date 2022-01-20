@@ -38,8 +38,8 @@
 #define CEF_INCLUDE_CEF_IMAGE_H_
 #pragma once
 
-#include "include/cef_base.h"
-#include "include/cef_values.h"
+#include "cef_base.h"
+#include "cef_values.h"
 
 ///
 // Container for a single image represented at different scale factors. All

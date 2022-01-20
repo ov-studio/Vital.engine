@@ -148,7 +148,7 @@
 // If the Chromium implementation diverges the below implementation should be
 // updated to match.
 
-#include "include/internal/cef_trace_event_internal.h"
+#include "internal/cef_trace_event_internal.h"
 
 // Records a pair of begin and end events called "name" for the current
 // scope, with 0, 1 or 2 associated arguments. If the category is not

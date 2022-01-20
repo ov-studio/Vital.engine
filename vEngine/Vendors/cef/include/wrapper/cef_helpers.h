@@ -41,10 +41,10 @@
 #include <string>
 #include <vector>
 
-#include "include/base/cef_bind.h"
-#include "include/base/cef_logging.h"
-#include "include/base/cef_macros.h"
-#include "include/cef_task.h"
+#include "base/cef_bind.h"
+#include "base/cef_logging.h"
+#include "base/cef_macros.h"
+#include "cef_task.h"
 
 #define CEF_REQUIRE_UI_THREAD() DCHECK(CefCurrentlyOn(TID_UI));
 #define CEF_REQUIRE_IO_THREAD() DCHECK(CefCurrentlyOn(TID_IO));

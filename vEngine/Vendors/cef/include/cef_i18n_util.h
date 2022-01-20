@@ -38,7 +38,7 @@
 #define CEF_INCLUDE_CEF_I18N_UTIL_H_
 #pragma once
 
-#include "include/cef_base.h"
+#include "cef_base.h"
 
 ///
 // Returns true if the application text direction is right-to-left.

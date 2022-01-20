@@ -40,12 +40,12 @@
 #define CEF_INCLUDE_CAPI_CEF_FRAME_CAPI_H_
 #pragma once
 
-#include "include/capi/cef_base_capi.h"
-#include "include/capi/cef_dom_capi.h"
-#include "include/capi/cef_process_message_capi.h"
-#include "include/capi/cef_request_capi.h"
-#include "include/capi/cef_stream_capi.h"
-#include "include/capi/cef_string_visitor_capi.h"
+#include "capi/cef_base_capi.h"
+#include "capi/cef_dom_capi.h"
+#include "capi/cef_process_message_capi.h"
+#include "capi/cef_request_capi.h"
+#include "capi/cef_stream_capi.h"
+#include "capi/cef_string_visitor_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

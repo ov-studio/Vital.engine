@@ -40,14 +40,14 @@
 #define CEF_INCLUDE_CAPI_CEF_BROWSER_CAPI_H_
 #pragma once
 
-#include "include/capi/cef_base_capi.h"
-#include "include/capi/cef_devtools_message_observer_capi.h"
-#include "include/capi/cef_drag_data_capi.h"
-#include "include/capi/cef_frame_capi.h"
-#include "include/capi/cef_image_capi.h"
-#include "include/capi/cef_navigation_entry_capi.h"
-#include "include/capi/cef_registration_capi.h"
-#include "include/capi/cef_request_context_capi.h"
+#include "capi/cef_base_capi.h"
+#include "capi/cef_devtools_message_observer_capi.h"
+#include "capi/cef_drag_data_capi.h"
+#include "capi/cef_frame_capi.h"
+#include "capi/cef_image_capi.h"
+#include "capi/cef_navigation_entry_capi.h"
+#include "capi/cef_registration_capi.h"
+#include "capi/cef_request_context_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

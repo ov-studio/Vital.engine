@@ -38,8 +38,8 @@
 #define CEF_INCLUDE_CEF_KEYBOARD_HANDLER_H_
 #pragma once
 
-#include "include/cef_base.h"
-#include "include/cef_browser.h"
+#include "cef_base.h"
+#include "cef_browser.h"
 
 ///
 // Implement this interface to handle events related to keyboard input. The

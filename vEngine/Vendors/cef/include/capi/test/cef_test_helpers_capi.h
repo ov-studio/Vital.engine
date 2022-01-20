@@ -45,7 +45,7 @@
 #error This file can be included for unit tests only
 #endif
 
-#include "include/capi/cef_base_capi.h"
+#include "capi/cef_base_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

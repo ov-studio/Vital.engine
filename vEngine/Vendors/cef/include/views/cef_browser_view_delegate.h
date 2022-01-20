@@ -38,8 +38,8 @@
 #define CEF_INCLUDE_VIEWS_CEF_BROWSER_VIEW_DELEGATE_H_
 #pragma once
 
-#include "include/cef_client.h"
-#include "include/views/cef_view_delegate.h"
+#include "cef_client.h"
+#include "views/cef_view_delegate.h"
 
 class CefBrowser;
 class CefBrowserView;

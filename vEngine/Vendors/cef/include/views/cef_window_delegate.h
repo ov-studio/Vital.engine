@@ -38,7 +38,7 @@
 #define CEF_INCLUDE_VIEWS_CEF_WINDOW_DELEGATE_H_
 #pragma once
 
-#include "include/views/cef_panel_delegate.h"
+#include "views/cef_panel_delegate.h"
 
 class CefWindow;
 

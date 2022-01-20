@@ -40,8 +40,8 @@
 
 #include <vector>
 
-#include "include/cef_base.h"
-#include "include/cef_values.h"
+#include "cef_base.h"
+#include "cef_values.h"
 
 ///
 // Class representing the issuer or subject field of an X.509 certificate.

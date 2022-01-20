@@ -53,7 +53,7 @@
 
 #ifndef APSTUDIO_HIDDEN_SYMBOLS
 
-#include "include/internal/cef_export.h"
+#include "internal/cef_export.h"
 
 #ifdef __cplusplus
 extern "C" {

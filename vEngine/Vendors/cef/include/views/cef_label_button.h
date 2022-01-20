@@ -38,9 +38,9 @@
 #define CEF_INCLUDE_VIEWS_CEF_LABEL_BUTTON_H_
 #pragma once
 
-#include "include/cef_image.h"
-#include "include/views/cef_button.h"
-#include "include/views/cef_button_delegate.h"
+#include "cef_image.h"
+#include "views/cef_button.h"
+#include "views/cef_button_delegate.h"
 
 class CefMenuButton;
 

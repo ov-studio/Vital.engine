@@ -40,15 +40,15 @@
 
 #include <vector>
 
-#include "include/cef_auth_callback.h"
-#include "include/cef_base.h"
-#include "include/cef_browser.h"
-#include "include/cef_callback.h"
-#include "include/cef_frame.h"
-#include "include/cef_request.h"
-#include "include/cef_resource_request_handler.h"
-#include "include/cef_ssl_info.h"
-#include "include/cef_x509_certificate.h"
+#include "cef_auth_callback.h"
+#include "cef_base.h"
+#include "cef_browser.h"
+#include "cef_callback.h"
+#include "cef_frame.h"
+#include "cef_request.h"
+#include "cef_resource_request_handler.h"
+#include "cef_ssl_info.h"
+#include "cef_x509_certificate.h"
 
 ///
 // Callback interface used to select a client certificate for authentication.

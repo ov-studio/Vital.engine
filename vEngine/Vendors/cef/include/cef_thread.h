@@ -38,8 +38,8 @@
 #define CEF_INCLUDE_CEF_THREAD_H_
 #pragma once
 
-#include "include/cef_task.h"
-#include "include/internal/cef_thread_internal.h"
+#include "cef_task.h"
+#include "internal/cef_thread_internal.h"
 
 ///
 // A simple thread abstraction that establishes a message loop on a new thread.

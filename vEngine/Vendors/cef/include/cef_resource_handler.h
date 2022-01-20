@@ -38,12 +38,12 @@
 #define CEF_INCLUDE_CEF_RESOURCE_HANDLER_H_
 #pragma once
 
-#include "include/cef_base.h"
-#include "include/cef_browser.h"
-#include "include/cef_callback.h"
-#include "include/cef_cookie.h"
-#include "include/cef_request.h"
-#include "include/cef_response.h"
+#include "cef_base.h"
+#include "cef_browser.h"
+#include "cef_callback.h"
+#include "cef_cookie.h"
+#include "cef_request.h"
+#include "cef_response.h"
 
 ///
 // Callback for asynchronous continuation of CefResourceHandler::Skip().

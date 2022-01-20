@@ -40,13 +40,13 @@
 #include <list>
 #include <memory>
 
-#include "include/base/cef_callback.h"
-#include "include/base/cef_macros.h"
-#include "include/base/cef_ref_counted.h"
-#include "include/base/cef_weak_ptr.h"
-#include "include/cef_request_handler.h"
-#include "include/wrapper/cef_closure_task.h"
-#include "include/wrapper/cef_helpers.h"
+#include "base/cef_callback.h"
+#include "base/cef_macros.h"
+#include "base/cef_ref_counted.h"
+#include "base/cef_weak_ptr.h"
+#include "cef_request_handler.h"
+#include "wrapper/cef_closure_task.h"
+#include "wrapper/cef_helpers.h"
 
 ///
 // Class for managing multiple resource providers. For each resource request

@@ -34,7 +34,7 @@
 
 #include <type_traits>
 
-#include "include/base/cef_template_util.h"
+#include "base/cef_template_util.h"
 
 // It is dangerous to post a task with a T* argument where T is a subtype of
 // RefCounted(Base|ThreadSafeBase), since by the time the parameter is used, the

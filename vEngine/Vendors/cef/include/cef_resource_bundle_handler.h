@@ -38,7 +38,7 @@
 #define CEF_INCLUDE_CEF_RESOURCE_BUNDLE_HANDLER_H_
 #pragma once
 
-#include "include/cef_base.h"
+#include "cef_base.h"
 
 ///
 // Class used to implement a custom resource bundle interface. See CefSettings

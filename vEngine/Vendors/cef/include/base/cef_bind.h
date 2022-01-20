@@ -81,13 +81,13 @@
 #include <type_traits>
 #include <utility>
 
-#include "include/base/cef_build.h"
-#include "include/base/cef_compiler_specific.h"
-#include "include/base/cef_template_util.h"
-#include "include/base/internal/cef_bind_internal.h"
+#include "base/cef_build.h"
+#include "base/cef_compiler_specific.h"
+#include "base/cef_template_util.h"
+#include "base/internal/cef_bind_internal.h"
 
 #if defined(OS_APPLE) && !HAS_FEATURE(objc_arc)
-#include "include/base/internal/cef_scoped_block_mac.h"
+#include "base/internal/cef_scoped_block_mac.h"
 #endif
 
 namespace base {
