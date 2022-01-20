@@ -900,7 +900,6 @@ namespace vulkan_internal
 
 			allocationhandler->destroyer_semaphores.push_back(std::make_pair(swapchainAcquireSemaphore, framecount));
 			allocationhandler->destroyer_semaphores.push_back(std::make_pair(swapchainReleaseSemaphore, framecount));
-
 			allocationhandler->destroylocker.unlock();
 
 		}

@@ -16,7 +16,7 @@
 #endif // _WIN32
 
 #define VK_NO_PROTOTYPES
-#include "Utils/vulkan/vulkan.h"
+#include "Vendors/vulkan/vulkan.h"
 #include "Utils/volk.h"
 #include "Utils/vk_mem_alloc.h"
 

@@ -94,6 +94,12 @@
     <Filter Include="Core\Scripting\Lua\Common">
       <UniqueIdentifier>{a75e7d5e-2cf0-4837-bd99-64410fba3b6d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vendors\dx12">
+      <UniqueIdentifier>{34d6515a-1a98-4d18-9909-7e0c1346be13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendors\vulkan">
+      <UniqueIdentifier>{c40b115e-3755-45fc-88ef-4ac769b14aec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
@@ -1259,6 +1265,102 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv.h">
       <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12compatibility.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12sdklayers.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12shader.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12video.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3dcommon.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3dx12.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxcore.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxcore_interface.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxgicommon.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxgiformat.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vk_icd.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vk_layer.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vk_platform.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vk_sdk_platform.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_android.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_beta.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_core.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_directfb.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_fuchsia.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_ggp.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_ios.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_macos.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_metal.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_screen.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_vi.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_wayland.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_win32.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_xcb.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_xlib.h">
+      <Filter>Vendors\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_xlib_xrandr.h">
+      <Filter>Vendors\vulkan</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
