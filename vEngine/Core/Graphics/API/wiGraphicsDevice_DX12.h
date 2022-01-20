@@ -14,7 +14,7 @@
 #include <dxgi1_6.h>
 #include <wrl/client.h> // ComPtr
 
-#include "Utils/dx12/d3d12.h"
+#include "Vendors/dx12/d3d12.h"
 #define D3D12MA_D3D12_HEADERS_ALREADY_INCLUDED
 #include "Utils/D3D12MemAlloc.h"
 
