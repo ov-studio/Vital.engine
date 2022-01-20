@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Marshall A. Greenblatt. All rights reserved.
+// Copyright (c) 2021 Marshall A. Greenblatt. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -33,19 +33,19 @@
 // by hand. See the translator.README.txt file in the tools directory for
 // more information.
 //
-// $hash=8527ceea6b8778d6fabc1b4ef82e4faa06ba777a$
+// $hash=872fd1e811d41f56f03da0da75a8f2e89cad40cd$
 //
 
 #ifndef CEF_INCLUDE_CAPI_CEF_FRAME_CAPI_H_
 #define CEF_INCLUDE_CAPI_CEF_FRAME_CAPI_H_
 #pragma once
 
-#include "capi/cef_base_capi.h"
-#include "capi/cef_dom_capi.h"
-#include "capi/cef_process_message_capi.h"
-#include "capi/cef_request_capi.h"
-#include "capi/cef_stream_capi.h"
-#include "capi/cef_string_visitor_capi.h"
+#include "include/capi/cef_base_capi.h"
+#include "include/capi/cef_dom_capi.h"
+#include "include/capi/cef_process_message_capi.h"
+#include "include/capi/cef_request_capi.h"
+#include "include/capi/cef_stream_capi.h"
+#include "include/capi/cef_string_visitor_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

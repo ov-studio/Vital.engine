@@ -40,10 +40,10 @@
 
 #include <vector>
 
-#include "cef_accessibility_handler.h"
-#include "cef_base.h"
-#include "cef_browser.h"
-#include "cef_drag_data.h"
+#include "include/cef_accessibility_handler.h"
+#include "include/cef_base.h"
+#include "include/cef_browser.h"
+#include "include/cef_drag_data.h"
 
 ///
 // Implement this interface to handle events when window rendering is disabled.

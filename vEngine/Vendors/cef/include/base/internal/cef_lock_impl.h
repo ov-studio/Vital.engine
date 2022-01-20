@@ -32,13 +32,15 @@
 #ifndef CEF_INCLUDE_BASE_INTERNAL_CEF_LOCK_IMPL_H_
 #define CEF_INCLUDE_BASE_INTERNAL_CEF_LOCK_IMPL_H_
 
-#include "base/cef_build.h"
+#include "include/base/cef_build.h"
 
 #if defined(OS_WIN)
 #include <windows.h>
 #elif defined(OS_POSIX)
 #include <pthread.h>
 #endif
+
+#include "include/base/cef_macros.h"
 
 namespace base {
 namespace cef_internal {
@@ -55,10 +57,6 @@ class LockImpl {
 #endif
 
   LockImpl();
-
-  LockImpl(const LockImpl&) = delete;
-  LockImpl& operator=(const LockImpl&) = delete;
-
   ~LockImpl();
 
   // If the lock is not held, take it and return true.  If the lock is already
@@ -79,6 +77,8 @@ class LockImpl {
 
  private:
   NativeHandle native_handle_;
+
+  DISALLOW_COPY_AND_ASSIGN(LockImpl);
 };
 
 }  // namespace cef_internal

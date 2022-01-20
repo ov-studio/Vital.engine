@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Marshall A. Greenblatt. All rights reserved.
+// Copyright (c) 2021 Marshall A. Greenblatt. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -33,15 +33,15 @@
 // by hand. See the translator.README.txt file in the tools directory for
 // more information.
 //
-// $hash=c68332a779bab425aa2e6a858d20a43448631890$
+// $hash=d991e2a7d1a58a013e4d3a963361fed6918f4ec3$
 //
 
 #ifndef CEF_INCLUDE_CAPI_CEF_JSDIALOG_HANDLER_CAPI_H_
 #define CEF_INCLUDE_CAPI_CEF_JSDIALOG_HANDLER_CAPI_H_
 #pragma once
 
-#include "capi/cef_base_capi.h"
-#include "capi/cef_browser_capi.h"
+#include "include/capi/cef_base_capi.h"
+#include "include/capi/cef_browser_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

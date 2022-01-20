@@ -38,7 +38,7 @@
 #define CEF_INCLUDE_VIEWS_CEF_BUTTON_H_
 #pragma once
 
-#include "views/cef_view.h"
+#include "include/views/cef_view.h"
 
 class CefLabelButton;
 

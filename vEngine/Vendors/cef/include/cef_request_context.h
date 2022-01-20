@@ -40,12 +40,12 @@
 
 #include <vector>
 
-#include "cef_callback.h"
-#include "cef_cookie.h"
-#include "cef_extension.h"
-#include "cef_extension_handler.h"
-#include "cef_media_router.h"
-#include "cef_values.h"
+#include "include/cef_callback.h"
+#include "include/cef_cookie.h"
+#include "include/cef_extension.h"
+#include "include/cef_extension_handler.h"
+#include "include/cef_media_router.h"
+#include "include/cef_values.h"
 
 class CefRequestContextHandler;
 class CefSchemeHandlerFactory;
@@ -178,6 +178,15 @@ class CefRequestContext : public virtual CefBaseRefCounted {
   ///
   /*--cef()--*/
   virtual bool ClearSchemeHandlerFactories() = 0;
+
+  ///
+  // Tells all renderer processes associated with this context to throw away
+  // their plugin list cache. If |reload_pages| is true they will also reload
+  // all pages with plugins. CefRequestContextHandler::OnBeforePluginLoad may
+  // be called to rebuild the plugin list cache.
+  ///
+  /*--cef()--*/
+  virtual void PurgePluginListCache(bool reload_pages) = 0;
 
   ///
   // Returns true if a preference with the specified |name| exists. This method

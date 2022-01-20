@@ -39,9 +39,9 @@
 #pragma once
 
 #include <vector>
-#include "cef_base.h"
-#include "cef_callback.h"
-#include "cef_registration.h"
+#include "include/cef_base.h"
+#include "include/cef_callback.h"
+#include "include/cef_registration.h"
 
 class CefMediaObserver;
 class CefMediaRoute;

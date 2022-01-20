@@ -33,12 +33,12 @@
 
 #include <memory>
 
-#include "base/cef_build.h"
-#include "base/cef_ref_counted.h"
+#include "include/base/cef_build.h"
+#include "include/base/cef_ref_counted.h"
 
 ///
 // Smart pointer implementation that is an alias of scoped_refptr from
-// base/cef_ref_counted.h.
+// include/base/cef_ref_counted.h.
 // <p>
 // A smart pointer class for reference counted objects.  Use this class instead
 // of calling AddRef and Release manually on a reference counted object to

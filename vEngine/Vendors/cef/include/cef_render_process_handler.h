@@ -38,14 +38,14 @@
 #define CEF_INCLUDE_CEF_RENDER_PROCESS_HANDLER_H_
 #pragma once
 
-#include "cef_base.h"
-#include "cef_browser.h"
-#include "cef_dom.h"
-#include "cef_frame.h"
-#include "cef_load_handler.h"
-#include "cef_process_message.h"
-#include "cef_v8.h"
-#include "cef_values.h"
+#include "include/cef_base.h"
+#include "include/cef_browser.h"
+#include "include/cef_dom.h"
+#include "include/cef_frame.h"
+#include "include/cef_load_handler.h"
+#include "include/cef_process_message.h"
+#include "include/cef_v8.h"
+#include "include/cef_values.h"
 
 ///
 // Class used to implement render process callbacks. The methods of this class

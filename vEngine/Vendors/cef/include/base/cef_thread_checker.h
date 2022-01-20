@@ -40,8 +40,8 @@
 // If the Chromium implementation diverges the below implementation should be
 // updated to match.
 
-#include "base/cef_logging.h"
-#include "base/internal/cef_thread_checker_impl.h"
+#include "include/base/cef_logging.h"
+#include "include/base/internal/cef_thread_checker_impl.h"
 
 // Apart from debug builds, we also enable the thread checker in
 // builds with DCHECK_ALWAYS_ON so that trybots and waterfall bots

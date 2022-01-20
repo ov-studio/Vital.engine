@@ -37,9 +37,10 @@
 #define CEF_INCLUDE_WRAPPER_CEF_BYTE_READ_HANDLER_H_
 #pragma once
 
-#include "base/cef_lock.h"
-#include "cef_base.h"
-#include "cef_stream.h"
+#include "include/base/cef_lock.h"
+#include "include/base/cef_macros.h"
+#include "include/cef_base.h"
+#include "include/cef_stream.h"
 
 ///
 // Thread safe implementation of the CefReadHandler class for reading an
@@ -55,9 +56,6 @@ class CefByteReadHandler : public CefReadHandler {
   CefByteReadHandler(const unsigned char* bytes,
                      size_t size,
                      CefRefPtr<CefBaseRefCounted> source);
-
-  CefByteReadHandler(const CefByteReadHandler&) = delete;
-  CefByteReadHandler& operator=(const CefByteReadHandler&) = delete;
 
   // CefReadHandler methods.
   virtual size_t Read(void* ptr, size_t size, size_t n) override;
@@ -75,6 +73,7 @@ class CefByteReadHandler : public CefReadHandler {
   base::Lock lock_;
 
   IMPLEMENT_REFCOUNTING(CefByteReadHandler);
+  DISALLOW_COPY_AND_ASSIGN(CefByteReadHandler);
 };
 
 #endif  // CEF_INCLUDE_WRAPPER_CEF_BYTE_READ_HANDLER_H_

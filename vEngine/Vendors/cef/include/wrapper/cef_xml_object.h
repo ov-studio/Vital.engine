@@ -40,10 +40,11 @@
 #include <map>
 #include <vector>
 
-#include "base/cef_lock.h"
-#include "base/cef_ref_counted.h"
-#include "cef_base.h"
-#include "cef_xml_reader.h"
+#include "include/base/cef_lock.h"
+#include "include/base/cef_macros.h"
+#include "include/base/cef_ref_counted.h"
+#include "include/cef_base.h"
+#include "include/cef_xml_reader.h"
 
 class CefStreamReader;
 
@@ -72,17 +73,14 @@ class CefStreamReader;
 ///
 class CefXmlObject : public base::RefCountedThreadSafe<CefXmlObject> {
  public:
-  using ObjectVector = std::vector<CefRefPtr<CefXmlObject>>;
-  using AttributeMap = std::map<CefString, CefString>;
+  typedef std::vector<CefRefPtr<CefXmlObject>> ObjectVector;
+  typedef std::map<CefString, CefString> AttributeMap;
 
   ///
   // Create a new object with the specified name. An object name must always be
   // at least one character long.
   ///
   explicit CefXmlObject(const CefString& name);
-
-  CefXmlObject(const CefXmlObject&) = delete;
-  CefXmlObject& operator=(const CefXmlObject&) = delete;
 
   ///
   // Load the contents of the specified XML stream into this object.  The
@@ -192,6 +190,8 @@ class CefXmlObject : public base::RefCountedThreadSafe<CefXmlObject> {
   ObjectVector children_;
 
   base::Lock lock_;
+
+  DISALLOW_COPY_AND_ASSIGN(CefXmlObject);
 };
 
 #endif  // CEF_INCLUDE_WRAPPER_CEF_XML_OBJECT_H_

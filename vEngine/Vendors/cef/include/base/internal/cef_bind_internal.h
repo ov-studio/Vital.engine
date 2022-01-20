@@ -65,16 +65,16 @@
 #include <type_traits>
 #include <utility>
 
-#include "base/cef_build.h"
-#include "base/cef_compiler_specific.h"
-#include "base/cef_logging.h"
-#include "base/cef_template_util.h"
-#include "base/cef_weak_ptr.h"
-#include "base/internal/cef_callback_internal.h"
-#include "base/internal/cef_raw_scoped_refptr_mismatch_checker.h"
+#include "include/base/cef_build.h"
+#include "include/base/cef_compiler_specific.h"
+#include "include/base/cef_logging.h"
+#include "include/base/cef_template_util.h"
+#include "include/base/cef_weak_ptr.h"
+#include "include/base/internal/cef_callback_internal.h"
+#include "include/base/internal/cef_raw_scoped_refptr_mismatch_checker.h"
 
 #if defined(OS_APPLE) && !HAS_FEATURE(objc_arc)
-#include "base/internal/cef_scoped_block_mac.h"
+#include "include/base/internal/cef_scoped_block_mac.h"
 #endif
 
 #if defined(OS_WIN)

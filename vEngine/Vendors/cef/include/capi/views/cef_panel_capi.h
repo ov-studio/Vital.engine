@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Marshall A. Greenblatt. All rights reserved.
+// Copyright (c) 2021 Marshall A. Greenblatt. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -33,15 +33,15 @@
 // by hand. See the translator.README.txt file in the tools directory for
 // more information.
 //
-// $hash=d5311ffa72e57d240f6963b1f45a278041bd33f4$
+// $hash=9a56cb55b4454c640ec9edf0af58fbdf7142c129$
 //
 
 #ifndef CEF_INCLUDE_CAPI_VIEWS_CEF_PANEL_CAPI_H_
 #define CEF_INCLUDE_CAPI_VIEWS_CEF_PANEL_CAPI_H_
 #pragma once
 
-#include "capi/views/cef_panel_delegate_capi.h"
-#include "capi/views/cef_view_capi.h"
+#include "include/capi/views/cef_panel_delegate_capi.h"
+#include "include/capi/views/cef_view_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

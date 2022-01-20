@@ -33,8 +33,8 @@
 #ifndef CEF_INCLUDE_BASE_INTERNAL_THREAD_CHECKER_IMPL_H_
 #define CEF_INCLUDE_BASE_INTERNAL_THREAD_CHECKER_IMPL_H_
 
-#include "base/cef_lock.h"
-#include "base/cef_platform_thread.h"
+#include "include/base/cef_lock.h"
+#include "include/base/cef_platform_thread.h"
 
 namespace base {
 namespace cef_internal {

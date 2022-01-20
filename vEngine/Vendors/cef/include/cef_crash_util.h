@@ -131,7 +131,7 @@
 /*--cef()--*/
 bool CefCrashReportingEnabled();
 
-#include "cef_base.h"
+#include "include/cef_base.h"
 
 ///
 // Sets or clears a specific key-value pair from the crash metadata.

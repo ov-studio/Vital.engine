@@ -39,10 +39,10 @@
 #pragma once
 
 #include <map>
-#include "cef_base.h"
-#include "cef_callback.h"
-#include "cef_request.h"
-#include "cef_task.h"
+#include "include/cef_base.h"
+#include "include/cef_callback.h"
+#include "include/cef_request.h"
+#include "include/cef_task.h"
 
 class CefServerHandler;
 

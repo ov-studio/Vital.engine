@@ -38,8 +38,8 @@
 #define CEF_INCLUDE_CEF_MENU_MODEL_H_
 #pragma once
 
-#include "cef_base.h"
-#include "cef_menu_model_delegate.h"
+#include "include/cef_base.h"
+#include "include/cef_menu_model_delegate.h"
 
 ///
 // Supports creation and modification of menus. See cef_menu_id_t for the

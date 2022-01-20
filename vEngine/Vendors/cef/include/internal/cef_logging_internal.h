@@ -33,13 +33,13 @@
 
 #include <stddef.h>
 
-#include "internal/cef_export.h"
+#include "include/internal/cef_export.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-// See base/cef_logging.h for macros and intended usage.
+// See include/base/cef_logging.h for macros and intended usage.
 
 ///
 // Gets the current log level.

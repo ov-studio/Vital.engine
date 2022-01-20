@@ -39,10 +39,10 @@
 #pragma once
 
 #include <vector>
-#include "cef_base.h"
-#include "cef_browser.h"
-#include "cef_frame.h"
-#include "cef_task.h"
+#include "include/cef_base.h"
+#include "include/cef_browser.h"
+#include "include/cef_frame.h"
+#include "include/cef_task.h"
 
 class CefV8Exception;
 class CefV8Handler;

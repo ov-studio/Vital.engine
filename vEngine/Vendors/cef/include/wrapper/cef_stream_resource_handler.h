@@ -37,9 +37,10 @@
 #define CEF_INCLUDE_WRAPPER_CEF_STREAM_RESOURCE_HANDLER_H_
 #pragma once
 
-#include "cef_resource_handler.h"
-#include "cef_response.h"
-#include "cef_stream.h"
+#include "include/base/cef_macros.h"
+#include "include/cef_resource_handler.h"
+#include "include/cef_response.h"
+#include "include/cef_stream.h"
 
 ///
 // Implementation of the CefResourceHandler class for reading from a CefStream.
@@ -59,9 +60,6 @@ class CefStreamResourceHandler : public CefResourceHandler {
                            const CefString& mime_type,
                            CefResponse::HeaderMap header_map,
                            CefRefPtr<CefStreamReader> stream);
-
-  CefStreamResourceHandler(const CefStreamResourceHandler&) = delete;
-  CefStreamResourceHandler& operator=(const CefStreamResourceHandler&) = delete;
 
   // CefResourceHandler methods.
   bool Open(CefRefPtr<CefRequest> request,
@@ -84,6 +82,7 @@ class CefStreamResourceHandler : public CefResourceHandler {
   const CefRefPtr<CefStreamReader> stream_;
 
   IMPLEMENT_REFCOUNTING(CefStreamResourceHandler);
+  DISALLOW_COPY_AND_ASSIGN(CefStreamResourceHandler);
 };
 
 #endif  // CEF_INCLUDE_WRAPPER_CEF_STREAM_RESOURCE_HANDLER_H_

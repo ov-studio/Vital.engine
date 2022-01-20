@@ -38,8 +38,8 @@
 #define CEF_INCLUDE_CEF_JSDIALOG_HANDLER_H_
 #pragma once
 
-#include "cef_base.h"
-#include "cef_browser.h"
+#include "include/cef_base.h"
+#include "include/cef_browser.h"
 
 ///
 // Callback interface used for asynchronous continuation of JavaScript dialog

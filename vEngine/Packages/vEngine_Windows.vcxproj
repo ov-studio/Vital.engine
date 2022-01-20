@@ -13,6 +13,11 @@
   <ItemGroup>
     <Natvis Include="..\vEngine.natvis" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="vEngine_CEF.vcxproj">
+      <Project>{1982c103-778e-3b31-8cf4-90fa07f860c0}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6FEFC868-FE73-4CB7-90B3-3D2EA6731688}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -64,7 +69,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Vendors/dx12;..\Vendors/vulkan;..\Vendors/bullet_physics;..\Vendors/lua;..\Vendors/lua_rapidjson;..\Vendors/mesh_optimizer;..\Vendors/tiny_gltf;..\Vendors/xatlas;..\Vendors/cef;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Vendors/dx12;..\Vendors/vulkan;..\Vendors/bullet_physics;..\Vendors/lua;..\Vendors/lua_rapidjson;..\Vendors/mesh_optimizer;..\Vendors/tiny_gltf;..\Vendors/xatlas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -89,7 +94,7 @@
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>C:\Users\Tron\Documents\GITs\vEngine\vEngine\Vendors\cef\debug\libcef.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
       <Command>
@@ -105,7 +110,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Vendors/dx12;..\Vendors/vulkan;..\Vendors/bullet_physics;..\Vendors/lua;..\Vendors/lua_rapidjson;..\Vendors/mesh_optimizer;..\Vendors/tiny_gltf;..\Vendors/xatlas;..\Vendors/cef;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Vendors/dx12;..\Vendors/vulkan;..\Vendors/bullet_physics;..\Vendors/lua;..\Vendors/lua_rapidjson;..\Vendors/mesh_optimizer;..\Vendors/tiny_gltf;..\Vendors/xatlas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>

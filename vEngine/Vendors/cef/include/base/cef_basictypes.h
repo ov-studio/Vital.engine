@@ -35,7 +35,7 @@
 #include <limits.h>  // For UINT_MAX
 #include <stddef.h>  // For size_t
 
-#include "base/cef_build.h"
+#include "include/base/cef_build.h"
 
 // The NSPR system headers define 64-bit as |long| when possible, except on
 // Mac OS X.  In order to not have typedef mismatches, we do the same on LP64.

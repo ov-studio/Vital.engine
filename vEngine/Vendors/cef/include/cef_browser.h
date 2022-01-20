@@ -39,14 +39,14 @@
 #pragma once
 
 #include <vector>
-#include "cef_base.h"
-#include "cef_devtools_message_observer.h"
-#include "cef_drag_data.h"
-#include "cef_frame.h"
-#include "cef_image.h"
-#include "cef_navigation_entry.h"
-#include "cef_registration.h"
-#include "cef_request_context.h"
+#include "include/cef_base.h"
+#include "include/cef_devtools_message_observer.h"
+#include "include/cef_drag_data.h"
+#include "include/cef_frame.h"
+#include "include/cef_image.h"
+#include "include/cef_navigation_entry.h"
+#include "include/cef_registration.h"
+#include "include/cef_request_context.h"
 
 class CefBrowserHost;
 class CefClient;

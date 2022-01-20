@@ -37,11 +37,11 @@
 #define CEF_INCLUDE_WRAPPER_CEF_MESSAGE_ROUTER_H_
 #pragma once
 
-#include "base/cef_ref_counted.h"
-#include "cef_base.h"
-#include "cef_browser.h"
-#include "cef_process_message.h"
-#include "cef_v8.h"
+#include "include/base/cef_ref_counted.h"
+#include "include/cef_base.h"
+#include "include/cef_browser.h"
+#include "include/cef_process_message.h"
+#include "include/cef_v8.h"
 
 // The below classes implement support for routing aynchronous messages between
 // JavaScript running in the renderer process and C++ running in the browser
@@ -245,7 +245,7 @@ class CefMessageRouterBrowserSide
   ///
   class Handler {
    public:
-    using Callback = CefMessageRouterBrowserSide::Callback;
+    typedef CefMessageRouterBrowserSide::Callback Callback;
 
     ///
     // Executed when a new query is received. |query_id| uniquely identifies the
