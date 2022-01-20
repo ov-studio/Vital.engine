@@ -1,4 +1,6 @@
 ## ━ T H I R D  P A R T Y
+  * DirectX 12
+  * Vulkan
   * Bullet Physics
   * Lua
   * RapidJSON
@@ -6,3 +8,4 @@
   * Mesh Optimizer
   * Tiny GLTF
   * Xatlas
+  * CEF
