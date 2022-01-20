@@ -898,15 +898,6 @@ namespace vulkan_internal
 				allocationhandler->destroyer_imageviews.push_back(std::make_pair(swapChainImageViews[i], framecount));
 			}
 
-#ifdef SDL2
-			// Checks if the SDL VIDEO System was already destroyed.
-			// If so we would delete the swapchain twice, causing a crash on wayland.
-			if (SDL_WasInit(SDL_INIT_VIDEO))
-#endif
-			{
-				allocationhandler->destroyer_swapchains.push_back(std::make_pair(swapChain, framecount));
-				allocationhandler->destroyer_surfaces.push_back(std::make_pair(surface, framecount));
-			}
 			allocationhandler->destroyer_semaphores.push_back(std::make_pair(swapchainAcquireSemaphore, framecount));
 			allocationhandler->destroyer_semaphores.push_back(std::make_pair(swapchainReleaseSemaphore, framecount));
 
