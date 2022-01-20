@@ -392,9 +392,10 @@ static const luaL_Reg methods[] = {
 	{ "dump", json_dump },
     */
 
+    // TODO: Disabled due to security issues (Aviril, Tron)
 	// special functions
-	{ "object", json_object },
-	{ "array", json_array },
+	//{ "object", json_object },
+	//{ "array", json_array },
 
     /*
     // TODO: Disabled due to security issues (Aviril, Tron)
