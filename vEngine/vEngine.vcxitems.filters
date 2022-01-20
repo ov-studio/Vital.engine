@@ -103,6 +103,9 @@
     <Filter Include="Vendors\cef">
       <UniqueIdentifier>{46f801a4-17b4-42dd-9da8-7caaba030286}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Browser">
+      <UniqueIdentifier>{a58b9469-0391-41de-8441-182c3b21e12e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
@@ -2160,6 +2163,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\cef\wrapper\cef_zip_archive.h">
       <Filter>Vendors\cef</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Browser\vBrowser.h">
+      <Filter>Core\Browser</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
@@ -2963,6 +2969,9 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.cpp">
       <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Browser\vBrowser.cpp">
+      <Filter>Core\Browser</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -15,6 +15,7 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Browser\vBrowser.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Sandbox\vImporter.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Common\vGame.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Config\vConfig.h" />
@@ -705,6 +706,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Browser\vBrowser.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_DX12.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_Vulkan.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiShaderCompiler.cpp" />
