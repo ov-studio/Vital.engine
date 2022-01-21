@@ -1,5 +1,4 @@
 #pragma once
-#pragma comment(lib,"vEngine_CEF.lib")
 #include "Vendors/cef/include/cef_app.h"
 #include "Vendors/cef/include/cef_browser.h"
 #include "Vendors/cef/include/cef_client.h"

@@ -13,11 +13,6 @@
   <ItemGroup>
     <Natvis Include="..\vEngine.natvis" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="vEngine_CEF.vcxproj">
-      <Project>{1982c103-778e-3b31-8cf4-90fa07f860c0}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6FEFC868-FE73-4CB7-90B3-3D2EA6731688}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -78,6 +73,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
