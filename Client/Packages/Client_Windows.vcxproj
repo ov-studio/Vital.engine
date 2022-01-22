@@ -74,7 +74,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir).build\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(SolutionDir)vEngine\Vendors\cef\debug\libcef.lib;$(SolutionDir)vEngine\Vendors\cef\debug\cef_sandbox.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)vEngine\Vendors\cef\Debug\libcef.lib;$(SolutionDir)vEngine\Vendors\cef\Debug\cef_sandbox.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <FxCompile>
       <DisableOptimizations>false</DisableOptimizations>
@@ -108,7 +108,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(SolutionDir).build\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(SolutionDir)vEngine\Vendors\cef\release\libcef.lib;$(SolutionDir)vEngine\Vendors\cef\release\cef_sandbox.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)vEngine\Vendors\cef\Release\libcef.lib;$(SolutionDir)vEngine\Vendors\cef\Release\cef_sandbox.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
