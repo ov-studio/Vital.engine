@@ -29,6 +29,9 @@ HWND SDKCefClient::GetMainWindowHandle()
 	return g_mainWindowHandle;
 }
 
+SDKCefApp::SDKCefApp()
+{
+}
 
 namespace wi::browser
 {
@@ -42,6 +45,8 @@ namespace wi::browser
 
         CefWindowInfo windowInfo;
         windowInfo.SetAsWindowless(NULL);
+
+        CefBrowserHost::CreateBrowser(windowInfo, nullptr, "https://www.google.com", browserSettings, nullptr, nullptr);
 
         CefRefPtr<SDKCefApp> app(new SDKCefApp);
 
@@ -57,6 +62,5 @@ namespace wi::browser
     
         CefInitialize(main_args, settings, app.get(), nullptr);
 
-        CefBrowserHost::CreateBrowser(windowInfo, nullptr, "https://www.google.com", browserSettings, nullptr, nullptr);
     }
 }

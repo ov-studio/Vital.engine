@@ -52,6 +52,7 @@ public:
 		return this;
 	}
 
+    /*
 	virtual bool OnProcessMessageReceived(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, CefProcessId source_process, CefRefPtr<CefProcessMessage> message) override;
 
 	// CefDisplayHandler methods:
@@ -84,6 +85,7 @@ public:
 	{
 		return is_closing_;
 	}
+    */
 
 	CefRefPtr<CefBrowser> GetBrowser();
 
@@ -116,10 +118,10 @@ public:
 		return this;
 	}
 
-	virtual void OnBeforeCommandLineProcessing(const CefString& process_type, CefRefPtr<CefCommandLine> command_line) override;
+	//virtual void OnBeforeCommandLineProcessing(const CefString& process_type, CefRefPtr<CefCommandLine> command_line) override;
 
 	// CefBrowserProcessHandler methods:
-	virtual void OnContextInitialized() override;
+	//virtual void OnContextInitialized() override;
 
 private:
 	int m_v8Callbacks;
@@ -128,6 +130,7 @@ private:
 	IMPLEMENT_REFCOUNTING(SDKCefApp);
 };
 
+/*
 class SDKWindowDelegate : public CefWindowDelegate
 {
 public:
@@ -167,6 +170,7 @@ private:
 	IMPLEMENT_REFCOUNTING(SDKSubViewDelegate);
 	DISALLOW_COPY_AND_ASSIGN(SDKSubViewDelegate);
 };
+*/
 
 namespace wi::browser
 {

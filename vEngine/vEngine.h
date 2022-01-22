@@ -67,6 +67,7 @@
     #include "Core/Helpers/wiUnorderedSet.h"
     #include "Core/Helpers/wiVector.h"
 
+    #pragma comment(lib,"vEngine_CEF.lib")
     #ifdef _WIN32
     #ifdef PLATFORM_UWP
     #pragma comment(lib,"vEngine_UWP.lib")
