@@ -31,19 +31,19 @@
 #define CEF_INCLUDE_INTERNAL_CEF_TYPES_H_
 #pragma once
 
-#include "base/cef_basictypes.h"
-#include "internal/cef_string.h"
-#include "internal/cef_string_list.h"
-#include "internal/cef_time.h"
-#include "internal/cef_types_geometry.h"
+#include "include/base/cef_basictypes.h"
+#include "include/internal/cef_string.h"
+#include "include/internal/cef_string_list.h"
+#include "include/internal/cef_time.h"
+#include "include/internal/cef_types_geometry.h"
 
 // Bring in platform-specific definitions.
 #if defined(OS_WIN)
-#include "internal/cef_types_win.h"
+#include "include/internal/cef_types_win.h"
 #elif defined(OS_MAC)
-#include "internal/cef_types_mac.h"
+#include "include/internal/cef_types_mac.h"
 #elif defined(OS_LINUX)
-#include "internal/cef_types_linux.h"
+#include "include/internal/cef_types_linux.h"
 #endif
 
 // 32-bit ARGB color value, not premultiplied. The color components are always
@@ -907,7 +907,7 @@ typedef enum {
   ERR_NONE = 0,
 
 #define NET_ERROR(label, value) ERR_##label = value,
-#include "base/internal/cef_net_error_list.h"
+#include "include/base/internal/cef_net_error_list.h"
 #undef NET_ERROR
 
 } cef_errorcode_t;

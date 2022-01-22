@@ -37,10 +37,10 @@
 #define CEF_INCLUDE_WRAPPER_CEF_STREAM_RESOURCE_HANDLER_H_
 #pragma once
 
-#include "base/cef_macros.h"
-#include "cef_resource_handler.h"
-#include "cef_response.h"
-#include "cef_stream.h"
+#include "include/base/cef_macros.h"
+#include "include/cef_resource_handler.h"
+#include "include/cef_response.h"
+#include "include/cef_stream.h"
 
 ///
 // Implementation of the CefResourceHandler class for reading from a CefStream.

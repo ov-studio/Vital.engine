@@ -40,9 +40,9 @@
 #define CEF_INCLUDE_CAPI_CEF_FRAME_HANDLER_CAPI_H_
 #pragma once
 
-#include "capi/cef_base_capi.h"
-#include "capi/cef_browser_capi.h"
-#include "capi/cef_frame_capi.h"
+#include "include/capi/cef_base_capi.h"
+#include "include/capi/cef_browser_capi.h"
+#include "include/capi/cef_frame_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

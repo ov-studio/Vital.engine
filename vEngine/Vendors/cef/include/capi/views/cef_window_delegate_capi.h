@@ -40,7 +40,7 @@
 #define CEF_INCLUDE_CAPI_VIEWS_CEF_WINDOW_DELEGATE_CAPI_H_
 #pragma once
 
-#include "capi/views/cef_panel_delegate_capi.h"
+#include "include/capi/views/cef_panel_delegate_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

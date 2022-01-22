@@ -38,10 +38,10 @@
 #define CEF_INCLUDE_CEF_CONTEXT_MENU_HANDLER_H_
 #pragma once
 
-#include "cef_base.h"
-#include "cef_browser.h"
-#include "cef_frame.h"
-#include "cef_menu_model.h"
+#include "include/cef_base.h"
+#include "include/cef_browser.h"
+#include "include/cef_frame.h"
+#include "include/cef_menu_model.h"
 
 class CefContextMenuParams;
 

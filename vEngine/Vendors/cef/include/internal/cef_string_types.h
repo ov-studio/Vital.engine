@@ -38,8 +38,8 @@
 
 #include <stddef.h>
 
-#include "base/cef_basictypes.h"
-#include "internal/cef_export.h"
+#include "include/base/cef_basictypes.h"
+#include "include/internal/cef_export.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -38,7 +38,7 @@
 #define CEF_INCLUDE_CEF_ORIGIN_WHITELIST_H_
 #pragma once
 
-#include "cef_base.h"
+#include "include/cef_base.h"
 
 ///
 // Add an entry to the cross-origin access whitelist.

@@ -46,9 +46,9 @@
 #include <type_traits>
 #include <utility>
 
-#include "base/cef_compiler_specific.h"
-#include "base/cef_logging.h"
-#include "base/cef_macros.h"
+#include "include/base/cef_compiler_specific.h"
+#include "include/base/cef_logging.h"
+#include "include/base/cef_macros.h"
 
 template <class T>
 class scoped_refptr;

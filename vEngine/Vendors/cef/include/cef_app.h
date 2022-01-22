@@ -38,12 +38,12 @@
 #define CEF_INCLUDE_CEF_APP_H_
 #pragma once
 
-#include "cef_base.h"
-#include "cef_browser_process_handler.h"
-#include "cef_command_line.h"
-#include "cef_render_process_handler.h"
-#include "cef_resource_bundle_handler.h"
-#include "cef_scheme.h"
+#include "include/cef_base.h"
+#include "include/cef_browser_process_handler.h"
+#include "include/cef_command_line.h"
+#include "include/cef_render_process_handler.h"
+#include "include/cef_resource_bundle_handler.h"
+#include "include/cef_scheme.h"
 
 class CefApp;
 

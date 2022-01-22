@@ -35,7 +35,7 @@
 #ifndef CEF_INCLUDE_API_HASH_H_
 #define CEF_INCLUDE_API_HASH_H_
 
-#include "internal/cef_export.h"
+#include "include/internal/cef_export.h"
 
 // The API hash is created by analyzing CEF header files for C API type
 // definitions. The hash value will change when header files are modified in a

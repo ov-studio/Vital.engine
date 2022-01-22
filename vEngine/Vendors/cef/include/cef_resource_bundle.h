@@ -38,8 +38,8 @@
 #define CEF_INCLUDE_CEF_RESOURCE_BUNDLE_H_
 #pragma once
 
-#include "cef_base.h"
-#include "cef_values.h"
+#include "include/cef_base.h"
+#include "include/cef_values.h"
 
 ///
 // Class used for retrieving resources from the resource bundle (*.pak) files

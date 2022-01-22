@@ -31,14 +31,14 @@
 #define CEF_INCLUDE_INTERNAL_CEF_TRACE_EVENT_INTERNAL_H_
 #pragma once
 
-#include "internal/cef_export.h"
-#include "internal/cef_types.h"
+#include "include/internal/cef_export.h"
+#include "include/internal/cef_types.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-// See base/cef_trace_event.h for macros and intended usage.
+// See include/base/cef_trace_event.h for macros and intended usage.
 
 // Functions for tracing counters and functions; called from macros.
 // - |category| string must have application lifetime (static or literal). They

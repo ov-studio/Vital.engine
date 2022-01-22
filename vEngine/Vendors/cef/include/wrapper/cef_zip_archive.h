@@ -39,10 +39,10 @@
 
 #include <map>
 
-#include "base/cef_lock.h"
-#include "base/cef_macros.h"
-#include "base/cef_ref_counted.h"
-#include "cef_base.h"
+#include "include/base/cef_lock.h"
+#include "include/base/cef_macros.h"
+#include "include/base/cef_ref_counted.h"
+#include "include/cef_base.h"
 
 class CefStreamReader;
 

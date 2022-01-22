@@ -40,15 +40,15 @@
 #define CEF_INCLUDE_CAPI_CEF_REQUEST_HANDLER_CAPI_H_
 #pragma once
 
-#include "capi/cef_auth_callback_capi.h"
-#include "capi/cef_base_capi.h"
-#include "capi/cef_browser_capi.h"
-#include "capi/cef_callback_capi.h"
-#include "capi/cef_frame_capi.h"
-#include "capi/cef_request_capi.h"
-#include "capi/cef_resource_request_handler_capi.h"
-#include "capi/cef_ssl_info_capi.h"
-#include "capi/cef_x509_certificate_capi.h"
+#include "include/capi/cef_auth_callback_capi.h"
+#include "include/capi/cef_base_capi.h"
+#include "include/capi/cef_browser_capi.h"
+#include "include/capi/cef_callback_capi.h"
+#include "include/capi/cef_frame_capi.h"
+#include "include/capi/cef_request_capi.h"
+#include "include/capi/cef_resource_request_handler_capi.h"
+#include "include/capi/cef_ssl_info_capi.h"
+#include "include/capi/cef_x509_certificate_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

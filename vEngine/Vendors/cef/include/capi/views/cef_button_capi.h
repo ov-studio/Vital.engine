@@ -40,7 +40,7 @@
 #define CEF_INCLUDE_CAPI_VIEWS_CEF_BUTTON_CAPI_H_
 #pragma once
 
-#include "capi/views/cef_view_capi.h"
+#include "include/capi/views/cef_view_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

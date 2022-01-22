@@ -40,9 +40,9 @@
 #define CEF_INCLUDE_CAPI_VIEWS_CEF_MENU_BUTTON_CAPI_H_
 #pragma once
 
-#include "capi/cef_menu_model_capi.h"
-#include "capi/views/cef_label_button_capi.h"
-#include "capi/views/cef_menu_button_delegate_capi.h"
+#include "include/capi/cef_menu_model_capi.h"
+#include "include/capi/views/cef_label_button_capi.h"
+#include "include/capi/views/cef_menu_button_delegate_capi.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -45,8 +45,8 @@
 
 #include <atomic>
 
-#include "base/cef_macros.h"
-#include "base/cef_thread_checker.h"
+#include "include/base/cef_macros.h"
+#include "include/base/cef_thread_checker.h"
 
 namespace base {
 

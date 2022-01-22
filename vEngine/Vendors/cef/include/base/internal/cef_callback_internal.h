@@ -36,8 +36,8 @@
 #ifndef CEF_INCLUDE_BASE_INTERNAL_CEF_CALLBACK_INTERNAL_H_
 #define CEF_INCLUDE_BASE_INTERNAL_CEF_CALLBACK_INTERNAL_H_
 
-#include "base/cef_callback_forward.h"
-#include "base/cef_ref_counted.h"
+#include "include/base/cef_callback_forward.h"
+#include "include/base/cef_ref_counted.h"
 
 namespace base {
 

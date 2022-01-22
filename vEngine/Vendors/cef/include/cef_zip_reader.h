@@ -37,8 +37,8 @@
 #ifndef CEF_INCLUDE_CEF_ZIP_READER_H_
 #define CEF_INCLUDE_CEF_ZIP_READER_H_
 
-#include "cef_base.h"
-#include "cef_stream.h"
+#include "include/cef_base.h"
+#include "include/cef_stream.h"
 
 ///
 // Class that supports the reading of zip archives via the zlib unzip API.

@@ -37,22 +37,22 @@
 #define CEF_INCLUDE_WRAPPER_CEF_CLOSURE_TASK_H_
 #pragma once
 
-#include "base/cef_callback_forward.h"
-#include "base/cef_macros.h"
-#include "cef_task.h"
+#include "include/base/cef_callback_forward.h"
+#include "include/base/cef_macros.h"
+#include "include/cef_task.h"
 
 ///
 // Helpers for asynchronously executing a base::[Once|Repeating]Closure (bound
 // function or method) on a CEF thread. Creation of a
 // base::[Once|Repeating]Closure can be facilitated using
-// base::Bind[Once|Repeating]. See base/cef_callback.h for complete
+// base::Bind[Once|Repeating]. See include/base/cef_callback.h for complete
 // usage instructions.
 //
 // To use these helpers you should include this header and the header that
 // defines base::Bind[Once|Repeating].
 //
-// #include "base/cef_callback.h"
-// #include "wrapper/cef_closure_task.h"
+// #include "include/base/cef_callback.h"
+// #include "include/wrapper/cef_closure_task.h"
 //
 // Example of executing a bound function:
 //

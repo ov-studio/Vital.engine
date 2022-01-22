@@ -31,19 +31,19 @@
 #define CEF_INCLUDE_CEF_BASE_H_
 #pragma once
 
-#include "base/cef_atomic_ref_count.h"
-#include "base/cef_build.h"
-#include "base/cef_macros.h"
+#include "include/base/cef_atomic_ref_count.h"
+#include "include/base/cef_build.h"
+#include "include/base/cef_macros.h"
 
 // Bring in common C++ type definitions used by CEF consumers.
-#include "internal/cef_ptr.h"
-#include "internal/cef_types_wrappers.h"
+#include "include/internal/cef_ptr.h"
+#include "include/internal/cef_types_wrappers.h"
 #if defined(OS_WIN)
-#include "internal/cef_win.h"
+#include "include/internal/cef_win.h"
 #elif defined(OS_MAC)
-#include "internal/cef_mac.h"
+#include "include/internal/cef_mac.h"
 #elif defined(OS_LINUX)
-#include "internal/cef_linux.h"
+#include "include/internal/cef_linux.h"
 #endif
 
 ///

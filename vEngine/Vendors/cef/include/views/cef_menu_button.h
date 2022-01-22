@@ -38,9 +38,9 @@
 #define CEF_INCLUDE_VIEWS_CEF_MENU_BUTTON_H_
 #pragma once
 
-#include "cef_menu_model.h"
-#include "views/cef_label_button.h"
-#include "views/cef_menu_button_delegate.h"
+#include "include/cef_menu_model.h"
+#include "include/views/cef_label_button.h"
+#include "include/views/cef_menu_button_delegate.h"
 
 ///
 // MenuButton is a button with optional text, icon and/or menu marker that shows

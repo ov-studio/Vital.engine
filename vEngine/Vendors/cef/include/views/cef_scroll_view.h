@@ -38,7 +38,7 @@
 #define CEF_INCLUDE_VIEWS_CEF_SCROLL_VIEW_H_
 #pragma once
 
-#include "views/cef_view.h"
+#include "include/views/cef_view.h"
 
 ///
 // A ScrollView will show horizontal and/or vertical scrollbars when necessary

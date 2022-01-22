@@ -38,7 +38,7 @@
 #define CEF_INCLUDE_CEF_RESPONSE_FILTER_H_
 #pragma once
 
-#include "cef_base.h"
+#include "include/cef_base.h"
 
 ///
 // Implement this interface to filter resource response content. The methods of

@@ -38,8 +38,8 @@
 #define CEF_INCLUDE_VIEWS_CEF_TEXTFIELD_H_
 #pragma once
 
-#include "views/cef_textfield_delegate.h"
-#include "views/cef_view.h"
+#include "include/views/cef_textfield_delegate.h"
+#include "include/views/cef_view.h"
 
 ///
 // A Textfield supports editing of text. This control is custom rendered with no

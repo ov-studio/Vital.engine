@@ -94,13 +94,13 @@
 #include <memory>
 #include <utility>
 
-#include "base/cef_auto_reset.h"
-#include "base/cef_bind.h"
-#include "base/cef_callback.h"
-#include "base/cef_callback_helpers.h"
-#include "base/cef_compiler_specific.h"
-#include "base/cef_logging.h"
-#include "base/cef_weak_ptr.h"
+#include "include/base/cef_auto_reset.h"
+#include "include/base/cef_bind.h"
+#include "include/base/cef_callback.h"
+#include "include/base/cef_callback_helpers.h"
+#include "include/base/cef_compiler_specific.h"
+#include "include/base/cef_logging.h"
+#include "include/base/cef_weak_ptr.h"
 
 namespace base {
 namespace internal {

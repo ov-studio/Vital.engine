@@ -116,7 +116,7 @@
 #elif defined(__asmjs__) || defined(__wasm__)
 #define OS_ASMJS 1
 #else
-#error Please add support for your platform in base/cef_build.h
+#error Please add support for your platform in include/base/cef_build.h
 #endif
 // NOTE: Adding a new port? Please follow
 // https://chromium.googlesource.com/chromium/src/+/master/docs/new_port_policy.md
@@ -223,7 +223,7 @@
 #define ARCH_CPU_BIG_ENDIAN 1
 #endif
 #else
-#error Please add support for your architecture in base/cef_build.h
+#error Please add support for your architecture in include/base/cef_build.h
 #endif
 
 // Type detection for wchar_t.
@@ -242,7 +242,7 @@
 // short wchar works for them.
 #define WCHAR_T_IS_UTF16
 #else
-#error Please add support for your compiler in base/cef_build.h
+#error Please add support for your compiler in include/base/cef_build.h
 #endif
 
 #if defined(OS_ANDROID)

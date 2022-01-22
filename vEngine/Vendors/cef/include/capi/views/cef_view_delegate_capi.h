@@ -40,7 +40,7 @@
 #define CEF_INCLUDE_CAPI_VIEWS_CEF_VIEW_DELEGATE_CAPI_H_
 #pragma once
 
-#include "capi/cef_base_capi.h"
+#include "include/capi/cef_base_capi.h"
 
 #ifdef __cplusplus
 extern "C" {
