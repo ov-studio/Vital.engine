@@ -74,7 +74,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir).build\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>C:\Users\Tron\Documents\GITs\vEngine\vEngine\Vendors\cef\debug\libcef.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\Tron\Documents\GITs\vEngine\vEngine\Vendors\cef\debug\libcef.lib;C:\Users\Tron\Documents\GITs\vEngine\vEngine\Vendors\cef\debug\cef_sandbox.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <FxCompile>
       <DisableOptimizations>false</DisableOptimizations>
