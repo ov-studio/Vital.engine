@@ -252,7 +252,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 					wi::eventhandler::Subscribe_Once(wi::eventhandler::EVENT_THREAD_SAFE_POINT, [](uint64_t userdata) {
 						wi::renderer::ReloadShaders();
 						});
-                    wi::browser::create(hWnd); //TODO: TESTING
 				}
 				else
 				{
@@ -260,6 +259,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 				}
 				}).detach();
 		}
+        //wi::browser::create(hWnd); //TODO: TESTING
 		break;
     case WM_PAINT:
         {
