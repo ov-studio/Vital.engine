@@ -161,7 +161,6 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    }
 
    editor.SetWindow(hWnd, fullscreen);
-    wi::browser::create(hWnd);
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
@@ -253,6 +252,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 					wi::eventhandler::Subscribe_Once(wi::eventhandler::EVENT_THREAD_SAFE_POINT, [](uint64_t userdata) {
 						wi::renderer::ReloadShaders();
 						});
+                    wi::browser::create(hWnd); //TODO: TESTING
 				}
 				else
 				{
