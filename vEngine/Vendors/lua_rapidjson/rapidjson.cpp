@@ -384,27 +384,21 @@ static const luaL_Reg methods[] = {
 	// string <--> lua table
 	{ "decode", json_decode },
 	{ "encode", json_encode },
-
     /*
-    // TODO: Disabled due to security issues (Aviril, Tron)
+    // Disabled due to security issues (Aviril, Tron)
 	// file <--> lua table
 	{ "load", json_load },
 	{ "dump", json_dump },
-    */
 
-    // TODO: Disabled due to security issues (Aviril, Tron)
 	// special functions
 	//{ "object", json_object },
 	//{ "array", json_array },
 
-    /*
-    // TODO: Disabled due to security issues (Aviril, Tron)
 	// JSON types
 	{ "Document", Userdata<Document>::create },
 	{ "SchemaDocument", Userdata<SchemaDocument>::create },
 	{ "SchemaValidator", Userdata<SchemaValidator>::create },
     */
-
 	{NULL, NULL }
 };
 

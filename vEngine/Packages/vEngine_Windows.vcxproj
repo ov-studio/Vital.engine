@@ -69,7 +69,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Vendors/dx12;..\Vendors/vulkan;..\Vendors/bullet_physics;..\Vendors/lua;..\Vendors/lua_rapidjson;..\Vendors/mesh_optimizer;..\Vendors/tiny_gltf;..\Vendors/xatlas;..\Vendors/cef;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)vEngine/Vendors/dx12;$(SolutionDir)vEngine/Vendors/vulkan;$(SolutionDir)vEngine/Vendors/bullet_physics;$(SolutionDir)vEngine/Vendors/lua;$(SolutionDir)vEngine/Vendors/lua_rapidjson;$(SolutionDir)vEngine/Vendors/mesh_optimizer;$(SolutionDir)vEngine/Vendors/tiny_gltf;$(SolutionDir)vEngine/Vendors/xatlas;$(SolutionDir)vEngine/Vendors/cef;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -111,7 +111,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Vendors/dx12;..\Vendors/vulkan;..\Vendors/bullet_physics;..\Vendors/lua;..\Vendors/lua_rapidjson;..\Vendors/mesh_optimizer;..\Vendors/tiny_gltf;..\Vendors/xatlas;..\Vendors/cef;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)vEngine/Vendors/dx12;$(SolutionDir)vEngine/Vendors/vulkan;$(SolutionDir)vEngine/Vendors/bullet_physics;$(SolutionDir)vEngine/Vendors/lua;$(SolutionDir)vEngine/Vendors/lua_rapidjson;$(SolutionDir)vEngine/Vendors/mesh_optimizer;$(SolutionDir)vEngine/Vendors/tiny_gltf;$(SolutionDir)vEngine/Vendors/xatlas;$(SolutionDir)vEngine/Vendors/cef;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
