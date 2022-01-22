@@ -47,14 +47,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IntDir>$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName>$(ProjectName)</TargetName>
+    <TargetName>Client</TargetName>
     <OutDir>$(SolutionDir).build\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
     <MultiProcFXC>true</MultiProcFXC>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IntDir>$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName>$(ProjectName)</TargetName>
+    <TargetName>Client</TargetName>
     <OutDir>$(SolutionDir).build\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
     <MultiProcFXC>true</MultiProcFXC>
   </PropertyGroup>
