@@ -2349,7 +2349,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.cpp">
       <Filter>Vendors\xatlas</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)vVendor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\vVendor.cpp">
+      <Filter>Vendors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.inl">
