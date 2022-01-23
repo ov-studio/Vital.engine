@@ -2,7 +2,7 @@
 #include "MeshWindow.h"
 #include "Client.h"
 
-#include "Utils/stb_image.h"
+#include "Vendors/stb/stb_image.h"
 #include "Vendors/mesh_optimizer/meshoptimizer.h"
 
 #include <string>

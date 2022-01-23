@@ -4,7 +4,7 @@
 #include "Core/Systems/wiScene.h"
 #include "Core/Sandbox/vImporter.h"
 #include "Core/Helpers/wiRandom.h"
-#include "Utils/stb_image.h"
+#include "Vendors/stb/stb_image.h"
 
 #include <string>
 #include <limits>
