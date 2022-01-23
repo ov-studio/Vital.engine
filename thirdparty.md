@@ -8,6 +8,7 @@
   * Mesh Optimizer
   * Tiny GLTF
   * Tiny DDS
+  * STB
   * Basis Universal
   * Xatlas
   * CEF
