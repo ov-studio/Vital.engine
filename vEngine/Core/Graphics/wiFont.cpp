@@ -15,7 +15,7 @@
 #include "Core/Helpers/wiVector.h"
 
 #include "Utils/arial.h"
-#include "Utils/stb_truetype.h"
+#include "Vendors/stb/stb_truetype.h"
 
 #include <fstream>
 

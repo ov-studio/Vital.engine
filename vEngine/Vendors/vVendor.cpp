@@ -9,7 +9,7 @@
 #include "Vendors/stb/stb_image_write.h"
 
 #define STB_TRUETYPE_IMPLEMENTATION
-#include "Utils/stb_truetype.h"
+#include "Vendors/stb/stb_truetype.h"
 
 #define TINYDDSLOADER_IMPLEMENTATION
 #include "Vendors/tiny_dds/tinyddsloader.h"
