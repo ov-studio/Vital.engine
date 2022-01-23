@@ -1698,7 +1698,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Browser\vBrowser.cpp">
       <Filter>Core\Browser</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)vEngine.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\apg_bmp.c">
       <Filter>Vendors\basis_universal</Filter>
     </ClCompile>
@@ -2347,6 +2346,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.cpp">
       <Filter>Vendors\xatlas</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.inl">
