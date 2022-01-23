@@ -184,6 +184,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
 	CefSettings settings;
 	CefInitialize(main_args, settings, app.get(), NULL);
+
+    /*
 	CefWindowInfo info;
     //info.SetAsWindowless(hWnd);
 	CefBrowserSettings b_settings;
@@ -203,6 +205,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 		nullptr);
 
 	CefRunMessageLoop();
+    */
 
    return TRUE;
 }
