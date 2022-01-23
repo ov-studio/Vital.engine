@@ -44,6 +44,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientApp.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientV8ExtensionHandler.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)TransformWindow.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Translator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)WeatherWindow.cpp" />
@@ -70,6 +73,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)SoundWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)SpringWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)stdafx.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientApp.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientV8ExtensionHandler.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)TransformWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Translator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)WeatherWindow.h" />

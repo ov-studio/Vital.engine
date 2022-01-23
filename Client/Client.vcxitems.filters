@@ -25,6 +25,15 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Translator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)WeatherWindow.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)stdafx.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientHandler.cpp">
+      <Filter>wew</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientV8ExtensionHandler.cpp">
+      <Filter>wew</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientApp.cpp">
+      <Filter>wew</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)AnimationWindow.h" />
@@ -51,8 +60,22 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Translator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)WeatherWindow.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)stdafx.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientHandler.h">
+      <Filter>wew</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientV8ExtensionHandler.h">
+      <Filter>wew</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)test\CrossPlatform\ClientApp.h">
+      <Filter>wew</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)startup.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="wew">
+      <UniqueIdentifier>{a38b3aff-3fb1-4c8d-97b9-623982187794}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
