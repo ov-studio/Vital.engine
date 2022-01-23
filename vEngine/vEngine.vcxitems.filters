@@ -109,27 +109,15 @@
     <Filter Include="Vendors\stb">
       <UniqueIdentifier>{5988300a-b497-4197-bfa9-5cbfc8ac439c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vendors\directx_math">
+      <UniqueIdentifier>{19e7a78b-cc0b-4369-bd24-fcf47f89bda9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\arial.h">
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXColors.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXMath.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXMathCommon.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXPackedVector.h">
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\dxcapi.h">
@@ -1482,6 +1470,21 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\stb\stb_image.h">
       <Filter>Vendors\stb</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXPackedVector.h">
+      <Filter>Vendors\directx_math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXCollision.h">
+      <Filter>Vendors\directx_math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXColors.h">
+      <Filter>Vendors\directx_math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMath.h">
+      <Filter>Vendors\directx_math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMathCommon.h">
+      <Filter>Vendors\directx_math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.cpp">
@@ -2357,24 +2360,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.inl">
-      <Filter>Utils</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathConvert.inl">
-      <Filter>Utils</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathMatrix.inl">
-      <Filter>Utils</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathMisc.inl">
-      <Filter>Utils</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathVector.inl">
-      <Filter>Utils</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXPackedVector.inl">
-      <Filter>Utils</Filter>
-    </None>
     <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_astc.inc">
       <Filter>Vendors\basis_universal</Filter>
     </None>
@@ -2404,6 +2389,24 @@
     </None>
     <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_pvrtc2_alpha_33.inc">
       <Filter>Vendors\basis_universal</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMathVector.inl">
+      <Filter>Vendors\directx_math</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXPackedVector.inl">
+      <Filter>Vendors\directx_math</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXCollision.inl">
+      <Filter>Vendors\directx_math</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMathConvert.inl">
+      <Filter>Vendors\directx_math</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMathMatrix.inl">
+      <Filter>Vendors\directx_math</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMathMisc.inl">
+      <Filter>Vendors\directx_math</Filter>
     </None>
   </ItemGroup>
 </Project>

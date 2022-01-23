@@ -2,6 +2,7 @@
   * DirectX 12
   * Vulkan
   * Bullet Physics
+  * DirectX Math
   * Lua
   * RapidJSON
   * Lua-RapidJSON

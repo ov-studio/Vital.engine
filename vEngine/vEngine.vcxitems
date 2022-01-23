@@ -351,6 +351,11 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\LinearMath\btTransform.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\LinearMath\btTransformUtil.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\LinearMath\btVector3.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXCollision.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXColors.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMathCommon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXPackedVector.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12compatibility.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12sdklayers.h" />
@@ -390,11 +395,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua\lzio.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\arial.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXColors.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXMath.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXMathCommon.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXPackedVector.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\dxcapi.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\flat_hash_map.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\sal.h" />
@@ -778,12 +778,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.inl" />
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathConvert.inl" />
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathMatrix.inl" />
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathMisc.inl" />
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathVector.inl" />
-    <None Include="$(MSBuildThisFileDirectory)Utils\DirectXPackedVector.inl" />
     <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_astc.inc" />
     <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_astc_0_255.inc" />
     <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_atc_55.inc" />
@@ -794,5 +788,11 @@
     <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_dxt1_6.inc" />
     <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_pvrtc2_45.inc" />
     <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_pvrtc2_alpha_33.inc" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXCollision.inl" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMathConvert.inl" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMathMatrix.inl" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMathMisc.inl" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMathVector.inl" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXPackedVector.inl" />
   </ItemGroup>
 </Project>
