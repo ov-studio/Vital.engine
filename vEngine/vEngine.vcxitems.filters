@@ -103,6 +103,9 @@
     <Filter Include="Vendors\basis_universal">
       <UniqueIdentifier>{ca0c811f-6e1f-44f8-904b-a8636ab7c545}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vendors\tiny_dds">
+      <UniqueIdentifier>{011954cb-6bbe-4c07-abf4-5c2e42de03e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\arial.h">
@@ -145,9 +148,6 @@
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_truetype.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\tinyddsloader.h">
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\vk_mem_alloc.h">
@@ -1475,6 +1475,9 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.h">
       <Filter>Vendors\xatlas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_dds\tinyddsloader.h">
+      <Filter>Vendors\tiny_dds</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

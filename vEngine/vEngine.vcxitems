@@ -402,7 +402,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image_write.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_truetype.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\tinyddsloader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\vk_mem_alloc.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\volk.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\file.hpp" />
@@ -448,6 +447,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Userdata.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\values.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\meshoptimizer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_dds\tinyddsloader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\json.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\tiny_gltf.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vk_icd.h" />
