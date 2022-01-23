@@ -6,7 +6,7 @@
 #include "Vendors/cef/include/cef_v8.h"
 #include "Vendors/cef/include/cef_browser.h"
 
-class ClientHandler : public CefClient, public CefLifeSpanHandler, public CefRenderHandler {
+class ClientHandler : public CefClient, public CefLifeSpanHandler {
 public:
 ClientHandler();
 
@@ -25,11 +25,6 @@ virtual CefRefPtr<CefLifeSpanHandler> GetLifeSpanHandler() override
 {
 	return this;
 }
-
-CefRefPtr<CefRenderHandler> GetRenderHandler() override
-{
-    return this;
-};
 
 // Virtual on CefLifeSpanHandler
 virtual bool DoClose(CefRefPtr<CefBrowser> browser) override;
