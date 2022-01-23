@@ -67,9 +67,6 @@
     <Filter Include="Vendors\lua_rapidjson">
       <UniqueIdentifier>{28fedb3e-81f3-4187-8179-8e1a532e3a79}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Vendors\lua_rapidjson\rapidjson">
-      <UniqueIdentifier>{f9ee3047-3890-461b-86c9-9ef81fbe441d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Vendors\xatlas">
       <UniqueIdentifier>{02f46f5f-ac5e-4462-b1ee-f3d1991c558d}</UniqueIdentifier>
     </Filter>
@@ -108,6 +105,426 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\arial.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXColors.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXMath.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXMathCommon.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXPackedVector.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\dxcapi.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\flat_hash_map.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\sal.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv_reflect.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image_write.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_truetype.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\tinyddsloader.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\vk_mem_alloc.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\volk.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Tools\wiBacklog.h">
+      <Filter>Core\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Tools\wiProfiler.h">
+      <Filter>Core\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiGUI.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiInitializer.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiJobSystem.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiPlatform.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene_Decl.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiCanvas.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiECS.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics.h">
+      <Filter>Core\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiInput.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.h">
+      <Filter>Core\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiRandom.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiRectPacker.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiResourceManager.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiSpinLock.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiTimer.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiUnorderedMap.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiUnorderedSet.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiVector.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArchive.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArguments.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiColor.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiFadeManager.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiHelper.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiMath.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiPrimitive.h">
+      <Filter>Core\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork.h">
+      <Filter>Core\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath2D.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D_PathTracing.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiApplication.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.h">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath3D_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiScene_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSprite_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteAnim_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiAudio_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiImageParams_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiInput_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiPrimitive_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath_BindLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiHairParticle.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiImage.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiOcean.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiRenderer.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSprite.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSpriteFont.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiTextureHelper.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiEmittedParticle.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiEnums.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFFTGenerator.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFont.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUBVH.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUSortLib.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_DX12.h">
+      <Filter>Core\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_Vulkan.h">
+      <Filter>Core\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiShaderCompiler.h">
+      <Filter>Core\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphics.h">
+      <Filter>Core\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice.h">
+      <Filter>Core\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSheenLUT.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vVersion.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Sandbox\vImporter.h">
+      <Filter>Core\Sandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture\vTexture.h">
+      <Filter>Core\Scripting\Lua\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.h">
+      <Filter>Core\Scripting\Lua\Backlog</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Vector\vVector.h">
+      <Filter>Core\Scripting\Lua\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.h">
+      <Filter>Core\Scripting\Lua\Math\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMath.h">
+      <Filter>Core\Scripting\Lua\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Config\vConfig.h">
+      <Filter>Core\Scripting\Lua\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Common\vGame.h">
+      <Filter>Core\Scripting\Lua\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaWrapper.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuna.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLua.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaBooter.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.h">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Browser\vBrowser.h">
+      <Filter>Core\Browser</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\apg_bmp.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_astc_decomp.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_backend.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_basis_file.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_bc7enc.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_comp.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_enc.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_etc.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_frontend.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_global_selector_palette_helpers.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_gpu_texture.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_kernels_declares.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_kernels_imp.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_miniz.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_pvrtc1_4.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resampler.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resampler_filters.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_ssim.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_uastc_enc.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_flow.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_math.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_math_declares.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_sse.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_type_aliases.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\jpgd.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\lodepng.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_containers.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_containers_impl.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_file_headers.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_global_selector_cb.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_global_selector_palette.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_internal.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_uastc.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\zstd\zstd.h">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h">
       <Filter>Vendors\bullet_physics</Filter>
     </ClInclude>
@@ -747,6 +1164,42 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\LinearMath\btVector3.h">
       <Filter>Vendors\bullet_physics</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12compatibility.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12sdklayers.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12shader.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12video.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3dcommon.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3dx12.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxcore.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxcore_interface.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxgicommon.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxgiformat.h">
+      <Filter>Vendors\dx12</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua\lapi.h">
+      <Filter>Vendors\lua</Filter>
+    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua\lauxlib.h">
       <Filter>Vendors\lua</Filter>
     </ClInclude>
@@ -822,398 +1275,125 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua\lzio.h">
       <Filter>Vendors\lua</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua\lapi.h">
-      <Filter>Vendors\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\arial.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXCollision.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXColors.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXMath.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXMathCommon.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\DirectXPackedVector.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\dxcapi.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\flat_hash_map.hpp">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\sal.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv_reflect.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image_write.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_truetype.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\tinyddsloader.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\vk_mem_alloc.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\volk.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Tools\wiBacklog.h">
-      <Filter>Core\Tools</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Tools\wiProfiler.h">
-      <Filter>Core\Tools</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiGUI.h">
-      <Filter>Core\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiInitializer.h">
-      <Filter>Core\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiJobSystem.h">
-      <Filter>Core\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiPlatform.h">
-      <Filter>Core\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene.h">
-      <Filter>Core\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene_Decl.h">
-      <Filter>Core\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiCanvas.h">
-      <Filter>Core\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiECS.h">
-      <Filter>Core\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.h">
-      <Filter>Core\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics.h">
-      <Filter>Core\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)vEngine.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.h">
-      <Filter>Core\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.h">
-      <Filter>Core\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Input\wiInput.h">
-      <Filter>Core\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.h">
-      <Filter>Core\Audio</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiRandom.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiRectPacker.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiResourceManager.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiSpinLock.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiTimer.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiUnorderedMap.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiUnorderedSet.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiVector.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArchive.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArguments.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiColor.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiFadeManager.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiHelper.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiMath.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Helpers\wiPrimitive.h">
-      <Filter>Core\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork.h">
-      <Filter>Core\Network</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath.h">
-      <Filter>Core\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath2D.h">
-      <Filter>Core\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D.h">
-      <Filter>Core\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D_PathTracing.h">
-      <Filter>Core\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiApplication.h">
-      <Filter>Core\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.h">
-      <Filter>Core\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath3D_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiScene_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSprite_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteAnim_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiAudio_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiImageParams_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiInput_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiPrimitive_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath_BindLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiHairParticle.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiImage.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiOcean.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiRenderer.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSprite.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSpriteFont.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiTextureHelper.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiEmittedParticle.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiEnums.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFFTGenerator.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFont.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUBVH.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUSortLib.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_DX12.h">
-      <Filter>Core\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_Vulkan.h">
-      <Filter>Core\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiShaderCompiler.h">
-      <Filter>Core\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphics.h">
-      <Filter>Core\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice.h">
-      <Filter>Core\Graphics\API</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSheenLUT.h">
-      <Filter>Core\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)vVersion.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\tiny_gltf.h">
-      <Filter>Vendors\tiny_gltf</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\json.hpp">
-      <Filter>Vendors\tiny_gltf</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Sandbox\vImporter.h">
-      <Filter>Core\Sandbox</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\meshoptimizer.h">
-      <Filter>Vendors\mesh_optimizer</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\encodings.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\filereadstream.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\filewritestream.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\fwd.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\istreamwrapper.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\memorybuffer.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\memorystream.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\ostreamwrapper.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\pointer.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\prettywriter.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\rapidjson.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\reader.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\schema.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\stream.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\stringbuffer.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\writer.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\error\en.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\error\error.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\biginteger.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\clzll.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\diyfp.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\dtoa.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\ieee754.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\itoa.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\meta.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\pow10.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\regex.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\stack.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\strfunc.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\strtod.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\swap.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\msinttypes\inttypes.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\msinttypes\stdint.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\file.hpp">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\luax.hpp">
+      <Filter>Vendors\lua_rapidjson</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\allocators.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
+      <Filter>Vendors\lua_rapidjson</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\cursorstreamwrapper.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
+      <Filter>Vendors\lua_rapidjson</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\document.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
+      <Filter>Vendors\lua_rapidjson</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\encodedstream.h">
-      <Filter>Vendors\lua_rapidjson\rapidjson</Filter>
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\encodings.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\error\en.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\error\error.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\filereadstream.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\filewritestream.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\fwd.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\biginteger.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\clzll.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\diyfp.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\dtoa.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\ieee754.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\itoa.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\meta.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\pow10.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\regex.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\stack.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\strfunc.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\strtod.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\internal\swap.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\istreamwrapper.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\memorybuffer.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\memorystream.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\msinttypes\inttypes.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\msinttypes\stdint.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\ostreamwrapper.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\pointer.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\prettywriter.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\rapidjson.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\reader.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\schema.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\stream.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\stringbuffer.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson\writer.h">
+      <Filter>Vendors\lua_rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\StringStream.hpp">
+      <Filter>Vendors\lua_rapidjson</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Userdata.hpp">
       <Filter>Vendors\lua_rapidjson</Filter>
@@ -1221,89 +1401,14 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\values.hpp">
       <Filter>Vendors\lua_rapidjson</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\file.hpp">
-      <Filter>Vendors\lua_rapidjson</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\meshoptimizer.h">
+      <Filter>Vendors\mesh_optimizer</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\luax.hpp">
-      <Filter>Vendors\lua_rapidjson</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\json.hpp">
+      <Filter>Vendors\tiny_gltf</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\StringStream.hpp">
-      <Filter>Vendors\lua_rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.h">
-      <Filter>Vendors\xatlas</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture\vTexture.h">
-      <Filter>Core\Scripting\Lua\Texture</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.h">
-      <Filter>Core\Scripting\Lua\Backlog</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Vector\vVector.h">
-      <Filter>Core\Scripting\Lua\Math\Vector</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.h">
-      <Filter>Core\Scripting\Lua\Math\Matrix</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\vMath.h">
-      <Filter>Core\Scripting\Lua\Math</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Config\vConfig.h">
-      <Filter>Core\Scripting\Lua\Config</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Common\vGame.h">
-      <Filter>Core\Scripting\Lua\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaWrapper.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuna.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLua.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaBooter.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.h">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12.h">
-      <Filter>Vendors\dx12</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12compatibility.h">
-      <Filter>Vendors\dx12</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12sdklayers.h">
-      <Filter>Vendors\dx12</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12shader.h">
-      <Filter>Vendors\dx12</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3d12video.h">
-      <Filter>Vendors\dx12</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3dcommon.h">
-      <Filter>Vendors\dx12</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\d3dx12.h">
-      <Filter>Vendors\dx12</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxcore.h">
-      <Filter>Vendors\dx12</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxcore_interface.h">
-      <Filter>Vendors\dx12</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxgicommon.h">
-      <Filter>Vendors\dx12</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\dx12\dxgiformat.h">
-      <Filter>Vendors\dx12</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\tiny_gltf.h">
+      <Filter>Vendors\tiny_gltf</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vk_icd.h">
       <Filter>Vendors\vulkan</Filter>
@@ -1368,119 +1473,298 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\vulkan\vulkan_xlib_xrandr.h">
       <Filter>Vendors\vulkan</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Browser\vBrowser.h">
-      <Filter>Core\Browser</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\apg_bmp.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_astc_decomp.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_backend.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_basis_file.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_bc7enc.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_comp.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_enc.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_etc.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_frontend.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_global_selector_palette_helpers.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_gpu_texture.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_kernels_declares.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_kernels_imp.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_miniz.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_pvrtc1_4.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resampler.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resampler_filters.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_ssim.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_uastc_enc.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_flow.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_math.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_math_declares.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_sse.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_type_aliases.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\jpgd.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\lodepng.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_containers.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_containers_impl.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_file_headers.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_global_selector_cb.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_global_selector_palette.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_internal.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_uastc.h">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\zstd\zstd.h">
-      <Filter>Vendors\basis_universal</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.h">
+      <Filter>Vendors\xatlas</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\samplerBlueNoiseErrorDistribution_128x128_OptimizedFor_2d2d2d2d_1spp.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\spirv_reflect.c">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\stb_vorbis.c">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Tools\wiProfiler.cpp">
+      <Filter>Core\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Tools\wiBacklog.cpp">
+      <Filter>Core\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiGUI.cpp">
+      <Filter>Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiInitializer.cpp">
+      <Filter>Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiJobSystem.cpp">
+      <Filter>Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene.cpp">
+      <Filter>Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene_Serializers.cpp">
+      <Filter>Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.cpp">
+      <Filter>Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics_Bullet.cpp">
+      <Filter>Core\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiInput.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.cpp">
+      <Filter>Core\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiPrimitive.cpp">
+      <Filter>Core\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiRandom.cpp">
+      <Filter>Core\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiRectPacker.cpp">
+      <Filter>Core\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiResourceManager.cpp">
+      <Filter>Core\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArchive.cpp">
+      <Filter>Core\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArguments.cpp">
+      <Filter>Core\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiFadeManager.cpp">
+      <Filter>Core\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiHelper.cpp">
+      <Filter>Core\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiMath.cpp">
+      <Filter>Core\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_UWP.cpp">
+      <Filter>Core\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_Windows.cpp">
+      <Filter>Core\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_Linux.cpp">
+      <Filter>Core\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath2D.cpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D.cpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D_PathTracing.cpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiApplication.cpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.cpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath3D_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiScene_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSprite_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteAnim_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiAudio_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiImageParams_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiInput_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiPrimitive_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath_BindLua.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiHairParticle.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiImage.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiOcean.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiRenderer.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSprite.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSpriteFont.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiTextureHelper.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiEmittedParticle.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFFTGenerator.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFont.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUBVH.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUSortLib.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_DX12.cpp">
+      <Filter>Core\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_Vulkan.cpp">
+      <Filter>Core\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiShaderCompiler.cpp">
+      <Filter>Core\Graphics\API</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Sandbox\models\vGLTF.cpp">
+      <Filter>Core\Sandbox\models</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture\vTexture.cpp">
+      <Filter>Core\Scripting\Lua\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.cpp">
+      <Filter>Core\Scripting\Lua\Backlog</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Vector\vVector.cpp">
+      <Filter>Core\Scripting\Lua\Math\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.cpp">
+      <Filter>Core\Scripting\Lua\Math\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Config\vConfig.cpp">
+      <Filter>Core\Scripting\Lua\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaWrapper.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaBooter.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.cpp">
+      <Filter>Core\Scripting\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Browser\vBrowser.cpp">
+      <Filter>Core\Browser</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vEngine.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\apg_bmp.c">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_astc_decomp.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_backend.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_basis_file.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_bc7enc.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_comp.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_enc.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_etc.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_frontend.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_global_selector_palette_helpers.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_gpu_texture.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_kernels_sse.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_pvrtc1_4.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resampler.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resample_filters.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_ssim.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_uastc_enc.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\jpgd.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\lodepng.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder.cpp">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\zstd\zstd.c">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\zstd\zstddeclib.c">
+      <Filter>Vendors\basis_universal</Filter>
+    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
       <Filter>Vendors\bullet_physics</Filter>
     </ClCompile>
@@ -1901,17 +2185,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\LinearMath\btVector3.cpp">
       <Filter>Vendors\bullet_physics</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.cpp">
-      <Filter>Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\samplerBlueNoiseErrorDistribution_128x128_OptimizedFor_2d2d2d2d_1spp.cpp">
-      <Filter>Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\spirv_reflect.c">
-      <Filter>Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\stb_vorbis.c">
-      <Filter>Utils</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua\lapi.c">
+      <Filter>Vendors\lua</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua\lauxlib.c">
       <Filter>Vendors\lua</Filter>
@@ -2012,189 +2287,23 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua\lzio.c">
       <Filter>Vendors\lua</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua\lapi.c">
-      <Filter>Vendors\lua</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Document.cpp">
+      <Filter>Vendors\lua_rapidjson</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Tools\wiProfiler.cpp">
-      <Filter>Core\Tools</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson.cpp">
+      <Filter>Vendors\lua_rapidjson</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Tools\wiBacklog.cpp">
-      <Filter>Core\Tools</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Schema.cpp">
+      <Filter>Vendors\lua_rapidjson</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiGUI.cpp">
-      <Filter>Core\Systems</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\values.cpp">
+      <Filter>Vendors\lua_rapidjson</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiInitializer.cpp">
-      <Filter>Core\Systems</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\allocator.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiJobSystem.cpp">
-      <Filter>Core\Systems</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene.cpp">
-      <Filter>Core\Systems</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene_Serializers.cpp">
-      <Filter>Core\Systems</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.cpp">
-      <Filter>Core\Systems</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Physics\wiPhysics_Bullet.cpp">
-      <Filter>Core\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiXInput.cpp">
-      <Filter>Core\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiInput.cpp">
-      <Filter>Core\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Input\wiRawInput.cpp">
-      <Filter>Core\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.cpp">
-      <Filter>Core\Audio</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiPrimitive.cpp">
-      <Filter>Core\Helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiRandom.cpp">
-      <Filter>Core\Helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiRectPacker.cpp">
-      <Filter>Core\Helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiResourceManager.cpp">
-      <Filter>Core\Helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArchive.cpp">
-      <Filter>Core\Helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiArguments.cpp">
-      <Filter>Core\Helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiFadeManager.cpp">
-      <Filter>Core\Helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiHelper.cpp">
-      <Filter>Core\Helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Helpers\wiMath.cpp">
-      <Filter>Core\Helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_UWP.cpp">
-      <Filter>Core\Network</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_Windows.cpp">
-      <Filter>Core\Network</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Network\wiNetwork_Linux.cpp">
-      <Filter>Core\Network</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath2D.cpp">
-      <Filter>Core\Interfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D.cpp">
-      <Filter>Core\Interfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiRenderPath3D_PathTracing.cpp">
-      <Filter>Core\Interfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiApplication.cpp">
-      <Filter>Core\Interfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Interfaces\wiLoadingScreen.cpp">
-      <Filter>Core\Interfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath2D_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath3D_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiScene_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSprite_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteAnim_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiSpriteFont_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiApplication_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiAudio_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiImageParams_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiInput_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiLoadingScreen_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiNetwork_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiPrimitive_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\wiRenderPath_BindLua.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiHairParticle.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiImage.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiOcean.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiRenderer.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSprite.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiSpriteFont.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiTextureHelper.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiEmittedParticle.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFFTGenerator.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiFont.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUBVH.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\wiGPUSortLib.cpp">
-      <Filter>Core\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_DX12.cpp">
-      <Filter>Core\Graphics\API</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiGraphicsDevice_Vulkan.cpp">
-      <Filter>Core\Graphics\API</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Graphics\API\wiShaderCompiler.cpp">
-      <Filter>Core\Graphics\API</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Sandbox\models\vGLTF.cpp">
-      <Filter>Core\Sandbox\models</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\clusterizer.cpp">
+      <Filter>Vendors\mesh_optimizer</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\indexcodec.cpp">
       <Filter>Vendors\mesh_optimizer</Filter>
@@ -2235,122 +2344,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchoptimizer.cpp">
       <Filter>Vendors\mesh_optimizer</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\allocator.cpp">
-      <Filter>Vendors\mesh_optimizer</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\clusterizer.cpp">
-      <Filter>Vendors\mesh_optimizer</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\values.cpp">
-      <Filter>Vendors\lua_rapidjson</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Document.cpp">
-      <Filter>Vendors\lua_rapidjson</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson.cpp">
-      <Filter>Vendors\lua_rapidjson</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Schema.cpp">
-      <Filter>Vendors\lua_rapidjson</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.cpp">
       <Filter>Vendors\xatlas</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Texture\vTexture.cpp">
-      <Filter>Core\Scripting\Lua\Texture</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Backlog\vBacklog.cpp">
-      <Filter>Core\Scripting\Lua\Backlog</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Vector\vVector.cpp">
-      <Filter>Core\Scripting\Lua\Math\Vector</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Math\Matrix\vMatrix.cpp">
-      <Filter>Core\Scripting\Lua\Math\Matrix</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Config\vConfig.cpp">
-      <Filter>Core\Scripting\Lua\Config</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaWrapper.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaBooter.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.cpp">
-      <Filter>Core\Scripting\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Browser\vBrowser.cpp">
-      <Filter>Core\Browser</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\vBooter.cpp">
-      <Filter>Vendors</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\apg_bmp.c">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_astc_decomp.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_backend.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_basis_file.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_bc7enc.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_comp.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_enc.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_etc.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_frontend.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_global_selector_palette_helpers.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_gpu_texture.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_kernels_sse.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_pvrtc1_4.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resampler.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resample_filters.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_ssim.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_uastc_enc.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\jpgd.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\lodepng.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder.cpp">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\zstd\zstd.c">
-      <Filter>Vendors\basis_universal</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\zstd\zstddeclib.c">
-      <Filter>Vendors\basis_universal</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
