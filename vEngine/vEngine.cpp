@@ -1,23 +1,11 @@
-#ifndef _CRT_SECURE_NO_WARNINGS
-    #define _CRT_SECURE_NO_WARNINGS
-#endif
-
+// Vendor Definitions
 #define STB_IMAGE_IMPLEMENTATION
-//#include "stb_image.h"
-
 #define STB_IMAGE_WRITE_IMPLEMENTATION
-//#include "stb_image_write.h"
-
 #define STB_TRUETYPE_IMPLEMENTATION
-//#include "stb_truetype.h"
-
 #define TINYDDSLOADER_IMPLEMENTATION
-//#include "tinyddsloader.h"
-
 //#define BASISU_FORCE_DEVEL_MESSAGES 1
 #define BASISU_NO_ITERATOR_DEBUG_LEVEL
 //#include "Vendors/basis_universal//transcoder/basisu_transcoder.cpp"
-#undef _CRT_SECURE_NO_WARNINGS
 /*
 #include "Vendors/basis_universal//encoder/jpgd.cpp"
 #include "Vendors/basis_universal//encoder/lodepng.cpp"

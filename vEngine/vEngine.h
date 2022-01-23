@@ -1,13 +1,8 @@
 #ifndef vEngine
     #define vEngine
-
-    // NOTE:
-    // The purpose of this file is to expose all engine features.
-    // It should be included in the engine's implementing application not the engine itself!
-    // It should be included in the precompiled header if available.
     #include "vCommon.h"
 
-    // High-level interface:
+    // Engine Interfaces:
     #include "Core/Interfaces/wiApplication.h"
     #include "Core/Interfaces/wiRenderPath.h"
     #include "Core/Interfaces/wiRenderPath2D.h"
@@ -15,7 +10,7 @@
     #include "Core/Interfaces/wiRenderPath3D_PathTracing.h"
     #include "Core/Interfaces/wiLoadingScreen.h"
 
-    // Engine-level systems
+    // Engine Essentials
     #include "vVersion.h"
     #include "Core/Systems/wiPlatform.h"
     #include "Core/Tools/wiBacklog.h"
@@ -69,10 +64,10 @@
 
     #pragma comment(lib,"vEngine_CEF.lib")
     #ifdef _WIN32
-    #ifdef PLATFORM_UWP
-    #pragma comment(lib,"vEngine_UWP.lib")
-    #else
-    #pragma comment(lib,"vEngine_Windows.lib")
-    #endif // PLATFORM_UWP
-    #endif // _WIN32
-#endif // vEngine
+        #ifdef PLATFORM_UWP
+            #pragma comment(lib,"vEngine_UWP.lib")
+        #else
+            #pragma comment(lib,"vEngine_Windows.lib")
+        #endif
+    #endif
+#endif
