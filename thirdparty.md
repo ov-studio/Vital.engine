@@ -7,5 +7,6 @@
   * Lua-RapidJSON
   * Mesh Optimizer
   * Tiny GLTF
+  * Basis Universal
   * Xatlas
   * CEF
