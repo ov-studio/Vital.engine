@@ -102,6 +102,42 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene_Decl.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Tools\wiBacklog.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Tools\wiProfiler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\apg_bmp.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_astc_decomp.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_backend.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_basis_file.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_bc7enc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_comp.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_enc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_etc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_frontend.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_global_selector_palette_helpers.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_gpu_texture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_kernels_declares.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_kernels_imp.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_miniz.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_pvrtc1_4.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resampler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resampler_filters.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_ssim.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_uastc_enc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_flow.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_math.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_math_declares.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_sse.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\cppspmd_type_aliases.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\jpgd.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\lodepng.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_containers.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_containers_impl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_file_headers.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_global_selector_cb.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_global_selector_palette.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_internal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_uastc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\zstd\zstd.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletCollisionCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\btBulletDynamicsCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\Bullet-C-Api.h" />
@@ -509,6 +545,28 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiScene_Serializers.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Tools\wiBacklog.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Tools\wiProfiler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\apg_bmp.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_astc_decomp.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_backend.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_basis_file.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_bc7enc.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_comp.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_enc.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_etc.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_frontend.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_global_selector_palette_helpers.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_gpu_texture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_kernels_sse.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_pvrtc1_4.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resampler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_resample_filters.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_ssim.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\basisu_uastc_enc.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\jpgd.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\lodepng.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\zstd\zstd.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\zstd\zstddeclib.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btBroadphaseProxy.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\bullet_physics\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.cpp" />
@@ -705,7 +763,6 @@
       <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
       <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\utility_common.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Document.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Schema.cpp" />
@@ -725,6 +782,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vertexfilter.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchanalyzer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchoptimizer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\vBooter.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
   </ItemGroup>
@@ -735,5 +793,15 @@
     <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathMisc.inl" />
     <None Include="$(MSBuildThisFileDirectory)Utils\DirectXMathVector.inl" />
     <None Include="$(MSBuildThisFileDirectory)Utils\DirectXPackedVector.inl" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_astc.inc" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_astc_0_255.inc" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_atc_55.inc" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_atc_56.inc" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_bc7_m5_alpha.inc" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_bc7_m5_color.inc" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_dxt1_5.inc" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_dxt1_6.inc" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_pvrtc2_45.inc" />
+    <None Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\transcoder\basisu_transcoder_tables_pvrtc2_alpha_33.inc" />
   </ItemGroup>
 </Project>
