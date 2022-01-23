@@ -12,7 +12,7 @@
 #include "Utils/stb_truetype.h"
 
 #define TINYDDSLOADER_IMPLEMENTATION
-#include "Utils/tinyddsloader.h"
+#include "Vendors/tiny_dds/tinyddsloader.h"
 
 #define BASISU_NO_ITERATOR_DEBUG_LEVEL
 #include "Vendors/basis_universal/transcoder/basisu_transcoder.cpp"

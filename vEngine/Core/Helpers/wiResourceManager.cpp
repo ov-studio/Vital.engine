@@ -5,7 +5,7 @@
 #include "Core/Helpers/wiUnorderedMap.h"
 
 #include "Utils/stb_image.h"
-#include "Utils/tinyddsloader.h"
+#include "Vendors/tiny_dds/tinyddsloader.h"
 #include "Vendors/basis_universal/transcoder/basisu_transcoder.h"
 extern basist::etc1_global_selector_codebook g_basis_global_codebook;
 
