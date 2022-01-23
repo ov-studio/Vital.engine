@@ -399,9 +399,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\flat_hash_map.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\sal.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv_reflect.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image_write.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_truetype.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\vk_mem_alloc.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\volk.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\file.hpp" />
@@ -447,6 +444,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Userdata.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\values.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\meshoptimizer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\stb\stb_image.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\stb\stb_image_write.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\stb\stb_truetype.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_dds\tinyddsloader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\json.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_gltf\tiny_gltf.h" />
@@ -753,16 +753,6 @@
       <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
       <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\stb_vorbis.c">
-      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">false</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">false</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Document.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\rapidjson.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\lua_rapidjson\Schema.cpp" />
@@ -782,6 +772,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vertexfilter.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchanalyzer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchoptimizer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\stb\stb_vorbis.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\vVendor.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />

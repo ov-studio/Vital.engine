@@ -106,6 +106,9 @@
     <Filter Include="Vendors\tiny_dds">
       <UniqueIdentifier>{011954cb-6bbe-4c07-abf4-5c2e42de03e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vendors\stb">
+      <UniqueIdentifier>{5988300a-b497-4197-bfa9-5cbfc8ac439c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\arial.h">
@@ -139,15 +142,6 @@
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv_reflect.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_image_write.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Utils\stb_truetype.h">
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\vk_mem_alloc.h">
@@ -1479,6 +1473,15 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\tiny_dds\tinyddsloader.h">
       <Filter>Vendors\tiny_dds</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\stb\stb_image_write.h">
+      <Filter>Vendors\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\stb\stb_truetype.h">
+      <Filter>Vendors\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\stb\stb_image.h">
+      <Filter>Vendors\stb</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.cpp">
@@ -1488,9 +1491,6 @@
       <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Utils\spirv_reflect.c">
-      <Filter>Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Utils\stb_vorbis.c">
       <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Tools\wiProfiler.cpp">
@@ -2351,6 +2351,9 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\vVendor.cpp">
       <Filter>Vendors</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\stb\stb_vorbis.c">
+      <Filter>Vendors\stb</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
