@@ -5,8 +5,8 @@
 #include "Core/Helpers/wiMath.h"
 
 #include "Utils/stb_image_write.h"
-#include "Utils/basis_universal/encoder/basisu_comp.h"
-#include "Utils/basis_universal/encoder/basisu_gpu_texture.h"
+#include "Vendors/basis_universal/encoder/basisu_comp.h"
+#include "Vendors/basis_universal/encoder/basisu_gpu_texture.h"
 extern basist::etc1_global_selector_codebook g_basis_global_codebook;
 
 #include <thread>

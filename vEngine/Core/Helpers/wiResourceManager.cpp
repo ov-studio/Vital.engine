@@ -6,7 +6,7 @@
 
 #include "Utils/stb_image.h"
 #include "Utils/tinyddsloader.h"
-#include "Utils/basis_universal/transcoder/basisu_transcoder.h"
+#include "Vendors/basis_universal/transcoder/basisu_transcoder.h"
 extern basist::etc1_global_selector_codebook g_basis_global_codebook;
 
 #include <algorithm>
