@@ -1,5 +1,5 @@
 #ifndef vEngine_vCommon
-#define vEngine_vCommon
+    #define vEngine_vCommon
     // This is a helper include file pasted into all engine headers, try to keep it minimal!
     // Do not include engine features in this file!
 
@@ -11,7 +11,7 @@
     #define arraysize(a) (sizeof(a) / sizeof(a[0]))
 
     #ifndef NOMINMAX
-    #define NOMINMAX
+        #define NOMINMAX
     #endif // NOMINMAX
 
     // Enable enum flags:

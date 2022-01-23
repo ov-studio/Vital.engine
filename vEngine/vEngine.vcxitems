@@ -782,8 +782,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vertexfilter.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchanalyzer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\mesh_optimizer\vfetchoptimizer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\vBooter.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\xatlas\xatlas.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vVendor.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vVersion.cpp" />
   </ItemGroup>
   <ItemGroup>
