@@ -2,6 +2,11 @@
 #include "main_Windows.h"
 #include "Client.h"
 
+#include "Vendors/cef/include/cef_app.h"
+#include "Vendors/cef/include/cef_browser.h"
+#include "test/CrossPlatform/ClientApp.h"
+#include "test/CrossPlatform/ClientHandler.h"
+
 #include <fstream>
 #include <thread>
 
@@ -13,6 +18,7 @@ WCHAR szTitle[MAX_LOADSTRING];                  // The title bar text
 WCHAR szWindowClass[MAX_LOADSTRING];            // the main window class name
 Client editor;
 
+ClientHandler *g_handler = 0;
 
 enum Hotkeys
 {
@@ -34,8 +40,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
-    // TODO: Place code here.
-
 	BOOL dpi_success = SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
 	assert(dpi_success);
 
@@ -54,7 +58,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_vEngine_GAME));
 
-
 	MSG msg = { 0 };
 	while (msg.message != WM_QUIT)
 	{
@@ -68,6 +71,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
 		}
 	}
+
+	CefShutdown();
 
     return (int) msg.wParam;
 }
@@ -166,6 +171,38 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    UpdateWindow(hWnd);
 
    RegisterHotKey(hWnd, PRINTSCREEN, 0, VK_SNAPSHOT);
+
+	CefMainArgs main_args(hInstance);
+
+	CefRefPtr<ClientApp> app(new ClientApp);
+
+	// Execute the secondary process, if any.
+	int exit_code = CefExecuteProcess(main_args, app.get(), NULL);
+
+	RECT rect;
+	GetClientRect(hWnd, &rect);
+
+	CefSettings settings;
+	CefInitialize(main_args, settings, app.get(), NULL);
+	CefWindowInfo info;
+    //info.SetAsWindowless(hWnd);
+	CefBrowserSettings b_settings;
+	CefRefPtr<CefClient> client(new ClientHandler);
+	g_handler = (ClientHandler*) client.get();
+	std::string path = "https://github.com/ov-studio/vEngine";
+	CefRefPtr<CefCommandLine> command_line =
+		CefCommandLine::GetGlobalCommandLine();
+
+	if (command_line->HasSwitch("url")) {
+		// /path = command_line->GetSwitchValue("url");
+	}
+
+	//info.SetAsChild(hWnd, rect);
+	CefBrowserHost::CreateBrowser(info,
+	                              client.get(), path, b_settings, nullptr,
+		nullptr);
+
+	CefRunMessageLoop();
 
    return TRUE;
 }
