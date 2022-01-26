@@ -7,7 +7,7 @@ wi::vector<sandbox::compiler::module::moduleDef> modules = {
     {
         "Shared",
         {
-            "init.lua",
+            "index.lua",
             "math.lua",
             "color.lua"
         }
@@ -20,7 +20,9 @@ wi::vector<sandbox::compiler::module::moduleDef> modules = {
     },
     {
         "Server",
-        {}
+        {
+            "index.lua"
+        }
     }
 };
 
