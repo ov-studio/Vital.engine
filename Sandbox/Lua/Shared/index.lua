@@ -13,12 +13,13 @@
 ----------------
 
 vEngine.math.angle = {}
-vEngine.color = {}
 
---Function: Prepares debug message
-vEngine.prepareDebugMessage = function(API, messageType, message)
-    if API and messageType and message then
-        return "[API: "..tostring(API).."] | ["..tostring(messageType).."] "..tostring(message)
+--Function: Posts debug message
+vEngine.postDebugMessage = function(API, message, messageLevel)
+    messageLevel = tonumber(messageLevel)
+    if messageLevel and message then
+        message = ((API and "[API: "..tostring(API).."] | ") or "")..tostring(message)
+        return vEngine.backlog:post(message, messageLevel)
     end
-    return ""
+    return false
 end

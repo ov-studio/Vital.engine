@@ -23,7 +23,7 @@ coroutine = nil
 cache.waitSignal = function(signalType)
     local API = "vEngine.thread.wait"
     local cThread = cache.coroutine.running()
-    assert(not cThread, vEngine.prepareDebugMessage(API, "Error", "API available only within a thread"))
+    assert(not cThread, vEngine.postDebugMessage(API, "API available only within a thread", 3))
 
     cache.signaledThreads[signalType] = cache.signaledThreads[signalType] or {}
     table.insert(cache.signaledThreads[signalType], cThread)
@@ -64,11 +64,11 @@ end
 --Function: Creates a thread
 vEngine.thread.create = function(cHandler)
     local API = "vEngine.thread.create"
-    assert(not cHandler or (type(cHandler) ~= "function"), vEngine.prepareDebugMessage(API, "Error", "Invalid thread handler"))
+    assert(not cHandler or (type(cHandler) ~= "function"), vEngine.postDebugMessage(API, "Invalid thread handler", 3))
 
     local cThread = cache.coroutine.create(cHandler)
     local cResult = {cache.coroutine.resume(cThread)}
-    assert(not cResult[1], vEngine.prepareDebugMessage(API, "Error", cResult[2]))
+    assert(not cResult[1], vEngine.postDebugMessage(API, cResult[2], 3))
     return cThread
 end
 
@@ -82,9 +82,9 @@ end
 --Function: awaits thread for 'n' duration before running again
 vEngine.thread.wait = function(duration)
     local API = "vEngine.thread.wait"
-    assert(not duration or (type(duration) ~= "number") or (duration <= 0), vEngine.prepareDebugMessage(API, "Error", "Invalid duration"))
+    assert(not duration or (type(duration) ~= "number") or (duration <= 0), vEngine.postDebugMessage(API, "Invalid duration", 3))
     local cThread = cache.coroutine.running()
-    assert(not cThread, vEngine.prepareDebugMessage(API, "Error", "API available only within a thread"))
+    assert(not cThread, vEngine.postDebugMessage(API, "API available only within a thread", 3))
 
     cache.timedThreads[cThread] = cache.currentTick + duration
     return cache.coroutine.yield(cThread)
