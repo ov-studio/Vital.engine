@@ -14,8 +14,8 @@
 
 vEngine.math.angle = {}
 
---Function: Posts debug message
-vEngine.postDebugMessage = function(API, message, messageLevel)
+--Function: Posts API message
+vEngine.__postAPIMessage = function(API, message, messageLevel)
     messageLevel = tonumber(messageLevel)
     if messageLevel and message then
         message = ((API and "[API: "..tostring(API).."] | ") or "")..tostring(message)
