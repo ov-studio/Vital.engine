@@ -29,8 +29,8 @@ namespace wi::lua
     // Library Methods
     int Config::setGameSpeed(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             wi::renderer::SetGameSpeed(wi::lua::SGetFloat(L, 1));
             wi::lua::SSetBool(L, true);
@@ -48,8 +48,8 @@ namespace wi::lua
     }
     int Config::setShadowProps2D(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 2)
         {
             wi::renderer::SetShadowProps2D(wi::lua::SGetInt(L, 1), wi::lua::SGetInt(L, 2));
             wi::lua::SSetBool(L, true);
@@ -61,8 +61,8 @@ namespace wi::lua
     }
     int Config::setShadowPropsCube(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 2)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 2)
         {
             wi::renderer::SetShadowPropsCube(wi::lua::SGetInt(L, 1), wi::lua::SGetInt(L, 2));
             wi::lua::SSetBool(L, true);
@@ -74,8 +74,8 @@ namespace wi::lua
     }
     int Config::setVSyncEnabled(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             wi::eventhandler::SetVSync(wi::lua::SGetBool(L, 1));
             wi::lua::SSetBool(L, true);
@@ -87,8 +87,8 @@ namespace wi::lua
     }
     int Config::setOcclusionCullingEnabled(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc >= 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount >= 1)
         {
             wi::renderer::SetOcclusionCullingEnabled(wi::lua::SGetBool(L, 1));
             wi::lua::SSetBool(L, true);

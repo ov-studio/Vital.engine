@@ -5,8 +5,8 @@ namespace wi::lua::Game
 {
     int SetDebugPartitionTreeEnabled(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 0)
         {
             wi::renderer::SetToDrawDebugPartitionTree(wi::lua::SGetBool(L, 1));
         }
@@ -14,8 +14,8 @@ namespace wi::lua::Game
     }
     int SetDebugBonesEnabled(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 0)
         {
             wi::renderer::SetToDrawDebugBoneLines(wi::lua::SGetBool(L, 1));
         }
@@ -23,8 +23,8 @@ namespace wi::lua::Game
     }
     int SetDebugEmittersEnabled(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 0)
         {
             wi::renderer::SetToDrawDebugEmitters(wi::lua::SGetBool(L, 1));
         }
@@ -32,8 +32,8 @@ namespace wi::lua::Game
     }
     int SetDebugForceFieldsEnabled(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 0)
         {
             wi::renderer::SetToDrawDebugForceFields(wi::lua::SGetBool(L, 1));
         }
@@ -41,8 +41,8 @@ namespace wi::lua::Game
     }
     int SetDebugLightCulling(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 0)
         {
             wi::renderer::SetDebugLightCulling(wi::lua::SGetBool(L, 1));
         }
@@ -55,8 +55,8 @@ namespace wi::lua::Game
 
     int DrawLine(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 1)
         {
             Vector* a = Luna<Vector>::lightcheck(L, 1);
             Vector* b = Luna<Vector>::lightcheck(L, 2);
@@ -65,7 +65,7 @@ namespace wi::lua::Game
                 wi::renderer::RenderableLine line;
                 XMStoreFloat3(&line.start, XMLoadFloat4(a));
                 XMStoreFloat3(&line.end, XMLoadFloat4(b));
-                if (argc > 2)
+                if (argCount > 2)
                 {
                     Vector* c = Luna<Vector>::lightcheck(L, 3);
                     if (c)
@@ -88,19 +88,19 @@ namespace wi::lua::Game
     }
     int DrawPoint(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 0)
         {
             Vector* a = Luna<Vector>::lightcheck(L, 1);
             if (a)
             {
                 wi::renderer::RenderablePoint point;
                 XMStoreFloat3(&point.position, XMLoadFloat4(a));
-                if (argc > 1)
+                if (argCount > 1)
                 {
                     point.size = wi::lua::SGetFloat(L, 2);
 
-                    if (argc > 2)
+                    if (argCount > 2)
                     {
                         Vector* color = Luna<Vector>::lightcheck(L, 3);
                         point.color = *color;
@@ -118,13 +118,13 @@ namespace wi::lua::Game
     }
     int DrawBox(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 0)
         {
             Matrix* m = Luna<Matrix>::lightcheck(L, 1);
             if (m)
             {
-                if (argc > 1)
+                if (argCount > 1)
                 {
                     Vector* color = Luna<Vector>::lightcheck(L, 2);
                     if (color)
@@ -146,13 +146,13 @@ namespace wi::lua::Game
     }
     int DrawSphere(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 0)
         {
             Sphere_BindLua* sphere = Luna<Sphere_BindLua>::lightcheck(L, 1);
             if (sphere)
             {
-                if (argc > 1)
+                if (argCount > 1)
                 {
                     Vector* color = Luna<Vector>::lightcheck(L, 2);
                     if (color)
@@ -174,13 +174,13 @@ namespace wi::lua::Game
     }
     int DrawCapsule(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 0)
         {
             Capsule_BindLua* capsule = Luna<Capsule_BindLua>::lightcheck(L, 1);
             if (capsule)
             {
-                if (argc > 1)
+                if (argCount > 1)
                 {
                     Vector* color = Luna<Vector>::lightcheck(L, 2);
                     if (color)
@@ -202,8 +202,8 @@ namespace wi::lua::Game
     }
     int PutWaterRipple(lua_State* L)
     {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 1)
+        int argCount = wi::lua::SGetArgCount(L);
+        if (argCount > 1)
         {
             std::string name = wi::lua::SGetString(L, 1);
             Vector* v = Luna<Vector>::lightcheck(L, 2);
@@ -222,19 +222,6 @@ namespace wi::lua::Game
         return 0;
     }
 
-    int ClearWorld(lua_State* L)
-    {
-        Scene_BindLua* scene = Luna<Scene_BindLua>::lightcheck(L, 1);
-        if (scene == nullptr)
-        {
-            wi::renderer::ClearWorld(wi::scene::GetScene());
-        }
-        else
-        {
-            wi::renderer::ClearWorld(*scene->scene);
-        }
-        return 0;
-    }
     int ReloadShaders(lua_State* L)
     {
         wi::renderer::ReloadShaders();
@@ -271,7 +258,6 @@ namespace wi::lua::Game
             wi::lua::RunText(L, "PICK_WATER = 4");
 
 
-            wi::lua::RegisterFunc(L, "ClearWorld", ClearWorld);
             wi::lua::RegisterFunc(L, "ReloadShaders", ReloadShaders);
         }
     }
