@@ -26,6 +26,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaBooter.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\World\vWorld.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\spirv.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vCommon.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Audio\wiAudio.h" />
@@ -539,6 +540,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaBooter.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\World\vWorld.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiEventHandler.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiGUI.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Systems\wiInitializer.cpp" />

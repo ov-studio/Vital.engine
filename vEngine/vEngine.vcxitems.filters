@@ -115,6 +115,9 @@
     <Filter Include="Core\Scripting\Lua\Color">
       <UniqueIdentifier>{87680545-683f-4f1a-aee8-79bb6fc8cd14}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Scripting\Lua\World">
+      <UniqueIdentifier>{fce34e15-de47-493b-9157-976f78a9002d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\arial.h">
@@ -1491,6 +1494,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Color\vColor.h">
       <Filter>Core\Scripting\Lua\Color</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\World\vWorld.h">
+      <Filter>Core\Scripting\Lua\World</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.cpp">
@@ -2366,6 +2372,9 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Color\vColor.cpp">
       <Filter>Core\Scripting\Lua\Color</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\World\vWorld.cpp">
+      <Filter>Core\Scripting\Lua\World</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
