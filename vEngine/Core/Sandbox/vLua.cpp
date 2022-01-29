@@ -8,6 +8,7 @@ wi::vector<sandbox::compiler::module::moduleDef> modules = {
         "Shared",
         {
             "index.lua",
+            "table.lua",
             "math.lua"
         }
     },
