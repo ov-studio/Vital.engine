@@ -16,9 +16,9 @@ vEngine.math.angle = {}
 vEngine.color = {}
 
 --Function: Prepares debug message
-vEngine.prepareDebugMessage = function(interface, API, messageType, message)
-    if interface and API and messageType and message then
-        return "["..tostring(interface).."] [API: "..tostring(API).."] | ["..tostring(messageType).."] "..tostring(message)
+vEngine.prepareDebugMessage = function(API, messageType, message)
+    if API and messageType and message then
+        return "[API: "..tostring(API).."] | ["..tostring(messageType).."] "..tostring(message)
     end
     return ""
 end

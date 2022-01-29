@@ -15,7 +15,7 @@
 --Function: Retrieves color from percentage
 vEngine.color.fromPercent = function(percentage)
     local API = "vEngine.color.fromPercent"
-    assert(not percentage or (type(percentage) ~= "number"), vEngine.prepareDebugMessage("LUA", API, "Error", "Invalid percentage"))
+    assert(not percentage or (type(percentage) ~= "number"), vEngine.prepareDebugMessage(API, "Error", "Invalid percentage"))
 
     percentage = vEngine.math.max(0, vEngine.math.min(100, percentage))
     local channelColors = {255, 255, 0, 255}
