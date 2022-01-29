@@ -9,7 +9,9 @@
 
 #include "Core/Scripting/Lua/Backlog/vBacklog.h"
 #include "Core/Scripting/Lua/Math/vMath.h"
+#include "Core/Scripting/Lua/Color/vColor.h"
 #include "Core/Scripting/Lua/Config/vConfig.h"
+#include "Core/Scripting/Lua/Config/vWorld.h"
 #include "Core/Scripting/Lua/wiApplication_BindLua.h"
 #include "Core/Scripting/Lua/wiRenderPath_BindLua.h"
 #include "Core/Scripting/Lua/wiRenderPath2D_BindLua.h"
@@ -85,7 +87,9 @@ namespace wi::lua
             Backlog::Bind(cInstance.instance);
             Vector::Bind(cInstance.instance);
             Matrix::Bind(cInstance.instance);
+            Color::Bind(cInstance.instance);
             Config::Bind(cInstance.instance);
+            World::Bind(cInstance.instance);
             Application_BindLua::Bind(cInstance.instance);
             Canvas_BindLua::Bind(cInstance.instance);
             RenderPath_BindLua::Bind(cInstance.instance);
