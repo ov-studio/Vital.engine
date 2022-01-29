@@ -13,7 +13,6 @@
 ----------------
 
 vEngine.math.angle = {}
-vEngine.color = {}
 
 --Function: Prepares debug message
 vEngine.prepareDebugMessage = function(API, messageType, message)
