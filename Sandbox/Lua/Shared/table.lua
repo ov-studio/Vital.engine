@@ -13,7 +13,7 @@
 ----------------
 
 --Function: Clones a table
-vEngine.table.lerp = function(baseTable, isRecursive)
+vEngine.table.clone = function(baseTable, isRecursive)
     local API = "vEngine.table.clone"
     assert(not baseTable or (type(baseTable) ~= "table"), vEngine.__postAPIMessage(API, "Invalid baseTable", 3))
 
