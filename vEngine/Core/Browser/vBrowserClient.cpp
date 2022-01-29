@@ -1,6 +1,5 @@
 #include "Core/Browser/vBrowser.h"
 
-
 namespace wi::browser
 {
     Client* g_instance = NULL;
@@ -32,11 +31,6 @@ namespace wi::browser
 }
 
 /*
-
-SDKCefApp::SDKCefApp()
-{
-}
-
 namespace wi::browser
 {
     void create(HWND CWindow)

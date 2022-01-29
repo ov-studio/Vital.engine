@@ -1707,7 +1707,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\vLuaManager.cpp">
       <Filter>Core\Scripting\Lua</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Browser\vBrowser.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Browser\vBrowserClient.cpp">
       <Filter>Core\Browser</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\basis_universal\encoder\apg_bmp.c">
