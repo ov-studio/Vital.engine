@@ -6,29 +6,31 @@
 #include "Vendors/lua_rapidjson/rapidjson.cpp"
 #include "Core/Tools/wiBacklog.h"
 #include "Core/Helpers/wiHelper.h"
+#include "Core/Helpers/wiTimer.h"
+#include "Core/Helpers/wiVector.h"
 
 #include "Core/Scripting/Lua/Backlog/vBacklog.h"
 #include "Core/Scripting/Lua/Math/vMath.h"
-#include "Core/Scripting/Lua/Color/vColor.h"
-#include "Core/Scripting/Lua/Config/vConfig.h"
-#include "Core/Scripting/Lua/Config/vWorld.h"
 #include "Core/Scripting/Lua/wiApplication_BindLua.h"
-#include "Core/Scripting/Lua/wiRenderPath_BindLua.h"
-#include "Core/Scripting/Lua/wiRenderPath2D_BindLua.h"
-#include "Core/Scripting/Lua/wiLoadingScreen_BindLua.h"
-#include "Core/Scripting/Lua/wiRenderPath3D_BindLua.h"
-#include "Core/Scripting/Lua/Texture/vTexture.h"
-#include "Core/Scripting/Lua/wiAudio_BindLua.h"
-#include "Core/Scripting/Lua/wiSprite_BindLua.h"
-#include "Core/Scripting/Lua/wiImageParams_BindLua.h"
-#include "Core/Scripting/Lua/wiSpriteAnim_BindLua.h"
-#include "Core/Scripting/Lua/wiScene_BindLua.h"
-#include "Core/Scripting/Lua/wiInput_BindLua.h"
-#include "Core/Scripting/Lua/wiSpriteFont_BindLua.h"
-#include "Core/Scripting/Lua/wiNetwork_BindLua.h"
-#include "Core/Scripting/Lua/wiPrimitive_BindLua.h"
-#include "Core/Helpers/wiTimer.h"
-#include "Core/Helpers/wiVector.h"
+#ifndef vEngine_Server
+    #include "Core/Scripting/Lua/Color/vColor.h"
+    #include "Core/Scripting/Lua/Config/vConfig.h"
+    #include "Core/Scripting/Lua/Config/vWorld.h"
+    #include "Core/Scripting/Lua/wiRenderPath_BindLua.h"
+    #include "Core/Scripting/Lua/wiRenderPath2D_BindLua.h"
+    #include "Core/Scripting/Lua/wiLoadingScreen_BindLua.h"
+    #include "Core/Scripting/Lua/wiRenderPath3D_BindLua.h"
+    #include "Core/Scripting/Lua/Texture/vTexture.h"
+    #include "Core/Scripting/Lua/wiAudio_BindLua.h"
+    #include "Core/Scripting/Lua/wiSprite_BindLua.h"
+    #include "Core/Scripting/Lua/wiImageParams_BindLua.h"
+    #include "Core/Scripting/Lua/wiSpriteAnim_BindLua.h"
+    #include "Core/Scripting/Lua/wiScene_BindLua.h"
+    #include "Core/Scripting/Lua/wiInput_BindLua.h"
+    #include "Core/Scripting/Lua/wiSpriteFont_BindLua.h"
+    #include "Core/Scripting/Lua/wiNetwork_BindLua.h"
+    #include "Core/Scripting/Lua/wiPrimitive_BindLua.h"
+#endif
 
 #include <memory>
 
@@ -98,13 +100,11 @@ namespace wi::lua
             Backlog::Bind(cInstance.instance);
             Vector::Bind(cInstance.instance);
             Matrix::Bind(cInstance.instance);
+            Application_BindLua::Bind(cInstance.instance);
             #ifndef vEngine_Server
                 Color::Bind(cInstance.instance);
                 Config::Bind(cInstance.instance);
                 World::Bind(cInstance.instance);
-            #endif
-            Application_BindLua::Bind(cInstance.instance);
-            #ifndef vEngine_Server
                 Canvas_BindLua::Bind(cInstance.instance);
                 RenderPath_BindLua::Bind(cInstance.instance);
                 RenderPath2D_BindLua::Bind(cInstance.instance);
