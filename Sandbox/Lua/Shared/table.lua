@@ -20,7 +20,7 @@ vEngine.table.clone = function(baseTable, isRecursive)
     local clonedTable = {}
     for i, j in pairs(baseTable) do
         if (type(j) == "table") and isRecursive then
-            clonedTable[i] = vEngine.table.clone(j, true)
+            clonedTable[i] = vEngine.table.clone(j, isRecursive)
         else
             clonedTable[i] = j
         end
