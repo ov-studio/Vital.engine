@@ -52,7 +52,7 @@
       * [round](lua/shared/math/round.md)
       * [tickProgress](lua/shared/math/tickprogress.md)
       * [percent](lua/shared/math/percent.md)
-      * [shortTarget](lua/shared/math/shorttarget.md)
+      * [shortTargetAngle](lua/shared/math/shorttargetangle.md)
       * [rotationAngle2D](lua/shared/math/rotationangle2d.md)
     * [JSON](lua/shared/json.md)
       * [encode](lua/shared/json/encode.md)

@@ -17,5 +17,5 @@ description: Shared math module.
 * [**round**](math/round.md)
 * [**tickProgress**](math/tickprogress.md)
 * [**percent**](math/percent.md)
-* [**shortTarget**](math/shorttarget.md)
+* [**shortTargetAngle**](math/shorttargetangle.md)
 * [**rotationAngle2D**](math/rotationangle2d.md)
