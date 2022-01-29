@@ -8,6 +8,9 @@ description: Shared math module.
 
 * [**Vector**](math/vector.md)
 * [**Matrix**](math/matrix.md)
+
+### **━ APIs**
+
 * [**lerp**](lerp.md)
 * [**clamp**](clamp.md)
 * [**saturate**](saturate.md)
