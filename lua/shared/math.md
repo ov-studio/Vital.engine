@@ -6,7 +6,13 @@ description: Shared math module.
 
 ### **━ Modules**
 
-* [**Generic**](math/generic.md)
-* [**Angle**](math/angle.md)
 * [**Vector**](math/vector.md)
 * [**Matrix**](math/matrix.md)
+* [**lerp**](lerp.md)
+* [**clamp**](clamp.md)
+* [**saturate**](saturate.md)
+* [**round**](round.md)
+* [**tickProgress**](tickprogress.md)
+* [**percent**](percent.md)
+* [**shortTarget**](shorttarget.md)
+* [**rotationAngle2D**](rotationangle2d.md)
