@@ -112,6 +112,9 @@
     <Filter Include="Vendors\directx_math">
       <UniqueIdentifier>{19e7a78b-cc0b-4369-bd24-fcf47f89bda9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Scripting\Lua\Color">
+      <UniqueIdentifier>{87680545-683f-4f1a-aee8-79bb6fc8cd14}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Utils\arial.h">
@@ -1485,6 +1488,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Vendors\directx_math\DirectXMathCommon.h">
       <Filter>Vendors\directx_math</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Color\vColor.h">
+      <Filter>Core\Scripting\Lua\Color</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Utils\D3D12MemAlloc.cpp">
@@ -2357,6 +2363,9 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Vendors\stb\stb_vorbis.c">
       <Filter>Vendors\stb</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Core\Scripting\Lua\Color\vColor.cpp">
+      <Filter>Core\Scripting\Lua\Color</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
