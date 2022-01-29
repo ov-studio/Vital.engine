@@ -8,14 +8,14 @@ wi::vector<sandbox::compiler::module::moduleDef> modules = {
         "Shared",
         {
             "index.lua",
-            "math.lua",
-            "color.lua"
+            "math.lua"
         }
     },
     {
         "Client",
         {
-            "thread.lua"
+            "thread.lua",
+            "color.lua"
         }
     },
     {
