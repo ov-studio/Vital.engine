@@ -3,47 +3,6 @@
 
 namespace wi::lua::Game
 {
-    int SetGameSpeed(lua_State* L)
-    {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
-        {
-            wi::renderer::SetGameSpeed(wi::lua::SGetFloat(L, 1));
-        }
-        else
-        {
-            wi::lua::SError(L,"SetGameSpeed(float) not enough arguments!");
-        }
-        return 0;
-    }
-    int GetGameSpeed(lua_State* L)
-    {
-        wi::lua::SSetFloat(L, wi::renderer::GetGameSpeed());
-        return 1;
-    }
-
-    int SetShadowProps2D(lua_State* L)
-    {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 1)
-        {
-            wi::renderer::SetShadowProps2D(wi::lua::SGetInt(L, 1), wi::lua::SGetInt(L, 2));
-        }
-        else
-            wi::lua::SError(L, "SetShadowProps2D(int resolution, int count) not enough arguments!");
-        return 0;
-    }
-    int SetShadowPropsCube(lua_State* L)
-    {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 1)
-        {
-            wi::renderer::SetShadowPropsCube(wi::lua::SGetInt(L, 1), wi::lua::SGetInt(L, 2));
-        }
-        else
-            wi::lua::SError(L, "SetShadowPropsCube(int resolution, int count) not enough arguments!");
-        return 0;
-    }
     int SetDebugPartitionTreeEnabled(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
@@ -80,15 +39,6 @@ namespace wi::lua::Game
         }
         return 0;
     }
-    int SetVSyncEnabled(lua_State* L)
-    {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
-        {
-            wi::eventhandler::SetVSync(wi::lua::SGetBool(L, 1));
-        }
-        return 0;
-    }
     int SetDebugLightCulling(lua_State* L)
     {
         int argc = wi::lua::SGetArgCount(L);
@@ -99,19 +49,6 @@ namespace wi::lua::Game
         else
         {
             wi::lua::SError(L, "SetDebugLightCulling(bool enabled) not enough arguments!");
-        }
-        return 0;
-    }
-    int SetOcclusionCullingEnabled(lua_State* L)
-    {
-        int argc = wi::lua::SGetArgCount(L);
-        if (argc > 0)
-        {
-            wi::renderer::SetOcclusionCullingEnabled(wi::lua::SGetBool(L, 1));
-        }
-        else
-        {
-            wi::lua::SError(L, "SetOcclusionCullingEnabled(bool enabled) not enough arguments!");
         }
         return 0;
     }
@@ -311,21 +248,14 @@ namespace wi::lua::Game
         {
             initialized = true;
 
-            wi::lua::RegisterFunc(L, "SetGameSpeed", SetGameSpeed);
-            wi::lua::RegisterFunc(L, "GetGameSpeed", GetGameSpeed);
-
             wi::lua::RunText(L, "GetScreenWidth = function() return main.GetCanvas().GetLogicalWidth() end");
             wi::lua::RunText(L, "GetScreenHeight = function() return main.GetCanvas().GetLogicalHeight() end");
 
-            wi::lua::RegisterFunc(L, "SetShadowProps2D", SetShadowProps2D);
-            wi::lua::RegisterFunc(L, "SetShadowPropsCube", SetShadowPropsCube);
             wi::lua::RegisterFunc(L, "SetDebugPartitionTreeEnabled", SetDebugPartitionTreeEnabled);
             wi::lua::RegisterFunc(L, "SetDebugBonesEnabled", SetDebugBonesEnabled);
             wi::lua::RegisterFunc(L, "SetDebugEmittersEnabled", SetDebugEmittersEnabled);
             wi::lua::RegisterFunc(L, "SetDebugForceFieldsEnabled", SetDebugForceFieldsEnabled);
-            wi::lua::RegisterFunc(L, "SetVSyncEnabled", SetVSyncEnabled);
             wi::lua::RegisterFunc(L, "SetDebugLightCulling", SetDebugLightCulling);
-            wi::lua::RegisterFunc(L, "SetOcclusionCullingEnabled", SetOcclusionCullingEnabled);
 
             wi::lua::RegisterFunc(L, "DrawLine", DrawLine);
             wi::lua::RegisterFunc(L, "DrawPoint", DrawPoint);
