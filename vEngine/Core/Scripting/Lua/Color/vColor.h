@@ -7,6 +7,7 @@ namespace wi::lua
     class Color
     {
         public:
+            // Class Datas
             wi::Color color;
 
             // Class Binder
