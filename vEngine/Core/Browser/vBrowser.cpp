@@ -1,30 +1,34 @@
 #include "Core/Browser/vBrowser.h"
 
-SDKCefClient* g_instance = NULL;
+/*
+Client* g_instance = NULL;
 HWND g_mainWindowHandle;
 
-SDKCefClient::SDKCefClient()
+namespace wi::browser {
+
+}
+Client::Client()
 	: is_closing_(false)
 {
 	DCHECK(!g_instance);
 	g_instance = this;
 }
 
-SDKCefClient::~SDKCefClient()
+Client::~Client()
 {
 	g_instance = NULL;
 }
 
 // static
-SDKCefClient* SDKCefClient::GetInstance()
+Client* Client::GetInstance()
 {
 	return g_instance;
 }
-void SDKCefClient::SetMainWindowHandle(HWND handle)
+void Client::SetMainWindowHandle(HWND handle)
 {
 	g_mainWindowHandle = handle;
 }
-HWND SDKCefClient::GetMainWindowHandle()
+HWND Client::GetMainWindowHandle()
 {
 	return g_mainWindowHandle;
 }
@@ -51,16 +55,12 @@ namespace wi::browser
         CefRefPtr<SDKCefApp> app(new SDKCefApp);
 
         // Initialize CEF.
-
         CefMainArgs main_args(GetModuleHandle(nullptr));
-
     	CefSettings settings;
-
         settings.no_sandbox = true;
-
         settings.background_color = 0xFF161923;
-    
         CefInitialize(main_args, settings, app.get(), nullptr);
 
     }
 }
+*/
