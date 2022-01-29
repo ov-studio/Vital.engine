@@ -11,7 +11,7 @@ description: Retrieves colors's alpha channel value.
 ### ━ Usage
 
 ```lua
-local cColor = vEngine.color.create(255, 0, 0, 255) --Creates alpha color
+local cColor = vEngine.color.create(255, 255, 255, 255) --Creates white opaque color
 local channelColor = cColor:getA() --Retrieves alpha channel's value
 print(channelColor) --Prints our channel's value
 ```

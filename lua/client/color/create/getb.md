@@ -11,7 +11,7 @@ description: Retrieves colors's blue channel value.
 ### ━ Usage
 
 ```lua
-local cColor = vEngine.color.create(255, 0, 0, 255) --Creates blue color
+local cColor = vEngine.color.create(0, 0, 255, 255) --Creates blue color
 local channelColor = cColor:getB() --Retrieves blue channel's value
 print(channelColor) --Prints our channel's value
 ```
