@@ -24,6 +24,7 @@ namespace wi::browser
             static Client* GetInstance();
             static HWND GetMainWindowHandle();
             static void SetMainWindowHandle(HWND windowHandle);
+            static bool ShutdownClient();
 
             // Client Overrides:
             virtual CefRefPtr<CefDisplayHandler> GetDisplayHandler() override

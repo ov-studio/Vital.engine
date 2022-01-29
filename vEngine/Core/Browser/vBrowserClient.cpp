@@ -28,6 +28,11 @@ namespace wi::browser
     {
         return g_mainWindowHandle;
     }
+    bool Client::ShutdownClient()
+    {
+        CefShutdown();
+        return true;
+    }
 }
 
 /*
