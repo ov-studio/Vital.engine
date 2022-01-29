@@ -10,6 +10,10 @@ namespace wi::lua
             // Class Datas
             wi::Color color;
 
+            // Library Binder
+            static const char libraryName[];
+            static const luaL_Reg libraryFunctions[];
+
             // Class Binder
             static const char className[];
             static Luna<Color>::FunctionType methods[];

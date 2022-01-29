@@ -4,8 +4,14 @@
 
 namespace wi::lua
 {
+    // Library Binder
+    const char Color::libraryName[] = "color";
+    const luaL_Reg Color::libraryFunctions[] = {
+        { NULL, NULL }
+    };
+
     // Class Binder
-    const char Color::className[] = "color";
+    const char Color::className[] = "create";
     Luna<Color>::FunctionType Color::methods[] = {
         lunamethod(Color, getR),
         lunamethod(Color, getG),
@@ -36,7 +42,8 @@ namespace wi::lua
         if (!initialized)
         {
             initialized = true;
-            Luna<Color>::Register(L, "vEngine");
+            RegisterLibrary(L, Color::libraryName, Color::libraryFunctions, "vEngine");
+            Luna<Color>::Register(L, "vEngine", {Color::libraryName});
         }
     }
 
