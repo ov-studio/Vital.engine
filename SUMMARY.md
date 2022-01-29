@@ -90,4 +90,6 @@
         * [:setG](lua/client/color/create/setg.md)
         * [:setB](lua/client/color/create/setb.md)
         * [:setA](lua/client/color/create/seta.md)
+    * [World](lua/client/world.md)
+      * [clearSCene](lua/client/world/clearscene.md)
   * [SERVER](lua/server.md)
