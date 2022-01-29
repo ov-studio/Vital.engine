@@ -11,6 +11,6 @@ description: Retrieves shortest target angle.
 ### ━ Usage
 
 ```lua
-local result = vEngine.math.angle.shortTargetAngle(160, 720) --Retrieves shortest target rotation angle
+local result = vEngine.math.shortTargetAngle(160, 720) --Retrieves shortest target rotation angle
 print(result) --Prints result
 ```

@@ -11,6 +11,6 @@ description: Retrieves rotation angle in 2D.
 ### ━ Usage
 
 ```lua
-local result = vEngine.math.angle.rotationAngle2D(10, 50, 60, 100) --Retrieves angle of rotation
+local result = vEngine.math.rotationAngle2D(10, 50, 60, 100) --Retrieves angle of rotation
 print(result) --Prints result
 ```
