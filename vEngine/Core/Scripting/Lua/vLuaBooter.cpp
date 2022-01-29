@@ -74,9 +74,20 @@ namespace wi::lua
                 vEngine.string = string; string = nil;
                 vEngine.json = json; json = nil;
             )");
+            #ifdef vEngine_Server
+                RunText("vEngine.isServer = true");
+            #endif
             for (int i = 0; i < sandbox::lua::modules.size(); ++i)
             {
-                if (sandbox::lua::modules[i].moduleName != "Server") {
+                bool isToBeSkipped = false;
+                #ifndef vEngine_Server
+                    if (sandbox::lua::modules[i].moduleName == "Server")
+                        isToBeSkipped = true;
+                #else
+                    if (sandbox::lua::modules[i].moduleName == "Client")
+                        isToBeSkipped = true;
+                #endif
+                if (!isToBeSkipped) {
                     for (int j = 0; j < sandbox::lua::modules[i].moduleScripts.size(); ++j)
                     {
                         RunText(cInstance.instance, sandbox::lua::modules[i].moduleScripts[j]);
@@ -87,25 +98,29 @@ namespace wi::lua
             Backlog::Bind(cInstance.instance);
             Vector::Bind(cInstance.instance);
             Matrix::Bind(cInstance.instance);
-            Color::Bind(cInstance.instance);
-            Config::Bind(cInstance.instance);
-            World::Bind(cInstance.instance);
+            #ifndef vEngine_Server
+                Color::Bind(cInstance.instance);
+                Config::Bind(cInstance.instance);
+                World::Bind(cInstance.instance);
+            #endif
             Application_BindLua::Bind(cInstance.instance);
-            Canvas_BindLua::Bind(cInstance.instance);
-            RenderPath_BindLua::Bind(cInstance.instance);
-            RenderPath2D_BindLua::Bind(cInstance.instance);
-            LoadingScreen_BindLua::Bind(cInstance.instance);
-            RenderPath3D_BindLua::Bind(cInstance.instance);
-            Texture::Bind(cInstance.instance);
-            Audio_BindLua::Bind(cInstance.instance);
-            Sprite_BindLua::Bind(cInstance.instance);
-            ImageParams_BindLua::Bind(cInstance.instance);
-            SpriteAnim_BindLua::Bind(cInstance.instance);
-            scene::Bind(cInstance.instance);
-            Input_BindLua::Bind(cInstance.instance);
-            SpriteFont_BindLua::Bind(cInstance.instance);
-            Network_BindLua::Bind(cInstance.instance);
-            primitive::Bind(cInstance.instance);
+            #ifndef vEngine_Server
+                Canvas_BindLua::Bind(cInstance.instance);
+                RenderPath_BindLua::Bind(cInstance.instance);
+                RenderPath2D_BindLua::Bind(cInstance.instance);
+                LoadingScreen_BindLua::Bind(cInstance.instance);
+                RenderPath3D_BindLua::Bind(cInstance.instance);
+                Texture::Bind(cInstance.instance);
+                Audio_BindLua::Bind(cInstance.instance);
+                Sprite_BindLua::Bind(cInstance.instance);
+                ImageParams_BindLua::Bind(cInstance.instance);
+                SpriteAnim_BindLua::Bind(cInstance.instance);
+                scene::Bind(cInstance.instance);
+                Input_BindLua::Bind(cInstance.instance);
+                SpriteFont_BindLua::Bind(cInstance.instance);
+                Network_BindLua::Bind(cInstance.instance);
+                primitive::Bind(cInstance.instance);
+            #endif
             // Cache created instance
             LuaInstances[(cInstance.instance)] = cInstance;
         #endif

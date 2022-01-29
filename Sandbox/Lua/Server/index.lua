@@ -12,4 +12,3 @@
 --[[ Module ]]--
 ----------------
 
-vEngine.isServer = true
