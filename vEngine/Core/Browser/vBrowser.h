@@ -75,71 +75,66 @@ namespace wi::browser
 class SDKCefApp : public CefApp, public CefBrowserProcessHandler/*, public CefRenderProcessHandler
 {
 public:
-	typedef std::function<CefRefPtr<CefV8Value>(const CefV8ValueList&, CefString&)> TV8Handler;
+    typedef std::function<CefRefPtr<CefV8Value>(const CefV8ValueList&, CefString&)> TV8Handler;
 
-	SDKCefApp();
+    SDKCefApp();
 
-	// CefApp methods:
-	virtual CefRefPtr<CefBrowserProcessHandler> GetBrowserProcessHandler()
-		override
-	{
-		return this;
-	}
+    // CefApp methods:
+    virtual CefRefPtr<CefBrowserProcessHandler> GetBrowserProcessHandler()
+        override
+    {
+        return this;
+    }
 
-	//virtual void OnBeforeCommandLineProcessing(const CefString& process_type, CefRefPtr<CefCommandLine> command_line) override;
+    //virtual void OnBeforeCommandLineProcessing(const CefString& process_type, CefRefPtr<CefCommandLine> command_line) override;
 
-	// CefBrowserProcessHandler methods:
-	//virtual void OnContextInitialized() override;
+    // CefBrowserProcessHandler methods:
+    //virtual void OnContextInitialized() override;
 
 private:
-	int m_v8Callbacks;
+    int m_v8Callbacks;
 
-	// Include the default reference counting implementation.
-	IMPLEMENT_REFCOUNTING(SDKCefApp);
+    // Include the default reference counting implementation.
+    IMPLEMENT_REFCOUNTING(SDKCefApp);
 };
 
 class SDKWindowDelegate : public CefWindowDelegate
 {
 public:
-	explicit SDKWindowDelegate(CefRefPtr<CefBrowserView> browser_view, const std::wstring& placementKey);
-	explicit SDKWindowDelegate(CefRefPtr<CefBrowserView> browser_view, const std::wstring& placementKey, const std::string& forceWindowTitle);
+    explicit SDKWindowDelegate(CefRefPtr<CefBrowserView> browser_view, const std::wstring& placementKey);
+    explicit SDKWindowDelegate(CefRefPtr<CefBrowserView> browser_view, const std::wstring& placementKey, const std::string& forceWindowTitle);
 
-	void OnWindowCreated(CefRefPtr<CefWindow> window) override;
-	void OnWindowDestroyed(CefRefPtr<CefWindow> window) override;
+    void OnWindowCreated(CefRefPtr<CefWindow> window) override;
+    void OnWindowDestroyed(CefRefPtr<CefWindow> window) override;
 
-	bool CanClose(CefRefPtr<CefWindow> window) override;
+    bool CanClose(CefRefPtr<CefWindow> window) override;
 
-	CefSize GetMinimumSize(CefRefPtr<CefView> view) override;
-
-private:
-	void LoadPlacement(CefRefPtr<CefWindow> window);
-	void SavePlacement(CefRefPtr<CefWindow> window);
+    CefSize GetMinimumSize(CefRefPtr<CefView> view) override;
 
 private:
-	std::string forcedWindowTitle;
-	std::wstring placementRegistryKey;
-	CefRefPtr<CefBrowserView> browser_view_;
+    void LoadPlacement(CefRefPtr<CefWindow> window);
+    void SavePlacement(CefRefPtr<CefWindow> window);
 
-	IMPLEMENT_REFCOUNTING(SDKWindowDelegate);
-	DISALLOW_COPY_AND_ASSIGN(SDKWindowDelegate);
+private:
+    std::string forcedWindowTitle;
+    std::wstring placementRegistryKey;
+    CefRefPtr<CefBrowserView> browser_view_;
+
+    IMPLEMENT_REFCOUNTING(SDKWindowDelegate);
+    DISALLOW_COPY_AND_ASSIGN(SDKWindowDelegate);
 };
 
 class SDKSubViewDelegate : public CefBrowserViewDelegate
 {
 public:
-	SDKSubViewDelegate();
+    SDKSubViewDelegate();
 
-	virtual CefRefPtr<CefBrowserViewDelegate> GetDelegateForPopupBrowserView(CefRefPtr<CefBrowserView> browser_view, const CefBrowserSettings& settings, CefRefPtr<CefClient> client, bool is_devtools);
+    virtual CefRefPtr<CefBrowserViewDelegate> GetDelegateForPopupBrowserView(CefRefPtr<CefBrowserView> browser_view, const CefBrowserSettings& settings, CefRefPtr<CefClient> client, bool is_devtools);
 
-	virtual bool OnPopupBrowserViewCreated(CefRefPtr<CefBrowserView> browser_view, CefRefPtr<CefBrowserView> popup_browser_view, bool is_devtools);
+    virtual bool OnPopupBrowserViewCreated(CefRefPtr<CefBrowserView> browser_view, CefRefPtr<CefBrowserView> popup_browser_view, bool is_devtools);
 
 private:
-	IMPLEMENT_REFCOUNTING(SDKSubViewDelegate);
-	DISALLOW_COPY_AND_ASSIGN(SDKSubViewDelegate);
+    IMPLEMENT_REFCOUNTING(SDKSubViewDelegate);
+    DISALLOW_COPY_AND_ASSIGN(SDKSubViewDelegate);
 };
-
-namespace wi::browser
-{
-    void create(HWND CWindow);
-}
 */

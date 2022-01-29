@@ -4,7 +4,8 @@
 Client* g_instance = NULL;
 HWND g_mainWindowHandle;
 
-namespace wi::browser {
+namespace wi::browser
+{
 
 }
 Client::Client()
