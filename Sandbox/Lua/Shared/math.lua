@@ -12,8 +12,6 @@
 --[[ Module ]]--
 ----------------
 
-vEngine.math.angle = {}
-
 --Function: Lerps a number linearly
 vEngine.math.lerp = function(minValue, maxValue, lerpRate)
     local API = "vEngine.math.lerp"
@@ -72,8 +70,8 @@ vEngine.math.percent = function(value, percentage)
 end
 
 --Function: Retrieves shortest target angle
-vEngine.math.angle.shortTarget = function(initialAngle, finalAngle)
-    local API = "vEngine.math.angle.shortTarget"
+vEngine.math.shortTargetAngle = function(initialAngle, finalAngle)
+    local API = "vEngine.math.shortTargetAngle"
     assert(not initialAngle or (type(initialAngle) ~= "number"), vEngine.__postAPIMessage(API, "Invalid initialAngle", 3))
     assert(not finalAngle or (type(finalAngle) ~= "number"), vEngine.__postAPIMessage(API, "Invalid finalAngle", 3))
 
@@ -82,8 +80,8 @@ vEngine.math.angle.shortTarget = function(initialAngle, finalAngle)
 end
 
 --Function: Retrieves rotation angle in 2D
-vEngine.math.angle.rotationAngle2D = function(startX, startY, endX, endY) 
-    local API = "vEngine.math.angle.rotationAngle2D"
+vEngine.math.rotationAngle2D = function(startX, startY, endX, endY) 
+    local API = "vEngine.math.rotationAngle2D"
     assert(not startX or (type(startX) ~= "number"), vEngine.__postAPIMessage(API, "Invalid startX", 3))
     assert(not startY or (type(startY) ~= "number"), vEngine.__postAPIMessage(API, "Invalid startY", 3))
     assert(not endX or (type(endX) ~= "number"), vEngine.__postAPIMessage(API, "Invalid endX", 3))
