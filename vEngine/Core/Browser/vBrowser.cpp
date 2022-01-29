@@ -1,38 +1,37 @@
 #include "Core/Browser/vBrowser.h"
 
-/*
-Client* g_instance = NULL;
-HWND g_mainWindowHandle;
 
 namespace wi::browser
 {
+    Client* g_instance = NULL;
+    HWND g_mainWindowHandle;
 
-}
-Client::Client()
-	: is_closing_(false)
-{
-	DCHECK(!g_instance);
-	g_instance = this;
+    Client::Client()
+    {
+        DCHECK(!g_instance);
+        g_instance = this;
+    }
+    Client::~Client()
+    {
+        g_instance = NULL;
+    }
+
+    // Client Helpers
+    Client* Client::GetInstance()
+    {
+        return g_instance;
+    }
+    void Client::SetMainWindowHandle(HWND windowHandle)
+    {
+        g_mainWindowHandle = windowHandle;
+    }
+    HWND Client::GetMainWindowHandle()
+    {
+        return g_mainWindowHandle;
+    }
 }
 
-Client::~Client()
-{
-	g_instance = NULL;
-}
-
-// static
-Client* Client::GetInstance()
-{
-	return g_instance;
-}
-void Client::SetMainWindowHandle(HWND handle)
-{
-	g_mainWindowHandle = handle;
-}
-HWND Client::GetMainWindowHandle()
-{
-	return g_mainWindowHandle;
-}
+/*
 
 SDKCefApp::SDKCefApp()
 {

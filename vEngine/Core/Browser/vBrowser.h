@@ -23,7 +23,7 @@ namespace wi::browser
             // Client Helpers
             static Client* GetInstance();
             static HWND GetMainWindowHandle();
-            static void SetMainWindowHandle(HWND handle);
+            static void SetMainWindowHandle(HWND windowHandle);
 
             // Client Overrides:
             virtual CefRefPtr<CefDisplayHandler> GetDisplayHandler() override
