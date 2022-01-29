@@ -71,7 +71,7 @@ namespace wi::lua
     int Color::setR(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
-        if (argCount >= 4)
+        if (argCount >= 1)
         {
             this->color.setR(wi::lua::SGetInt(L, 1));
             wi::lua::SSetBool(L, true);
@@ -84,7 +84,7 @@ namespace wi::lua
     int Color::setG(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
-        if (argCount >= 4)
+        if (argCount >= 1)
         {
             this->color.setG(wi::lua::SGetInt(L, 1));
             wi::lua::SSetBool(L, true);
@@ -97,7 +97,7 @@ namespace wi::lua
     int Color::setB(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
-        if (argCount >= 4)
+        if (argCount >= 1)
         {
             this->color.setB(wi::lua::SGetInt(L, 1));
             wi::lua::SSetBool(L, true);
@@ -110,7 +110,7 @@ namespace wi::lua
     int Color::setA(lua_State* L)
     {
         int argCount = wi::lua::SGetArgCount(L);
-        if (argCount >= 4)
+        if (argCount >= 1)
         {
             this->color.setA(wi::lua::SGetInt(L, 1));
             wi::lua::SSetBool(L, true);
