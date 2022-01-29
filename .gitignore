@@ -76,6 +76,7 @@ DocProject/Help/*.hhp
 DocProject/Help/Html2
 DocProject/Help/html
 publish/
+GPUCache/
 *.[Pp]ublish.xml
 *.azurePubxml
 packages/*
