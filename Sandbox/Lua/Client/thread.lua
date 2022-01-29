@@ -26,7 +26,7 @@ cache.waitSignal = function(signalType)
     assert(not cThread, vEngine.__postAPIMessage(API, "API available only within a thread", 3))
 
     cache.signaledThreads[signalType] = cache.signaledThreads[signalType] or {}
-    table.insert(cache.signaledThreads[signalType], cThread)
+    vEngine.table.insert(cache.signaledThreads[signalType], cThread)
     return cache.coroutine.yield()
 end
 

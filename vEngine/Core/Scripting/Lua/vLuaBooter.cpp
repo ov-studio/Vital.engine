@@ -72,8 +72,9 @@ namespace wi::lua
             // Loads whitelisted scripts
             RunText(cInstance.instance, R"(
                 vEngine = {}
-                vEngine.math = math; math = nil;
+                vEngine.table = table; table = nil;
                 vEngine.string = string; string = nil;
+                vEngine.math = math; math = nil;
                 vEngine.json = json; json = nil;
             )");
             #ifdef vEngine_Server
