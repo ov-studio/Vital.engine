@@ -12,8 +12,6 @@
 --[[ Module ]]--
 ----------------
 
-vEngine.math.angle = {}
-
 --Function: Posts API message
 vEngine.__postAPIMessage = function(API, message, messageLevel)
     messageLevel = tonumber(messageLevel)

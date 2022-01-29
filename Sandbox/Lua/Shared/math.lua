@@ -12,6 +12,8 @@
 --[[ Module ]]--
 ----------------
 
+vEngine.math.angle = {}
+
 --Function: Lerps a number linearly
 vEngine.math.lerp = function(minValue, maxValue, lerpRate)
     local API = "vEngine.math.lerp"
