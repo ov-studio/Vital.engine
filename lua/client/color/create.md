@@ -21,7 +21,3 @@ print(cColor) --Prints our color
 * [**:getG**](create/getg.md)
 * [**:getB**](create/getb.md)
 * [**:getA**](create/geta.md)
-* [**:setR**](create/setr.md)
-* [**:setG**](create/setg.md)
-* [**:setB**](create/setb.md)
-* [**:setA**](create/seta.md)
