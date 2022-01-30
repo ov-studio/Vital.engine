@@ -7,7 +7,6 @@ namespace wi::lua
     const char World::libraryName[] = "world";
     const luaL_Reg World::libraryFunctions[] = {
         { "clearScene", clearScene },
-        { "reloadShaders", reloadShaders },
         { NULL, NULL }
     };
 
@@ -42,11 +41,5 @@ namespace wi::lua
         wi::lua::SError(L, "Syntax: vEngine.world.ClearWorld(userdata scene, bool clearAll = false)");
         wi::lua::SSetBool(L, false);
         return 0;
-    }
-    int reloadShaders(lua_State* L)
-    {
-        wi::renderer::ReloadShaders();
-        wi::lua::SSetBool(L, true);
-        return 1;
     }
 };

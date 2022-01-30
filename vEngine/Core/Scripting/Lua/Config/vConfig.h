@@ -20,5 +20,6 @@ namespace wi::lua
             static int setShadowPropsCube(lua_State* L);
             static int setVSyncEnabled(lua_State* L);
             static int setOcclusionCullingEnabled(lua_State* L);
+            static int reloadShaders(lua_State* L);
     };
 }

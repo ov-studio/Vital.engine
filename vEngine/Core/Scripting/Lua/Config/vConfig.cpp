@@ -12,6 +12,7 @@ namespace wi::lua
         { "setShadowPropsCube", setShadowPropsCube },
         { "setVSyncEnabled", setVSyncEnabled },
         { "setOcclusionCullingEnabled", setOcclusionCullingEnabled },
+        { "reloadShaders", reloadShaders },
         { NULL, NULL }
     };
 
@@ -97,5 +98,11 @@ namespace wi::lua
         wi::lua::SError(L, "Syntax: vEngine.config.setOcclusionCullingEnabled(bool state)");
         wi::lua::SSetBool(L, false);
         return 0;
+    }
+    int reloadShaders(lua_State* L)
+    {
+        wi::renderer::ReloadShaders();
+        wi::lua::SSetBool(L, true);
+        return 1;
     }
 };
