@@ -15,7 +15,7 @@
 #ifndef vEngine_Server
     #include "Core/Scripting/Lua/Color/vColor.h"
     #include "Core/Scripting/Lua/Config/vConfig.h"
-    #include "Core/Scripting/Lua/Config/vWorld.h"
+    #include "Core/Scripting/Lua/World/vWorld.h"
     #include "Core/Scripting/Lua/wiRenderPath_BindLua.h"
     #include "Core/Scripting/Lua/wiRenderPath2D_BindLua.h"
     #include "Core/Scripting/Lua/wiLoadingScreen_BindLua.h"
