@@ -99,7 +99,7 @@ namespace wi::lua
         wi::lua::SSetBool(L, false);
         return 0;
     }
-    int reloadShaders(lua_State* L)
+    int Config::reloadShaders(lua_State* L)
     {
         wi::renderer::ReloadShaders();
         wi::lua::SSetBool(L, true);

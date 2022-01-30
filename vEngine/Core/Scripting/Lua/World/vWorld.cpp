@@ -22,7 +22,7 @@ namespace wi::lua
     }
 
     // Library Methods
-    int clearScene(lua_State* L)
+    int World::clearScene(lua_State* L)
     {
         Scene_BindLua* scene = Luna<Scene_BindLua>::lightcheck(L, 1);
         bool clearAllScenes = wi::lua::SGetBool(L, 2) || false;
