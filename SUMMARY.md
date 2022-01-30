@@ -70,6 +70,7 @@
       * [setShadowPropsCube](lua/client/config/setshadowpropscube.md)
       * [setVSyncEnabled](lua/client/config/setvsyncenabled.md)
       * [setOcclusionCullingEnabled](lua/client/config/setocclusioncullingenabled.md)
+      * [reloadShaders](lua/client/config/reloadshaders.md)
     * [Thread](lua/client/thread.md)
       * [getTick](lua/client/thread/gettick.md)
       * [create](lua/client/thread/create.md)

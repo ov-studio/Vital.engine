@@ -12,3 +12,4 @@ description: Configuration module (Engine controller).
 * [**setShadowPropsCube**](config/setshadowpropscube.md)
 * [**setVSyncEnabled**](config/setvsyncenabled.md)
 * [**setOcclusionCullingEnabled**](config/setocclusioncullingenabled.md)
+* [**reloadShaders**](config/reloadshaders.md)
