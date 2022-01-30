@@ -15,3 +15,5 @@
 | **Graphics**             | DX12, Vulkan (Ray-Tracing Supported) | DX12, Vulkan (Ray-Tracing Supported)         | DX12, Vulkan                    | DX9                                                      |
 | **Networking**           | Built In                             | -                                            | Built In                        | Built In                                                 |
 | **Performance**          | Stable                               | Stable                                       | Better                          | Worse                                                    |
+| **Streaming Limit**      | Unlimited                            | Unlimited                                    | Max 2000 objects                | Max 700 objects                                          |
+
