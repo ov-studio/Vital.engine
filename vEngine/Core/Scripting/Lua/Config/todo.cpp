@@ -222,12 +222,6 @@ namespace wi::lua::Game
         return 0;
     }
 
-    int ReloadShaders(lua_State* L)
-    {
-        wi::renderer::ReloadShaders();
-        return 0;
-    }
-
     void Bind(lua_State* L)
     {
         static bool initialized = false;
@@ -256,9 +250,6 @@ namespace wi::lua::Game
             wi::lua::RunText(L, "PICK_OPAQUE = 1");
             wi::lua::RunText(L, "PICK_TRANSPARENT = 2");
             wi::lua::RunText(L, "PICK_WATER = 4");
-
-
-            wi::lua::RegisterFunc(L, "ReloadShaders", ReloadShaders);
         }
     }
 };

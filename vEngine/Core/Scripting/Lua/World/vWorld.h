@@ -15,5 +15,6 @@ namespace wi::lua
 
             // Library Methods
             static int clearScene(lua_State* L);
+            static int reloadShaders(lua_State* L);
     };
 }
