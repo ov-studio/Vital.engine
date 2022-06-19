@@ -17,6 +17,11 @@
 * vCommunity Integration
 * [Read More](features.md)
 
+## ━ Sponsors💎
+
+* **Jimmy Smile**
+* [Read More](sponsors.md)
+
 ## ━ Credits
 
 * **János Turánszki**
