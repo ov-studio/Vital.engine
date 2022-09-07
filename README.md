@@ -2,7 +2,7 @@
 
 **━ Maintainer(s):** [**Aviril**](https://github.com/Aviril)**,** [**Tron**](https://github.com/OvileAmriam)
 
-**vEngine** is Next-Gen Sandbox-Engine being crafted in C++. In contrast to **UE/Unity/ReverseEngineered-Mods** its a data-driven **Standalone 3D Game-Engine** built with 'Sandboxing' in mind from the ground. vEngine uses modern rendering techniques while focussing on the performance & optimization.
+**Vital.engine** is Next-Gen Sandbox-Engine being crafted in C++. In contrast to **UE/Unity/ReverseEngineered-Mods** its a data-driven **Standalone 3D Game-Engine** built with 'Sandboxing' in mind from the ground. vEngine uses modern rendering techniques while focussing on the performance & optimization.
 
 ## ━ Features
 
