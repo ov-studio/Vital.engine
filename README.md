@@ -1,4 +1,4 @@
-![](https://cdn.discordapp.com/attachments/867657575725269003/907028708823539712/vStudio.png)
+![](https://raw.githubusercontent.com/ov-studio/.github/main/profile/banner.png)
 
 **━ Maintainer(s):** [**Aviril**](https://github.com/Aviril)**,** [**Tron**](https://github.com/OvileAmriam)
 
